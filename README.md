@@ -107,7 +107,7 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
   --output workspace/result-rules --mode rules
 ```
 
-`SBOM_PULL_IMAGE=false` допустим только для локального пути с заранее собранным
+`SBOM_PULL_IMAGE=false` допустим для явного CLI benchmark с заранее собранным
 образом и allowlisted reference; HTTP API такую конфигурацию отвергает.
 Существующий output не перезаписывается. На Windows используется `.venv\Scripts\python`;
 для локальной проверки Syft сохранён в `.tools/syft/syft.exe` (не включается в Git).
@@ -128,6 +128,11 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 рядом создаётся `<output>.diagnostics` с типом ошибки и исходными каталогами.
 Сырые исключения, способные содержать credentials, не публикуются.
 Артефакты и Docker cache не удаляются автоматически.
+
+В `final.cdx.json` остаются только принятые package-компоненты; файловые объекты
+и сводный объект ОС из стандартной конвертации Syft остаются в raw evidence.
+Новые SPDX identifiers вне закреплённого списка CDX1.6 сохраняются как названия
+лицензий с исходным identifier в properties. Это сохраняет данные при строгой валидации.
 
 Соответствие commit и image не считается доказанным только по паре входов:
 `build_link=unverified`. Неизвестные dependency edges не выдумываются.
