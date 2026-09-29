@@ -11,6 +11,7 @@ import csv
 import io
 import json
 import posixpath
+import re
 import tarfile
 import zipfile
 from contextlib import ExitStack
@@ -162,6 +163,14 @@ def _ruby(artifact, files):
                 target = path(standard + "/" + name)
                 if target.startswith(standard + "/") and target.endswith((".rb", ".so")) and files.regular(target):
                     return target
+                # Default native extensions live in Ruby's immediate platform
+                # directory, not directly in its versioned standard library.
+                if isinstance(name, str) and name.endswith(".so") and not name.startswith("/") and ".." not in name.split("/"):
+                    for candidate in files.under(standard):
+                        platform, separator, relative = candidate[len(standard) + 1:].partition("/")
+                        if (separator and relative == name
+                                and re.fullmatch(r"(?:x86_64|aarch64|arm\w*|i[3-6]86|ppc64le|s390x|riscv64)-linux(?:-\w+)?", platform)):
+                            return candidate
     return None
 
 

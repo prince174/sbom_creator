@@ -93,6 +93,18 @@ def test_invalid_archive_is_uncertainty_not_inclusion(tmp_path):
     assert evidence["status"] == "unconfirmed" and evidence["error_type"] == "BadZipFile"
 
 
+@pytest.mark.parametrize("directory,confirmed", [("x86_64-linux", True), ("aarch64-linux-musl", True), ("unrelated", False)])
+def test_ruby_default_native_extension_uses_declared_platform_path(tmp_path, directory, confirmed):
+    manifest = "/usr/local/lib/ruby/gems/3.3.0/specifications/default/example-1.2.3.gemspec"
+    target = f"/usr/local/lib/ruby/3.3.0/{directory}/io/example.so"
+    artifact = package("a", type="gem", purl="pkg:gem/example@1.2.3", foundBy="ruby-installed-gemspec-cataloger",
+                       locations=[{"path": manifest}], metadata={"files": ["io/example.so"]})
+    image, archive = archive_fixture(tmp_path, {manifest: b"metadata", target: b"native payload"}, [artifact])
+    evidence = collect(image, archive)["a"]
+    assert (evidence["status"] == "confirmed") is confirmed
+    assert evidence["path"] == (target if confirmed else None)
+
+
 def test_go_stdlib_prefix_exception_is_narrow_and_keeps_original_version():
     valid = package("go", "stdlib", "go1.24.13", type="go-module", purl="pkg:golang/stdlib@1.24.13",
                     foundBy="go-module-binary-cataloger")
