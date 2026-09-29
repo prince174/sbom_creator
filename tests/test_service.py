@@ -18,6 +18,12 @@ def test_api_denies_no_configured_token(tmp_path, monkeypatch):
         assert client.post("/v1/analyses", json=REQUEST).status_code == 503
 
 
+def test_missing_token_file_returns_configuration_unavailable(tmp_path, monkeypatch):
+    monkeypatch.setenv("SBOM_API_TOKEN_FILE", str(tmp_path / "not-configured"))
+    with TestClient(create_app(tmp_path, settings=SETTINGS)) as client:
+        assert client.post("/v1/analyses", json=REQUEST).status_code == 503
+
+
 def test_failed_job_blocks_artifacts_and_redacts_error(tmp_path, monkeypatch):
     monkeypatch.setenv("SBOM_API_TOKEN", "test-token")
 
@@ -74,4 +80,3 @@ def test_restart_marks_incomplete_jobs_failed(tmp_path, monkeypatch):
         response = client.get(f"/v1/analyses/{directory.name}",
                               headers={"Authorization": "Bearer test-token"})
         assert response.json()["error"] == "interrupted_by_restart"
-

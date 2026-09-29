@@ -7,6 +7,7 @@ from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
 
+from . import __version__
 from .acquire import (
     Settings,
     checkout,
@@ -101,6 +102,7 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
             "created_at": datetime.now(UTC).isoformat(),
             "build_link": provenance.get("build_link", "unverified"),
             "syft_version": "1.51.1", "syft_schema": "16.1.10",
+            "sbom_creator_version": __version__,
             "assessment": getattr(assessor, "audit", {
                 "mode": "rules" if assessor is rules_assessor else "external-assessor",
                 "score": None, "verified_model": False}),
@@ -155,6 +157,7 @@ def publish_catalogs(source, image, output, settings, assessor, provenance=None)
         target = Path(output).resolve().with_name(Path(output).name + ".diagnostics")
         write_json(target / "source.syft.json", source)
         write_json(target / "image.syft.json", image)
+        write_json(target / "provenance.json", provenance or {})
         raise AnalysisError("reconcile_convert_validate", type(error).__name__) from None
 
 

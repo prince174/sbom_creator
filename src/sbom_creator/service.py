@@ -25,7 +25,18 @@ class Request(BaseModel):
 
 def api_token():
     path = os.getenv("SBOM_API_TOKEN_FILE")
-    return Path(path).read_text("utf-8").strip() if path else os.getenv("SBOM_API_TOKEN", "")
+    try:
+        if path:
+            with Path(path).open("rb") as stream:
+                raw = stream.read(8193)
+            if len(raw) > 8192:
+                return ""
+            token = raw.decode("utf-8").strip()
+        else:
+            token = os.getenv("SBOM_API_TOKEN", "")
+    except (OSError, UnicodeError):
+        return ""
+    return token if len(token) <= 8192 and not any(ord(c) < 32 for c in token) else ""
 
 
 def create_app(workspace=None, runner=analyze, settings=None):
@@ -60,7 +71,8 @@ def create_app(workspace=None, runner=analyze, settings=None):
         token = api_token()
         if not token:
             raise HTTPException(503, "SBOM API token is not configured")
-        if authorization is None or not hmac.compare_digest(authorization, "Bearer " + token):
+        if authorization is None or not hmac.compare_digest(authorization.encode("utf-8"),
+                                                             ("Bearer " + token).encode("utf-8")):
             raise HTTPException(401, "Invalid credentials")
 
     def job_dir(job_id):

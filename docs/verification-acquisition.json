@@ -1,0 +1,61 @@
+{
+  "verified_at": "2026-09-29T18:49:49.512258+00:00",
+  "bitbucket_checkout": {
+    "status": "passed",
+    "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+    "requested_commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+    "verified_head": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+    "worktree_clean": true,
+    "source_file_count": 5,
+    "authentication_mode": "basic",
+    "credential_source": "existing runtime reader secret; not persisted",
+    "duration_seconds": 2.344,
+    "provenance": {
+      "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+      "requested_commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+      "commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+      "checkout_method": "git-init-fetch-exact-detached",
+      "build_link": "unverified",
+      "coverage": {
+        "submodules_fetched": false,
+        "gitmodules_present": false,
+        "lfs_fetched": false,
+        "lfs_pointer_paths": [],
+        "source_build_executed": false
+      }
+    }
+  },
+  "linux_registry_smoke": {
+    "status": "passed",
+    "artifacts": "workspace/linux-smoke",
+    "syft_version": "1.51.1",
+    "syft_schema": "16.1.10",
+    "cyclonedx_version": "1.6",
+    "mode": "rules",
+    "source_count": 1,
+    "image_package_count": 16,
+    "selected_package_count": 16,
+    "unknown_count": 1,
+    "purpose": "transport, scanning, conversion and schema validation; source-image build link unverified"
+  },
+  "linux_api_smoke": {
+    "status": "passed",
+    "health_http": 200,
+    "health": {
+      "status": "ok",
+      "dependency_readiness": "not_checked"
+    },
+    "unauthenticated_http": 401,
+    "unconfigured_api_token_http": 503,
+    "untrusted_repository_http": 422,
+    "accepted_job_http": 202,
+    "missing_model_job_status": "failed",
+    "missing_model_error_type": "RuntimeError",
+    "unpublished_artifact_http": 409,
+    "final_sbom_published": false,
+    "model_calls": 0,
+    "external_network": "disabled for smoke container",
+    "runtime": "Linux container + real loopback HTTP + real pipeline",
+    "credentials_persisted": false
+  }
+}
