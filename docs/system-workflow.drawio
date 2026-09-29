@@ -26,16 +26,16 @@
         <mxCell id="match" value="&lt;b&gt;Сопоставление Syft JSON&lt;/b&gt;&lt;br&gt;Объединение кандидатов + evidence" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="565" width="320" height="90" />
         </mxCell>
-        <mxCell id="assess" value="&lt;b&gt;Оценка зависимости&lt;/b&gt;&lt;br&gt;Evidence → LLM → валидатор" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="assess" value="&lt;b&gt;Проверка свидетельств&lt;/b&gt;&lt;br&gt;Точная идентичность → правила" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="710" width="320" height="90" />
         </mxCell>
-        <mxCell id="gate" value="&lt;b&gt;Решение по политике&lt;/b&gt;&lt;br&gt;INCLUDE / EXCLUDE / UNKNOWN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="gate" value="&lt;b&gt;Решение по политике&lt;/b&gt;&lt;br&gt;INCLUDE / UNKNOWN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="855" width="320" height="90" />
         </mxCell>
         <mxCell id="selected" value="&lt;b&gt;Положительное решение&lt;/b&gt;&lt;br&gt;selected.syft.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="160" y="1000" width="320" height="90" />
         </mxCell>
-        <mxCell id="report" value="&lt;b&gt;Отчёт решений&lt;/b&gt;&lt;br&gt;EXCLUDE + UNKNOWN + все INCLUDE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="report" value="&lt;b&gt;Отчёт решений&lt;/b&gt;&lt;br&gt;decisions.json + review.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="720" y="1000" width="320" height="90" />
         </mxCell>
         <mxCell id="cdx" value="&lt;b&gt;CycloneDX JSON&lt;/b&gt;&lt;br&gt;Syft convert + provenance + validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
@@ -103,7 +103,7 @@
         <mxCell id="facts" value="&lt;b&gt;Кандидат + evidence&lt;/b&gt;&lt;br&gt;Идентичность, версия, location, foundBy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="40" width="320" height="90" />
         </mxCell>
-        <mxCell id="valid" value="&lt;b&gt;Валидатор оценки&lt;/b&gt;&lt;br&gt;Все кандидаты и evidence IDs корректны?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="valid" value="&lt;b&gt;Валидатор свидетельств&lt;/b&gt;&lt;br&gt;Все кандидаты и evidence IDs корректны?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="190" width="320" height="90" />
         </mxCell>
         <mxCell id="failed" value="&lt;b&gt;Ошибка контракта&lt;/b&gt;&lt;br&gt;FAILED · final SBOM не выдаётся" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
@@ -115,14 +115,8 @@
         <mxCell id="unknown" value="&lt;b&gt;Недостаточно доказательств&lt;/b&gt;&lt;br&gt;UNKNOWN → отчёт · неполнота" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="660" y="530" width="320" height="90" />
         </mxCell>
-        <mxCell id="score" value="&lt;b&gt;Порог модели&lt;/b&gt;&lt;br&gt;Политика: TP &amp;gt;70" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="80" y="530" width="320" height="90" />
-        </mxCell>
         <mxCell id="yes" value="&lt;b&gt;INCLUDE&lt;/b&gt;&lt;br&gt;Добавить подтверждённую запись" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="40" y="730" width="320" height="90" />
-        </mxCell>
-        <mxCell id="no" value="&lt;b&gt;EXCLUDE по политике&lt;/b&gt;&lt;br&gt;TP ≤70 · объяснение в отчёте" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="430" y="730" width="320" height="90" />
         </mxCell>
         <mxCell id="note" value="&lt;b&gt;Граница интерпретации&lt;/b&gt;&lt;br&gt;Наличие ≠ выполнение ≠ применимость CVE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="240" y="930" width="320" height="90" />
@@ -139,13 +133,7 @@
         <mxCell id="e3" source="present" target="unknown" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64829a;strokeWidth=2;" value="нет / спорно">
           <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="e4" source="present" target="score" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64829a;strokeWidth=2;" value="да">
-          <mxGeometry as="geometry" relative="1" />
-        </mxCell>
-        <mxCell id="e5" source="score" target="yes" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64829a;strokeWidth=2;" value="&gt;70">
-          <mxGeometry as="geometry" relative="1" />
-        </mxCell>
-        <mxCell id="e6" source="score" target="no" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64829a;strokeWidth=2;" value="≤70">
+        <mxCell id="e4" source="present" target="yes" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64829a;strokeWidth=2;" value="да">
           <mxGeometry as="geometry" relative="1" />
         </mxCell>
       </root>

@@ -19,7 +19,7 @@ from .acquire import (
     validate_commit,
     validate_inputs,
 )
-from .core import reconcile, rules_assessor
+from .core import reconcile, review_report, rules_assessor
 from .exporter import packages_only
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .scanner import convert, scan_image, scan_source
@@ -27,7 +27,7 @@ from .validation import validate_cyclonedx, validate_export_identity, validate_s
 
 ARTIFACTS = (
     "final.cdx.json", "source.syft.json", "image.syft.json", "selected.syft.json",
-    "decisions.json", "coverage.json", "provenance.json", "summary.json",
+    "decisions.json", "coverage.json", "provenance.json", "summary.json", "review.json",
 )
 
 
@@ -152,8 +152,6 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
             {"name": "sbom-creator:unknown-count", "value": str(counts.get("UNKNOWN", 0))},
             {"name": "sbom-creator:provenance", "value": json.dumps(provenance, ensure_ascii=False)},
         ])
-        validate_cyclonedx(cdx)
-        write_json(staging / "final.cdx.json", cdx)
         coverage = result["coverage"]
         checkout_coverage = provenance.get("git", {}).get("coverage", provenance.get("source_coverage", {}))
         incomplete_source = bool(checkout_coverage.get("gitmodules_present")
@@ -165,8 +163,17 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
                          "source_catalogers": catalogers(source),
                          "image_catalogers": catalogers(image)})
         coverage["partial_inventory"] = counts.get("UNKNOWN", 0) > 0 or incomplete_source
+        cdx["metadata"]["properties"].extend([
+            {"name": "sbom-creator:assessment-mode", "value": coverage["mode"]},
+            {"name": "sbom-creator:policy-version", "value": coverage["policy_version"]},
+            {"name": "sbom-creator:coverage", "value": "partial" if coverage["partial_inventory"] else "no-known-gaps"},
+        ])
+        validate_cyclonedx(cdx)
+        write_json(staging / "final.cdx.json", cdx)
         summary = {
             "status": "succeeded", "partial": coverage["partial_inventory"],
+            "assessment_mode": coverage["mode"], "policy_version": coverage["policy_version"],
+            "unknown_reasons": coverage["unknown_reasons"],
             "source_count": len(source["artifacts"]), "image_count": len(image["artifacts"]),
             "selected_count": len(result["selected_syft"]["artifacts"]),
             "final_count": len(cdx.get("components", [])),
@@ -177,6 +184,7 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         write_json(staging / "coverage.json", coverage)
         write_json(staging / "provenance.json", provenance)
         write_json(staging / "summary.json", summary)
+        write_json(staging / "review.json", review_report(result["decisions"]))
         staging.rename(output)
     return summary
 
@@ -194,11 +202,11 @@ def publish_catalogs(source, image, output, settings, assessor, provenance=None)
         raise AnalysisError("reconcile_convert_validate", type(error).__name__) from None
 
 
-def analyze_local(source_path, image_reference, output, settings=None, mode="llm"):
+def analyze_local(source_path, image_reference, output, settings=None, mode="rules"):
     with analysis_workspace(output) as state:
         work = state["work"]
         settings = settings or Settings.from_env()
-        state["stage"] = "model_configuration"
+        state["stage"] = "assessment_configuration"
         assessor = assessor_for(mode)  # Fail before network/scanning if model is unconfigured.
         state["provenance"] = {"mode": mode, "source_kind": "local-checkout"}
         state["stage"] = "source_inspection"
@@ -221,7 +229,7 @@ def analyze_local(source_path, image_reference, output, settings=None, mode="llm
         return publish_catalogs(source, image, output, settings, assessor, state["provenance"])
 
 
-def analyze(repository_url, commit, image_reference, output, settings=None, mode="llm"):
+def analyze(repository_url, commit, image_reference, output, settings=None, mode="rules"):
     with analysis_workspace(output) as state:
         work = state["work"]
         settings = settings or Settings.from_env()
@@ -230,7 +238,7 @@ def analyze(repository_url, commit, image_reference, output, settings=None, mode
         # Input validation excludes embedded credentials before recording requests.
         state["provenance"] = {"mode": mode, "request": {"repository_url": repository_url,
                                  "commit": commit, "image": image_reference}}
-        state["stage"] = "model_configuration"
+        state["stage"] = "assessment_configuration"
         assessor = assessor_for(mode)
         state["stage"] = "checkout"
         git_provenance = checkout(repository_url, commit, work / "checkout", settings)

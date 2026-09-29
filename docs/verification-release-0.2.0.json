@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "docker_image": "sbom-creator:0.2.0",
+  "docker_image_id": "sha256:798f8bc3244962479af68ee6bd9611d738311982f495140da70f706743468ad7",
+  "report_sha256": "89bf88663f93447a0175e46d99e960eed6486e33ab0581eb3b37d3dc710e8e1e",
+  "audit_sha256": "79e745f51de8b96603c729027373bfdf303e1e346f4b7514833b67160cbc09e3",
+  "audited_repositories": 60,
+  "unchanged_selected_package_records_vs_v1": 60,
+  "archive": "dist/sbom-creator-0.2.0-60-cyclonedx.zip",
+  "archive_sha256": "cf5e3b7e4380b63f2db0b53189f6d413e67e7b8531d5da41753932df6d1f2d0a",
+  "archive_bytes": 2226025,
+  "archive_all_entry_hashes_and_crc_verified": true,
+  "archive_final_sboms_match_audited_hashes": true,
+  "wheel": "dist/sbom_creator-0.2.0-py3-none-any.whl",
+  "wheel_sha256": "3dffc53baed355bdfbcee4d56133d7911db9de53953594a6feeca269e87fb577",
+  "wheel_modules_match_source": 11,
+  "wheel_schemas": 4,
+  "large_artifacts_distribution": "local; dist and raw scans excluded from Git"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "verified_at": "2026-09-29T20:15:15.334782+00:00",
+  "python_version": "3.12.14",
+  "module_prefix": "/usr/local/lib/python3.12/site-packages",
+  "runtime_modules": {
+    "sbom_creator": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/__init__.py",
+      "sha256": "44824a26d4494fc58d4d58ccd85db60ce35ef84345f7f90c421a2b65fe0d9696",
+      "expected_path": "/expected-src/sbom_creator/__init__.py",
+      "expected_sha256": "44824a26d4494fc58d4d58ccd85db60ce35ef84345f7f90c421a2b65fe0d9696"
+    },
+    "sbom_creator.acquire": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/acquire.py",
+      "sha256": "caafe1378bd9c261dcf1fd328c42ae691632c5c7cdfe7a3a74a777273b0ba99d",
+      "expected_path": "/expected-src/sbom_creator/acquire.py",
+      "expected_sha256": "caafe1378bd9c261dcf1fd328c42ae691632c5c7cdfe7a3a74a777273b0ba99d"
+    },
+    "sbom_creator.scanner": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/scanner.py",
+      "sha256": "8d7e9155ea49a35461ce67abb6db174edef98807290cf766a79330d9e20fe716",
+      "expected_path": "/expected-src/sbom_creator/scanner.py",
+      "expected_sha256": "8d7e9155ea49a35461ce67abb6db174edef98807290cf766a79330d9e20fe716"
+    },
+    "sbom_creator.core": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/core.py",
+      "sha256": "344d83f91546cab97674fa798115d359834c400476aa42325523788e8752e3e8",
+      "expected_path": "/expected-src/sbom_creator/core.py",
+      "expected_sha256": "344d83f91546cab97674fa798115d359834c400476aa42325523788e8752e3e8"
+    },
+    "sbom_creator.llm": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/llm.py",
+      "sha256": "a8b5f7aa689f8f2d98cbf651ca7cfeec161ec07423bf5418d1e548324edfcdfe",
+      "expected_path": "/expected-src/sbom_creator/llm.py",
+      "expected_sha256": "a8b5f7aa689f8f2d98cbf651ca7cfeec161ec07423bf5418d1e548324edfcdfe"
+    },
+    "sbom_creator.pipeline": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/pipeline.py",
+      "sha256": "1a97a05d446f255539cce51c724f2c60287ca9403051eaf157a729f00128cbc6",
+      "expected_path": "/expected-src/sbom_creator/pipeline.py",
+      "expected_sha256": "1a97a05d446f255539cce51c724f2c60287ca9403051eaf157a729f00128cbc6"
+    },
+    "sbom_creator.service": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/service.py",
+      "sha256": "9db3baff8c005c4a616fd9a0210585ca99d97424d86c2f7eb0a6ba0bf22ac752",
+      "expected_path": "/expected-src/sbom_creator/service.py",
+      "expected_sha256": "9db3baff8c005c4a616fd9a0210585ca99d97424d86c2f7eb0a6ba0bf22ac752"
+    },
+    "sbom_creator.validation": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/validation.py",
+      "sha256": "a6b36591dcc92de2aba2d9630148cc28eb1b61adcea4c297dc462cc864fea427",
+      "expected_path": "/expected-src/sbom_creator/validation.py",
+      "expected_sha256": "a6b36591dcc92de2aba2d9630148cc28eb1b61adcea4c297dc462cc864fea427"
+    },
+    "sbom_creator.exporter": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/exporter.py",
+      "sha256": "4b346db605caf4c2784a846eb7328192493974a2448ba942b31673436210ae56",
+      "expected_path": "/expected-src/sbom_creator/exporter.py",
+      "expected_sha256": "4b346db605caf4c2784a846eb7328192493974a2448ba942b31673436210ae56"
+    },
+    "sbom_creator.cli": {
+      "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/cli.py",
+      "sha256": "76b1337a47cca883c568ef7e64c7174ac5ac5b1dea86e30524378471bda95612",
+      "expected_path": "/expected-src/sbom_creator/cli.py",
+      "expected_sha256": "76b1337a47cca883c568ef7e64c7174ac5ac5b1dea86e30524378471bda95612"
+    }
+  },
+  "host_module_hashes_match": true,
+  "source_unchanged_during_test": true,
+  "health_http": 200,
+  "health": {
+    "status": "ok",
+    "dependency_readiness": "not_checked"
+  },
+  "unauthenticated_http": 401,
+  "unconfigured_api_token_http": 503,
+  "unreadable_api_token_file_http": 503,
+  "oversized_api_token_file_http": 503,
+  "untrusted_repository_http": 422,
+  "accepted_job_http": 202,
+  "missing_git_job_status": "failed",
+  "missing_git_error_type": "RuntimeError",
+  "missing_git_failure_stage": "checkout",
+  "unpublished_artifact_http": 409,
+  "final_sbom_published": false,
+  "model_configured": false,
+  "model_calls": 0,
+  "credentials_persisted": false,
+  "escaping_symlink_rejected": true,
+  "unrelated_secret_environment_removed": true,
+  "scope": "real Linux loopback HTTP and default rules reaching unavailable Git; no build or model assessment"
+}

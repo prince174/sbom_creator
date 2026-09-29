@@ -307,6 +307,9 @@ def analyze(row: dict, case: Path, mode: str, timeout: int) -> None:
             if not row.get("final_sha256"):
                 raise RuntimeError("Cached result has no recorded final fingerprint")
             read_analysis(row, cached, mode, expected_final_sha=row["final_sha256"])
+            from sbom_creator.core import POLICY_VERSION, RULES_POLICY_VERSION
+            if row.get("policy_version") != (RULES_POLICY_VERSION if mode == "rules" else POLICY_VERSION):
+                raise RuntimeError("Cached assessment uses an older policy; replay or rescan is required")
             return
         except (OSError, ValueError, RuntimeError, KeyError, TypeError, ValidationError) as error:
             row["cache_rejected"] = {"directory": str(cached), "error_type": type(error).__name__}
@@ -376,7 +379,7 @@ def read_analysis(row: dict, destination: Path, mode: str, *, expected_final_sha
         raise RuntimeError("Published partial status differs from observed coverage")
     selected_by_id = {artifact["id"]: artifact for artifact in selected["artifacts"]}
     image_by_id = {artifact["id"]: artifact for artifact in image["artifacts"]}
-    included_ids = {artifact_id for decision in decisions if decision.get("decision") == "INCLUDE" for artifact_id in decision.get("image_artifact_ids", [])}
+    included_ids = {artifact_id for decision in decisions if decision.get("decision") == "INCLUDE" for artifact_id in decision.get("selected_image_artifact_ids", decision.get("image_artifact_ids", []))}
     if set(selected_by_id) != included_ids or any(value != image_by_id.get(key) for key, value in selected_by_id.items()):
         raise RuntimeError("Selected artifacts differ from positively included image evidence")
     validate_export_identity(final, selected)
@@ -387,6 +390,7 @@ def read_analysis(row: dict, destination: Path, mode: str, *, expected_final_sha
     row.update(source_count=len(source["artifacts"]), image_count=len(image["artifacts"]),
                include=counts["INCLUDE"], exclude=counts["EXCLUDE"], unknown=counts["UNKNOWN"],
                final_count=len(final.get("components", [])), cyclonedx_valid=True, decision_mode=mode,
+               policy_version=coverage.get("policy_version"),
                coverage="partial" if summary.get("partial") else "no unresolved candidates observed",
                image_digest_kind="immutable local Docker image ID (OCI index or config)", image_config_digest=config_digest,
                expected_application_observed=expected_observed(row, image["artifacts"]),

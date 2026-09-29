@@ -65,7 +65,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         yield
         executor.shutdown(wait=True, cancel_futures=False)
 
-    app = FastAPI(title="SBOM Creator", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="SBOM Creator", version="0.2.0", lifespan=lifespan)
 
     def auth(authorization: str | None = Header(default=None)):
         token = api_token()
@@ -94,7 +94,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         try:
             save_status(directory / "status.json", {"id": job_id, "status": "running"})
             result = runner(request.repository_url, request.commit, request.image,
-                            directory / "result", settings=configured, mode="llm")
+                            directory / "result", settings=configured, mode="rules")
             save_status(directory / "status.json",
                        {"id": job_id, "status": "succeeded", "result": result,
                         "artifacts": list(ARTIFACTS)})

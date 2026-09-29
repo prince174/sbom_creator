@@ -157,7 +157,7 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
         if mode == "rules":
             check(decision.get("tp_score") is None and decision.get("score_kind") == "not_scored", "RULES_FABRICATES_MODEL_SCORE")
         if decision.get("decision") == "INCLUDE":
-            ids = decision.get("image_artifact_ids", [])
+            ids = decision.get("selected_image_artifact_ids", decision.get("image_artifact_ids", []))
             check(bool(ids) and decision.get("identity_valid") is True, "INCLUDED_IDENTITY_NOT_CONFIRMED_IN_IMAGE")
             cited = [evidence_by_id[eid] for eid in decision.get("evidence_ids", []) if eid in evidence_by_id]
             check(any(e.get("origin") == "image" for e in cited), "INCLUSION_WITHOUT_CITED_IMAGE_EVIDENCE")
@@ -208,6 +208,10 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
     if current_policy and mode == "rules":
         current = reconcile(source, image, rules_assessor)
         check(current["selected_syft"] == selected, "OUTPUT_STALE_FOR_CURRENT_RULES")
+        check(current["decisions"] == decisions, "DECISIONS_STALE_FOR_CURRENT_RULES")
+        from sbom_creator.core import review_report
+        review = json.loads((destination / "review.json").read_bytes())
+        check(review == review_report(current["decisions"]), "UNCERTAINTY_REPORT_MISMATCH")
         result["checks"]["current_rules_replayed_in_memory"] = True
     result["checks"].update({"decision_identities": len(decisions), "source_records": actual_counts["source_count"],
                               "image_records": actual_counts["image_count"], "selected_records": actual_counts["selected_count"],

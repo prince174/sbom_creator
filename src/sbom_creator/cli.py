@@ -16,8 +16,8 @@ def main():
     for command in (remote, local):
         command.add_argument("--image", required=True)
         command.add_argument("--output", required=True)
-        command.add_argument("--mode", choices=("llm", "rules"), default="llm",
-                             help="rules is an explicit evidence-only mode without model scores")
+        command.add_argument("--mode", choices=("rules", "llm"), default="rules",
+                             help="default: deterministic rules; llm is an optional explicit experimental mode")
     args = parser.parse_args()
     try:
         if args.command == "analyze":

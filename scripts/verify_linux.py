@@ -78,7 +78,8 @@ def verify(expected_root: Path, module_prefix: Path) -> dict:
         else:
             raise AssertionError("Escaping source symlink was accepted")
         app = create_app(workspace=root / "api", settings=Settings(
-            bitbucket_hosts=("bitbucket.org",), registry_hosts=("docker.io",)))
+            bitbucket_hosts=("bitbucket.org",), registry_hosts=("docker.io",),
+            git_binary="/nonexistent/sbom-verifier-git"))
         sock = socket.socket()
         sock.bind(("127.0.0.1", 0))
         sock.listen(16)
@@ -105,7 +106,7 @@ def verify(expected_root: Path, module_prefix: Path) -> dict:
                 if time.monotonic() >= deadline:
                     raise RuntimeError("API startup timed out")
                 time.sleep(0.05)
-            # Format-valid request only: absent model configuration must fail before acquisition.
+            # Default rules must reach acquisition without a model. Git is deliberately unavailable.
             valid = {"repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
                      "commit": "a" * 40, "image": "docker.io/library/alpine:3.22"}
             health_code, health = request("/health")
@@ -137,10 +138,10 @@ def verify(expected_root: Path, module_prefix: Path) -> dict:
                 if state["status"] == "failed":
                     break
                 if time.monotonic() >= deadline:
-                    raise RuntimeError("Missing-model job did not fail closed")
+                    raise RuntimeError("Missing-Git job did not fail closed")
                 time.sleep(0.05)
             assert state["error"] == "RuntimeError"
-            assert state.get("stage") == "model_configuration"
+            assert state.get("stage") == "checkout"
             blocked_code, _ = request(accepted["status_url"] + "/artifacts/final.cdx.json", authenticated=True)
             assert blocked_code == 409
             assert not list((root / "api").rglob("final.cdx.json"))
@@ -154,12 +155,12 @@ def verify(expected_root: Path, module_prefix: Path) -> dict:
                 "unreadable_api_token_file_http": unreadable_token_code,
                 "oversized_api_token_file_http": oversized_token_code,
                 "untrusted_repository_http": invalid_code, "accepted_job_http": accepted_code,
-                "missing_model_job_status": state["status"], "missing_model_error_type": state["error"],
-                "missing_model_failure_stage": state.get("stage"),
+                "missing_git_job_status": state["status"], "missing_git_error_type": state["error"],
+                "missing_git_failure_stage": state.get("stage"),
                 "unpublished_artifact_http": blocked_code, "final_sbom_published": False,
                 "model_configured": False, "model_calls": 0, "credentials_persisted": False,
                 "escaping_symlink_rejected": True, "unrelated_secret_environment_removed": True,
-                "scope": "real Linux loopback HTTP and pipeline configuration failure; no build or model assessment",
+                "scope": "real Linux loopback HTTP and default rules reaching unavailable Git; no build or model assessment",
             }
             assert token not in json.dumps(evidence)
             return evidence

@@ -235,7 +235,7 @@ def test_image_scan_failure_preserves_source_before_workspace_cleanup(tmp_path, 
     assert all("secret-from-registry-error" not in path.read_text("utf-8") for path in diagnostics.iterdir())
 
 
-@pytest.mark.parametrize("stage", ["configuration", "model_configuration", "checkout"])
+@pytest.mark.parametrize("stage", ["configuration", "assessment_configuration", "checkout"])
 def test_early_remote_failures_save_sanitized_stage_without_publishing(tmp_path, monkeypatch, stage):
     output = tmp_path / "early-failure"
 
@@ -246,7 +246,7 @@ def test_early_remote_failures_save_sanitized_stage_without_publishing(tmp_path,
     if stage == "configuration":
         monkeypatch.setattr(Settings, "from_env", fail)
         settings = None
-    elif stage == "model_configuration":
+    elif stage == "assessment_configuration":
         monkeypatch.setattr("sbom_creator.pipeline.assessor_for", fail)
     else:
         monkeypatch.setattr("sbom_creator.pipeline.checkout", fail)

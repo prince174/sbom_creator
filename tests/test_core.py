@@ -129,9 +129,39 @@ def test_root_package_json_and_installed_node_modules_are_image_package_metadata
     assert reconcile(doc(), image, scores(100))["decisions"][0]["decision"] == "UNKNOWN"
 
 
-def test_missing_default_assessor_is_configuration_error():
-    with pytest.raises(RuntimeError, match="fallback"):
-        reconcile(doc(), doc())
+def test_default_assessor_is_rules_without_model_scores():
+    result = reconcile(doc(), doc(package("installed")))
+    assert result["coverage"]["mode"] == "rules"
+    assert result["decisions"][0]["tp_score"] is None
+    assert result["decisions"][0]["decision"] == "INCLUDE"
+
+
+def test_installed_identity_does_not_promote_lockfile_records_or_relationships():
+    image = doc(package("installed"), package("declaration", foundBy="python-package-cataloger"),
+                artifactRelationships=[{"parent": "image-source", "child": "declaration", "type": "contains"}])
+    result = reconcile(doc(), image)
+    assert [a["id"] for a in result["selected_syft"]["artifacts"]] == ["installed"]
+    assert result["selected_syft"]["artifactRelationships"] == []
+    assert result["decisions"][0]["image_artifact_ids"] == ["installed", "declaration"]
+    assert result["decisions"][0]["selected_image_artifact_ids"] == ["installed"]
+
+
+def test_more_than_one_hundred_installed_copies_do_not_break_rule_assessment():
+    image = doc(*(package(str(i)) for i in range(120)))
+    result = reconcile(doc(), image)
+    assert len(result["selected_syft"]["artifacts"]) == 120
+    assert len(result["decisions"][0]["evidence_ids"]) == 100
+    assert len(result["decisions"][0]["evidence"]) == 120
+
+
+def test_unknown_review_separates_source_only_version_conflict_and_declarations():
+    from sbom_creator.core import review_report
+    source = doc(package("dev", "dev"), package("old", version="1"))
+    image = doc(package("new", version="2"), package("lock", "locked", foundBy="python-package-cataloger"))
+    report = review_report(reconcile(source, image)["decisions"])
+    assert report["reason_counts"] == {"SOURCE_ONLY": 1, "SOURCE_VERSION_NOT_OBSERVED": 1, "DECLARATION_ONLY": 1}
+    assert report["unknown_count"] == 3
+    assert all(row["next_step"] for row in report["items"])
 
 
 def test_assessment_ids_and_evidence_must_be_complete_local_and_unique():

@@ -3,6 +3,7 @@
 Python-сервис получает **Bitbucket HTTPS URL + полный commit SHA + container image**,
 сам получает исходники и образ, запускает **Syft 1.51.1** для обоих входов,
 сопоставляет **Syft JSON 16.1.10** и выдаёт **CycloneDX JSON 1.6**.
+Основной режим API и CLI — детерминированные правила, без LLM и модельных ключей.
 Загрузку в Dependency-Track выполняет пользователь.
 
 Основа — подход `SCA_accuracy_improvement`: точные входы, evidence и проверяемые
@@ -19,13 +20,12 @@ Fallback без PURL требует точной идентичности; fuzzy
 
 | Ситуация | Результат |
 |---|---|
-| Подтверждённая идентичность в образе + валидная оценка модели >70 | INCLUDE |
-| Достаточные cited image evidence + оценка ≤70 | EXCLUDE по политике |
+| Точная идентичность в пакетной, архивной или бинарной metadata образа | INCLUDE |
 | Только исходники, скопированный lockfile, неоднозначная идентичность, недостающие evidence | UNKNOWN |
-| Неполный ответ, неизвестный evidence ID, нечисловая оценка, сбой модели/сканера/schema | Задание failed, final недоступен |
+| Сбой получения входов, сканера, конвертации или schema | Задание failed, final недоступен |
 
 Пакеты ОС и image-only зависимости тоже рассматриваются. Наличие metadata не
-доказывает выполнение кода; оценка модели не является калиброванной вероятностью.
+доказывает выполнение кода. Вероятности и оценки TP в режиме правил не назначаются.
 Исходные source/image SBOM сохраняются. UNKNOWN делает результат частичным.
 Неполученные submodules/LFS отражаются в coverage. Сборка приложения, установка
 пакетов и запуск контейнера в production-пути не выполняются.
@@ -33,7 +33,7 @@ Fallback без PURL требует точной идентичности; fuzzy
 ## Linux / Docker
 
 Worker: Linux amd64, Docker Engine **28+** (нужен `image save --platform`),
-доступ к Bitbucket, registry и настроенной модели. Образ сервиса содержит Git,
+доступ к Bitbucket и registry. Образ сервиса содержит Git,
 Docker CLI 29.8.0 и закреплённый Syft. Docker socket требует выделенного доверенного worker.
 Сервис запускается одним процессом; несколько независимых экземпляров не должны делить workspace.
 
@@ -45,7 +45,7 @@ docker compose up --build -d
 ```
 
 Порт: `127.0.0.1:18082`. Для доступа извне используйте HTTPS reverse proxy.
-`/health` подтверждает работу API, но не готовность Git/registry/модели.
+`/health` подтверждает работу API, но не готовность Git/registry.
 
 ### Настройки
 
@@ -60,13 +60,9 @@ docker compose up --build -d
 | `SBOM_REGISTRY_HOSTS` | Разрешённые registry hosts; image требует явного tag/digest |
 | `SBOM_REGISTRY_USERNAME`, `SBOM_REGISTRY_PASSWORD` / `_FILE` | Registry credentials |
 | `SBOM_IMAGE_PLATFORM` | Default `linux/amd64` |
-| `SBOM_LLM_BASE_URL`, `SBOM_LLM_MODEL` | Обязательная явная настройка OpenAI-compatible модели |
-| `SBOM_LLM_API_KEY` / `_FILE` | Ключ новой модели; старый проект автоматически не используется |
-| `SBOM_LLM_TIMEOUT_SECONDS` | Timeout, default 120 |
 | `SBOM_WORKERS` | 1–4, default 1; очередь ограничена 16 заданиями |
 | `SBOM_SYFT_BINARY` | Путь к Syft, default `syft` |
 
-Внешняя модель требует HTTPS. Loopback HTTP разрешён для локального сервера.
 Секреты не включаются в argv, provenance и сообщения об ошибках.
 Git redirects, hooks, inherited Git configs, автоматические submodules/LFS и
 конфигурация Syft из репозитория отключены.
@@ -89,8 +85,11 @@ Git redirects, hooks, inherited Git configs, автоматические submod
 До успеха скачивание блокируется 409; неподдержанные имена файлов — 404.
 После рестарта незавершённые задания помечаются failed, автоматически не повторяются.
 
-API использует модель. Режим правил доступен только явно через CLI для сравнения
-и проверки инфраструктуры; переключения на него при ошибке LLM нет.
+API всегда использует правила. CLI также использует их по умолчанию. Даже ошибочно
+заданные `SBOM_LLM_*` не читаются и не вызывают обращений к модели. Сохранённый
+экспериментальный CLI-режим `--mode llm` запускается только явно, требует собственной
+конфигурации `SBOM_LLM_BASE_URL`, `SBOM_LLM_MODEL` и при необходимости ключа.
+Он не является частью рабочего режима без LLM; скрытого переключения между режимами нет.
 
 ## CLI и локальная разработка
 
@@ -102,7 +101,7 @@ pip install -e '.[dev]'
 sbom-creator analyze --repository-url https://bitbucket.org/workspace/app.git \
   --commit FULL_SHA --image registry.example.com/app:build-123 --output workspace/result-1
 
-# Явный benchmark-путь, без LLM-оценки:
+# Локальный checkout, тот же режим правил:
 sbom-creator analyze-local --source ./checkout --image registry.example.com/app:build-123 \
   --output workspace/result-rules --mode rules
 ```
@@ -120,7 +119,8 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 | `source.syft.json`, `image.syft.json` | Полные исходные каталоги |
 | `selected.syft.json` | Отобранные записи образа с целостными ссылками |
 | `decisions.json` | Все INCLUDE/EXCLUDE/UNKNOWN с evidence и причинами |
-| `coverage.json` | Catalogers, ограничения и неполнота |
+| `coverage.json` | Catalogers, ограничения, неполнота и счётчики причин UNKNOWN |
+| `review.json` | Компактный список UNKNOWN: идентичность, причина и следующий шаг проверки |
 | `provenance.json` | Commit, immutable image/config/digest, версии и hashes |
 | `summary.json` | Счётчики и статус валидации |
 
@@ -139,15 +139,19 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 `build_link=unverified`. Неизвестные dependency edges не выдумываются.
 Удалённые слои образа не входят в scan (`squashed`).
 
+В правилах v2 подтверждённая идентичность не переносит в итог записи той же версии
+из lockfile. В `decisions.json` отдельно сохранены все наблюдения и
+`selected_image_artifact_ids`. Неопределённость не маскируется удалением из отчёта.
+
 ## Проверка на 60 репозиториях
 
-[Сводная таблица](benchmarks/results/run-20260929/results.md) ·
-[CSV](benchmarks/results/run-20260929/results.csv) ·
-[JSON](benchmarks/results/run-20260929/results.json) ·
-[Независимый аудит](benchmarks/results/run-20260929/audit-final.json) ·
+[Сводная таблица](benchmarks/results/rules-v2-20260930/results.md) ·
+[CSV](benchmarks/results/rules-v2-20260930/results.csv) ·
+[JSON](benchmarks/results/rules-v2-20260930/results.json) ·
+[Независимый аудит](benchmarks/results/rules-v2-20260930/audit-final.json) ·
 [Точные commits](benchmarks/manifest.json).
 
-Завершены все 60 проверок в режиме `rules`: по 10 Java, JavaScript, Python, Rust,
+Повторно обработаны сохранённые сканы всех 60 проектов по правилам v2: по 10 Java, JavaScript, Python, Rust,
 Go и Ruby. Независимый аудит подтвердил schemas, hashes, provenance и решения
 для 60/60 результатов без ошибок. 57 публичных проектов дополняют 3 существующих
 Python fixtures Bitbucket. Подготовка тестовых образов отделена от сервиса.
@@ -155,8 +159,7 @@ Python fixtures Bitbucket. Подготовка тестовых образов 
 Все результаты имеют `partial` coverage: 2360 UNKNOWN-идентичностей исключены
 из итоговых SBOM. Точная release-идентичность основного пакета подтверждена в
 54 из 59 применимых случаев; ограничения Go описаны в [методике](benchmarks/README.md).
-Модельный прогон ждёт отдельной модели пользователя. Режим rules не измеряет
-качество LLM. FP/FN требуют независимой разметки и не подменяются числом удалённых пакетов.
+Модель для рабочего сценария не нужна. Режим rules не измеряет качество LLM. FP/FN требуют независимой разметки и не подменяются числом удалённых пакетов.
 
 ```bash
 pytest -q
@@ -164,7 +167,8 @@ ruff check src tests
 python benchmarks/run.py --help
 ```
 
-Результаты проверок и команды повторения: [verification.md](docs/verification.md).
+Результаты 0.2.0, контрольный образ и границы точности: [rules-v2.md](docs/rules-v2.md).
+История проверок: [verification.md](docs/verification.md).
 Тесты включают реальные Syft roundtrip при наличии бинарника, целостность CycloneDX,
 фильтрацию зависимостей, невалидные model responses, auth/allowlists и блокировку
 частичных результатов. Сведения о заимствованной основе: [THIRD_PARTY.md](THIRD_PARTY.md).

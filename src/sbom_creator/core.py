@@ -1,8 +1,8 @@
 """Evidence-preserving reconciliation of source and delivered-image Syft catalogs.
 
 This policy describes package inventory, never runtime use or CVE applicability.
-The optional rules assessor is an explicitly selected diagnostic mode, not an LLM
-fallback. Source-only declarations and non-exact identities remain UNKNOWN.
+Rules are the default policy. Optional model assessment never replaces missing
+image evidence. Source-only declarations and non-exact identities remain UNKNOWN.
 """
 
 from __future__ import annotations
@@ -20,8 +20,8 @@ from urllib.parse import parse_qsl
 from packageurl import PackageURL
 
 TP_THRESHOLD = 70
-POLICY_VERSION = "image-evidence-tp-gt-70-v1"
-RULES_POLICY_VERSION = "image-evidence-only-v1"
+POLICY_VERSION = "image-evidence-tp-gt-70-v2"
+RULES_POLICY_VERSION = "image-evidence-only-v2"
 TYPE_ALIASES = {
     "java-archive": "maven", "python": "pypi", "rust-crate": "cargo",
     "go-module": "golang", "gem": "gem", "npm": "npm",
@@ -200,12 +200,12 @@ def _image_evidence(candidate: dict) -> list[dict]:
 
 
 def rules_assessor(candidates: list[dict]) -> list[dict]:
-    """Explicit evidence-only diagnostic mode: no scores or model claims."""
+    """Deterministic evidence-only policy: no scores or model calls."""
     return [{"candidate_id": c["candidate_id"], "tp_score": None,
              "reason": "Exact package identity observed in image metadata; execution is not established."
              if c["identity_valid"] and _image_evidence(c)
              else "Available observations do not establish an exact delivered package identity.",
-             "evidence_ids": [e["id"] for e in _image_evidence(c)],
+             "evidence_ids": [e["id"] for e in _image_evidence(c)][:100],
              "missing_evidence": [] if c["identity_valid"] and _image_evidence(c)
              else ["Concrete image package evidence with exact identity/version"]}
             for c in candidates]
@@ -245,9 +245,34 @@ def validate_assessments(candidates: list[dict], assessments: Any, *, rules: boo
     return result
 
 
+def review_report(decisions: list[dict]) -> dict:
+    """Compact actionable uncertainty report, without duplicating raw catalogs."""
+    actions = {
+        "AMBIGUOUS_IDENTITY": "Check original package metadata and exact version; do not guess an identity.",
+        "SOURCE_VERSION_NOT_OBSERVED": "Compare source lockfiles with the delivered build; retain the observed image version.",
+        "SOURCE_ONLY": "Check whether this is a build/dev dependency, omitted installation, or scanner blind spot.",
+        "DECLARATION_ONLY": "Provide installed-package or embedded binary/archive metadata; copied manifests are insufficient.",
+    }
+    items = []
+    for row in decisions:
+        if row["decision"] != "UNKNOWN":
+            continue
+        items.append({
+            "candidate_id": row["candidate_id"], "identity": row["identity"],
+            "reason": row["review_reason"], "identity_problem": row["identity_problem"],
+            "source_artifact_ids": row["source_artifact_ids"],
+            "image_artifact_ids": row["image_artifact_ids"],
+            "observed_versions": row.get("observed_versions", {}),
+            "next_step": actions.get(row["review_reason"], "Inspect original image evidence and scanner coverage."),
+        })
+    return {"schema_version": 1, "unknown_count": len(items),
+            "reason_counts": dict(Counter(x["reason"] for x in items)), "items": items,
+            "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."}
+
+
 def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> dict:
     if assessor is None:
-        raise RuntimeError("Configure an LLM assessor or explicitly select rules_assessor; automatic fallback is disabled")
+        assessor = rules_assessor
     candidates = build_candidates(source, image)
     rules = assessor is rules_assessor
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
@@ -270,9 +295,22 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> di
         else:
             decision, policy_reason = "EXCLUDE", "TP_SCORE_NOT_ABOVE_THRESHOLD"
         if decision == "INCLUDE":
-            included.update(candidate["image_artifact_ids"])
+            # A confirmed identity must not promote lockfile/declaration records
+            # carrying the same PURL into installed-package evidence.
+            included.update(e["artifact_id"] for e in image_facts)
+        review_reason = (
+            "AMBIGUOUS_IDENTITY" if not candidate["identity_valid"] else
+            "SOURCE_VERSION_NOT_OBSERVED" if not image_facts and candidate["category"] == "version_conflict" else
+            "SOURCE_ONLY" if not candidate["image_artifact_ids"] else
+            "DECLARATION_ONLY" if not image_facts and all(
+                e["presence_kind"] == "declared_manifest" for e in candidate["evidence"] if e["origin"] == "image") else
+            policy_reason
+        )
         decisions.append({**copy.deepcopy(candidate), **assessment, "decision": decision,
                           "policy_reason": policy_reason,
+                          "review_reason": review_reason,
+                          "selected_image_artifact_ids": [e["artifact_id"] for e in image_facts]
+                          if decision == "INCLUDE" else [],
                           "score_kind": "not_scored" if rules else "uncalibrated_model_estimate",
                           "policy_version": RULES_POLICY_VERSION if rules else POLICY_VERSION,
                           "scope": "Inventory policy only; exclusion does not prove absence, runtime non-use, or CVE non-applicability."})
@@ -291,6 +329,8 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> di
         "candidates": len(candidates), "selected_artifacts": len(selected["artifacts"]),
         "decisions": {key: counts[key] for key in ("INCLUDE", "EXCLUDE", "UNKNOWN")},
         "categories": dict(Counter(c["category"] for c in candidates)),
+        "unknown_reasons": dict(Counter(d["review_reason"] for d in decisions if d["decision"] == "UNKNOWN")),
+        "unselected_image_artifacts": len(image["artifacts"]) - len(selected["artifacts"]),
         "relationships_pruned": len(old_relationships) - len(selected["artifactRelationships"]),
         "partial_inventory": counts["UNKNOWN"] > 0,
         "dependency_graph": "Only existing scanner relationships preserved; ownership is not library dependency",

@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "scope": "Generated Python/npm payload inventory; not installation-tool, code reachability or production accuracy",
+  "scenarios": [
+    "source-only",
+    "copied locks",
+    "installed plus same-identity declaration",
+    "source/image version conflict",
+    "two delivered versions",
+    "image-only",
+    "two installed locations"
+  ],
+  "mode": "rules",
+  "ground_truth_written_before_scan": true,
+  "ground_truth_sha256": "1938de0778df9f7e6d2831ef31ea29fdf48062512a4f289813f33b92becded44",
+  "positive_labels": 5,
+  "negative_labels": 5,
+  "true_positives": 5,
+  "false_positives": [],
+  "false_negatives": [],
+  "labelled_controls_observed": 9,
+  "labels_not_observed_by_scanner": [
+    "pkg:npm/dev-only-js@7.0.0"
+  ],
+  "selected_declaration_records": 0,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-only-v2",
+    "unknown_reasons": {
+      "SOURCE_VERSION_NOT_OBSERVED": 1,
+      "SOURCE_ONLY": 3
+    },
+    "source_count": 6,
+    "image_count": 6,
+    "selected_count": 6,
+    "final_count": 6,
+    "decisions": {
+      "UNKNOWN": 4,
+      "INCLUDE": 5
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.437
+  },
+  "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\golden-rules-v2b\\result",
+  "image": {
+    "image": "docker.io/sbom-creator-golden:1938de0778df",
+    "immutable_reference": "sha256:54461d7548070992af3cb07450ca702f674a045011fa99cd3c2c895f9e073482",
+    "image_digest": "sha256:54461d7548070992af3cb07450ca702f674a045011fa99cd3c2c895f9e073482",
+    "platform_digest": null,
+    "registry_digest": null,
+    "acquisition": "local",
+    "image_id": "sha256:54461d7548070992af3cb07450ca702f674a045011fa99cd3c2c895f9e073482",
+    "requested_platform": "linux/amd64",
+    "image_config_digest": "sha256:e7401fad51aac69030a72b9363886d1f9f228092a5941e2fb386a2c13adda57c",
+    "platform": "linux/amd64",
+    "repo_digests": [
+      "sbom-creator-golden@sha256:54461d7548070992af3cb07450ca702f674a045011fa99cd3c2c895f9e073482"
+    ],
+    "archive_sha256": "9be2d158c030609ad24bdab86badbd0f769356f5fea98017d6d8d51608d0b87a",
+    "syft_version": "1.51.1",
+    "scope": "squashed",
+    "container_started": false,
+    "build_link": "unverified"
+  },
+  "artifacts_sha256": {
+    "coverage.json": "eca0e086422e4c7a4d7c1a58fd51335ffb52c8633e7a441881b75e74798d1a3b",
+    "decisions.json": "696c34d112635cf4c180c51da30c66d34a040eed02ba1df4fff12d33cd87e481",
+    "final.cdx.json": "e016c053acf30ba5db7dccb711edbf91b24000769010f78ea182a1a24042640c",
+    "image.syft.json": "dbca1db76bf966bcee4a5ccd5ddd545e446503f25dd2678ede322c5cf6f81580",
+    "provenance.json": "cb14683fc33f43b6f9f8c7cb4beed94392d1010d5cdea4eb825c9c0027c4a313",
+    "review.json": "3809674aac14c31a20c2e1dde33f363117b2755447375e020a2ef18dbab8ae58",
+    "selected.syft.json": "dbca1db76bf966bcee4a5ccd5ddd545e446503f25dd2678ede322c5cf6f81580",
+    "source.syft.json": "47656d32fc18711f24a33204b3e4cf1bb2319781aa7be4f21cc9a9ae327663f4",
+    "summary.json": "38cfbdc8030ec0363f5b04cbdf3eacf8d48145ae3398b3c64b5a8935abc7b0b0"
+  }
+}

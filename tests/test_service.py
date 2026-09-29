@@ -50,7 +50,7 @@ def test_successful_job_has_download_and_rejects_foreign_host(tmp_path, monkeypa
     monkeypatch.setenv("SBOM_API_TOKEN", "test-token")
 
     def success(url, commit, image, output, **kwargs):
-        assert kwargs["mode"] == "llm"
+        assert kwargs["mode"] == "rules"
         output.mkdir()
         (output / "final.cdx.json").write_text('{"bomFormat":"CycloneDX"}', "utf-8")
         return {"status": "succeeded"}
