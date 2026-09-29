@@ -109,7 +109,7 @@
         <mxCell id="failed" value="&lt;b&gt;Ошибка контракта&lt;/b&gt;&lt;br&gt;FAILED · final SBOM не выдаётся" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="840" y="350" width="320" height="90" />
         </mxCell>
-        <mxCell id="present" value="&lt;b&gt;Подтверждение в образе&lt;/b&gt;&lt;br&gt;Конкретная идентичность подтверждена?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="present" value="&lt;b&gt;Подтверждение в образе&lt;/b&gt;&lt;br&gt;Идентичность и нужные файлы подтверждены?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="240" y="350" width="320" height="90" />
         </mxCell>
         <mxCell id="unknown" value="&lt;b&gt;Недостаточно доказательств&lt;/b&gt;&lt;br&gt;UNKNOWN → отчёт · неполнота" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">

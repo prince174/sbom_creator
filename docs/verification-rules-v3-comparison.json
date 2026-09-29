@@ -1,0 +1,296 @@
+{
+  "passed": true,
+  "scope": "Same controlled images; inventory changes and timings, not independently labelled full accuracy",
+  "baseline_sha256": "89bf88663f93447a0175e46d99e960eed6486e33ab0581eb3b37d3dc710e8e1e",
+  "report_sha256": "b1db701eb803fc3462d03ac0aef5a7dcf5c900dbae534a69385c8703f9e75156",
+  "languages": [
+    {
+      "language": "Java",
+      "completed": 10,
+      "final_components": 1471,
+      "unknown": 310,
+      "median_analysis_seconds": 18.79,
+      "min_analysis_seconds": 17.906,
+      "max_analysis_seconds": 21.516
+    },
+    {
+      "language": "JavaScript",
+      "completed": 10,
+      "final_components": 2964,
+      "unknown": 637,
+      "median_analysis_seconds": 33.03,
+      "min_analysis_seconds": 30.906,
+      "max_analysis_seconds": 37.266
+    },
+    {
+      "language": "Python",
+      "completed": 10,
+      "final_components": 1147,
+      "unknown": 176,
+      "median_analysis_seconds": 15.13,
+      "min_analysis_seconds": 13.64,
+      "max_analysis_seconds": 17.828
+    },
+    {
+      "language": "Rust",
+      "completed": 10,
+      "final_components": 1747,
+      "unknown": 919,
+      "median_analysis_seconds": 13.2,
+      "min_analysis_seconds": 11.313,
+      "max_analysis_seconds": 20.422
+    },
+    {
+      "language": "Go",
+      "completed": 10,
+      "final_components": 1136,
+      "unknown": 166,
+      "median_analysis_seconds": 11.6,
+      "min_analysis_seconds": 10.469,
+      "max_analysis_seconds": 45.297
+    },
+    {
+      "language": "Ruby",
+      "completed": 10,
+      "final_components": 1790,
+      "unknown": 152,
+      "median_analysis_seconds": 17.0,
+      "min_analysis_seconds": 15.297,
+      "max_analysis_seconds": 19.829
+    }
+  ],
+  "unknown_reasons": {
+    "CI_CONFIGURATION": 554,
+    "INSUFFICIENT_IMAGE_EVIDENCE": 260,
+    "SOURCE_ONLY": 1420,
+    "AMBIGUOUS_IDENTITY": 44,
+    "SOURCE_VERSION_NOT_OBSERVED": 72,
+    "PAYLOAD_NOT_CONFIRMED": 10
+  },
+  "final_components": 10255,
+  "unknown": 2360,
+  "application_in_final": 54,
+  "application_applicable": 59,
+  "changes": [
+    {
+      "id": "go-hey",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-assetfinder",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-httprobe",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-waybackurls",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-unfurl",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-yq",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-lazygit",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-glow",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-scc",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "go-upterm",
+      "added": [
+        [
+          "pkg:golang/stdlib@1.24.13",
+          "stdlib",
+          "go1.24.13"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "id": "ruby-rake",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-rack",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-psych",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-json",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-rexml",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-csv",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-logger",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-uri",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    },
+    {
+      "id": "ruby-stringio",
+      "added": [],
+      "removed": [
+        [
+          "pkg:gem/ruby2_keywords@0.0.5",
+          "ruby2_keywords",
+          "0.0.5"
+        ]
+      ]
+    }
+  ]
+}

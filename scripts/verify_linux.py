@@ -26,7 +26,7 @@ from pathlib import Path
 
 MODULES = ("sbom_creator", "sbom_creator.acquire", "sbom_creator.scanner", "sbom_creator.core",
            "sbom_creator.llm", "sbom_creator.pipeline", "sbom_creator.service", "sbom_creator.validation",
-           "sbom_creator.exporter", "sbom_creator.cli")
+           "sbom_creator.exporter", "sbom_creator.cli", "sbom_creator.payload")
 
 
 def module_evidence(expected_root: Path, module_prefix: Path) -> dict:

@@ -298,10 +298,10 @@ def build_image(row: dict, case: Path, timeout: int) -> None:
                build_recipe_sha256=hashlib.sha256(dockerfile.read_bytes()).hexdigest())
 
 
-def analyze(row: dict, case: Path, mode: str, timeout: int) -> None:
+def analyze(row: dict, case: Path, mode: str, timeout: int, *, fresh: bool = False) -> None:
     if not row.get("image_id"):
         raise RuntimeError("No completed native image build")
-    cached = Path(row["analysis_directory"]) if row.get("analysis_directory") and row.get("decision_mode") == mode else None
+    cached = Path(row["analysis_directory"]) if not fresh and row.get("analysis_directory") and row.get("decision_mode") == mode else None
     if cached and (cached / "summary.json").exists():
         try:
             if not row.get("final_sha256"):
@@ -455,6 +455,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--build-timeout", type=int, default=600)
     parser.add_argument("--mode", choices=("rules", "llm"), default="rules")
+    parser.add_argument("--fresh", action="store_true", help="Rescan instead of reusing a successful analysis; preserve prior output")
     parser.add_argument("--syft", type=Path, default=ROOT / ".tools" / "syft" / "syft.exe")
     args = parser.parse_args()
     args.output, args.work, args.syft = args.output.resolve(), args.work.resolve(), args.syft.resolve()
@@ -496,7 +497,7 @@ def main() -> None:
                 row["status"] = "build_complete"
             if args.phase in {"analyze", "all"}:
                 row["stage"] = "analyze"
-                analyze(row, case, args.mode, timeout=1200)
+                analyze(row, case, args.mode, timeout=1200, fresh=args.fresh)
             if args.phase == "replay":
                 row["stage"] = "reconcile_replay"
                 replay(row, case, args.mode)

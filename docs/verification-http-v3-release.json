@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "scope": "Actual test Bitbucket clone, local HTTPS registry pull, installed HTTP API, all artifact downloads",
+  "base_service_image_id": "sha256:8775bf31e67c92a2303c6f53e74078c25e5379b8c83b07f9ea4c8ae56cd16aa1",
+  "service_image_id": "sha256:b14db0986b0ebe38d611e050b020a5e888724c2514be4fcdab71f92f3709d81f",
+  "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+  "commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+  "submitted_image": "localhost:7455/sbom-test/python-service:973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+  "registry_digest": "sha256:d97f5da3b4fd66376fa8c413c530a3d78babdf57a5ec8208ab9c0bbf7feb602b",
+  "source_build_image_config_digest_matches": true,
+  "unauthenticated_http": 401,
+  "accepted_http": 202,
+  "status": "succeeded",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 1
+    },
+    "source_count": 0,
+    "image_count": 114,
+    "selected_count": 113,
+    "final_count": 113,
+    "decisions": {
+      "INCLUDE": 108,
+      "UNKNOWN": 1
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 7.496
+  },
+  "elapsed_seconds": 17.297,
+  "resource_limit": {
+    "cpus": 2,
+    "memory_bytes": 1073741824,
+    "pids": 128
+  },
+  "resource_samples": [
+    {
+      "CPUPerc": "7.30%",
+      "MemUsage": "48.73MiB / 1GiB",
+      "MemPerc": "4.76%",
+      "PIDs": "6"
+    },
+    {
+      "CPUPerc": "50.37%",
+      "MemUsage": "48.3MiB / 1GiB",
+      "MemPerc": "4.72%",
+      "PIDs": "12"
+    },
+    {
+      "CPUPerc": "102.97%",
+      "MemUsage": "129.3MiB / 1GiB",
+      "MemPerc": "12.63%",
+      "PIDs": "11"
+    },
+    {
+      "CPUPerc": "156.07%",
+      "MemUsage": "344.1MiB / 1GiB",
+      "MemPerc": "33.60%",
+      "PIDs": "11"
+    },
+    {
+      "CPUPerc": "99.88%",
+      "MemUsage": "70.98MiB / 1GiB",
+      "MemPerc": "6.93%",
+      "PIDs": "3"
+    },
+    {
+      "CPUPerc": "101.45%",
+      "MemUsage": "90.31MiB / 1GiB",
+      "MemPerc": "8.82%",
+      "PIDs": "3"
+    },
+    {
+      "CPUPerc": "81.02%",
+      "MemUsage": "143.1MiB / 1GiB",
+      "MemPerc": "13.98%",
+      "PIDs": "11"
+    }
+  ],
+  "model_calls": 0,
+  "credentials_in_report": false,
+  "downloaded_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\http-v3-release\\downloaded",
+  "artifacts_sha256": {
+    "coverage.json": "4600e672621de5889477340e4e9c761de1aaffd7701f7bb9dd1eb2b4a6673d20",
+    "decisions.json": "14baf07449f17a912c794ef4e5e873bd54cbef8883959815f7964832ac7b55f6",
+    "final.cdx.json": "9703618c6f3605ed717982ba77002a8673a81250bf15bd516963d2970920fc08",
+    "image.syft.json": "5b2f6caec8ce20705fb9732052fffd1ecdbca3fbf21cd97590162b8570f3e25b",
+    "provenance.json": "772cfaae1cf89f465e28da6b4f5749d03b32c3a16aa1f8f9d6289d4fe87f3edb",
+    "review.json": "e28aae62e10cc53367fb29714d36351c7c2452af38435d267507e3bedf8d60d7",
+    "selected.syft.json": "914dd3040ff82c0a52eb7409f99a7b64a05e3aa57e987b8cfdc2784b8f8836c5",
+    "source.syft.json": "9a7dae966ef863e501437fa437db13cab19b824bfe34ce63ba2f4c40f8b87351",
+    "summary.json": "1113243f09db1fb77ab3726f98326cb5f9105956cd3bb04127e48203d045b559"
+  },
+  "registry_tls": true,
+  "test_ca_installed_on_host": false,
+  "build_link": "unverified; test build/config correspondence checked, no production attestation"
+}

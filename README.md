@@ -20,10 +20,13 @@ Fallback без PURL требует точной идентичности; fuzzy
 
 | Ситуация | Результат |
 |---|---|
-| Точная идентичность в пакетной, архивной или бинарной metadata образа | INCLUDE |
+| Точная идентичность в metadata образа; для поддерживаемых языковых catalogers также подтверждены файлы пакета | INCLUDE |
 | Только исходники, скопированный lockfile, неоднозначная идентичность, недостающие evidence | UNKNOWN |
 | Сбой получения входов, сканера, конвертации или schema | Задание failed, final недоступен |
 
+Правила v3 дополнительно проверяют содержимое конечной файловой системы: Python RECORD,
+npm entry point/index/код, Ruby gem-файлы, Java class и Go/Rust binary. Оставшаяся metadata
+без подтверждённых файлов даёт `UNKNOWN / PAYLOAD_NOT_CONFIRMED`.
 Пакеты ОС и image-only зависимости тоже рассматриваются. Наличие metadata не
 доказывает выполнение кода. Вероятности и оценки TP в режиме правил не назначаются.
 Исходные source/image SBOM сохраняются. UNKNOWN делает результат частичным.
@@ -145,21 +148,15 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 
 ## Проверка на 60 репозиториях
 
-[Сводная таблица](benchmarks/results/rules-v2-20260930/results.md) ·
-[CSV](benchmarks/results/rules-v2-20260930/results.csv) ·
-[JSON](benchmarks/results/rules-v2-20260930/results.json) ·
-[Независимый аудит](benchmarks/results/rules-v2-20260930/audit-final.json) ·
+[Сводная таблица](benchmarks/results/rules-v3-20260930/results.md) ·
+[CSV](benchmarks/results/rules-v3-20260930/results.csv) ·
+[JSON](benchmarks/results/rules-v3-20260930/results.json) ·
+[Независимый аудит](benchmarks/results/rules-v3-20260930/audit-final.json) ·
 [Точные commits](benchmarks/manifest.json).
 
-Повторно обработаны сохранённые сканы всех 60 проектов по правилам v2: по 10 Java, JavaScript, Python, Rust,
-Go и Ruby. Независимый аудит подтвердил schemas, hashes, provenance и решения
-для 60/60 результатов без ошибок. 57 публичных проектов дополняют 3 существующих
-Python fixtures Bitbucket. Подготовка тестовых образов отделена от сервиса.
+Повторно просканированы те же 60 тестовых образов по правилам v3: по 10 Java, JavaScript, Python, Rust, Go и Ruby. 57 публичных проектов дополняют 3 существующих Python fixtures Bitbucket. Подготовка тестовых образов отделена от сервиса. Все результаты имеют partial coverage: 2360 UNKNOWN остаются в отчётах. Основной пакет подтверждён в 54 из 59 применимых случаев.
 
-Все результаты имеют `partial` coverage: 2360 UNKNOWN-идентичностей исключены
-из итоговых SBOM. Точная release-идентичность основного пакета подтверждена в
-54 из 59 применимых случаев; ограничения Go описаны в [методике](benchmarks/README.md).
-Модель для рабочего сценария не нужна. Режим rules не измеряет качество LLM. FP/FN требуют независимой разметки и не подменяются числом удалённых пакетов.
+На отдельных размеченных контролях шести языков: **13 TP, 0 FP, 0 FN** против 12 TP, 4 FP, 1 FN до изменения. Это метрики 31 контрольной идентичности, не оценка полной точности 60 образов. [Подробности и сводка по языкам](docs/rules-v3.md).
 
 ```bash
 pytest -q
@@ -167,7 +164,7 @@ ruff check src tests
 python benchmarks/run.py --help
 ```
 
-Результаты 0.2.0, контрольный образ и границы точности: [rules-v2.md](docs/rules-v2.md).
+Результаты 0.3.0 и границы точности: [rules-v3.md](docs/rules-v3.md). Предыдущая версия: [0.2.0](docs/rules-v2.md).
 История проверок: [verification.md](docs/verification.md).
 Тесты включают реальные Syft roundtrip при наличии бинарника, целостность CycloneDX,
 фильтрацию зависимостей, невалидные model responses, auth/allowlists и блокировку

@@ -1,0 +1,1481 @@
+{
+  "report": "G:\\code\\sbom_creator\\benchmarks\\results\\rules-v3-20260930\\results.json",
+  "snapshot_sha256": "b1db701eb803fc3462d03ac0aef5a7dcf5c900dbae534a69385c8703f9e75156",
+  "report_generated_at": "2026-09-29T21:14:48.989362+00:00",
+  "total_repositories": 60,
+  "completed_rows_audited": 60,
+  "completed_rows_with_errors": 0,
+  "incomplete_rows": 0,
+  "global_errors": [],
+  "summary": {
+    "Java": {
+      "completed_rules": 10
+    },
+    "JavaScript": {
+      "completed_rules": 10
+    },
+    "Python": {
+      "completed_rules": 10
+    },
+    "Rust": {
+      "completed_rules": 10
+    },
+    "Go": {
+      "completed_rules": 10
+    },
+    "Ruby": {
+      "completed_rules": 10
+    }
+  },
+  "audit_passed": true,
+  "requires_all_complete": true,
+  "scope": "Structural, provenance and consistency audit; not an FP/FN accuracy measurement",
+  "repositories": [
+    {
+      "id": "java-commons-lang",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 500,
+          "by_extension": {
+            ".java": 500
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 171,
+        "source_records": 21,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "9cf76cd165dfd040ba603cfad4b8356aaec2fcc8968535237572f422a848a618"
+      }
+    },
+    {
+      "id": "java-commons-io",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 531,
+          "by_extension": {
+            ".java": 531
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 176,
+        "source_records": 26,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b604379c62fde0567220e159d679dad028f9f99ed80ce3da5483f1154b00cf35"
+      }
+    },
+    {
+      "id": "java-commons-codec",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 155,
+          "by_extension": {
+            ".java": 155
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 168,
+        "source_records": 18,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "d76a20fcb63a9610a1af77b2611b641e64a949aa89242f939ce309a16093a794"
+      }
+    },
+    {
+      "id": "java-commons-text",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 209,
+          "by_extension": {
+            ".java": 209
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 177,
+        "source_records": 27,
+        "image_records": 152,
+        "selected_records": 147,
+        "final_records": 147,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "0b610599515ab7ddefd5efa9250246e49b79e9f36428e8d3842f6ce3c688a672"
+      }
+    },
+    {
+      "id": "java-commons-csv",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 51,
+          "by_extension": {
+            ".java": 51
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 179,
+        "source_records": 29,
+        "image_records": 153,
+        "selected_records": 148,
+        "final_records": 148,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "4ff3b14c607fc52af58cebb3fffd5365b65040d03e937a2f6142389befdba44f"
+      }
+    },
+    {
+      "id": "java-commons-compress",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 624,
+          "by_extension": {
+            ".java": 624
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 201,
+        "source_records": 49,
+        "image_records": 158,
+        "selected_records": 153,
+        "final_records": 153,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "8440462a862275cbfab79fd2f3cc8ff73535a27b67066b053615ac8782b2be2e"
+      }
+    },
+    {
+      "id": "java-gson",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 249,
+          "by_extension": {
+            ".java": 249
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 182,
+        "source_records": 32,
+        "image_records": 152,
+        "selected_records": 147,
+        "final_records": 147,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "2e42326184b9b521aeeceefcada79de3d32e278f130f960fc950edeccc34a8ae"
+      }
+    },
+    {
+      "id": "java-jsoup",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 156,
+          "by_extension": {
+            ".java": 156
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 167,
+        "source_records": 17,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "716b27ea74be5c7d4fd0b49fa501fdd8dbefc6e300bb74ffb2efb3e598b79628"
+      }
+    },
+    {
+      "id": "java-slf4j",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 265,
+          "by_extension": {
+            ".java": 265
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 192,
+        "source_records": 43,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "07f771eaccdc73be01034927b29aeeac6e5de0b06c5621f04942e6bff33e2b41"
+      }
+    },
+    {
+      "id": "java-commons-cli",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 65,
+          "by_extension": {
+            ".java": 65
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 168,
+        "source_records": 18,
+        "image_records": 151,
+        "selected_records": 146,
+        "final_records": 146,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6d31171e76ac60cbd76645299de778645ed5a79fa060fa249ee3256947aef683"
+      }
+    },
+    {
+      "id": "javascript-lodash",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 54,
+          "by_extension": {
+            ".js": 54
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 824,
+        "source_records": 544,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "636f5651d9e94834d1ba2f4ca1becfa2054023149762ed6405b133f7c44429db"
+      }
+    },
+    {
+      "id": "javascript-express",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 152,
+          "by_extension": {
+            ".js": 152
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 356,
+        "source_records": 9,
+        "image_records": 360,
+        "selected_records": 356,
+        "final_records": 356,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b944fdeb657d39eced9b56e1967c6222b34b6496878628d873a44125d1ce03ac"
+      }
+    },
+    {
+      "id": "javascript-axios",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 167,
+          "by_extension": {
+            ".cjs": 4,
+            ".js": 158,
+            ".ts": 5
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 322,
+        "source_records": 37,
+        "image_records": 307,
+        "selected_records": 303,
+        "final_records": 303,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b26bc37992d6b2c31ad09c0cee4f46a06aab59d083da99eb4b0cb3df2c6546b7"
+      }
+    },
+    {
+      "id": "javascript-debug",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 7,
+          "by_extension": {
+            ".js": 7
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 293,
+        "selected_records": 289,
+        "final_records": 289,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1cb8754340fe6068455d9c554fb5fe71bcba3e30a7c8d0bea0d536513c42b84c"
+      }
+    },
+    {
+      "id": "javascript-ms",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".js": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 282,
+        "source_records": 2,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "04801a32fd03a9151c92be3fb8f41690597292abbf1752ca922a9700e03d6ea6"
+      }
+    },
+    {
+      "id": "javascript-chalk",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 15,
+          "by_extension": {
+            ".js": 14,
+            ".ts": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 284,
+        "source_records": 3,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "8d62e7f89b2024cc250554b82d5195031848ba54935e8fea5aad6f32a1914764"
+      }
+    },
+    {
+      "id": "javascript-commander-js",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 170,
+          "by_extension": {
+            ".cjs": 1,
+            ".js": 159,
+            ".mjs": 7,
+            ".ts": 3
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 287,
+        "source_records": 7,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "8e6faf00aa170b7ae665b9259eca316b702b7fa2d3e01c63a5b252b120622a78"
+      }
+    },
+    {
+      "id": "javascript-minimist",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 17,
+          "by_extension": {
+            ".js": 17
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 287,
+        "source_records": 6,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "4c7f69b5e9fce99290cf5fe2ed4dd721154d07007d79ebdadba011d06b737531"
+      }
+    },
+    {
+      "id": "javascript-is-number",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 4,
+          "by_extension": {
+            ".js": 4
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "c5b02950b973f52be83dd9875177a834f94d6242d95fb8ce760a83889dc52a98"
+      }
+    },
+    {
+      "id": "javascript-isarray",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".js": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "bcc680d4a0d6d62a73dff0ca1bb862d91b378cc55c81fb14f1711ea00c5ad04a"
+      }
+    },
+    {
+      "id": "bitbucket-python-service",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".py": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 115,
+        "source_records": 0,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "fe4c7842b2afa0930ae291c1e1a383ff32f2e661d86d6cf1f66143102fac062e"
+      }
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".py": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 115,
+        "source_records": 0,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "583ca22d279a55f1701e33c0655eb2c36a4855abb0445c2ac444c6d34353630e"
+      }
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".py": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 114,
+        "source_records": 0,
+        "image_records": 119,
+        "selected_records": 113,
+        "final_records": 113,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "59223c5e20c896687bf2bdfa077f476d7b34407579a3f94ef64668b896de342f"
+      }
+    },
+    {
+      "id": "python-flask",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 80,
+          "by_extension": {
+            ".py": 80
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 156,
+        "source_records": 35,
+        "image_records": 126,
+        "selected_records": 120,
+        "final_records": 120,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6f796c7ee94da5bd14a661b7f92b56fa60c4f3d3f2b88c0fa48bf47b41795b1c"
+      }
+    },
+    {
+      "id": "python-jinja",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 59,
+          "by_extension": {
+            ".py": 59
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 126,
+        "source_records": 10,
+        "image_records": 121,
+        "selected_records": 115,
+        "final_records": 115,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "174e5b3e02ee19da5eec57e0bdec7fe403b76f4198ab93ad4399a699167f66b0"
+      }
+    },
+    {
+      "id": "python-werkzeug",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 132,
+          "by_extension": {
+            ".py": 132
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 130,
+        "source_records": 14,
+        "image_records": 121,
+        "selected_records": 115,
+        "final_records": 115,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "fc80e0e9f2e3fe4bea8acffa8cd86fa992fb4fbd7e31749ad8a5a667ad32deac"
+      }
+    },
+    {
+      "id": "python-itsdangerous",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 14,
+          "by_extension": {
+            ".py": 14
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 10,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1e1bd58f3e6236817bbd49499bc9e056f4901c2c3b0a270c7e579d950e6cd04c"
+      }
+    },
+    {
+      "id": "python-attrs",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 52,
+          "by_extension": {
+            ".py": 52
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 141,
+        "source_records": 26,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "53e047796c121a0e23b85d57d55618a5cb58d3326e86d0d37b01946ac140f102"
+      }
+    },
+    {
+      "id": "python-packaging",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 35,
+          "by_extension": {
+            ".py": 35
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 126,
+        "source_records": 11,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "807f7e08167f41f62f7e9b0e7d3e252a776e037d516f502fb43e5d65b2dd34c2"
+      }
+    },
+    {
+      "id": "python-python-certifi",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 5,
+          "by_extension": {
+            ".py": 5
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 10,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b61788f7c17c09e7abd16c3c723272129d9b9c8ca515caa2e004c0dc2aac4ec6"
+      }
+    },
+    {
+      "id": "rust-ripgrep",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 98,
+          "by_extension": {
+            ".rs": 98
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 157,
+        "source_records": 65,
+        "image_records": 125,
+        "selected_records": 122,
+        "final_records": 122,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "82f0a20ed435c8c00735f258da0a3cccf9571ff811a22a910bcd24118da633a4"
+      }
+    },
+    {
+      "id": "rust-fd",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 24,
+          "by_extension": {
+            ".rs": 24
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 213,
+        "source_records": 121,
+        "image_records": 153,
+        "selected_records": 150,
+        "final_records": 150,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "5fb73fab2523a78fdd432a898763906cf01f3e527b4483d44a020db5dacb2132"
+      }
+    },
+    {
+      "id": "rust-bat",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 67,
+          "by_extension": {
+            ".rs": 67
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 323,
+        "source_records": 245,
+        "image_records": 198,
+        "selected_records": 195,
+        "final_records": 195,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "ca6fe8565b3f4eea28d686660334848484b1bcedae5797c8e731de370f4ab9e9"
+      }
+    },
+    {
+      "id": "rust-dust",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 17,
+          "by_extension": {
+            ".rs": 17
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 220,
+        "source_records": 128,
+        "image_records": 151,
+        "selected_records": 148,
+        "final_records": 148,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "fd5195fceb974d8152c52ab4925f023a4339acde7021bd1018e8efe84158110c"
+      }
+    },
+    {
+      "id": "rust-bottom",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 141,
+          "by_extension": {
+            ".rs": 141
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 357,
+        "source_records": 265,
+        "image_records": 203,
+        "selected_records": 200,
+        "final_records": 200,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "a84e0bfd4e1ceb694073e609b0b257fdb0814664eaf5999f80fe2005052c89ba"
+      }
+    },
+    {
+      "id": "rust-tokei",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 20,
+          "by_extension": {
+            ".rs": 20
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 254,
+        "source_records": 162,
+        "image_records": 160,
+        "selected_records": 157,
+        "final_records": 157,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "3a24f3710fbb1995a5a16b69a352b2d18cb80789406663c8b149300849fddf00"
+      }
+    },
+    {
+      "id": "rust-hyperfine",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 40,
+          "by_extension": {
+            ".rs": 40
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 255,
+        "source_records": 163,
+        "image_records": 194,
+        "selected_records": 191,
+        "final_records": 191,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "4e74b28aa8bf4bb76db5efa83eec032ffd1345ea495d8ac962a27f7d4b5c23e0"
+      }
+    },
+    {
+      "id": "rust-eza",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 69,
+          "by_extension": {
+            ".rs": 69
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 329,
+        "source_records": 237,
+        "image_records": 209,
+        "selected_records": 206,
+        "final_records": 206,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "220c55cb525581257e83577fc751837a17587f4c931dddcb590c13a0888f878a"
+      }
+    },
+    {
+      "id": "rust-zoxide",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 18,
+          "by_extension": {
+            ".rs": 18
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 234,
+        "source_records": 142,
+        "image_records": 157,
+        "selected_records": 154,
+        "final_records": 154,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "fe8faae2a5c55e0a73c099d807f26e81a8c6b53efca75af8806366e9c4351a22"
+      }
+    },
+    {
+      "id": "rust-delta",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 81,
+          "by_extension": {
+            ".rs": 81
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 324,
+        "source_records": 232,
+        "image_records": 227,
+        "selected_records": 224,
+        "final_records": 224,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "982d41cd64b6adea019b81a7de6f6b8a496fca6b1d5e794672ca4631fc65a815"
+      }
+    },
+    {
+      "id": "go-hey",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 73,
+          "by_extension": {
+            ".go": 73
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 96,
+        "source_records": 2,
+        "image_records": 96,
+        "selected_records": 93,
+        "final_records": 93,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "48501f6febcfdbd301f690e17b9ea19b657143635a821bebaa6f676d5f58fc72"
+      }
+    },
+    {
+      "id": "go-assetfinder",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 12,
+          "by_extension": {
+            ".go": 12
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 90,
+        "final_records": 90,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "d0d60478613c6d24c0377cf2b9eca37306abd345d132cfd60cf6ac1e6f6d8fbe"
+      }
+    },
+    {
+      "id": "go-httprobe",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".go": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 91,
+        "final_records": 91,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "cadb6c1f230f288b724b5e19ac80b3bea13bb412cf0c2032b988c8f9a9c34338"
+      }
+    },
+    {
+      "id": "go-waybackurls",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".go": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 91,
+        "final_records": 91,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "9ef315e214df4e5c18828a15975fae20361465fd7496431ae650eae99fb6f6ec"
+      }
+    },
+    {
+      "id": "go-unfurl",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".go": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 97,
+        "source_records": 3,
+        "image_records": 95,
+        "selected_records": 92,
+        "final_records": 92,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "3f386d065d513c6d77390e892f768107322b88c301b4a0d4018629acdaf89295"
+      }
+    },
+    {
+      "id": "go-yq",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 224,
+          "by_extension": {
+            ".go": 224
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 135,
+        "source_records": 41,
+        "image_records": 114,
+        "selected_records": 111,
+        "final_records": 111,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "296c56bc728b70cbde2a425a423de09c5125875947800c425902cad71cd38fdc"
+      }
+    },
+    {
+      "id": "go-lazygit",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1956,
+          "by_extension": {
+            ".go": 1956
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 185,
+        "source_records": 91,
+        "image_records": 155,
+        "selected_records": 152,
+        "final_records": 152,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "db2fb3ce6acc03a891daea9ab7813b449bc2cb8702bdeeee75ad03b93332a636"
+      }
+    },
+    {
+      "id": "go-glow",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 25,
+          "by_extension": {
+            ".go": 25
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 170,
+        "source_records": 76,
+        "image_records": 153,
+        "selected_records": 150,
+        "final_records": 150,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "82f30e1865c465c7df390b803ae36892fca9b7e9ce6a853440e6249ff1119c36"
+      }
+    },
+    {
+      "id": "go-scc",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 642,
+          "by_extension": {
+            ".go": 642
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 31,
+        "image_records": 108,
+        "selected_records": 105,
+        "final_records": 105,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "ba950fcec46a72e05475137395dc9d7751641e9bf1d4b1995f676cd1524bfc0a"
+      }
+    },
+    {
+      "id": "go-upterm",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 57,
+          "by_extension": {
+            ".go": 57
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 212,
+        "source_records": 118,
+        "image_records": 164,
+        "selected_records": 161,
+        "final_records": 161,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "226ab7f65b62a7eddd6333f4da939106cf030e6d494d34701d4c7ebd35bb270a"
+      }
+    },
+    {
+      "id": "ruby-rake",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 94,
+          "by_extension": {
+            ".rb": 94
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 200,
+        "source_records": 15,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "7c1cf934898ae793421fd4067c5955ffd12d22808f6dced34ac0a3f6fc008d8b"
+      }
+    },
+    {
+      "id": "ruby-rack",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 95,
+          "by_extension": {
+            ".rb": 95
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 192,
+        "source_records": 7,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "4a082c5c923337a517a72bc50e288a6f8e1fcb1f166dacf0c819baa6a0c2929c"
+      }
+    },
+    {
+      "id": "ruby-psych",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 86,
+          "by_extension": {
+            ".rb": 86
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 196,
+        "source_records": 11,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "7535393fe14593f79b52cda7feb4ac284c84489231419fcef83a59bbde7e0ff1"
+      }
+    },
+    {
+      "id": "ruby-json",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 39,
+          "by_extension": {
+            ".rb": 39
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 189,
+        "source_records": 4,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1150f1138e6ff9e2dc23add707274391e665ca26da9b3ecc11c9e943a7c53498"
+      }
+    },
+    {
+      "id": "ruby-rexml",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 113,
+          "by_extension": {
+            ".rb": 113
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 192,
+        "source_records": 7,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1d55d551bdf91e232546712f92b5173c4aff68610963c857ab921cc21306b3ae"
+      }
+    },
+    {
+      "id": "ruby-csv",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 45,
+          "by_extension": {
+            ".rb": 45
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 194,
+        "source_records": 9,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "27fe64ffb9102e3f456e061eaadde895a37d66d9ea29601140e49e5ae1935249"
+      }
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 16,
+          "by_extension": {
+            ".rb": 16
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 191,
+        "source_records": 6,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "80caca254d7d901d1135736eadb1fdcc2052a9e8d68e98b559eae012c21fa7b4"
+      }
+    },
+    {
+      "id": "ruby-logger",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 13,
+          "by_extension": {
+            ".rb": 13
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 193,
+        "source_records": 8,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1f3bb2c22255c2e3500286ec1db6e875af3cbd9fe2ac3aae12be2b0dee630d8f"
+      }
+    },
+    {
+      "id": "ruby-uri",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 26,
+          "by_extension": {
+            ".rb": 26
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 198,
+        "source_records": 13,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "e344d80e7c6a7e5cd325813a41ca54a840f0195e28f12f2124f08e45abb6df2c"
+      }
+    },
+    {
+      "id": "ruby-stringio",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 7,
+          "by_extension": {
+            ".rb": 7
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 197,
+        "source_records": 12,
+        "image_records": 185,
+        "selected_records": 179,
+        "final_records": 179,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "3032c3de898bcb69b2c745511ab542d1c2446e86b3b3421c3ca39b67c0cb2072"
+      }
+    }
+  ]
+}
