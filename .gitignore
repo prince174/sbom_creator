@@ -1,0 +1,15 @@
+.venv/
+.tools/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+workspace/
+secrets/
+docker-config/
+benchmarks/work/
+benchmarks/.work/
+benchmarks/cache/
+benchmarks/results/raw/
