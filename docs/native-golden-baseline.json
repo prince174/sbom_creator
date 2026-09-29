@@ -1,0 +1,198 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "language": "Java",
+      "positive": [
+        "pkg:maven/org.example/golden-java-kept@1.0.0",
+        "pkg:maven/org.example/golden-java-kept@2.0.0"
+      ],
+      "negative": [
+        "pkg:maven/org.example/golden-java-dev@1.0.0",
+        "pkg:maven/org.example/golden-java-orphan@1.0.0",
+        "pkg:maven/org.example/golden-java-removed@1.0.0"
+      ],
+      "tp": 2,
+      "fp": [
+        "pkg:maven/org.example/golden-java-orphan@1.0.0"
+      ],
+      "fn": [],
+      "unlabelled_final_identities": 145,
+      "ground_truth_sha256": "e481398225ab06f1f6aa8cebf309c91ed0e548defe57adcf6776ce59dca8003f",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\java\\baseline",
+      "final_sha256": "87212f2258244610edcdb115b431a51f7303e4d5073846f05777e0b2a3cd7920",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:f00063e9a4930ad34dd6a9045511c26f4e0a69086a8d3da0f405f9d3135e9d7d",
+        "command": [
+          "java",
+          "-jar",
+          "/app/golden-java-kept-1.0.0.jar"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 25.469
+    },
+    {
+      "language": "JavaScript",
+      "positive": [
+        "pkg:npm/golden-javascript-kept@1.0.0",
+        "pkg:npm/golden-javascript-kept@2.0.0"
+      ],
+      "negative": [
+        "pkg:npm/golden-javascript-dev@1.0.0",
+        "pkg:npm/golden-javascript-orphan@1.0.0",
+        "pkg:npm/golden-javascript-removed@1.0.0"
+      ],
+      "tp": 2,
+      "fp": [
+        "pkg:npm/golden-javascript-orphan@1.0.0"
+      ],
+      "fn": [],
+      "unlabelled_final_identities": 276,
+      "ground_truth_sha256": "7fafdc15738ac072e111f397e876a2f2d162f895a0f6605115d0f4e25c11d18d",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\javascript\\baseline",
+      "final_sha256": "20881acff46b307a4306b453a950a3e14ae208d611b5fca59e589d4cae13d297",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:655d6069d72f6f2826cdad70eabf882a430fb193b1b381e8d2bcfc1fc0149450",
+        "command": [
+          "node",
+          "/opt/kept-1.0.0/node_modules/golden-javascript-kept/index.js"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 25.578
+    },
+    {
+      "language": "Python",
+      "positive": [
+        "pkg:pypi/golden-python-kept@1.0.0",
+        "pkg:pypi/golden-python-kept@2.0.0"
+      ],
+      "negative": [
+        "pkg:pypi/golden-python-dev@1.0.0",
+        "pkg:pypi/golden-python-orphan@1.0.0",
+        "pkg:pypi/golden-python-removed@1.0.0"
+      ],
+      "tp": 2,
+      "fp": [
+        "pkg:pypi/golden-python-orphan@1.0.0"
+      ],
+      "fn": [],
+      "unlabelled_final_identities": 108,
+      "ground_truth_sha256": "26b087dec35344c9cd6c1bda0f0fec0af924de15a5bd45139488bc181342f150",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\python\\baseline",
+      "final_sha256": "cd069893fe7b248f453e2a4fb29b801055ea7a1e4fd91b815b8c333e408e9fae",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:cf70d572232193b44ccd96fcccf173557834bad8f30c550bb834b6aeb043a930",
+        "command": [
+          "python",
+          "-c",
+          "import sys; sys.path.insert(0,'/opt/kept-1.0.0/lib/python3.12/site-packages'); import golden_python_kept"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 35.672
+    },
+    {
+      "language": "Rust",
+      "positive": [
+        "pkg:cargo/golden-rust-kept@1.0.0",
+        "pkg:cargo/golden-rust-kept@2.0.0"
+      ],
+      "negative": [
+        "pkg:cargo/golden-rust-dev@1.0.0",
+        "pkg:cargo/golden-rust-orphan@1.0.0",
+        "pkg:cargo/golden-rust-removed@1.0.0"
+      ],
+      "tp": 2,
+      "fp": [],
+      "fn": [],
+      "unlabelled_final_identities": 89,
+      "ground_truth_sha256": "7120af8847673fef5eade950509cc8b4d68b42650807c08a6e1d5766906283f8",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\rust\\baseline",
+      "final_sha256": "76fc23b8eef04b6dc558472a689613b4170a25c3f832c5d0457ca022e167823c",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:9637336677b590f897cc5c5eae9d9bf0200ca1f94492a7039589fe575d5711e3",
+        "command": [
+          "/app/golden-rust-kept-1.0.0"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 23.328
+    },
+    {
+      "language": "Go",
+      "positive": [
+        "pkg:golang/example.test/golden-go-kept@v1.0.0",
+        "pkg:golang/example.test/golden-go-kept@v2.0.0",
+        "pkg:golang/stdlib@1.24.13"
+      ],
+      "negative": [
+        "pkg:golang/example.test/golden-go-dev@v1.0.0",
+        "pkg:golang/example.test/golden-go-orphan@v1.0.0",
+        "pkg:golang/example.test/golden-go-removed@v1.0.0"
+      ],
+      "tp": 1,
+      "fp": [],
+      "fn": [
+        "pkg:golang/example.test/golden-go-kept@v2.0.0",
+        "pkg:golang/stdlib@1.24.13"
+      ],
+      "unlabelled_final_identities": 90,
+      "ground_truth_sha256": "3aa65070cc4ab1c09a5588e812d5fbe159ddf8ac5f3f3d565b8170d58ef3fec2",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\go\\baseline",
+      "final_sha256": "d110da5d00f33e6bf39ad748c461a1acd8f1031c25de930227bbdd836af2ef19",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:e72bd843ab825bcef1a2f12e869e355202fdc221395b48feb532e0d235b29e3b",
+        "command": [
+          "/app/golden-go-kept-1.0.0"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 22.469
+    },
+    {
+      "language": "Ruby",
+      "positive": [
+        "pkg:gem/golden-ruby-kept@1.0.0",
+        "pkg:gem/golden-ruby-kept@2.0.0"
+      ],
+      "negative": [
+        "pkg:gem/golden-ruby-dev@1.0.0",
+        "pkg:gem/golden-ruby-orphan@1.0.0",
+        "pkg:gem/golden-ruby-removed@1.0.0"
+      ],
+      "tp": 2,
+      "fp": [
+        "pkg:gem/golden-ruby-orphan@1.0.0"
+      ],
+      "fn": [],
+      "unlabelled_final_identities": 179,
+      "ground_truth_sha256": "5430ccc44de6226747738b146823382c4c2d2aab8f0cf2165c4c3f659dc1d4eb",
+      "analysis_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\native-golden-v1\\ruby\\baseline",
+      "final_sha256": "63444183a1c8c1c03b819f79861b7ab29d59577279df28c94e442e148109a2aa",
+      "scope": "Controlled labelled identities only; other runtime/base packages are not ground-truth labelled.",
+      "smoke": {
+        "passed": true,
+        "image_id": "sha256:ad82c69ac29defd954f6d71ee673d11b7f388b709eb047bf75bb77da509cb42e",
+        "command": [
+          "ruby",
+          "/opt/gems/gems/golden-ruby-kept-1.0.0/lib/golden.rb"
+        ],
+        "output": "golden-1.0.0"
+      },
+      "seconds": 21.75
+    }
+  ],
+  "passed": false
+}
