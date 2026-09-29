@@ -12,6 +12,10 @@
 | Registry → Syft → rules → CycloneDX в установленном Linux-пакете | Passed; 16 компонентов, 1 UNKNOWN | [Образ, хеши, счётчики](verification-package.json) |
 | Wheel: все Python-модули совпадают с src, 4 JSON schemas включены | Passed | [Проверка упаковки](verification-package.json) |
 | Bitbucket Cloud, точный commit | Passed | [Свидетельства получения](verification-acquisition.json) |
+| 60 репозиториев, по 10 на язык, source/image → rules → CycloneDX | 60 completed_rules | [Все строки](../benchmarks/results/run-20260929/results.md) |
+| Независимый аудит финального benchmark, replay текущих правил | 60/60; 0 ошибок, 0 предупреждений | [Аудит](../benchmarks/results/run-20260929/audit-final.json) |
+| Запуск бинарников Rust и Go в ограниченном контейнере | 20/20; image IDs совпадают с отчётом | [Runtime smoke](../benchmarks/results/run-20260929/runtime-smoke.json) |
+| Локальный ZIP: 60 финальных SBOM и компактные свидетельства | CRC и SHA-256 всех записей проверены | [Хеш архива](benchmark-export.json) |
 
 Windows пропускает проверку escaping symlink из-за прав ОС; эта проверка проходит
 в Linux. Предупреждение Starlette о будущей замене транспорта TestClient на httpx2
@@ -51,3 +55,22 @@ Registry smoke использует искусственный source fixture и
 Счётчики компонентов и ограниченная проверка release-идентичности приложения
 не заменяют полную независимую разметку зависимостей. Поэтому FP/FN и качество
 LLM не заявляются.
+
+В финальной матрице 57 публичных проектов GitHub и 3 существующих Python fixtures
+из Bitbucket; во всех 60 checkout подтверждены реальные исходники соответствующего
+языка. Все прогоны используют явный режим `rules`. Их 10 255 финальных записей
+соответствуют 10 089 принятым идентичностям: один пакет может иметь несколько
+расположений. 2360 идентичностей получили UNKNOWN и не вошли в финальные SBOM,
+поэтому coverage всех 60 результатов — `partial`.
+
+Точная release-идентичность основного пакета подтверждена для 54 из 59 применимых
+случаев. Четыре Go-сборки содержат реальные pseudo-versions, одна не содержит
+module identity; обычный Python script не имеет применимой пакетной идентичности.
+Эти ограничения отражены в таблице и не скрываются общим статусом завершения.
+
+Архив `dist/sbom-creator-60-cyclonedx.zip` содержит проверенные `final.cdx.json`,
+summary, coverage и provenance каждого проекта, общие отчёты и `SHA256SUMS`.
+Он остаётся локальным артефактом; большие checkout, образы, полные каталоги Syft
+и decisions сохранены локально в `benchmarks/.work` и Docker. В Git публикуются
+код, рецепты, манифесты и компактные отчёты. Финальный аудит привязан к SHA-256
+конкретного `results.json`, хеши каждого SBOM проверены при упаковке.

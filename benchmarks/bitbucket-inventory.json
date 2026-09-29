@@ -1,0 +1,194 @@
+{
+  "workspace": "artifact_graph",
+  "repositories": [
+    {
+      "slug": "java-maven-api",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "33181ac8fd008dde5d10182f17ca90c90374a050",
+      "repository_url": "https://bitbucket.org/artifact_graph/java-maven-api.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "java-gradle-worker",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "98772093571ebc18d8f6fc865017e39dad6a95fc",
+      "repository_url": "https://bitbucket.org/artifact_graph/java-gradle-worker.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "npm-frontend",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "56e0ef7c4b26e4b8e8f4d51cc0215fba7f80ed20",
+      "repository_url": "https://bitbucket.org/artifact_graph/npm-frontend.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "python-service",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+      "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "terraform-infra",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "1b92d23d68b1b91d87546072fec7384a47d7915d",
+      "repository_url": "https://bitbucket.org/artifact_graph/terraform-infra.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "ansible-deploy",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "d39d4047f7ed8e63167bdd9a512f53c2fa2b72f0",
+      "repository_url": "https://bitbucket.org/artifact_graph/ansible-deploy.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "java-maven-orders",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "6c1064a745962e8855b316b5dbb9a175d2d4e630",
+      "repository_url": "https://bitbucket.org/artifact_graph/java-maven-orders.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "java-gradle-billing",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "f162358c264d9b4fb2203b7e4932a791c3c4529e",
+      "repository_url": "https://bitbucket.org/artifact_graph/java-gradle-billing.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "npm-admin",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "b0bc039a3532aa0ab5ff67655fdf455999dbf9ed",
+      "repository_url": "https://bitbucket.org/artifact_graph/npm-admin.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "python-jobs",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "776eb037886b8603bde8293c7090301639296496",
+      "repository_url": "https://bitbucket.org/artifact_graph/python-jobs.git",
+      "private": true,
+      "description": ""
+    },
+    {
+      "slug": "lab-maven",
+      "language": "",
+      "mainbranch": "release/lab",
+      "commit": "beede5f2c6dbca14a1e6fe57be70b66f18044a66",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-maven.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-maven; sha256=8e33bf00b5b7a27e63c0d4d9dfc3a5aff38bc39d1246933ee3d35b551ee0d589"
+    },
+    {
+      "slug": "lab-python",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "93428e3aabebc55caefc681690c2995514a63d22",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-python.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-python; sha256=3acfb68efb9b4a3cbc90bb7a7def6ab343034bff87acb64b6e5f624bf004999f"
+    },
+    {
+      "slug": "lab-npm",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "8f542c549cc55dfa21250471677a60fd9a7d5ff0",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-npm.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-npm; sha256=d4c491058dee96dceb251945811f467ee68cf95c308b5c83b47c6ead899e6360"
+    },
+    {
+      "slug": "lab-podman",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "fc9a76f3b7b8f7c7751237f089af1286ad4bba31",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-podman.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-podman; sha256=92b844181d90ef136b05c83acad7c8c672356d6ba6ae00528654eb9d6fc39fe3"
+    },
+    {
+      "slug": "lab-negative",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "031dcd4e14113acf5f0096fcd8356f2523368c7f",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-negative.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-negative; sha256=323a1d876d6131596715c286c4ddab74de47e84552ba035aff46128f89ed21b7"
+    },
+    {
+      "slug": "lab-empty",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "7977810f625f2deb01facc54d80a1586086beccc",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-empty.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-empty; sha256=a94b5021568e672e48d17ae1e2d2a397e0c776a16518abe042c8193a5810c0a6"
+    },
+    {
+      "slug": "lab-canary-07",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "7424321c3c4c9d710d26996236e39cf1ef1fe3a4",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-canary-07.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-canary-07; sha256=0ba39176695f39e226160036a339e0df11fb1a1532acf4256b348e7a554f4740"
+    },
+    {
+      "slug": "lab-canary-08",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "e119ff5ffb5085813e65252562315720c41447cb",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-canary-08.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-canary-08; sha256=21dfbc574f21a935039a501f709da7f15d10f6e62907de1da0b9386f77234a34"
+    },
+    {
+      "slug": "lab-canary-09",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "140878f4330b02af49b1bdc245384bb3076f0fcd",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-canary-09.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-canary-09; sha256=7e898648e24d352fb560f68cdaacfe67fb7c4c509f722642d42c057d8a8baa48"
+    },
+    {
+      "slug": "lab-canary-10",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "6f95c81f8de1d04556bfa74f64d94be28deb487f",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-canary-10.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-canary-10; sha256=75d4500c469a7b0ed1f41838388a96e122c258486b7ff8a9ee516607d2aa2911"
+    },
+    {
+      "slug": "lab-overflow",
+      "language": "",
+      "mainbranch": "main",
+      "commit": "81130efdd2aa481f97245765ed63e6e8f88ab47c",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-overflow.git",
+      "private": true,
+      "description": "Managed by artifact-graph-lab-v1; repository=lab-overflow; sha256=8d8de8470bfbd1d0a50d3665ecc4f3893d3841416cb16b184805b3f48908bf90"
+    }
+  ]
+}

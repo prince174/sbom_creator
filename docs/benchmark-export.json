@@ -1,0 +1,14 @@
+{
+  "archive": "dist/sbom-creator-60-cyclonedx.zip",
+  "distribution": "local artifact; dist is excluded from Git",
+  "sha256": "7b9f7a9e2ce7aaf54ee29b0eb47f89ccb689907e2f6d8651b5a29a2f8c196fc3",
+  "bytes": 2004721,
+  "final_sboms": 60,
+  "entries": 248,
+  "decision_mode": "rules",
+  "report_sha256": "35003de7a655c1f7351542b1fbab3dd2b322aacca5c1ce18627e8e6d27fec7b2",
+  "audit_sha256": "ac88349c27435375eae2b262323ecd31f7cf366a37c98a0af3527e04f8e94228",
+  "archive_crc_verified": true,
+  "all_entry_hashes_verified": true,
+  "final_hashes_match_audited_report": true
+}

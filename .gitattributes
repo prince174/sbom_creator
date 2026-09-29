@@ -6,3 +6,6 @@
 *.toml text eol=lf
 Dockerfile text eol=lf
 *.png binary
+# Audited report snapshots must keep the exact bytes used by SHA-256 receipts.
+benchmarks/results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+benchmarks/manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,1168 @@
+{
+  "report": "G:\\code\\sbom_creator\\benchmarks\\results\\run-20260929\\results.json",
+  "snapshot_sha256": "6b3391fb2f17c7dbc77ce6440330ea3abd6bcd9023d01132266281a83f344676",
+  "report_generated_at": "2026-09-29T19:31:47.247025+00:00",
+  "total_repositories": 60,
+  "completed_rows_audited": 47,
+  "completed_rows_with_errors": 0,
+  "incomplete_rows": 13,
+  "global_errors": [],
+  "summary": {
+    "Java": {
+      "source_scanned": 10
+    },
+    "JavaScript": {
+      "source_scanned": 3,
+      "completed_rules": 7
+    },
+    "Python": {
+      "completed_rules": 10
+    },
+    "Rust": {
+      "completed_rules": 10
+    },
+    "Go": {
+      "completed_rules": 10
+    },
+    "Ruby": {
+      "completed_rules": 10
+    }
+  },
+  "audit_passed": true,
+  "requires_all_complete": false,
+  "scope": "Structural, provenance and consistency audit; not an FP/FN accuracy measurement",
+  "repositories": [
+    {
+      "id": "javascript-debug",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 7,
+          "by_extension": {
+            ".js": 7
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 293,
+        "selected_records": 289,
+        "final_records": 289,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6e4b0b2a3165ce619e67929793d44c82895914ccbf86353b751caaad8e26b974"
+      }
+    },
+    {
+      "id": "javascript-ms",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".js": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 282,
+        "source_records": 2,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "ec2d64eb7f560e5066a2dab0c20ed6fd5633dae31fb88165d6695a72f3695f15"
+      }
+    },
+    {
+      "id": "javascript-chalk",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 15,
+          "by_extension": {
+            ".js": 14,
+            ".ts": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 284,
+        "source_records": 3,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "9de291f69f7a16046dd3e87d217578ce20fbc7248dd5decf92501d998a53e4df"
+      }
+    },
+    {
+      "id": "javascript-commander-js",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 170,
+          "by_extension": {
+            ".cjs": 1,
+            ".js": 159,
+            ".mjs": 7,
+            ".ts": 3
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 287,
+        "source_records": 7,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "e50665011681f7341ca55f9ed49a50b35be0d1b2b8ec58f4e1899b372b7c8ea7"
+      }
+    },
+    {
+      "id": "javascript-minimist",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 17,
+          "by_extension": {
+            ".js": 17
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 287,
+        "source_records": 6,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "9023770c9424a45839a167908b21484d6df6be2de3f39a021ab65c426404cd61"
+      }
+    },
+    {
+      "id": "javascript-is-number",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 4,
+          "by_extension": {
+            ".js": 4
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "319bf5f9f8fa3dc3448825e94aebe2ae9ee4e634a7633a2a56ac21f7b96f2b55"
+      }
+    },
+    {
+      "id": "javascript-isarray",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".js": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 281,
+        "source_records": 0,
+        "image_records": 292,
+        "selected_records": 288,
+        "final_records": 288,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1e0d9c38aaa138babe76c3c18f1a39b0a9281893e0ba58eca0f9ab3193f26777"
+      }
+    },
+    {
+      "id": "bitbucket-python-service",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".py": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 115,
+        "source_records": 0,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "5cd9e397577326d70c4950c01a2d1938d9ebb3419babee1255a3866d3eb1a7ac"
+      }
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".py": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 115,
+        "source_records": 0,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "39425ad5d090fa913e147af555d9f7eb11b4e3efdab3cf71ae89d862d0011fca"
+      }
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".py": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 114,
+        "source_records": 0,
+        "image_records": 119,
+        "selected_records": 113,
+        "final_records": 113,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "7945954d7669c433231941f44e47a7707d9bd3c46a066919a0b079cb4de1c663"
+      }
+    },
+    {
+      "id": "python-flask",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 80,
+          "by_extension": {
+            ".py": 80
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 156,
+        "source_records": 35,
+        "image_records": 126,
+        "selected_records": 120,
+        "final_records": 120,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "75ecbca4f7adf11a73f2024989fa5d55531060493c6cc5bdfa003afbcef32ceb"
+      }
+    },
+    {
+      "id": "python-jinja",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 59,
+          "by_extension": {
+            ".py": 59
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 126,
+        "source_records": 10,
+        "image_records": 121,
+        "selected_records": 115,
+        "final_records": 115,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6d4049dd3af2cbf6eac3d86ee5f6316f15bb52d4bd4007bc8bc02c43c4b07d56"
+      }
+    },
+    {
+      "id": "python-werkzeug",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 132,
+          "by_extension": {
+            ".py": 132
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 130,
+        "source_records": 14,
+        "image_records": 121,
+        "selected_records": 115,
+        "final_records": 115,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "c3acc9f266616c340319b57bf9a0b090843f845cf9cb9e730071a5b95411bb78"
+      }
+    },
+    {
+      "id": "python-itsdangerous",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 14,
+          "by_extension": {
+            ".py": 14
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 10,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "f9d8ec5d91a8de79e7712354bc3102ef050cd4e4765617f71c851f4170598736"
+      }
+    },
+    {
+      "id": "python-attrs",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 52,
+          "by_extension": {
+            ".py": 52
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 141,
+        "source_records": 26,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "c166eaa9a306c44f05ab072cd49948f19fe2a85cbc171b69fee4f01a6f3df8aa"
+      }
+    },
+    {
+      "id": "python-packaging",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 35,
+          "by_extension": {
+            ".py": 35
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 126,
+        "source_records": 11,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "0ab57a25c512d0aeacb37153da3b38879c6414b098fb8becf78a1f2fc124a834"
+      }
+    },
+    {
+      "id": "python-python-certifi",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 5,
+          "by_extension": {
+            ".py": 5
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 10,
+        "image_records": 120,
+        "selected_records": 114,
+        "final_records": 114,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "23c5cb3dbda6f274e6e2e10ea16f46efb8cc3e969ee25843fd952590785f4c12"
+      }
+    },
+    {
+      "id": "rust-ripgrep",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 98,
+          "by_extension": {
+            ".rs": 98
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 157,
+        "source_records": 65,
+        "image_records": 125,
+        "selected_records": 122,
+        "final_records": 122,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "0d1c5624eb52d0427db387f8d3c3506f1280949b1f3ee106e47908b1f35cd76a"
+      }
+    },
+    {
+      "id": "rust-fd",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 24,
+          "by_extension": {
+            ".rs": 24
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 213,
+        "source_records": 121,
+        "image_records": 153,
+        "selected_records": 150,
+        "final_records": 150,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "a025e1d50a1f8c35f6c5a7d871aaee9a95a1becfc7a0006cf0438f8feb40fa7f"
+      }
+    },
+    {
+      "id": "rust-bat",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 67,
+          "by_extension": {
+            ".rs": 67
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 323,
+        "source_records": 245,
+        "image_records": 198,
+        "selected_records": 195,
+        "final_records": 195,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "f3a3fb7a4e4e197cd13bb240a0c7f3b4b959740a5c5631f80626403b0dab72cf"
+      }
+    },
+    {
+      "id": "rust-dust",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 17,
+          "by_extension": {
+            ".rs": 17
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 220,
+        "source_records": 128,
+        "image_records": 151,
+        "selected_records": 148,
+        "final_records": 148,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "87ad51d2461285fbf8323223d0ebdf6b87699252c9487b309a8a4e1d1ac34971"
+      }
+    },
+    {
+      "id": "rust-bottom",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 141,
+          "by_extension": {
+            ".rs": 141
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 357,
+        "source_records": 265,
+        "image_records": 203,
+        "selected_records": 200,
+        "final_records": 200,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6841e43a0ee84584cff8a6d2b6a4bd04edbf55fd133eb591983d6ca94aec9d3e"
+      }
+    },
+    {
+      "id": "rust-tokei",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 20,
+          "by_extension": {
+            ".rs": 20
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 254,
+        "source_records": 162,
+        "image_records": 160,
+        "selected_records": 157,
+        "final_records": 157,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "2fb05c3d7640eab4707b211fd81a3e90b0e6af10e80ca38f7aa4a5897f1c71f7"
+      }
+    },
+    {
+      "id": "rust-hyperfine",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 40,
+          "by_extension": {
+            ".rs": 40
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 255,
+        "source_records": 163,
+        "image_records": 194,
+        "selected_records": 191,
+        "final_records": 191,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b49ba6f19f2211f490b85e9067b8e089efe75128d58e3853451e5a8bb527b0b2"
+      }
+    },
+    {
+      "id": "rust-eza",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 69,
+          "by_extension": {
+            ".rs": 69
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 329,
+        "source_records": 237,
+        "image_records": 209,
+        "selected_records": 206,
+        "final_records": 206,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "7061d2f98c29331cfd8f96c3c3d87b2b0d1519a267d1e03ca776248c6e8c6ef5"
+      }
+    },
+    {
+      "id": "rust-zoxide",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 18,
+          "by_extension": {
+            ".rs": 18
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 234,
+        "source_records": 142,
+        "image_records": 157,
+        "selected_records": 154,
+        "final_records": 154,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "74a99a6ff43b30e88f6502c1282411d3abb27277a524781005c326c36715da78"
+      }
+    },
+    {
+      "id": "rust-delta",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 81,
+          "by_extension": {
+            ".rs": 81
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 324,
+        "source_records": 232,
+        "image_records": 227,
+        "selected_records": 224,
+        "final_records": 224,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "afd3307c5d5b6987956409a33b2e027f39c649f409781494b0ee59c7a4afdeb8"
+      }
+    },
+    {
+      "id": "go-hey",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 73,
+          "by_extension": {
+            ".go": 73
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 96,
+        "source_records": 2,
+        "image_records": 96,
+        "selected_records": 92,
+        "final_records": 92,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "5d09e2a1213baddcaf3f1de72c546a86b1c49395692611cc3f62f504afba5e50"
+      }
+    },
+    {
+      "id": "go-assetfinder",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 12,
+          "by_extension": {
+            ".go": 12
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 89,
+        "final_records": 89,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "c7061cb2d1d053b3d2d0bdd413e0a11e85631dfa98e4ceb517212a553d9619a7"
+      }
+    },
+    {
+      "id": "go-httprobe",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".go": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 90,
+        "final_records": 90,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "322e050d772ac3cab09002d88640baad9e19b1ee8ae452aa1b2ea20d6633da4b"
+      }
+    },
+    {
+      "id": "go-waybackurls",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1,
+          "by_extension": {
+            ".go": 1
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 94,
+        "source_records": 0,
+        "image_records": 94,
+        "selected_records": 90,
+        "final_records": 90,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "ac939fbaee8aebcbfea2dce270fe4c47f0b0f4ff5ce22d056a81429217fbc7da"
+      }
+    },
+    {
+      "id": "go-unfurl",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 2,
+          "by_extension": {
+            ".go": 2
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 97,
+        "source_records": 3,
+        "image_records": 95,
+        "selected_records": 91,
+        "final_records": 91,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "fc8de5c4086247f69527ce5617f4afa95b74fab76ff71243961841f9a4ba682e"
+      }
+    },
+    {
+      "id": "go-yq",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 224,
+          "by_extension": {
+            ".go": 224
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 135,
+        "source_records": 41,
+        "image_records": 114,
+        "selected_records": 110,
+        "final_records": 110,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "9d500767f026207976fcbb9d0cf7d14d0b4519711256ba68fc2a07a06b6741d0"
+      }
+    },
+    {
+      "id": "go-lazygit",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 1956,
+          "by_extension": {
+            ".go": 1956
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 185,
+        "source_records": 91,
+        "image_records": 155,
+        "selected_records": 151,
+        "final_records": 151,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b37d86765116792be9d405a4285fd5c939f5129f545db666503ea8705b96858f"
+      }
+    },
+    {
+      "id": "go-glow",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 25,
+          "by_extension": {
+            ".go": 25
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 170,
+        "source_records": 76,
+        "image_records": 153,
+        "selected_records": 149,
+        "final_records": 149,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "d263be2a66b7752b6d89f369e0f10973e3d6fc75b9089955a8518764dd81e061"
+      }
+    },
+    {
+      "id": "go-scc",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 642,
+          "by_extension": {
+            ".go": 642
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 125,
+        "source_records": 31,
+        "image_records": 108,
+        "selected_records": 104,
+        "final_records": 104,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "4cde86e3c32b5f6b2d636a935db295b256f36d24a117d0c4d5a3a3bd97ff4dbe"
+      }
+    },
+    {
+      "id": "go-upterm",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 57,
+          "by_extension": {
+            ".go": 57
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 212,
+        "source_records": 118,
+        "image_records": 164,
+        "selected_records": 160,
+        "final_records": 160,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "beada16e99ba36e77da2c95f9b0bfd4b200ca3a3b69fa2dcb8090300c5464a0a"
+      }
+    },
+    {
+      "id": "ruby-rake",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 94,
+          "by_extension": {
+            ".rb": 94
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 200,
+        "source_records": 15,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "5c5e3f5378da96724242745efeb9d631c21618defc6155ee2ecd56993ec9794a"
+      }
+    },
+    {
+      "id": "ruby-rack",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 95,
+          "by_extension": {
+            ".rb": 95
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 192,
+        "source_records": 7,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b4d7a30308e151d0da21867801a2db3e261df1e5bba94b21daa975d070b35126"
+      }
+    },
+    {
+      "id": "ruby-psych",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 86,
+          "by_extension": {
+            ".rb": 86
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 196,
+        "source_records": 11,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "d5d0eb12a135787ae9e2bcec441c71e3b824f0bbb43b6b01572225e8245cafd8"
+      }
+    },
+    {
+      "id": "ruby-json",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 39,
+          "by_extension": {
+            ".rb": 39
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 189,
+        "source_records": 4,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "41aa0b2dc55f611e7a5429d98409792652979b4f1559756cbcb8c09d7a01a3c3"
+      }
+    },
+    {
+      "id": "ruby-rexml",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 113,
+          "by_extension": {
+            ".rb": 113
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 192,
+        "source_records": 7,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "1fdd659e0ad5b49cc228024c1be5450eea5db24114894624bcad2d0fe3d13b69"
+      }
+    },
+    {
+      "id": "ruby-csv",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 45,
+          "by_extension": {
+            ".rb": 45
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 194,
+        "source_records": 9,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "b7768e958ad4c11bd8bb7153562ad2057bb55c45e33d7bc52cd7dfcee1025d7f"
+      }
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 16,
+          "by_extension": {
+            ".rb": 16
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 191,
+        "source_records": 6,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "08ed798b12395ee85895af37b3ddd45899774622315e4efb5f96dee930b474f2"
+      }
+    },
+    {
+      "id": "ruby-logger",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 13,
+          "by_extension": {
+            ".rb": 13
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 193,
+        "source_records": 8,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "6f195cdb0c1186b6701cb9b603936e41c7cebb81d9f0724b0fba70ee5928e3ee"
+      }
+    },
+    {
+      "id": "ruby-uri",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 26,
+          "by_extension": {
+            ".rb": 26
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 198,
+        "source_records": 13,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "3421111721a8576f72d447229ec76f7552cdf8314477d2c4906b59b7fdb5cd11"
+      }
+    },
+    {
+      "id": "ruby-stringio",
+      "status": "completed_rules",
+      "errors": [],
+      "warnings": [],
+      "checks": {
+        "source_files": {
+          "tracked_nonempty_language_files": 7,
+          "by_extension": {
+            ".rb": 7
+          },
+          "scope": "Presence of tracked source files; not independently labelled functional correctness"
+        },
+        "schemas": true,
+        "current_rules_replayed_in_memory": true,
+        "decision_identities": 197,
+        "source_records": 12,
+        "image_records": 185,
+        "selected_records": 180,
+        "final_records": 180,
+        "counts_distinguish_identities_and_records": true,
+        "final_sha256": "82fd6e2400b172d8382ab82dde10be2c0a47e5c5cc1963f374b670f13e1beb40"
+      }
+    }
+  ]
+}

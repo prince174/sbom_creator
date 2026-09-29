@@ -144,12 +144,18 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 [Сводная таблица](benchmarks/results/run-20260929/results.md) ·
 [CSV](benchmarks/results/run-20260929/results.csv) ·
 [JSON](benchmarks/results/run-20260929/results.json) ·
+[Независимый аудит](benchmarks/results/run-20260929/audit-final.json) ·
 [Точные commits](benchmarks/manifest.json).
 
-По 10 Java, JavaScript, Python, Rust, Go и Ruby. Existing Bitbucket fixtures
-дополняются публичными проектами. Подготовка тестовых образов отделена от сервиса.
-Статусы checkout/source_scanned/build_complete не означают полный успех;
-модельный прогон ждёт отдельной модели пользователя. Режим rules не измеряет
+Завершены все 60 проверок в режиме `rules`: по 10 Java, JavaScript, Python, Rust,
+Go и Ruby. Независимый аудит подтвердил schemas, hashes, provenance и решения
+для 60/60 результатов без ошибок. 57 публичных проектов дополняют 3 существующих
+Python fixtures Bitbucket. Подготовка тестовых образов отделена от сервиса.
+
+Все результаты имеют `partial` coverage: 2360 UNKNOWN-идентичностей исключены
+из итоговых SBOM. Точная release-идентичность основного пакета подтверждена в
+54 из 59 применимых случаев; ограничения Go описаны в [методике](benchmarks/README.md).
+Модельный прогон ждёт отдельной модели пользователя. Режим rules не измеряет
 качество LLM. FP/FN требуют независимой разметки и не подменяются числом удалённых пакетов.
 
 ```bash
