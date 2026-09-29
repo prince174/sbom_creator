@@ -1,0 +1,1042 @@
+{
+  "input_report_sha256": "89bf88663f93447a0175e46d99e960eed6486e33ab0581eb3b37d3dc710e8e1e",
+  "repositories": 60,
+  "unknown": 2360,
+  "reasons": {
+    "AMBIGUOUS_IDENTITY": 608,
+    "INSUFFICIENT_IMAGE_EVIDENCE": 260,
+    "SOURCE_ONLY": 1420,
+    "SOURCE_VERSION_NOT_OBSERVED": 72
+  },
+  "languages": {
+    "Java": 310,
+    "JavaScript": 637,
+    "Python": 176,
+    "Rust": 919,
+    "Go": 176,
+    "Ruby": 142
+  },
+  "groups": [
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "rust-cargo-lock-cataloger"
+      ],
+      "count": 724,
+      "languages": {
+        "Rust": 724
+      },
+      "examples": [
+        {
+          "repository": "rust-ripgrep",
+          "identity": "pkg:cargo/windows_i686_msvc@0.52.6",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "windows_i686_msvc",
+              "version": "0.52.6"
+            }
+          ]
+        },
+        {
+          "repository": "rust-ripgrep",
+          "identity": "pkg:cargo/windows_aarch64_msvc@0.52.6",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "windows_aarch64_msvc",
+              "version": "0.52.6"
+            }
+          ]
+        },
+        {
+          "repository": "rust-ripgrep",
+          "identity": "pkg:cargo/windows_aarch64_gnullvm@0.52.6",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "windows_aarch64_gnullvm",
+              "version": "0.52.6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact ecosystem and PURL type disagree",
+      "catalogers": [
+        "github-actions-usage-cataloger"
+      ],
+      "count": 523,
+      "languages": {
+        "Java": 116,
+        "JavaScript": 51,
+        "Python": 91,
+        "Rust": 128,
+        "Go": 67,
+        "Ruby": 70
+      },
+      "examples": [
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:github/actions/checkout@4.1.7",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action",
+              "name": "actions/checkout",
+              "version": "4.1.7"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:github/actions/checkout@v4.1.7",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action",
+              "name": "actions/checkout",
+              "version": "v4.1.7"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:github/actions/checkout@4.1.7",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action",
+              "name": "actions/checkout",
+              "version": "4.1.7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "javascript-lock-cataloger"
+      ],
+      "count": 495,
+      "languages": {
+        "JavaScript": 495
+      },
+      "examples": [
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/estraverse@4.2.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "estraverse",
+              "version": "4.2.0"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/lodash.flatten@4.4.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "lodash.flatten",
+              "version": "4.4.0"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/bcrypt-pbkdf@1.0.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "bcrypt-pbkdf",
+              "version": "1.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "count": 260,
+      "languages": {
+        "Java": 50,
+        "JavaScript": 40,
+        "Python": 60,
+        "Rust": 30,
+        "Go": 30,
+        "Ruby": 50
+      },
+      "examples": [
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:generic/curl@7.81.0",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "binary",
+              "name": "curl",
+              "version": "7.81.0"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:generic/openssl@3.0.2",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "binary",
+              "name": "openssl",
+              "version": "3.0.2"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:generic/util-linux@2.37.2",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "binary",
+              "name": "util-linux",
+              "version": "2.37.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "java-pom-cataloger"
+      ],
+      "count": 94,
+      "languages": {
+        "Java": 94
+      },
+      "examples": [
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:maven/org.junit-pioneer/junit-pioneer@1.9.1",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "junit-pioneer",
+              "version": "1.9.1"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:maven/org.openjdk.jmh/jmh-generator-annprocess@1.37",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "jmh-generator-annprocess",
+              "version": "1.37"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:maven/org.openjdk.jmh/jmh-core@1.37",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "jmh-core",
+              "version": "1.37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "go-module-file-cataloger"
+      ],
+      "count": 59,
+      "languages": {
+        "Go": 59
+      },
+      "examples": [
+        {
+          "repository": "go-unfurl",
+          "identity": "pkg:golang/golang.org/x/net@v0.0.0-20220401154927-543a649e0bdd",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "go-module",
+              "name": "golang.org/x/net",
+              "version": "v0.0.0-20220401154927-543a649e0bdd"
+            }
+          ]
+        },
+        {
+          "repository": "go-unfurl",
+          "identity": "pkg:golang/github.com/jakewarren/tldomains@v0.0.0-20220401175117-e21ec594add9",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "go-module",
+              "name": "github.com/jakewarren/tldomains",
+              "version": "v0.0.0-20220401175117-e21ec594add9"
+            }
+          ]
+        },
+        {
+          "repository": "go-yq",
+          "identity": "pkg:golang/github.com/inconshreveable/mousetrap@v1.1.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "go-module",
+              "name": "github.com/inconshreveable/mousetrap",
+              "version": "v1.1.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_VERSION_NOT_OBSERVED",
+      "identity_problem": null,
+      "catalogers": [
+        "javascript-lock-cataloger"
+      ],
+      "count": 48,
+      "languages": {
+        "JavaScript": 48
+      },
+      "examples": [
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/isexe@1.1.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "isexe",
+              "version": "1.1.2"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/semver@5.3.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "semver",
+              "version": "5.3.0"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-lodash",
+          "identity": "pkg:npm/balanced-match@0.4.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "npm",
+              "name": "balanced-match",
+              "version": "0.4.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "python-package-cataloger"
+      ],
+      "count": 34,
+      "languages": {
+        "Python": 14,
+        "Rust": 20
+      },
+      "examples": [
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/wcwidth@0.2.6",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "wcwidth",
+              "version": "0.2.6"
+            }
+          ]
+        },
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/async-timeout@4.0.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "async-timeout",
+              "version": "4.0.2"
+            }
+          ]
+        },
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/click-didyoumean@0.3.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "click-didyoumean",
+              "version": "0.3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact ecosystem and PURL type disagree",
+      "catalogers": [
+        "github-action-workflow-usage-cataloger"
+      ],
+      "count": 26,
+      "languages": {
+        "JavaScript": 3,
+        "Python": 4,
+        "Go": 6,
+        "Ruby": 13
+      },
+      "examples": [
+        {
+          "repository": "javascript-minimist",
+          "identity": "pkg:github/ljharb/actions@main#.github/workflows/pretest.yml",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "ljharb/actions/.github/workflows/pretest.yml",
+              "version": "main"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-minimist",
+          "identity": "pkg:github/ljharb/actions@main#.github/workflows/node.yml",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "ljharb/actions/.github/workflows/node.yml",
+              "version": "main"
+            }
+          ]
+        },
+        {
+          "repository": "javascript-minimist",
+          "identity": "pkg:github/ljharb/actions@main#.github/workflows/node.yml",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "ljharb/actions/.github/workflows/node.yml",
+              "version": "main"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact and PURL versions disagree",
+      "catalogers": [
+        "java-pom-cataloger"
+      ],
+      "count": 16,
+      "languages": {
+        "Java": 16
+      },
+      "examples": [
+        {
+          "repository": "java-commons-lang",
+          "identity": "pkg:maven/org.junit.jupiter/junit-jupiter",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "junit-jupiter",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-io",
+          "identity": "pkg:maven/org.junit.jupiter/junit-jupiter",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "junit-jupiter",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-codec",
+          "identity": "pkg:maven/org.junit.jupiter/junit-jupiter-params",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "junit-jupiter-params",
+              "version": "UNKNOWN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_ONLY",
+      "identity_problem": null,
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "count": 14,
+      "languages": {
+        "Java": 14
+      },
+      "examples": [
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/minotaur/minotaur@0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "minotaur",
+              "version": "0"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/org.apache.ant/ant@1.6.1",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "ant",
+              "version": "1.6.1"
+            }
+          ]
+        },
+        {
+          "repository": "java-slf4j",
+          "identity": "pkg:maven/org.slf4j/slf4j-simple@1.4.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "slf4j-simple",
+              "version": "1.4.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact and PURL versions disagree",
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "count": 12,
+      "languages": {
+        "Java": 12
+      },
+      "examples": [
+        {
+          "repository": "java-commons-io",
+          "identity": "pkg:maven/test/test",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "test",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/annotationsRI/annotationsRI",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "annotationsRI",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/p200WithUnknownAttributes2/p200WithUnknownAttributes2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "p200WithUnknownAttributes2",
+              "version": "UNKNOWN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_VERSION_NOT_OBSERVED",
+      "identity_problem": null,
+      "catalogers": [
+        "rust-cargo-lock-cataloger"
+      ],
+      "count": 12,
+      "languages": {
+        "Rust": 12
+      },
+      "examples": [
+        {
+          "repository": "rust-bat",
+          "identity": "pkg:cargo/hashbrown@0.12.3",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "hashbrown",
+              "version": "0.12.3"
+            }
+          ]
+        },
+        {
+          "repository": "rust-bat",
+          "identity": "pkg:cargo/strsim@0.10.0",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "strsim",
+              "version": "0.10.0"
+            }
+          ]
+        },
+        {
+          "repository": "rust-dust",
+          "identity": "pkg:cargo/rustix@0.38.32",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "rust-crate",
+              "name": "rustix",
+              "version": "0.38.32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact and PURL versions disagree",
+      "catalogers": [
+        "go-module-binary-cataloger"
+      ],
+      "count": 11,
+      "languages": {
+        "Go": 11
+      },
+      "examples": [
+        {
+          "repository": "go-hey",
+          "identity": "pkg:golang/stdlib@1.24.13",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "go-module",
+              "name": "stdlib",
+              "version": "go1.24.13"
+            }
+          ]
+        },
+        {
+          "repository": "go-assetfinder",
+          "identity": "pkg:golang/_/src",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "go-module",
+              "name": "_/src",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "go-assetfinder",
+          "identity": "pkg:golang/stdlib@1.24.13",
+          "observations": [
+            {
+              "origin": "image",
+              "type": "go-module",
+              "name": "stdlib",
+              "version": "go1.24.13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact and PURL versions disagree",
+      "catalogers": [
+        "ruby-gemspec-cataloger"
+      ],
+      "count": 9,
+      "languages": {
+        "Ruby": 9
+      },
+      "examples": [
+        {
+          "repository": "ruby-rake",
+          "identity": "pkg:gem/rake",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "gem",
+              "name": "rake",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "ruby-rack",
+          "identity": "pkg:gem/rack",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "gem",
+              "name": "rack",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "ruby-psych",
+          "identity": "pkg:gem/psych",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "gem",
+              "name": "psych",
+              "version": "UNKNOWN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_VERSION_NOT_OBSERVED",
+      "identity_problem": null,
+      "catalogers": [
+        "python-package-cataloger"
+      ],
+      "count": 7,
+      "languages": {
+        "Python": 7
+      },
+      "examples": [
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/itsdangerous@2.1.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "itsdangerous",
+              "version": "2.1.2"
+            }
+          ]
+        },
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/werkzeug@2.3.3",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "werkzeug",
+              "version": "2.3.3"
+            }
+          ]
+        },
+        {
+          "repository": "python-flask",
+          "identity": "pkg:pypi/jinja2@3.1.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "python",
+              "name": "jinja2",
+              "version": "3.1.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "SOURCE_VERSION_NOT_OBSERVED",
+      "identity_problem": null,
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "count": 5,
+      "languages": {
+        "Java": 5
+      },
+      "examples": [
+        {
+          "repository": "java-slf4j",
+          "identity": "pkg:maven/org.slf4j/slf4j-api@2.0.99",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "slf4j-api",
+              "version": "2.0.99"
+            }
+          ]
+        },
+        {
+          "repository": "java-slf4j",
+          "identity": "pkg:maven/org.slf4j/slf4j-api@1.4.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "slf4j-api",
+              "version": "1.4.2"
+            }
+          ]
+        },
+        {
+          "repository": "java-slf4j",
+          "identity": "pkg:maven/org.slf4j/slf4j-api@1.5.11",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "slf4j-api",
+              "version": "1.5.11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Version is missing or is a version constraint",
+      "catalogers": [
+        "github-action-workflow-usage-cataloger"
+      ],
+      "count": 4,
+      "languages": {
+        "Rust": 2,
+        "Go": 2
+      },
+      "examples": [
+        {
+          "repository": "rust-bottom",
+          "identity": "",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "./.github/workflows/build_releases.yml",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "rust-bottom",
+          "identity": "",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "./.github/workflows/build_releases.yml",
+              "version": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "repository": "go-upterm",
+          "identity": "",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action-workflow",
+              "name": "./.github/workflows/docker.yaml",
+              "version": "UNKNOWN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Version is missing or is a version constraint",
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "count": 3,
+      "languages": {
+        "Java": 3
+      },
+      "examples": [
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/org.apache.harmony/jndi@https%3A%2F%2Fsvn.apache.org%2Frepos%2Fasf%20567028",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "jndi",
+              "version": "https://svn.apache.org/repos/asf 567028"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/org.apache.harmony/jndiWithUnknownAttributes@https%3A%2F%2Fsvn.apache.org%2Frepos%2Fasf%20567028",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "jndiWithUnknownAttributes",
+              "version": "https://svn.apache.org/repos/asf 567028"
+            }
+          ]
+        },
+        {
+          "repository": "java-commons-compress",
+          "identity": "pkg:maven/org.apache.harmony/jndiUnpacked@https%3A%2F%2Fsvn.apache.org%2Frepos%2Fasf%20567028",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "java-archive",
+              "name": "jndiUnpacked",
+              "version": "https://svn.apache.org/repos/asf 567028"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Version is missing or is a version constraint",
+      "catalogers": [
+        "snap-cataloger"
+      ],
+      "count": 3,
+      "languages": {
+        "Rust": 3
+      },
+      "examples": [
+        {
+          "repository": "rust-eza",
+          "identity": "pkg:deb/ubuntu/cmake@unknown",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "deb",
+              "name": "cmake",
+              "version": "unknown"
+            }
+          ]
+        },
+        {
+          "repository": "rust-eza",
+          "identity": "pkg:deb/ubuntu/libgit2-24@unknown",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "deb",
+              "name": "libgit2-24",
+              "version": "unknown"
+            }
+          ]
+        },
+        {
+          "repository": "rust-eza",
+          "identity": "pkg:deb/ubuntu/libz-dev@unknown",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "deb",
+              "name": "libz-dev",
+              "version": "unknown"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reason": "AMBIGUOUS_IDENTITY",
+      "identity_problem": "Artifact and PURL versions disagree",
+      "catalogers": [
+        "github-actions-usage-cataloger"
+      ],
+      "count": 1,
+      "languages": {
+        "Go": 1
+      },
+      "examples": [
+        {
+          "repository": "go-yq",
+          "identity": "pkg:github/docker%3A/#pandoc/core:2.14.2",
+          "observations": [
+            {
+              "origin": "source",
+              "type": "github-action",
+              "name": "docker://pandoc/core:2.14.2",
+              "version": "UNKNOWN"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Observed uncertainty causes only; no absence, FP/FN, or runtime-use labels inferred."
+}
