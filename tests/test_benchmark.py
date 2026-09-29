@@ -194,7 +194,7 @@ def test_read_analysis_rejects_stale_built_image_id(published_result):
 
 @pytest.mark.parametrize("name,field,value,match", [
     ("coverage.json", "decisions", {"INCLUDE": 0, "EXCLUDE": 0, "UNKNOWN": 0}, "Decision counts"),
-    ("coverage.json", "partial_inventory", True, "partial status"),
+    ("coverage.json", "partial_inventory", False, "partial status"),
     ("summary.json", "selected_count", 0, "summary counts"),
 ])
 def test_read_analysis_rejects_inconsistent_selection_and_coverage(published_result, name, field, value, match):

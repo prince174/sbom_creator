@@ -20,6 +20,7 @@ from .acquire import (
     run_command,
     secret,
 )
+from .payload import collect as collect_payload
 
 TRUSTED_CONFIG = """check-for-app-update: false
 parallelism: 2
@@ -57,7 +58,8 @@ def _syft(args: list[str], settings: Settings, *, output: Path) -> dict[str, Any
     with tempfile.TemporaryDirectory(prefix="sbom-syft-") as directory:
         root = Path(directory)
         config = root / "syft.yaml"
-        config.write_text(TRUSTED_CONFIG, encoding="utf-8")
+        image_scan = args[0] == "scan" and args[1].startswith("docker-archive:")
+        config.write_text(TRUSTED_CONFIG + ("\nfile:\n  metadata:\n    selection: all\n" if image_scan else ""), encoding="utf-8")
         environment = clean_environment()
         environment.update({"HOME": directory, "USERPROFILE": directory, "XDG_CONFIG_HOME": directory,
                             "XDG_CACHE_HOME": directory, "SYFT_CHECK_FOR_APP_UPDATE": "false"})
@@ -239,7 +241,9 @@ def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, 
         if metadata.get("imageID") != config_digest:
             output.unlink(missing_ok=True)
             raise RuntimeError("Syft scanned image identity does not match the saved image configuration")
+        payload_evidence = collect_payload(data, archive)
         provenance = {"image": reference, "immutable_reference": immutable_reference,
+                      "payload_evidence": payload_evidence,
                       "image_digest": platform_digest or image_id, "platform_digest": platform_digest,
                       "registry_digest": platform_digest,
                       "acquisition": "registry" if settings.pull_image else "local",

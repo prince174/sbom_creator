@@ -22,6 +22,7 @@ from .acquire import (
 from .core import reconcile, review_report, rules_assessor
 from .exporter import packages_only
 from .llm import LlmConfig, OpenAICompatibleAssessor
+from .payload import SUPPORTED as PAYLOAD_CATALOGERS
 from .scanner import convert, scan_image, scan_source
 from .validation import validate_cyclonedx, validate_export_identity, validate_syft
 
@@ -122,7 +123,8 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
     started = time.monotonic()
     validate_syft(source)
     validate_syft(image)
-    result = reconcile(source, image, assessor)
+    payload_evidence = (provenance or {}).get("image", {}).get("payload_evidence")
+    result = reconcile(source, image, assessor, payload_evidence)
     validate_syft(result["selected_syft"])
     with tempfile.TemporaryDirectory(prefix=".publish-", dir=output.parent) as temporary:
         staging = Path(temporary) / "result"
@@ -162,17 +164,21 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
                          "source_checkout_incomplete": incomplete_source,
                          "source_catalogers": catalogers(source),
                          "image_catalogers": catalogers(image)})
-        coverage["partial_inventory"] = counts.get("UNKNOWN", 0) > 0 or incomplete_source
+        payload_unavailable = payload_evidence is None and any(
+            a.get("foundBy") in PAYLOAD_CATALOGERS for a in image["artifacts"])
+        coverage["partial_inventory"] = counts.get("UNKNOWN", 0) > 0 or incomplete_source or payload_unavailable
         cdx["metadata"]["properties"].extend([
             {"name": "sbom-creator:assessment-mode", "value": coverage["mode"]},
             {"name": "sbom-creator:policy-version", "value": coverage["policy_version"]},
             {"name": "sbom-creator:coverage", "value": "partial" if coverage["partial_inventory"] else "no-known-gaps"},
+            {"name": "sbom-creator:payload-verification", "value": coverage["payload_verification"]},
         ])
         validate_cyclonedx(cdx)
         write_json(staging / "final.cdx.json", cdx)
         summary = {
             "status": "succeeded", "partial": coverage["partial_inventory"],
             "assessment_mode": coverage["mode"], "policy_version": coverage["policy_version"],
+            "payload_verification": coverage["payload_verification"],
             "unknown_reasons": coverage["unknown_reasons"],
             "source_count": len(source["artifacts"]), "image_count": len(image["artifacts"]),
             "selected_count": len(result["selected_syft"]["artifacts"]),

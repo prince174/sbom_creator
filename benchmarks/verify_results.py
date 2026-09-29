@@ -206,7 +206,7 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
     if row.get("fp") is not None or row.get("fn") is not None:
         check(bool(row.get("ground_truth_artifact")) and bool(row.get("ground_truth_scope")), "UNSUPPORTED_ACCURACY_METRICS")
     if current_policy and mode == "rules":
-        current = reconcile(source, image, rules_assessor)
+        current = reconcile(source, image, rules_assessor, provenance.get("image", {}).get("payload_evidence"))
         check(current["selected_syft"] == selected, "OUTPUT_STALE_FOR_CURRENT_RULES")
         check(current["decisions"] == decisions, "DECISIONS_STALE_FOR_CURRENT_RULES")
         from sbom_creator.core import review_report

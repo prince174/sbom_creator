@@ -164,23 +164,32 @@ def assess(case, labels, output):
         "final_sha256": sha256(output / "final.cdx.json"), "scope": labels["scope"]}
 
 
-def run(work, report, syft, replay=False):
+def run(work, report, syft, replay=False, rescan=False, input_report=None):
     if report.exists():
         raise FileExistsError("Keep old reports; choose a new report path")
     rows = []
     settings = Settings(syft_binary=syft, pull_image=False, registry_hosts=("docker.io",))
+    inputs = {r["language"]: r for r in json.loads(input_report.read_bytes())["rows"]} if input_report else {}
     for language in LANGUAGES:
         case = work / language.lower()
         start = time.monotonic()
-        if replay:
+        if replay or rescan:
             labels = json.loads((case / "ground-truth.json").read_bytes())
-            old = case / "baseline"
+            old = Path(inputs[language]["analysis_directory"]) if language in inputs else case / "baseline"
+            if language in inputs:
+                assert inputs[language]["ground_truth_sha256"] == sha256(case / "ground-truth.json")
             output = case / ("replay-" + str(time.time_ns()))
             provenance = json.loads((old / "provenance.json").read_bytes())
             provenance["replay_of"] = str(old)
-            publish_catalogs(json.loads((old / "source.syft.json").read_bytes()),
-                             json.loads((old / "image.syft.json").read_bytes()),
-                             output, settings, rules_assessor, provenance)
+            if rescan:
+                image_id = provenance["image"]["image_id"]
+                immutable = provenance["image"]["image"].rsplit(":", 1)[0] + "@" + image_id
+                analyze_local(case / "src", immutable, output, settings)
+                assert json.loads((output / "provenance.json").read_bytes())["image"]["image_id"] == image_id
+            else:
+                publish_catalogs(json.loads((old / "source.syft.json").read_bytes()),
+                                 json.loads((old / "image.syft.json").read_bytes()),
+                                 output, settings, rules_assessor, provenance)
             smoke = json.loads((case / "smoke.json").read_bytes())
         else:
             if case.exists():
@@ -220,5 +229,7 @@ if __name__ == "__main__":
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--syft", required=True)
     parser.add_argument("--replay", action="store_true")
+    parser.add_argument("--rescan", action="store_true")
+    parser.add_argument("--input-report", type=Path)
     args = parser.parse_args()
-    run(args.work.resolve(), args.report.resolve(), args.syft, args.replay)
+    run(args.work.resolve(), args.report.resolve(), args.syft, args.replay, args.rescan, args.input_report)

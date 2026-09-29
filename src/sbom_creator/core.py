@@ -19,9 +19,11 @@ from urllib.parse import parse_qsl
 
 from packageurl import PackageURL
 
+from .payload import SUPPORTED as PAYLOAD_CATALOGERS
+
 TP_THRESHOLD = 70
-POLICY_VERSION = "image-evidence-tp-gt-70-v2"
-RULES_POLICY_VERSION = "image-evidence-only-v2"
+POLICY_VERSION = "image-evidence-tp-gt-70-v3"
+RULES_POLICY_VERSION = "image-evidence-and-payload-v3"
 TYPE_ALIASES = {
     "java-archive": "maven", "python": "pypi", "rust-crate": "cargo",
     "go-module": "golang", "gem": "gem", "npm": "npm",
@@ -80,7 +82,12 @@ def artifact_identity(artifact: dict) -> dict:
             if len(keys) != len(set(keys)):
                 raise ValueError("Duplicate PURL qualifier")
             purl = _canonical(PackageURL.from_string(raw_purl))
-            if artifact_version and artifact_version != purl.version:
+            go_stdlib = (artifact.get("type") == "go-module" and artifact.get("name") == "stdlib"
+                         and artifact.get("foundBy") == "go-module-binary-cataloger"
+                         and purl.type == "golang" and purl.name == "stdlib" and not purl.namespace
+                         and isinstance(purl.version, str) and re.fullmatch(r"\d+\.\d+(?:\.\d+)?", purl.version)
+                         and artifact_version == "go" + purl.version)
+            if artifact_version and artifact_version != purl.version and not go_stdlib:
                 raise ValueError("Artifact and PURL versions disagree")
             artifact_type = TYPE_ALIASES.get(artifact.get("type"), artifact.get("type"))
             binary_generic = artifact_type == "binary" and purl.type == "generic"
@@ -154,7 +161,7 @@ def _validate_artifacts(document: dict, origin: str) -> list[dict]:
     return artifacts
 
 
-def build_candidates(source: dict, image: dict) -> list[dict]:
+def build_candidates(source: dict, image: dict, payload_evidence: dict | None = None) -> list[dict]:
     """Create the union of identities; artifact IDs are local to each document."""
     entries: dict[str, dict] = {}
     versions: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
@@ -177,6 +184,10 @@ def build_candidates(source: dict, image: dict) -> list[dict]:
             data = {"origin": origin, "document_sha256": document_hash, "artifact_id": artifact["id"],
                     "presence_kind": _presence_kind(artifact), "artifact": copy.deepcopy(artifact),
                     "relationships": copy.deepcopy(related.get(artifact["id"], []))}
+            if origin == "image" and payload_evidence is not None and artifact.get("foundBy") in PAYLOAD_CATALOGERS:
+                data["payload"] = copy.deepcopy(payload_evidence.get(artifact["id"], {"status": "unconfirmed", "path": None}))
+                if data["payload"].get("status") != "confirmed" or not data["payload"].get("path"):
+                    data["presence_kind"] = "metadata_without_confirmed_payload"
             entry["evidence"].append({"id": checksum(data), **data})
             if identity["identity_valid"]:
                 versions[identity["package_key"]][origin].add(identity["version"])
@@ -252,6 +263,8 @@ def review_report(decisions: list[dict]) -> dict:
         "SOURCE_VERSION_NOT_OBSERVED": "Compare source lockfiles with the delivered build; retain the observed image version.",
         "SOURCE_ONLY": "Check whether this is a build/dev dependency, omitted installation, or scanner blind spot.",
         "DECLARATION_ONLY": "Provide installed-package or embedded binary/archive metadata; copied manifests are insufficient.",
+        "PAYLOAD_NOT_CONFIRMED": "Inspect package files, RECORD or archive contents; metadata alone is insufficient. Missing support is not proof of absence.",
+        "CI_CONFIGURATION": "Review as build/CI configuration; do not treat the action reference as a delivered runtime library.",
     }
     items = []
     for row in decisions:
@@ -270,10 +283,11 @@ def review_report(decisions: list[dict]) -> dict:
             "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."}
 
 
-def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> dict:
+def reconcile(source: dict, image: dict, assessor: Callable | None = None,
+              payload_evidence: dict | None = None) -> dict:
     if assessor is None:
         assessor = rules_assessor
-    candidates = build_candidates(source, image)
+    candidates = build_candidates(source, image, payload_evidence)
     rules = assessor is rules_assessor
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
     included: set[str] = set()
@@ -298,8 +312,13 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> di
             # A confirmed identity must not promote lockfile/declaration records
             # carrying the same PURL into installed-package evidence.
             included.update(e["artifact_id"] for e in image_facts)
+        ci_only = all(e["origin"] == "source" and e["artifact"].get("foundBy") in {
+            "github-actions-usage-cataloger", "github-action-workflow-usage-cataloger"} for e in candidate["evidence"])
         review_reason = (
+            "CI_CONFIGURATION" if ci_only else
             "AMBIGUOUS_IDENTITY" if not candidate["identity_valid"] else
+            "PAYLOAD_NOT_CONFIRMED" if not image_facts and any(
+                e["presence_kind"] == "metadata_without_confirmed_payload" for e in candidate["evidence"]) else
             "SOURCE_VERSION_NOT_OBSERVED" if not image_facts and candidate["category"] == "version_conflict" else
             "SOURCE_ONLY" if not candidate["image_artifact_ids"] else
             "DECLARATION_ONLY" if not image_facts and all(
@@ -331,6 +350,7 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None) -> di
         "categories": dict(Counter(c["category"] for c in candidates)),
         "unknown_reasons": dict(Counter(d["review_reason"] for d in decisions if d["decision"] == "UNKNOWN")),
         "unselected_image_artifacts": len(image["artifacts"]) - len(selected["artifacts"]),
+        "payload_verification": "performed" if payload_evidence is not None else "not_provided",
         "relationships_pruned": len(old_relationships) - len(selected["artifactRelationships"]),
         "partial_inventory": counts["UNKNOWN"] > 0,
         "dependency_graph": "Only existing scanner relationships preserved; ownership is not library dependency",
