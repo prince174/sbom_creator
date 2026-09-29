@@ -62,11 +62,12 @@ def test_npm_manifest_cannot_borrow_code_from_nested_package(tmp_path):
     assert payload["outer"]["status"] == "unconfirmed"
 
 
-def test_npm_data_only_package_has_payload_when_declared_entry_exists(tmp_path):
+@pytest.mark.parametrize("manifest", [b'{"main":"index.json"}', b'{"files":["index.json"]}'])
+def test_npm_data_only_package_has_payload_when_entry_exists(tmp_path, manifest):
     artifact = package("a", type="npm", purl="pkg:npm/example@1.2.3",
                        foundBy="javascript-package-cataloger", locations=[{"path": "/app/package.json"}])
     image, archive = archive_fixture(tmp_path, {
-        "/app/package.json": b'{"main":"index.json"}', "/app/index.json": b'["MIT"]'}, [artifact])
+        "/app/package.json": manifest, "/app/index.json": b'["MIT"]'}, [artifact])
     evidence = collect(image, archive)
     assert evidence["a"]["path"] == "/app/index.json"
     assert reconcile(doc(), image, payload_evidence=evidence)["decisions"][0]["decision"] == "INCLUDE"

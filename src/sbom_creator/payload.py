@@ -124,10 +124,10 @@ def _javascript(artifact, files, package_roots):
         if not manifest.endswith("/package.json"):
             continue
         directory = posixpath.dirname(manifest)
-        # Data-only packages (for example SPDX tables) can expose JSON through
-        # main. Confirm that exact entry point instead of requiring JavaScript.
+        # Data-only packages can expose JSON through main or the conventional
+        # index entry when main is absent. Do not require JavaScript code.
         raw = files.read(manifest, 1024 * 1024)
-        entry = json.loads(raw).get("main") if raw else None
+        entry = json.loads(raw).get("main", "index") if raw else None
         if isinstance(entry, str) and entry:
             target = path(posixpath.join(directory, entry))
             if target.startswith(directory + "/") and target != manifest:
