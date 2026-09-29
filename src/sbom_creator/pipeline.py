@@ -23,7 +23,7 @@ from .core import reconcile, rules_assessor
 from .exporter import packages_only
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .scanner import convert, scan_image, scan_source
-from .validation import validate_cyclonedx, validate_syft
+from .validation import validate_cyclonedx, validate_export_identity, validate_syft
 
 ARTIFACTS = (
     "final.cdx.json", "source.syft.json", "image.syft.json", "selected.syft.json",
@@ -144,6 +144,7 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         })
         cdx = convert(staging / "selected.syft.json", staging / "final.cdx.json", settings)
         cdx = packages_only(cdx, result["selected_syft"])
+        validate_export_identity(cdx, result["selected_syft"])
         counts = Counter(d["decision"] for d in result["decisions"])
         cdx.setdefault("metadata", {}).setdefault("properties", []).extend([
             {"name": "sbom-creator:build-link", "value": provenance["build_link"]},

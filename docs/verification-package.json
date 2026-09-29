@@ -1,7 +1,7 @@
 {
   "verified_date_local": "2026-09-30",
   "scope": "installed Linux service registry scan; generated source fixture; no LLM",
-  "service_image_id": "sha256:faae38d7bcb44ff113df829e441d3d6225b16f323b3be0359be640ead246fe9a",
+  "service_image_id": "sha256:7dc3a4c7769332db37d39d75d4a481451e768303f6230cc624d15209b55cdd81",
   "summary": {
     "status": "succeeded",
     "partial": true,
@@ -14,8 +14,9 @@
       "UNKNOWN": 1
     },
     "cyclonedx_valid": true,
-    "reconciliation_seconds": 0.679
+    "reconciliation_seconds": 0.46
   },
+  "export_identity_verified": true,
   "image": {
     "image": "docker.io/library/alpine:3.22",
     "immutable_reference": "docker.io/library/alpine@sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
@@ -36,20 +37,20 @@
     "container_started": false,
     "build_link": "unverified"
   },
-  "artifact_path": "workspace/linux-installed-smoke-v2",
+  "artifact_path": "workspace/linux-installed-smoke-v3",
   "artifacts_sha256": {
     "coverage.json": "591fd41202760519f517d2f426f14105367c87ff84f367e7da095ee088927c91",
-    "decisions.json": "fa01df9c0e4be223fd5d66d513f847a1e1f5e04a1915d63dafc4280391f2b44a",
-    "final.cdx.json": "d265ac9a53a5fd708c2551517f61caa02425c148938f51607ee85ce79073029f",
-    "image.syft.json": "d281862a1d72c2be1161051ab30505cddbd4aa8444941d555dde33e5dcf6214a",
-    "provenance.json": "da9e75634bd4829069d7d68ada85d207c149dc040bc32f23d07778c0b1863f71",
-    "selected.syft.json": "d281862a1d72c2be1161051ab30505cddbd4aa8444941d555dde33e5dcf6214a",
-    "source.syft.json": "5218630d2f4f44a11723498ed3bb9343f2ee3a793bbc97f4b1539d7c7b7f4b6e",
-    "summary.json": "9e7b4b11a52c0a961aa3c048de5652b2cf55127a1b6911ee0c923099c4b1fde0"
+    "decisions.json": "9adc59ed4f27ff6f52dcc4c11f29905076a2c0c1b5afcdf4e9e5788ecc06bd5f",
+    "final.cdx.json": "2812ce428604973ede75c2634ca3367b7ee18a72e28a0f8f745f840d3ece5edf",
+    "image.syft.json": "35f8aed15fb144ac99ec542a2fd425ba05611401029a49b7da9039d42b5c8d1b",
+    "provenance.json": "5a5c2717160363ccd58ed35f52569c29bcfa56a3f0a44af1fe9ea8a1c176bd2c",
+    "selected.syft.json": "35f8aed15fb144ac99ec542a2fd425ba05611401029a49b7da9039d42b5c8d1b",
+    "source.syft.json": "60337ff7009017ce803e5c57002df5cb7cad46590f536e45f930af33e45b06c2",
+    "summary.json": "6146bce7db0cd98317d7142af1840758fcb7744b9976a4c8d09782d20f4a8507"
   },
   "wheel": {
     "path": "dist/sbom_creator-0.1.0-py3-none-any.whl",
-    "sha256": "d66b8804228652c04461d95b6891e91608242ae27bc5c92274db653eceac7c00",
+    "sha256": "a39ebbbffb5598c36980a7d0899683e3916405dcf1cf5b12ecb922c829b790b7",
     "schemas": [
       "sbom_creator/schemas/bom-1.6.schema.json",
       "sbom_creator/schemas/jsf-0.82.schema.json",

@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "verified_at": "2026-09-29T19:10:02.808719+00:00",
+  "verified_at": "2026-09-29T19:27:51.641305+00:00",
   "python_version": "3.12.14",
   "module_prefix": "/usr/local/lib/python3.12/site-packages",
   "runtime_modules": {
@@ -30,15 +30,15 @@
     },
     "sbom_creator.llm": {
       "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/llm.py",
-      "sha256": "00f386428afee245693136cf3b9049667859e31c0e6bffd294c87cf3c4d599de",
+      "sha256": "a8b5f7aa689f8f2d98cbf651ca7cfeec161ec07423bf5418d1e548324edfcdfe",
       "expected_path": "/expected-src/sbom_creator/llm.py",
-      "expected_sha256": "00f386428afee245693136cf3b9049667859e31c0e6bffd294c87cf3c4d599de"
+      "expected_sha256": "a8b5f7aa689f8f2d98cbf651ca7cfeec161ec07423bf5418d1e548324edfcdfe"
     },
     "sbom_creator.pipeline": {
       "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/pipeline.py",
-      "sha256": "4b3112c6a2c932aa25106d0e900ff09f9443566ff38870006e628512cd4dda36",
+      "sha256": "36c29a8e1e6185d30d6e4b3b001bd7657a690177574efc6aaf3ae9b57d1f7127",
       "expected_path": "/expected-src/sbom_creator/pipeline.py",
-      "expected_sha256": "4b3112c6a2c932aa25106d0e900ff09f9443566ff38870006e628512cd4dda36"
+      "expected_sha256": "36c29a8e1e6185d30d6e4b3b001bd7657a690177574efc6aaf3ae9b57d1f7127"
     },
     "sbom_creator.service": {
       "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/service.py",
@@ -48,9 +48,9 @@
     },
     "sbom_creator.validation": {
       "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/validation.py",
-      "sha256": "ff07a047f9b2e51b3bf52e5c2c863f6d2df6405d78a25b3f06846eafea6db70a",
+      "sha256": "a6b36591dcc92de2aba2d9630148cc28eb1b61adcea4c297dc462cc864fea427",
       "expected_path": "/expected-src/sbom_creator/validation.py",
-      "expected_sha256": "ff07a047f9b2e51b3bf52e5c2c863f6d2df6405d78a25b3f06846eafea6db70a"
+      "expected_sha256": "a6b36591dcc92de2aba2d9630148cc28eb1b61adcea4c297dc462cc864fea427"
     },
     "sbom_creator.exporter": {
       "path": "/usr/local/lib/python3.12/site-packages/sbom_creator/exporter.py",

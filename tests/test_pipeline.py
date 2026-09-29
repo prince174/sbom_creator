@@ -14,9 +14,10 @@ import pytest
 
 from sbom_creator.acquire import Settings
 from sbom_creator.core import rules_assessor
+from sbom_creator.exporter import packages_only
 from sbom_creator.pipeline import ARTIFACTS, AnalysisError, analyze, analyze_local, publish_catalogs
-from sbom_creator.scanner import scan_source
-from sbom_creator.validation import validate_cyclonedx, validate_syft
+from sbom_creator.scanner import convert, scan_source
+from sbom_creator.validation import validate_cyclonedx, validate_export_identity, validate_syft
 
 
 @pytest.fixture(scope="module")
@@ -79,6 +80,47 @@ def test_actual_syft_conversion_has_no_excluded_component_or_dangling_ref(real_c
     assert not list(tmp_path.glob(".publish-*"))
     with pytest.raises(FileExistsError):
         publish_catalogs(source, image, output, settings, rules_assessor)
+
+
+def test_actual_syft_conversion_preserves_scoped_qualified_and_no_purl_identities(real_catalogs, tmp_path):
+    """Synthetic identities through the real pinned converter, not claimed build fixtures."""
+    _, image, settings = real_catalogs
+    selected = copy.deepcopy(image)
+    selected["artifacts"] = [
+        {"id": "scoped-npm", "name": "@scope/library", "version": "1.2.3", "type": "npm",
+         "foundBy": "javascript-package-cataloger", "locations": [], "licenses": [], "language": "javascript",
+         "cpes": [], "purl": "pkg:npm/%40scope/library@1.2.3"},
+        {"id": "qualified-maven", "name": "library", "version": "1.2.3", "type": "java-archive",
+         "foundBy": "java-archive-cataloger", "locations": [], "licenses": [], "language": "java",
+         "cpes": [], "purl": "pkg:maven/org.example/library@1.2.3?type=jar"},
+        {"id": "binary-no-purl", "name": "Simple Launcher", "version": "1.2.3", "type": "binary",
+         "foundBy": "pe-cataloger", "locations": [], "licenses": [], "language": "", "cpes": [], "purl": ""},
+    ]
+    selected["artifactRelationships"] = []
+    validate_syft(selected)
+    path = tmp_path / "selected.syft.json"
+    path.write_text(json.dumps(selected), encoding="utf-8")
+    cdx = packages_only(convert(path, tmp_path / "converted.cdx.json", settings), selected)
+    validate_cyclonedx(cdx)
+    validate_export_identity(cdx, selected)
+    assert len(cdx["components"]) == 3
+
+
+@pytest.mark.parametrize("field,value", [("name", "invented-package"), ("version", "999.0")])
+def test_publication_rejects_converter_identity_drift(real_catalogs, tmp_path, monkeypatch, field, value):
+    source, image, settings = real_catalogs
+    def drift(selected, final, config):
+        cdx = convert(selected, final, config)
+        cdx["components"][0][field] = value
+        return cdx
+    monkeypatch.setattr("sbom_creator.pipeline.convert", drift)
+    output = tmp_path / "identity-drift"
+    with pytest.raises(AnalysisError) as failure:
+        publish_catalogs(source, image, output, settings, rules_assessor)
+    assert failure.value.error_type == "ValueError"
+    assert not output.exists()
+    assert not list(tmp_path.glob(".publish-*"))
+    assert not (tmp_path / "identity-drift.diagnostics" / "final.cdx.json").exists()
 
 
 def test_rejected_assessment_or_schema_never_publishes_final(real_catalogs, tmp_path):

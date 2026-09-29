@@ -5,8 +5,8 @@
 
 | Проверка | Результат | Свидетельство |
 |---|---|---|
-| Windows, Python, полный pytest | 136 passed, 1 skipped | [JUnit](verification-pytest-windows.xml) |
-| Linux, установленный пакет в финальном Docker-образе, полный pytest | 137 passed | [JUnit](verification-pytest-linux.xml) |
+| Windows, Python, полный pytest | 160 passed, 1 skipped | [JUnit](verification-pytest-windows.xml) |
+| Linux, установленный пакет в финальном Docker-образе, полный pytest | 161 passed | [JUnit](verification-pytest-linux.xml) |
 | Ruff, src/tests/benchmarks/scripts | Passed | `python -m ruff check src tests benchmarks scripts` |
 | Linux HTTP API, без внешней сети и модели | Passed | [Статусы и хеши 10 модулей](verification-installed-linux.json) |
 | Registry → Syft → rules → CycloneDX в установленном Linux-пакете | Passed; 16 компонентов, 1 UNKNOWN | [Образ, хеши, счётчики](verification-package.json) |
@@ -37,11 +37,14 @@ docker run --rm --network none `
 Проверка блокировки результата использует реальный HTTP API и pipeline: без
 настроенной модели задание `202 → failed`, артефакт недоступен (`409`), final-файл
 отсутствует. Unit/integration tests дополнительно проверяют сбои checkout/scan,
-контракт оценок, порог 70, повторные ошибки, schema и ссылки CycloneDX.
+контракт оценок, порог 70, повторные ошибки, schema и ссылки CycloneDX. Отдельно
+проверяется сохранение имени, версии, PURL и qualifiers при экспорте; подменённый
+кэш не принимается как новый успешный прогон. LLM-транспорт использует тестовые
+ответы и не считается испытанием реальной модели.
 
 Registry smoke использует искусственный source fixture и Alpine; он проверяет
 транспорт и публикацию, но не связь реального приложения с образом. Файлы лежат
-в `workspace/linux-installed-smoke-v2`, отдельно от более ранних диагностических
+в `workspace/linux-installed-smoke-v3`, отдельно от более ранних диагностических
 запусков. Реальные репозитории и контролируемые сборки отражены в
 [таблице 60 проектов](../benchmarks/results/run-20260929/results.md).
 

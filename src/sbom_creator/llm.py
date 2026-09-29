@@ -196,7 +196,7 @@ class OpenAICompatibleAssessor:
             yield current
 
     def __call__(self, candidates: list[dict]) -> list[dict]:
-        self.audit = {**self.config.public_settings(), "prompt_version": PROMPT_VERSION,
+        self.audit = {**self.config.public_settings(), "mode": "llm", "prompt_version": PROMPT_VERSION,
                       "prompt_sha256": hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest(),
                       "policy_version": POLICY_VERSION, "batches": []}
         assessments = []

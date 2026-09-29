@@ -1,8 +1,11 @@
 """Offline validation against bundled official schemas and reference integrity."""
 import json
+import re
+from collections import Counter
 from importlib.resources import files
 
 from jsonschema import Draft7Validator, Draft202012Validator
+from packageurl import PackageURL
 from referencing import Registry, Resource
 
 
@@ -59,3 +62,56 @@ def validate_cyclonedx(document):
             raise ValueError("Unknown CycloneDX dependency ref")
         if any(ref not in valid for ref in dependency.get("dependsOn", []) + dependency.get("provides", [])):
             raise ValueError("Dangling CycloneDX dependency")
+
+
+def _normalized_purl(value):
+    parsed = PackageURL.from_string(value)
+    if parsed.type == "pypi":
+        parsed = parsed._replace(name=re.sub(r"[-_.]+", "-", parsed.name).lower())
+    return parsed
+
+
+def validate_export_identity(document, selected_syft):
+    """Check that each exported package preserves its selected identity exactly.
+
+    package-id only locates the original record; it does not authorize a changed
+    name, namespace, version, PURL qualifier or subpath. Files and the image subject
+    are outside the selected package inventory.
+    """
+    artifacts = selected_syft["artifacts"]
+    expected = {artifact["id"]: artifact for artifact in artifacts}
+    if len(expected) != len(artifacts):
+        raise ValueError("Duplicate selected Syft artifact ID")
+    seen = []
+    components = document.get("components", [])
+    if document.get("metadata", {}).get("component", {}).get("components"):
+        raise ValueError("Unexpected nested subject components in flat package export")
+    for component in components:
+        if component.get("components"):
+            raise ValueError("Unexpected nested components in flat package export")
+        reference = component.get("bom-ref", "")
+        artifact_id = (_normalized_purl(reference).qualifiers.get("package-id")
+                       if reference.startswith("pkg:") else reference)
+        if artifact_id not in expected:
+            raise ValueError("Exported package does not identify a selected Syft artifact")
+        artifact = expected[artifact_id]
+        seen.append(artifact_id)
+        if (component.get("version") or "") != (artifact.get("version") or ""):
+            raise ValueError("Exported package version differs from selected Syft identity")
+        original_purl, exported_purl = artifact.get("purl"), component.get("purl")
+        if bool(original_purl) != bool(exported_purl):
+            raise ValueError("Exported package lost or invented its PURL")
+        allowed_names = {(artifact.get("name"), "")}
+        if original_purl:
+            parsed = _normalized_purl(original_purl)
+            if parsed.to_string() != _normalized_purl(exported_purl).to_string():
+                raise ValueError("Exported package PURL differs from selected Syft identity")
+            if parsed.namespace:
+                # Syft can retain a full module/scoped name or split it into the
+                # CycloneDX name/group fields. The exact PURL remains mandatory.
+                allowed_names.add((parsed.name, parsed.namespace))
+                allowed_names.add((artifact.get("name"), parsed.namespace))
+        if (component.get("name"), component.get("group") or "") not in allowed_names:
+            raise ValueError("Exported package name/group differs from selected Syft identity")
+    if Counter(seen) != Counter(expected.keys()):
+        raise ValueError("Exported packages do not map one-to-one to selected Syft identities")

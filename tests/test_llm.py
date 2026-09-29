@@ -55,6 +55,7 @@ def test_transport_batches_complete_candidates_and_records_audit(monkeypatch):
     assert all(timeout == 7 for _, timeout in calls)
     assert all(request.get_header("Authorization") == "Bearer test-secret" for request, _ in calls)
     assert "test-secret" not in json.dumps(assessor.audit)
+    assert assessor.audit["mode"] == "llm"
     assert [batch["candidates"] for batch in assessor.audit["batches"]] == [2, 1]
     assert len(assessor.audit["prompt_sha256"]) == 64
     assert assessor.audit["batches"][0]["reported_model"] == "reported-model"
@@ -176,5 +177,8 @@ def test_redirect_handler_does_not_forward_authorization():
 
 def test_empty_catalog_needs_no_network_and_has_empty_assessments(monkeypatch):
     calls = fake_transport(monkeypatch, lambda body: {})
-    assert OpenAICompatibleAssessor(config())([]) == []
+    assessor = OpenAICompatibleAssessor(config())
+    assert assessor([]) == []
+    assert assessor.audit["mode"] == "llm"
+    assert assessor.audit["batches"] == []
     assert calls == []
