@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-09-29T18:49:49.512258+00:00",
+  "verified_at": "2026-09-29T19:03:08.107060+00:00",
   "bitbucket_checkout": {
     "status": "passed",
     "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
@@ -40,6 +40,7 @@
   },
   "linux_api_smoke": {
     "status": "passed",
+    "verified_at": "2026-09-29T19:03:08.107023+00:00",
     "health_http": 200,
     "health": {
       "status": "ok",
@@ -47,6 +48,8 @@
     },
     "unauthenticated_http": 401,
     "unconfigured_api_token_http": 503,
+    "unreadable_api_token_file_http": 503,
+    "oversized_api_token_file_http": 503,
     "untrusted_repository_http": 422,
     "accepted_job_http": 202,
     "missing_model_job_status": "failed",
@@ -56,6 +59,54 @@
     "model_calls": 0,
     "external_network": "disabled for smoke container",
     "runtime": "Linux container + real loopback HTTP + real pipeline",
-    "credentials_persisted": false
+    "credentials_persisted": false,
+    "escaping_symlink_rejected": true,
+    "unrelated_secret_environment_removed": true,
+    "pythonpath": "/app/src",
+    "runtime_modules": {
+      "sbom_creator": {
+        "path": "/app/src/sbom_creator/__init__.py",
+        "sha256": "e6daab28c2f3d3d1bafad9edf379d5714de7b607203af714a2acd738f8e495ee"
+      },
+      "sbom_creator.acquire": {
+        "path": "/app/src/sbom_creator/acquire.py",
+        "sha256": "caafe1378bd9c261dcf1fd328c42ae691632c5c7cdfe7a3a74a777273b0ba99d"
+      },
+      "sbom_creator.service": {
+        "path": "/app/src/sbom_creator/service.py",
+        "sha256": "529be291e6ba6be5c9caac541c0566fd9dac2e73c66b09cf4d311f8f03e9cfc8"
+      },
+      "sbom_creator.pipeline": {
+        "path": "/app/src/sbom_creator/pipeline.py",
+        "sha256": "0cb9da6f25d1be9888f5cc06be25be4998b79a146d857ae8a4fedcc741b0ef3d"
+      },
+      "sbom_creator.llm": {
+        "path": "/app/src/sbom_creator/llm.py",
+        "sha256": "00f386428afee245693136cf3b9049667859e31c0e6bffd294c87cf3c4d599de"
+      },
+      "sbom_creator.scanner": {
+        "path": "/app/src/sbom_creator/scanner.py",
+        "sha256": "8d7e9155ea49a35461ce67abb6db174edef98807290cf766a79330d9e20fe716"
+      }
+    },
+    "source_unchanged_during_test": true,
+    "container_command": [
+      "docker",
+      "run",
+      "--rm",
+      "-i",
+      "--network",
+      "none",
+      "--mount",
+      "type=bind,source=G:/code/sbom_creator/src,target=/app/src,readonly",
+      "--mount",
+      "type=bind,source=G:/code/sbom_creator/docs,target=/verification",
+      "--env",
+      "PYTHONPATH=/app/src",
+      "sbom-creator:0.1.0",
+      "python",
+      "-"
+    ],
+    "host_module_hashes_match": true
   }
 }

@@ -115,7 +115,7 @@
         <mxCell id="unknown" value="&lt;b&gt;Недостаточно доказательств&lt;/b&gt;&lt;br&gt;UNKNOWN → отчёт · неполнота" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="660" y="530" width="320" height="90" />
         </mxCell>
-        <mxCell id="score" value="&lt;b&gt;Порог модели&lt;/b&gt;&lt;br&gt;Предложение: TP &amp;gt;70" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="score" value="&lt;b&gt;Порог модели&lt;/b&gt;&lt;br&gt;Политика: TP &amp;gt;70" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="80" y="530" width="320" height="90" />
         </mxCell>
         <mxCell id="yes" value="&lt;b&gt;INCLUDE&lt;/b&gt;&lt;br&gt;Добавить подтверждённую запись" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">

@@ -14,7 +14,7 @@ import pytest
 
 from sbom_creator.acquire import Settings
 from sbom_creator.core import rules_assessor
-from sbom_creator.pipeline import ARTIFACTS, AnalysisError, publish_catalogs
+from sbom_creator.pipeline import ARTIFACTS, AnalysisError, analyze, analyze_local, publish_catalogs
 from sbom_creator.scanner import scan_source
 from sbom_creator.validation import validate_cyclonedx, validate_syft
 
@@ -139,3 +139,146 @@ def test_unfetched_checkout_content_marks_partial_with_no_unknown_candidates(rea
     assert "java-pom-cataloger" in coverage["source_catalogers"]
     provenance = json.loads((output / "provenance.json").read_text("utf-8"))
     assert provenance["assessment"]["mode"] == "rules"
+
+
+REMOTE_SETTINGS = Settings(bitbucket_hosts=("bitbucket.org",), registry_hosts=("registry.example",))
+REPOSITORY_URL = "https://bitbucket.org/workspace/project.git"
+COMMIT = "a" * 40
+IMAGE_REFERENCE = "registry.example/project:1"
+
+
+@pytest.mark.parametrize("remote", [False, True])
+def test_image_scan_failure_preserves_source_before_workspace_cleanup(tmp_path, monkeypatch, remote):
+    output = tmp_path / "failed-image"
+    source_path = tmp_path / "checkout"
+    source_path.mkdir()
+    source_document = {"artifacts": [{"id": "completed-source-observation"}]}
+    failed_workspaces = []
+
+    def scan_completed_source(checkout_path, destination, settings):
+        failed_workspaces.append(destination.parent)
+        destination.write_text(json.dumps(source_document), encoding="utf-8")
+        return source_document
+
+    def image_failure(*args):
+        raise RuntimeError("Bearer secret-from-registry-error")
+
+    def checkout_completed(url, commit, destination, settings):
+        destination.mkdir()
+        return {"repository_url": url, "commit": commit, "coverage": {"submodules_fetched": False}}
+
+    monkeypatch.setattr("sbom_creator.pipeline.scan_source", scan_completed_source)
+    monkeypatch.setattr("sbom_creator.pipeline.scan_image", image_failure)
+    monkeypatch.setattr("sbom_creator.pipeline.checkout", checkout_completed)
+    with pytest.raises(AnalysisError) as failure:
+        if remote:
+            analyze(REPOSITORY_URL, COMMIT, IMAGE_REFERENCE, output, REMOTE_SETTINGS, mode="rules")
+        else:
+            analyze_local(source_path, IMAGE_REFERENCE, output, REMOTE_SETTINGS, mode="rules")
+    assert failure.value.stage == "image_scan"
+    assert failure.value.error_type == "RuntimeError"
+    assert "secret-from-registry-error" not in str(failure.value)
+    diagnostics = tmp_path / "failed-image.diagnostics"
+    assert json.loads((diagnostics / "source.syft.json").read_text("utf-8")) == source_document
+    details = json.loads((diagnostics / "failure.json").read_text("utf-8"))
+    assert details == {"status": "failed", "stage": "image_scan", "error_type": "RuntimeError", "final_published": False}
+    provenance = json.loads((diagnostics / "provenance.json").read_text("utf-8"))
+    assert provenance["mode"] == "rules" and "git" in provenance
+    if remote:
+        assert provenance["git"]["commit"] == COMMIT
+    assert not output.exists()
+    assert not (diagnostics / "final.cdx.json").exists()
+    assert not (diagnostics / "image.syft.json").exists()
+    assert all(not path.exists() for path in failed_workspaces)
+    assert all("secret-from-registry-error" not in path.read_text("utf-8") for path in diagnostics.iterdir())
+
+
+@pytest.mark.parametrize("stage", ["configuration", "model_configuration", "checkout"])
+def test_early_remote_failures_save_sanitized_stage_without_publishing(tmp_path, monkeypatch, stage):
+    output = tmp_path / "early-failure"
+
+    def fail(*args, **kwargs):
+        raise ValueError("credential=do-not-record-this-secret")
+
+    settings = REMOTE_SETTINGS
+    if stage == "configuration":
+        monkeypatch.setattr(Settings, "from_env", fail)
+        settings = None
+    elif stage == "model_configuration":
+        monkeypatch.setattr("sbom_creator.pipeline.assessor_for", fail)
+    else:
+        monkeypatch.setattr("sbom_creator.pipeline.checkout", fail)
+    with pytest.raises(AnalysisError) as failure:
+        analyze(REPOSITORY_URL, COMMIT, IMAGE_REFERENCE, output, settings, mode="rules")
+    assert failure.value.stage == stage and failure.value.error_type == "ValueError"
+    diagnostics = tmp_path / "early-failure.diagnostics"
+    assert json.loads((diagnostics / "failure.json").read_text("utf-8"))["stage"] == stage
+    assert not output.exists()
+    assert {path.name for path in diagnostics.iterdir()} == {"failure.json", "provenance.json"}
+    assert all("do-not-record-this-secret" not in path.read_text("utf-8") for path in diagnostics.iterdir())
+
+
+def test_invalid_url_credentials_are_not_copied_to_failure_provenance(tmp_path):
+    output = tmp_path / "invalid-input"
+    with pytest.raises(AnalysisError) as failure:
+        analyze("https://user:input-secret@bitbucket.org/workspace/project.git", COMMIT,
+                IMAGE_REFERENCE, output, REMOTE_SETTINGS, mode="rules")
+    assert failure.value.stage == "input_validation"
+    diagnostics = tmp_path / "invalid-input.diagnostics"
+    assert all("input-secret" not in path.read_text("utf-8") for path in diagnostics.iterdir())
+    assert not output.exists()
+
+
+@pytest.mark.parametrize("remote", [False, True])
+def test_existing_output_is_preserved_before_any_configuration_or_acquisition(tmp_path, monkeypatch, remote):
+    output = tmp_path / "existing"
+    output.mkdir()
+    (output / "final.cdx.json").write_bytes(b"previous-verified-result")
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Existing output must fail before starting work")
+
+    monkeypatch.setattr(Settings, "from_env", forbidden)
+    with pytest.raises(FileExistsError):
+        if remote:
+            analyze(REPOSITORY_URL, COMMIT, IMAGE_REFERENCE, output, mode="rules")
+        else:
+            analyze_local(tmp_path, IMAGE_REFERENCE, output, mode="rules")
+    assert (output / "final.cdx.json").read_bytes() == b"previous-verified-result"
+    assert not (tmp_path / "existing.diagnostics").exists()
+
+
+def test_repeated_failure_preserves_first_attempt_without_stale_scans_in_second(tmp_path, monkeypatch):
+    source_path = tmp_path / "checkout"
+    source_path.mkdir()
+    output = tmp_path / "retry"
+    original_source = {"artifacts": [{"id": "first-attempt-source"}]}
+
+    def first_source(checkout_path, destination, settings):
+        destination.write_text(json.dumps(original_source), encoding="utf-8")
+        return original_source
+
+    def image_failure(*args):
+        raise RuntimeError("First image request failed")
+
+    monkeypatch.setattr("sbom_creator.pipeline.scan_source", first_source)
+    monkeypatch.setattr("sbom_creator.pipeline.scan_image", image_failure)
+    with pytest.raises(AnalysisError) as first:
+        analyze_local(source_path, IMAGE_REFERENCE, output, REMOTE_SETTINGS, mode="rules")
+    assert first.value.stage == "image_scan"
+    first_diagnostics = tmp_path / "retry.diagnostics"
+    original_files = {path.name: path.read_bytes() for path in first_diagnostics.iterdir()}
+
+    def second_source(*args):
+        raise OSError("Second source scan failed before producing output")
+
+    monkeypatch.setattr("sbom_creator.pipeline.scan_source", second_source)
+    with pytest.raises(AnalysisError) as second:
+        analyze_local(source_path, IMAGE_REFERENCE, output, REMOTE_SETTINGS, mode="rules")
+    assert second.value.stage == "source_scan"
+    siblings = list(tmp_path.glob("retry.diagnostics-*"))
+    assert len(siblings) == 1
+    assert {path.name: path.read_bytes() for path in first_diagnostics.iterdir()} == original_files
+    assert {path.name for path in siblings[0].iterdir()} == {"failure.json", "provenance.json"}
+    assert json.loads((siblings[0] / "failure.json").read_text("utf-8"))["stage"] == "source_scan"
+    assert not output.exists()

@@ -124,8 +124,9 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 | `provenance.json` | Commit, immutable image/config/digest, версии и hashes |
 | `summary.json` | Счётчики и статус валидации |
 
-Публикация атомарна, после проверки schemas и ссылок. При ошибке reconciliation
-рядом создаётся `<output>.diagnostics` с типом ошибки и исходными каталогами.
+Публикация атомарна, после проверки schemas и ссылок. При ошибке любого этапа
+рядом создаётся `<output>.diagnostics` со стадией, типом ошибки и уже полученными
+каталогами. Повторная ошибка сохраняется отдельно в `.diagnostics-<suffix>`.
 Сырые исключения, способные содержать credentials, не публикуются.
 Артефакты и Docker cache не удаляются автоматически.
 
@@ -157,6 +158,7 @@ ruff check src tests
 python benchmarks/run.py --help
 ```
 
+Результаты проверок и команды повторения: [verification.md](docs/verification.md).
 Тесты включают реальные Syft roundtrip при наличии бинарника, целостность CycloneDX,
 фильтрацию зависимостей, невалидные model responses, auth/allowlists и блокировку
 частичных результатов. Сведения о заимствованной основе: [THIRD_PARTY.md](THIRD_PARTY.md).

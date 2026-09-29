@@ -1,0 +1,73 @@
+{
+  "verified_date_local": "2026-09-30",
+  "scope": "installed Linux service registry scan; generated source fixture; no LLM",
+  "service_image_id": "sha256:faae38d7bcb44ff113df829e441d3d6225b16f323b3be0359be640ead246fe9a",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "source_count": 1,
+    "image_count": 16,
+    "selected_count": 16,
+    "final_count": 16,
+    "decisions": {
+      "INCLUDE": 16,
+      "UNKNOWN": 1
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.679
+  },
+  "image": {
+    "image": "docker.io/library/alpine:3.22",
+    "immutable_reference": "docker.io/library/alpine@sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
+    "image_digest": "sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
+    "platform_digest": "sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
+    "registry_digest": "sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
+    "acquisition": "registry",
+    "image_id": "sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764",
+    "requested_platform": "linux/amd64",
+    "image_config_digest": "sha256:c83674e1999044d33d751661371b873539f47e5b5c5ca3320c7e0377acca6238",
+    "platform": "linux/amd64",
+    "repo_digests": [
+      "alpine@sha256:3e9b4b680bfc9fb5269227cffbd6d42be39fbf7c0b908123913864aa4447e764"
+    ],
+    "archive_sha256": "eb0788734943c1b5f559a2c04a1df9c685d8cb11a23fbbea3096b4f288f544fa",
+    "syft_version": "1.51.1",
+    "scope": "squashed",
+    "container_started": false,
+    "build_link": "unverified"
+  },
+  "artifact_path": "workspace/linux-installed-smoke-v2",
+  "artifacts_sha256": {
+    "coverage.json": "591fd41202760519f517d2f426f14105367c87ff84f367e7da095ee088927c91",
+    "decisions.json": "fa01df9c0e4be223fd5d66d513f847a1e1f5e04a1915d63dafc4280391f2b44a",
+    "final.cdx.json": "d265ac9a53a5fd708c2551517f61caa02425c148938f51607ee85ce79073029f",
+    "image.syft.json": "d281862a1d72c2be1161051ab30505cddbd4aa8444941d555dde33e5dcf6214a",
+    "provenance.json": "da9e75634bd4829069d7d68ada85d207c149dc040bc32f23d07778c0b1863f71",
+    "selected.syft.json": "d281862a1d72c2be1161051ab30505cddbd4aa8444941d555dde33e5dcf6214a",
+    "source.syft.json": "5218630d2f4f44a11723498ed3bb9343f2ee3a793bbc97f4b1539d7c7b7f4b6e",
+    "summary.json": "9e7b4b11a52c0a961aa3c048de5652b2cf55127a1b6911ee0c923099c4b1fde0"
+  },
+  "wheel": {
+    "path": "dist/sbom_creator-0.1.0-py3-none-any.whl",
+    "sha256": "d66b8804228652c04461d95b6891e91608242ae27bc5c92274db653eceac7c00",
+    "schemas": [
+      "sbom_creator/schemas/bom-1.6.schema.json",
+      "sbom_creator/schemas/jsf-0.82.schema.json",
+      "sbom_creator/schemas/spdx.schema.json",
+      "sbom_creator/schemas/syft-16.1.10.json"
+    ],
+    "source_modules_verified": [
+      "acquire.py",
+      "cli.py",
+      "core.py",
+      "exporter.py",
+      "llm.py",
+      "pipeline.py",
+      "scanner.py",
+      "service.py",
+      "validation.py",
+      "__init__.py",
+      "__main__.py"
+    ]
+  }
+}

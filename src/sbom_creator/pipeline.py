@@ -1,9 +1,11 @@
 """Validated, atomic publication of a single source/image analysis."""
 import hashlib
 import json
+import shutil
 import tempfile
 import time
 from collections import Counter
+from contextlib import contextmanager
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -38,9 +40,40 @@ class AnalysisError(RuntimeError):
 
 def diagnostic(output, stage, error):
     target = Path(output).resolve().with_name(Path(output).name + ".diagnostics")
-    target.mkdir(parents=True, exist_ok=True)
+    try:
+        target.mkdir(parents=True)
+    except FileExistsError:
+        # A retry must neither replace earlier evidence nor attach its old scans
+        # to a newer error. mkdtemp also makes concurrent failure paths distinct.
+        target = Path(tempfile.mkdtemp(prefix=target.name + "-", dir=target.parent))
     write_json(target / "failure.json", {"status": "failed", "stage": stage,
                "error_type": type(error).__name__, "final_published": False})
+    return target
+
+
+@contextmanager
+def analysis_workspace(output):
+    """Preserve completed scans before cleanup, and expose only safe error fields."""
+    destination = Path(output).resolve()
+    if destination.exists():
+        raise FileExistsError("Output directory already exists; choose a new analysis path")
+    with tempfile.TemporaryDirectory(prefix="sbom-job-") as temporary:
+        work = Path(temporary)
+        state = {"work": work, "stage": "configuration", "provenance": {}}
+        try:
+            yield state
+        except AnalysisError:
+            # Publication already preserved both input catalogs and its own stage.
+            raise
+        except Exception as error:
+            if isinstance(error, FileExistsError) and destination.exists():
+                raise
+            target = diagnostic(destination, state["stage"], error)
+            for name in ("source.syft.json", "image.syft.json"):
+                if (work / name).is_file():
+                    shutil.copyfile(work / name, target / name)
+            write_json(target / "provenance.json", state["provenance"])
+            raise AnalysisError(state["stage"], type(error).__name__) from None
 
 
 def write_json(path, data):
@@ -153,8 +186,7 @@ def publish_catalogs(source, image, output, settings, assessor, provenance=None)
     except FileExistsError:
         raise
     except Exception as error:  # noqa: BLE001 -- safe diagnostic boundary
-        diagnostic(output, "reconcile_convert_validate", error)
-        target = Path(output).resolve().with_name(Path(output).name + ".diagnostics")
+        target = diagnostic(output, "reconcile_convert_validate", error)
         write_json(target / "source.syft.json", source)
         write_json(target / "image.syft.json", image)
         write_json(target / "provenance.json", provenance or {})
@@ -162,10 +194,13 @@ def publish_catalogs(source, image, output, settings, assessor, provenance=None)
 
 
 def analyze_local(source_path, image_reference, output, settings=None, mode="llm"):
-    settings = settings or Settings.from_env()
-    assessor = assessor_for(mode)  # Fail before network/scanning if model is unconfigured.
-    with tempfile.TemporaryDirectory(prefix="sbom-local-") as temporary:
-        work = Path(temporary)
+    with analysis_workspace(output) as state:
+        work = state["work"]
+        settings = settings or Settings.from_env()
+        state["stage"] = "model_configuration"
+        assessor = assessor_for(mode)  # Fail before network/scanning if model is unconfigured.
+        state["provenance"] = {"mode": mode, "source_kind": "local-checkout"}
+        state["stage"] = "source_inspection"
         checkout_path = Path(source_path).resolve()
         source_coverage = inspect_checkout(checkout_path, settings)
         git_provenance = {"coverage": source_coverage, "commit": None, "source_kind": "local-directory"}
@@ -175,23 +210,34 @@ def analyze_local(source_path, image_reference, output, settings=None, mode="llm
                                  max_output_bytes=4096, label="Local Git revision")
             git_provenance.update(commit=validate_commit(commit.strip()), source_kind="local-checkout",
                                   commit_verification="HEAD only; local modifications not verified")
+        state["provenance"].update(source_coverage=source_coverage, git=git_provenance)
+        state["stage"] = "source_scan"
         source = scan_source(checkout_path, work / "source.syft.json", settings)
+        state["stage"] = "image_scan"
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
-        return publish_catalogs(source, image, output, settings, assessor,
-                                {"mode": mode, "source_kind": "local-checkout",
-                                 "source_coverage": source_coverage,
-                                 "git": git_provenance,
-                                 "image": image_provenance})
+        state["provenance"]["image"] = image_provenance
+        state["stage"] = "publication"
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"])
 
 
 def analyze(repository_url, commit, image_reference, output, settings=None, mode="llm"):
-    settings = settings or Settings.from_env()
-    validate_inputs(repository_url, commit, image_reference, settings)
-    assessor = assessor_for(mode)
-    with tempfile.TemporaryDirectory(prefix="sbom-job-") as temporary:
-        work = Path(temporary)
+    with analysis_workspace(output) as state:
+        work = state["work"]
+        settings = settings or Settings.from_env()
+        state["stage"] = "input_validation"
+        validate_inputs(repository_url, commit, image_reference, settings)
+        # Input validation excludes embedded credentials before recording requests.
+        state["provenance"] = {"mode": mode, "request": {"repository_url": repository_url,
+                                 "commit": commit, "image": image_reference}}
+        state["stage"] = "model_configuration"
+        assessor = assessor_for(mode)
+        state["stage"] = "checkout"
         git_provenance = checkout(repository_url, commit, work / "checkout", settings)
+        state["provenance"]["git"] = git_provenance
+        state["stage"] = "source_scan"
         source = scan_source(work / "checkout", work / "source.syft.json", settings)
+        state["stage"] = "image_scan"
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
-        return publish_catalogs(source, image, output, settings, assessor,
-                                {"mode": mode, "git": git_provenance, "image": image_provenance})
+        state["provenance"]["image"] = image_provenance
+        state["stage"] = "publication"
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"])
