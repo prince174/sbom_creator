@@ -1,0 +1,796 @@
+{
+  "passed": true,
+  "repositories": 60,
+  "report_sha256": "b1db701eb803fc3462d03ac0aef5a7dcf5c900dbae534a69385c8703f9e75156",
+  "counts": {
+    "non_os": 4165,
+    "os": 6090,
+    "full": 10255
+  },
+  "rows": [
+    {
+      "id": "java-commons-lang",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-lang",
+      "sha256": {
+        "final.cdx.json": "758e9d69bfa3be6c65a989c486ae947c4057a0c551b2f7de3d7b6fbbb7e14d3d",
+        "full.cdx.json": "9cf76cd165dfd040ba603cfad4b8356aaec2fcc8968535237572f422a848a618",
+        "os.cdx.json": "e15cafacdef37c73ee2b9d2f451e1fee46f4e1e45fbbe77ccfcfe9b2e5441648"
+      }
+    },
+    {
+      "id": "java-commons-io",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-io",
+      "sha256": {
+        "final.cdx.json": "ad685db34696d6f60dc5921e5524de43c34b1e20363ca07e4edd1325636db50d",
+        "full.cdx.json": "b604379c62fde0567220e159d679dad028f9f99ed80ce3da5483f1154b00cf35",
+        "os.cdx.json": "82283118224f504b8a2ceebeeeab5f4ab6b40d4e9626e395be2ea4da0bbf4b19"
+      }
+    },
+    {
+      "id": "java-commons-codec",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-codec",
+      "sha256": {
+        "final.cdx.json": "711e8a7af91faebaef92ec4734ed42be003f577297f1a79d0869d3c0220a1592",
+        "full.cdx.json": "d76a20fcb63a9610a1af77b2611b641e64a949aa89242f939ce309a16093a794",
+        "os.cdx.json": "9578dd5a38504315f7e57bcfd7b981032aed5b8ee46ab1f693e5fc2a626e8585"
+      }
+    },
+    {
+      "id": "java-commons-text",
+      "language": "Java",
+      "non_os": 4,
+      "os": 143,
+      "full": 147,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-text",
+      "sha256": {
+        "final.cdx.json": "c361947611af7781f8b94a951f89e5aab1ef24294ef528a7408545e0bbd8a57b",
+        "full.cdx.json": "0b610599515ab7ddefd5efa9250246e49b79e9f36428e8d3842f6ce3c688a672",
+        "os.cdx.json": "830764592c7427f29bb557bf5f95ff063fc241923472bc9bb26a29a87286c154"
+      }
+    },
+    {
+      "id": "java-commons-csv",
+      "language": "Java",
+      "non_os": 5,
+      "os": 143,
+      "full": 148,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-csv",
+      "sha256": {
+        "final.cdx.json": "a10b9b1d1865c42bf603dd054a214f15ae6daa8e960d182741c8d592ae1e4828",
+        "full.cdx.json": "4ff3b14c607fc52af58cebb3fffd5365b65040d03e937a2f6142389befdba44f",
+        "os.cdx.json": "2c4b370a395a0b966104fc9fd2454eb226beba836b1bcd68a916f7df5a7f09b3"
+      }
+    },
+    {
+      "id": "java-commons-compress",
+      "language": "Java",
+      "non_os": 10,
+      "os": 143,
+      "full": 153,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-compress",
+      "sha256": {
+        "final.cdx.json": "c1bc33bf3e061da9ef61cf0a5fd816bf862a51b39b286e97fe8b5fe28dfd5db6",
+        "full.cdx.json": "8440462a862275cbfab79fd2f3cc8ff73535a27b67066b053615ac8782b2be2e",
+        "os.cdx.json": "502f7e7ec6f70e6cf65c6ca72abe0fabfdf504c625fdcbdd584c0d5f8875f4ef"
+      }
+    },
+    {
+      "id": "java-gson",
+      "language": "Java",
+      "non_os": 4,
+      "os": 143,
+      "full": 147,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-gson",
+      "sha256": {
+        "final.cdx.json": "e226c5fea87773e57c804b2d3065afdb4399720b6361262a067f002dc7de8b25",
+        "full.cdx.json": "2e42326184b9b521aeeceefcada79de3d32e278f130f960fc950edeccc34a8ae",
+        "os.cdx.json": "6b2c16e5bf76e4bed6d9b8e7c8d50fbe0999efe5c0119e2b090fc5a15d0b3781"
+      }
+    },
+    {
+      "id": "java-jsoup",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-jsoup",
+      "sha256": {
+        "final.cdx.json": "caa10590a39e9fd6ba7f4ab244c28d087922126e321ad85d57ac62753ecea125",
+        "full.cdx.json": "716b27ea74be5c7d4fd0b49fa501fdd8dbefc6e300bb74ffb2efb3e598b79628",
+        "os.cdx.json": "c43841b39edca973422deaf8fda9fedab5a6294122dba7d9ddef1ae7cb37e533"
+      }
+    },
+    {
+      "id": "java-slf4j",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-slf4j",
+      "sha256": {
+        "final.cdx.json": "282693073e2849d79d7c9eb5a04966a1f6c1ae7a31b5125781f31e29a2efd627",
+        "full.cdx.json": "07f771eaccdc73be01034927b29aeeac6e5de0b06c5621f04942e6bff33e2b41",
+        "os.cdx.json": "bd6f4dec39ec05ee89d6c33c7b37c500290d79579b5f492f2ba34301420b9b1b"
+      }
+    },
+    {
+      "id": "java-commons-cli",
+      "language": "Java",
+      "non_os": 3,
+      "os": 143,
+      "full": 146,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\java-commons-cli",
+      "sha256": {
+        "final.cdx.json": "01819b743f7567f9f73e2dff115d449bfc7ac2ac0a2306b3d36fa9686ae2aa27",
+        "full.cdx.json": "6d31171e76ac60cbd76645299de778645ed5a79fa060fa249ee3256947aef683",
+        "os.cdx.json": "1f04b8f1ada25b5c4646f30debc4ed7e777ca20202f7d63222126fd0e7712019"
+      }
+    },
+    {
+      "id": "javascript-lodash",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-lodash",
+      "sha256": {
+        "final.cdx.json": "7082313a0026a40fbdf31269de987c99109779379f5ca9466396ae96c69a22b0",
+        "full.cdx.json": "636f5651d9e94834d1ba2f4ca1becfa2054023149762ed6405b133f7c44429db",
+        "os.cdx.json": "97c076b6f585d7de97101174af39f54e655b20838fdbd93564b453220365239b"
+      }
+    },
+    {
+      "id": "javascript-express",
+      "language": "JavaScript",
+      "non_os": 267,
+      "os": 89,
+      "full": 356,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-express",
+      "sha256": {
+        "final.cdx.json": "9efcb625a089a15537032e706a5a3faae39551acc0ce347fa4b7b7d180b3285e",
+        "full.cdx.json": "b944fdeb657d39eced9b56e1967c6222b34b6496878628d873a44125d1ce03ac",
+        "os.cdx.json": "9c3a6877be9af03be315e7bb34564d36e46dfe73e08c582152fc8e8cf18d7564"
+      }
+    },
+    {
+      "id": "javascript-axios",
+      "language": "JavaScript",
+      "non_os": 214,
+      "os": 89,
+      "full": 303,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-axios",
+      "sha256": {
+        "final.cdx.json": "9ac7b7bc39b82083a29acb4b0eb34b52b41072175c75705ef34d7e2c85c03903",
+        "full.cdx.json": "b26bc37992d6b2c31ad09c0cee4f46a06aab59d083da99eb4b0cb3df2c6546b7",
+        "os.cdx.json": "f3de56f96642437e894708b027ded8c8e64e1f12082bf4215e94141e475bc726"
+      }
+    },
+    {
+      "id": "javascript-debug",
+      "language": "JavaScript",
+      "non_os": 200,
+      "os": 89,
+      "full": 289,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-debug",
+      "sha256": {
+        "final.cdx.json": "8590e2c8abbd1d8b3c5374331499414896b25c4ebe5c4118fe5c48b54b402914",
+        "full.cdx.json": "1cb8754340fe6068455d9c554fb5fe71bcba3e30a7c8d0bea0d536513c42b84c",
+        "os.cdx.json": "5d15eb118e6d64cfea2f16186a923b2744b55d32ddf1a9d10206436937e10c7b"
+      }
+    },
+    {
+      "id": "javascript-ms",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-ms",
+      "sha256": {
+        "final.cdx.json": "95b29f3b0d468e51147df02be6f0ea0c322e6a74ffe2622251ab53e40a030707",
+        "full.cdx.json": "04801a32fd03a9151c92be3fb8f41690597292abbf1752ca922a9700e03d6ea6",
+        "os.cdx.json": "8cf51629426eb0c011b9bba93e27f52473c06b43c35cd11353101cf36180bae3"
+      }
+    },
+    {
+      "id": "javascript-chalk",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-chalk",
+      "sha256": {
+        "final.cdx.json": "e1883c84cd19a0b6852e38303ac30b06ec1c3ffea308d1bb07fdefc9e32035e3",
+        "full.cdx.json": "8d62e7f89b2024cc250554b82d5195031848ba54935e8fea5aad6f32a1914764",
+        "os.cdx.json": "a174e8aee11e6207ee01ca6883671db75434a7331fb39741c6d152cc26fca502"
+      }
+    },
+    {
+      "id": "javascript-commander-js",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-commander-js",
+      "sha256": {
+        "final.cdx.json": "59c8f6608c0bbac3662b0433ed95487360602de8f27b6e990102cf053153d34a",
+        "full.cdx.json": "8e6faf00aa170b7ae665b9259eca316b702b7fa2d3e01c63a5b252b120622a78",
+        "os.cdx.json": "4f9ebf7189aed21ea1caa43a51f09c40ddb2881bdee336fd73a85ce8815e7a2f"
+      }
+    },
+    {
+      "id": "javascript-minimist",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-minimist",
+      "sha256": {
+        "final.cdx.json": "4aebb24201075a602c8dd6f0fcf6f0cfa98c7c47f6af28051977d04a65ed42cb",
+        "full.cdx.json": "4c7f69b5e9fce99290cf5fe2ed4dd721154d07007d79ebdadba011d06b737531",
+        "os.cdx.json": "d7f3f8820d5f9032435f27a0796350b2ef077a578241b686f0f158b3b54ff518"
+      }
+    },
+    {
+      "id": "javascript-is-number",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-is-number",
+      "sha256": {
+        "final.cdx.json": "756cfd362105d7702e1723e4b5448e8c151dc2c26b94f2729beaa86d273a9073",
+        "full.cdx.json": "c5b02950b973f52be83dd9875177a834f94d6242d95fb8ce760a83889dc52a98",
+        "os.cdx.json": "6c3d2d9ec1f3eef0ebc01fc840b956a8d2519145d43a30e17c1262b61266aa93"
+      }
+    },
+    {
+      "id": "javascript-isarray",
+      "language": "JavaScript",
+      "non_os": 199,
+      "os": 89,
+      "full": 288,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\javascript-isarray",
+      "sha256": {
+        "final.cdx.json": "f87ff6b8138609fa831c9f48d64fbf3b6be3eede53e7fe33911490833e04b928",
+        "full.cdx.json": "bcc680d4a0d6d62a73dff0ca1bb862d91b378cc55c81fb14f1711ea00c5ad04a",
+        "os.cdx.json": "d47edd81de3c3d34a496df789a41b66de7fdaf0c2380268f0e5f88134ff51612"
+      }
+    },
+    {
+      "id": "bitbucket-python-service",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\bitbucket-python-service",
+      "sha256": {
+        "final.cdx.json": "d212fd1bd5e143fee4a27c20bd9fc639c4f567781a089c8440d0a4d3649ada0c",
+        "full.cdx.json": "fe4c7842b2afa0930ae291c1e1a383ff32f2e661d86d6cf1f66143102fac062e",
+        "os.cdx.json": "7356df1b56dcd303e2df31ad2542ca56a4c819e1cc4de9e8ce1600e73ff41eb4"
+      }
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\bitbucket-python-jobs",
+      "sha256": {
+        "final.cdx.json": "916215b5da381f22c1248b3cd98a8ab38bc10fcd4618b8455ee9a4c673575ef8",
+        "full.cdx.json": "583ca22d279a55f1701e33c0655eb2c36a4855abb0445c2ac444c6d34353630e",
+        "os.cdx.json": "70e3aaa40fb6068216062f32134fa7fe45aa70c2a9c1bb691c1b271b6952d068"
+      }
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "language": "Python",
+      "non_os": 7,
+      "os": 106,
+      "full": 113,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\bitbucket-lab-python",
+      "sha256": {
+        "final.cdx.json": "3a692f5cd14dee9bc3e02d2ade5124a5d393a8a52f4ea3c99b0f2d0a2adf3622",
+        "full.cdx.json": "59223c5e20c896687bf2bdfa077f476d7b34407579a3f94ef64668b896de342f",
+        "os.cdx.json": "ab2fb4e6b28cfe5e9e3d7a4ccf883a71c0cdc7532d09c03dc078e7765e386f68"
+      }
+    },
+    {
+      "id": "python-flask",
+      "language": "Python",
+      "non_os": 14,
+      "os": 106,
+      "full": 120,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-flask",
+      "sha256": {
+        "final.cdx.json": "4cd3c820c8c308763ab57efb7051728a47c9cc0469e8a4fe57b67c4e18c6c0c9",
+        "full.cdx.json": "6f796c7ee94da5bd14a661b7f92b56fa60c4f3d3f2b88c0fa48bf47b41795b1c",
+        "os.cdx.json": "0640c0ee2c7b7177092e773eb87510826b8ef4a118e100ce251d6bbd537506f8"
+      }
+    },
+    {
+      "id": "python-jinja",
+      "language": "Python",
+      "non_os": 9,
+      "os": 106,
+      "full": 115,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-jinja",
+      "sha256": {
+        "final.cdx.json": "ec1ea1048313de23f134483053c19996eaba062c12b14f211397c65d0f948840",
+        "full.cdx.json": "174e5b3e02ee19da5eec57e0bdec7fe403b76f4198ab93ad4399a699167f66b0",
+        "os.cdx.json": "4eaac95996c395f83c3f99229f5f86c72dea213e86e6a004539046e9ee3cbddb"
+      }
+    },
+    {
+      "id": "python-werkzeug",
+      "language": "Python",
+      "non_os": 9,
+      "os": 106,
+      "full": 115,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-werkzeug",
+      "sha256": {
+        "final.cdx.json": "8e48066aec1f398dca49dfe6ca7e592675fce668e75bedc24459818c588a8259",
+        "full.cdx.json": "fc80e0e9f2e3fe4bea8acffa8cd86fa992fb4fbd7e31749ad8a5a667ad32deac",
+        "os.cdx.json": "50efdee3f1c4075207484454da3ec4f280f33d2fb8f67692b114859849fa39ab"
+      }
+    },
+    {
+      "id": "python-itsdangerous",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-itsdangerous",
+      "sha256": {
+        "final.cdx.json": "26525ee26ac9db0d5e9704345319c837698487ce7b19707ca3faef6bb7086408",
+        "full.cdx.json": "1e1bd58f3e6236817bbd49499bc9e056f4901c2c3b0a270c7e579d950e6cd04c",
+        "os.cdx.json": "db00429d1769c3e90b4a22d088e5e3fe7553c030eef0242bd4a1e10a8840c7e9"
+      }
+    },
+    {
+      "id": "python-attrs",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-attrs",
+      "sha256": {
+        "final.cdx.json": "e11f95ed6760acada534bc31693e4f1478e58570d622c64e7117d1d45183aa8d",
+        "full.cdx.json": "53e047796c121a0e23b85d57d55618a5cb58d3326e86d0d37b01946ac140f102",
+        "os.cdx.json": "09d931d591a83fce32b1f9820c57ac6206cef370ac3d6bd13a5ab3433cdb1e30"
+      }
+    },
+    {
+      "id": "python-packaging",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-packaging",
+      "sha256": {
+        "final.cdx.json": "c5506fad1e18fdda89d8dfb2044f339a8739d75909963177de3c722e2d9b5dff",
+        "full.cdx.json": "807f7e08167f41f62f7e9b0e7d3e252a776e037d516f502fb43e5d65b2dd34c2",
+        "os.cdx.json": "b75d6db3f089606ff648615c4da1057eb4995302c245216b9d7623af616c37d5"
+      }
+    },
+    {
+      "id": "python-python-certifi",
+      "language": "Python",
+      "non_os": 8,
+      "os": 106,
+      "full": 114,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\python-python-certifi",
+      "sha256": {
+        "final.cdx.json": "28f8c5198859569303b0c483230d82e9f1d8a8d0e48408e62ee345364a3f9322",
+        "full.cdx.json": "b61788f7c17c09e7abd16c3c723272129d9b9c8ca515caa2e004c0dc2aac4ec6",
+        "os.cdx.json": "a1b6fc2dfeb345c0c42f50a7940bc0d896defcd727232d39da943d3098c50eea"
+      }
+    },
+    {
+      "id": "rust-ripgrep",
+      "language": "Rust",
+      "non_os": 33,
+      "os": 89,
+      "full": 122,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-ripgrep",
+      "sha256": {
+        "final.cdx.json": "8ea3bd53432d17487127cb28d6f9a49583ec69a2fcd0cddb5b082cf309f08bf9",
+        "full.cdx.json": "82f0a20ed435c8c00735f258da0a3cccf9571ff811a22a910bcd24118da633a4",
+        "os.cdx.json": "64696a2d3ac913b7d2eb1d581a70b0fcd1ccaf9df467c89eba7e6df679ada6de"
+      }
+    },
+    {
+      "id": "rust-fd",
+      "language": "Rust",
+      "non_os": 61,
+      "os": 89,
+      "full": 150,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-fd",
+      "sha256": {
+        "final.cdx.json": "9ce43c44d9086cf7dfe2737bafc758c7203c93a0b22a32d86507cb6916819956",
+        "full.cdx.json": "5fb73fab2523a78fdd432a898763906cf01f3e527b4483d44a020db5dacb2132",
+        "os.cdx.json": "3c16fc4ccea5667c6c0696cfb14c651ce0d63b67ec472bf1cf343b01e5759681"
+      }
+    },
+    {
+      "id": "rust-bat",
+      "language": "Rust",
+      "non_os": 106,
+      "os": 89,
+      "full": 195,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-bat",
+      "sha256": {
+        "final.cdx.json": "513ec69e88a46b38df20ddf21acab55f027d8bd9671839738188c0ec0e47cc1b",
+        "full.cdx.json": "ca6fe8565b3f4eea28d686660334848484b1bcedae5797c8e731de370f4ab9e9",
+        "os.cdx.json": "a05cec1597bebc8faa8fde05167e4dbe340e547e6ad1b203e6dc207e9f3882c5"
+      }
+    },
+    {
+      "id": "rust-dust",
+      "language": "Rust",
+      "non_os": 59,
+      "os": 89,
+      "full": 148,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-dust",
+      "sha256": {
+        "final.cdx.json": "ad0aaddcc3da5cda0cec04dff940f41e926738bfd9a4d809a4304ced217c9e06",
+        "full.cdx.json": "fd5195fceb974d8152c52ab4925f023a4339acde7021bd1018e8efe84158110c",
+        "os.cdx.json": "33e04230d17db86698a1c6593ed841eb83b4e86b1e5e9ee5e00fa8d16f99682b"
+      }
+    },
+    {
+      "id": "rust-bottom",
+      "language": "Rust",
+      "non_os": 111,
+      "os": 89,
+      "full": 200,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-bottom",
+      "sha256": {
+        "final.cdx.json": "a615922f6da1c35478f628aec7ab4b79de136a02aa8308fccd3085a16d69b652",
+        "full.cdx.json": "a84e0bfd4e1ceb694073e609b0b257fdb0814664eaf5999f80fe2005052c89ba",
+        "os.cdx.json": "675b0be1a341bfcb5ff3a5ca3a8fffbfeb1871cf669913ffc8d58162dc7959ba"
+      }
+    },
+    {
+      "id": "rust-tokei",
+      "language": "Rust",
+      "non_os": 68,
+      "os": 89,
+      "full": 157,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-tokei",
+      "sha256": {
+        "final.cdx.json": "4f907ab7685f2c6ec9efd9171313cb5cd5084e6c49251b11f95d5f30c41fbbf8",
+        "full.cdx.json": "3a24f3710fbb1995a5a16b69a352b2d18cb80789406663c8b149300849fddf00",
+        "os.cdx.json": "6069cad50ef77dd2929f55c31e714cf8cd830edc4e168c3764b8ce4fc7ca1256"
+      }
+    },
+    {
+      "id": "rust-hyperfine",
+      "language": "Rust",
+      "non_os": 102,
+      "os": 89,
+      "full": 191,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-hyperfine",
+      "sha256": {
+        "final.cdx.json": "af9d20526d446c415dc9dc28bd14f251cf1ea61805c0a723335a541c7c470e4c",
+        "full.cdx.json": "4e74b28aa8bf4bb76db5efa83eec032ffd1345ea495d8ac962a27f7d4b5c23e0",
+        "os.cdx.json": "3ee6b02de00a0938746e501108ed535c7dcc0bad1559ae4bb511d423b88d4181"
+      }
+    },
+    {
+      "id": "rust-eza",
+      "language": "Rust",
+      "non_os": 117,
+      "os": 89,
+      "full": 206,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-eza",
+      "sha256": {
+        "final.cdx.json": "f153c375bc20e0376c5dfd24bad32aa1d7a0427af677eb73004089599491f9cd",
+        "full.cdx.json": "220c55cb525581257e83577fc751837a17587f4c931dddcb590c13a0888f878a",
+        "os.cdx.json": "d669054d3a67b76c2ac9b4f9fd474b9d9a1ac2134b65e9a11c8eb01f0ee12339"
+      }
+    },
+    {
+      "id": "rust-zoxide",
+      "language": "Rust",
+      "non_os": 65,
+      "os": 89,
+      "full": 154,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-zoxide",
+      "sha256": {
+        "final.cdx.json": "6ab77825969b7d5b6e8d3de8fd0b4ac5cdeeb23ba57c3ba1fa875a03b9e7c18c",
+        "full.cdx.json": "fe8faae2a5c55e0a73c099d807f26e81a8c6b53efca75af8806366e9c4351a22",
+        "os.cdx.json": "bc1c46595fa488e6283e0e65806c41f9369f354f0d3195198645684e0e02c2ef"
+      }
+    },
+    {
+      "id": "rust-delta",
+      "language": "Rust",
+      "non_os": 135,
+      "os": 89,
+      "full": 224,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\rust-delta",
+      "sha256": {
+        "final.cdx.json": "faf8b39eae5ed56bbac122d10f505ca677234d30f6d58417c5ec0a5608967704",
+        "full.cdx.json": "982d41cd64b6adea019b81a7de6f6b8a496fca6b1d5e794672ca4631fc65a815",
+        "os.cdx.json": "dade6423a550c3f92027ad2adf45255d8e220ce27da81422959e4f2f97ccfae6"
+      }
+    },
+    {
+      "id": "go-hey",
+      "language": "Go",
+      "non_os": 4,
+      "os": 89,
+      "full": 93,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-hey",
+      "sha256": {
+        "final.cdx.json": "57fec09236e3a42ced33564408aa04ae8ae66193dbf6f7077e7176954dc3e9fe",
+        "full.cdx.json": "48501f6febcfdbd301f690e17b9ea19b657143635a821bebaa6f676d5f58fc72",
+        "os.cdx.json": "57ba9b9df5a053f722dd284bad11ba58f8b568654b3e61a918567672a0b64d81"
+      }
+    },
+    {
+      "id": "go-assetfinder",
+      "language": "Go",
+      "non_os": 1,
+      "os": 89,
+      "full": 90,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-assetfinder",
+      "sha256": {
+        "final.cdx.json": "8fdedb4679fc0cdc4c4503ac52927f19b3c2fd2301a94eee5403756e0e230395",
+        "full.cdx.json": "d0d60478613c6d24c0377cf2b9eca37306abd345d132cfd60cf6ac1e6f6d8fbe",
+        "os.cdx.json": "40968f9f40afdd5f4aae6d414d5d687120cb4401ed0cc786f7f8e1ffe66084a9"
+      }
+    },
+    {
+      "id": "go-httprobe",
+      "language": "Go",
+      "non_os": 2,
+      "os": 89,
+      "full": 91,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-httprobe",
+      "sha256": {
+        "final.cdx.json": "0ff7c78a5f5a32003a3b9b3fc18c9aba0f16ecdd163cb6a8f6d9fd075d02ea91",
+        "full.cdx.json": "cadb6c1f230f288b724b5e19ac80b3bea13bb412cf0c2032b988c8f9a9c34338",
+        "os.cdx.json": "99756534ad0f92221d9546d30d7df7836ba6e695fb359d83cea1b58abdf634f1"
+      }
+    },
+    {
+      "id": "go-waybackurls",
+      "language": "Go",
+      "non_os": 2,
+      "os": 89,
+      "full": 91,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-waybackurls",
+      "sha256": {
+        "final.cdx.json": "38cb56abcd492a7c568f3047db300cae1d462c09b7ac7f238c05fa8b632bb1d4",
+        "full.cdx.json": "9ef315e214df4e5c18828a15975fae20361465fd7496431ae650eae99fb6f6ec",
+        "os.cdx.json": "2ff97ccac7d1fdb5c8a5a23b212944b60b5ea7318c46b571b2d7f437a7a846f1"
+      }
+    },
+    {
+      "id": "go-unfurl",
+      "language": "Go",
+      "non_os": 3,
+      "os": 89,
+      "full": 92,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-unfurl",
+      "sha256": {
+        "final.cdx.json": "c003d7c40c0671f39eab007f8c56337f14b70876ca1d146d993880b81d03c518",
+        "full.cdx.json": "3f386d065d513c6d77390e892f768107322b88c301b4a0d4018629acdaf89295",
+        "os.cdx.json": "dc32e8b47e6c6bc89c43b5127ed699cd6ff3dfe0b7965e0d3e4e03f9654cbe1c"
+      }
+    },
+    {
+      "id": "go-yq",
+      "language": "Go",
+      "non_os": 22,
+      "os": 89,
+      "full": 111,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-yq",
+      "sha256": {
+        "final.cdx.json": "746090e308135cb70ca9ce6bb6c363e6d3abe48ab9b43829923d521216bb4345",
+        "full.cdx.json": "296c56bc728b70cbde2a425a423de09c5125875947800c425902cad71cd38fdc",
+        "os.cdx.json": "f2063a90b3fa0a0d5afe891509058eded0a78a1d4689e3badcd69f7f2b421c7a"
+      }
+    },
+    {
+      "id": "go-lazygit",
+      "language": "Go",
+      "non_os": 63,
+      "os": 89,
+      "full": 152,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-lazygit",
+      "sha256": {
+        "final.cdx.json": "2b4e7ae6b9e7d7e4d7049c54d1621d00d7ed3e12ef9ffea590a550753333b51c",
+        "full.cdx.json": "db2fb3ce6acc03a891daea9ab7813b449bc2cb8702bdeeee75ad03b93332a636",
+        "os.cdx.json": "a22b340f145c91f39bedd15a35e2c0ae1d5b373b8c896d07219c71cc87a6cbde"
+      }
+    },
+    {
+      "id": "go-glow",
+      "language": "Go",
+      "non_os": 61,
+      "os": 89,
+      "full": 150,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-glow",
+      "sha256": {
+        "final.cdx.json": "045028e7fb52b6d27112a57a8f6ce12c44ece013e4594b83267aef810fe52166",
+        "full.cdx.json": "82f30e1865c465c7df390b803ae36892fca9b7e9ce6a853440e6249ff1119c36",
+        "os.cdx.json": "bf5ed07272dc2884f137c2729e257004ea3cf42297d31a530aa8c7eb87da2fb1"
+      }
+    },
+    {
+      "id": "go-scc",
+      "language": "Go",
+      "non_os": 16,
+      "os": 89,
+      "full": 105,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-scc",
+      "sha256": {
+        "final.cdx.json": "d3612fbffc6ca52fd62e6d64e1a893291cc77f85080164a555c0e8309a0b15ac",
+        "full.cdx.json": "ba950fcec46a72e05475137395dc9d7751641e9bf1d4b1995f676cd1524bfc0a",
+        "os.cdx.json": "8981d73e44eb02697cca8a379cc7d63c8097ba2beb4f86f41757e27dee0dee91"
+      }
+    },
+    {
+      "id": "go-upterm",
+      "language": "Go",
+      "non_os": 72,
+      "os": 89,
+      "full": 161,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\go-upterm",
+      "sha256": {
+        "final.cdx.json": "69db90ca21826a4d17688ed06a50aa30dc9d2a56ae7fa53ee88324c59ca16a28",
+        "full.cdx.json": "226ab7f65b62a7eddd6333f4da939106cf030e6d494d34701d4c7ebd35bb270a",
+        "os.cdx.json": "db77824ffd5773bb1246516b134dc2b293cce39e6143f1b6998af90972d9cd95"
+      }
+    },
+    {
+      "id": "ruby-rake",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-rake",
+      "sha256": {
+        "final.cdx.json": "008fef8d668ab3ba258f322ebdf1f6f5daf8de332dc74bb7092a20138646de7b",
+        "full.cdx.json": "7c1cf934898ae793421fd4067c5955ffd12d22808f6dced34ac0a3f6fc008d8b",
+        "os.cdx.json": "10955f7731ffda252c9e45c2773ea69e505be57ee8a2d941954ebd4839742682"
+      }
+    },
+    {
+      "id": "ruby-rack",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-rack",
+      "sha256": {
+        "final.cdx.json": "23568f3644b1a6d2ceaccfc087c28fad081f84aed77a3073c27896289d6b6f56",
+        "full.cdx.json": "4a082c5c923337a517a72bc50e288a6f8e1fcb1f166dacf0c819baa6a0c2929c",
+        "os.cdx.json": "2d40cdfcae64863f14f745def7523b9ba2e8f6cab03cb7cefd0d551174e24dab"
+      }
+    },
+    {
+      "id": "ruby-psych",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-psych",
+      "sha256": {
+        "final.cdx.json": "4aedfdb96669a4adcb6467fc87aa3bcfc867f63a661137a41608116f6f509744",
+        "full.cdx.json": "7535393fe14593f79b52cda7feb4ac284c84489231419fcef83a59bbde7e0ff1",
+        "os.cdx.json": "bffdde65da7d3e3329f649a249665bec675d1a54831a110de6a08c27a6fafdf4"
+      }
+    },
+    {
+      "id": "ruby-json",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-json",
+      "sha256": {
+        "final.cdx.json": "7a33711e0691565680e269a18f405bb84fe201d58ee7a0d42bc85edac5bfaa51",
+        "full.cdx.json": "1150f1138e6ff9e2dc23add707274391e665ca26da9b3ecc11c9e943a7c53498",
+        "os.cdx.json": "a788d84a043e27ad849f5844b59e63fbf9aefe2af8fe1add96660ab08e220738"
+      }
+    },
+    {
+      "id": "ruby-rexml",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-rexml",
+      "sha256": {
+        "final.cdx.json": "336c035b2ef1e42a5ca5b061f01167df493d70fbfeabba1e93deea88ef002d91",
+        "full.cdx.json": "1d55d551bdf91e232546712f92b5173c4aff68610963c857ab921cc21306b3ae",
+        "os.cdx.json": "e8865ea6ffc184c6e530cdd8a9b4b94d78de937e5f33c2fbb7625f7ca01e3219"
+      }
+    },
+    {
+      "id": "ruby-csv",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-csv",
+      "sha256": {
+        "final.cdx.json": "0008b0a355a841e5573f6b893ce8e96643d7b19aa31bc255d55b153c942736dd",
+        "full.cdx.json": "27fe64ffb9102e3f456e061eaadde895a37d66d9ea29601140e49e5ae1935249",
+        "os.cdx.json": "44647d72044ca0507f969b2a4e7a608ff14b2be4ee9adbeb7804a8f12073d330"
+      }
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-bigdecimal",
+      "sha256": {
+        "final.cdx.json": "996d5da757be33db96d8f3c56a3fb027e91bea6ead86afc91cf441a01f159d54",
+        "full.cdx.json": "80caca254d7d901d1135736eadb1fdcc2052a9e8d68e98b559eae012c21fa7b4",
+        "os.cdx.json": "fd1c46cae3e2e0ab892c6eb7f79d6d1ad16772d7e20d2abaa17ddae69a3a6489"
+      }
+    },
+    {
+      "id": "ruby-logger",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-logger",
+      "sha256": {
+        "final.cdx.json": "7d21dd89786aedf9c3ad6c789f6d1ba3fb876c2e2087b5bf6aaf55db7a09c5ee",
+        "full.cdx.json": "1f3bb2c22255c2e3500286ec1db6e875af3cbd9fe2ac3aae12be2b0dee630d8f",
+        "os.cdx.json": "ad5862949d4aea84c747b103e1cdd7bb050b333d2dba4bd93f5bc3a805a95f14"
+      }
+    },
+    {
+      "id": "ruby-uri",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-uri",
+      "sha256": {
+        "final.cdx.json": "2c755a643be923c7bcb1bac19f480758c6a95c7888cd72a8fd5fcb7b7f947911",
+        "full.cdx.json": "e344d80e7c6a7e5cd325813a41ca54a840f0195e28f12f2124f08e45abb6df2c",
+        "os.cdx.json": "78649dcf68aa0cc1347e84cae2a61e97606768caac4f0c8dc086b8c13833b349"
+      }
+    },
+    {
+      "id": "ruby-stringio",
+      "language": "Ruby",
+      "non_os": 86,
+      "os": 93,
+      "full": 179,
+      "output": "G:\\code\\sbom_creator\\benchmarks\\.work\\inventory-views-v1\\ruby-stringio",
+      "sha256": {
+        "final.cdx.json": "6c81a4487cdae46b789997cbd6d36d845160b3d3b48a76d4f7c2edeedbaf080c",
+        "full.cdx.json": "3032c3de898bcb69b2c745511ab542d1c2446e86b3b3421c3ca39b67c0cb2072",
+        "os.cdx.json": "9ff22217aeb577340a6cf01e5ad0489852144099d94f550f2181bd5f02b433fd"
+      }
+    }
+  ],
+  "archive": "G:\\code\\sbom_creator\\dist\\sbom-creator-0.4.0-inventory-views.zip",
+  "archive_sha256": "86cdbc05a79c682e1076a1e0fe342519d49285c43d71546bfcc8003e0c52af9a",
+  "zip_crc_and_hashes_valid": true,
+  "scope": "Export-only partition of audited 0.3.0 inventories. No new scans; project build usage is not established."
+}

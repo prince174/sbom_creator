@@ -21,8 +21,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+from sbom_creator import __version__
+from sbom_creator.exporter import validate_inventory_views
 from sbom_creator.pipeline import sha256, write_json
-from sbom_creator.validation import validate_cyclonedx, validate_export_identity, validate_syft
+from sbom_creator.validation import validate_cyclonedx, validate_syft
 
 
 def command(args, *, env=None, timeout=180):
@@ -56,7 +58,9 @@ def run(work, report, credential_file, openssl):
         "-subj", "/CN=localhost", "-addext", "subjectAltName=DNS:localhost,IP:127.0.0.1",
         "-keyout", str(tls / "key.pem"), "-out", str(tls / "ca.crt")])
     (build / "ca.crt").write_bytes((tls / "ca.crt").read_bytes())
-    (build / "Dockerfile").write_text("FROM sbom-creator:0.3.0\nCOPY ca.crt /usr/local/share/ca-certificates/fixture.crt\nRUN update-ca-certificates\n", encoding="utf-8")
+    base_image = f"sbom-creator:{__version__}"
+    base_image_id = command(["docker", "image", "inspect", base_image, "--format", "{{.Id}}"])
+    (build / "Dockerfile").write_text(f"FROM {base_image}\nCOPY ca.crt /usr/local/share/ca-certificates/fixture.crt\nRUN update-ca-certificates\n", encoding="utf-8")
     (build / ".dockerignore").write_text("*\n!ca.crt\n!Dockerfile\n", encoding="utf-8")
     suffix = secrets.token_hex(6)
     test_image = "sbom-creator-http-fixture:" + suffix
@@ -145,13 +149,15 @@ def run(work, report, credential_file, openssl):
         provenance = json.loads((downloaded / "provenance.json").read_bytes())
         validate_syft(selected)
         validate_cyclonedx(final)
-        validate_export_identity(final, selected)
+        full = json.loads((downloaded / "full.cdx.json").read_bytes())
+        os_packages = json.loads((downloaded / "os.cdx.json").read_bytes())
+        validate_inventory_views(full, final, os_packages, selected)
         assert provenance["git"]["commit"] == row["commit"]
         assert provenance["image"]["image_config_digest"] == old_provenance["image"]["image_config_digest"]
         assert provenance["image"]["acquisition"] == "registry" and provenance["assessment"]["mode"] == "rules"
         assert provenance["image"]["container_started"] is False
         result = {"passed": True, "scope": "Actual test Bitbucket clone, local HTTPS registry pull, installed HTTP API, all artifact downloads",
-            "base_service_image_id": command(["docker", "image", "inspect", "sbom-creator:0.3.0", "--format", "{{.Id}}"]),
+            "base_service_image_id": base_image_id,
             "service_image_id": command(["docker", "image", "inspect", test_image, "--format", "{{.Id}}"]),
             "repository_url": row["repository_url"], "commit": row["commit"], "submitted_image": target,
             "registry_digest": provenance["image"]["registry_digest"],

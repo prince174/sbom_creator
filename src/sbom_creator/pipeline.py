@@ -20,7 +20,7 @@ from .acquire import (
     validate_inputs,
 )
 from .core import reconcile, review_report, rules_assessor
-from .exporter import packages_only
+from .exporter import packages_only, split_inventory
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .payload import SUPPORTED as PAYLOAD_CATALOGERS
 from .scanner import convert, scan_image, scan_source
@@ -29,6 +29,7 @@ from .validation import validate_cyclonedx, validate_export_identity, validate_s
 ARTIFACTS = (
     "final.cdx.json", "source.syft.json", "image.syft.json", "selected.syft.json",
     "decisions.json", "coverage.json", "provenance.json", "summary.json", "review.json",
+    "os.cdx.json", "full.cdx.json",
 )
 
 
@@ -174,7 +175,10 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
             {"name": "sbom-creator:payload-verification", "value": coverage["payload_verification"]},
         ])
         validate_cyclonedx(cdx)
-        write_json(staging / "final.cdx.json", cdx)
+        application_cdx, os_cdx = split_inventory(cdx, result["selected_syft"])
+        write_json(staging / "full.cdx.json", cdx)
+        write_json(staging / "os.cdx.json", os_cdx)
+        write_json(staging / "final.cdx.json", application_cdx)
         review = review_report(result["decisions"])
         summary = {
             "status": "succeeded", "partial": coverage["partial_inventory"],
@@ -184,7 +188,10 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
             "unknown_groups": review["group_counts"],
             "source_count": len(source["artifacts"]), "image_count": len(image["artifacts"]),
             "selected_count": len(result["selected_syft"]["artifacts"]),
-            "final_count": len(cdx.get("components", [])),
+            "final_count": len(application_cdx.get("components", [])),
+            "os_count": len(os_cdx.get("components", [])),
+            "full_count": len(cdx.get("components", [])),
+            "inventory_scope": "non-os-packages-v1",
             "decisions": dict(counts), "cyclonedx_valid": True,
             "reconciliation_seconds": round(time.monotonic() - started, 3),
         }

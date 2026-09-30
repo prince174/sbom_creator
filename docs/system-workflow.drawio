@@ -38,10 +38,10 @@
         <mxCell id="report" value="&lt;b&gt;Отчёт решений&lt;/b&gt;&lt;br&gt;decisions.json + review.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="720" y="1000" width="320" height="90" />
         </mxCell>
-        <mxCell id="cdx" value="&lt;b&gt;CycloneDX JSON&lt;/b&gt;&lt;br&gt;Syft convert + provenance + validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="cdx" value="&lt;b&gt;CycloneDX JSON&lt;/b&gt;&lt;br&gt;Syft convert → основной / ОС / полный" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="160" y="1135" width="320" height="90" />
         </mxCell>
-        <mxCell id="output" value="&lt;b&gt;Выход системы&lt;/b&gt;&lt;br&gt;final.cdx.json + отчёты + raw SBOM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="output" value="&lt;b&gt;Выход системы&lt;/b&gt;&lt;br&gt;final + os + full · отчёты · raw SBOM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9f0eb;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="440" y="1275" width="320" height="90" />
         </mxCell>
         <mxCell id="dtrack" value="&lt;b&gt;Пользователь&lt;/b&gt;&lt;br&gt;Ручная загрузка в Dependency-Track" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">

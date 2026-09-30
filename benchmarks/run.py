@@ -193,7 +193,7 @@ def render_reports(rows: list[dict], output: Path) -> None:
                  "Full inventory ground truth is not labelled; FP and FN remain null unless explicitly scoped."],
                 "summary": summary, "repositories": rows})
     fields = ["id", "language", "repository_url", "commit", "image_id", "image_digest_kind", "image_config_digest", "source_count",
-              "image_count", "include", "exclude", "unknown", "final_count", "fp", "fn", "accuracy_scope",
+              "image_count", "include", "exclude", "unknown", "final_count", "os_count", "full_count", "inventory_scope", "fp", "fn", "accuracy_scope",
               "seconds", "cyclonedx_valid", "status", "stage", "decision_mode", "coverage", "expected_package", "expected_version",
               "expected_application_observed", "expected_application_in_final", "error"]
     with (output / "results.csv").open("w", encoding="utf-8-sig", newline="") as stream:
@@ -310,6 +310,8 @@ def analyze(row: dict, case: Path, mode: str, timeout: int, *, fresh: bool = Fal
             from sbom_creator.core import POLICY_VERSION, RULES_POLICY_VERSION
             if row.get("policy_version") != (RULES_POLICY_VERSION if mode == "rules" else POLICY_VERSION):
                 raise RuntimeError("Cached assessment uses an older policy; replay or rescan is required")
+            if row.get("inventory_scope") != "non-os-packages-v1":
+                raise RuntimeError("Cached export uses the legacy full inventory scope; replay or rescan is required")
             return
         except (OSError, ValueError, RuntimeError, KeyError, TypeError, ValidationError) as error:
             row["cache_rejected"] = {"directory": str(cached), "error_type": type(error).__name__}
@@ -382,7 +384,17 @@ def read_analysis(row: dict, destination: Path, mode: str, *, expected_final_sha
     included_ids = {artifact_id for decision in decisions if decision.get("decision") == "INCLUDE" for artifact_id in decision.get("selected_image_artifact_ids", decision.get("image_artifact_ids", []))}
     if set(selected_by_id) != included_ids or any(value != image_by_id.get(key) for key, value in selected_by_id.items()):
         raise RuntimeError("Selected artifacts differ from positively included image evidence")
-    validate_export_identity(final, selected)
+    if summary.get("inventory_scope") == "non-os-packages-v1":
+        from sbom_creator.exporter import validate_inventory_views
+        full = json.loads((destination / "full.cdx.json").read_bytes())
+        os_packages = json.loads((destination / "os.cdx.json").read_bytes())
+        validate_inventory_views(full, final, os_packages, selected)
+        if summary.get("os_count") != len(os_packages["components"]) or summary.get("full_count") != len(full["components"]):
+            raise RuntimeError("Inventory scope counts differ from exported views")
+    elif "inventory_scope" in summary:
+        raise RuntimeError("Unsupported inventory scope")
+    else:
+        validate_export_identity(final, selected)
     if (summary.get("source_count") != len(source["artifacts"]) or summary.get("image_count") != len(image["artifacts"])
             or summary.get("selected_count") != len(selected["artifacts"])
             or summary.get("final_count") != len(final.get("components", []))):
@@ -391,6 +403,8 @@ def read_analysis(row: dict, destination: Path, mode: str, *, expected_final_sha
                include=counts["INCLUDE"], exclude=counts["EXCLUDE"], unknown=counts["UNKNOWN"],
                final_count=len(final.get("components", [])), cyclonedx_valid=True, decision_mode=mode,
                policy_version=coverage.get("policy_version"),
+               inventory_scope=summary.get("inventory_scope", "legacy-full-inventory"),
+               os_count=summary.get("os_count"), full_count=summary.get("full_count", len(final.get("components", []))),
                coverage="partial" if summary.get("partial") else "no unresolved candidates observed",
                image_digest_kind="immutable local Docker image ID (OCI index or config)", image_config_digest=config_digest,
                expected_application_observed=expected_observed(row, image["artifacts"]),

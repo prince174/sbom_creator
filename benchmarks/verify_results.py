@@ -93,7 +93,17 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
         for name in ("source.syft.json", "image.syft.json", "selected.syft.json"):
             validate_syft(data[name])
         validate_cyclonedx(data["final.cdx.json"])
-        validate_export_identity(data["final.cdx.json"], data["selected.syft.json"])
+        if data["summary.json"].get("inventory_scope") == "non-os-packages-v1":
+            from sbom_creator.exporter import validate_inventory_views
+            full = json.loads((destination / "full.cdx.json").read_bytes())
+            os_packages = json.loads((destination / "os.cdx.json").read_bytes())
+            validate_inventory_views(full, data["final.cdx.json"], os_packages, data["selected.syft.json"])
+            check(data["summary.json"].get("os_count") == len(os_packages["components"]), "OS_COUNT_MISMATCH")
+            check(data["summary.json"].get("full_count") == len(full["components"]), "FULL_COUNT_MISMATCH")
+        elif "inventory_scope" in data["summary.json"]:
+            raise ValueError("Unsupported inventory scope")
+        else:
+            validate_export_identity(data["final.cdx.json"], data["selected.syft.json"])
         result["checks"]["schemas"] = True
     except (OSError, ValueError, TypeError, KeyError) as exc:
         result["errors"].append({"code": "ARTIFACT_READ_OR_SCHEMA_FAILURE", "detail": type(exc).__name__})
