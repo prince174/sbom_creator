@@ -175,11 +175,13 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         ])
         validate_cyclonedx(cdx)
         write_json(staging / "final.cdx.json", cdx)
+        review = review_report(result["decisions"])
         summary = {
             "status": "succeeded", "partial": coverage["partial_inventory"],
             "assessment_mode": coverage["mode"], "policy_version": coverage["policy_version"],
             "payload_verification": coverage["payload_verification"],
             "unknown_reasons": coverage["unknown_reasons"],
+            "unknown_groups": review["group_counts"],
             "source_count": len(source["artifacts"]), "image_count": len(image["artifacts"]),
             "selected_count": len(result["selected_syft"]["artifacts"]),
             "final_count": len(cdx.get("components", [])),
@@ -190,7 +192,7 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         write_json(staging / "coverage.json", coverage)
         write_json(staging / "provenance.json", provenance)
         write_json(staging / "summary.json", summary)
-        write_json(staging / "review.json", review_report(result["decisions"]))
+        write_json(staging / "review.json", review)
         staging.rename(output)
     return summary
 

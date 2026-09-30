@@ -1,0 +1,864 @@
+{
+  "passed": true,
+  "report_sha256": "b1db701eb803fc3462d03ac0aef5a7dcf5c900dbae534a69385c8703f9e75156",
+  "audit_sha256": "ed968597557d06f1bc43348116a336f81a0c5c250b96c791d9840111ca1049d5",
+  "repositories": 60,
+  "unknown": 2360,
+  "group_counts": {
+    "ci_configuration": 554,
+    "image_evidence": 260,
+    "source_declarations": 1420,
+    "source_identity": 43,
+    "version_mismatch": 72,
+    "image_identity": 1,
+    "image_payload": 10
+  },
+  "reason_counts": {
+    "CI_CONFIGURATION": 554,
+    "INSUFFICIENT_IMAGE_EVIDENCE": 260,
+    "SOURCE_ONLY": 1420,
+    "AMBIGUOUS_IDENTITY": 44,
+    "SOURCE_VERSION_NOT_OBSERVED": 72,
+    "PAYLOAD_NOT_CONFIRMED": 10
+  },
+  "observation_counts": {
+    "source_only": 2089,
+    "image_only": 271
+  },
+  "rows": [
+    {
+      "id": "java-commons-lang",
+      "language": "Java",
+      "unknown": 25,
+      "group_counts": {
+        "ci_configuration": 12,
+        "image_evidence": 5,
+        "source_declarations": 7,
+        "source_identity": 1
+      },
+      "final_sha256": "9cf76cd165dfd040ba603cfad4b8356aaec2fcc8968535237572f422a848a618",
+      "decisions_sha256": "333d44ad5bf7aacfbf5ae54b71b7d8e65f214d82a8754263e84eabb1af3fcc41",
+      "review_sha256": "640b860cacf3bd312ecebaf02e0ade0aabf99fd0cfcaf83f682146680058d34f",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-lang.review.json"
+    },
+    {
+      "id": "java-commons-io",
+      "language": "Java",
+      "unknown": 30,
+      "group_counts": {
+        "ci_configuration": 14,
+        "source_declarations": 9,
+        "image_evidence": 5,
+        "source_identity": 2
+      },
+      "final_sha256": "b604379c62fde0567220e159d679dad028f9f99ed80ce3da5483f1154b00cf35",
+      "decisions_sha256": "98736d13163d125d00dca00bcce4909babf83ff4bffd7a23d50798aa5e3a9496",
+      "review_sha256": "eb0a99f6907341348b42d379ae63ae20b4b521b3cff839935b36a63e41b7cb68",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-io.review.json"
+    },
+    {
+      "id": "java-commons-codec",
+      "language": "Java",
+      "unknown": 22,
+      "group_counts": {
+        "ci_configuration": 12,
+        "image_evidence": 5,
+        "source_declarations": 3,
+        "source_identity": 2
+      },
+      "final_sha256": "d76a20fcb63a9610a1af77b2611b641e64a949aa89242f939ce309a16093a794",
+      "decisions_sha256": "6a63b577ecd8a644d3c39f5c7ac2b8446a600fb5f2769687aea3021ecdd8d072",
+      "review_sha256": "598a1a3c63c4d9dc34a65dc1c6d07390dc69f355ee9f9db1d904bcb094d97bec",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-codec.review.json"
+    },
+    {
+      "id": "java-commons-text",
+      "language": "Java",
+      "unknown": 30,
+      "group_counts": {
+        "ci_configuration": 13,
+        "source_declarations": 6,
+        "image_evidence": 5,
+        "source_identity": 6
+      },
+      "final_sha256": "0b610599515ab7ddefd5efa9250246e49b79e9f36428e8d3842f6ce3c688a672",
+      "decisions_sha256": "702b9174c54eb643c4e19bd1ba2c9ee7f0f9ae3bfd486b626046485512312298",
+      "review_sha256": "4d49bf3350fa21f73d0749e33a8ad017b838ac0571e77ad1f32e2130871cb730",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-text.review.json"
+    },
+    {
+      "id": "java-commons-csv",
+      "language": "Java",
+      "unknown": 31,
+      "group_counts": {
+        "ci_configuration": 14,
+        "source_declarations": 11,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "4ff3b14c607fc52af58cebb3fffd5365b65040d03e937a2f6142389befdba44f",
+      "decisions_sha256": "869631d41a5cfc135f917e09d4ea9033e0c75588af77e802201163a40e4e8bb3",
+      "review_sha256": "bcf9d7f9224cc950e4bb10d24f5f64c9f6f7d8fcd147b1c8f4f1542c3a94fec1",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-csv.review.json"
+    },
+    {
+      "id": "java-commons-compress",
+      "language": "Java",
+      "unknown": 48,
+      "group_counts": {
+        "source_declarations": 15,
+        "source_identity": 16,
+        "ci_configuration": 12,
+        "image_evidence": 5
+      },
+      "final_sha256": "8440462a862275cbfab79fd2f3cc8ff73535a27b67066b053615ac8782b2be2e",
+      "decisions_sha256": "a5dd38ce973ac5b419d109c951b6a05ede7e40f2ffff0b4d270ea53e2ec90250",
+      "review_sha256": "0a61d36d0e349c559ca4cb165c10b48f5ecddaaab95b5498931549019846b3b7",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-compress.review.json"
+    },
+    {
+      "id": "java-gson",
+      "language": "Java",
+      "unknown": 35,
+      "group_counts": {
+        "ci_configuration": 15,
+        "source_declarations": 15,
+        "image_evidence": 5
+      },
+      "final_sha256": "2e42326184b9b521aeeceefcada79de3d32e278f130f960fc950edeccc34a8ae",
+      "decisions_sha256": "88b2887b15631ec262ba09caad5058486115e63c7e4606e4d7d25a5aa229c8db",
+      "review_sha256": "f331ddc2834fde39368f96c981b6e30391336f6643429e910b8b2cf2539f2c98",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-gson.review.json"
+    },
+    {
+      "id": "java-jsoup",
+      "language": "Java",
+      "unknown": 21,
+      "group_counts": {
+        "source_declarations": 6,
+        "ci_configuration": 10,
+        "image_evidence": 5
+      },
+      "final_sha256": "716b27ea74be5c7d4fd0b49fa501fdd8dbefc6e300bb74ffb2efb3e598b79628",
+      "decisions_sha256": "4dad35027208882f42bcd538546d36ab45ab6a7a1646d89b82cce197fa8b45fa",
+      "review_sha256": "c5398610f58e761646621df2dde50d6ae2d4b890937a498b2524b92ab8c50964",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-jsoup.review.json"
+    },
+    {
+      "id": "java-slf4j",
+      "language": "Java",
+      "unknown": 46,
+      "group_counts": {
+        "source_declarations": 34,
+        "ci_configuration": 2,
+        "version_mismatch": 5,
+        "image_evidence": 5
+      },
+      "final_sha256": "07f771eaccdc73be01034927b29aeeac6e5de0b06c5621f04942e6bff33e2b41",
+      "decisions_sha256": "5b662d6581de6656d6676684e4bc109e51b0c4033cb0b0177eaedc7c3732c206",
+      "review_sha256": "63ffecc20b58b554dcff9616dcb08acb3e614b9e8e1909c0f902959f91aa79d9",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-slf4j.review.json"
+    },
+    {
+      "id": "java-commons-cli",
+      "language": "Java",
+      "unknown": 22,
+      "group_counts": {
+        "ci_configuration": 12,
+        "image_evidence": 5,
+        "source_declarations": 2,
+        "source_identity": 3
+      },
+      "final_sha256": "6d31171e76ac60cbd76645299de778645ed5a79fa060fa249ee3256947aef683",
+      "decisions_sha256": "88efaeb9b0a0c8c65bcbd252dd60afa305ed02d2c1cce526d28513e02e40f5f3",
+      "review_sha256": "1e45a6a84b7c74609993e138b56b43319792bb9eb03759b7514146ffe83167c4",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\java-commons-cli.review.json"
+    },
+    {
+      "id": "javascript-lodash",
+      "language": "JavaScript",
+      "unknown": 547,
+      "group_counts": {
+        "source_declarations": 495,
+        "version_mismatch": 48,
+        "image_evidence": 4
+      },
+      "final_sha256": "636f5651d9e94834d1ba2f4ca1becfa2054023149762ed6405b133f7c44429db",
+      "decisions_sha256": "0ac12f484895ab8beefc0020c5df2acdec9f5e8dabbaf45834fdc24f1ce40442",
+      "review_sha256": "669168b4993d33b6ed52fe0c17ec5343feedaf1248c4686d704bd3a5a940e311",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-lodash.review.json"
+    },
+    {
+      "id": "javascript-express",
+      "language": "JavaScript",
+      "unknown": 13,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 9
+      },
+      "final_sha256": "b944fdeb657d39eced9b56e1967c6222b34b6496878628d873a44125d1ce03ac",
+      "decisions_sha256": "fe7fc1424a7d9fffc1aab081ae76429bffbd3b2a73fb7e21cf01b837746e54b4",
+      "review_sha256": "c2dd8782527e1febfab6587040872e90a168b6918e53130f3ad5e38160424d29",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-express.review.json"
+    },
+    {
+      "id": "javascript-axios",
+      "language": "JavaScript",
+      "unknown": 32,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 28
+      },
+      "final_sha256": "b26bc37992d6b2c31ad09c0cee4f46a06aab59d083da99eb4b0cb3df2c6546b7",
+      "decisions_sha256": "89c7761a4de0550d0b08e65ec22a74f35c459091ae7e32f6d6e62b62a218d97a",
+      "review_sha256": "86f6ed6affc14b43928656c7e3291d4ae259ed0a260391df8e3063e808a6adb1",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-axios.review.json"
+    },
+    {
+      "id": "javascript-debug",
+      "language": "JavaScript",
+      "unknown": 4,
+      "group_counts": {
+        "image_evidence": 4
+      },
+      "final_sha256": "1cb8754340fe6068455d9c554fb5fe71bcba3e30a7c8d0bea0d536513c42b84c",
+      "decisions_sha256": "963a39bdaa5c36ed38fc54e398709c33f970a151f0ae9e7114d57d3a8cd2a3e0",
+      "review_sha256": "273dfc9cc04394ed1a4675cd73cca470413cf278428c1230d1015f48f242c288",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-debug.review.json"
+    },
+    {
+      "id": "javascript-ms",
+      "language": "JavaScript",
+      "unknown": 6,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 2
+      },
+      "final_sha256": "04801a32fd03a9151c92be3fb8f41690597292abbf1752ca922a9700e03d6ea6",
+      "decisions_sha256": "bbf320ad1bb79641f9bc4d19d325fe0f6200a8762b5fed9c246808065f3c1307",
+      "review_sha256": "d74019a5246b68010626d2e3289f97499297471849b66b8508700f2ede90303a",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-ms.review.json"
+    },
+    {
+      "id": "javascript-chalk",
+      "language": "JavaScript",
+      "unknown": 7,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 3
+      },
+      "final_sha256": "8d62e7f89b2024cc250554b82d5195031848ba54935e8fea5aad6f32a1914764",
+      "decisions_sha256": "82aa160f274429100b3fdadb60fc63d3e70ae9270c6c6003f3c4b3156def9806",
+      "review_sha256": "06e726f79be50d20facea338a46c31147b7202dc3b0fb742fbb5cdc587ae27c6",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-chalk.review.json"
+    },
+    {
+      "id": "javascript-commander-js",
+      "language": "JavaScript",
+      "unknown": 10,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 6
+      },
+      "final_sha256": "8e6faf00aa170b7ae665b9259eca316b702b7fa2d3e01c63a5b252b120622a78",
+      "decisions_sha256": "cdbdb21ffed43432f1479626762df069252f91e7f9fc87bf43f5dba0b71cd9e6",
+      "review_sha256": "2c7a6c5ec938996866a9dec5f4f99cf681440b6784618dc638aa263aade39db1",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-commander-js.review.json"
+    },
+    {
+      "id": "javascript-minimist",
+      "language": "JavaScript",
+      "unknown": 10,
+      "group_counts": {
+        "image_evidence": 4,
+        "ci_configuration": 6
+      },
+      "final_sha256": "4c7f69b5e9fce99290cf5fe2ed4dd721154d07007d79ebdadba011d06b737531",
+      "decisions_sha256": "4b8ffae1e2de68a8c586137676e5e3b2b7861213b677bfa7f9c6899bfc8b59a8",
+      "review_sha256": "3deaa3b39eebae0cc45ed23ac728086fff0d384084e8616a5765bd5605a0f1b9",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-minimist.review.json"
+    },
+    {
+      "id": "javascript-is-number",
+      "language": "JavaScript",
+      "unknown": 4,
+      "group_counts": {
+        "image_evidence": 4
+      },
+      "final_sha256": "c5b02950b973f52be83dd9875177a834f94d6242d95fb8ce760a83889dc52a98",
+      "decisions_sha256": "16eb784dec7b5ceafef5fd9e221e07743810f8e4bd0b55e81b43f0fc8b73e113",
+      "review_sha256": "273dfc9cc04394ed1a4675cd73cca470413cf278428c1230d1015f48f242c288",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-is-number.review.json"
+    },
+    {
+      "id": "javascript-isarray",
+      "language": "JavaScript",
+      "unknown": 4,
+      "group_counts": {
+        "image_evidence": 4
+      },
+      "final_sha256": "bcc680d4a0d6d62a73dff0ca1bb862d91b378cc55c81fb14f1711ea00c5ad04a",
+      "decisions_sha256": "1f6ea74d29a1a5cf175c4947f1e1dec2757042b1cd37d3a0004216138c2c9e40",
+      "review_sha256": "273dfc9cc04394ed1a4675cd73cca470413cf278428c1230d1015f48f242c288",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\javascript-isarray.review.json"
+    },
+    {
+      "id": "bitbucket-python-service",
+      "language": "Python",
+      "unknown": 6,
+      "group_counts": {
+        "image_evidence": 6
+      },
+      "final_sha256": "fe4c7842b2afa0930ae291c1e1a383ff32f2e661d86d6cf1f66143102fac062e",
+      "decisions_sha256": "c0fee2914164f89ec6bce4169cdf4e8833beaa78301f9159edb2a6192d483a18",
+      "review_sha256": "d9bb5a6a7711726381ae8a7fc89cc41111572a3d0db04511e4c09bae6ebf1b35",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\bitbucket-python-service.review.json"
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "language": "Python",
+      "unknown": 6,
+      "group_counts": {
+        "image_evidence": 6
+      },
+      "final_sha256": "583ca22d279a55f1701e33c0655eb2c36a4855abb0445c2ac444c6d34353630e",
+      "decisions_sha256": "7a1af0e1c9b7469d5872cce2ad85a653d4eb6ee8b0809c35057ab776179913a9",
+      "review_sha256": "d9bb5a6a7711726381ae8a7fc89cc41111572a3d0db04511e4c09bae6ebf1b35",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\bitbucket-python-jobs.review.json"
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "language": "Python",
+      "unknown": 6,
+      "group_counts": {
+        "image_evidence": 6
+      },
+      "final_sha256": "59223c5e20c896687bf2bdfa077f476d7b34407579a3f94ef64668b896de342f",
+      "decisions_sha256": "9f7eebbd83ec93f07fbe6892cf63fb8f33ce3f9719af58dd616923b4a0c1cfca",
+      "review_sha256": "d9bb5a6a7711726381ae8a7fc89cc41111572a3d0db04511e4c09bae6ebf1b35",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\bitbucket-lab-python.review.json"
+    },
+    {
+      "id": "python-flask",
+      "language": "Python",
+      "unknown": 41,
+      "group_counts": {
+        "version_mismatch": 7,
+        "source_declarations": 14,
+        "ci_configuration": 14,
+        "image_evidence": 6
+      },
+      "final_sha256": "6f796c7ee94da5bd14a661b7f92b56fa60c4f3d3f2b88c0fa48bf47b41795b1c",
+      "decisions_sha256": "87b90ff0b59cb464a2dd44b59d9181ff24a7e01400f84eb471a5d724d662acf9",
+      "review_sha256": "88002a491bcd1368bc9853d7d75d14f932ec213317e0ee6f5ee0f361d51acdaf",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-flask.review.json"
+    },
+    {
+      "id": "python-jinja",
+      "language": "Python",
+      "unknown": 16,
+      "group_counts": {
+        "ci_configuration": 10,
+        "image_evidence": 6
+      },
+      "final_sha256": "174e5b3e02ee19da5eec57e0bdec7fe403b76f4198ab93ad4399a699167f66b0",
+      "decisions_sha256": "77405d99514bbe5dea09b25dbfc6db7d25fcdafe51107a3bdda31d43c3168882",
+      "review_sha256": "f8d3f7e6d35e83a2c5ea90e6920643fc7b915aa14d6a89c877b03db4d810cbec",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-jinja.review.json"
+    },
+    {
+      "id": "python-werkzeug",
+      "language": "Python",
+      "unknown": 20,
+      "group_counts": {
+        "ci_configuration": 14,
+        "image_evidence": 6
+      },
+      "final_sha256": "fc80e0e9f2e3fe4bea8acffa8cd86fa992fb4fbd7e31749ad8a5a667ad32deac",
+      "decisions_sha256": "64246f8096d5463b312c7d10a3dc4942bcbaadc15513afb69a7a2c08806a9777",
+      "review_sha256": "c6232f15ddc524a9f83b0a2adfae8562702bd2518539b8b47c09f29f328aec22",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-werkzeug.review.json"
+    },
+    {
+      "id": "python-itsdangerous",
+      "language": "Python",
+      "unknown": 16,
+      "group_counts": {
+        "ci_configuration": 10,
+        "image_evidence": 6
+      },
+      "final_sha256": "1e1bd58f3e6236817bbd49499bc9e056f4901c2c3b0a270c7e579d950e6cd04c",
+      "decisions_sha256": "eb7fdce740eb3a2bc7f953ac46c7eee6327f3b236ca2f10906cdb6d2f7f603ce",
+      "review_sha256": "339e32084ba13afd45843089f204f746432620f9fc5fc7a5cb2fef4daedcd8d8",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-itsdangerous.review.json"
+    },
+    {
+      "id": "python-attrs",
+      "language": "Python",
+      "unknown": 32,
+      "group_counts": {
+        "ci_configuration": 26,
+        "image_evidence": 6
+      },
+      "final_sha256": "53e047796c121a0e23b85d57d55618a5cb58d3326e86d0d37b01946ac140f102",
+      "decisions_sha256": "8466cf3a35a279d2638147165a797b6151dfc6a181480cbfefc476a828244460",
+      "review_sha256": "861aac10307a8857fa1d9bc389c7fe23ee3469c081bcf22e08157e738a153b65",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-attrs.review.json"
+    },
+    {
+      "id": "python-packaging",
+      "language": "Python",
+      "unknown": 17,
+      "group_counts": {
+        "ci_configuration": 11,
+        "image_evidence": 6
+      },
+      "final_sha256": "807f7e08167f41f62f7e9b0e7d3e252a776e037d516f502fb43e5d65b2dd34c2",
+      "decisions_sha256": "dcb1ec018752be42471b6a0ccb5c64a5142e748c404852d75b36c4259c401dc9",
+      "review_sha256": "41d5c7c339518af3746378c05b866ee89a1ff0e1ac36d19bc9feaf7946ed2844",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-packaging.review.json"
+    },
+    {
+      "id": "python-python-certifi",
+      "language": "Python",
+      "unknown": 16,
+      "group_counts": {
+        "ci_configuration": 10,
+        "image_evidence": 6
+      },
+      "final_sha256": "b61788f7c17c09e7abd16c3c723272129d9b9c8ca515caa2e004c0dc2aac4ec6",
+      "decisions_sha256": "eebdc114a3d33dd3afbbd40a099592409cb57ed0e4d9b5550aaa8a8f9bf72365",
+      "review_sha256": "c434f3a01723662ee109ceca8228f1efa901514c990e63ed200935dabc516044",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\python-python-certifi.review.json"
+    },
+    {
+      "id": "rust-ripgrep",
+      "language": "Rust",
+      "unknown": 35,
+      "group_counts": {
+        "ci_configuration": 4,
+        "source_declarations": 28,
+        "image_evidence": 3
+      },
+      "final_sha256": "82f0a20ed435c8c00735f258da0a3cccf9571ff811a22a910bcd24118da633a4",
+      "decisions_sha256": "875e3226ffabd816b9b57c13469e37521364f7aae9e293b1d5791f7bb6b652ee",
+      "review_sha256": "c997da0b0cf5b0290fec4860df8fc72e137f9d33e9120c19e1c3d8f28e51a1c3",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-ripgrep.review.json"
+    },
+    {
+      "id": "rust-fd",
+      "language": "Rust",
+      "unknown": 63,
+      "group_counts": {
+        "source_declarations": 53,
+        "ci_configuration": 7,
+        "image_evidence": 3
+      },
+      "final_sha256": "5fb73fab2523a78fdd432a898763906cf01f3e527b4483d44a020db5dacb2132",
+      "decisions_sha256": "98afa7789b0e4909f3b899e6d3eb928c144d798968a3a1928b18cce2402482d3",
+      "review_sha256": "aae4ce3ee344943e9dd28fb952008c12f3c87ca1e54594b7ccde29b09d9e6c7c",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-fd.review.json"
+    },
+    {
+      "id": "rust-bat",
+      "language": "Rust",
+      "unknown": 128,
+      "group_counts": {
+        "source_declarations": 114,
+        "ci_configuration": 9,
+        "image_evidence": 3,
+        "version_mismatch": 2
+      },
+      "final_sha256": "ca6fe8565b3f4eea28d686660334848484b1bcedae5797c8e731de370f4ab9e9",
+      "decisions_sha256": "c76b86695105552117cfd7226d3fca37673a8898391b0a7567fdd14fa2b3322f",
+      "review_sha256": "8e41b70007838538193fc6f33c71d6c3e34d2276db837bac3b94351d9a9194c1",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-bat.review.json"
+    },
+    {
+      "id": "rust-dust",
+      "language": "Rust",
+      "unknown": 72,
+      "group_counts": {
+        "source_declarations": 62,
+        "ci_configuration": 5,
+        "version_mismatch": 2,
+        "image_evidence": 3
+      },
+      "final_sha256": "fd5195fceb974d8152c52ab4925f023a4339acde7021bd1018e8efe84158110c",
+      "decisions_sha256": "9cdef79a81b4911024ce02725d599a0aa6ba4812c2a09074b70787a9bfd6d53c",
+      "review_sha256": "e9cebcdc201a36791ce3897a0c66d1ec35b83c1397552cb895d6cc8222219fa6",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-dust.review.json"
+    },
+    {
+      "id": "rust-bottom",
+      "language": "Rust",
+      "unknown": 157,
+      "group_counts": {
+        "source_declarations": 107,
+        "ci_configuration": 43,
+        "version_mismatch": 4,
+        "image_evidence": 3
+      },
+      "final_sha256": "a84e0bfd4e1ceb694073e609b0b257fdb0814664eaf5999f80fe2005052c89ba",
+      "decisions_sha256": "b854d5e445c10e71c7686af23d5461315d16c5e055af863ef56207b847e68a1b",
+      "review_sha256": "5c7e5308e57f2d4753bd03c54c3d789b190da185b279c10a97a5db138db05fc4",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-bottom.review.json"
+    },
+    {
+      "id": "rust-tokei",
+      "language": "Rust",
+      "unknown": 97,
+      "group_counts": {
+        "source_declarations": 82,
+        "ci_configuration": 10,
+        "version_mismatch": 2,
+        "image_evidence": 3
+      },
+      "final_sha256": "3a24f3710fbb1995a5a16b69a352b2d18cb80789406663c8b149300849fddf00",
+      "decisions_sha256": "be3386787f5a2aa6a49a045e230ec73185c11f4ec348e2994dd015b73b3097cb",
+      "review_sha256": "85107eb7670caf5163306ffd62dc9e6e2d1b6008c3014d4aac70a82f28cd1d99",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-tokei.review.json"
+    },
+    {
+      "id": "rust-hyperfine",
+      "language": "Rust",
+      "unknown": 64,
+      "group_counts": {
+        "source_declarations": 53,
+        "ci_configuration": 7,
+        "image_evidence": 3,
+        "version_mismatch": 1
+      },
+      "final_sha256": "4e74b28aa8bf4bb76db5efa83eec032ffd1345ea495d8ac962a27f7d4b5c23e0",
+      "decisions_sha256": "b53cdf38da97949d50ae667710200b4c749f7c11de6cde77f11d7bc0be2aae1a",
+      "review_sha256": "941ef5e86f22ad48d866b7bd686fe1e958dd0c4faa337c393095036c23010199",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-hyperfine.review.json"
+    },
+    {
+      "id": "rust-eza",
+      "language": "Rust",
+      "unknown": 123,
+      "group_counts": {
+        "source_declarations": 105,
+        "ci_configuration": 12,
+        "source_identity": 3,
+        "image_evidence": 3
+      },
+      "final_sha256": "220c55cb525581257e83577fc751837a17587f4c931dddcb590c13a0888f878a",
+      "decisions_sha256": "a0519faf6209d8fd6c16751536e2b0e064f39b4db1857e16a54c1dc2a4464082",
+      "review_sha256": "b78af9f4574b51e3942d2a4b13aa46df08480df00d23d9cd60186bc387565bb9",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-eza.review.json"
+    },
+    {
+      "id": "rust-zoxide",
+      "language": "Rust",
+      "unknown": 80,
+      "group_counts": {
+        "source_declarations": 60,
+        "ci_configuration": 16,
+        "image_evidence": 3,
+        "version_mismatch": 1
+      },
+      "final_sha256": "fe8faae2a5c55e0a73c099d807f26e81a8c6b53efca75af8806366e9c4351a22",
+      "decisions_sha256": "f5984b2341f8d7b5a982acbebd7047c5e17441bfc5be6d7b46845220a517175e",
+      "review_sha256": "63b72d8271d205620b011134b3d8df71cfd52daa2eeb36b3a5c5a6713ae47a18",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-zoxide.review.json"
+    },
+    {
+      "id": "rust-delta",
+      "language": "Rust",
+      "unknown": 100,
+      "group_counts": {
+        "source_declarations": 80,
+        "ci_configuration": 17,
+        "image_evidence": 3
+      },
+      "final_sha256": "982d41cd64b6adea019b81a7de6f6b8a496fca6b1d5e794672ca4631fc65a815",
+      "decisions_sha256": "105306ae37e43b1f156ba1daee577743375f22e4e127538b39f6679b837ec24c",
+      "review_sha256": "0d10ae87f8cdfca628e50b58224f624e1ffed7c20b02f9244a7fe4d7f4cee001",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\rust-delta.review.json"
+    },
+    {
+      "id": "go-hey",
+      "language": "Go",
+      "unknown": 3,
+      "group_counts": {
+        "image_evidence": 3
+      },
+      "final_sha256": "48501f6febcfdbd301f690e17b9ea19b657143635a821bebaa6f676d5f58fc72",
+      "decisions_sha256": "9c5fa0765713a0e51006716dd0422ea2b9bd7f06b9a989298ffc776c7eb5de9f",
+      "review_sha256": "667a7613e785c08f9db0282d229ff18c4c728ebe6cfa6efa978c170746766b89",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-hey.review.json"
+    },
+    {
+      "id": "go-assetfinder",
+      "language": "Go",
+      "unknown": 4,
+      "group_counts": {
+        "image_identity": 1,
+        "image_evidence": 3
+      },
+      "final_sha256": "d0d60478613c6d24c0377cf2b9eca37306abd345d132cfd60cf6ac1e6f6d8fbe",
+      "decisions_sha256": "92bfb7761f11dd994a13cf2468a755167008caba91b626e75602cb00add47a37",
+      "review_sha256": "465825473ca81ab8bc7f52a1f13b2dca024ae98e5064cc9400865a405ed7e0bd",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-assetfinder.review.json"
+    },
+    {
+      "id": "go-httprobe",
+      "language": "Go",
+      "unknown": 3,
+      "group_counts": {
+        "image_evidence": 3
+      },
+      "final_sha256": "cadb6c1f230f288b724b5e19ac80b3bea13bb412cf0c2032b988c8f9a9c34338",
+      "decisions_sha256": "2df10ad3aca711b1af46559e1c738efc2722bd34defe3efa06b01db609cd573d",
+      "review_sha256": "667a7613e785c08f9db0282d229ff18c4c728ebe6cfa6efa978c170746766b89",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-httprobe.review.json"
+    },
+    {
+      "id": "go-waybackurls",
+      "language": "Go",
+      "unknown": 3,
+      "group_counts": {
+        "image_evidence": 3
+      },
+      "final_sha256": "9ef315e214df4e5c18828a15975fae20361465fd7496431ae650eae99fb6f6ec",
+      "decisions_sha256": "fdaf4207ebdb70ebd6da2adbf47b8b97b160195f622d82703e4bb69c1ecbdf58",
+      "review_sha256": "667a7613e785c08f9db0282d229ff18c4c728ebe6cfa6efa978c170746766b89",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-waybackurls.review.json"
+    },
+    {
+      "id": "go-unfurl",
+      "language": "Go",
+      "unknown": 5,
+      "group_counts": {
+        "source_declarations": 2,
+        "image_evidence": 3
+      },
+      "final_sha256": "3f386d065d513c6d77390e892f768107322b88c301b4a0d4018629acdaf89295",
+      "decisions_sha256": "45ee278b0983601151e50761702dbb788bb403b457de269323c00d603ab502ce",
+      "review_sha256": "a26c54c81c86bb67b2b551838df4eb9ccdf6d765d6cfeec9ec8b5c2e942b35a2",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-unfurl.review.json"
+    },
+    {
+      "id": "go-yq",
+      "language": "Go",
+      "unknown": 24,
+      "group_counts": {
+        "ci_configuration": 18,
+        "source_declarations": 3,
+        "image_evidence": 3
+      },
+      "final_sha256": "296c56bc728b70cbde2a425a423de09c5125875947800c425902cad71cd38fdc",
+      "decisions_sha256": "2dc13d7040e992fe7534d8538ee285df3947e4baaa1488e49d9bb84463168486",
+      "review_sha256": "8ac0c72926b497201add98586e1ad7d1f68bd456d213cdc42f2f5f1f65f3c472",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-yq.review.json"
+    },
+    {
+      "id": "go-lazygit",
+      "language": "Go",
+      "unknown": 33,
+      "group_counts": {
+        "ci_configuration": 18,
+        "source_declarations": 12,
+        "image_evidence": 3
+      },
+      "final_sha256": "db2fb3ce6acc03a891daea9ab7813b449bc2cb8702bdeeee75ad03b93332a636",
+      "decisions_sha256": "070fcc3558fcc1e615fe10bbbdf72db6f5ed168fbabb25841baab3e8c55ffa00",
+      "review_sha256": "e5ba110899033ec06333ee71b1f9c2248a0b741849402215af4ec7b499053b99",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-lazygit.review.json"
+    },
+    {
+      "id": "go-glow",
+      "language": "Go",
+      "unknown": 20,
+      "group_counts": {
+        "ci_configuration": 10,
+        "source_declarations": 7,
+        "image_evidence": 3
+      },
+      "final_sha256": "82f30e1865c465c7df390b803ae36892fca9b7e9ce6a853440e6249ff1119c36",
+      "decisions_sha256": "a04cc5cb3d2741ebaa54ae6a8856e18a8a2ff7745d4a332c24e0a437014b54ba",
+      "review_sha256": "5fbfbc5a73751cf34f69232a9d8f32a00074339741ffc60d1cca256060fda1ad",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-glow.review.json"
+    },
+    {
+      "id": "go-scc",
+      "language": "Go",
+      "unknown": 20,
+      "group_counts": {
+        "ci_configuration": 12,
+        "source_declarations": 5,
+        "image_evidence": 3
+      },
+      "final_sha256": "ba950fcec46a72e05475137395dc9d7751641e9bf1d4b1995f676cd1524bfc0a",
+      "decisions_sha256": "aa11b0b0d712ef8e16bbc2277185d8040e0feeafc12ef196ecd57bc2e20b03bc",
+      "review_sha256": "dea593ef452d8e0b35528a512149bf4d24a4a53eaec5944fabf1d9fbb92fb907",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-scc.review.json"
+    },
+    {
+      "id": "go-upterm",
+      "language": "Go",
+      "unknown": 51,
+      "group_counts": {
+        "ci_configuration": 18,
+        "source_declarations": 30,
+        "image_evidence": 3
+      },
+      "final_sha256": "226ab7f65b62a7eddd6333f4da939106cf030e6d494d34701d4c7ebd35bb270a",
+      "decisions_sha256": "e43c2afc87bf0c1eca3459c4a351f66d8f2e08e9ba92709f9eedddd407ca8b76",
+      "review_sha256": "06356e1014da4d1e5b380d3d07abdd7d7811d761569fba322860374c4138ebfa",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\go-upterm.review.json"
+    },
+    {
+      "id": "ruby-rake",
+      "language": "Ruby",
+      "unknown": 21,
+      "group_counts": {
+        "ci_configuration": 14,
+        "image_payload": 1,
+        "source_identity": 1,
+        "image_evidence": 5
+      },
+      "final_sha256": "7c1cf934898ae793421fd4067c5955ffd12d22808f6dced34ac0a3f6fc008d8b",
+      "decisions_sha256": "be6aa319b84df2d407991569514e3f2ade6f3bd2d4de51fa4536961856d35bd8",
+      "review_sha256": "280e460a00b9754f6959bc31068ded147940c78441615111a7fd91fdb77c1bf8",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-rake.review.json"
+    },
+    {
+      "id": "ruby-rack",
+      "language": "Ruby",
+      "unknown": 13,
+      "group_counts": {
+        "ci_configuration": 6,
+        "source_identity": 1,
+        "image_payload": 1,
+        "image_evidence": 5
+      },
+      "final_sha256": "4a082c5c923337a517a72bc50e288a6f8e1fcb1f166dacf0c819baa6a0c2929c",
+      "decisions_sha256": "65e9f93e6fa23b46c2e1cd2831490e362e45216ba4263458953ea7b6070ae386",
+      "review_sha256": "44be20f787f770b925b7dd0a68a2d0fcfce2b9e080a48882582b37e03a903d25",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-rack.review.json"
+    },
+    {
+      "id": "ruby-psych",
+      "language": "Ruby",
+      "unknown": 17,
+      "group_counts": {
+        "ci_configuration": 10,
+        "image_payload": 1,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "7535393fe14593f79b52cda7feb4ac284c84489231419fcef83a59bbde7e0ff1",
+      "decisions_sha256": "65f196773a3ef3410f930c9791e718d94ac584ef70cd7739fbc9013f4d909e75",
+      "review_sha256": "3ef1396b0583c37524e0337eba936cc052c505b10452491c67dbf62eb023bdb1",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-psych.review.json"
+    },
+    {
+      "id": "ruby-json",
+      "language": "Ruby",
+      "unknown": 10,
+      "group_counts": {
+        "image_payload": 1,
+        "ci_configuration": 3,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "1150f1138e6ff9e2dc23add707274391e665ca26da9b3ecc11c9e943a7c53498",
+      "decisions_sha256": "0892adb2dc08444d69dd1d68cb4c3a9c89161191c3e478fb5cc79f8ebd76287d",
+      "review_sha256": "9e408d1436d2c37de8079607d8537cce3f0c1275bb63255d6ffa0757e2ef1506",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-json.review.json"
+    },
+    {
+      "id": "ruby-rexml",
+      "language": "Ruby",
+      "unknown": 13,
+      "group_counts": {
+        "ci_configuration": 6,
+        "image_payload": 1,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "1d55d551bdf91e232546712f92b5173c4aff68610963c857ab921cc21306b3ae",
+      "decisions_sha256": "73c0037c543186c44a8c4e2f9425324813515444a4dc608a9d9a5f62be57a0b1",
+      "review_sha256": "02609ef27009ea9b833f8700317249531c59451b1dc0cd742cbd7e4698703534",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-rexml.review.json"
+    },
+    {
+      "id": "ruby-csv",
+      "language": "Ruby",
+      "unknown": 15,
+      "group_counts": {
+        "ci_configuration": 8,
+        "image_payload": 1,
+        "source_identity": 1,
+        "image_evidence": 5
+      },
+      "final_sha256": "27fe64ffb9102e3f456e061eaadde895a37d66d9ea29601140e49e5ae1935249",
+      "decisions_sha256": "f3feeaf4acd610d66c961a6305a3d1540b0136263a6bb6992dd15b742763f1bd",
+      "review_sha256": "3dfbf607c96412444d20391576fdfad3377bff8c3f3a1f485b84c053f4cb38c8",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-csv.review.json"
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "language": "Ruby",
+      "unknown": 12,
+      "group_counts": {
+        "ci_configuration": 6,
+        "image_payload": 1,
+        "image_evidence": 5
+      },
+      "final_sha256": "80caca254d7d901d1135736eadb1fdcc2052a9e8d68e98b559eae012c21fa7b4",
+      "decisions_sha256": "07f3ae9fb0dbd11d5704fb0c7e5e7affb42f6e254b7ffc2b91ae8ba537107596",
+      "review_sha256": "8b34b6a62dbf62845c500185b55cb5fcf90efb6786102be206ad6c8a0857ab20",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-bigdecimal.review.json"
+    },
+    {
+      "id": "ruby-logger",
+      "language": "Ruby",
+      "unknown": 14,
+      "group_counts": {
+        "ci_configuration": 7,
+        "image_payload": 1,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "1f3bb2c22255c2e3500286ec1db6e875af3cbd9fe2ac3aae12be2b0dee630d8f",
+      "decisions_sha256": "224987adce94bee7b2344482eeba840b7fd4302ac33cc43ebeaf0e641bd08941",
+      "review_sha256": "6a96f8f4c9b7055a690d87fde3879fc8e067b11052dc5ab5c7e41ede1ef1949e",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-logger.review.json"
+    },
+    {
+      "id": "ruby-uri",
+      "language": "Ruby",
+      "unknown": 19,
+      "group_counts": {
+        "ci_configuration": 12,
+        "image_payload": 1,
+        "image_evidence": 5,
+        "source_identity": 1
+      },
+      "final_sha256": "e344d80e7c6a7e5cd325813a41ca54a840f0195e28f12f2124f08e45abb6df2c",
+      "decisions_sha256": "1f65048af103007b331daffa8a3dbc7a1d63de987ff078c56e1f6ec025ab40ec",
+      "review_sha256": "9311cc7f93980f98cc66089b3f8c3b44ff2ed2316f8cccb0a1136f7f234433e0",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-uri.review.json"
+    },
+    {
+      "id": "ruby-stringio",
+      "language": "Ruby",
+      "unknown": 18,
+      "group_counts": {
+        "ci_configuration": 11,
+        "image_payload": 1,
+        "source_identity": 1,
+        "image_evidence": 5
+      },
+      "final_sha256": "3032c3de898bcb69b2c745511ab542d1c2446e86b3b3421c3ca39b67c0cb2072",
+      "decisions_sha256": "b7616399623db197c571be753488cd22b66dd6aa7b1f0d723af2fc0830cbadd8",
+      "review_sha256": "f9ff7c94747715eef123bbc2795986fe567cec6131804321885bff0b1e849639",
+      "review_path": "G:\\code\\sbom_creator\\benchmarks\\.work\\review-groups-v2\\ruby-stringio.review.json"
+    }
+  ],
+  "scope": "Review enrichment only; existing decisions and final SBOM bytes unchanged. No new scans or accuracy claims."
+}

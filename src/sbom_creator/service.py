@@ -65,7 +65,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         yield
         executor.shutdown(wait=True, cancel_futures=False)
 
-    app = FastAPI(title="SBOM Creator", version="0.3.0", lifespan=lifespan)
+    app = FastAPI(title="SBOM Creator", version="0.3.1", lifespan=lifespan)
 
     def auth(authorization: str | None = Header(default=None)):
         token = api_token()

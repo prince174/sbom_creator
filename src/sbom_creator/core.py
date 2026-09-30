@@ -256,8 +256,10 @@ def validate_assessments(candidates: list[dict], assessments: Any, *, rules: boo
     return result
 
 
-def review_report(decisions: list[dict]) -> dict:
+def review_report(decisions: list[dict], *, schema_version: int = 2) -> dict:
     """Compact actionable uncertainty report, without duplicating raw catalogs."""
+    if type(schema_version) is not int or schema_version not in (1, 2):
+        raise ValueError("Unsupported review schema version")
     actions = {
         "AMBIGUOUS_IDENTITY": "Check original package metadata and exact version; do not guess an identity.",
         "SOURCE_VERSION_NOT_OBSERVED": "Compare source lockfiles with the delivered build; retain the observed image version.",
@@ -270,17 +272,47 @@ def review_report(decisions: list[dict]) -> dict:
     for row in decisions:
         if row["decision"] != "UNKNOWN":
             continue
+        reason = row["review_reason"]
+        has_image = bool(row["image_artifact_ids"])
+        group = (
+            "ci_configuration" if reason == "CI_CONFIGURATION" else
+            "version_mismatch" if reason == "SOURCE_VERSION_NOT_OBSERVED" else
+            "image_payload" if reason == "PAYLOAD_NOT_CONFIRMED" else
+            "image_declarations" if reason == "DECLARATION_ONLY" else
+            "image_identity" if has_image and reason == "AMBIGUOUS_IDENTITY" else
+            "image_evidence" if has_image else
+            "source_identity" if reason == "AMBIGUOUS_IDENTITY" else
+            "source_declarations"
+        )
+        package_types = sorted({e["artifact"].get("type", "unknown") for e in row["evidence"]})
+        os_types = {"apk", "deb", "rpm", "alpm", "portage", "nix", "opkg"}
+        kinds = {"os_package" if kind in os_types else "ci_reference" if kind == "github-action"
+                 else "language_package" if kind in {"java-archive", "npm", "python", "gem", "go-module", "rust-crate"}
+                 else "other" for kind in package_types}
         items.append({
             "candidate_id": row["candidate_id"], "identity": row["identity"],
             "reason": row["review_reason"], "identity_problem": row["identity_problem"],
             "source_artifact_ids": row["source_artifact_ids"],
             "image_artifact_ids": row["image_artifact_ids"],
             "observed_versions": row.get("observed_versions", {}),
+            "review_group": group, "observation": row["match_category"],
+            "package_kinds": sorted(kinds), "package_types": package_types,
+            "catalogers": sorted({e["artifact"].get("foundBy", "unknown") for e in row["evidence"]}),
+            "dependency_scope": "not_established",
             "next_step": actions.get(row["review_reason"], "Inspect original image evidence and scanner coverage."),
         })
-    return {"schema_version": 1, "unknown_count": len(items),
+    result = {"schema_version": schema_version, "unknown_count": len(items),
+            "group_counts": dict(Counter(x["review_group"] for x in items)),
+            "observation_counts": dict(Counter(x["observation"] for x in items)),
             "reason_counts": dict(Counter(x["reason"] for x in items)), "items": items,
             "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."}
+    if schema_version == 1:
+        for key in ("group_counts", "observation_counts"):
+            result.pop(key)
+        for item in items:
+            for key in ("review_group", "observation", "package_kinds", "package_types", "catalogers", "dependency_scope"):
+                item.pop(key)
+    return result
 
 
 def reconcile(source: dict, image: dict, assessor: Callable | None = None,

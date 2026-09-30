@@ -50,6 +50,9 @@ def test_http_default_runs_real_publication_without_model(real_catalogs, tmp_pat
         report = client.get(url + "/artifacts/review.json", headers=headers)
         assert report.status_code == 200
         assert report.json()["reason_counts"] == {"SOURCE_ONLY": 1}
+        assert report.json()["schema_version"] == 2
+        assert report.json()["group_counts"] == {"source_declarations": 1}
+        assert state["result"]["unknown_groups"] == report.json()["group_counts"]
         final = client.get(url + "/artifacts/final.cdx.json", headers=headers).json()
         assert len(final["components"]) == 2
         properties = {p["name"]: p["value"] for p in final["metadata"]["properties"]}

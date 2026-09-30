@@ -211,7 +211,7 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
         check(current["decisions"] == decisions, "DECISIONS_STALE_FOR_CURRENT_RULES")
         from sbom_creator.core import review_report
         review = json.loads((destination / "review.json").read_bytes())
-        check(review == review_report(current["decisions"]), "UNCERTAINTY_REPORT_MISMATCH")
+        check(review == review_report(current["decisions"], schema_version=review.get("schema_version")), "UNCERTAINTY_REPORT_MISMATCH")
         result["checks"]["current_rules_replayed_in_memory"] = True
     result["checks"].update({"decision_identities": len(decisions), "source_records": actual_counts["source_count"],
                               "image_records": actual_counts["image_count"], "selected_records": actual_counts["selected_count"],
