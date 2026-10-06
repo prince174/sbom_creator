@@ -167,8 +167,9 @@ def assess(case, labels, output):
 def run(work, report, syft, replay=False, rescan=False, input_report=None):
     if report.exists():
         raise FileExistsError("Keep old reports; choose a new report path")
+    from dataclasses import replace
     rows = []
-    settings = Settings(syft_binary=syft, pull_image=False, registry_hosts=("docker.io",))
+    settings = Settings(syft_binary=syft, registry_hosts=("docker.io",))
     inputs = {r["language"]: r for r in json.loads(input_report.read_bytes())["rows"]} if input_report else {}
     for language in LANGUAGES:
         case = work / language.lower()
@@ -183,9 +184,15 @@ def run(work, report, syft, replay=False, rescan=False, input_report=None):
             provenance["replay_of"] = str(old)
             if rescan:
                 image_id = provenance["image"]["image_id"]
-                immutable = provenance["image"]["image"].rsplit(":", 1)[0] + "@" + image_id
-                analyze_local(case / "src", immutable, output, settings)
-                assert json.loads((output / "provenance.json").read_bytes())["image"]["image_id"] == image_id
+                repository = provenance["image"]["image"].split("@", 1)[0]
+                if ":" in repository.rsplit("/", 1)[-1]:
+                    repository = repository.rsplit(":", 1)[0]
+                immutable = repository + "@" + image_id
+                archive = case / ("fixture-" + str(time.time_ns()) + ".tar")
+                run_command(["docker", "image", "save", "-o", str(archive), image_id], cwd=case,
+                    env=clean_environment(), timeout=300, max_output_bytes=8192, label="Fixture export")
+                analyze_local(case / "src", immutable, output, replace(settings, image_archive=str(archive.resolve())))
+                assert json.loads((output / "provenance.json").read_bytes())["image"]["image_config_digest"] == provenance["image"]["image_config_digest"]
             else:
                 publish_catalogs(json.loads((old / "source.syft.json").read_bytes()),
                                  json.loads((old / "image.syft.json").read_bytes()),
@@ -203,11 +210,14 @@ def run(work, report, syft, replay=False, rescan=False, input_report=None):
             if result.returncode:
                 raise RuntimeError(f"{language} build failed; see its local build.log")
             output = case / "baseline"
-            analyze_local(case / "src", reference, output, settings)
+            archive = case / "fixture.tar"
+            run_command(["docker", "image", "save", "-o", str(archive), reference], cwd=case,
+                env=clean_environment(), timeout=300, max_output_bytes=8192, label="Fixture export")
+            analyze_local(case / "src", reference, output, replace(settings, image_archive=str(archive.resolve())))
             image_id = json.loads((output / "provenance.json").read_bytes())["image"]["image_id"]
             text = run_command(["docker", "run", "--rm", "--network=none", "--read-only", "--cap-drop=ALL",
                 "--security-opt=no-new-privileges", "--memory=256m", "--cpus=1", "--pids-limit=64",
-                image_id, *command], cwd=case, env=clean_environment(), timeout=30,
+                reference, *command], cwd=case, env=clean_environment(), timeout=30,
                 max_output_bytes=8192, label="Controlled positive smoke")
             if "golden-1.0.0" not in text:
                 raise AssertionError("Controlled payload smoke returned unexpected output")

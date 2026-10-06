@@ -1,0 +1,54 @@
+# Example: replace image digest, hosts and Secret before applying.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sbom-creator
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: sbom-creator}
+  template:
+    metadata:
+      labels: {app: sbom-creator}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: service
+          image: registry.example.com/sbom-creator:0.5.0 # replace with your @sha256:digest
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+          ports: [{containerPort: 8080}]
+          env:
+            - {name: SBOM_BITBUCKET_HOSTS, value: bitbucket.org}
+            - {name: SBOM_BITBUCKET_AUTH_MODE, value: basic}
+            - {name: SBOM_REGISTRY_HOSTS, value: registry.example.com}
+            - {name: SBOM_API_TOKEN_FILE, value: /run/secrets/api-token}
+            - {name: SBOM_BITBUCKET_TOKEN_FILE, value: /run/secrets/bitbucket-token}
+            - {name: SBOM_REGISTRY_USERNAME_FILE, value: /run/secrets/registry-username}
+            - {name: SBOM_REGISTRY_PASSWORD_FILE, value: /run/secrets/registry-password}
+          resources:
+            requests: {cpu: "500m", memory: 512Mi, ephemeral-storage: 1Gi}
+            limits: {cpu: "2", memory: 2Gi, ephemeral-storage: 12Gi}
+          volumeMounts:
+            - {name: tmp, mountPath: /tmp}
+            - {name: workspace, mountPath: /workspace}
+            - {name: secrets, mountPath: /run/secrets, readOnly: true}
+          livenessProbe:
+            httpGet: {path: /health, port: 8080}
+            initialDelaySeconds: 10
+            periodSeconds: 30
+      volumes:
+        - name: tmp
+          emptyDir: {sizeLimit: 8Gi}
+        - name: workspace
+          emptyDir: {sizeLimit: 2Gi} # test only; use PVC for persistent results
+        - name: secrets
+          secret: {secretName: sbom-creator, defaultMode: 0440}

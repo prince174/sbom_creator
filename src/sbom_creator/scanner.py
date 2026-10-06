@@ -6,9 +6,8 @@ import base64
 import hashlib
 import json
 import re
-import tarfile
 import tempfile
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 from typing import Any
 
 from .acquire import (
@@ -44,6 +43,28 @@ cpp:
 """
 
 
+IMAGE_CONFIG = """
+file:
+  metadata:
+    selection: all
+  content:
+    skip-files-above-size: 33554432
+    globs:
+      - "**/RECORD"
+      - "**/package.json"
+      - "**/*.jar"
+      - "**/*.war"
+      - "**/*.ear"
+      - "**/*.zip"
+      - "**/*.hpi"
+      - "**/*.jpi"
+      - "**/*.nar"
+      - "**/*.jmod"
+registry:
+  insecure-skip-tls-verify: false
+  insecure-use-http: false
+"""
+
 def _json(value: str, label: str) -> dict[str, Any]:
     try:
         data = json.loads(value)
@@ -58,11 +79,19 @@ def _syft(args: list[str], settings: Settings, *, output: Path) -> dict[str, Any
     with tempfile.TemporaryDirectory(prefix="sbom-syft-") as directory:
         root = Path(directory)
         config = root / "syft.yaml"
-        image_scan = args[0] == "scan" and args[1].startswith("docker-archive:")
-        config.write_text(TRUSTED_CONFIG + ("\nfile:\n  metadata:\n    selection: all\n" if image_scan else ""), encoding="utf-8")
+        image_scan = args[0] == "scan" and args[1].startswith(("registry:", "docker-archive:", "oci-archive:"))
+        config.write_text(TRUSTED_CONFIG + (IMAGE_CONFIG if image_scan else ""), encoding="utf-8")
         environment = clean_environment()
         environment.update({"HOME": directory, "USERPROFILE": directory, "XDG_CONFIG_HOME": directory,
                             "XDG_CACHE_HOME": directory, "SYFT_CHECK_FOR_APP_UPDATE": "false"})
+        environment.update({"TMPDIR": directory, "TMP": directory, "TEMP": directory, "DOCKER_CONFIG": directory})
+        if image_scan and args[1].startswith("registry:"):
+            username, password = secret("SBOM_REGISTRY_USERNAME"), secret("SBOM_REGISTRY_PASSWORD")
+            if bool(username) != bool(password):
+                raise ValueError("Registry username and password must both be configured")
+            if username:
+                environment.update(SYFT_REGISTRY_AUTH_AUTHORITY=args[1].removeprefix("registry:").split("/")[0],
+                                   SYFT_REGISTRY_AUTH_USERNAME=username, SYFT_REGISTRY_AUTH_PASSWORD=password)
         version = _json(run_command([settings.syft_binary, "version", "-o", "json"],
                                     cwd=root, env=environment, timeout=30,
                                     max_output_bytes=settings.max_output_bytes, label="Syft version"),
@@ -70,8 +99,9 @@ def _syft(args: list[str], settings: Settings, *, output: Path) -> dict[str, Any
         if version != SYFT_VERSION:
             raise RuntimeError(f"Syft {SYFT_VERSION} is required; installed version differs")
         result = run_command([settings.syft_binary, *args, "--config", str(config)], cwd=root,
-                             env=environment, timeout=settings.scan_timeout,
-                             max_output_bytes=settings.max_sbom_bytes, label="Syft")
+                             env=environment, timeout=min(settings.scan_timeout, settings.image_timeout) if image_scan else settings.scan_timeout,
+                             max_output_bytes=settings.max_sbom_bytes, label="Syft",
+                             monitored_paths=((root, settings.max_archive_bytes),), max_files=settings.max_checkout_files)
         data = _json(result, "Syft")
         if args[0] == "scan":
             if not isinstance(data.get("artifacts"), list):
@@ -81,6 +111,9 @@ def _syft(args: list[str], settings: Settings, *, output: Path) -> dict[str, Any
                 raise RuntimeError("Syft inventory descriptor does not match the pinned scanner")
         elif data.get("bomFormat") != "CycloneDX" or data.get("specVersion") != "1.6":
             raise RuntimeError("Syft conversion did not produce CycloneDX 1.6")
+        if image_scan:
+            # Private intermediate: the caller validates identity and strips file contents.
+            return data
         output.parent.mkdir(parents=True, exist_ok=True)
         # Publish a complete JSON file only, after command success and basic validation.
         with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", suffix=".tmp",
@@ -104,155 +137,88 @@ def scan_source(checkout: Path, output: Path, settings: Settings) -> dict[str, A
                  settings, output=output)
 
 
-def _sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
-
-
-def _archive_config_digest(archive: Path, inspected: dict[str, Any]) -> str:
-    """Docker containerd IDs may be indexes; Syft imageID is the config digest."""
-    with tarfile.open(archive, "r:*") as saved:
-        def read_member(name: str) -> bytes:
-            path = PurePosixPath(name)
-            if path.is_absolute() or ".." in path.parts:
-                raise RuntimeError("Image archive contains an unsafe metadata path")
-            try:
-                member = saved.getmember(name)
-            except KeyError:
-                raise RuntimeError("Image archive metadata is missing") from None
-            if not member.isfile() or member.size > 8 * 1024 * 1024:
-                raise RuntimeError("Image archive metadata exceeds limits")
-            stream = saved.extractfile(member)
-            if stream is None:
-                raise RuntimeError("Image archive metadata is unreadable")
-            return stream.read(8 * 1024 * 1024 + 1)
-
-        try:
-            manifests = json.loads(read_member("manifest.json"))
-        except json.JSONDecodeError:
-            raise RuntimeError("Invalid image archive manifest") from None
-        if not isinstance(manifests, list) or len(manifests) != 1:
-            raise RuntimeError("Image archive must contain exactly one platform image")
-        config_name = manifests[0].get("Config")
-        if not isinstance(config_name, str):
-            raise TypeError("Image archive does not identify its configuration")
-        content = read_member(config_name)
-        config = _json(content.decode("utf-8"), "Image archive configuration")
-        if (config.get("os") != inspected.get("Os")
-                or config.get("architecture") != inspected.get("Architecture")
-                or config.get("rootfs", {}).get("diff_ids") != inspected.get("RootFS", {}).get("Layers")):
-            raise RuntimeError("Saved image configuration differs from inspected immutable image")
-        return "sha256:" + hashlib.sha256(content).hexdigest()
-
-
-def _platform_digest(manifest: dict[str, Any], platform: str) -> str | None:
-    manifests = manifest.get("manifests")
-    if manifests is None:
-        if not isinstance(manifest.get("config"), dict):
-            raise RuntimeError("Registry returned neither an image manifest nor an image index")
-        return None
-    if not isinstance(manifests, list):
-        raise TypeError("Registry returned malformed image index")
-    os_name, architecture, *variant = platform.split("/")
-    expected_variant = variant[0] if variant else ""
-    matches = [entry.get("digest") for entry in manifests if isinstance(entry, dict)
-               and entry.get("platform", {}).get("os") == os_name
-               and entry.get("platform", {}).get("architecture") == architecture
-               and (not expected_variant or entry.get("platform", {}).get("variant", "") == expected_variant)]
-    if len(matches) != 1 or not re.fullmatch(r"sha256:[0-9a-f]{64}", str(matches[0])):
-        raise RuntimeError("Image index must have one unambiguous manifest for the configured platform")
-    return str(matches[0])
+def _image_identity(data: dict, reference: str, settings: Settings) -> dict:
+    metadata = data.get("source", {}).get("metadata", {})
+    def decode(field):
+        encoded = metadata.get(field)
+        if not isinstance(encoded, str) or len(encoded) > 12 * 1024 * 1024:
+            raise RuntimeError("Missing or oversized image identity metadata")
+        raw = base64.b64decode(encoded, validate=True)
+        return raw, _json(raw.decode("utf-8"), "Image " + field)
+    raw_manifest, manifest = decode("manifest")
+    raw_config, config = decode("config")
+    manifest_digest = "sha256:" + hashlib.sha256(raw_manifest).hexdigest()
+    config_digest = "sha256:" + hashlib.sha256(raw_config).hexdigest()
+    if (metadata.get("manifestDigest") != manifest_digest
+            or metadata.get("imageID") != config_digest
+            or manifest.get("config", {}).get("digest") != config_digest):
+        raise RuntimeError("Syft image identity hashes do not match")
+    actual = "/".join(filter(None, (config.get("os"), config.get("architecture"), config.get("variant"))))
+    requested = settings.image_platform.split("/")
+    if actual.split("/")[:len(requested)] != requested:
+        raise RuntimeError("Image platform differs from the configured platform")
+    if any(metadata.get(key) != config.get(key) for key in ("os", "architecture")
+           if not settings.image_archive or metadata.get(key)):
+        raise RuntimeError("Syft image platform metadata is inconsistent")
+    diff_ids = config.get("rootfs", {}).get("diff_ids")
+    layers = metadata.get("layers", [])
+    if not isinstance(diff_ids, list) or diff_ids != [layer.get("digest") for layer in layers]:
+        raise RuntimeError("Syft image layer identities are inconsistent")
+    if any(not re.fullmatch(r"sha256:[0-9a-f]{64}", digest) for digest in diff_ids):
+        raise RuntimeError("Invalid layer identity")
+    repository = reference.split("@", 1)[0]
+    if ":" in repository.rsplit("/", 1)[-1]:
+        repository = repository.rsplit(":", 1)[0]
+    repo_digests = metadata.get("repoDigests", [])
+    if not settings.image_archive and "@" in reference:
+        requested_digest = reference.split("@", 1)[1]
+        # Syft exposes the resolved platform manifest and parent index in repoDigests.
+        if requested_digest != manifest_digest and not any(
+                value.rsplit("@", 1)[-1] == requested_digest for value in repo_digests):
+            raise RuntimeError("Requested registry digest differs from scanned image")
+    return {"image": reference, "immutable_reference": repository + "@" + manifest_digest,
+            "image_digest": manifest_digest, "platform_digest": manifest_digest,
+            "registry_digest": manifest_digest if not settings.image_archive else None,
+            "acquisition": "archive" if settings.image_archive else "registry",
+            "image_id": config_digest, "image_config_digest": config_digest,
+            "requested_platform": settings.image_platform, "platform": actual,
+            "repo_digests": repo_digests, "syft_version": SYFT_VERSION,
+            "scope": "squashed", "container_started": False, "build_link": "unverified",
+            "acquisition_method": "syft-direct-v1"}
 
 
 def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, Any], dict[str, Any]]:
     reference = image_reference(image, settings)
-    with tempfile.TemporaryDirectory(prefix="sbom-image-") as directory:
-        root = Path(directory)
-        docker_config = root / "docker"
-        docker_config.mkdir()
-        environment = clean_environment()
-        # Keep daemon transport settings, but use no ambient credential helper/plugin config.
-        environment.pop("DOCKER_CONFIG", None)
-        environment["DOCKER_CONFIG"] = str(docker_config)
-        username = secret("SBOM_REGISTRY_USERNAME")
-        password = secret("SBOM_REGISTRY_PASSWORD")
-        if bool(username) != bool(password):
-            raise ValueError("Registry username and password must both be configured")
-        auths: dict[str, Any] = {}
-        if username:
-            auths[reference.split("/", 1)[0]] = {
-                "auth": base64.b64encode(f"{username}:{password}".encode()).decode()}
-        config_path = docker_config / "config.json"
-        config_path.write_text(json.dumps({"auths": auths}), encoding="utf-8")
-        config_path.chmod(0o600)
+    target = "registry:" + reference
+    if settings.image_archive:
+        archive = Path(settings.image_archive).resolve(strict=True)
+        if not archive.is_file() or archive.stat().st_size > settings.max_archive_bytes:
+            raise ValueError("Local image archive is invalid or oversized")
+        target = "docker-archive:" + str(archive)
+    data = _syft(["scan", target, "--platform", settings.image_platform,
+                  "--override-default-catalogers", "image", "--scope", "squashed", "-o", "syft-json"],
+                 settings, output=output)
+    provenance = _image_identity(data, reference, settings)
+    provenance["payload_evidence"] = collect_payload(data)
+    for entry in data.get("files", []):
+        entry.pop("contents", None)
+    # Syft embeds its effective configuration. Do not export credential-bearing configuration.
+    descriptor = data.get("descriptor", {})
+    configuration = descriptor.pop("configuration", {})
+    catalogers = configuration.get("catalogers", {}) if isinstance(configuration, dict) else {}
+    used = catalogers.get("used", []) if isinstance(catalogers, dict) else []
+    if isinstance(used, list) and used and all(isinstance(name, str) and re.fullmatch(r"[a-z0-9-]+", name) for name in used):
+        descriptor["configuration"] = {"catalogers": {"used": used}}
 
-        def docker(*args: str, monitored_paths: tuple[tuple[Path, int], ...] = ()) -> str:
-            return run_command([settings.docker_binary, *args], cwd=root, env=environment,
-                               timeout=settings.image_timeout, max_output_bytes=settings.max_output_bytes,
-                               label=f"Docker {args[0]}", monitored_paths=monitored_paths)
-
-        platform_digest = None
-        immutable_reference = reference
-        if settings.pull_image:
-            manifest = _json(docker("manifest", "inspect", reference), "Image manifest")
-            platform_digest = _platform_digest(manifest, settings.image_platform)
-            repository = reference.split("@", 1)[0]
-            if ":" in repository.rsplit("/", 1)[-1]:
-                repository = repository.rsplit(":", 1)[0]
-            pull_reference = f"{repository}@{platform_digest}" if platform_digest else reference
-            pull_output = docker("pull", "--platform", settings.image_platform, pull_reference)
-            digests = re.findall(r"(?m)^Digest:\s*(sha256:[0-9a-f]{64})\s*$", pull_output)
-            if len(set(digests)) != 1:
-                raise RuntimeError("Docker pull did not report one immutable registry digest")
-            pulled_digest = digests[0]
-            if platform_digest and platform_digest != pulled_digest:
-                raise RuntimeError("Pulled digest differs from the selected platform manifest")
-            requested_digest = reference.split("@", 1)[1] if "@" in reference else None
-            if platform_digest is None and requested_digest and requested_digest != pulled_digest:
-                raise RuntimeError("Pulled digest differs from the requested digest")
-            platform_digest = platform_digest or pulled_digest
-            immutable_reference = f"{repository}@{platform_digest}"
-        inspect = _json(docker("image", "inspect", immutable_reference, "--format", "{{json .}}"),
-                        "Docker image inspect")
-        image_id = inspect.get("Id", "")
-        if not re.fullmatch(r"sha256:[0-9a-f]{64}", image_id):
-            raise RuntimeError("Docker image has no immutable local image ID")
-        if not settings.pull_image:
-            immutable_reference = image_id
-        actual_platform = f"{inspect.get('Os', '')}/{inspect.get('Architecture', '')}"
-        if inspect.get("Variant"):
-            actual_platform += f"/{inspect['Variant']}"
-        requested_parts = settings.image_platform.split("/")
-        if actual_platform.split("/")[:len(requested_parts)] != requested_parts:
-            raise RuntimeError("Pulled image platform differs from the configured platform")
-        archive = root / "image.tar"
-        docker("image", "save", "--platform", settings.image_platform, "--output", str(archive), image_id,
-               monitored_paths=((archive, settings.max_archive_bytes),))
-        if not archive.is_file() or archive.stat().st_size == 0:
-            raise RuntimeError("Docker did not create a readable image archive")
-        archive_sha256 = _sha256(archive)
-        config_digest = _archive_config_digest(archive, inspect)
-        data = _syft(["scan", f"docker-archive:{archive}", "--override-default-catalogers", "image",
-                      "--scope", "squashed", "-o", "syft-json"], settings, output=output)
-        metadata = data.get("source", {}).get("metadata", {})
-        if metadata.get("imageID") != config_digest:
-            output.unlink(missing_ok=True)
-            raise RuntimeError("Syft scanned image identity does not match the saved image configuration")
-        payload_evidence = collect_payload(data, archive)
-        provenance = {"image": reference, "immutable_reference": immutable_reference,
-                      "payload_evidence": payload_evidence,
-                      "image_digest": platform_digest or image_id, "platform_digest": platform_digest,
-                      "registry_digest": platform_digest,
-                      "acquisition": "registry" if settings.pull_image else "local",
-                      "image_id": image_id, "requested_platform": settings.image_platform,
-                      "image_config_digest": config_digest,
-                      "platform": actual_platform, "repo_digests": inspect.get("RepoDigests", []),
-                      "archive_sha256": archive_sha256, "syft_version": SYFT_VERSION,
-                      "scope": "squashed", "container_started": False, "build_link": "unverified"}
-        return data, provenance
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=output.parent, delete=False) as stream:
+        pending = Path(stream.name)
+        json.dump(data, stream)
+    try:
+        pending.replace(output)
+    finally:
+        pending.unlink(missing_ok=True)
+    return data, provenance
 
 
 def convert(selected_path: Path, output_path: Path, settings: Settings) -> dict[str, Any]:

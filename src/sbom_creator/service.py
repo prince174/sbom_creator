@@ -65,7 +65,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         yield
         executor.shutdown(wait=True, cancel_futures=False)
 
-    app = FastAPI(title="SBOM Creator", version="0.4.0", lifespan=lifespan)
+    app = FastAPI(title="SBOM Creator", version="0.5.0", lifespan=lifespan)
 
     def auth(authorization: str | None = Header(default=None)):
         token = api_token()
@@ -110,7 +110,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
     @app.post("/v1/analyses", status_code=202, dependencies=[Depends(auth)])
     def submit(request: Request):
         configured = settings or Settings.from_env()
-        if not configured.pull_image:
+        if configured.image_archive:
             raise HTTPException(503, "Remote API requires registry image acquisition")
         try:
             validate_inputs(request.repository_url, request.commit, request.image, configured)

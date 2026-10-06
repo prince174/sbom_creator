@@ -22,10 +22,9 @@ class Settings:
     bitbucket_hosts: tuple[str, ...] = ()
     registry_hosts: tuple[str, ...] = ()
     git_binary: str = "git"
-    docker_binary: str = "docker"
     syft_binary: str = "syft"
     image_platform: str = "linux/amd64"
-    pull_image: bool = True
+    image_archive: str = ""
     bitbucket_auth_mode: str = "bearer"
     checkout_timeout: int = 300
     scan_timeout: int = 900
@@ -48,6 +47,8 @@ class Settings:
 
     @classmethod
     def from_env(cls) -> Settings:
+        if os.getenv("SBOM_PULL_IMAGE") or os.getenv("SBOM_DOCKER_BINARY"):
+            raise ValueError("Legacy Docker settings are unsupported; use registry or explicit image archive")
         defaults = cls()
         values: dict[str, Any] = {}
         for key in cls.__dataclass_fields__:
@@ -130,8 +131,7 @@ def clean_environment() -> dict[str, str]:
                "TEMP", "TMP", "TMPDIR", "LANG", "LC_ALL", "LC_CTYPE", "TZ",
                "PROCESSOR_ARCHITECTURE", "NUMBER_OF_PROCESSORS",
                "HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY",
-               "SSL_CERT_FILE", "SSL_CERT_DIR", "DOCKER_HOST", "DOCKER_TLS_VERIFY",
-               "DOCKER_CERT_PATH", "DOCKER_API_VERSION"}
+               "SSL_CERT_FILE", "SSL_CERT_DIR"}
     return {key: value for key, value in os.environ.items() if key.upper() in allowed}
 
 

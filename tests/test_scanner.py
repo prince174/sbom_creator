@@ -1,9 +1,8 @@
 from __future__ import annotations
 
+import base64
 import hashlib
-import io
 import json
-import tarfile
 from pathlib import Path
 
 import pytest
@@ -64,86 +63,84 @@ def test_invalid_scanner_output_not_published(tmp_path, monkeypatch):
     assert not (tmp_path / "source.json").exists()
 
 
-def test_platform_manifest_selection_is_exact():
-    manifest = {"manifests": [
-        {"digest": DIGEST, "platform": {"os": "linux", "architecture": "amd64"}},
-        {"digest": "sha256:" + "c" * 64, "platform": {"os": "linux", "architecture": "arm64"}}]}
-    assert scanner._platform_digest(manifest, "linux/amd64") == DIGEST
-    with pytest.raises(RuntimeError, match="unambiguous"):
-        scanner._platform_digest(manifest, "linux/s390x")
-    manifest["manifests"].append(manifest["manifests"][0])
-    with pytest.raises(RuntimeError, match="unambiguous"):
-        scanner._platform_digest(manifest, "linux/amd64")
+def registry_inventory():
+    data = inventory()
+    manifest = json.dumps({"schemaVersion": 2, "config": {"digest": CONFIG_DIGEST}}).encode()
+    metadata = data["source"]["metadata"]
+    metadata.update(manifest=base64.b64encode(manifest).decode(), config=base64.b64encode(CONFIG).decode(),
+        manifestDigest="sha256:" + hashlib.sha256(manifest).hexdigest(),
+        os="linux", architecture="amd64", layers=[{"digest": DIGEST}], repoDigests=[])
+    return data
 
 
-def fake_docker(monkeypatch, calls, wrong_image=False):
-    def run(args, **kwargs):
-        calls.append(args)
-        if args[1] == "manifest":
-            return json.dumps({"manifests": [{"digest": DIGEST,
-                "platform": {"os": "linux", "architecture": "amd64"}}]})
-        if args[1] == "pull":
-            return f"Digest: {DIGEST}\nStatus: downloaded"
-        if args[1:3] == ["image", "inspect"]:
-            return json.dumps({"Id": IMAGE_ID, "Os": "linux", "Architecture": "amd64",
-                               "RepoDigests": ["registry.example/app@" + DIGEST],
-                               "RootFS": {"Layers": [DIGEST]}})
-        if args[1:3] == ["image", "save"]:
-            with tarfile.open(Path(args[args.index("--output") + 1]), "w") as archive:
-                for name, data in (("manifest.json", b'[{"Config":"config.json"}]'), ("config.json", CONFIG)):
-                    member = tarfile.TarInfo(name)
-                    member.size = len(data)
-                    archive.addfile(member, io.BytesIO(data))
-            return ""
-        raise AssertionError(args)
-
-    def syft(args, settings, *, output):
-        data = inventory()
-        if wrong_image:
-            data["source"]["metadata"]["imageID"] = "sha256:" + "c" * 64
-        output.write_text(json.dumps(data))
-        return data
-    monkeypatch.setattr(scanner, "run_command", run)
-    monkeypatch.setattr(scanner, "_syft", syft)
-
-
-def test_image_resolved_by_platform_digest_then_saved_by_immutable_id(tmp_path, monkeypatch):
+def test_direct_registry_no_daemon_and_private_contents_not_published(tmp_path, monkeypatch):
     calls = []
-    fake_docker(monkeypatch, calls)
-    result, provenance = scanner.scan_image("registry.example/app:latest", tmp_path / "image.json",
-                                            Settings(registry_hosts=("registry.example",)))
-    assert result == inventory()
-    pull = next(args for args in calls if args[1] == "pull")
-    assert pull[-1] == "registry.example/app@" + DIGEST
-    save = next(args for args in calls if args[1:3] == ["image", "save"])
-    assert save[-1] == IMAGE_ID
-    assert provenance["image_id"] == IMAGE_ID
-    assert provenance["image_config_digest"] == CONFIG_DIGEST
-    assert provenance["platform_digest"] == DIGEST
-    assert provenance["container_started"] is False
-    assert len(provenance["archive_sha256"]) == 64
-    assert all("run" not in args and "create" not in args for args in calls)
-
-
-def test_local_image_mode_does_not_claim_registry_digest(tmp_path, monkeypatch):
-    calls = []
-    fake_docker(monkeypatch, calls)
-    _, provenance = scanner.scan_image("registry.example/app:test", tmp_path / "image.json",
-        Settings(registry_hosts=("registry.example",), pull_image=False))
-    assert provenance["acquisition"] == "local"
-    assert provenance["registry_digest"] is None
-    assert provenance["platform_digest"] is None
-    assert provenance["immutable_reference"] == IMAGE_ID
-    assert all(args[1] not in ("pull", "manifest") for args in calls)
-
-
-def test_wrong_archive_identity_blocks_output(tmp_path, monkeypatch):
-    fake_docker(monkeypatch, [], wrong_image=True)
+    data = registry_inventory()
+    data["files"] = [{"location": {"path": "/unused"}, "contents": "c2VjcmV0"}]
+    data["descriptor"]["configuration"] = {"password": "private", "catalogers": {"used": ["file-content-cataloger"]}}
+    def fake(args, **kwargs):
+        calls.append((args, kwargs))
+        if args[1] == "version":
+            return json.dumps({"version": SYFT_VERSION})
+        assert args[2] == "registry:registry.example/app:latest"
+        assert "--platform" in args
+        assert "DOCKER_HOST" not in kwargs["env"]
+        assert kwargs["env"]["SYFT_REGISTRY_AUTH_PASSWORD"] == "fixture-secret"
+        assert "fixture-secret" not in str(args)
+        assert kwargs["monitored_paths"]
+        return json.dumps(data)
+    monkeypatch.setenv("DOCKER_HOST", "tcp://untrusted:2375")
+    monkeypatch.setenv("SBOM_REGISTRY_USERNAME", "fixture-user")
+    monkeypatch.setenv("SBOM_REGISTRY_PASSWORD", "fixture-secret")
+    monkeypatch.setattr(scanner, "run_command", fake)
     output = tmp_path / "image.json"
-    with pytest.raises(RuntimeError, match="identity"):
-        scanner.scan_image("registry.example/app:latest", output,
-                           Settings(registry_hosts=("registry.example",)))
+    _, provenance = scanner.scan_image("registry.example/app:latest", output,
+        Settings(registry_hosts=("registry.example",)))
+    assert all(args[0] == "syft" for args, _ in calls)
+    assert "contents" not in output.read_text() and "private" not in output.read_text()
+    assert json.loads(output.read_text())["descriptor"]["configuration"] == {"catalogers": {"used": ["file-content-cataloger"]}}
+    assert provenance["acquisition_method"] == "syft-direct-v1"
+    assert provenance["container_started"] is False
+
+
+@pytest.mark.parametrize("field,value", [("imageID", DIGEST), ("manifestDigest", DIGEST),
+    ("architecture", "arm64"), ("manifest", "not base64"), ("layers", [])])
+def test_invalid_identity_never_publishes(tmp_path, monkeypatch, field, value):
+    data = registry_inventory()
+    data["source"]["metadata"][field] = value
+    monkeypatch.setattr(scanner, "_syft", lambda *a, **k: data)
+    output = tmp_path / "image.json"
+    with pytest.raises((RuntimeError, ValueError)):
+        scanner.scan_image("registry.example/app:latest", output, Settings(registry_hosts=("registry.example",)))
     assert not output.exists()
+
+
+def test_wrong_requested_digest_blocks_output(tmp_path, monkeypatch):
+    monkeypatch.setattr(scanner, "_syft", lambda *a, **k: registry_inventory())
+    with pytest.raises(RuntimeError, match="Requested registry digest"):
+        scanner.scan_image("registry.example/app@" + DIGEST, tmp_path / "out",
+                          Settings(registry_hosts=("registry.example",)))
+
+
+def test_parent_index_digest_is_accepted(tmp_path, monkeypatch):
+    data = registry_inventory()
+    data["source"]["metadata"]["repoDigests"] = ["registry.example/app@" + DIGEST]
+    monkeypatch.setattr(scanner, "_syft", lambda *a, **k: data)
+    scanner.scan_image("registry.example/app@" + DIGEST, tmp_path / "out",
+                      Settings(registry_hosts=("registry.example",)))
+
+
+def test_archive_mode_is_explicit_and_has_no_registry_claim(tmp_path, monkeypatch):
+    archive = tmp_path / "fixture.tar"
+    archive.write_bytes(b"fixture")
+    def fake(args, *a, **k):
+        assert args[1] == "docker-archive:" + str(archive.resolve())
+        return registry_inventory()
+    monkeypatch.setattr(scanner, "_syft", fake)
+    _, provenance = scanner.scan_image("registry.example/app:fixture", tmp_path / "out",
+        Settings(registry_hosts=("registry.example",), image_archive=str(archive)))
+    assert provenance["registry_digest"] is None
+    assert provenance["acquisition"] == "archive"
 
 
 def test_convert_pins_cyclonedx_16(tmp_path, monkeypatch):
@@ -158,3 +155,36 @@ def test_convert_pins_cyclonedx_16(tmp_path, monkeypatch):
     result = scanner.convert(source, tmp_path / "final.json", Settings())
     assert result["specVersion"] == "1.6"
     assert "cyclonedx-json@1.6" in calls[-1]
+
+
+def test_archive_empty_summary_platform_uses_verified_config(tmp_path, monkeypatch):
+    data = registry_inventory()
+    data["source"]["metadata"].update(os="", architecture="")
+    monkeypatch.setattr(scanner, "_syft", lambda *a, **k: data)
+    archive = tmp_path / "fixture.tar"
+    archive.write_bytes(b"fixture")
+    _, provenance = scanner.scan_image("registry.example/app:fixture", tmp_path / "out",
+        Settings(registry_hosts=("registry.example",), image_archive=str(archive)))
+    assert provenance["platform"] == "linux/amd64"
+
+
+def test_registry_missing_credentials_pair_fails_before_scan(tmp_path, monkeypatch):
+    monkeypatch.setenv("SBOM_REGISTRY_USERNAME", "fixture")
+    monkeypatch.delenv("SBOM_REGISTRY_PASSWORD", raising=False)
+    monkeypatch.delenv("SBOM_REGISTRY_PASSWORD_FILE", raising=False)
+    monkeypatch.setattr(scanner, "run_command", lambda *a, **k: pytest.fail("must not invoke scanner"))
+    with pytest.raises(ValueError, match="both"):
+        scanner.scan_image("registry.example/app:1", tmp_path / "out", Settings(registry_hosts=("registry.example",)))
+
+
+def test_scan_failure_does_not_publish_intermediate_contents(tmp_path, monkeypatch):
+    def fail(args, **kwargs):
+        if args[1] == "version":
+            return json.dumps({"version": SYFT_VERSION})
+        assert kwargs["timeout"] == 3
+        raise RuntimeError("Syft timed out")
+    monkeypatch.setattr(scanner, "run_command", fail)
+    with pytest.raises(RuntimeError, match="timed out"):
+        scanner.scan_image("registry.example/app:1", tmp_path / "out",
+            Settings(registry_hosts=("registry.example",), image_timeout=3))
+    assert not (tmp_path / "out").exists()

@@ -1,5 +1,8 @@
 # Проверка реализации
 
+Текущая версия 0.5.0: [переход на прямой Syft, регрессия и ограничения проверки](direct-syft-v0.5.md).
+
+
 Версия 0.4.0 разделяет основной и системный SBOM. Проверки: [Windows](verification-0.4.0-windows.xml), [Linux](verification-0.4.0-linux.xml), [сквозной API](verification-http-v0.4.json), [разделение 60 сохранённых результатов](verification-inventory-views-v1.json). Принцип и ограничения описаны в [README](../README.md).
 
 Историческая версия 0.3.0 без модели: [изменения и новые проверки](rules-v3.md).

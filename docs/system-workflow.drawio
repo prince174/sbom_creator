@@ -14,7 +14,7 @@
         <mxCell id="git" value="&lt;b&gt;Git clone + checkout&lt;/b&gt;&lt;br&gt;Точный commit · проверка HEAD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="160" y="290" width="320" height="90" />
         </mxCell>
-        <mxCell id="pull" value="&lt;b&gt;Получение образа&lt;/b&gt;&lt;br&gt;Digest · platform · image ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
+        <mxCell id="pull" value="&lt;b&gt;Получение образа&lt;/b&gt;&lt;br&gt;Syft registry · без Docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="720" y="290" width="320" height="90" />
         </mxCell>
         <mxCell id="source" value="&lt;b&gt;Syft: исходники&lt;/b&gt;&lt;br&gt;source.syft.json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eff8;strokeColor=#64829a;fontColor=#152e43;fontSize=16;spacing=10;" vertex="1" parent="1">

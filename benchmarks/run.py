@@ -16,6 +16,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import tarfile
 import time
 from collections import Counter
 from datetime import UTC, datetime
@@ -298,6 +299,18 @@ def build_image(row: dict, case: Path, timeout: int) -> None:
                build_recipe_sha256=hashlib.sha256(dockerfile.read_bytes()).hexdigest())
 
 
+
+def export_fixture(row, case, timeout):
+    run_command(["docker", "image", "save", "-o", str(case / "fixture.tar"), row["image_id"]],
+                case / "archive.log", timeout=timeout)
+    with tarfile.open(case / "fixture.tar") as saved:
+        manifests = json.load(saved.extractfile("manifest.json"))
+        assert len(manifests) == 1
+        config_bytes = saved.extractfile(manifests[0]["Config"]).read(8 * 1024 * 1024 + 1)
+        assert len(config_bytes) <= 8 * 1024 * 1024
+        row["image_config_digest"] = "sha256:" + hashlib.sha256(config_bytes).hexdigest()
+
+
 def analyze(row: dict, case: Path, mode: str, timeout: int, *, fresh: bool = False) -> None:
     if not row.get("image_id"):
         raise RuntimeError("No completed native image build")
@@ -319,7 +332,7 @@ def analyze(row: dict, case: Path, mode: str, timeout: int, *, fresh: bool = Fal
     destination = cached if cached and (cached / "summary.json").exists() else case / ("analysis-" + mode + "-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%S%f"))
     row["analysis_directory"] = str(destination)
     environment = dict(os.environ)
-    environment.update(SBOM_SYFT_BINARY=str(ROOT / ".tools" / "syft" / "syft.exe"), SBOM_PULL_IMAGE="false", SBOM_REGISTRY_HOSTS="docker.io")
+    environment.update(SBOM_SYFT_BINARY=str(ROOT / ".tools" / "syft" / "syft.exe"), SBOM_IMAGE_ARCHIVE=str((case / "fixture.tar").resolve()), SBOM_REGISTRY_HOSTS="docker.io")
     command = [sys.executable, "-m", "sbom_creator.cli"]
     if row.get("source_host") == "bitbucket.org":
         from inspect_bitbucket import credentials
@@ -330,6 +343,7 @@ def analyze(row: dict, case: Path, mode: str, timeout: int, *, fresh: bool = Fal
     else:
         command += ["analyze-local", "--source", str(case / "src")]
     if not (destination / "summary.json").exists():
+        export_fixture(row, case, timeout)
         service_started = time.monotonic()
         run_command(command + ["--image", "docker.io/" + row["image_reference"].removeprefix("docker.io/"), "--output", str(destination), "--mode", mode], case / "analyze.log", timeout=timeout, env=environment)
         row["last_analysis_seconds"] = round(time.monotonic() - service_started, 3)
@@ -357,7 +371,11 @@ def read_analysis(row: dict, destination: Path, mode: str, *, expected_final_sha
     validate_syft(selected)
     validate_cyclonedx(final)
     provenance = json.loads((destination / "provenance.json").read_text(encoding="utf-8"))
-    if provenance.get("image", {}).get("image_id") != row["image_id"]:
+    image_provenance = provenance.get("image", {})
+    if image_provenance.get("acquisition_method") == "syft-direct-v1":
+        if not row.get("image_config_digest") or image_provenance.get("image_config_digest") != row["image_config_digest"]:
+            raise RuntimeError("Published image config differs from exported benchmark build")
+    elif image_provenance.get("image_id") != row["image_id"]:
         raise RuntimeError("Published image ID differs from benchmark build")
     config_digest = provenance.get("image", {}).get("image_config_digest")
     if not config_digest or config_digest != image.get("source", {}).get("metadata", {}).get("imageID"):

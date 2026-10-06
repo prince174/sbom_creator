@@ -1,3 +1,5 @@
+import base64
+import copy
 import io
 import json
 import tarfile
@@ -7,7 +9,22 @@ import pytest
 from test_core import doc, package
 
 from sbom_creator.core import artifact_identity, reconcile
-from sbom_creator.payload import collect
+from sbom_creator.payload import collect as original_collect
+
+
+def collect(document, archive):
+    legacy = original_collect(document, archive)
+    enriched = copy.deepcopy(document)
+    with tarfile.open(archive) as outer, tarfile.open(fileobj=outer.extractfile("layer.tar")) as layer:
+        for entry in enriched["files"]:
+            if entry["metadata"]["type"] == "RegularFile":
+                stream = layer.extractfile(entry["location"]["path"].lstrip("/"))
+                if stream:
+                    entry["contents"] = base64.b64encode(stream.read()).decode()
+    current = original_collect(enriched)
+    assert {k: {a: b for a, b in v.items() if a != "method"} for k,v in legacy.items()} == {k: {a: b for a, b in v.items() if a != "method"} for k,v in current.items()}
+    return current
+
 
 
 def archive_fixture(tmp_path, contents, artifacts, missing=()):
@@ -121,3 +138,30 @@ def test_ci_reference_keeps_unknown_but_gets_correct_review_scope():
                          purl="pkg:github/actions/checkout@v4", foundBy="github-actions-usage-cataloger"))
     row = reconcile(source, doc())["decisions"][0]
     assert row["decision"] == "UNKNOWN" and row["review_reason"] == "CI_CONFIGURATION"
+
+
+@pytest.mark.parametrize("content", [None, "invalid-base64!", base64.b64encode(b"truncated").decode()])
+def test_syft_contents_absent_invalid_or_truncated_never_confirm(content):
+    from sbom_creator.payload import SyftFiles
+    entry = {"location": {"path": "/data"}, "metadata": {"type": "RegularFile", "size": 12}}
+    if content is not None:
+        entry["contents"] = content
+    files = SyftFiles({"files": [entry]})
+    if content is None:
+        assert files.read("/data") is None
+    else:
+        with pytest.raises(ValueError):
+            files.read("/data")
+
+
+def test_syft_contents_cannot_override_symlink_or_exceed_limit():
+    from sbom_creator.payload import SyftFiles
+    entry = {"location": {"path": "/data"}, "metadata": {"type": "SymbolicLink", "size": 3},
+             "contents": base64.b64encode(b"abc").decode()}
+    files = SyftFiles({"files": [entry]})
+    assert files.read("/data") is None
+    entry["metadata"]["type"] = "RegularFile"
+    assert files.read("/data", limit=2) is None
+    assert files.read("/data", limit=3) == b"abc"
+    with pytest.raises(ValueError, match="Ambiguous"):
+        SyftFiles({"files": [entry, entry]})

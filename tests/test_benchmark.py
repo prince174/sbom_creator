@@ -58,6 +58,7 @@ def test_source_inventory_ignores_manifests_declarations_and_untracked_build_out
 
 
 def test_analyze_requires_real_final_publication(monkeypatch, tmp_path):
+    monkeypatch.setattr(runner, "export_fixture", lambda *args: None)
     monkeypatch.setattr(runner, "run_command", lambda *args, **kwargs: "")
     with pytest.raises(RuntimeError, match="without final"):
         runner.analyze({"image_id": "sha256:" + "a" * 64, "image_reference": "docker.io/example:test"}, tmp_path, "rules", 60)
@@ -205,3 +206,16 @@ def test_read_analysis_rejects_inconsistent_selection_and_coverage(published_res
     path.write_text(json.dumps(data), encoding="utf-8")
     with pytest.raises(RuntimeError, match=match):
         runner.read_analysis(row, output, "rules")
+
+
+def test_direct_syft_benchmark_requires_exported_config_identity(published_result):
+    row, output = published_result()
+    path = output / "provenance.json"
+    data = json.loads(path.read_text("utf-8"))
+    row.pop("image_config_digest", None)
+    data["image"]["acquisition_method"] = "syft-direct-v1"
+    path.write_text(json.dumps(data), encoding="utf-8")
+    with pytest.raises(RuntimeError, match="exported benchmark"):
+        runner.read_analysis(row, output, "rules")
+    row["image_config_digest"] = data["image"]["image_config_digest"]
+    runner.read_analysis(row, output, "rules")

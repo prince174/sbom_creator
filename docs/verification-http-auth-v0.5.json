@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "scope": "Actual test Bitbucket clone, local HTTPS registry pull, installed HTTP API, all artifact downloads",
+  "base_service_image_id": "sha256:7f4fc7459b4cf323044789283212950094af9800b707cbd46fc5e525fb3ad886",
+  "service_image_id": "sha256:df9fc03976f9a10539d93306c3aad6cdeabac32dfab197def62f89413738f9bf",
+  "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+  "commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+  "submitted_image": "localhost:1976/sbom-test/python-service:973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+  "registry_digest": "sha256:d97f5da3b4fd66376fa8c413c530a3d78babdf57a5ec8208ab9c0bbf7feb602b",
+  "source_build_image_config_digest_matches": true,
+  "unauthenticated_http": 401,
+  "accepted_http": 202,
+  "status": "succeeded",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 1
+    },
+    "unknown_groups": {
+      "image_evidence": 1
+    },
+    "source_count": 0,
+    "image_count": 114,
+    "selected_count": 113,
+    "final_count": 8,
+    "os_count": 105,
+    "full_count": 113,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 108,
+      "UNKNOWN": 1
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 6.246
+  },
+  "elapsed_seconds": 16.375,
+  "resource_limit": {
+    "cpus": 2,
+    "memory_bytes": 1073741824,
+    "pids": 128
+  },
+  "resource_samples": [
+    {
+      "CPUPerc": "8.06%",
+      "MemUsage": "48.88MiB / 1GiB",
+      "MemPerc": "4.77%",
+      "PIDs": "6"
+    },
+    {
+      "CPUPerc": "109.32%",
+      "MemUsage": "169.3MiB / 1GiB",
+      "MemPerc": "16.53%",
+      "PIDs": "10"
+    },
+    {
+      "CPUPerc": "99.12%",
+      "MemUsage": "141.7MiB / 1GiB",
+      "MemPerc": "13.84%",
+      "PIDs": "11"
+    },
+    {
+      "CPUPerc": "153.91%",
+      "MemUsage": "61.54MiB / 1GiB",
+      "MemPerc": "6.01%",
+      "PIDs": "3"
+    },
+    {
+      "CPUPerc": "99.99%",
+      "MemUsage": "75.56MiB / 1GiB",
+      "MemPerc": "7.38%",
+      "PIDs": "3"
+    },
+    {
+      "CPUPerc": "99.48%",
+      "MemUsage": "96.19MiB / 1GiB",
+      "MemPerc": "9.39%",
+      "PIDs": "3"
+    },
+    {
+      "CPUPerc": "80.32%",
+      "MemUsage": "77.45MiB / 1GiB",
+      "MemPerc": "7.56%",
+      "PIDs": "3"
+    }
+  ],
+  "model_calls": 0,
+  "credentials_in_report": false,
+  "downloaded_directory": "G:\\code\\sbom_creator\\benchmarks\\.work\\http-v0.5-release\\downloaded",
+  "artifacts_sha256": {
+    "coverage.json": "4600e672621de5889477340e4e9c761de1aaffd7701f7bb9dd1eb2b4a6673d20",
+    "decisions.json": "ec8b12627e72e7672cd32bc164a68996a86865ce5ba8e502a6231aacc59d5f5e",
+    "final.cdx.json": "127ce722f462fac363245d15fedfca8b41975e3053aa4300c49f45c108d5680f",
+    "full.cdx.json": "b9deddb943757490d7e9ec48b52542d279ab32a5f4bf9de49b2aef89664c471c",
+    "image.syft.json": "0134b62219e380a308a683610f0a3a4826401969da7a5a8eaca964767c92bf38",
+    "os.cdx.json": "7775c8007320cedbc60e9533cec814e1bfdd2cab5ebcf8872f46d4b79c63921d",
+    "provenance.json": "8a3d75b3184cbc5d582c87d40b6ecc86845d17197d1b384413a276d1f34832ee",
+    "review.json": "ae06ff6ec003dbbaa180d223fdda109b51d1c8c47adc5d7be66af7dd492c1d1c",
+    "selected.syft.json": "cec9fec2583606f5dffdfec54d25ed3fc29de29fda4365ffd1a430f2c976a8a3",
+    "source.syft.json": "982fadae09324d4de6f22d5f66dbd648f2dba830c4075fd3ee7570f6e1b001f0",
+    "summary.json": "0bb36b4359a82796a74dcd376a66963f080deea5c2e2a5b6ba0ca6e8b75e9c51"
+  },
+  "registry_tls": true,
+  "registry_basic_auth": true,
+  "negative_registry_checks": {
+    "wrong_password": "rejected",
+    "untrusted_ca": "rejected"
+  },
+  "runtime_uid": 10001,
+  "docker_executable_present": false,
+  "docker_socket_mounted": false,
+  "read_only_root": true,
+  "capabilities_dropped": "ALL",
+  "test_ca_installed_on_host": false,
+  "build_link": "unverified; test build/config correspondence checked, no production attestation"
+}

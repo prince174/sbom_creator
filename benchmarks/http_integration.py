@@ -7,6 +7,7 @@ All owned containers are removed afterwards; evidence/registry data stay in .wor
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import secrets
@@ -60,8 +61,20 @@ def run(work, report, credential_file, openssl):
     (build / "ca.crt").write_bytes((tls / "ca.crt").read_bytes())
     base_image = f"sbom-creator:{__version__}"
     base_image_id = command(["docker", "image", "inspect", base_image, "--format", "{{.Id}}"])
-    (build / "Dockerfile").write_text(f"FROM {base_image}\nCOPY ca.crt /usr/local/share/ca-certificates/fixture.crt\nRUN update-ca-certificates\n", encoding="utf-8")
+    (build / "Dockerfile").write_text(f"FROM {base_image}\nUSER 0\nCOPY ca.crt /usr/local/share/ca-certificates/fixture.crt\nRUN update-ca-certificates\nUSER 10001:10001\n", encoding="utf-8")
     (build / ".dockerignore").write_text("*\n!ca.crt\n!Dockerfile\n", encoding="utf-8")
+    registry_password = secrets.token_urlsafe(32)
+    registry_env = dict(os.environ, FIXTURE_PASSWORD=registry_password)
+    password_hash = command(["docker", "run", "--rm", "--network=none", "-e", "FIXTURE_PASSWORD",
+        base_image, "python", "-c", "import crypt,os; print(crypt.crypt(os.environ['FIXTURE_PASSWORD'],crypt.mksalt(crypt.METHOD_BLOWFISH)))"], env=registry_env)
+    auth = work / "auth"
+    auth.mkdir()
+    (auth / "htpasswd").write_text("fixture:" + password_hash + "\n", encoding="utf-8")
+    docker_config = work / "fixture-client"
+    docker_config.mkdir()
+    (docker_config / "config.json").write_text(json.dumps({"auths": {f"localhost:{registry_port}":
+        {"auth": base64.b64encode(("fixture:" + registry_password).encode()).decode()}}}), encoding="utf-8")
+    push_env = dict(os.environ, DOCKER_CONFIG=str(docker_config))
     suffix = secrets.token_hex(6)
     test_image = "sbom-creator-http-fixture:" + suffix
     command(["docker", "build", "-t", test_image, str(build)])
@@ -88,6 +101,9 @@ def run(work, report, credential_file, openssl):
             "-p", f"127.0.0.1:{registry_port}:{registry_port}", "-p", f"127.0.0.1:{api_port}:8080",
             "--mount", f"type=bind,source={tls},target=/certs,readonly",
             "--mount", f"type=bind,source={storage},target=/var/lib/registry",
+            "--mount", f"type=bind,source={auth},target=/auth,readonly",
+            "-e", "REGISTRY_AUTH=htpasswd", "-e", "REGISTRY_AUTH_HTPASSWD_REALM=fixture",
+            "-e", "REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd",
             "-e", f"REGISTRY_HTTP_ADDR=0.0.0.0:{registry_port}",
             "-e", "REGISTRY_HTTP_TLS_CERTIFICATE=/certs/ca.crt",
             "-e", "REGISTRY_HTTP_TLS_KEY=/certs/key.pem", "registry:2.8.3"])
@@ -95,20 +111,47 @@ def run(work, report, credential_file, openssl):
         time.sleep(2)
         target = f"localhost:{registry_port}/sbom-test/python-service:{row['commit']}"
         command(["docker", "tag", row["image_id"], target])
-        command(["docker", "push", target], timeout=300)
+        command(["docker", "push", target], timeout=300, env=push_env)
         # Existing authorization covers reading this Bitbucket token; no admin writes.
         from inspect_bitbucket import credentials
         git = credentials(credential_file)
-        env = dict(os.environ, SBOM_API_TOKEN=token, SBOM_BITBUCKET_TOKEN=git["BITBUCKET_TOKEN"])
+        env = dict(os.environ, SBOM_API_TOKEN=token, SBOM_BITBUCKET_TOKEN=git["BITBUCKET_TOKEN"],
+                   SBOM_REGISTRY_USERNAME="fixture", SBOM_REGISTRY_PASSWORD=registry_password)
         service = command(["docker", "run", "-d", "--name", "sbom-test-api-" + suffix,
             "--label", "sbom-creator.test=" + suffix, "--network", "container:" + registry,
             "--cpus=2", "--memory=1g", "--pids-limit=128",
-            "--mount", "type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock",
+            "--read-only", "--cap-drop=ALL", "--security-opt=no-new-privileges",
+            "--tmpfs", "/tmp:rw,nosuid,nodev,size=512m",
             "--mount", f"type=bind,source={jobs},target=/workspace",
             "-e", "SBOM_API_TOKEN", "-e", "SBOM_BITBUCKET_TOKEN",
+            "-e", "SBOM_REGISTRY_USERNAME", "-e", "SBOM_REGISTRY_PASSWORD",
             "-e", "SBOM_BITBUCKET_AUTH_MODE=basic", "-e", "SBOM_BITBUCKET_HOSTS=bitbucket.org",
             "-e", f"SBOM_REGISTRY_HOSTS=localhost:{registry_port}", test_image], env=env)
         containers.append(service)
+        security = json.loads(command(["docker", "inspect", service]))[0]
+        assert security["Config"]["User"] == "10001:10001"
+        assert security["HostConfig"]["ReadonlyRootfs"]
+        assert "ALL" in security["HostConfig"]["CapDrop"]
+        assert not any("sock" in mount["Destination"] for mount in security["Mounts"])
+        assert command(["docker", "exec", service, "python", "-c",
+            "import os,shutil; assert os.getuid()==10001; assert shutil.which('docker') is None; print('verified')"]) == "verified"
+        probe = ("from pathlib import Path; from sbom_creator.acquire import Settings; "
+                 "from sbom_creator.scanner import scan_image; "
+                 "scan_image(" + repr(target) + ",Path('/tmp/probe.json'),Settings.from_env())")
+        negative_checks = {}
+        for kind in ("wrong_password", "untrusted_ca"):
+            probe_env = dict(env)
+            if kind == "wrong_password":
+                probe_env["SBOM_REGISTRY_PASSWORD"] = "intentionally-wrong-fixture-password"
+            result_probe = subprocess.run(["docker", "run", "--rm", "--read-only", "--cap-drop=ALL",
+                "--security-opt=no-new-privileges", "--tmpfs", "/tmp:rw,nosuid,nodev,size=512m",
+                "--network", "container:" + registry, "-e", "SBOM_REGISTRY_USERNAME",
+                "-e", "SBOM_REGISTRY_PASSWORD", "-e", f"SBOM_REGISTRY_HOSTS=localhost:{registry_port}",
+                test_image if kind == "wrong_password" else base_image, "python", "-c", probe],
+                capture_output=True, env=probe_env, timeout=120, check=False)
+            assert result_probe.returncode != 0, kind + " must fail closed"
+            negative_checks[kind] = "rejected"
+
         deadline = time.monotonic() + 30
         while True:
             try:
@@ -168,12 +211,19 @@ def run(work, report, credential_file, openssl):
             "resource_samples": [{k: s[k] for k in ("CPUPerc", "MemUsage", "MemPerc", "PIDs")} for s in samples],
             "model_calls": 0, "credentials_in_report": False, "downloaded_directory": str(downloaded),
             "artifacts_sha256": {p.name: sha256(p) for p in downloaded.iterdir()},
-            "registry_tls": True, "test_ca_installed_on_host": False,
+            "registry_tls": True, "registry_basic_auth": True, "negative_registry_checks": negative_checks,
+            "runtime_uid": 10001, "docker_executable_present": False, "docker_socket_mounted": False, "read_only_root": True,
+            "capabilities_dropped": "ALL", "test_ca_installed_on_host": False,
             "build_link": "unverified; test build/config correspondence checked, no production attestation"}
         assert token not in json.dumps(result) and git["BITBUCKET_TOKEN"] not in json.dumps(result)
+        assert registry_password not in json.dumps(result)
+        for artifact in downloaded.iterdir():
+            assert registry_password.encode() not in artifact.read_bytes()
         write_json(report, result)
         return result
     finally:
+        (auth / "htpasswd").unlink(missing_ok=True)
+        (docker_config / "config.json").unlink(missing_ok=True)
         for container in reversed(containers):
             command(["docker", "rm", "-f", container], timeout=30)
 

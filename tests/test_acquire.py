@@ -42,11 +42,11 @@ def test_image_rejects_implicit_tags_untrusted_hosts_and_invalid_input(settings,
 
 def test_settings_env_is_explicit_and_boolean_parsed(monkeypatch):
     monkeypatch.setenv("SBOM_BITBUCKET_HOSTS", "bb.example, Bb2.example")
-    monkeypatch.setenv("SBOM_PULL_IMAGE", "false")
+    monkeypatch.setenv("SBOM_IMAGE_ARCHIVE", "fixture.tar")
     monkeypatch.setenv("SBOM_SCAN_TIMEOUT", "77")
     settings = Settings.from_env()
     assert settings.bitbucket_hosts == ("bb.example", "bb2.example")
-    assert settings.pull_image is False
+    assert settings.image_archive == "fixture.tar"
     assert settings.scan_timeout == 77
     monkeypatch.setenv("SBOM_PULL_IMAGE", "yes")
     with pytest.raises(ValueError):
@@ -64,7 +64,7 @@ def test_child_environment_has_no_unrelated_service_secrets(monkeypatch):
     assert "AWS_SECRET_ACCESS_KEY" not in environment
     assert "SBOM_BITBUCKET_TOKEN" not in environment
     assert environment["HTTPS_PROXY"] == "http://proxy.example:3128"
-    assert environment["DOCKER_HOST"] == "unix:///var/run/docker.sock"
+    assert "DOCKER_HOST" not in environment
 
 
 def test_checkout_exact_commit_isolated_config_and_secret_never_in_argv(tmp_path, monkeypatch, settings):

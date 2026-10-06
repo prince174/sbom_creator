@@ -71,3 +71,12 @@ def test_cli_defaults_to_rules(monkeypatch, capsys):
     assert cli.main() == 0
     assert captured["mode"] == "rules"
     assert json.loads(capsys.readouterr().out)["status"] == "succeeded"
+
+
+def test_remote_api_rejects_local_archive_configuration(tmp_path, monkeypatch):
+    monkeypatch.setenv("SBOM_API_TOKEN", "fixture-token")
+    with TestClient(create_app(tmp_path, settings=Settings(image_archive="/private/fixture.tar"))) as client:
+        result = client.post("/v1/analyses", headers={"Authorization": "Bearer fixture-token"}, json={
+            "repository_url": "https://bitbucket.org/fixture/app.git", "commit": "a" * 40,
+            "image": "registry.example/app:1"})
+        assert result.status_code == 503

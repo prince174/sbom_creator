@@ -6,6 +6,10 @@ Python-сервис получает **Bitbucket HTTPS URL + полный commit
 Основной режим API и CLI — детерминированные правила, без LLM и модельных ключей.
 Загрузку в Dependency-Track выполняет пользователь.
 
+**0.5.0: сервис больше не требует Docker CLI, Engine или socket.** Образы получает
+Syft напрямую из registry. Сохранены правила, проверка payload и разделение ОС.
+[Подробный отчёт миграции и проверок](docs/direct-syft-v0.5.md).
+
 **С версии 0.4.0 основной `final.cdx.json` не содержит пакетов ОС.** Они выдаются
 отдельно в `os.cdx.json`; `full.cdx.json` сохраняет полный подтверждённый состав.
 Основной результат пока точнее называть «пакеты вне пакетной системы ОС», а не
@@ -59,20 +63,29 @@ npm entry point/index/код, Ruby gem-файлы, Java class и Go/Rust binary.
 
 ## Linux / Docker
 
-Worker: Linux amd64, Docker Engine **28+** (нужен `image save --platform`),
-доступ к Bitbucket и registry. Образ сервиса содержит Git,
-Docker CLI 29.8.0 и закреплённый Syft. Docker socket требует выделенного доверенного worker.
+С версии **0.5.0 Docker CLI, Engine и сокет сервису не нужны**. Образ содержит
+Python, Git и закреплённый Syft. `syft scan registry:...` получает образ напрямую
+по HTTPS. Контейнер работает с UID/GID 10001, read-only root filesystem и без capabilities.
+Docker Compose ниже — способ запуска контейнера, а не зависимость внутри сервиса.
 Сервис запускается одним процессом; несколько независимых экземпляров не должны делить workspace.
 
 ```bash
 cp .env.example .env
 mkdir -p secrets workspace
+# На Linux workspace доступен UID/GID 10001; секреты должны быть читаемы этим UID.
+sudo chown 10001:10001 workspace
 # Заполните .env, положите токены в secrets/* согласно *_FILE.
 docker compose up --build -d
 ```
 
 Порт: `127.0.0.1:18082`. Для доступа извне используйте HTTPS reverse proxy.
 `/health` подтверждает работу API, но не готовность Git/registry.
+
+Для Kubernetes см. [пример Deployment](deploy/kubernetes.yaml): без hostPath,
+без service-account token, `runAsNonRoot`, `allowPrivilegeEscalation: false`,
+`seccompProfile: RuntimeDefault`. Подставьте свой image digest, hosts и Secret.
+Для сохранения результатов используйте PVC вместо тестового emptyDir.
+В настоящем Kubernetes-кластере пример пока не проверялся.
 
 ### Настройки
 
@@ -86,6 +99,8 @@ docker compose up --build -d
 | `SBOM_CA_BUNDLE` | PEM CA для Git HTTPS, TLS-проверка остаётся включённой |
 | `SBOM_REGISTRY_HOSTS` | Разрешённые registry hosts; image требует явного tag/digest |
 | `SBOM_REGISTRY_USERNAME`, `SBOM_REGISTRY_PASSWORD` / `_FILE` | Registry credentials |
+| `SBOM_IMAGE_ARCHIVE` | Только офлайн CLI: путь к архиву; API отвергает |
+| `SBOM_MAX_ARCHIVE_BYTES` | Лимит временных файлов Syft / входного архива, default 8 GiB |
 | `SBOM_IMAGE_PLATFORM` | Default `linux/amd64` |
 | `SBOM_WORKERS` | 1–4, default 1; очередь ограничена 16 заданиями |
 | `SBOM_SYFT_BINARY` | Путь к Syft, default `syft` |
@@ -93,6 +108,19 @@ docker compose up --build -d
 Секреты не включаются в argv, provenance и сообщения об ошибках.
 Git redirects, hooks, inherited Git configs, автоматические submodules/LFS и
 конфигурация Syft из репозитория отключены.
+
+### Прямое получение образа и файловые свидетельства
+
+Syft получает образ через `registry:`. Сервис пересчитывает SHA-256 raw manifest/config,
+сверяет platform manifest, config digest, платформу и layer diff IDs. Для multi-arch
+сохраняются repoDigests. TLS-проверка обязательна; передаются только настроенные
+registry credentials, без внешних Docker helpers и пользовательской конфигурации.
+
+Содержимое RECORD, package.json и Java-архивов получает Syft из **того же squashed scan**.
+Прежние правила проверяют payload; затем contents и конфигурация сканера удаляются
+перед публикацией JSON. Лимит одного файла — 32 MiB; отсутствие необходимого содержимого
+даёт UNKNOWN. Превышение общего лимита вывода, временных файлов или timeout блокирует
+задание. Диск проверяется периодически; жёсткие границы задаются лимитами контейнера/тома.
 
 ## API
 
@@ -133,8 +161,10 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
   --output workspace/result-rules --mode rules
 ```
 
-`SBOM_PULL_IMAGE=false` допустим для явного CLI benchmark с заранее собранным
-образом и allowlisted reference; HTTP API такую конфигурацию отвергает.
+`SBOM_IMAGE_ARCHIVE=/absolute/path/image.tar` включает офлайн-режим CLI
+для подготовленного архива; HTTP API такую конфигурацию отвергает.
+Формат Syft `docker-archive` не требует Docker. Старые переменные
+`SBOM_PULL_IMAGE` / `SBOM_DOCKER_BINARY` отклоняются, fallback к daemon отсутствует.
 Существующий output не перезаписывается. На Windows используется `.venv\Scripts\python`;
 для локальной проверки Syft сохранён в `.tools/syft/syft.exe` (не включается в Git).
 
@@ -157,7 +187,7 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 рядом создаётся `<output>.diagnostics` со стадией, типом ошибки и уже полученными
 каталогами. Повторная ошибка сохраняется отдельно в `.diagnostics-<suffix>`.
 Сырые исключения, способные содержать credentials, не публикуются.
-Артефакты и Docker cache не удаляются автоматически.
+Выданные артефакты сохраняются, временные файлы Syft удаляются после задания. Docker cache у сервиса отсутствует.
 
 Разделение определяется типом пакета/PURL (`deb`, `rpm`, `apk`, `alpm`, `portage`,
 `nix`, `opkg`), а не именем вроде `openssl`. Например, Python-пакет с таким именем

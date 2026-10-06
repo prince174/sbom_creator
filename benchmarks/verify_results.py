@@ -187,7 +187,11 @@ def audit_completed(row: dict, work: Path, *, current_policy: bool = False) -> d
             selected_refs.append(None)
     check(Counter(selected_refs) == Counter(selected_ids), "CYCLONEDX_PACKAGE_MAPPING_MISMATCH")
     image_provenance = provenance.get("image", {})
-    check(image_provenance.get("image_id") == row.get("image_id") and bool(row.get("image_id")), "BUILT_AND_SCANNED_IMAGE_ID_MISMATCH")
+    if image_provenance.get("acquisition_method") == "syft-direct-v1":
+        check(bool(row.get("image_config_digest")) and image_provenance.get("image_config_digest") == row["image_config_digest"],
+              "BUILT_AND_SCANNED_CONFIG_MISMATCH")
+    else:
+        check(image_provenance.get("image_id") == row.get("image_id") and bool(row.get("image_id")), "BUILT_AND_SCANNED_IMAGE_ID_MISMATCH")
     check(image_provenance.get("image_config_digest") == image.get("source", {}).get("metadata", {}).get("imageID"), "SCANNER_IMAGE_CONFIG_MISMATCH")
     check(image_provenance.get("container_started") is False, "PASSIVE_IMAGE_SCAN_NOT_RECORDED", warning=True)
     if image_provenance.get("acquisition") == "local":

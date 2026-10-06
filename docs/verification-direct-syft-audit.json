@@ -1,0 +1,309 @@
+{
+  "passed": true,
+  "repositories": 60,
+  "unknown": 2360,
+  "raw_file_contents_published": false,
+  "rows": [
+    {
+      "id": "java-commons-lang",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-io",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-codec",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-text",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-csv",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-compress",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-gson",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-jsoup",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-slf4j",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "java-commons-cli",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-lodash",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-express",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-axios",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-debug",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-ms",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-chalk",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-commander-js",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-minimist",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-is-number",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "javascript-isarray",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "bitbucket-python-service",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-flask",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-jinja",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-werkzeug",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-itsdangerous",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-attrs",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-packaging",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "python-python-certifi",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-ripgrep",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-fd",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-bat",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-dust",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-bottom",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-tokei",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-hyperfine",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-eza",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-zoxide",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "rust-delta",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-hey",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-assetfinder",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-httprobe",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-waybackurls",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-unfurl",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-yq",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-lazygit",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-glow",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-scc",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "go-upterm",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-rake",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-rack",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-psych",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-json",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-rexml",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-csv",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-logger",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-uri",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    },
+    {
+      "id": "ruby-stringio",
+      "selected_artifact_ids_equal": true,
+      "payload_evidence_equal": true
+    }
+  ],
+  "comparison_report_sha256": "66b899100f383d11e7841c32b10d41afa6756f32036fc905c2591e61d7e7d847"
+}

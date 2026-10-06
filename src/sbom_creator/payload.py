@@ -6,6 +6,7 @@ some package payload, not completeness, importability, reachability or use.
 """
 from __future__ import annotations
 
+import base64
 import bisect
 import csv
 import io
@@ -96,6 +97,35 @@ class ImageFiles:
         with archive.extractfile(member) as stream:
             data = stream.read(limit + 1)
         return data if len(data) <= limit else None
+
+
+class SyftFiles(ImageFiles):
+    """Read bounded base64 contents from the same squashed Syft scan."""
+    def __init__(self, document):
+        self.files = {}
+        for entry in document.get("files", []):
+            name = path(entry["location"]["path"])
+            if name in self.files:
+                raise ValueError("Ambiguous final filesystem path")
+            self.files[name] = entry
+        self.paths = sorted(self.files)
+
+    def close(self):
+        pass
+
+    def read(self, name, limit=MAX_READ):
+        name = path(name)
+        if not self.regular(name):
+            return None
+        entry = self.files[name]
+        content = entry.get("contents")
+        if (entry["metadata"]["size"] > limit or not isinstance(content, str)
+                or len(content) > 4 * ((limit + 2) // 3)):
+            return None
+        raw = base64.b64decode(content, validate=True)
+        if len(raw) != entry["metadata"]["size"]:
+            raise ValueError("Syft file content size mismatch")
+        return raw if len(raw) <= limit else None
 
 
 def _python(artifact, files):
@@ -203,11 +233,11 @@ def _java(artifact, files):
     return None
 
 
-def collect(document, archive):
+def collect(document, archive=None):
     evidence = {}
     if not any(a.get("foundBy") in SUPPORTED for a in document["artifacts"]):
         return evidence
-    files = ImageFiles(archive, document)
+    files = ImageFiles(archive, document) if archive is not None else SyftFiles(document)
     package_roots = {posixpath.dirname(path(loc.get("path", ""))) for a in document["artifacts"]
                      if a.get("foundBy") == "javascript-package-cataloger" for loc in a.get("locations", [])}
     try:
@@ -232,7 +262,8 @@ def collect(document, archive):
                 observed, error = None, type(exc).__name__
             evidence[artifact["id"]] = {"status": "confirmed" if observed else "unconfirmed",
                 "path": observed, "error_type": error,
-                "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+                "method": ("pinned-syft-final-files-plus-bounded-archive-read-v1" if archive is not None
+                           else "pinned-syft-final-files-plus-bounded-content-v2"),
                 "scope": "Some payload present; completeness and runtime use not established"}
     finally:
         files.close()

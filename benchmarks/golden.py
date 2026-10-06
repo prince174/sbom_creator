@@ -72,11 +72,16 @@ def run(root: Path, syft: str, report: Path) -> dict:
         raise FileExistsError("Choose new work and report paths to preserve evidence")
     labels = create_fixture(root)
     label_hash = sha256(root / "ground-truth.json")
-    settings = Settings(syft_binary=syft, pull_image=False, registry_hosts=("docker.io",))
+    settings = Settings(syft_binary=syft, registry_hosts=("docker.io",))
     reference = "docker.io/sbom-creator-golden:" + label_hash[:12]
     run_command(["docker", "build", "--network=none", "-t", reference, str(root)],
                 cwd=root, env=clean_environment(), timeout=120,
                 max_output_bytes=settings.max_output_bytes, label="Golden scratch build")
+    archive = root / "fixture.tar"
+    run_command(["docker", "image", "save", "-o", str(archive), reference], cwd=root, env=clean_environment(),
+                timeout=120, max_output_bytes=8192, label="Fixture export")
+    from dataclasses import replace
+    settings = replace(settings, image_archive=str(archive.resolve()))
     summary = analyze_local(root / "source", reference, root / "result", settings)
     result = root / "result"
     final = json.loads((result / "final.cdx.json").read_bytes())
