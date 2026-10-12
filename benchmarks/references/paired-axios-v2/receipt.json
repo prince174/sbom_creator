@@ -1,0 +1,83 @@
+{
+  "experiment": "R5",
+  "project": "javascript-axios",
+  "commit": "b2cb45d5a533a5465c99559b16987e4d5fc08cbc",
+  "repository_url": "https://github.com/axios/axios.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:4ba1c25792ca5501ba1de2e39f89217e01316d9ba0779af4fa00cd025395eba7",
+  "runtime_image": "sha256:dadaf680f93f7c9fb886ce087a9cc3f8c1c29258551b46424e93bcc3f8c8f256",
+  "runtime_config_digest": "sha256:e2c6c1076bd06565ec565a998fffb96ebf6e260c373ee631592b2d3b5b409a66",
+  "archive_binding": {
+    "index_digest": "sha256:dadaf680f93f7c9fb886ce087a9cc3f8c1c29258551b46424e93bcc3f8c8f256",
+    "platform_manifest_digest": "sha256:c5cb36da913cf433408309b977cb53a36b05db0bdf1ec9848295ce6bd1b64866",
+    "config_digest": "sha256:e2c6c1076bd06565ec565a998fffb96ebf6e260c373ee631592b2d3b5b409a66",
+    "syft_archive_manifest_digest": "sha256:a6ba160cea482d21de2f38757bc2664f17330ddf02ba9cf6692b72ad69ecdd14",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 414,
+  "application_tree_sha256": "381322ef374ef41dcdcad2456bb8e69ed2a540d4ba7d1927d7efe94b88ec446d",
+  "reference_sha256": "29eefab25c26e0f291620669a968e0ef652af3216fb28dc22db313e852416576",
+  "package_lock_sha256": "2ca32f8fb3effdc646f20cb64f7613e989ca1f02e63f0277fc2960c9a697c410",
+  "source_manifest_sha256": "493c945800b2987a1d37f4e064bf1373d29795a74bf4c7a2de2112d59ff44b42",
+  "recipe_sha256": "c94cbbc26ccc4badba9313d62fd916baba04b5abfc7385628ddb07afdd10d522",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope",
+  "declared_direct_count": 3,
+  "reference_root_edges": 3,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": 50.125,
+  "analysis_seconds": 16.688,
+  "timing_note": "Wall clock",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-axios-v2/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "CI_CONFIGURATION": 28
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "ci_configuration": 28
+    },
+    "source_count": 37,
+    "image_count": 307,
+    "selected_count": 303,
+    "final_count": 214,
+    "os_count": 89,
+    "full_count": 303,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 290,
+      "UNKNOWN": 32
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.485
+  },
+  "outputs": {
+    "final.cdx.json": "eb268f615efbca30313bc57b8b795df6f77ba82814dacfb127951e56f5874626",
+    "os.cdx.json": "d461e611b50f358e17334911eef0d59b9161c3c5ea59d0c65a05029ddee7f695",
+    "full.cdx.json": "681ce2ff5534b60e45065770e8f93200aa800125c310b4f419976b19e0de78d6",
+    "source.syft.json": "1a9c12d65e2327550bfa51e630460d9987853056fbb1f2372d53823ce26509f0",
+    "image.syft.json": "fb2a78a25c5e8966a595c2a6eae06227003f0dfa875adfa756502c860c46662a",
+    "provenance.json": "e6fe1ae8f63e9026cb7fe3d4487fd98288151612cc33da5613f83efdebae749d"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier",
+  "metadata_correction_before_first_publication": {
+    "original_receipt_sha256": "d3cfcdc7404009fc4a1c0582059f559a4123234c8a944abe5f2bdabd9501b280",
+    "field": "runtime_scope",
+    "reason": "Running process used pre-edit Express label; actual Dockerfile and logs show npm build then prune, not pack"
+  }
+}

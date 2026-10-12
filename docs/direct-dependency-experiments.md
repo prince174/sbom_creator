@@ -118,3 +118,21 @@
 - Следующее: парные сборки двух JavaScript holdout-проектов и однократная оценка
   зафиксированного H1.1 без настройки на их результатах.
 - [Протокол и ограничения](npm-h1-development-v1.md), [рёбра и метрики](npm-h1-development-v1.json).
+
+## R5 — npm holdout, 2026-10-13
+
+- Начало: main 95f4f1e, чистое дерево, активных benchmark-процессов нет.
+- H1.1 зафиксирован SHA256 из R4; правила не менялись. Подготовлены парные
+  Axios (реальный Rollup build) и isarray (pack), CycloneDX после prune dev.
+- Axios: TP=0, FP=0, FN=3, UNKNOWN=3, recall/F1/coverage=0%, precision=null.
+  Причина — неподдерживаемые ^ ranges. isarray: нет ни эталонных, ни ложных рёбер;
+  метрики пустой положительной выборки null, не 100%.
+- H1.1 не принят. Production и три SBOM сохранены. 27 tests, Ruff, hash/tree/image
+  checks и схемы трёх SBOM обеих пар прошли; Express R3 перепроверен.
+- Ошибки harness: Axios pack/prepare требовал Husky; новый recipe делает build
+  с dev-инструментами и prune. isarray graph без dependsOn вызывал KeyError;
+  добавлен regression-test и продолжение с готовых образов, без повторной сборки.
+- Следующий шаг: независимые development-fixtures для semver/node-semver;
+  раскрытый npm holdout использовать далее только для regression. Нужен новый
+  заранее фиксированный контроль для следующего решения о внедрении.
+- [Протокол](npm-h1-holdout-v1.md), [метрики](npm-h1-holdout-v1.json).

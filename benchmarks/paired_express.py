@@ -27,6 +27,14 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def root_dependencies(document):
+    root = document["metadata"]["component"]["bom-ref"]
+    entries = [e for e in document["dependencies"] if e["ref"] == root]
+    if len(entries) != 1:
+        raise ValueError("Reference root graph missing or ambiguous")
+    return entries[0].get("dependsOn", [])
+
+
 def application_tree(path):
     """Compare paths, modes, types, bytes and links; exclude time/owners/xattrs."""
     entries = []
@@ -85,16 +93,23 @@ def export_from_image(image, paths, label):
 
 
 def main():
-    global WORK, OUT, IMAGE
+    global WORK, OUT, IMAGE, COMMIT
     parser = argparse.ArgumentParser()
     parser.add_argument("--resume-validation", action="store_true")
+    parser.add_argument("--resume-built-images", action="store_true", help="Reuse exported app trees after pre-analysis validation failure")
     parser.add_argument("--run-id", default="v1", help="Fresh evidence namespace; completed receipts are immutable")
+    parser.add_argument("--project", choices=("express", "axios", "isarray"), default="express")
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,40}", args.run_id):
         raise ValueError("Invalid run ID")
-    WORK = ROOT / "benchmarks/.work" / ("paired-express-" + args.run_id)
-    OUT = ROOT / "benchmarks/references" / ("paired-express-" + args.run_id)
-    IMAGE = "sbom-creator-benchmark/paired-express:" + args.run_id
+    project_id = "javascript-" + args.project
+    projects = json.loads((ROOT / "benchmarks/manifest.json").read_bytes())["repositories"]
+    project = next(p for p in projects if p["id"] == project_id)
+    COMMIT = project["commit"]
+    recipe = ROOT / "benchmarks" / ("paired-express.Dockerfile" if args.project == "express" else "paired-npm.Dockerfile")
+    WORK = ROOT / "benchmarks/.work" / ("paired-" + args.project + "-" + args.run_id)
+    OUT = ROOT / "benchmarks/references" / ("paired-" + args.project + "-" + args.run_id)
+    IMAGE = "sbom-creator-benchmark/paired-" + args.project + ":" + args.run_id
     resume = args.resume_validation
     if (OUT / "receipt.json").exists():
         raise FileExistsError("Immutable R3 receipt exists; inspect it instead of duplicating this experiment")
@@ -102,19 +117,19 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     source = WORK / "src"
     if not source.exists():
-        run_command(["git", "clone", "--no-hardlinks", "--no-checkout", str(ROOT / "benchmarks/.work/javascript-express/src"), str(source)], WORK / "clone.log")
+        run_command(["git", "clone", "--no-hardlinks", "--no-checkout", str(ROOT / "benchmarks/.work" / project_id / "src"), str(source)], WORK / "clone.log")
         run_command(["git", "-c", "core.autocrlf=false", "checkout", "--detach", COMMIT], WORK / "checkout.log", cwd=source)
     if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != COMMIT:
         raise ValueError("Source commit mismatch")
     if subprocess.check_output(["git", "status", "--porcelain"], cwd=source, text=True).strip():
         raise ValueError("Source checkout modified")
-    if resume:
-        if sha(WORK / "Dockerfile") != sha(OUT / "Dockerfile") or sha(OUT / "Dockerfile") != sha(ROOT / "benchmarks/paired-express.Dockerfile"):
+    if resume or args.resume_built_images:
+        if sha(WORK / "Dockerfile") != sha(recipe) or (resume and sha(OUT / "Dockerfile") != sha(recipe)):
             raise ValueError("Recipe changed before validation resumed")
         builder = (WORK / "builder.id").read_text().strip()
         runtime = (WORK / "runtime.id").read_text().strip()
     else:
-        shutil.copyfile(ROOT / "benchmarks/paired-express.Dockerfile", WORK / "Dockerfile")
+        shutil.copyfile(recipe, WORK / "Dockerfile")
         (WORK / ".dockerignore").write_text("**\n!Dockerfile\n!src/\n!src/**\nsrc/.git/\n", encoding="utf-8")
         start = time.monotonic()
         run_command(["docker", "build", "--platform", "linux/amd64", "--target", "build", "--iidfile", str(WORK / "builder.id"), "--progress=plain", str(WORK)], WORK / "build.log", timeout=1800)
@@ -132,8 +147,7 @@ def main():
     validate_cyclonedx(document)
     package = json.loads((source / "package.json").read_bytes())
     declared = set(package.get("dependencies", {}))
-    root = document["metadata"]["component"]["bom-ref"]
-    direct = next(e["dependsOn"] for e in document["dependencies"] if e["ref"] == root)
+    direct = root_dependencies(document)
     by_ref = {c["bom-ref"]: c for c in document["components"]}
     selected = [by_ref[ref] for ref in direct]
     if {c["name"] for c in selected} != declared or len(selected) != len(declared):
@@ -147,7 +161,7 @@ def main():
         summary = json.loads((result_dir / "summary.json").read_bytes())
         build_seconds = analysis_seconds = None
     else:
-        build_seconds = time.monotonic() - start
+        build_seconds = None if args.resume_built_images else time.monotonic() - start
         run_command(["docker", "image", "save", "-o", str(archive), runtime], WORK / "save.log", timeout=300)
         settings = Settings(syft_binary=str(ROOT / ".tools/syft/syft.exe"), registry_hosts=("docker.io",), image_archive=str(archive))
         start = time.monotonic()
@@ -173,13 +187,15 @@ def main():
             raise ValueError("Analyzer input evidence changed")
     for name in ("final.cdx.json", "os.cdx.json", "full.cdx.json"):
         validate_cyclonedx(json.loads((result_dir / name).read_bytes()))
-    receipt = {"experiment": "R3", "project": "javascript-express", "commit": COMMIT,
-               "repository_url": "https://github.com/expressjs/express.git", "platform": "linux/amd64",
+    receipt = {"experiment": "R3" if args.project == "express" else "R5", "project": project_id, "commit": COMMIT,
+               "repository_url": project["repository_url"], "platform": "linux/amd64",
                "builder_image": builder, "runtime_image": runtime, "runtime_config_digest": binding["config_digest"], "archive_binding": binding,
                "application_tree_equal": True, "application_entries": len(after), "application_tree_sha256": sha(OUT / "application-tree.json"),
                "reference_sha256": sha(OUT / "sbom.json"), "package_lock_sha256": sha(OUT / "package-lock.json"),
                "source_manifest_sha256": sha(OUT / "package.json"), "recipe_sha256": sha(OUT / "Dockerfile"),
-               "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1", "runtime_scope": "npm production dependencies, scripts disabled, pack lifecycle",
+               "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+               "runtime_scope": ("npm production dependencies, scripts disabled, pack lifecycle" if args.project == "express"
+                                 else "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope"),
                "declared_direct_count": len(declared), "reference_root_edges": len(direct),
                "reference_graph_matches_declarations": True, "oracle_passed_to_analyzer": False,
                "analyzer_inputs": ["clean source checkout at commit", "runtime image archive"],

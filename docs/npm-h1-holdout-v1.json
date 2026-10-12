@@ -1,0 +1,90 @@
+{
+  "experiment": "R5",
+  "classifier_sha256": "22996eb470e445efed77a78fde7880616b0dc657cef24f4f8d6821f7583af03e",
+  "partition": "holdout",
+  "production_changed": false,
+  "rows": [
+    {
+      "project": "axios",
+      "commit": "b2cb45d5a533a5465c99559b16987e4d5fc08cbc",
+      "reference_receipt_sha256": "d0f6b85c19a7ef8e220ee7be8229fea372b0211718b2ed47c6c19bc9370a59e5",
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "reference_edges": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "unknown": 3,
+      "coverage": 0.0,
+      "prediction_seconds": 0.0021624998189508915,
+      "peak_rss": null,
+      "prediction": {
+        "classifier": "H1.1",
+        "root_image_manifest": "/app/package.json",
+        "edges": [
+          {
+            "owner": "package.json",
+            "name": "follow-redirects",
+            "spec": "^1.15.6",
+            "scope": "runtime",
+            "status": "UNKNOWN",
+            "version": null,
+            "reason": "unsupported_version_range"
+          },
+          {
+            "owner": "package.json",
+            "name": "form-data",
+            "spec": "^4.0.0",
+            "scope": "runtime",
+            "status": "UNKNOWN",
+            "version": null,
+            "reason": "unsupported_version_range"
+          },
+          {
+            "owner": "package.json",
+            "name": "proxy-from-env",
+            "spec": "^1.1.0",
+            "scope": "runtime",
+            "status": "UNKNOWN",
+            "version": null,
+            "reason": "unsupported_version_range"
+          }
+        ],
+        "excluded_scopes": [
+          "devDependencies",
+          "peer-only"
+        ],
+        "build_usage_proven": false
+      },
+      "three_sbom_schemas_valid": true
+    },
+    {
+      "project": "isarray",
+      "commit": "63ea4ca0a0d6b0574d6a470ebd26880c3026db4a",
+      "reference_receipt_sha256": "a8e1da35ca1a89756803091523c04a55b2de76965b069f4956e85b47850833bc",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "reference_edges": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "unknown": 0,
+      "coverage": null,
+      "prediction_seconds": 0.00033350009471178055,
+      "peak_rss": null,
+      "prediction": {
+        "classifier": "H1.1",
+        "root_image_manifest": "/app/package.json",
+        "edges": [],
+        "excluded_scopes": [
+          "devDependencies",
+          "peer-only"
+        ],
+        "build_usage_proven": false
+      },
+      "three_sbom_schemas_valid": true
+    }
+  ]
+}

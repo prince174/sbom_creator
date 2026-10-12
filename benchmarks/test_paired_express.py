@@ -5,7 +5,18 @@ import tarfile
 
 import pytest
 from freeze_direct_split import partition
-from paired_express import application_tree, archive_binding
+from paired_express import application_tree, archive_binding, root_dependencies
+
+
+def test_empty_root_is_not_missing_root():
+    document = {"metadata": {"component": {"bom-ref": "root"}}, "dependencies": [{"ref": "root"}]}
+    assert root_dependencies(document) == []
+    document["dependencies"] = []
+    with pytest.raises(ValueError, match="missing or ambiguous"):
+        root_dependencies(document)
+    document["dependencies"] = [{"ref": "root"}, {"ref": "root"}]
+    with pytest.raises(ValueError, match="missing or ambiguous"):
+        root_dependencies(document)
 
 
 def make_tar(path, root, content, mode=0o644):
