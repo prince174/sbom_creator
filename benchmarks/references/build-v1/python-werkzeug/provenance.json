@@ -1,0 +1,41 @@
+{
+  "id": "python-werkzeug",
+  "language": "Python",
+  "commit": "6389612fd1ee1bd93579eed5026e8fd471d04abd",
+  "repository_url": "https://github.com/pallets/werkzeug.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/python-werkzeug/sbom.json",
+  "schema_valid": true,
+  "components": 3,
+  "direct_graph_ready": true,
+  "direct_edges": 1,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "7.5.0",
+  "notes": [
+    "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/python-werkzeug/sbom.json",
+    "sha256": "6270171e8f32592469aa962bb0ac59316671abd9bc5a5b1ed9fde67eccca34f9",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 3,
+    "dependency_entries": 3,
+    "root": "root-component",
+    "root_graph_present": true,
+    "direct_edges": 1
+  },
+  "module_references": [],
+  "recipe_sha256": "1b564c6c5d2e918bc4ea868781dd8e6bf6187e0d23aa433851881cfac8a38858",
+  "build_log_sha256": "e4361938e1da98325d22227b2e340434d9d4b6cbae854957540fd3ee852a1770",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/python-werkzeug/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:54:38.372118+00:00",
+  "build_finished_at": "2026-10-12T19:54:53.568450+00:00"
+}

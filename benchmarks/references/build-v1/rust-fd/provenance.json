@@ -1,0 +1,41 @@
+{
+  "id": "rust-fd",
+  "language": "Rust",
+  "commit": "b19136871310b01500b4f09eadd7387b8476be47",
+  "repository_url": "https://github.com/sharkdp/fd.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-fd/sbom.json",
+  "schema_valid": true,
+  "components": 67,
+  "direct_graph_ready": true,
+  "direct_edges": 22,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-fd/sbom.json",
+    "sha256": "88379f6e0a3451720439ed10f192ea94479468aa81956bf5bd14e084753b97f7",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 67,
+    "dependency_entries": 66,
+    "root": "path+file:///src#fd-find@10.2.0",
+    "root_graph_present": true,
+    "direct_edges": 22
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "6af611fcd2e659840082a910e977a23473b3bcaca4fea59683c1742ebf26bd73",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-fd/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:55:24.749530+00:00",
+  "build_finished_at": "2026-10-12T19:57:08.889019+00:00"
+}

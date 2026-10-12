@@ -1,0 +1,41 @@
+{
+  "id": "javascript-isarray",
+  "language": "JavaScript",
+  "commit": "63ea4ca0a0d6b0574d6a470ebd26880c3026db4a",
+  "repository_url": "https://github.com/juliangruber/isarray.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-isarray/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-isarray/sbom.json",
+    "sha256": "60286abb6385d83b4e5693602bc668ee011ae6e29f8f8d046c77512d80aa13f1",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 1,
+    "root": "isarray@2.0.5",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "31e3e41e82efd2cfb7eae183d6ca980bbb2d97f1fdd4dd96eea5d061fea3fd57",
+  "build_log_sha256": "fad6badb0cb2cf40b9ef810e4d29848795508368d2d7a4aa1dfe94b3d19dd4bf",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-isarray/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:55:45.097116+00:00",
+  "build_finished_at": "2026-10-12T19:55:54.379195+00:00"
+}

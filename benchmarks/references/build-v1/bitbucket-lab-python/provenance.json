@@ -1,0 +1,50 @@
+{
+  "id": "bitbucket-lab-python",
+  "language": "Python",
+  "commit": "93428e3aabebc55caefc681690c2995514a63d22",
+  "repository_url": "https://bitbucket.org/artifact_graph/lab-python.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "benchmark_packaging_overlay": true,
+  "sbom": "benchmarks/references/build-v1/bitbucket-lab-python/sbom.json",
+  "schema_valid": true,
+  "components": 2,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "7.5.0",
+  "notes": [
+    "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph.",
+    "Benchmark packaging overlay: original plain Python fixture has no build metadata. Added lab-python 0.0.0+benchmark wheel packaging with empty dependencies; code unchanged. Not an upstream-authored dependency declaration."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/bitbucket-lab-python/sbom.json",
+    "sha256": "0ff0ee6ff1284fba7ba83a00767b6113f8847dde811fa11f84aa88c0a8c0c81a",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 2,
+    "dependency_entries": 2,
+    "root": "root-component",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "5124b07b651843194dfac3c0ce177bf1482e842c39143fc49fae2e90f3e0aa3e",
+  "build_log_sha256": "cd2b8149480405a7cacb6ebe8840b2993eb0d04ad6e15077511286c0f92b06f3",
+  "recipe_inputs": {
+    "plain_python_reference.toml": "371925078c098f372b144b4784ad21fe45e735e0ba355ce6455ae5be1373e971"
+  },
+  "local_build_log": "benchmarks/.work/build-references-v1/bitbucket-lab-python/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258"
+  ],
+  "native_evidence": [
+    {
+      "file": "root.pyproject.toml",
+      "sha256": "371925078c098f372b144b4784ad21fe45e735e0ba355ce6455ae5be1373e971"
+    }
+  ],
+  "build_started_at": "2026-10-12T20:05:56.148726+00:00",
+  "build_finished_at": "2026-10-12T20:05:57.791259+00:00"
+}

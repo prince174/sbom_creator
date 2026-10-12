@@ -1,0 +1,41 @@
+{
+  "id": "java-commons-io",
+  "language": "Java",
+  "commit": "be0b1eaea246aba841510807484a6ddd6ee5fcdb",
+  "repository_url": "https://github.com/apache/commons-io.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/java-commons-io/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "2.9.3",
+  "notes": [
+    "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/java-commons-io/sbom.json",
+    "sha256": "4bd16650f21f683afb8e45279d90f4a3866cd2613943b2925189d0a8a9324158",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 1,
+    "root": "pkg:maven/commons-io/commons-io@2.18.0?type=jar",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "a7e85ec793fb3f9ea526a56f330ed7cb536975def94d5205bcde2f22129e02ba",
+  "build_log_sha256": "400461cac6decc81ca06044cafe0ae9b2a4dc6f97d3bdc2863b6e486dcf53bfa",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/java-commons-io/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/maven:3.9-eclipse-temurin-17@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:57:56.049377+00:00",
+  "build_finished_at": "2026-10-12T19:57:58.028097+00:00"
+}

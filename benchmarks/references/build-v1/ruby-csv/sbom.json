@@ -1,0 +1,28 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:8181b34a-e310-4593-bc5b-ff1073ce27bb",
+  "version": 1,
+  "components": [
+    {
+      "type": "library",
+      "name": "csv",
+      "version": "3.3.2",
+      "description": "CSV Reading and Writing",
+      "purl": "pkg:gem/csv@3.3.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6ff0c135e65e485d1864dde6c1703b60d34cc9e19bed8452834a0b28a519bd4e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Ruby"
+          }
+        }
+      ]
+    }
+  ]
+}

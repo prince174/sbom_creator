@@ -1,0 +1,41 @@
+{
+  "id": "javascript-lodash",
+  "language": "JavaScript",
+  "commit": "f299b52f39486275a9e6483b60a410e06520c538",
+  "repository_url": "https://github.com/lodash/lodash.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-lodash/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-lodash/sbom.json",
+    "sha256": "c76f5cdae7856871d2aa72de75c7444322acb2f2e83d99f141795cb729dda9d2",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 1,
+    "root": "lodash@4.17.21",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "cb9edadf109eee9aae1e4789fa0e2ddd624f286a4820a6ec812774e63151b98b",
+  "build_log_sha256": "6485f5f0b1aeea00dff7840567fcfc96b3922b6785b06384bdd3fb6e0a675fd1",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-lodash/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:56:35.428612+00:00",
+  "build_finished_at": "2026-10-12T19:57:06.563243+00:00"
+}

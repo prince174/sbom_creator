@@ -1,0 +1,57 @@
+{
+  "id": "ruby-stringio",
+  "language": "Ruby",
+  "commit": "7cc9fb1bf54d8fc873094eb36cbf8193e28fe05c",
+  "repository_url": "https://github.com/ruby/stringio.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/ruby-stringio/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "Bundler + built gemspec sidecar",
+  "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+  "notes": [
+    "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+    "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/ruby-stringio/sbom.json",
+    "sha256": "77b117da95fac6071edc34e38d3e967c261ce38bbdb369c72cd995d13a0537c2",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 0,
+    "root": null,
+    "root_graph_present": false,
+    "direct_edges": null
+  },
+  "module_references": [],
+  "recipe_sha256": "64b0c353856fe2b454cea7629189527bdd3d91091fd362f5a540b0b6d40bf485",
+  "build_log_sha256": "f4b431ba283cc032a134ad45880fed20110955690c7685a6f136721dd82ded24",
+  "recipe_inputs": {
+    "ruby_reference_graph.rb": "d38e7ca3915dd775ce2614732be418c4c40d884bbba108621ba6c8178f36dafb"
+  },
+  "local_build_log": "benchmarks/.work/build-references-v1/ruby-stringio/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/ruby:3.3-bookworm@sha256:b899e7de6ffa6e974d947202d3ce2ac921c12e46c14cff3106214079388dcff4"
+  ],
+  "native_evidence": [
+    {
+      "file": "native-graph.json",
+      "sha256": "d77603a28f0066eea0251ef9dcf51cd531290f5e79a50aba56e974fd16d9652f"
+    },
+    {
+      "file": "Gemfile",
+      "sha256": "916b396992308f22726eb468b0f59c9ebdbe5e9e3820c206b8092ed5a2497b2d"
+    },
+    {
+      "file": "Gemfile.lock",
+      "sha256": "06804083de8c7e231b77e98d06648319f5aa6f24e919ed16fc535572bcedc013"
+    }
+  ],
+  "build_started_at": "2026-10-12T20:07:12.855120+00:00",
+  "build_finished_at": "2026-10-12T20:07:19.443885+00:00"
+}

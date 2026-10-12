@@ -1,0 +1,41 @@
+{
+  "id": "java-commons-csv",
+  "language": "Java",
+  "commit": "f2f1cffe53cde4b36623403bdc27855cec01fac2",
+  "repository_url": "https://github.com/apache/commons-csv.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/java-commons-csv/sbom.json",
+  "schema_valid": true,
+  "components": 3,
+  "direct_graph_ready": true,
+  "direct_edges": 2,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "2.9.3",
+  "notes": [
+    "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/java-commons-csv/sbom.json",
+    "sha256": "e50e4ef5b561f78b872d74dda21161ab5e60c9efb1f0a55fd938725f6ab7ed97",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 3,
+    "dependency_entries": 3,
+    "root": "pkg:maven/org.apache.commons/commons-csv@1.13.0?type=jar",
+    "root_graph_present": true,
+    "direct_edges": 2
+  },
+  "module_references": [],
+  "recipe_sha256": "a7e85ec793fb3f9ea526a56f330ed7cb536975def94d5205bcde2f22129e02ba",
+  "build_log_sha256": "dc0da5972e373b0c31484f2b462f72e67b30b434362ea82b9d024ad82008d5b9",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/java-commons-csv/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/maven:3.9-eclipse-temurin-17@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:59:02.981069+00:00",
+  "build_finished_at": "2026-10-12T19:59:05.487744+00:00"
+}

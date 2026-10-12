@@ -1,0 +1,41 @@
+{
+  "id": "rust-hyperfine",
+  "language": "Rust",
+  "commit": "12fec42098642a19855ead34c8cb1e0be28c8ead",
+  "repository_url": "https://github.com/sharkdp/hyperfine.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-hyperfine/sbom.json",
+  "schema_valid": true,
+  "components": 108,
+  "direct_graph_ready": true,
+  "direct_edges": 15,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-hyperfine/sbom.json",
+    "sha256": "40d04b62ebf29c76f23bc402c8184f950384040636acc763a966955c6c2fd838",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 108,
+    "dependency_entries": 107,
+    "root": "path+file:///src#hyperfine@1.19.0",
+    "root_graph_present": true,
+    "direct_edges": 15
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "801b1c31c67e2e1a41970cfd659b18a55d42b32b5df720e345916d5f26a30f4d",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-hyperfine/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T20:02:13.020069+00:00",
+  "build_finished_at": "2026-10-12T20:02:47.596814+00:00"
+}

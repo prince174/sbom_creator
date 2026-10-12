@@ -1,0 +1,28 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:dac9a56d-cfdf-4d2c-9f58-bb9f346d090f",
+  "version": 1,
+  "components": [
+    {
+      "type": "library",
+      "name": "json",
+      "version": "2.9.1",
+      "description": "JSON Implementation for Ruby",
+      "purl": "pkg:gem/json@2.9.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d2bdef4644052fad91c1785d48263756fe32fcac08b96a20bb15840e96550d11"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Ruby"
+          }
+        }
+      ]
+    }
+  ]
+}

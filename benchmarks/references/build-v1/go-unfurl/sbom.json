@@ -1,0 +1,113 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:63e60058-a980-4de0-945c-3f3cfe188569",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-12T19:54:11Z",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-gomod",
+        "version": "v1.12.0",
+        "hashes": [
+          {
+            "alg": "MD5",
+            "content": "118f121fba43255fef77599286d9acb9"
+          },
+          {
+            "alg": "SHA-1",
+            "content": "1f13390527706fd369b111b139a626db0dd44878"
+          },
+          {
+            "alg": "SHA-256",
+            "content": "5e8da4dd0f17eb62512b6f0e5149e0882cd93d666714b4ce712e6b7a98993d26"
+          },
+          {
+            "alg": "SHA-384",
+            "content": "d6abee55d5a487e1020a000865ed3d9e815185e1027e8cc00165f70934c804d0b48ece827ceeee5d9b19c430173b7d02"
+          },
+          {
+            "alg": "SHA-512",
+            "content": "c9bd10fba19721d8b68db77fd53d02f513e151bf0eaba22b424ed8c2a521bcd581c0557cf1fc67a41c4f6946661609381e9b2568d151bef7e94835a6c9b03acf"
+          }
+        ],
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-gomod",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:golang/github.com/tomnomnom/unfurl@v0.4.3?type=module",
+      "type": "application",
+      "name": "github.com/tomnomnom/unfurl",
+      "version": "v0.4.3",
+      "purl": "pkg:golang/github.com/tomnomnom/unfurl@v0.4.3?goarch=amd64\u0026goos=linux\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/tomnomnom/unfurl",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:gomod:build:env:CGO_ENABLED",
+          "value": "0"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOARCH",
+          "value": "amd64"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOOS",
+          "value": "linux"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOVERSION",
+          "value": "go1.24.13"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/github.com/Cgboal/DomainParser@v0.0.0-20210827145802-99068439e39f?type=module",
+      "type": "library",
+      "name": "github.com/Cgboal/DomainParser",
+      "version": "v0.0.0-20210827145802-99068439e39f",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3365d01662456115bba26dff477bb58fe87dec119b324468c05bdf5c97321cf5"
+        }
+      ],
+      "purl": "pkg:golang/github.com/Cgboal/DomainParser@v0.0.0-20210827145802-99068439e39f?goarch=amd64\u0026goos=linux\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/Cgboal/DomainParser",
+          "type": "vcs"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:golang/github.com/tomnomnom/unfurl@v0.4.3?type=module",
+      "dependsOn": [
+        "pkg:golang/github.com/Cgboal/DomainParser@v0.0.0-20210827145802-99068439e39f?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/github.com/Cgboal/DomainParser@v0.0.0-20210827145802-99068439e39f?type=module"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "go-waybackurls",
+  "language": "Go",
+  "commit": "86aeb97852707e1a6fb3bcd33e61d5433a6476c5",
+  "repository_url": "https://github.com/tomnomnom/waybackurls.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/go-waybackurls/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "1.12.0",
+  "notes": [],
+  "reference": {
+    "path": "benchmarks/references/build-v1/go-waybackurls/sbom.json",
+    "sha256": "671ce9e031437692cf422da1ed642c6597ceda7efc7ea2c17f51a7f1b9ceff03",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 1,
+    "root": "pkg:golang/github.com/tomnomnom/waybackurls@v0.1.0?type=module",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "609283f774d810c27b7769b55a03d5ddecad6ba9fbd588747c8ee7f0724e9585",
+  "build_log_sha256": "e4e2c3322e18f9952fd156d7d64fb2f696c8e958ad9daa6bc8f7d83a849de0df",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/go-waybackurls/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/golang:1.24-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac",
+    "docker.io/library/golang:1.26-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c"
+  ],
+  "native_evidence": [
+    {
+      "file": "go-build-info.txt",
+      "sha256": "2fb432d673fd8b38e6042db8756205bff641674ffcfd843ff8c2ecb1f53ff5aa"
+    }
+  ],
+  "build_started_at": "2026-10-12T19:53:58.642910+00:00",
+  "build_finished_at": "2026-10-12T19:54:04.863067+00:00"
+}

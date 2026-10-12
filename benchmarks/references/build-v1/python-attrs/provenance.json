@@ -1,0 +1,41 @@
+{
+  "id": "python-attrs",
+  "language": "Python",
+  "commit": "598494a618410490cfbe0c896b7a544f6d23e0d9",
+  "repository_url": "https://github.com/python-attrs/attrs.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/python-attrs/sbom.json",
+  "schema_valid": true,
+  "components": 2,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "7.5.0",
+  "notes": [
+    "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/python-attrs/sbom.json",
+    "sha256": "43bc2262c6fe23d4a32332790f9010f8aeea62838c20cc8c8299551cae0e4362",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 2,
+    "dependency_entries": 2,
+    "root": "root-component",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "1b564c6c5d2e918bc4ea868781dd8e6bf6187e0d23aa433851881cfac8a38858",
+  "build_log_sha256": "2fa3b4b67aa92b247c0e777dea2e3f8dae2e75bda18999d0253d1f31cc24aa8a",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/python-attrs/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:55:09.378412+00:00",
+  "build_finished_at": "2026-10-12T19:55:30.711723+00:00"
+}

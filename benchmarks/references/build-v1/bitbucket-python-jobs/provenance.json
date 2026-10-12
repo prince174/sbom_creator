@@ -1,0 +1,41 @@
+{
+  "id": "bitbucket-python-jobs",
+  "language": "Python",
+  "commit": "776eb037886b8603bde8293c7090301639296496",
+  "repository_url": "https://bitbucket.org/artifact_graph/python-jobs.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/bitbucket-python-jobs/sbom.json",
+  "schema_valid": true,
+  "components": 2,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "7.5.0",
+  "notes": [
+    "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/bitbucket-python-jobs/sbom.json",
+    "sha256": "c872bf9f12af9b0a30e0bd112dd7928273c1e341297df2ccfee821d29c486736",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 2,
+    "dependency_entries": 2,
+    "root": "root-component",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "1b564c6c5d2e918bc4ea868781dd8e6bf6187e0d23aa433851881cfac8a38858",
+  "build_log_sha256": "fd16710e5b8d9998c24bdc1b142a31dc118534c97c9e2f352f9bf1f015c96930",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/bitbucket-python-jobs/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:53:33.739475+00:00",
+  "build_finished_at": "2026-10-12T19:53:51.227186+00:00"
+}

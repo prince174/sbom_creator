@@ -1,0 +1,41 @@
+{
+  "id": "rust-tokei",
+  "language": "Rust",
+  "commit": "7e0b30ff4c1fe78fe2cc615d1f0f52c7ce6cb761",
+  "repository_url": "https://github.com/XAMPPRocky/tokei.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-tokei/sbom.json",
+  "schema_valid": true,
+  "components": 110,
+  "direct_graph_ready": true,
+  "direct_edges": 20,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-tokei/sbom.json",
+    "sha256": "c76b4a053bd4842430087e238f251424b9d8bd1f94649803f0d9ffa6897c39d8",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 110,
+    "dependency_entries": 108,
+    "root": "path+file:///src#tokei@12.1.2",
+    "root_graph_present": true,
+    "direct_edges": 20
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "203305225ca60293ceb102fefcbd33d053046d8499ac3d66b1c2f150c8ccd681",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-tokei/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T20:02:02.819817+00:00",
+  "build_finished_at": "2026-10-12T20:02:48.276715+00:00"
+}

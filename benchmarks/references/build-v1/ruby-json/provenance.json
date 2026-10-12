@@ -1,0 +1,57 @@
+{
+  "id": "ruby-json",
+  "language": "Ruby",
+  "commit": "f745ec145ef88f3dfe866001526a1270e49a2e89",
+  "repository_url": "https://github.com/ruby/json.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/ruby-json/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "Bundler + built gemspec sidecar",
+  "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+  "notes": [
+    "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+    "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/ruby-json/sbom.json",
+    "sha256": "e91000b8b8ca8db3aae522672fb09a84b84987599e5e173296a6069c1df9d7fd",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 0,
+    "root": null,
+    "root_graph_present": false,
+    "direct_edges": null
+  },
+  "module_references": [],
+  "recipe_sha256": "64b0c353856fe2b454cea7629189527bdd3d91091fd362f5a540b0b6d40bf485",
+  "build_log_sha256": "97ca1f28334358cce822c62378ea90c8cc0acf9bd2cc0c6f37b28952c1a3de61",
+  "recipe_inputs": {
+    "ruby_reference_graph.rb": "d38e7ca3915dd775ce2614732be418c4c40d884bbba108621ba6c8178f36dafb"
+  },
+  "local_build_log": "benchmarks/.work/build-references-v1/ruby-json/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/ruby:3.3-bookworm@sha256:b899e7de6ffa6e974d947202d3ce2ac921c12e46c14cff3106214079388dcff4"
+  ],
+  "native_evidence": [
+    {
+      "file": "native-graph.json",
+      "sha256": "be535659fca33bda4503a51fefc0282b8c73649e90395cc0e49203bdf4b9fb42"
+    },
+    {
+      "file": "Gemfile",
+      "sha256": "9f0fb2069d262f1a1b2621205e049171f142a7b53a11a8621750b2e8fb4bb6e2"
+    },
+    {
+      "file": "Gemfile.lock",
+      "sha256": "2ce793a575133fb3497af56946d484b5e85ed676fb95125e9f20fba9ce07e17f"
+    }
+  ],
+  "build_started_at": "2026-10-12T20:06:23.522856+00:00",
+  "build_finished_at": "2026-10-12T20:06:32.571391+00:00"
+}

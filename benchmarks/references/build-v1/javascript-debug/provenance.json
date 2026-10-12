@@ -1,0 +1,41 @@
+{
+  "id": "javascript-debug",
+  "language": "JavaScript",
+  "commit": "7e3814cc603bf64fdd69e714e0cf5611ec31f43b",
+  "repository_url": "https://github.com/debug-js/debug.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-debug/sbom.json",
+  "schema_valid": true,
+  "components": 2,
+  "direct_graph_ready": true,
+  "direct_edges": 1,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-debug/sbom.json",
+    "sha256": "325395c3829625b044d18dbf733dd0eefe1ea32d0d9a9ef52936abef74037eaf",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 2,
+    "dependency_entries": 2,
+    "root": "debug@4.4.0",
+    "root_graph_present": true,
+    "direct_edges": 1
+  },
+  "module_references": [],
+  "recipe_sha256": "31e3e41e82efd2cfb7eae183d6ca980bbb2d97f1fdd4dd96eea5d061fea3fd57",
+  "build_log_sha256": "cb799f7c87106f86386ce8ecbf64e87eecc96e4fb1c8a694e74ba8ecd0cd9096",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-debug/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:53:28.981568+00:00",
+  "build_finished_at": "2026-10-12T19:54:08.851417+00:00"
+}

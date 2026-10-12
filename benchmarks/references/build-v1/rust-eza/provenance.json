@@ -1,0 +1,41 @@
+{
+  "id": "rust-eza",
+  "language": "Rust",
+  "commit": "bea5b28591bb6a95fecfdb9df5e370db8d87fd82",
+  "repository_url": "https://github.com/eza-community/eza.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-eza/sbom.json",
+  "schema_valid": true,
+  "components": 125,
+  "direct_graph_ready": true,
+  "direct_edges": 28,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-eza/sbom.json",
+    "sha256": "41e3986ccb53ba58a860ac639707b68762ce7f15f09233d717eecb1a9ed6439a",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 125,
+    "dependency_entries": 123,
+    "root": "path+file:///src#eza@0.20.15",
+    "root_graph_present": true,
+    "direct_edges": 28
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "b8d48fcf3e0f3964eaf770c7e9e7829dfaec0c0c97e4b67b45c34a8a0a832c6d",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-eza/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T20:02:35.901262+00:00",
+  "build_finished_at": "2026-10-12T20:03:52.003219+00:00"
+}

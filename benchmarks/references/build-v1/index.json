@@ -1,0 +1,1148 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-12T20:09:02.253664+00:00",
+  "projects": [
+    {
+      "id": "java-commons-lang",
+      "language": "Java",
+      "commit": "29ccc7665f3bc5d84155a3092ab2209a053324e6",
+      "repository_url": "https://github.com/apache/commons-lang.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-lang/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-io",
+      "language": "Java",
+      "commit": "be0b1eaea246aba841510807484a6ddd6ee5fcdb",
+      "repository_url": "https://github.com/apache/commons-io.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-io/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-codec",
+      "language": "Java",
+      "commit": "965109705c5236b05011e1c45f47d991abfa521e",
+      "repository_url": "https://github.com/apache/commons-codec.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-codec/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-text",
+      "language": "Java",
+      "commit": "9430a2848a2593ee3bce32750305c28c549cabf8",
+      "repository_url": "https://github.com/apache/commons-text.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-text/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-csv",
+      "language": "Java",
+      "commit": "f2f1cffe53cde4b36623403bdc27855cec01fac2",
+      "repository_url": "https://github.com/apache/commons-csv.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-csv/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 2,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-compress",
+      "language": "Java",
+      "commit": "8de4d85b09a5d60e03191c0d362797de253a3516",
+      "repository_url": "https://github.com/apache/commons-compress.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-compress/sbom.json",
+      "schema_valid": true,
+      "components": 9,
+      "direct_graph_ready": true,
+      "direct_edges": 8,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-gson",
+      "language": "Java",
+      "commit": "828a97be0f8d58108b140b77df8dc76b657f4a87",
+      "repository_url": "https://github.com/google/gson.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-gson/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-jsoup",
+      "language": "Java",
+      "commit": "7c56eb26c8cc772c5c3d0e052dc076a128173c85",
+      "repository_url": "https://github.com/jhy/jsoup.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-jsoup/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-slf4j",
+      "language": "Java",
+      "commit": "101086ba359a6a80f275ad090f57d74a34eee8ca",
+      "repository_url": "https://github.com/qos-ch/slf4j.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-slf4j/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "java-commons-cli",
+      "language": "Java",
+      "commit": "698b238276c0e22e97e4aec703a0b00201d29666",
+      "repository_url": "https://github.com/apache/commons-cli.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/java-commons-cli/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "2.9.3",
+      "notes": [
+        "Compile/runtime/provided/system scopes; tests excluded. Provided is not proof of image presence."
+      ]
+    },
+    {
+      "id": "javascript-lodash",
+      "language": "JavaScript",
+      "commit": "f299b52f39486275a9e6483b60a410e06520c538",
+      "repository_url": "https://github.com/lodash/lodash.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-lodash/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-express",
+      "language": "JavaScript",
+      "commit": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
+      "repository_url": "https://github.com/expressjs/express.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-express/sbom.json",
+      "schema_valid": true,
+      "components": 69,
+      "direct_graph_ready": true,
+      "direct_edges": 31,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-axios",
+      "language": "JavaScript",
+      "commit": "b2cb45d5a533a5465c99559b16987e4d5fc08cbc",
+      "repository_url": "https://github.com/axios/axios.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-axios/sbom.json",
+      "schema_valid": true,
+      "components": 9,
+      "direct_graph_ready": true,
+      "direct_edges": 3,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-debug",
+      "language": "JavaScript",
+      "commit": "7e3814cc603bf64fdd69e714e0cf5611ec31f43b",
+      "repository_url": "https://github.com/debug-js/debug.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-debug/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-ms",
+      "language": "JavaScript",
+      "commit": "1c6264b795492e8fdecbc82cb8802fcfbfc08d26",
+      "repository_url": "https://github.com/vercel/ms.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-ms/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-chalk",
+      "language": "JavaScript",
+      "commit": "5dbc1e2633f3874f43c144fa4919934bc934c495",
+      "repository_url": "https://github.com/chalk/chalk.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-chalk/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-commander-js",
+      "language": "JavaScript",
+      "commit": "e6f56c888c96d1339c2b974fee7e6ba4f2e3d218",
+      "repository_url": "https://github.com/tj/commander.js.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-commander-js/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-minimist",
+      "language": "JavaScript",
+      "commit": "6901ee286bc4c16da6830b48b46ce1574703cea1",
+      "repository_url": "https://github.com/minimistjs/minimist.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-minimist/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-is-number",
+      "language": "JavaScript",
+      "commit": "98e8ff1da1a89f93d1397a24d7413ed15421c139",
+      "repository_url": "https://github.com/jonschlinkert/is-number.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-is-number/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "javascript-isarray",
+      "language": "JavaScript",
+      "commit": "63ea4ca0a0d6b0574d6a470ebd26880c3026db4a",
+      "repository_url": "https://github.com/juliangruber/isarray.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/javascript-isarray/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "6.0.1",
+      "notes": [
+        "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+      ]
+    },
+    {
+      "id": "bitbucket-python-service",
+      "language": "Python",
+      "commit": "973b5e3447f92b10f3871ee852f0ab4db9f82ef1",
+      "repository_url": "https://bitbucket.org/artifact_graph/python-service.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/bitbucket-python-service/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "bitbucket-python-jobs",
+      "language": "Python",
+      "commit": "776eb037886b8603bde8293c7090301639296496",
+      "repository_url": "https://bitbucket.org/artifact_graph/python-jobs.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/bitbucket-python-jobs/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "bitbucket-lab-python",
+      "language": "Python",
+      "commit": "93428e3aabebc55caefc681690c2995514a63d22",
+      "repository_url": "https://bitbucket.org/artifact_graph/lab-python.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "benchmark_packaging_overlay": true,
+      "sbom": "benchmarks/references/build-v1/bitbucket-lab-python/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph.",
+        "Benchmark packaging overlay: original plain Python fixture has no build metadata. Added lab-python 0.0.0+benchmark wheel packaging with empty dependencies; code unchanged. Not an upstream-authored dependency declaration."
+      ]
+    },
+    {
+      "id": "python-flask",
+      "language": "Python",
+      "commit": "ab8149664182b662453a563161aa89013c806dc9",
+      "repository_url": "https://github.com/pallets/flask.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-flask/sbom.json",
+      "schema_valid": true,
+      "components": 8,
+      "direct_graph_ready": true,
+      "direct_edges": 5,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-jinja",
+      "language": "Python",
+      "commit": "877f6e51be8e1765b06d911cfaa9033775f051d1",
+      "repository_url": "https://github.com/pallets/jinja.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-jinja/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-werkzeug",
+      "language": "Python",
+      "commit": "6389612fd1ee1bd93579eed5026e8fd471d04abd",
+      "repository_url": "https://github.com/pallets/werkzeug.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-werkzeug/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-itsdangerous",
+      "language": "Python",
+      "commit": "096c8d42545d3b68ea21a4f890fb2b2d8979c0bd",
+      "repository_url": "https://github.com/pallets/itsdangerous.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-itsdangerous/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-attrs",
+      "language": "Python",
+      "commit": "598494a618410490cfbe0c896b7a544f6d23e0d9",
+      "repository_url": "https://github.com/python-attrs/attrs.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-attrs/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-packaging",
+      "language": "Python",
+      "commit": "d8e3b31b734926ebbcaff654279f6855a73e052f",
+      "repository_url": "https://github.com/pypa/packaging.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-packaging/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph."
+      ]
+    },
+    {
+      "id": "python-python-certifi",
+      "language": "Python",
+      "commit": "4ba39005afa1958ee24af51a11b64299fba61025",
+      "repository_url": "https://github.com/certifi/python-certifi.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/python-python-certifi/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "7.5.0",
+      "notes": [
+        "Built and installed in separate project venv; generator isolated. Environment SBOM may include bootstrap pip, outside project root graph.",
+        "setup.py project: generator root pyproject is derived from installed wheel METADATA, not handwritten dependencies."
+      ]
+    },
+    {
+      "id": "rust-ripgrep",
+      "language": "Rust",
+      "commit": "4649aa9700619f94cf9c66876e9549d83420e16c",
+      "repository_url": "https://github.com/BurntSushi/ripgrep.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-ripgrep/sbom.json",
+      "schema_valid": true,
+      "components": 34,
+      "direct_graph_ready": true,
+      "direct_edges": 9,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-fd",
+      "language": "Rust",
+      "commit": "b19136871310b01500b4f09eadd7387b8476be47",
+      "repository_url": "https://github.com/sharkdp/fd.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-fd/sbom.json",
+      "schema_valid": true,
+      "components": 67,
+      "direct_graph_ready": true,
+      "direct_edges": 22,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-bat",
+      "language": "Rust",
+      "commit": "25f4f96ea3afb6fe44552f3b38ed8b1540ffa1b3",
+      "repository_url": "https://github.com/sharkdp/bat.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-bat/sbom.json",
+      "schema_valid": true,
+      "components": 126,
+      "direct_graph_ready": true,
+      "direct_edges": 34,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-dust",
+      "language": "Rust",
+      "commit": "dbd18f90e7b184d12f14533e76e5915dbe4a2051",
+      "repository_url": "https://github.com/bootandy/dust.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-dust/sbom.json",
+      "schema_valid": true,
+      "components": 65,
+      "direct_graph_ready": true,
+      "direct_edges": 18,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-bottom",
+      "language": "Rust",
+      "commit": "2ec1fb56c9db0b37acc4eca3230adfb52720376b",
+      "repository_url": "https://github.com/ClementTsang/bottom.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-bottom/sbom.json",
+      "schema_valid": true,
+      "components": 121,
+      "direct_graph_ready": true,
+      "direct_edges": 29,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-tokei",
+      "language": "Rust",
+      "commit": "7e0b30ff4c1fe78fe2cc615d1f0f52c7ce6cb761",
+      "repository_url": "https://github.com/XAMPPRocky/tokei.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-tokei/sbom.json",
+      "schema_valid": true,
+      "components": 110,
+      "direct_graph_ready": true,
+      "direct_edges": 20,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-hyperfine",
+      "language": "Rust",
+      "commit": "12fec42098642a19855ead34c8cb1e0be28c8ead",
+      "repository_url": "https://github.com/sharkdp/hyperfine.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-hyperfine/sbom.json",
+      "schema_valid": true,
+      "components": 108,
+      "direct_graph_ready": true,
+      "direct_edges": 15,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-eza",
+      "language": "Rust",
+      "commit": "bea5b28591bb6a95fecfdb9df5e370db8d87fd82",
+      "repository_url": "https://github.com/eza-community/eza.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-eza/sbom.json",
+      "schema_valid": true,
+      "components": 125,
+      "direct_graph_ready": true,
+      "direct_edges": 28,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-zoxide",
+      "language": "Rust",
+      "commit": "3d3267b4fd73e6292d317f96d60ef69ea035912d",
+      "repository_url": "https://github.com/ajeetdsouza/zoxide.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-zoxide/sbom.json",
+      "schema_valid": true,
+      "components": 70,
+      "direct_graph_ready": true,
+      "direct_edges": 14,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "rust-delta",
+      "language": "Rust",
+      "commit": "a589ff9debaefdd3992384434120f5a03a103481",
+      "repository_url": "https://github.com/dandavison/delta.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/rust-delta/sbom.json",
+      "schema_valid": true,
+      "components": 141,
+      "direct_graph_ready": true,
+      "direct_edges": 32,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "0.5.9",
+      "notes": [
+        "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+      ]
+    },
+    {
+      "id": "go-hey",
+      "language": "Go",
+      "commit": "af177063f85bd935c55f1f2ee59c2898d9654f82",
+      "repository_url": "https://github.com/rakyll/hey.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-hey/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-assetfinder",
+      "language": "Go",
+      "commit": "4e95d8701aae8cff1c27af2626eb22ba110ad583",
+      "repository_url": "https://github.com/tomnomnom/assetfinder.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-assetfinder/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": [
+        "Benchmark-only go mod init after successful original GOPATH build; no third-party modules added."
+      ]
+    },
+    {
+      "id": "go-httprobe",
+      "language": "Go",
+      "commit": "7e8abdb4096ab224f21616478b699b4dfda9d409",
+      "repository_url": "https://github.com/tomnomnom/httprobe.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-httprobe/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-waybackurls",
+      "language": "Go",
+      "commit": "86aeb97852707e1a6fb3bcd33e61d5433a6476c5",
+      "repository_url": "https://github.com/tomnomnom/waybackurls.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-waybackurls/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-unfurl",
+      "language": "Go",
+      "commit": "8f10d050f1b0be12e505053da174f3f39e8eed74",
+      "repository_url": "https://github.com/tomnomnom/unfurl.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-unfurl/sbom.json",
+      "schema_valid": true,
+      "components": 2,
+      "direct_graph_ready": true,
+      "direct_edges": 1,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-yq",
+      "language": "Go",
+      "commit": "4839dbbf80445070a31c7a9c1055da527db2d5ee",
+      "repository_url": "https://github.com/mikefarah/yq.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-yq/sbom.json",
+      "schema_valid": true,
+      "components": 21,
+      "direct_graph_ready": true,
+      "direct_edges": 17,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-lazygit",
+      "language": "Go",
+      "commit": "611fabde11d24d9acc71ee26077b9a1101f59f27",
+      "repository_url": "https://github.com/jesseduffield/lazygit.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-lazygit/sbom.json",
+      "schema_valid": true,
+      "components": 62,
+      "direct_graph_ready": true,
+      "direct_edges": 34,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-glow",
+      "language": "Go",
+      "commit": "67243bb6fbf6d49eddb6ab644e8e2c1395f9cb00",
+      "repository_url": "https://github.com/charmbracelet/glow.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-glow/sbom.json",
+      "schema_valid": true,
+      "components": 60,
+      "direct_graph_ready": true,
+      "direct_edges": 23,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-scc",
+      "language": "Go",
+      "commit": "965213f77b515103a85a7d8515b2e95bd3e98c5c",
+      "repository_url": "https://github.com/boyter/scc.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-scc/sbom.json",
+      "schema_valid": true,
+      "components": 15,
+      "direct_graph_ready": true,
+      "direct_edges": 7,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "go-upterm",
+      "language": "Go",
+      "commit": "9b63f77cf206fe0f7c120285bd87656a5247a9f1",
+      "repository_url": "https://github.com/owenthereal/upterm.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/go-upterm/sbom.json",
+      "schema_valid": true,
+      "components": 71,
+      "direct_graph_ready": true,
+      "direct_edges": 27,
+      "graph_source": "CycloneDX plugin",
+      "generator_version": "1.12.0",
+      "notes": []
+    },
+    {
+      "id": "ruby-rake",
+      "language": "Ruby",
+      "commit": "d84f6ef7f3540a1d0e95fabe451ea3a16157791b",
+      "repository_url": "https://github.com/ruby/rake.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-rake/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-rack",
+      "language": "Ruby",
+      "commit": "0eabeb73b3fb590e187dacfd9a890fbb7ffb9477",
+      "repository_url": "https://github.com/rack/rack.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-rack/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-psych",
+      "language": "Ruby",
+      "commit": "746e1ad24dbbd4a018abce3122bc4047643fd81b",
+      "repository_url": "https://github.com/ruby/psych.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-psych/sbom.json",
+      "schema_valid": true,
+      "components": 3,
+      "direct_graph_ready": true,
+      "direct_edges": 2,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-json",
+      "language": "Ruby",
+      "commit": "f745ec145ef88f3dfe866001526a1270e49a2e89",
+      "repository_url": "https://github.com/ruby/json.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-json/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-rexml",
+      "language": "Ruby",
+      "commit": "38eaa86ac7abe0d31cf49d8df57ad239fdeb80e9",
+      "repository_url": "https://github.com/ruby/rexml.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-rexml/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-csv",
+      "language": "Ruby",
+      "commit": "eb20531db25171fe24665e346374ef0dec273082",
+      "repository_url": "https://github.com/ruby/csv.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-csv/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-bigdecimal",
+      "language": "Ruby",
+      "commit": "ae3915ba8831cb0bbed2bc60a1345b320f2eafb4",
+      "repository_url": "https://github.com/ruby/bigdecimal.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-bigdecimal/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-logger",
+      "language": "Ruby",
+      "commit": "216cedef7ce2b1979ed65c7c1ae5625b6e9c791a",
+      "repository_url": "https://github.com/ruby/logger.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-logger/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-uri",
+      "language": "Ruby",
+      "commit": "e46960a467f2ed398731286ec78b899e1a01655f",
+      "repository_url": "https://github.com/ruby/uri.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-uri/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    },
+    {
+      "id": "ruby-stringio",
+      "language": "Ruby",
+      "commit": "7cc9fb1bf54d8fc873094eb36cbf8193e28fe05c",
+      "repository_url": "https://github.com/ruby/stringio.git",
+      "build_status": "generated",
+      "old_image_pair_verified": false,
+      "direct_accuracy_measured": false,
+      "sbom": "benchmarks/references/build-v1/ruby-stringio/sbom.json",
+      "schema_valid": true,
+      "components": 1,
+      "direct_graph_ready": true,
+      "direct_edges": 0,
+      "graph_source": "Bundler + built gemspec sidecar",
+      "generator_version": "git:7efedd6422cc32d9bdefbb6eddb7b4eaa3857309",
+      "notes": [
+        "Plugin emits no dependency graph. Native sidecar derives runtime edges independently from built gemspec and Bundler; wrapper Gemfile excludes development tools.",
+        "Plugin component metadata/hashes come from RubyGems API; they are not hashes of the locally rebuilt gem."
+      ]
+    }
+  ],
+  "counts": {
+    "generated": 60
+  },
+  "direct_graph_ready": 60,
+  "direct_root_edges": 389,
+  "zero_direct_dependency_roots": 30,
+  "paired_with_old_images": 0
+}

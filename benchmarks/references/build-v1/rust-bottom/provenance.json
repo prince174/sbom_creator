@@ -1,0 +1,41 @@
+{
+  "id": "rust-bottom",
+  "language": "Rust",
+  "commit": "2ec1fb56c9db0b37acc4eca3230adfb52720376b",
+  "repository_url": "https://github.com/ClementTsang/bottom.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-bottom/sbom.json",
+  "schema_valid": true,
+  "components": 121,
+  "direct_graph_ready": true,
+  "direct_edges": 29,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-bottom/sbom.json",
+    "sha256": "dc961999feac277ba19df8d5113ffd08c018aeb1f74c5ceb6ac07ecd518f9218",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 121,
+    "dependency_entries": 120,
+    "root": "path+file:///src#bottom@0.10.2",
+    "root_graph_present": true,
+    "direct_edges": 29
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "6f7b8e7aba993c606b1e7240604fa34a699f702a918a146242128b63a897f0df",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-bottom/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:59:16.933501+00:00",
+  "build_finished_at": "2026-10-12T20:02:02.816635+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "javascript-minimist",
+  "language": "JavaScript",
+  "commit": "6901ee286bc4c16da6830b48b46ce1574703cea1",
+  "repository_url": "https://github.com/minimistjs/minimist.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-minimist/sbom.json",
+  "schema_valid": true,
+  "components": 1,
+  "direct_graph_ready": true,
+  "direct_edges": 0,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-minimist/sbom.json",
+    "sha256": "f960432a3abb146488b997e9aa64a8de1a7834de59345120d39d48f51f4d3eb4",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 1,
+    "dependency_entries": 1,
+    "root": "minimist@1.2.8",
+    "root_graph_present": true,
+    "direct_edges": 0
+  },
+  "module_references": [],
+  "recipe_sha256": "31e3e41e82efd2cfb7eae183d6ca980bbb2d97f1fdd4dd96eea5d061fea3fd57",
+  "build_log_sha256": "499ffc260a16d6e0dc811278b6f546b0500c90a00d6dddd5bf4fd1dc34ad5a2a",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-minimist/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:55:06.085347+00:00",
+  "build_finished_at": "2026-10-12T19:55:29.724570+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "rust-delta",
+  "language": "Rust",
+  "commit": "a589ff9debaefdd3992384434120f5a03a103481",
+  "repository_url": "https://github.com/dandavison/delta.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/rust-delta/sbom.json",
+  "schema_valid": true,
+  "components": 141,
+  "direct_graph_ready": true,
+  "direct_edges": 32,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "0.5.9",
+  "notes": [
+    "Default features, Linux amd64, cargo auditable debug bins; workspace module SBOMs retained."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/rust-delta/sbom.json",
+    "sha256": "b95f99c98c2b742ed5484fb9fc5572ed46e9a3730a12ad13e0605b428a606209",
+    "spec_version": "1.5",
+    "schema_valid": true,
+    "components": 141,
+    "dependency_entries": 140,
+    "root": "path+file:///src#git-delta@0.18.2",
+    "root_graph_present": true,
+    "direct_edges": 32
+  },
+  "module_references": [],
+  "recipe_sha256": "a9942eb8367dc8e59ef9c58c4ca408d4a7d926f78c0f509fde9daa006036e58e",
+  "build_log_sha256": "d7e065bba2d3faa12e5fb8c6fae300d328a999056ee281f7a6ff77ea8d82708d",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/rust-delta/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/rust:1.85.1-bookworm@sha256:e51d0265072d2d9d5d320f6a44dde6b9ef13653b035098febd68cce8fa7c0bc4"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T20:02:13.030591+00:00",
+  "build_finished_at": "2026-10-12T20:03:36.506858+00:00"
+}

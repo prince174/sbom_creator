@@ -1,0 +1,86 @@
+/out/app: go1.24.13
+	path	github.com/owenthereal/upterm/cmd/upterm
+	mod	github.com/owenthereal/upterm	v0.14.3	
+	dep	github.com/VividCortex/gohistogram	v1.0.0	h1:6+hBz+qvs0JOrrNhhmR7lFxo5sINxBCGXrdtl/UvroE=
+	dep	github.com/anmitsu/go-shlex	v0.0.0-20200514113438-38f4b401e2be	h1:9AeTilPcZAjCFIImctFaOjnTIavg87rW78vTPkQqLI8=
+	dep	github.com/apex/log	v1.9.0	h1:FHtw/xuaM8AgmvDDTI9fiwoAL25Sq2cxojnZICUU8l0=
+	dep	github.com/armon/go-socks5	v0.0.0-20160902184237-e75332964ef5	h1:0CwZNZbxp69SHPdPJAN/hZIm0C4OItdklCFmMRWYpio=
+	dep	github.com/aymanbagabas/go-osc52/v2	v2.0.1	h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiErDT4WkJ2k=
+	dep	github.com/beorn7/perks	v1.0.1	h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
+	dep	github.com/buger/goterm	v0.0.0-20200322175922-2f3e71b85129	h1:gfAMKE626QEuKG3si0pdTRcr/YEbBoxY+3GOH3gWvl4=
+	dep	github.com/c4milo/unpackit	v0.0.0-20170704181138-4ed373e9ef1c	h1:aprLqMn7gSPT+vdDSl+/E6NLEuArwD/J7IWd8bJt5lQ=
+	dep	github.com/cespare/xxhash/v2	v2.2.0	h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
+	dep	github.com/charmbracelet/ssh	v0.0.0-20240401141849-854cddfa2917	h1:NZKjJ7d/pzk/AfcJYEzmF8M48JlIrrY00RR5JdDc3io=
+	dep	github.com/charmbracelet/x/exp/term	v0.0.0-20240425164147-ba2a9512b05f	h1:1BXkZqDueTOBECyDoFGRi0xMYgjJ6vvoPIkWyKOwzTc=
+	dep	github.com/cli/go-gh/v2	v2.9.0	h1:D3lTjEneMYl54M+WjZ+kRPrR5CEJ5BHS05isBPOV3LI=
+	dep	github.com/cli/safeexec	v1.0.0	h1:0VngyaIyqACHdcMNWfo6+KdUYnqEr2Sg+bSP1pdF+dI=
+	dep	github.com/cli/shurcooL-graphql	v0.0.4	h1:6MogPnQJLjKkaXPyGqPRXOI2qCsQdqNfUY1QSJu2GuY=
+	dep	github.com/creack/pty	v1.1.21	h1:1/QdRyBaHHJP61QkWMXlOIBfsgdDeeKfK8SYVUWJKf0=
+	dep	github.com/dchest/uniuri	v1.2.0	h1:koIcOUdrTIivZgSLhHQvKgqdWZq5d7KdMEWF1Ud6+5g=
+	dep	github.com/dsnet/compress	v0.0.1	h1:PlZu0n3Tuv04TzpfPbrnI0HW/YwodEXDS+oPKahKF0Q=
+	dep	github.com/eiannone/keyboard	v0.0.0-20220611211555-0d226195f203	h1:XBBHcIb256gUJtLmY22n99HaZTz+r2Z51xUPi01m3wg=
+	dep	github.com/fsnotify/fsnotify	v1.7.0	h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
+	dep	github.com/gen2brain/beeep	v0.0.0-20220909211152-5a9ec94374f6	h1:jFEK/SA/7E8lg9T33+y8D4Z0I782+bbiEjmyyklRzRQ=
+	dep	github.com/go-kit/kit	v0.13.0	h1:OoneCcHKHQ03LfBpoQCUfCluwd2Vt3ohz+kvbJneZAU=
+	dep	github.com/go-kit/log	v0.2.1	h1:MRVx0/zhvdseW+Gza6N9rVzU/IVzaeE1SFI4raAhmBU=
+	dep	github.com/go-logfmt/logfmt	v0.5.1	h1:otpy5pqBCBZ1ng9RQ0dPu4PN7ba75Y/aA+UpowDyNVA=
+	dep	github.com/godbus/dbus/v5	v5.1.0	h1:4KLkAxT3aOY8Li4FRJe/KvhoNFFxo0m6fNuFUO8QJUk=
+	dep	github.com/google/go-github/v48	v48.2.0	h1:68puzySE6WqUY9KWmpOsDEQfDZsso98rT6pZcz9HqcE=
+	dep	github.com/google/go-querystring	v1.1.0	h1:AnCroh3fv4ZBgVIf1Iwtovgjaw/GiKJo8M8yD/fhyJ8=
+	dep	github.com/google/shlex	v0.0.0-20191202100458-e7afc7fbc510	h1:El6M4kTTCOh6aBiKaUGG7oYTSPP8MxqL4YI3kZKwcP4=
+	dep	github.com/gorilla/websocket	v1.5.1	h1:gmztn0JnHVt9JZquRuzLw3g4wouNVzKL15iLr/zn/QY=
+	dep	github.com/gosuri/uilive	v0.0.4	h1:hUEBpQDj8D8jXgtCdBu7sWsy5sbW/5GhuO8KBwJ2jyY=
+	dep	github.com/gosuri/uiprogress	v0.0.1	h1:0kpv/XY/qTmFWl/SkaJykZXrBBzwwadmW8fRb7RJSxw=
+	dep	github.com/hashicorp/errwrap	v1.0.0	h1:hLrqtEDnRye3+sgx6z4qVLNuviH3MR5aQ0ykNJa/UYA=
+	dep	github.com/hashicorp/go-multierror	v1.1.1	h1:H5DkEtf6CXdFp0N0Em5UCwQpXMWke8IA0+lD48awMYo=
+	dep	github.com/henvic/httpretty	v0.0.6	h1:JdzGzKZBajBfnvlMALXXMVQWxWMF/ofTy8C3/OSUTxs=
+	dep	github.com/influxdata/influxdb1-client	v0.0.0-20200827194710-b269163b24ab	h1:HqW4xhhynfjrtEiiSGcQUd6vrK23iMam1FO8rI7mwig=
+	dep	github.com/jpillora/chisel	v1.9.1	h1:nGOF58+45WHlvDcq6AZu7En8nWOBCZHqj9boo5rB4qU=
+	dep	github.com/jpillora/sizestr	v1.0.0	h1:4tr0FLxs1Mtq3TnsLDV+GYUWG7Q26a6s+tV5Zfw2ygw=
+	dep	github.com/klauspost/compress	v1.17.0	h1:Rnbp4K9EjcDuVuHtd0dgA4qNuv9yKDYKK1ulpJwgrqM=
+	dep	github.com/klauspost/pgzip	v1.2.5	h1:qnWYvvKqedOF2ulHpMG72XQol4ILEJ8k2wwRl/Km8oE=
+	dep	github.com/lucasb-eyer/go-colorful	v1.2.0	h1:1nnpGOrhyZZuNyfu1QjKiUICQ74+3FNCN69Aj6K7nkY=
+	dep	github.com/mattn/go-isatty	v0.0.20	h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
+	dep	github.com/mattn/go-runewidth	v0.0.15	h1:UNAjwbU9l54TA3KzvqLGxwWjHmMgBUVhBiTjelZgg3U=
+	dep	github.com/muesli/termenv	v0.15.2	h1:GohcuySI0QmI3wN8Ok9PtKGkgkFIk7y6Vpb5PvrY+Wo=
+	dep	github.com/oklog/run	v1.1.1-0.20200508094559-c7096881717e	h1:bxQ+jj+8fdl9112bovUjD/14jj/uboMqjyVoFkqrdGg=
+	dep	github.com/olebedev/emitter	v0.0.0-20190110104742-e8d1457e6aee	h1:IquUs3fIykn10zWDIyddanhpTqBvAHMaPnFhQuyYw5U=
+	dep	github.com/olekukonko/tablewriter	v0.0.5	h1:P2Ga83D34wi1o9J6Wh1mRuqd4mF/x/lgBS7N7AbDhec=
+	dep	github.com/pkg/errors	v0.9.1	h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+	dep	github.com/prometheus/client_golang	v1.19.1	h1:wZWJDwK+NameRJuPGDhlnFgx8e8HN3XHQeLaYJFJBOE=
+	dep	github.com/prometheus/client_model	v0.5.0	h1:VQw1hfvPvk3Uv6Qf29VrPF32JB6rtbgI6cYPYQjL0Qw=
+	dep	github.com/prometheus/common	v0.48.0	h1:QO8U2CdOzSn1BBsmXJXduaaW+dY/5QLjfB8svtSzKKE=
+	dep	github.com/prometheus/procfs	v0.12.0	h1:jluTpSng7V9hY0O2R9DzzJHYb2xULk9VTR1V1R/k6Bo=
+	dep	github.com/rivo/uniseg	v0.4.7	h1:WUdvkW8uEhrYfLC4ZzdpI2ztxP1I582+49Oc5Mq64VQ=
+	dep	github.com/rs/xid	v1.5.0	h1:mKX4bl4iPYJtEIxp6CYiUuLQ/8DYMoz0PUdtGgMFRVc=
+	dep	github.com/sirupsen/logrus	v1.9.0	h1:trlNQbNUG3OdDrDil03MCb1H2o9nJ1x4/5LYw7byDE0=
+	dep	github.com/spf13/cobra	v1.8.0	h1:7aJaZx1B85qltLMc546zn58BxxfZdR/W22ej9CFoEf0=
+	dep	github.com/spf13/pflag	v1.0.5	h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
+	dep	github.com/thlib/go-timezone-local	v0.0.0-20210907160436-ef149e42d28e	h1:BuzhfgfWQbX0dWzYzT1zsORLnHRv3bcRcsaUk0VmXA8=
+	dep	github.com/tj/go	v1.8.7	h1:a7M1Xo+QKmlUHEzZj2LX0LHqkh7/LpOa6Or8luBvY/c=
+	dep	github.com/tj/go-update	v2.2.5-0.20200519121640-62b4b798fd68+incompatible	h1:guTq1YxwB8XSILkI9q4IrOmrCOS6Hc1L3hmOhi4Swcs=
+	dep	github.com/ulikunitz/xz	v0.5.8	h1:ERv8V6GKqVi23rgu5cj9pVfVzJbOqAY2Ntl88O6c2nQ=
+	dep	golang.org/x/crypto	v0.21.0
+	=>	github.com/tg123/sshpiper.crypto	v0.23.0-sshpiper-20240508	h1:TF3Ca6LSU+c/aXl1aT/bTjNUKQyBROjPs5HFz4GMHw0=
+	
+	dep	golang.org/x/exp	v0.0.0-20230905200255-921286631fa9	h1:GoHiUyI/Tp2nVkLI2mCxVkOjsbSXD66ic0XW0js0R9g=
+	dep	golang.org/x/net	v0.23.0	h1:7EYJ93RZ9vYSZAIb2x3lnuvqO5zneoD6IvWjuhfxjTs=
+	dep	golang.org/x/sync	v0.6.0	h1:5BMeUDZ7vkXGfEr1x9B4bRcTH4lpkTkpdh0T/J+qjbQ=
+	dep	golang.org/x/sys	v0.20.0	h1:Od9JTbYCk261bKm4M/mw7AklTlFYIa0bIp9BgSm1S8Y=
+	dep	golang.org/x/term	v0.20.0	h1:VnkxpohqXaOBYJtBmEppKUG6mXpi+4O6purfc2+sMhw=
+	dep	golang.org/x/text	v0.15.0	h1:h1V/4gjBv8v9cjcR6+AR5+/cIYK5N/WAgiv4xlsEtAk=
+	dep	google.golang.org/genproto/googleapis/rpc	v0.0.0-20240318140521-94a12d6c2237	h1:NnYq6UN9ReLM9/Y01KWNOWyI5xQ9kbIms5GGJVwS/Yc=
+	dep	google.golang.org/grpc	v1.64.0	h1:KH3VH9y/MgNQg1dE7b3XfVK0GsPSIzJwdF617gUSbvY=
+	dep	google.golang.org/protobuf	v1.34.1	h1:9ddQBjfCyZPOHPUiPxpYESBLc+T8P3E+Vo4IbKZgFWg=
+	dep	gopkg.in/yaml.v3	v3.0.1	h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	DefaultGODEBUG=asynctimerchan=1,gotestjsonbuildtext=1,gotypesalias=0,httpcookiemaxnum=0,httpservecontentkeepheaders=1,multipathtcp=0,randseednop=0,rsa1024min=0,tls3des=1,tlsmlkem=0,urlmaxqueryparams=0,winreadlinkvolume=0,winsymlink=0,x509keypairleaf=0,x509negativeserial=1,x509rsacrt=0,x509usepolicies=0
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=9b63f77cf206fe0f7c120285bd87656a5247a9f1
+	build	vcs.time=2024-05-21T07:24:17Z
+	build	vcs.modified=false

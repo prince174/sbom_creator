@@ -1,0 +1,14 @@
+/out/app: go1.24.13
+	path	github.com/tomnomnom/httprobe
+	mod	github.com/tomnomnom/httprobe	v0.0.0-20220609162043-7e8abdb4096a	
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	DefaultGODEBUG=asynctimerchan=1,gotestjsonbuildtext=1,gotypesalias=0,httpcookiemaxnum=0,httplaxcontentlength=1,httpmuxgo121=1,httpservecontentkeepheaders=1,multipathtcp=0,netedns0=0,panicnil=1,randseednop=0,rsa1024min=0,tls10server=1,tls3des=1,tlsmlkem=0,tlsrsakex=1,tlsunsafeekm=1,urlmaxqueryparams=0,winreadlinkvolume=0,winsymlink=0,x509keypairleaf=0,x509negativeserial=1,x509rsacrt=0,x509usepolicies=0
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=7e8abdb4096ab224f21616478b699b4dfda9d409
+	build	vcs.time=2022-06-09T16:20:43Z
+	build	vcs.modified=false

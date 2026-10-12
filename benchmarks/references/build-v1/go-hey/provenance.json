@@ -1,0 +1,45 @@
+{
+  "id": "go-hey",
+  "language": "Go",
+  "commit": "af177063f85bd935c55f1f2ee59c2898d9654f82",
+  "repository_url": "https://github.com/rakyll/hey.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/go-hey/sbom.json",
+  "schema_valid": true,
+  "components": 3,
+  "direct_graph_ready": true,
+  "direct_edges": 1,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "1.12.0",
+  "notes": [],
+  "reference": {
+    "path": "benchmarks/references/build-v1/go-hey/sbom.json",
+    "sha256": "0676134b9f59644aa3c6b293407f56d49707515e29f8fc07876f5c8c79f441ae",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 3,
+    "dependency_entries": 3,
+    "root": "pkg:golang/github.com/rakyll/hey@v0.1.4?type=module",
+    "root_graph_present": true,
+    "direct_edges": 1
+  },
+  "module_references": [],
+  "recipe_sha256": "609283f774d810c27b7769b55a03d5ddecad6ba9fbd588747c8ee7f0724e9585",
+  "build_log_sha256": "cd6f7484c7fdde8a091cc92a655c9b1f47771fb62200f75112111f855fafa75b",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/go-hey/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/golang:1.24-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac",
+    "docker.io/library/golang:1.26-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c"
+  ],
+  "native_evidence": [
+    {
+      "file": "go-build-info.txt",
+      "sha256": "0297862bddc7aa7f61d152333e46f77e7022366dc0ba0c231443c74c8d95155d"
+    }
+  ],
+  "build_started_at": "2026-10-12T19:52:08.251306+00:00",
+  "build_finished_at": "2026-10-12T19:53:46.211692+00:00"
+}

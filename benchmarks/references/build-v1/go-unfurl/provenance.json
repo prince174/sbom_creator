@@ -1,0 +1,45 @@
+{
+  "id": "go-unfurl",
+  "language": "Go",
+  "commit": "8f10d050f1b0be12e505053da174f3f39e8eed74",
+  "repository_url": "https://github.com/tomnomnom/unfurl.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/go-unfurl/sbom.json",
+  "schema_valid": true,
+  "components": 2,
+  "direct_graph_ready": true,
+  "direct_edges": 1,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "1.12.0",
+  "notes": [],
+  "reference": {
+    "path": "benchmarks/references/build-v1/go-unfurl/sbom.json",
+    "sha256": "695f587c1f95c2b1e6b65f6a8cf733f2a4e936da94d58be15070228463412a2c",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 2,
+    "dependency_entries": 2,
+    "root": "pkg:golang/github.com/tomnomnom/unfurl@v0.4.3?type=module",
+    "root_graph_present": true,
+    "direct_edges": 1
+  },
+  "module_references": [],
+  "recipe_sha256": "609283f774d810c27b7769b55a03d5ddecad6ba9fbd588747c8ee7f0724e9585",
+  "build_log_sha256": "a7c077de5877dec8498562dd6b18a36ba2846c3f1241cc0c380bc26be00bd990",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/go-unfurl/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/golang:1.24-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac",
+    "docker.io/library/golang:1.26-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c"
+  ],
+  "native_evidence": [
+    {
+      "file": "go-build-info.txt",
+      "sha256": "9c622b065a235c588591c9cf65ad2f2696071980f086ac97a7618ba240ba3594"
+    }
+  ],
+  "build_started_at": "2026-10-12T19:54:04.866199+00:00",
+  "build_finished_at": "2026-10-12T19:54:14.357032+00:00"
+}

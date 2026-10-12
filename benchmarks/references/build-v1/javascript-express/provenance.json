@@ -1,0 +1,41 @@
+{
+  "id": "javascript-express",
+  "language": "JavaScript",
+  "commit": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
+  "repository_url": "https://github.com/expressjs/express.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-express/sbom.json",
+  "schema_valid": true,
+  "components": 69,
+  "direct_graph_ready": true,
+  "direct_edges": 31,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-express/sbom.json",
+    "sha256": "ad3ac97bcbdea1a8acaac52dcb857b5051fea32848f0f3f1600ec1bd41d09723",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 69,
+    "dependency_entries": 69,
+    "root": "express@4.21.2",
+    "root_graph_present": true,
+    "direct_edges": 31
+  },
+  "module_references": [],
+  "recipe_sha256": "31e3e41e82efd2cfb7eae183d6ca980bbb2d97f1fdd4dd96eea5d061fea3fd57",
+  "build_log_sha256": "70783a22242661a355c68d7ade2d8479a0a05772f4cc2d9a89db880b70594189",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-express/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:52:40.209347+00:00",
+  "build_finished_at": "2026-10-12T19:53:18.160960+00:00"
+}

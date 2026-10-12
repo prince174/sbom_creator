@@ -1,0 +1,41 @@
+{
+  "id": "javascript-axios",
+  "language": "JavaScript",
+  "commit": "b2cb45d5a533a5465c99559b16987e4d5fc08cbc",
+  "repository_url": "https://github.com/axios/axios.git",
+  "build_status": "generated",
+  "old_image_pair_verified": false,
+  "direct_accuracy_measured": false,
+  "sbom": "benchmarks/references/build-v1/javascript-axios/sbom.json",
+  "schema_valid": true,
+  "components": 9,
+  "direct_graph_ready": true,
+  "direct_edges": 3,
+  "graph_source": "CycloneDX plugin",
+  "generator_version": "6.0.1",
+  "notes": [
+    "Production install/pack; explicit build for axios/lodash; dev dependencies excluded from reference."
+  ],
+  "reference": {
+    "path": "benchmarks/references/build-v1/javascript-axios/sbom.json",
+    "sha256": "e7ee3fb65b02e51998a4fdee09c431c87b358697f1c24843a2498bc6f8eea99f",
+    "spec_version": "1.6",
+    "schema_valid": true,
+    "components": 9,
+    "dependency_entries": 9,
+    "root": "axios@1.7.9",
+    "root_graph_present": true,
+    "direct_edges": 3
+  },
+  "module_references": [],
+  "recipe_sha256": "cb9edadf109eee9aae1e4789fa0e2ddd624f286a4820a6ec812774e63151b98b",
+  "build_log_sha256": "60bcf380689a225b1c6b36691779b817ad20d9b03a7a88d230d278143e9e1b2d",
+  "recipe_inputs": {},
+  "local_build_log": "benchmarks/.work/build-references-v1/javascript-axios/build.log",
+  "resolved_builder_images": [
+    "docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392"
+  ],
+  "native_evidence": [],
+  "build_started_at": "2026-10-12T19:55:32.315735+00:00",
+  "build_finished_at": "2026-10-12T19:56:20.329154+00:00"
+}

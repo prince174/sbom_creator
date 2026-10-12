@@ -1,0 +1,28 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:a7bfe541-7fac-482f-9d8a-52b2a700ae45",
+  "version": 1,
+  "components": [
+    {
+      "type": "library",
+      "name": "stringio",
+      "version": "3.1.2",
+      "description": "Pseudo IO on String",
+      "purl": "pkg:gem/stringio@3.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8a11a30ec257e6d9851a42dacb968b07a56bf2cfe359b2d906ec1f8774ac7d71"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Ruby"
+          }
+        }
+      ]
+    }
+  ]
+}

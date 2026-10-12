@@ -1,0 +1,27 @@
+/out/app: go1.24.13
+	path	github.com/boyter/scc/v3
+	mod	github.com/boyter/scc/v3	(devel)	
+	dep	github.com/boyter/gocodewalker	v1.4.0	
+	dep	github.com/danwakefield/fnmatch	v0.0.0-20160403171240-cbb64ac3d964	
+	dep	github.com/json-iterator/go	v1.1.12	
+	dep	github.com/mattn/go-runewidth	v0.0.16	
+	dep	github.com/modern-go/concurrent	v0.0.0-20180306012644-bacd9c7ef1dd	
+	dep	github.com/modern-go/reflect2	v1.0.2	
+	dep	github.com/rivo/uniseg	v0.4.7	
+	dep	github.com/spf13/cobra	v1.8.1	
+	dep	github.com/spf13/pflag	v1.0.6	
+	dep	golang.org/x/crypto	v0.33.0	
+	dep	golang.org/x/sync	v0.11.0	
+	dep	golang.org/x/sys	v0.30.0	
+	dep	golang.org/x/text	v0.22.0	
+	dep	gopkg.in/yaml.v2	v2.4.0	
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=965213f77b515103a85a7d8515b2e95bd3e98c5c
+	build	vcs.time=2025-02-17T00:51:21Z
+	build	vcs.modified=false
