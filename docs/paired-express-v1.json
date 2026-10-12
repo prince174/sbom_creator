@@ -1,0 +1,18 @@
+{
+  "experiment": "R3",
+  "reference_receipt_sha256": "e6845272ed55c7ef74f8fbd3050ef572fc54108180f30697ae20e57e81708e0e",
+  "paired_runtime_verified": true,
+  "declarations_lock_installed_versions_agree": true,
+  "direct_reference_edges": 31,
+  "reference_coordinates_in_final_inventory": 31,
+  "final_components": 267,
+  "final_dependency_entries": 0,
+  "unknown_decisions": 13,
+  "three_sbom_schemas_validated": true,
+  "direct_precision": null,
+  "direct_recall": null,
+  "direct_f1": null,
+  "reason": "Inventory coordinate coverage is not a prediction of direct edges",
+  "control_partition": "benchmarks/direct-evaluation-split-v1.json",
+  "holdout_used_for_tuning": false
+}

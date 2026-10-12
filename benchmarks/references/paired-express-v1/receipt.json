@@ -1,0 +1,78 @@
+{
+  "experiment": "R3",
+  "project": "javascript-express",
+  "commit": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
+  "repository_url": "https://github.com/expressjs/express.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:adb1fce706e868cd3955d8e1876ac76f0d445422af0b10e34fc91eace550a7ba",
+  "runtime_image": "sha256:5e7a1c2f6851bed2fc2cc11679afd3ce422e46f4a91aee8446a25d7cd09161e7",
+  "runtime_config_digest": "sha256:f0554293c75e60b7e7229d74ea888b94cf7c6f8647296085f9861a9d94688c6d",
+  "archive_binding": {
+    "index_digest": "sha256:5e7a1c2f6851bed2fc2cc11679afd3ce422e46f4a91aee8446a25d7cd09161e7",
+    "platform_manifest_digest": "sha256:0add439f1dfd1192d1f34f39ddf372017b40864f71abef5234ff25050be36676",
+    "config_digest": "sha256:f0554293c75e60b7e7229d74ea888b94cf7c6f8647296085f9861a9d94688c6d",
+    "syft_archive_manifest_digest": "sha256:03e3cbfa1590399150b58653ed953194b8f9390a513ac3cfb3434975e6b9f758",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 1048,
+  "application_tree_sha256": "633d2ccf9acc5ce38c48bd1bdeea32dc743ae1d3fbcc270c0604144c652f9b8a",
+  "reference_sha256": "6932472be3f6504a14ffe73ab90b209171aba56a6049c293646310bea4f2da1f",
+  "package_lock_sha256": "dc1c398210220fda576a16f13785d786f7bd05a397e185702a90908843de8819",
+  "source_manifest_sha256": "37ac624cec9a1a3d98596794bac913345ebb0b39c5dbab949fc84e5d9d500470",
+  "recipe_sha256": "788a84fcddaa66615dff01dcebe6daa64b6562b71268e119a7f01bcf6843968f",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm production dependencies, scripts disabled, pack lifecycle",
+  "declared_direct_count": 31,
+  "reference_root_edges": 31,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": null,
+  "analysis_seconds": null,
+  "timing_note": "Not recovered after validation resume",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-express-v1/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "CI_CONFIGURATION": 9
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "ci_configuration": 9
+    },
+    "source_count": 9,
+    "image_count": 360,
+    "selected_count": 356,
+    "final_count": 267,
+    "os_count": 89,
+    "full_count": 356,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 343,
+      "UNKNOWN": 13
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 6.157
+  },
+  "outputs": {
+    "final.cdx.json": "b53bb98cbdfcc458e86ca72f24d91fc09f9c52a0e7b49851ea4704ec2de69f0e",
+    "os.cdx.json": "77c2248ffe50f5c1eb19ce911caa231ec03104c60f236fd21e2ddafb3e9e4635",
+    "full.cdx.json": "131cb183520c2717641cbbdd81a8093da1171b6ea188c0c348ff69c370106463",
+    "source.syft.json": "43527a9e6d7722e9fec15f25b7155d89257d1bf9020fac74a261f5db4dce6953",
+    "image.syft.json": "b866f7729ca27a58197e92b9779339c97e082c8e0cc765663e206ad8d90d0f53",
+    "provenance.json": "9718a39da54e2ee7178b7ee996dcb7b878af2eecd6c4b5aeec72ed66c84e3c2b"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier"
+}

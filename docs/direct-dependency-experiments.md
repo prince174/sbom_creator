@@ -79,3 +79,27 @@
   часть выборки закрепить до настройки правил. Не запускать повторно R1 целиком.
 - [Отчёт](reference-pairing-audit-v1.md), [машиночитаемые рёбра](reference-pairing-audit-v1.json),
   воспроизведение: `python benchmarks/audit_reference_pairing.py`.
+
+## R3 — парная сборка Express и фиксированный holdout, 2026-10-13
+
+- Начало: main `55ca6b2`, дерево чистое, активных benchmark-процессов нет.
+- Собран Express из закреплённого commit, CycloneDX npm 6.0.1 выполнен в builder;
+  runtime получил тот же каталог приложения, 1048 записей дерева совпали.
+- 31 корневое ребро совпадает с production dependencies; версии подтверждены
+  lockfile и package.json установленного пакета в runtime. Эталон и генератор
+  отсутствуют во входах анализатора. Исходный checkout чистый.
+- Отрицательные попытки: `.npmrc` запрещал lockfile (в рецепте явно включён);
+  harness сравнивал OCI index и config (исправлена проверяемая цепочка digest).
+  После исправления использованы уже готовые артефакты, новая сборка не запускалась.
+- B0: 267 final / 89 OS / 356 full; 13 UNKNOWN; все три схемы валидны.
+  31/31 координат прямых зависимостей присутствуют, но dependencies пуст:
+  direct precision/recall/F1 не определены. Улучшение алгоритма не заявляется.
+- Зафиксированы 48 development / 12 holdout, по 2 на язык, до настройки H1;
+  это не слепое исследование, предыдущий просмотр R1/R2 раскрыт в протоколе.
+- Проверки: 5 unit-тестов harness/partition, повтор хешей/схем/деревьев/версий,
+  Ruff. Runtime сервиса не менялся. Время полного прогона и peak resources — null.
+- [Отчёт](paired-express-v1.md), [JSON](paired-express-v1.json),
+  [split](../benchmarks/direct-evaluation-split-v1.json).
+- Следующий шаг R4: H1 как отдельный экспериментальный модуль с code/image inputs;
+  Express — development. Не настраивать правила на holdout, не передавать SBOM
+  эталона анализатору и не сокращать основной inventory ради красивых direct-метрик.
