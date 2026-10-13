@@ -1,0 +1,72 @@
+{
+  "experiment": "R21",
+  "receipt_sha256": "89f493f12c81df91eb2b26d812dfc03ec221027ca13ef04646a0de629ada4dd7",
+  "paired_image_verified": true,
+  "effective_pom_installed_reference_agree": true,
+  "reference_root_version": "1.13.0",
+  "root_version_validation": "matched",
+  "metadata": {
+    "root": [
+      "org.apache.commons",
+      "commons-text",
+      "1.13.0"
+    ],
+    "direct": [
+      [
+        "org.apache.commons",
+        "commons-lang3",
+        "3.17.0"
+      ]
+    ],
+    "jar_coordinates": [
+      [
+        "org.apache.commons",
+        "commons-lang3",
+        "3.17.0"
+      ],
+      [
+        "org.apache.commons",
+        "commons-text",
+        "1.13.0"
+      ]
+    ],
+    "effective_pom_native_cyclonedx_agree": true,
+    "scope": "compile/runtime; no tests",
+    "accuracy_measured": false
+  },
+  "three_schemas_valid": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "CI_CONFIGURATION": 13,
+      "SOURCE_ONLY": 6,
+      "AMBIGUOUS_IDENTITY": 6
+    },
+    "unknown_groups": {
+      "ci_configuration": 13,
+      "source_declarations": 6,
+      "source_identity": 6
+    },
+    "source_count": 27,
+    "image_count": 2,
+    "selected_count": 2,
+    "final_count": 2,
+    "os_count": 0,
+    "full_count": 2,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "UNKNOWN": 25,
+      "INCLUDE": 2
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.453
+  },
+  "direct_precision": null,
+  "direct_recall": null,
+  "reason": "Java direct classifier absent",
+  "holdout_used": false
+}

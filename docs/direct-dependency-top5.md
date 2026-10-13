@@ -175,3 +175,9 @@ Development audit8Java:52root declarations, из них40test. Gson/SLF4J тре
 module-aware evaluation. Maven direct accuracy остаётся неоценённой; сырые
 POM counts не являются TP/FP/FN. Места и runtime0.7.0 не меняются.
 [Аудит и ограничения](maven-declarations-v1.md).
+
+### 2026-10-13 — R21, первый парный Java development reference
+
+Commons Text1.13.0 → Commons Lang3.17.0 подтверждён сборкой/CDX/native graph/JAR.
+Artifact-only image2JAR, безJRE. Это эталон, не успех Java classifier: direct
+метрики null, места неизменны. [Протокол](paired-commons-text-v1.md).

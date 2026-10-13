@@ -359,3 +359,17 @@
 - Следующее: paired Commons Text; effective POM/native graph только evaluation,
   module owner и build/runtime scope не смешивать.
 - [Протокол](maven-declarations-v1.md), [данные](maven-declarations-v1.json).
+
+## R21 — paired Commons Text, 2026-10-13
+
+- Mainf0e0310, clean, benchmark нет. Exact commit, pinned Maven image;
+  real package + CDX2.9.3 + tree3.8.1 + effective POM/active profiles.
+- Root commons-text1.13.0 → commons-lang3 3.17.0 согласован с JAR metadata.
+  Artifact-only scratch image содержит2JAR, безJRE/OS, исполнение не проверялось.
+- Первое export ожидало sbom.json, parent задаёт другой outputName; исправлен
+  путь, failed recipe/log сохранены, сборка повторена. Saved CDX version2.9.3.
+-5tests+Ruff и revalidation hashes/tree/OCI/JAR/native/effectivePOM/3schemas passed.
+  final2/OS0/full2; Java direct accuracy null, runtime0.7.0 неизменен.
+- Следующее: J1 development по source/embedded POM/Syft; effective POM только oracle,
+  profiles/parent не исполнять в runtime. Holdout не читать для тюнинга.
+- [Протокол](paired-commons-text-v1.md), [проверка](paired-commons-text-v1.json).
