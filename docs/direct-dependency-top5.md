@@ -181,3 +181,10 @@ POM counts не являются TP/FP/FN. Места и runtime0.7.0 не ме�
 Commons Text1.13.0 → Commons Lang3.17.0 подтверждён сборкой/CDX/native graph/JAR.
 Artifact-only image2JAR, безJRE. Это эталон, не успех Java classifier: direct
 метрики null, места неизменны. [Протокол](paired-commons-text-v1.md).
+
+### 2026-10-13 — R22, ограничение Java evidence
+
+На development Commons Text image JavaPomProject не сохраняет dependency list,
+image dependency-of0; source13edges включает12test. Для J1 нужен отдельный
+owner/scope анализ. Direct метрики не изменились, места не назначены.
+[Аудит](java-syft-evidence-v1.md).

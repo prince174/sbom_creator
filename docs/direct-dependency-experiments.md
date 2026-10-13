@@ -373,3 +373,16 @@
 - Следующее: J1 development по source/embedded POM/Syft; effective POM только oracle,
   profiles/parent не исполнять в runtime. Holdout не читать для тюнинга.
 - [Протокол](paired-commons-text-v1.md), [проверка](paired-commons-text-v1.json).
+
+## R22 — Java Syft evidence audit, 2026-10-13
+
+- Mainfb3123e, clean, benchmark нет. Source graph13edges (12test,1scope absent),
+  image dependency-of0; JavaPomProject schema не хранит declarations.
+- Embedded Commons Text POM побайтово равен source; это не effective profile.
+  Нетестовый кандидатcommons-lang3 3.17.0, effective scopeUNKNOWN без resolver.
+- JSON hashes+R21 tree/OCI/native/JAR/3schemas revalidation и Ruff passed.
+  Runtime0.7.0 неизменен; accuracy null. Неверный upstream filename URL404,
+  выводы по локальному pinned schema/catalog evidence.
+- Следующее: J1 source graph/raw POM/image GAV, сначала наследование/profile
+  counterexamples; unresolved scope UNKNOWN. Oracle только для оценки.
+- [Протокол](java-syft-evidence-v1.md), [данные](java-syft-evidence-v1.json).
