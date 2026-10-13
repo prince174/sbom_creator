@@ -198,3 +198,17 @@
 - Следующее: расширение development coverage и следующий язык с парным reference;
   не трактовать оставшиеся компоненты как transitive и не настраивать union по R8.
 - [Отчёт](runtime-npm-v1.md), [replay](runtime-npm-v1.json). Deployment не менялся.
+
+## R10 — Python declaration readiness, 2026-10-13
+
+- Начало: main 8f4ed12, дерево чистое, benchmark-процессов нет.
+- Проверены 8 Python development по Git blob точного commit; holdout не читался.
+  6 static (2 непустых, 4 пустых), 2 UNKNOWN без pyproject. Static name sets
+  совпали с R1, но версии/парность/markers не оценены, precision/recall null.
+- Набор слабый по разнообразию: два одинаковых Bitbucket manifest и только
+  MarkupSafe в обоих положительных проектах. Не объявлять это высокой точностью.
+- 5 tests + Ruff passed. Runtime/три SBOM не менялись; отдельный коммит аудита.
+- Следующее: парная Jinja wheel/venv/CycloneDX сборка на закреплённом commit,
+  проверка installed METADATA и root graph; затем отдельный Python-прототип,
+  не использовать host markers или setup.py execution в runtime.
+- [Протокол](python-declarations-v1.md), [данные](python-declarations-v1.json).
