@@ -165,3 +165,21 @@
 - Следующее: парные сборки трёх новых control repositories, однократная оценка
   замороженного H2.1; не заменять неудобные случаи и не настраивать правила.
 - [Протокол и regression](npm-h2-regression-v1.md), [JSON](npm-h2-regression-v1.json).
+
+## R8 — парные сборки и контроль H2.1, 2026-10-13
+
+- Начало: main d8368f8, дерево чистое, benchmark-процессов нет.
+- Все 3 preregistered проекта собраны на точных commit; CycloneDX/npm lock,
+  installed versions, app trees и image identity проверены. Oracle не вход H2.
+- H1 micro TP=3 FP=0 FN=48; H2 TP=50 FP=0 FN=1. Precision 100% без снижения,
+  recall/coverage 5.88%→98.04%, F1 11.11%→99.01%; 3/3 проектов оценены.
+- Fastify pino union range остаётся UNKNOWN/FN. Правила H2 после раскрытия
+  не менялись. Это узкий npm gain относительно H1, не всех языков и не метрика B0.
+- Ошибки harness: scoped group/name (исправлено с тестом, Fastify образ reused);
+  Hapi save=false мешал lockfile, v1/v2 failed, v3 с явным save=true успешно.
+  Точные рецепты/профили сохранены; неудачные проекты не заменялись.
+- 74 tests, Ruff, 9 схем SBOM и hash/installed evidence checks passed.
+- Следующий этап: интеграция проверенного npm-профиля без удаления inventory,
+  с полным runtime regression/schema/security gate. Union отдельно не расширять
+  по раскрытому контролю. H2 production ещё не внедрён.
+- [Отчёт](npm-h2-control-v2.md), [рёбра и метрики](npm-h2-control-v2.json).

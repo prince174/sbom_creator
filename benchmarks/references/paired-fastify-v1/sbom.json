@@ -1,0 +1,2852 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:c6406299-a1ca-4290-ab1e-e91f2febd075",
+  "metadata": {
+    "timestamp": "2026-10-13T02:47:04.441Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "npm",
+          "version": "10.9.9"
+        },
+        {
+          "type": "application",
+          "name": "cyclonedx-npm",
+          "group": "@cyclonedx",
+          "version": "6.0.1",
+          "author": "Jan Kowalleck",
+          "description": "Create CycloneDX Software Bill of Materials (SBOM) from NPM projects.",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            },
+            {
+              "name": "cdx:npm:package:constraint:engine:npm",
+              "value": ">=9"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "name": "cyclonedx-library",
+          "group": "@cyclonedx",
+          "version": "10.3.0",
+          "author": "Jan Kowalleck",
+          "description": "Core functionality of CycloneDX for JavaScript (Node.js or WebBrowser).",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:constraint:engine:node",
+              "value": ">=20.18.0"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "fastify",
+      "version": "6.0.0-alpha.4",
+      "bom-ref": "fastify@6.0.0-alpha.4",
+      "author": "Matteo Collina",
+      "description": "Fast and low overhead web framework, for Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fastify@6.0.0-alpha.4?vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2Ffastify%2Ffastify.git",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/fastify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://fastify.dev/",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fastify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "ajv-compiler",
+      "group": "@fastify",
+      "version": "4.0.7",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/ajv-compiler@4.0.7",
+      "author": "Manuel Spigolon",
+      "description": "Build and manage the AJV instances for the fastify framework",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/ajv-compiler@4.0.7",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/ajv-compiler.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/ajv-compiler#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/ajv-compiler/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/ajv-compiler/-/ajv-compiler-4.0.7.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "54fd3221fc25735a218fbdf791e603ab21e6d5559e3fd550c58a26ba786bf748e40b868d3626db92b46268d80f82a8f5391c547a720b478ab303fa69601340b5"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/ajv-compiler"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "error",
+      "group": "@fastify",
+      "version": "4.2.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/error@4.2.1",
+      "author": "Tomas Della Vedova",
+      "description": "A small utility, used by Fastify itself, for generating consistent error objects across your codebase and plugins.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/error@4.2.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/fastify-error.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/fastify-error#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fastify-error/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/error/-/error-4.2.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "31806e9ae2303fee4c2295d2c8a9bafe8d448a07288a3d7cea5594b2c5f72c7e54f0a5aa53492d661cc2e0212b217f4425e41e44623ecc965059a9019456d472"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/error"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-json-stringify-compiler",
+      "group": "@fastify",
+      "version": "5.1.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/fast-json-stringify-compiler@5.1.1",
+      "author": "Manuel Spigolon",
+      "description": "Build and manage the fast-json-stringify instances for the fastify framework",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/fast-json-stringify-compiler@5.1.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/fast-json-stringify-compiler.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-json-stringify-compiler#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-json-stringify-compiler/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/fast-json-stringify-compiler/-/fast-json-stringify-compiler-5.1.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "a72c512a4ed4a549e7af3b4ff69178f99631bac110e0b89f4f2cd17625e6caa97541eccd1f13b4d83db9315536a3890c7803185808c6e912919688e091b88303"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/fast-json-stringify-compiler"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "proxy-addr",
+      "group": "@fastify",
+      "version": "5.1.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/proxy-addr@5.1.2",
+      "author": "Douglas Christopher Wilson",
+      "description": "Determine the address of a proxied request",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/proxy-addr@5.1.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/proxy-addr.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/proxy-addr#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/proxy-addr/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/proxy-addr/-/proxy-addr-5.1.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "baa07842c815a2ba345c30be0c87ed20c1971dd04f9fe94ae84937c57008c4f30225fab19dbb721283029b628f5153ae228b1dec2cb0f476b012a30533f500fa"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/proxy-addr"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "abstract-logging",
+      "version": "2.0.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|abstract-logging@2.0.1",
+      "author": "James Sumners",
+      "description": "A noop logger that conforms to the Log4j interface for modules to stub out internal logging",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/abstract-logging@2.0.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/jsumners/abstract-logging.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsumners/abstract-logging#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/jsumners/abstract-logging/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/abstract-logging/-/abstract-logging-2.0.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "d818d14d9c533ef85e3af19b06c94549839492bf928cfb4e9eb2cfdf77fe54858bcdecd0a5972a560ee36b72f87415e6cf38304fe6b4dbd8d1c793c28b726e88"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/abstract-logging"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "avvio",
+      "version": "9.3.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|avvio@9.3.1",
+      "author": "Matteo Collina",
+      "description": "Asynchronous bootstrapping of Node applications",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/avvio@9.3.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/avvio.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/avvio#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/avvio/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/avvio/-/avvio-9.3.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "4324ca5bad7faa56daf9c510066fec4fd5fc96b8b851da26a920f00a7ae78f522f2d50d14625d1933e0280145607efdc99f0bb48ae5641cf13d6f49d1af69471"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/avvio"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-json-stringify",
+      "version": "7.1.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|fast-json-stringify@7.1.0",
+      "author": "Matteo Collina",
+      "description": "Stringify your JSON at max speed",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-json-stringify@7.1.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/fast-json-stringify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-json-stringify#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-json-stringify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fast-json-stringify/-/fast-json-stringify-7.1.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "c0084043e7acd1a1fec793a87dd08795964576ac2d88cea5a44a2c6912307e0dbbd5661e110fed3dc5ddbb9be9ce5a99a5b27858da9a5b8411e548df1b80dcdb"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fast-json-stringify"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "find-my-way",
+      "version": "9.10.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|find-my-way@9.10.0",
+      "author": "Tomas Della Vedova - @delvedor",
+      "description": "Crazy fast http radix based router",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/find-my-way@9.10.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/delvedor/find-my-way.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/delvedor/find-my-way#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/delvedor/find-my-way/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/find-my-way/-/find-my-way-9.10.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7abbbeb823d0da0fa72c191ff383073ff2b234d31aaf4043cb48fe8bc15bef6185f7f607059e7cabb14e0d4b5f555ed753d9df4541d74a668cf0d9997086d9e1"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=20"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/find-my-way"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "light-my-request",
+      "version": "6.8.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|light-my-request@6.8.0",
+      "author": "Tomas Della Vedova - @delvedor",
+      "description": "Fake HTTP injection library",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/light-my-request@6.8.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/light-my-request.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/light-my-request#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/light-my-request/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/light-my-request/-/light-my-request-6.8.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "e50f0f8e848476d18807c7e2919b137a6e6f811a38176991eaf50a4c35bf1f583a32d02df1edddb906e0fd0c4be72ce0e81661a2bd8a3949b786158c58b4d9c2"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/light-my-request"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pino",
+      "version": "10.4.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|pino@10.4.0",
+      "author": "Matteo Collina",
+      "description": "super fast, all natural json logger",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pino@10.4.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/pinojs/pino.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://getpino.io",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/pino/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/pino/-/pino-10.4.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "6e4d59313c06fd5ca6c7eccfa1adbc321373b9c16f5c95a9ddcb2b4aec6e1cf48c7947adb5a0a843926f834ee6b42e0918da5c7d3c33e35a150a736004af7ebc"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/pino"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "process-warning",
+      "version": "5.1.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|process-warning@5.1.1",
+      "author": "Tomas Della Vedova",
+      "description": "A small utility for creating warnings and emitting them.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/process-warning@5.1.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/process-warning.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/fastify-warning#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fastify-warning/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/process-warning/-/process-warning-5.1.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "a0290d563e0e2a728472871505c0df888ba0375fdc13aae07d3de70adcdea993c0f3eac8c4c690d315f322418ff068f6a9468fd5447bba1275543f25502a730a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/process-warning"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rfdc",
+      "version": "1.4.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|rfdc@1.4.1",
+      "author": "David Mark Clements",
+      "description": "Really Fast Deep Clone",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/rfdc@1.4.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/davidmarkclements/rfdc.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/rfdc#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/rfdc/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "ab56f737942445459497b8b2ca569a8f790ea484f43768bd32a2044173fbdc656c37d730ddf771f17eb77049968491a2d8f3c2176dc88e9ee4b66777f6b6b020"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/rfdc"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "secure-json-parse",
+      "version": "4.1.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|secure-json-parse@4.1.1",
+      "author": "Eran Hammer",
+      "description": "JSON parse with prototype poisoning protection",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/secure-json-parse@4.1.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/secure-json-parse.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/secure-json-parse#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/secure-json-parse/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-4.1.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "96777cd4c40464a8e15bf19dd9342a75de173fa41835d0d6fc43fe23b9d3ac51cff72d8b99a18f20793dc6c9f370e884af5737f5cfdef38c45806be240a05347"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/secure-json-parse"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "semver",
+      "version": "7.8.5",
+      "bom-ref": "fastify@6.0.0-alpha.4|semver@7.8.5",
+      "author": "GitHub Inc.",
+      "description": "The semantic version parser used by npm.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/semver@7.8.5",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/npm/node-semver.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/npm/node-semver#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/npm/node-semver/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "63bfca0ec6fc2e3a28669c1aa86cae94ee8342592c8029dc7211c693eb19218e1206f52870c044147e54af57c8e1d57e26f974c3a723bee71a222e34a6e462a0"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/semver"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "toad-cache",
+      "version": "3.7.4",
+      "bom-ref": "fastify@6.0.0-alpha.4|toad-cache@3.7.4",
+      "author": "Igor Savin",
+      "description": "LRU and FIFO caches for Client or Server",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/toad-cache@3.7.4",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/kibertoad/toad-cache.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/kibertoad/toad-cache",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/kibertoad/toad-cache/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/toad-cache/-/toad-cache-3.7.4.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "9b54dd47faef4fb920189661b2936d5ddb1d624d1f75d1692491651b9b3e5243c5a3a9642e867760b39aa2f3d88ead51ef934fe497de4e548768eb04d3da5e0a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=20"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/toad-cache"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ajv-formats",
+      "version": "3.0.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|ajv-formats@3.0.1",
+      "author": "Evgeny Poberezkin",
+      "description": "Format validation for Ajv v7+",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ajv-formats@3.0.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/ajv-validator/ajv-formats.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/ajv-validator/ajv-formats#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/ajv-validator/ajv-formats/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "f2252a979d04511fae51c7514371c3a9ae84572a3776870bf20e5627714d7169aeeb621b90652e7bfa44c8b056f1518a2ae7133e0a9e92ce1f214d43038ca8c1"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ajv-formats"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ajv",
+      "version": "8.20.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|ajv@8.20.0",
+      "author": "Evgeny Poberezkin",
+      "description": "Another JSON Schema Validator",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ajv@8.20.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/ajv-validator/ajv.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://ajv.js.org",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/ajv-validator/ajv/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "4e16e58be3a53a3fa230f60505505f2773a60809da4b2367e0cd6fcfd4fa1a46b926df5b6bf1c8479ea3a32eb9b58ea4c7f142179557341f35f58eff194ac118"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ajv"
+        }
+      ],
+      "components": [
+        {
+          "type": "library",
+          "name": "fast-uri",
+          "version": "3.1.8",
+          "bom-ref": "fastify@6.0.0-alpha.4|ajv@8.20.0|fast-uri@3.1.8",
+          "author": "Vincent Le Goff",
+          "description": "Dependency-free RFC 3986 URI toolbox",
+          "licenses": [
+            {
+              "license": {
+                "id": "BSD-3-Clause",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
+          "purl": "pkg:npm/fast-uri@3.1.8",
+          "externalReferences": [
+            {
+              "url": "git+https://github.com/fastify/fast-uri.git",
+              "type": "vcs",
+              "comment": "as detected from PackageJson property \"repository.url\""
+            },
+            {
+              "url": "https://github.com/fastify/fast-uri",
+              "type": "website",
+              "comment": "as detected from PackageJson property \"homepage\""
+            },
+            {
+              "url": "https://github.com/fastify/fast-uri/issues",
+              "type": "issue-tracker",
+              "comment": "as detected from PackageJson property \"bugs.url\""
+            },
+            {
+              "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.8.tgz",
+              "type": "distribution",
+              "hashes": [
+                {
+                  "alg": "SHA-512",
+                  "content": "19932d6544cd4693952040a85f02cd652e7150613e99535b4c1f21ffb4708764c559c05088fcd3832662d39045f543192a42c9bfc5c14494e553bce0f3e65f32"
+                }
+              ],
+              "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+            }
+          ],
+          "properties": [
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/ajv/node_modules/fast-uri"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-uri",
+      "version": "4.2.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|fast-uri@4.2.2",
+      "author": "Vincent Le Goff",
+      "description": "Dependency-free RFC 3986 URI toolbox",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-uri@4.2.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/fast-uri.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-uri",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/fast-uri/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-4.2.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "13056950cccb54d3a67165b4ce2e46dc9270928a41e975e39d5bcd0467eaacc32c55ec368644169797bfa5efc27d851e4ba8ede1c20ed8c9da9845bbbffef03f"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fast-uri"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "forwarded",
+      "group": "@fastify",
+      "version": "3.1.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/forwarded@3.1.1",
+      "author": "Douglas Christopher Wilson",
+      "description": "Parse HTTP X-Forwarded-For header",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/forwarded@3.1.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/forwarded.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/forwarded#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/forwarded/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/forwarded/-/forwarded-3.1.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "5df0ed5b621cbe1aa2e833f560714ae2afc4f16a4d777fab681773032559c664c89db153b671042af10030c395745b91caffb29d88a9680f43f05be33ea00293"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/forwarded"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ipaddr.js",
+      "version": "2.5.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|ipaddr.js@2.5.0",
+      "author": "whitequark",
+      "description": "A library for manipulating IPv4 and IPv6 addresses in JavaScript.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ipaddr.js@2.5.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/whitequark/ipaddr.js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/whitequark/ipaddr.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/whitequark/ipaddr.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.5.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "6aafade4d01cf9c4baad94105560b6c7df023ea1ad28a4cc0dde066a876fd304a19c8b5d2a0ff9d5d8e4189d61a87f8ecb48af0dfb426d22c24286fcceca34d7"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 10"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ipaddr.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fastq",
+      "version": "1.20.3",
+      "bom-ref": "fastify@6.0.0-alpha.4|fastq@1.20.3",
+      "author": "Matteo Collina",
+      "description": "Fast, in memory work queue",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fastq@1.20.3",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mcollina/fastq.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mcollina/fastq#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mcollina/fastq/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fastq/-/fastq-1.20.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "5cabf99e72ecea72c5ef536088a24b21914b90fc8812e3ac7a52c6eee8d99c6ad17d02bc1e9bd8f96a8a84025401d2e89b054712b552e0b7f11653ead3f15303"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fastq"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "merge-json-schemas",
+      "group": "@fastify",
+      "version": "0.2.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/merge-json-schemas@0.2.2",
+      "author": "Ivan Tymoshenko",
+      "description": "Builds a logical conjunction (AND) of multiple JSON schemas",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/merge-json-schemas@0.2.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/merge-json-schemas.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/merge-json-schemas#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/merge-json-schemas/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/merge-json-schemas/-/merge-json-schemas-0.2.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "77f831f6c45b5025601911b399ae3ac0b730898f27a13a8ed8d9a383fbdb4c04711d11396dd8793c82fcb3decbb755fb49c456456e76795631c08a0fc0875550"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/merge-json-schemas"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json-schema-ref-resolver",
+      "version": "3.0.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|json-schema-ref-resolver@3.0.1",
+      "author": "Ivan Tymoshenko",
+      "description": "JSON schema reference resolver",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/json-schema-ref-resolver@3.0.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/json-schema-ref-resolver.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/json-schema-ref-resolver#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/json-schema-ref-resolver/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/json-schema-ref-resolver/-/json-schema-ref-resolver-3.0.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "c3e1f08258d7a55c19dc889da14475a8f67148e43e351416b957ba6b9a5ef176c7b0d644e1403054f52fcd96a09fbc8129b26db7a5099d11586cd4d13d9238e5"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/json-schema-ref-resolver"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "bom-ref": "fastify@6.0.0-alpha.4|fast-deep-equal@3.1.3",
+      "author": "Evgeny Poberezkin",
+      "description": "Fast deep equal",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/epoberezkin/fast-deep-equal.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/epoberezkin/fast-deep-equal#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/epoberezkin/fast-deep-equal/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7f7a90f68432f63d808417bf1fd542f75c0b98a042094fe00ce9ca340606e61b303bb04b2a3d3d1dce4760dcfd70623efb19690c22200da8ad56cd3701347ce1"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fast-deep-equal"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-querystring",
+      "version": "1.1.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|fast-querystring@1.1.2",
+      "author": "Yagiz Nizipli",
+      "description": "A fast alternative to legacy querystring module",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-querystring@1.1.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/anonrig/fast-querystring.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/anonrig/fast-querystring#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/anonrig/fast-querystring/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fast-querystring/-/fast-querystring-1.1.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "83a2ae2969855dcd1f203f16587d238ade20d00181a0984290931bd5199bb1211436f43e642f03e82519f86b45f2733348f5e786278fcb2aaa8a9ccd3449c78e"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fast-querystring"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "safe-regex2",
+      "version": "5.1.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|safe-regex2@5.1.2",
+      "author": "James Halliday",
+      "description": "detect possibly catastrophic, exponential-time regular expressions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/safe-regex2@5.1.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/safe-regex2.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/safe-regex2",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/safe-regex2/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/safe-regex2/-/safe-regex2-5.1.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "b40b421853cf3f4d95ae80d5ce9e1d6868ba6c2ee3586fb8d43e3b18a7f5f05787fee6ef2901d3f559a1024bed8cd3a6270aad029cd6794a44864c846142ef9b"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/safe-regex2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "deepmerge",
+      "group": "@fastify",
+      "version": "3.2.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|@fastify/deepmerge@3.2.2",
+      "author": "Aras Abbasi",
+      "description": "Merges the enumerable properties of two or more objects deeply.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40fastify/deepmerge@3.2.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/fastify/deepmerge.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fastify/deepmerge#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fastify/deepmerge/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@fastify/deepmerge/-/deepmerge-3.2.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "d79e5ea80fd631074dea0503e11ae14b62b43dccf63aef6943ce8bd2c8a93a93fd38d6d303aa18c3f856e157418d1e1e81c0c7aa65942bdc7cd28517ed2d660d"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@fastify/deepmerge"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cookie",
+      "version": "2.0.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|cookie@2.0.1",
+      "author": "Roman Shtylman",
+      "description": "HTTP server cookie parsing and serialization",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/cookie@2.0.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/jshttp/cookie.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jshttp/cookie#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/jshttp/cookie/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/cookie/-/cookie-2.0.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "cae4e8a95bd1ae3ea97c35d113240002ff12900124ffc192de34114e250c9bae9356d0589aa41ea048cbd8b9aaf11a68eb6ef5bc7efa2274c28538ad1009bae7"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=22"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/cookie"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "set-cookie-parser",
+      "version": "3.1.3",
+      "bom-ref": "fastify@6.0.0-alpha.4|set-cookie-parser@3.1.3",
+      "author": "Nathan Friedly",
+      "description": "Parses set-cookie headers into objects",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/set-cookie-parser@3.1.3",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/nfriedly/set-cookie-parser.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/nfriedly/set-cookie-parser",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/nfriedly/set-cookie-parser/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-3.1.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "c657ad49d008e5e7f25498ec6ad05bcc391797733f66669ddf17e741eed95ee041d323705bb0b6585b0d1a375135f66e9e634742e5fbf71b3f0023132c275c7b"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/set-cookie-parser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "redact",
+      "group": "@pinojs",
+      "version": "0.4.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|@pinojs/redact@0.4.0",
+      "author": "Matteo Collina",
+      "description": "Redact JS objects",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40pinojs/redact@0.4.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/pinojs/redact.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pinojs/redact#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/redact/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@pinojs/redact/-/redact-0.4.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "93610d9e606e804febcd07c471d58770263efc533754bcc7f5c604b1b76ca2aaefcc029185465e44d84066f07c3a2b502754c179ddf2a96b5d8f34bac09281c2"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@pinojs/redact"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "atomic-sleep",
+      "version": "1.0.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|atomic-sleep@1.0.0",
+      "author": "David Mark Clements",
+      "description": "Zero CPU overhead, zero dependency, true event-loop blocking sleep",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/atomic-sleep@1.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/davidmarkclements/atomic-sleep.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/atomic-sleep#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/atomic-sleep/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "90d3a30ea021ee9c745d6348fb841bce8891fe74e41c058db9ddaebe726ab83d7fc796bb11064c253d00733a8ad109faee863f4d34352db50a6a3669a7723db5"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=8.0.0"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/atomic-sleep"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "on-exit-leak-free",
+      "version": "2.1.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|on-exit-leak-free@2.1.2",
+      "author": "Matteo Collina",
+      "description": "Execute a function on exit without leaking memory, allowing all objects to be garbage collected",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/on-exit-leak-free@2.1.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mcollina/on-exit-or-gc.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mcollina/on-exit-or-gc#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mcollina/on-exit-or-gc/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/on-exit-leak-free/-/on-exit-leak-free-2.1.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "d1e24963a8572c67f5b9d1f07cd7ed06a1fe83bdc4538079d389d978aa73d6c61129a7c0821c31109ba70763bbac36642f83c67ec3159d35d9d848e26dba9cb0"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=14.0.0"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/on-exit-leak-free"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pino-abstract-transport",
+      "version": "3.0.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|pino-abstract-transport@3.0.0",
+      "author": "Matteo Collina",
+      "description": "Write Pino transports easily",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pino-abstract-transport@3.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/pinojs/pino-abstract-transport.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pinojs/pino-abstract-transport#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/pino-abstract-transport/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-3.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "c257d473353e9fb1f2fc76b98fd6bf819372ed67b9f9c5e9f182fe5fe3c6f12d0a5f1c3b9ff257037738e98d334339c827cdd44498b0cbb2e1e7a58ba2436ec6"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/pino-abstract-transport"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pino-std-serializers",
+      "version": "7.1.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|pino-std-serializers@7.1.0",
+      "author": "James Sumners",
+      "description": "A collection of standard object serializers for Pino",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/pino-std-serializers@7.1.0",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/pinojs/pino-std-serializers.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pinojs/pino-std-serializers#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/pino-std-serializers/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-7.1.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "06774f1faeff271184c518225f5757d30d45bd9724e566b869a97dd7df12ad18598c7dc6c4a4142880676094dd8f61c3377510012d3a1e57dc49b423d8e1e66b"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/pino-std-serializers"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "quick-format-unescaped",
+      "version": "4.0.4",
+      "bom-ref": "fastify@6.0.0-alpha.4|quick-format-unescaped@4.0.4",
+      "author": "David Mark Clements",
+      "description": "Solves a problem with util.format",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/quick-format-unescaped@4.0.4",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/davidmarkclements/quick-format.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/quick-format#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/davidmarkclements/quick-format/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "b580b5435860c91b87825a15fd85ecdb0d79ba73d587ca9fbbfa824df85361a99ac3b7f286e98a6b6c86a5d4a8f3bbd8df6ac87258fee1f59841750cb3d107be"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/quick-format-unescaped"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "real-require",
+      "version": "1.0.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|real-require@1.0.0",
+      "author": "Paolo Insogna",
+      "description": "Keep require and import consistent after bundling or transpiling",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/real-require@1.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/pinojs/real-require.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pinojs/real-require",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/real-require/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/real-require/-/real-require-1.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "3f89db41841f78f271452998faffca20dc55b9c9b8345de9decee926f78c4eda26e76151e181a5b5440b07c89d0d7c030d65be798ad60c56eecd49e3a161c5ee"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/real-require"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "safe-stable-stringify",
+      "version": "2.5.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|safe-stable-stringify@2.5.0",
+      "author": "Ruben Bridgewater",
+      "description": "Deterministic and safely JSON.stringify to quickly serialize JavaScript objects",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/safe-stable-stringify@2.5.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/BridgeAR/safe-stable-stringify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/BridgeAR/safe-stable-stringify#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/BridgeAR/safe-stable-stringify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "6f7ae9a532a6f53f8fb1508110e511e3a19623b7dd3acd3454a675fbd7351160da0ccbe341cead530b85c88a6b806813716a151d22ab53c1f7d591c0d9ed111c"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/safe-stable-stringify"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sonic-boom",
+      "version": "4.2.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|sonic-boom@4.2.1",
+      "author": "Matteo Collina",
+      "description": "Extremely fast utf8 only stream implementation",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/sonic-boom@4.2.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/pinojs/sonic-boom.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/pinojs/sonic-boom#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/pinojs/sonic-boom/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/sonic-boom/-/sonic-boom-4.2.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "c3a031b6e6d76b6c135c052c64c316111aec21101dacad1273e154cad5af60084124bcae238965acc202d43b65352748f7d108f3a299ba6d8c32adc4019945f5"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/sonic-boom"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "thread-stream",
+      "version": "4.2.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|thread-stream@4.2.0",
+      "author": "Matteo Collina",
+      "description": "A streaming way to send data to a Node.js Worker Thread",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/thread-stream@4.2.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mcollina/thread-stream.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mcollina/thread-stream#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mcollina/thread-stream/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/thread-stream/-/thread-stream-4.2.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "7b6cd9f7ac120a16b306c6c435ffcf726ff8b301edd9c10a43ddab8548e42fd1822a24c324869305e9e313f9bd0d78b44019933039050dd3a8994cb6d00d6d0d"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=20"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/thread-stream"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "json-schema-traverse",
+      "version": "1.0.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|json-schema-traverse@1.0.0",
+      "author": "Evgeny Poberezkin",
+      "description": "Traverse JSON Schema passing each schema object to callback",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/json-schema-traverse@1.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/epoberezkin/json-schema-traverse.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/epoberezkin/json-schema-traverse#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/epoberezkin/json-schema-traverse/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "34cf3f3fd9f75e35e12199f594b86415a0024ce5114178d6855e0103f4673aff31be0aadaa9017f483b89914314b1d51968e2dab37aa6f4b0e96bb9a3b2dddba"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/json-schema-traverse"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "bom-ref": "fastify@6.0.0-alpha.4|require-from-string@2.0.2",
+      "author": "Vsevolod Strukchinsky",
+      "description": "Require module from string",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/require-from-string@2.0.2",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/floatdrop/require-from-string.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/floatdrop/require-from-string#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/floatdrop/require-from-string/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "5dfd2759ee91b1ece214cbbe029f5b8a251b9a996ae92f7fa7eef0ed85cffc904786b5030d48706bebc0372b9bbaa7d9593bde53ffc36151ac0c6ed128bfef13"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/require-from-string"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "reusify",
+      "version": "1.1.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|reusify@1.1.0",
+      "author": "Matteo Collina",
+      "description": "Reuse objects and functions with style",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reusify@1.1.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mcollina/reusify.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mcollina/reusify#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mcollina/reusify/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "83a4147dfd38a19a47b34786e69f37ac52e11de574d2e83f61ff6764ce9f2de52b3e0b814e44d039da40596b29321e794d97d54033da37735025f6d5440c5d23"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=0.10.0"
+        },
+        {
+          "name": "cdx:npm:package:constraint:engine:iojs",
+          "value": ">=1.0.0"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/reusify"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "dequal",
+      "version": "2.0.3",
+      "bom-ref": "fastify@6.0.0-alpha.4|dequal@2.0.3",
+      "author": "Luke Edwards",
+      "description": "A tiny (304B to 489B) utility for check for deep equality",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/dequal@2.0.3",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/lukeed/dequal.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/lukeed/dequal#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/lukeed/dequal/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "d237bea8f28710ca21bdf453084a370ab3c6e9c033018826ccacb1462612483912e9e1897725499bb59a600e4409a003f702c1d93e0411eca603968555c61708"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=6"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/dequal"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fast-decode-uri-component",
+      "version": "1.0.1",
+      "bom-ref": "fastify@6.0.0-alpha.4|fast-decode-uri-component@1.0.1",
+      "author": "Tomas Della Vedova - @delvedor",
+      "description": "Fast and safe decodeURIComponent",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fast-decode-uri-component@1.0.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/delvedor/fast-decode-uri-component.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/delvedor/fast-decode-uri-component#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/delvedor/fast-decode-uri-component/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "58a80a5a0e5e531bd1646c16f05bdf6da1fb0174a1d9c2fede3e5f306cd4302c56049ddd5776bb5b3f32d9ffee4347b707a5a6a1d0f7a12e788d343d1d54c822"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/fast-decode-uri-component"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ret",
+      "version": "0.5.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|ret@0.5.0",
+      "author": "fent",
+      "description": "Tokenizes a string that represents a regular expression.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/ret@0.5.0",
+      "externalReferences": [
+        {
+          "url": "git://github.com/fent/ret.js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/fent/ret.js#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/fent/ret.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/ret/-/ret-0.5.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "2355f1ad9490fa812b9114788d86c0c8412ed88d1abc1bef30ce4937ee84069ace1910aceb710da99def8dabeaf1f070dbeeb61b92c5e577a52b0b89a5cbdcc7"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">=10"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/ret"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "split2",
+      "version": "4.2.0",
+      "bom-ref": "fastify@6.0.0-alpha.4|split2@4.2.0",
+      "author": "Matteo Collina",
+      "description": "split a Text Stream into a Line Stream, using Stream 3",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC",
+            "acknowledgement": "declared"
+          }
+        }
+      ],
+      "purl": "pkg:npm/split2@4.2.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mcollina/split2.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mcollina/split2#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "http://github.com/mcollina/split2/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/split2/-/split2-4.2.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "51c8dc24e5a49eb36417a3cb5fcdea70733a28781528d915eb663c6b9b980d5bfdc9d19057000730aa877498ded554d6a658c6d1662908386b09d00e607e135a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:constraint:engine:node",
+          "value": ">= 10.x"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/split2"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "fastify@6.0.0-alpha.4",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@fastify/ajv-compiler@4.0.7",
+        "fastify@6.0.0-alpha.4|@fastify/error@4.2.1",
+        "fastify@6.0.0-alpha.4|@fastify/fast-json-stringify-compiler@5.1.1",
+        "fastify@6.0.0-alpha.4|@fastify/proxy-addr@5.1.2",
+        "fastify@6.0.0-alpha.4|abstract-logging@2.0.1",
+        "fastify@6.0.0-alpha.4|avvio@9.3.1",
+        "fastify@6.0.0-alpha.4|fast-json-stringify@7.1.0",
+        "fastify@6.0.0-alpha.4|find-my-way@9.10.0",
+        "fastify@6.0.0-alpha.4|light-my-request@6.8.0",
+        "fastify@6.0.0-alpha.4|pino@10.4.0",
+        "fastify@6.0.0-alpha.4|process-warning@5.1.1",
+        "fastify@6.0.0-alpha.4|rfdc@1.4.1",
+        "fastify@6.0.0-alpha.4|secure-json-parse@4.1.1",
+        "fastify@6.0.0-alpha.4|semver@7.8.5",
+        "fastify@6.0.0-alpha.4|toad-cache@3.7.4"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/ajv-compiler@4.0.7",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|ajv-formats@3.0.1",
+        "fastify@6.0.0-alpha.4|ajv@8.20.0",
+        "fastify@6.0.0-alpha.4|fast-uri@4.2.2"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/error@4.2.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/fast-json-stringify-compiler@5.1.1",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|fast-json-stringify@7.1.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/proxy-addr@5.1.2",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@fastify/forwarded@3.1.1",
+        "fastify@6.0.0-alpha.4|ipaddr.js@2.5.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|abstract-logging@2.0.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|avvio@9.3.1",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@fastify/error@4.2.1",
+        "fastify@6.0.0-alpha.4|fastq@1.20.3"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fast-json-stringify@7.1.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@fastify/merge-json-schemas@0.2.2",
+        "fastify@6.0.0-alpha.4|ajv-formats@3.0.1",
+        "fastify@6.0.0-alpha.4|ajv@8.20.0",
+        "fastify@6.0.0-alpha.4|fast-uri@4.2.2",
+        "fastify@6.0.0-alpha.4|json-schema-ref-resolver@3.0.1",
+        "fastify@6.0.0-alpha.4|rfdc@1.4.1"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|find-my-way@9.10.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|fast-deep-equal@3.1.3",
+        "fastify@6.0.0-alpha.4|fast-querystring@1.1.2",
+        "fastify@6.0.0-alpha.4|safe-regex2@5.1.2"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|light-my-request@6.8.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@fastify/deepmerge@3.2.2",
+        "fastify@6.0.0-alpha.4|cookie@2.0.1",
+        "fastify@6.0.0-alpha.4|process-warning@5.1.1",
+        "fastify@6.0.0-alpha.4|set-cookie-parser@3.1.3"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|pino@10.4.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|@pinojs/redact@0.4.0",
+        "fastify@6.0.0-alpha.4|atomic-sleep@1.0.0",
+        "fastify@6.0.0-alpha.4|on-exit-leak-free@2.1.2",
+        "fastify@6.0.0-alpha.4|pino-abstract-transport@3.0.0",
+        "fastify@6.0.0-alpha.4|pino-std-serializers@7.1.0",
+        "fastify@6.0.0-alpha.4|process-warning@5.1.1",
+        "fastify@6.0.0-alpha.4|quick-format-unescaped@4.0.4",
+        "fastify@6.0.0-alpha.4|real-require@1.0.0",
+        "fastify@6.0.0-alpha.4|safe-stable-stringify@2.5.0",
+        "fastify@6.0.0-alpha.4|sonic-boom@4.2.1",
+        "fastify@6.0.0-alpha.4|thread-stream@4.2.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|process-warning@5.1.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|rfdc@1.4.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|secure-json-parse@4.1.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|semver@7.8.5"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|toad-cache@3.7.4"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|ajv-formats@3.0.1",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|ajv@8.20.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|ajv@8.20.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|fast-deep-equal@3.1.3",
+        "fastify@6.0.0-alpha.4|ajv@8.20.0|fast-uri@3.1.8",
+        "fastify@6.0.0-alpha.4|json-schema-traverse@1.0.0",
+        "fastify@6.0.0-alpha.4|require-from-string@2.0.2"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|ajv@8.20.0|fast-uri@3.1.8"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fast-uri@4.2.2"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/forwarded@3.1.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|ipaddr.js@2.5.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fastq@1.20.3",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|reusify@1.1.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/merge-json-schemas@0.2.2",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|dequal@2.0.3"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|json-schema-ref-resolver@3.0.1",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|dequal@2.0.3"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fast-deep-equal@3.1.3"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fast-querystring@1.1.2",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|fast-decode-uri-component@1.0.1"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|safe-regex2@5.1.2",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|ret@0.5.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@fastify/deepmerge@3.2.2"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|cookie@2.0.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|set-cookie-parser@3.1.3"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|@pinojs/redact@0.4.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|atomic-sleep@1.0.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|on-exit-leak-free@2.1.2"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|pino-abstract-transport@3.0.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|split2@4.2.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|pino-std-serializers@7.1.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|quick-format-unescaped@4.0.4"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|real-require@1.0.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|safe-stable-stringify@2.5.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|sonic-boom@4.2.1",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|atomic-sleep@1.0.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|thread-stream@4.2.0",
+      "dependsOn": [
+        "fastify@6.0.0-alpha.4|real-require@1.0.0"
+      ]
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|json-schema-traverse@1.0.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|require-from-string@2.0.2"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|reusify@1.1.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|dequal@2.0.3"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|fast-decode-uri-component@1.0.1"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|ret@0.5.0"
+    },
+    {
+      "ref": "fastify@6.0.0-alpha.4|split2@4.2.0"
+    }
+  ]
+}

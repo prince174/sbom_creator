@@ -1,0 +1,1169 @@
+{
+  "experiment": "R8",
+  "classifier_hashes": {
+    "npm_direct_h1.py": "22996eb470e445efed77a78fde7880616b0dc657cef24f4f8d6821f7583af03e",
+    "npm_direct_h2.py": "ade6a52fe3ed9a207c33ad6ea855130646c5a715c2f9e56b294268fd9746c51f",
+    "npm_range_h2.py": "f10afc97801b2cea4c88000615d8b82934be7979370a2373ae94f0097c20d605",
+    "npm-control-v2.json": "d3cbf34d80d70d733b94bf71ac1da01e14d404e8e51420a084ef02ea1eed73ed"
+  },
+  "partition": "preregistered control v2",
+  "production_changed": false,
+  "rows": [
+    {
+      "project": "koa",
+      "commit": "2fecd029c6ce6b79d65158d28a76538f7f6b0378",
+      "reference_receipt_sha256": "138c84dc1ab6e01e1d10787aff9ee41065b4cabdceee77497bf4fcbf843a6e24",
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "reference_edges": 18,
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 15,
+        "prediction": {
+          "classifier": "H1.1",
+          "root_image_manifest": "/app/package.json",
+          "edges": [
+            {
+              "owner": "package.json",
+              "name": "accepts",
+              "spec": "^1.3.8",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "content-disposition",
+              "spec": "~1.0.1",
+              "scope": "runtime",
+              "status": "DIRECT",
+              "version": "1.0.1",
+              "image_path": "/app/node_modules/content-disposition/package.json",
+              "artifact_id": "d440591cdd1f6b6e",
+              "reason": "root_declaration_and_local_installation"
+            },
+            {
+              "owner": "package.json",
+              "name": "content-type",
+              "spec": "^1.0.5",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "cookies",
+              "spec": "~0.9.1",
+              "scope": "runtime",
+              "status": "DIRECT",
+              "version": "0.9.1",
+              "image_path": "/app/node_modules/cookies/package.json",
+              "artifact_id": "569ea45a4f8410fb",
+              "reason": "root_declaration_and_local_installation"
+            },
+            {
+              "owner": "package.json",
+              "name": "delegates",
+              "spec": "^1.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "destroy",
+              "spec": "^1.2.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "encodeurl",
+              "spec": "^2.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "escape-html",
+              "spec": "^1.0.3",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "fresh",
+              "spec": "~0.5.2",
+              "scope": "runtime",
+              "status": "DIRECT",
+              "version": "0.5.2",
+              "image_path": "/app/node_modules/fresh/package.json",
+              "artifact_id": "67cbb114b414c6ed",
+              "reason": "root_declaration_and_local_installation"
+            },
+            {
+              "owner": "package.json",
+              "name": "http-assert",
+              "spec": "^1.5.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "http-errors",
+              "spec": "^2.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "koa-compose",
+              "spec": "^4.1.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "mime-types",
+              "spec": "^3.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "on-finished",
+              "spec": "^2.4.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "parseurl",
+              "spec": "^1.3.3",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "statuses",
+              "spec": "^2.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "type-is",
+              "spec": "^2.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "vary",
+              "spec": "^1.1.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            }
+          ],
+          "excluded_scopes": [
+            "devDependencies",
+            "peer-only"
+          ],
+          "build_usage_proven": false
+        }
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unknown": 0,
+      "coverage": 1.0,
+      "prediction_seconds": 0.006443500053137541,
+      "peak_rss": null,
+      "prediction": {
+        "classifier": "H2.1",
+        "root_image_manifest": "/app/package.json",
+        "edges": [
+          {
+            "owner": "package.json",
+            "name": "accepts",
+            "spec": "^1.3.8",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.3.8",
+            "image_path": "/app/node_modules/accepts/package.json",
+            "artifact_id": "942b9e0b7c5dedb3",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "content-disposition",
+            "spec": "~1.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.0.1",
+            "image_path": "/app/node_modules/content-disposition/package.json",
+            "artifact_id": "d440591cdd1f6b6e",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "content-type",
+            "spec": "^1.0.5",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.0.5",
+            "image_path": "/app/node_modules/content-type/package.json",
+            "artifact_id": "92f15b5cb1b8788d",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "cookies",
+            "spec": "~0.9.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "0.9.1",
+            "image_path": "/app/node_modules/cookies/package.json",
+            "artifact_id": "569ea45a4f8410fb",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "delegates",
+            "spec": "^1.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.0.0",
+            "image_path": "/app/node_modules/delegates/package.json",
+            "artifact_id": "d8d93fbdb68efb33",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "destroy",
+            "spec": "^1.2.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.2.0",
+            "image_path": "/app/node_modules/destroy/package.json",
+            "artifact_id": "29e3c10419315ed5",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "encodeurl",
+            "spec": "^2.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.0.0",
+            "image_path": "/app/node_modules/encodeurl/package.json",
+            "artifact_id": "753d5797fc1aaa86",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "escape-html",
+            "spec": "^1.0.3",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.0.3",
+            "image_path": "/app/node_modules/escape-html/package.json",
+            "artifact_id": "8d5dad0d7719d5f0",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "fresh",
+            "spec": "~0.5.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "0.5.2",
+            "image_path": "/app/node_modules/fresh/package.json",
+            "artifact_id": "67cbb114b414c6ed",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "http-assert",
+            "spec": "^1.5.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.5.0",
+            "image_path": "/app/node_modules/http-assert/package.json",
+            "artifact_id": "93ff7ddb415d79f8",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "http-errors",
+            "spec": "^2.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.0.1",
+            "image_path": "/app/node_modules/http-errors/package.json",
+            "artifact_id": "888f552fd914ec1f",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "koa-compose",
+            "spec": "^4.1.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "4.1.0",
+            "image_path": "/app/node_modules/koa-compose/package.json",
+            "artifact_id": "ac00550c7d26a394",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "mime-types",
+            "spec": "^3.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "3.0.2",
+            "image_path": "/app/node_modules/mime-types/package.json",
+            "artifact_id": "3cac087676b3b71c",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "on-finished",
+            "spec": "^2.4.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.4.1",
+            "image_path": "/app/node_modules/on-finished/package.json",
+            "artifact_id": "e38ee2ccda56111b",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "parseurl",
+            "spec": "^1.3.3",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.3.3",
+            "image_path": "/app/node_modules/parseurl/package.json",
+            "artifact_id": "c320faa5d3a66acf",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "statuses",
+            "spec": "^2.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.0.2",
+            "image_path": "/app/node_modules/statuses/package.json",
+            "artifact_id": "de78010dbbeb1c27",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "type-is",
+            "spec": "^2.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.1.0",
+            "image_path": "/app/node_modules/type-is/package.json",
+            "artifact_id": "0be99370f4a1ce99",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "vary",
+            "spec": "^1.1.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.1.2",
+            "image_path": "/app/node_modules/vary/package.json",
+            "artifact_id": "cf157fa1ae677562",
+            "reason": "root_declaration_and_local_installation"
+          }
+        ],
+        "excluded_scopes": [
+          "devDependencies",
+          "peer-only"
+        ],
+        "build_usage_proven": false
+      },
+      "three_sbom_schemas_valid": true
+    },
+    {
+      "project": "fastify",
+      "commit": "3ad5a426371ed652e3ddc759d6b389b76fb86eaa",
+      "reference_receipt_sha256": "d1ed0eb2889fdea42686792dc3d9d9c2325a1c3160b8a61ee9ef886ed8397b70",
+      "tp": 14,
+      "fp": 0,
+      "fn": 1,
+      "reference_edges": 15,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 15,
+        "prediction": {
+          "classifier": "H1.1",
+          "root_image_manifest": "/app/package.json",
+          "edges": [
+            {
+              "owner": "package.json",
+              "name": "@fastify/ajv-compiler",
+              "spec": "^4.0.5",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@fastify/error",
+              "spec": "^4.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@fastify/fast-json-stringify-compiler",
+              "spec": "^5.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@fastify/proxy-addr",
+              "spec": "^5.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "abstract-logging",
+              "spec": "^2.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "avvio",
+              "spec": "^9.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "fast-json-stringify",
+              "spec": "^7.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "find-my-way",
+              "spec": "^9.6.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "light-my-request",
+              "spec": "^6.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "pino",
+              "spec": "^9.14.0 || ^10.1.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "process-warning",
+              "spec": "^5.1.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "rfdc",
+              "spec": "^1.3.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "secure-json-parse",
+              "spec": "^4.0.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "semver",
+              "spec": "^7.6.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "toad-cache",
+              "spec": "^3.7.0",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            }
+          ],
+          "excluded_scopes": [
+            "devDependencies",
+            "peer-only"
+          ],
+          "build_usage_proven": false
+        }
+      },
+      "precision": 1.0,
+      "recall": 0.9333333333333333,
+      "f1": 0.9655172413793104,
+      "unknown": 1,
+      "coverage": 0.9333333333333333,
+      "prediction_seconds": 0.006069700000807643,
+      "peak_rss": null,
+      "prediction": {
+        "classifier": "H2.1",
+        "root_image_manifest": "/app/package.json",
+        "edges": [
+          {
+            "owner": "package.json",
+            "name": "@fastify/ajv-compiler",
+            "spec": "^4.0.5",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "4.0.7",
+            "image_path": "/app/node_modules/@fastify/ajv-compiler/package.json",
+            "artifact_id": "7b29309b4cb12b9f",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@fastify/error",
+            "spec": "^4.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "4.2.1",
+            "image_path": "/app/node_modules/@fastify/error/package.json",
+            "artifact_id": "18af9a34441af094",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@fastify/fast-json-stringify-compiler",
+            "spec": "^5.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "5.1.1",
+            "image_path": "/app/node_modules/@fastify/fast-json-stringify-compiler/package.json",
+            "artifact_id": "0ddc5e445baa0839",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@fastify/proxy-addr",
+            "spec": "^5.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "5.1.2",
+            "image_path": "/app/node_modules/@fastify/proxy-addr/package.json",
+            "artifact_id": "b77f4c490a01b9ff",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "abstract-logging",
+            "spec": "^2.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.0.1",
+            "image_path": "/app/node_modules/abstract-logging/package.json",
+            "artifact_id": "505f52612dcc3b34",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "avvio",
+            "spec": "^9.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "9.3.1",
+            "image_path": "/app/node_modules/avvio/package.json",
+            "artifact_id": "f9e0a8604aa6fb14",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "fast-json-stringify",
+            "spec": "^7.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "7.1.0",
+            "image_path": "/app/node_modules/fast-json-stringify/package.json",
+            "artifact_id": "3e95e1f051c2164d",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "find-my-way",
+            "spec": "^9.6.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "9.10.0",
+            "image_path": "/app/node_modules/find-my-way/package.json",
+            "artifact_id": "47eb4b4b83ffa07a",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "light-my-request",
+            "spec": "^6.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.8.0",
+            "image_path": "/app/node_modules/light-my-request/package.json",
+            "artifact_id": "e44ca58f3548b9be",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "pino",
+            "spec": "^9.14.0 || ^10.1.0",
+            "scope": "runtime",
+            "status": "UNKNOWN",
+            "version": null,
+            "reason": "unsupported_version_range"
+          },
+          {
+            "owner": "package.json",
+            "name": "process-warning",
+            "spec": "^5.1.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "5.1.1",
+            "image_path": "/app/node_modules/process-warning/package.json",
+            "artifact_id": "c5085ba6b6d4f717",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "rfdc",
+            "spec": "^1.3.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "1.4.1",
+            "image_path": "/app/node_modules/rfdc/package.json",
+            "artifact_id": "0befa5610fa612f4",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "secure-json-parse",
+            "spec": "^4.0.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "4.1.1",
+            "image_path": "/app/node_modules/secure-json-parse/package.json",
+            "artifact_id": "febe97f2cadafc57",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "semver",
+            "spec": "^7.6.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "7.8.5",
+            "image_path": "/app/node_modules/semver/package.json",
+            "artifact_id": "8dc88391a5dad00f",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "toad-cache",
+            "spec": "^3.7.0",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "3.7.4",
+            "image_path": "/app/node_modules/toad-cache/package.json",
+            "artifact_id": "eff0136aed3cea16",
+            "reason": "root_declaration_and_local_installation"
+          }
+        ],
+        "excluded_scopes": [
+          "devDependencies",
+          "peer-only"
+        ],
+        "build_usage_proven": false
+      },
+      "three_sbom_schemas_valid": true
+    },
+    {
+      "project": "hapi",
+      "commit": "b90c41b9006143421dc715c01d86e6f4933af1e4",
+      "reference_receipt_sha256": "ae4b020a437ec634b2d97a59659958e27ff27398f1be5f72f36b25e616c7a466",
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "reference_edges": 18,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 18,
+        "prediction": {
+          "classifier": "H1.1",
+          "root_image_manifest": "/app/package.json",
+          "edges": [
+            {
+              "owner": "package.json",
+              "name": "@hapi/accept",
+              "spec": "^6.0.3",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/ammo",
+              "spec": "^6.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/boom",
+              "spec": "^10.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/bounce",
+              "spec": "^3.0.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/call",
+              "spec": "^9.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/catbox",
+              "spec": "^12.1.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/catbox-memory",
+              "spec": "^6.0.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/heavy",
+              "spec": "^8.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/hoek",
+              "spec": "^11.0.7",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/mimos",
+              "spec": "^7.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/podium",
+              "spec": "^5.0.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/shot",
+              "spec": "^6.0.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/somever",
+              "spec": "^4.1.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/statehood",
+              "spec": "^8.2.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/subtext",
+              "spec": "^8.1.3",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/teamwork",
+              "spec": "^6.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/topo",
+              "spec": "^6.0.2",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            },
+            {
+              "owner": "package.json",
+              "name": "@hapi/validate",
+              "spec": "^2.0.1",
+              "scope": "runtime",
+              "status": "UNKNOWN",
+              "version": null,
+              "reason": "unsupported_version_range"
+            }
+          ],
+          "excluded_scopes": [
+            "devDependencies",
+            "peer-only"
+          ],
+          "build_usage_proven": false
+        }
+      },
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "unknown": 0,
+      "coverage": 1.0,
+      "prediction_seconds": 0.006438000127673149,
+      "peak_rss": null,
+      "prediction": {
+        "classifier": "H2.1",
+        "root_image_manifest": "/app/package.json",
+        "edges": [
+          {
+            "owner": "package.json",
+            "name": "@hapi/accept",
+            "spec": "^6.0.3",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.3",
+            "image_path": "/app/node_modules/@hapi/accept/package.json",
+            "artifact_id": "57e8deb26cf16f32",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/ammo",
+            "spec": "^6.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.1",
+            "image_path": "/app/node_modules/@hapi/ammo/package.json",
+            "artifact_id": "5ecb4dfed4d0ae0d",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/boom",
+            "spec": "^10.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "10.0.1",
+            "image_path": "/app/node_modules/@hapi/boom/package.json",
+            "artifact_id": "d888d1bbbe9b56e6",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/bounce",
+            "spec": "^3.0.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "3.0.2",
+            "image_path": "/app/node_modules/@hapi/bounce/package.json",
+            "artifact_id": "7dfd7a5391c08a6c",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/call",
+            "spec": "^9.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "9.0.1",
+            "image_path": "/app/node_modules/@hapi/call/package.json",
+            "artifact_id": "56207cfc93fa520c",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/catbox",
+            "spec": "^12.1.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "12.1.1",
+            "image_path": "/app/node_modules/@hapi/catbox/package.json",
+            "artifact_id": "6a2f21de4d1cc745",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/catbox-memory",
+            "spec": "^6.0.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.2",
+            "image_path": "/app/node_modules/@hapi/catbox-memory/package.json",
+            "artifact_id": "c195a09e1e17f4be",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/heavy",
+            "spec": "^8.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "8.0.1",
+            "image_path": "/app/node_modules/@hapi/heavy/package.json",
+            "artifact_id": "97006bb08041dece",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/hoek",
+            "spec": "^11.0.7",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "11.0.7",
+            "image_path": "/app/node_modules/@hapi/hoek/package.json",
+            "artifact_id": "1991d972e19cc128",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/mimos",
+            "spec": "^7.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "7.0.1",
+            "image_path": "/app/node_modules/@hapi/mimos/package.json",
+            "artifact_id": "a9c72463af3ee4ed",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/podium",
+            "spec": "^5.0.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "5.0.2",
+            "image_path": "/app/node_modules/@hapi/podium/package.json",
+            "artifact_id": "77bc83afe89cdf84",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/shot",
+            "spec": "^6.0.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.3",
+            "image_path": "/app/node_modules/@hapi/shot/package.json",
+            "artifact_id": "259a2d90c611f4dd",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/somever",
+            "spec": "^4.1.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "4.1.1",
+            "image_path": "/app/node_modules/@hapi/somever/package.json",
+            "artifact_id": "944848d19f5c8c1d",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/statehood",
+            "spec": "^8.2.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "8.2.1",
+            "image_path": "/app/node_modules/@hapi/statehood/package.json",
+            "artifact_id": "a3e394c1d8772613",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/subtext",
+            "spec": "^8.1.3",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "8.1.3",
+            "image_path": "/app/node_modules/@hapi/subtext/package.json",
+            "artifact_id": "c697df75efd3a500",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/teamwork",
+            "spec": "^6.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.1",
+            "image_path": "/app/node_modules/@hapi/teamwork/package.json",
+            "artifact_id": "db84aad592a8d741",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/topo",
+            "spec": "^6.0.2",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "6.0.2",
+            "image_path": "/app/node_modules/@hapi/topo/package.json",
+            "artifact_id": "00baf6c89879c98a",
+            "reason": "root_declaration_and_local_installation"
+          },
+          {
+            "owner": "package.json",
+            "name": "@hapi/validate",
+            "spec": "^2.0.1",
+            "scope": "runtime",
+            "status": "DIRECT",
+            "version": "2.0.1",
+            "image_path": "/app/node_modules/@hapi/validate/package.json",
+            "artifact_id": "2d83de44698da099",
+            "reason": "root_declaration_and_local_installation"
+          }
+        ],
+        "excluded_scopes": [
+          "devDependencies",
+          "peer-only"
+        ],
+        "build_usage_proven": false
+      },
+      "three_sbom_schemas_valid": true
+    }
+  ]
+}

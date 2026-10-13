@@ -35,6 +35,11 @@ def root_dependencies(document):
     return entries[0].get("dependsOn", [])
 
 
+def npm_component_name(component):
+    group = component.get("group", "")
+    return (group + "/" if group else "") + component["name"]
+
+
 def application_tree(path):
     """Compare paths, modes, types, bytes and links; exclude time/owners/xattrs."""
     entries = []
@@ -98,15 +103,25 @@ def main():
     parser.add_argument("--resume-validation", action="store_true")
     parser.add_argument("--resume-built-images", action="store_true", help="Reuse exported app trees after pre-analysis validation failure")
     parser.add_argument("--run-id", default="v1", help="Fresh evidence namespace; completed receipts are immutable")
-    parser.add_argument("--project", choices=("express", "axios", "isarray"), default="express")
+    parser.add_argument("--project", choices=("express", "axios", "isarray", "koa", "fastify", "hapi"), default="express")
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,40}", args.run_id):
         raise ValueError("Invalid run ID")
     project_id = "javascript-" + args.project
     projects = json.loads((ROOT / "benchmarks/manifest.json").read_bytes())["repositories"]
-    project = next(p for p in projects if p["id"] == project_id)
+    control = args.project in ("koa", "fastify", "hapi")
+    if control:
+        frozen = json.loads((ROOT / "docs/npm-h2-regression-v1.json").read_bytes())["hashes"]
+        if any(sha(ROOT / "benchmarks" / name) != digest for name, digest in frozen.items()):
+            raise ValueError("Frozen classifier or control protocol changed")
+        entry = next(p for p in json.loads((ROOT / "benchmarks/npm-control-v2.json").read_bytes())["repositories"] if p["id"] == args.project)
+        project = {"commit": entry["commit"], "repository_url": entry["url"]}
+    else:
+        project = next(p for p in projects if p["id"] == project_id)
     COMMIT = project["commit"]
     recipe = ROOT / "benchmarks" / ("paired-express.Dockerfile" if args.project == "express" else "paired-npm.Dockerfile")
+    if args.project == "hapi":
+        recipe = ROOT / "benchmarks/paired-npm-lock.Dockerfile"
     WORK = ROOT / "benchmarks/.work" / ("paired-" + args.project + "-" + args.run_id)
     OUT = ROOT / "benchmarks/references" / ("paired-" + args.project + "-" + args.run_id)
     IMAGE = "sbom-creator-benchmark/paired-" + args.project + ":" + args.run_id
@@ -117,7 +132,8 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     source = WORK / "src"
     if not source.exists():
-        run_command(["git", "clone", "--no-hardlinks", "--no-checkout", str(ROOT / "benchmarks/.work" / project_id / "src"), str(source)], WORK / "clone.log")
+        clone_source = project["repository_url"] if control else str(ROOT / "benchmarks/.work" / project_id / "src")
+        run_command(["git", "clone", "--no-hardlinks", "--no-checkout", clone_source, str(source)], WORK / "clone.log")
         run_command(["git", "-c", "core.autocrlf=false", "checkout", "--detach", COMMIT], WORK / "checkout.log", cwd=source)
     if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != COMMIT:
         raise ValueError("Source commit mismatch")
@@ -150,7 +166,7 @@ def main():
     direct = root_dependencies(document)
     by_ref = {c["bom-ref"]: c for c in document["components"]}
     selected = [by_ref[ref] for ref in direct]
-    if {c["name"] for c in selected} != declared or len(selected) != len(declared):
+    if {npm_component_name(c) for c in selected} != declared or len(selected) != len(declared):
         raise ValueError("CycloneDX root graph differs from literal production dependencies")
     atomic_json(OUT / "application-tree.json", after)
     shutil.copyfile(source / "package.json", OUT / "package.json")
@@ -187,7 +203,7 @@ def main():
             raise ValueError("Analyzer input evidence changed")
     for name in ("final.cdx.json", "os.cdx.json", "full.cdx.json"):
         validate_cyclonedx(json.loads((result_dir / name).read_bytes()))
-    receipt = {"experiment": "R3" if args.project == "express" else "R5", "project": project_id, "commit": COMMIT,
+    receipt = {"experiment": "R8" if control else ("R3" if args.project == "express" else "R5"), "project": project_id, "commit": COMMIT,
                "repository_url": project["repository_url"], "platform": "linux/amd64",
                "builder_image": builder, "runtime_image": runtime, "runtime_config_digest": binding["config_digest"], "archive_binding": binding,
                "application_tree_equal": True, "application_entries": len(after), "application_tree_sha256": sha(OUT / "application-tree.json"),

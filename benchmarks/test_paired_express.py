@@ -5,7 +5,12 @@ import tarfile
 
 import pytest
 from freeze_direct_split import partition
-from paired_express import application_tree, archive_binding, root_dependencies
+from paired_express import application_tree, archive_binding, npm_component_name, root_dependencies
+
+
+def test_npm_scoped_component_name():
+    assert npm_component_name({"group": "@scope", "name": "lib"}) == "@scope/lib"
+    assert npm_component_name({"name": "lib"}) == "lib"
 
 
 def test_empty_root_is_not_missing_root():
