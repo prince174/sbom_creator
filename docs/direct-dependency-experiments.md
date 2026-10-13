@@ -136,3 +136,18 @@
   раскрытый npm holdout использовать далее только для regression. Нужен новый
   заранее фиксированный контроль для следующего решения о внедрении.
 - [Протокол](npm-h1-holdout-v1.md), [метрики](npm-h1-holdout-v1.json).
+
+## R6 — независимый npm range matcher, 2026-10-13
+
+- Начало: main 2389927, дерево чистое, benchmark-процессов нет.
+- Отдельный эксперимент exact/tilde/caret для полных стабильных версий;
+  H1.1 сохранён байт-в-байт. 12 288 синтетических комбинаций сверены с
+  node-semver@7.7.2: 0 расхождений, 666 true / 11 622 false.
+- На этом наборе UNKNOWN снижен с 4096 до 0; это coverage функции range,
+  не улучшение метрик SBOM. Ни один проект/holdout не использован.
+- 56 unit/regression tests прошли, Ruff; numeric/length limits и unsupported
+  inputs остаются UNKNOWN. Production/три SBOM не изменены.
+- Следующее: закрепить новый независимый npm-контроль до интеграции H2;
+  затем проверить отдельный H2 на development и раскрытых regression-парах,
+  после чего один раз оценить новый контроль. Не внедрять matcher напрямую.
+- [Протокол](npm-range-development-v1.md), [метрики](npm-range-development-v1.json).
