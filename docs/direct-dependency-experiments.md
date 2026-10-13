@@ -423,3 +423,17 @@
 - Следующее: парный Gson module build с CDX/native/effective POM/profiles,
   затем проверка ограниченного наследования. Не использовать R1 как image pair.
 - [Протокол](gson-profile-impact-v1.md), [данные](gson-profile-impact-v1.json).
+
+## R26 — paired Gson module, 2026-10-14
+
+- Main1cbf3df, clean, benchmark не запущен. Создан чистый exact-commit checkout.
+- Maven pinned image, package + CDX2.9.3 makeBom + tree3.8.1 + effective POM.
+  JDK17 active; Gson2.11.0 → error_prone_annotations2.27.0 подтверждены JAR.
+- Первая сборка упала из-за отсутствующих test-classes при maven.test.skip;
+  убран этот флаг, skipTests сохранён, failed recipe/log оставлены локально.
+- Builder/runtime artifact trees совпадают; OCI/config/Syft binding проверен.
+  final2/OS0/full2; UNKNOWN30. Scratch безJRE, исполнения приложения нет.
+-5общих verifier tests, Ruff, repeat hash/tree/OCI/native/JAR/3schema passed.
+  Runtime0.7.0 не изменён, direct accuracy не измерена, holdout не использован.
+- Следующее: J1 owner/GAV на парном Gson, bounded local model без oracle input.
+- [Протокол](paired-gson-v1.md), [результат](paired-gson-v1.json).

@@ -1,0 +1,29 @@
+{
+  "root": [
+    "com.google.code.gson",
+    "gson",
+    "2.11.0"
+  ],
+  "direct": [
+    [
+      "com.google.errorprone",
+      "error_prone_annotations",
+      "2.27.0"
+    ]
+  ],
+  "jar_coordinates": [
+    [
+      "com.google.code.gson",
+      "gson",
+      "2.11.0"
+    ],
+    [
+      "com.google.errorprone",
+      "error_prone_annotations",
+      "2.27.0"
+    ]
+  ],
+  "effective_pom_native_cyclonedx_agree": true,
+  "scope": "compile/runtime; no tests",
+  "accuracy_measured": false
+}

@@ -195,3 +195,9 @@ owner/scope анализ. Direct метрики не изменились, ме�
 Улучшение точности не доказано, production и места не меняются. Это только первый
 этап экспериментального J1, не конкурент с измеренными direct metrics.
 [Результат](java-scope-j1.md).
+
+### 2026-10-14 — R26, второй парный Java development reference
+
+Gson2.11.0 → error_prone_annotations2.27.0 подтверждены package/CDX/native/JAR.
+Это расширение эталонов; direct accuracy Java ещё не измерена, места неизменны.
+[Протокол](paired-gson-v1.md).
