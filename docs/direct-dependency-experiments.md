@@ -327,3 +327,22 @@
 - Следующее: интеграция Python evidence и bounded manifest/projection,
   Python/npm control replay + full regression/schema/security.
 - [Контракт и ограничения](syft-input-limit-r18.md).
+
+## R19 — Python P1 integrated,0.7.0, 2026-10-13
+
+- Mainb68f33b, clean, benchmark нет. Перенесены frozen P1/guard/projection и
+  bounded root loader; новый runtime packaging26.3, без исполнения проекта.
+- Python direct edges добавляются только между компонентами выбранного inventory;
+  отсутствующие/неоднозначные owner/target UNKNOWN. Npm-only report совместим,
+  mixed profiles объединены; неполный профиль не маскируется unknown_count0.
+- Реальный convert+schema/replay4Python+6npm: predictions относительно frozen
+  совпадают, component refs/старые edges и3SBOM сохранены. Python control TP9
+  FP0 FN0, versions9/9; FlaskUNKNOWN1/coverage83.33%. Packaging empty null metrics.
+- 0.6.0 не имел Python direct classifier, его precision undefined;0.7.0 добавляет
+  coverage, не заявляется рост accuracy относительно experimental P1.
+- 272tests passed,3skipped,1knownwarning; Ruff passed. Release070 повторные
+  публикации отдельно от старых immutable refs, новых сборок нет. Deploy не был.
+- Следующее: расширять сложные Python профили без тюнинга на контроле; Java/Rust/
+  Go/Ruby paired direct evaluation. Не выдавать узкий контроль за60пар.
+- [Результаты и ограничения](runtime-python-r19.md), [Python](runtime-python-r19.json),
+  [npm](runtime-npm-r19.json).

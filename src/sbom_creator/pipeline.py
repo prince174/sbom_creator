@@ -24,6 +24,9 @@ from .direct_evidence import annotate, load_manifest
 from .exporter import packages_only, split_inventory
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .payload import SUPPORTED as PAYLOAD_CATALOGERS
+from .python_evidence import annotate as annotate_python
+from .python_evidence import combine
+from .python_inputs import load_manifest as load_python_manifest
 from .scanner import convert, scan_image, scan_source
 from .validation import validate_cyclonedx, validate_export_identity, validate_syft
 
@@ -117,7 +120,7 @@ def catalogers(document):
     return sorted({a["foundBy"] for a in document["artifacts"]} | set(used or []))
 
 
-def _publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None):
+def _publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None):
     """Also serves benchmark/replay; schemas and actual conversion always checked."""
     output = Path(output).resolve()
     if output.exists():
@@ -151,6 +154,8 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         cdx = packages_only(cdx, result["selected_syft"])
         validate_export_identity(cdx, result["selected_syft"])
         direct = annotate(cdx, image, npm_manifest)
+        if python_manifest is not None:
+            direct = combine(direct, annotate_python(cdx, image, python_manifest))
         write_json(staging / "direct-dependencies.json", direct)
         counts = Counter(d["decision"] for d in result["decisions"])
         cdx.setdefault("metadata", {}).setdefault("properties", []).extend([
@@ -209,9 +214,9 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
     return summary
 
 
-def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None):
+def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None):
     try:
-        return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest)
+        return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest, python_manifest)
     except FileExistsError:
         raise
     except Exception as error:  # noqa: BLE001 -- safe diagnostic boundary
@@ -246,7 +251,7 @@ def analyze_local(source_path, image_reference, output, settings=None, mode="rul
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(checkout_path))
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(checkout_path), load_python_manifest(checkout_path))
 
 
 def analyze(repository_url, commit, image_reference, output, settings=None, mode="rules"):
@@ -269,4 +274,4 @@ def analyze(repository_url, commit, image_reference, output, settings=None, mode
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(work / "checkout"))
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(work / "checkout"), load_python_manifest(work / "checkout"))

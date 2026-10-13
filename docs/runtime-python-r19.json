@@ -1,0 +1,81 @@
+{
+  "experiment": "R19",
+  "rows": [
+    {
+      "pair": "jinja-v1",
+      "direct": 1,
+      "unknown": 0,
+      "inventory_unchanged": true,
+      "counts": {
+        "final": 16,
+        "os": 106,
+        "full": 122
+      },
+      "schemas_valid": true,
+      "direct_report_sha256": "13b8a12ad1a6e3c2699aabdd0e2c0eb21801e2c2f2f13261c9615c64d04f0724"
+    },
+    {
+      "pair": "flask-v1",
+      "direct": 5,
+      "unknown": 1,
+      "inventory_unchanged": true,
+      "counts": {
+        "final": 21,
+        "os": 106,
+        "full": 127
+      },
+      "schemas_valid": true,
+      "direct_report_sha256": "8d4047a5cb0cc5277a9a6b5d7f15fe1f95450014e7dbcd2fd89f4ff72b2eaafa",
+      "control": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "declaration_coverage": 0.8333333333333334
+      }
+    },
+    {
+      "pair": "packaging-v1",
+      "direct": 0,
+      "unknown": 0,
+      "inventory_unchanged": true,
+      "counts": {
+        "final": 15,
+        "os": 106,
+        "full": 121
+      },
+      "schemas_valid": true,
+      "direct_report_sha256": "8d3a9939f1d383db77098d447ae5e4bc321f54dfc638c57f1c57dd0474a62913",
+      "control": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "declaration_coverage": null
+      }
+    },
+    {
+      "pair": "httpx-v1",
+      "direct": 4,
+      "unknown": 0,
+      "inventory_unchanged": true,
+      "counts": {
+        "final": 21,
+        "os": 106,
+        "full": 127
+      },
+      "schemas_valid": true,
+      "direct_report_sha256": "b93d35963406d878800bf6238e821a4985e700b8cf24d72be7db3ea22d5616e3",
+      "control": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "declaration_coverage": 1.0
+      }
+    }
+  ]
+}
