@@ -1,0 +1,80 @@
+{
+  "experiment": "R16",
+  "runtime_changed": false,
+  "accuracy_improvement_claimed": false,
+  "adoption": "rejected: coverage regression",
+  "boundary_sha256": "495a5bdfcfc74b9dea6dc83e3b4b77c7c93175272e95c0c7444828225908a6bc",
+  "rows": [
+    {
+      "project": "jinja",
+      "receipt_sha256": "3100a6d6488a34e7d75129cd3ce799bc4148707efaca57a8cca9e880640a3534",
+      "prediction_identical": false,
+      "status": "UNKNOWN",
+      "reason": "classification_input_budget_exceeded",
+      "seconds": 0.05210620001889765,
+      "peak_resources": null,
+      "direct": 0,
+      "unknown": null
+    },
+    {
+      "project": "flask",
+      "receipt_sha256": "7517a5e66e61b58a0a35c60dafce01f0a36db499abf4e2af3bf5a5abefe82f8b",
+      "prediction_identical": false,
+      "status": "UNKNOWN",
+      "reason": "classification_input_budget_exceeded",
+      "seconds": 0.0553918001241982,
+      "peak_resources": null,
+      "direct": 0,
+      "unknown": null,
+      "control": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "declaration_coverage": 0.0,
+        "reference_root_version": "3.1.0"
+      }
+    },
+    {
+      "project": "packaging",
+      "receipt_sha256": "5934328123c178f6e45dfe72a1c4e95821775c38c210b964f1d4ce08d0a82bf4",
+      "prediction_identical": false,
+      "status": "UNKNOWN",
+      "reason": "classification_input_budget_exceeded",
+      "seconds": 0.07438790006563067,
+      "peak_resources": null,
+      "direct": 0,
+      "unknown": null,
+      "control": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "declaration_coverage": null,
+        "reference_root_version": null
+      }
+    },
+    {
+      "project": "httpx",
+      "receipt_sha256": "77b154df72fb6a80b5371ee20ca28d65fdc6567c146e00324e17be9269d32444",
+      "prediction_identical": false,
+      "status": "UNKNOWN",
+      "reason": "classification_input_budget_exceeded",
+      "seconds": 0.05345800006762147,
+      "peak_resources": null,
+      "direct": 0,
+      "unknown": null,
+      "control": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "declaration_coverage": 0.0,
+        "reference_root_version": null
+      }
+    }
+  ],
+  "limitations": [
+    "Existing control replay, not new blind sample",
+    "No preparse Syft JSON budget here",
+    "Windows symlink creation test skipped",
+    "No full memory/CPU benchmark"
+  ]
+}

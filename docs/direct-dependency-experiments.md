@@ -286,3 +286,17 @@
 - Следующее: bounded source loader и общий input budget, затем Python evidence
   integration/replay. Контроль не использовать для подбора правил.
 - [Протокол](python-p1-control-v2.md), [данные](python-p1-control-v2.json).
+
+## R16 — общий бюджет P1 отклонён, 2026-10-13
+
+- Main7d25a74, чистое дерево, benchmark-процессов нет. Experimental root loader
+  1МиБ и общий бюджет250000узлов/16Ми символов/глубина64.
+- 36tests passed, symlink1skip Windows, Ruff passed. Manifest documents/hashes
+  сохранены. Но replay4пар: все UNKNOWN, каталоги305602–317102узла.
+- Контроль Flask+HTTPX: TP0 FP0 FN9 (было TP9), recall0, precision undefined.
+  Packaging пустой, не успех. UNKNOWN всего анализа отражён count=null.
+- Критерий принятия не пройден: никакой runtime/правил P1/guard не менялось.
+  Эксперимент сохранён только в benchmarks; это отрицательный результат.
+- Следующее: ограниченная проекция полей P1 с equivalence/ambiguity tests,
+  отдельно контракт размера Syft; не подгонять общий лимит к контролю.
+- [Протокол](python-p1-boundary-v1.md), [данные](python-p1-boundary-v1.json).
