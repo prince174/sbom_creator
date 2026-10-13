@@ -450,3 +450,15 @@
 - Следующее: bounded local dependencyManagement/declarations merge;
   scope/owner сравнивать с reference только после prediction.
 - [Протокол](java-gav-evidence-v1.md), [данные](java-gav-evidence-v1.json).
+
+## R28 — local dependencyManagement projection, 2026-10-14
+
+- Main611e892 clean, benchmark нет. Новый эксперимент literal management only.
+- Gson:4/4GAV+scope совпали с build effective POM, включая восстановленные
+  JUnit4.13.2/Truth1.4.2 test versions. Reference читается после prediction.
+- Не direct accuracy: одна development model, settings/CLI/plugins неизвестны;
+  inherited declarations/import/nonliteral/type/classifier дают UNKNOWN.
+-49Java tests и Ruff passed, runtime/reference/top5 неизменны.
+- Следующее: controlled Maven parent/override/profile-scope fixture + actual
+  CDX/effective POM comparison до принятия direct classifier.
+- [Протокол](java-local-management-v1.md), [данные](java-local-management-v1.json).
