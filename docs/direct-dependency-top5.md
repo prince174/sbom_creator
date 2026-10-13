@@ -188,3 +188,10 @@ Artifact-only image2JAR, безJRE. Это эталон, не успех Java cl
 image dependency-of0; source13edges включает12test. Для J1 нужен отдельный
 owner/scope анализ. Direct метрики не изменились, места не назначены.
 [Аудит](java-syft-evidence-v1.md).
+
+### 2026-10-13 — R23, J1 scope gate
+
+Фильтр scope оставил8/8 Commons Text declarations UNKNOWN из-за parent/profiles.
+Улучшение точности не доказано, production и места не меняются. Это только первый
+этап экспериментального J1, не конкурент с измеренными direct metrics.
+[Результат](java-scope-j1.md).

@@ -386,3 +386,16 @@
 - Следующее: J1 source graph/raw POM/image GAV, сначала наследование/profile
   counterexamples; unresolved scope UNKNOWN. Oracle только для оценки.
 - [Протокол](java-syft-evidence-v1.md), [данные](java-syft-evidence-v1.json).
+
+## R23 — J1 scope gate, 2026-10-13
+
+- Main21db3f4, clean, активного benchmark нет. Первый этап J1 только в benchmarks.
+- Parent/profiles/management/modules/property expressions блокируют scope inference.
+  Кандидат compile/runtime сам по себе не создаёт direct edge.
+- Commons Text: все8 raw declarations UNKNOWN, включая подтверждённый эталоном
+  commons-lang3. Улучшения coverage нет; в runtime не внедрять.
+-12synthetic tests, Ruff, R21 hash/OCI/JAR/native/3schema revalidation passed.
+  System scope требует отдельной проверки systemPath, остаётся UNKNOWN.
+- Следующее: bounded local parent resolution и реальная development fixture;
+  remote parent/неизвестный профиль UNKNOWN. Затем owner/GAV matching.
+- [Протокол](java-scope-j1.md), [данные](java-scope-j1.json).
