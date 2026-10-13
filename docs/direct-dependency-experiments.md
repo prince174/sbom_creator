@@ -346,3 +346,16 @@
   Go/Ruby paired direct evaluation. Не выдавать узкий контроль за60пар.
 - [Результаты и ограничения](runtime-python-r19.md), [Python](runtime-python-r19.json),
   [npm](runtime-npm-r19.json).
+
+## R20 — Maven development audit, 2026-10-13
+
+- Maind26b9d5, clean, benchmark нет.8Java development, holdout не читался.
+-52root declarations:40test,2provided,10безscope; parent5/8, profiles8/8.
+  Gson/SLF4J rootaggregators отличаются от модулей сохранённых references.
+- Сохранены raw fields/SHA, management/plugins/profiles отдельно. Не resolver;
+  effective scope/version null, pairing false, precision/recall null.
+-6tests+Ruff passed. Pytest oversized parameter setup исправлен короткими ids.
+  Production0.7.0 неизменен, новых сборок/изменений эталонов нет.
+- Следующее: paired Commons Text; effective POM/native graph только evaluation,
+  module owner и build/runtime scope не смешивать.
+- [Протокол](maven-declarations-v1.md), [данные](maven-declarations-v1.json).

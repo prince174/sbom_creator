@@ -168,3 +168,10 @@ accuracy не переоценивалась, места и правила не�
 FlaskUNKNOWN1; root versions без эталона не оценены. Baseline0.6.0 Python direct
 не определял. Рейтинг между инструментами не установлен, другие три инструмента
 не прогонялись; это расширение поддержки сервиса, не глобальный победитель.
+
+### 2026-10-13 — R20, подготовка Maven-профиля
+
+Development audit8Java:52root declarations, из них40test. Gson/SLF4J требуют
+module-aware evaluation. Maven direct accuracy остаётся неоценённой; сырые
+POM counts не являются TP/FP/FN. Места и runtime0.7.0 не меняются.
+[Аудит и ограничения](maven-declarations-v1.md).
