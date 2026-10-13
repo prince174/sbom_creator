@@ -1,0 +1,895 @@
+{
+  "experiment": "R7",
+  "partition": "disclosed regression; not independent control",
+  "production_changed": false,
+  "new_control_evaluated": false,
+  "hashes": {
+    "npm_direct_h1.py": "22996eb470e445efed77a78fde7880616b0dc657cef24f4f8d6821f7583af03e",
+    "npm_direct_h2.py": "ade6a52fe3ed9a207c33ad6ea855130646c5a715c2f9e56b294268fd9746c51f",
+    "npm_range_h2.py": "f10afc97801b2cea4c88000615d8b82934be7979370a2373ae94f0097c20d605",
+    "npm-control-v2.json": "d3cbf34d80d70d733b94bf71ac1da01e14d404e8e51420a084ef02ea1eed73ed"
+  },
+  "rows": [
+    {
+      "pair": "paired-express-v1",
+      "reference_receipt_sha256": "e6845272ed55c7ef74f8fbd3050ef572fc54108180f30697ae20e57e81708e0e",
+      "scope": "root production, exact name/version, owner package.json",
+      "scores": {
+        "H1.1": {
+          "tp": 31,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "unknown": 0,
+          "prediction": {
+            "classifier": "H1.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [
+              {
+                "owner": "package.json",
+                "name": "accepts",
+                "spec": "~1.3.8",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.8",
+                "image_path": "/app/node_modules/accepts/package.json",
+                "artifact_id": "942b9e0b7c5dedb3",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "array-flatten",
+                "spec": "1.1.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.1",
+                "image_path": "/app/node_modules/array-flatten/package.json",
+                "artifact_id": "27439e757c96cf8a",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "body-parser",
+                "spec": "1.20.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.20.3",
+                "image_path": "/app/node_modules/body-parser/package.json",
+                "artifact_id": "f9c1d33306f5039c",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "content-disposition",
+                "spec": "0.5.4",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.5.4",
+                "image_path": "/app/node_modules/content-disposition/package.json",
+                "artifact_id": "980cb6e6c09a93ec",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "content-type",
+                "spec": "~1.0.4",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.5",
+                "image_path": "/app/node_modules/content-type/package.json",
+                "artifact_id": "92f15b5cb1b8788d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "cookie",
+                "spec": "0.7.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.7.1",
+                "image_path": "/app/node_modules/cookie/package.json",
+                "artifact_id": "a9640420aadcb80d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "cookie-signature",
+                "spec": "1.0.6",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.6",
+                "image_path": "/app/node_modules/cookie-signature/package.json",
+                "artifact_id": "4b685a6383858874",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "debug",
+                "spec": "2.6.9",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.6.9",
+                "image_path": "/app/node_modules/debug/package.json",
+                "artifact_id": "550a75ec14726624",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "depd",
+                "spec": "2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/depd/package.json",
+                "artifact_id": "fc3496aa25dfd602",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "encodeurl",
+                "spec": "~2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/encodeurl/package.json",
+                "artifact_id": "753d5797fc1aaa86",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "escape-html",
+                "spec": "~1.0.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.3",
+                "image_path": "/app/node_modules/escape-html/package.json",
+                "artifact_id": "8d5dad0d7719d5f0",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "etag",
+                "spec": "~1.8.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.8.1",
+                "image_path": "/app/node_modules/etag/package.json",
+                "artifact_id": "de82d24a8586af2c",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "finalhandler",
+                "spec": "1.3.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.1",
+                "image_path": "/app/node_modules/finalhandler/package.json",
+                "artifact_id": "d5f5661b061ac0c6",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "fresh",
+                "spec": "0.5.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.5.2",
+                "image_path": "/app/node_modules/fresh/package.json",
+                "artifact_id": "67cbb114b414c6ed",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "http-errors",
+                "spec": "2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/http-errors/package.json",
+                "artifact_id": "ef40bd516d10cac5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "merge-descriptors",
+                "spec": "1.0.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.3",
+                "image_path": "/app/node_modules/merge-descriptors/package.json",
+                "artifact_id": "5e93a7348b524817",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "methods",
+                "spec": "~1.1.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.2",
+                "image_path": "/app/node_modules/methods/package.json",
+                "artifact_id": "9585b627a3e79800",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "on-finished",
+                "spec": "2.4.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.4.1",
+                "image_path": "/app/node_modules/on-finished/package.json",
+                "artifact_id": "e38ee2ccda56111b",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "parseurl",
+                "spec": "~1.3.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.3",
+                "image_path": "/app/node_modules/parseurl/package.json",
+                "artifact_id": "c320faa5d3a66acf",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "path-to-regexp",
+                "spec": "0.1.12",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.1.12",
+                "image_path": "/app/node_modules/path-to-regexp/package.json",
+                "artifact_id": "34624123e4cc7ed5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "proxy-addr",
+                "spec": "~2.0.7",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.8",
+                "image_path": "/app/node_modules/proxy-addr/package.json",
+                "artifact_id": "dbf4e61846d25461",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "qs",
+                "spec": "6.13.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "6.13.0",
+                "image_path": "/app/node_modules/qs/package.json",
+                "artifact_id": "85192374dbb5e524",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "range-parser",
+                "spec": "~1.2.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.2.1",
+                "image_path": "/app/node_modules/range-parser/package.json",
+                "artifact_id": "793904b531a050e6",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "safe-buffer",
+                "spec": "5.2.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "5.2.1",
+                "image_path": "/app/node_modules/safe-buffer/package.json",
+                "artifact_id": "fe3d8f9a906700e5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "send",
+                "spec": "0.19.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.19.0",
+                "image_path": "/app/node_modules/send/package.json",
+                "artifact_id": "9153d3c2d7913ac3",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "serve-static",
+                "spec": "1.16.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.16.2",
+                "image_path": "/app/node_modules/serve-static/package.json",
+                "artifact_id": "d28dc23bf9ad955a",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "setprototypeof",
+                "spec": "1.2.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.2.0",
+                "image_path": "/app/node_modules/setprototypeof/package.json",
+                "artifact_id": "c159c911c082b31d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "statuses",
+                "spec": "2.0.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.1",
+                "image_path": "/app/node_modules/statuses/package.json",
+                "artifact_id": "eba2adf6a15828ce",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "type-is",
+                "spec": "~1.6.18",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.6.18",
+                "image_path": "/app/node_modules/type-is/package.json",
+                "artifact_id": "5cab145feacb9dec",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "utils-merge",
+                "spec": "1.0.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.1",
+                "image_path": "/app/node_modules/utils-merge/package.json",
+                "artifact_id": "bfb88637592b59e1",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "vary",
+                "spec": "~1.1.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.2",
+                "image_path": "/app/node_modules/vary/package.json",
+                "artifact_id": "cf157fa1ae677562",
+                "reason": "root_declaration_and_local_installation"
+              }
+            ],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        },
+        "H2.1": {
+          "tp": 31,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "unknown": 0,
+          "prediction": {
+            "classifier": "H2.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [
+              {
+                "owner": "package.json",
+                "name": "accepts",
+                "spec": "~1.3.8",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.8",
+                "image_path": "/app/node_modules/accepts/package.json",
+                "artifact_id": "942b9e0b7c5dedb3",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "array-flatten",
+                "spec": "1.1.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.1",
+                "image_path": "/app/node_modules/array-flatten/package.json",
+                "artifact_id": "27439e757c96cf8a",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "body-parser",
+                "spec": "1.20.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.20.3",
+                "image_path": "/app/node_modules/body-parser/package.json",
+                "artifact_id": "f9c1d33306f5039c",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "content-disposition",
+                "spec": "0.5.4",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.5.4",
+                "image_path": "/app/node_modules/content-disposition/package.json",
+                "artifact_id": "980cb6e6c09a93ec",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "content-type",
+                "spec": "~1.0.4",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.5",
+                "image_path": "/app/node_modules/content-type/package.json",
+                "artifact_id": "92f15b5cb1b8788d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "cookie",
+                "spec": "0.7.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.7.1",
+                "image_path": "/app/node_modules/cookie/package.json",
+                "artifact_id": "a9640420aadcb80d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "cookie-signature",
+                "spec": "1.0.6",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.6",
+                "image_path": "/app/node_modules/cookie-signature/package.json",
+                "artifact_id": "4b685a6383858874",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "debug",
+                "spec": "2.6.9",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.6.9",
+                "image_path": "/app/node_modules/debug/package.json",
+                "artifact_id": "550a75ec14726624",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "depd",
+                "spec": "2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/depd/package.json",
+                "artifact_id": "fc3496aa25dfd602",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "encodeurl",
+                "spec": "~2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/encodeurl/package.json",
+                "artifact_id": "753d5797fc1aaa86",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "escape-html",
+                "spec": "~1.0.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.3",
+                "image_path": "/app/node_modules/escape-html/package.json",
+                "artifact_id": "8d5dad0d7719d5f0",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "etag",
+                "spec": "~1.8.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.8.1",
+                "image_path": "/app/node_modules/etag/package.json",
+                "artifact_id": "de82d24a8586af2c",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "finalhandler",
+                "spec": "1.3.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.1",
+                "image_path": "/app/node_modules/finalhandler/package.json",
+                "artifact_id": "d5f5661b061ac0c6",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "fresh",
+                "spec": "0.5.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.5.2",
+                "image_path": "/app/node_modules/fresh/package.json",
+                "artifact_id": "67cbb114b414c6ed",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "http-errors",
+                "spec": "2.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.0",
+                "image_path": "/app/node_modules/http-errors/package.json",
+                "artifact_id": "ef40bd516d10cac5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "merge-descriptors",
+                "spec": "1.0.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.3",
+                "image_path": "/app/node_modules/merge-descriptors/package.json",
+                "artifact_id": "5e93a7348b524817",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "methods",
+                "spec": "~1.1.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.2",
+                "image_path": "/app/node_modules/methods/package.json",
+                "artifact_id": "9585b627a3e79800",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "on-finished",
+                "spec": "2.4.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.4.1",
+                "image_path": "/app/node_modules/on-finished/package.json",
+                "artifact_id": "e38ee2ccda56111b",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "parseurl",
+                "spec": "~1.3.3",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.3.3",
+                "image_path": "/app/node_modules/parseurl/package.json",
+                "artifact_id": "c320faa5d3a66acf",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "path-to-regexp",
+                "spec": "0.1.12",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.1.12",
+                "image_path": "/app/node_modules/path-to-regexp/package.json",
+                "artifact_id": "34624123e4cc7ed5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "proxy-addr",
+                "spec": "~2.0.7",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.8",
+                "image_path": "/app/node_modules/proxy-addr/package.json",
+                "artifact_id": "dbf4e61846d25461",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "qs",
+                "spec": "6.13.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "6.13.0",
+                "image_path": "/app/node_modules/qs/package.json",
+                "artifact_id": "85192374dbb5e524",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "range-parser",
+                "spec": "~1.2.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.2.1",
+                "image_path": "/app/node_modules/range-parser/package.json",
+                "artifact_id": "793904b531a050e6",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "safe-buffer",
+                "spec": "5.2.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "5.2.1",
+                "image_path": "/app/node_modules/safe-buffer/package.json",
+                "artifact_id": "fe3d8f9a906700e5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "send",
+                "spec": "0.19.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "0.19.0",
+                "image_path": "/app/node_modules/send/package.json",
+                "artifact_id": "9153d3c2d7913ac3",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "serve-static",
+                "spec": "1.16.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.16.2",
+                "image_path": "/app/node_modules/serve-static/package.json",
+                "artifact_id": "d28dc23bf9ad955a",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "setprototypeof",
+                "spec": "1.2.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.2.0",
+                "image_path": "/app/node_modules/setprototypeof/package.json",
+                "artifact_id": "c159c911c082b31d",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "statuses",
+                "spec": "2.0.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "2.0.1",
+                "image_path": "/app/node_modules/statuses/package.json",
+                "artifact_id": "eba2adf6a15828ce",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "type-is",
+                "spec": "~1.6.18",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.6.18",
+                "image_path": "/app/node_modules/type-is/package.json",
+                "artifact_id": "5cab145feacb9dec",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "utils-merge",
+                "spec": "1.0.1",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.0.1",
+                "image_path": "/app/node_modules/utils-merge/package.json",
+                "artifact_id": "bfb88637592b59e1",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "vary",
+                "spec": "~1.1.2",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.2",
+                "image_path": "/app/node_modules/vary/package.json",
+                "artifact_id": "cf157fa1ae677562",
+                "reason": "root_declaration_and_local_installation"
+              }
+            ],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        }
+      }
+    },
+    {
+      "pair": "paired-axios-v2",
+      "reference_receipt_sha256": "d0f6b85c19a7ef8e220ee7be8229fea372b0211718b2ed47c6c19bc9370a59e5",
+      "scope": "root production, exact name/version, owner package.json",
+      "scores": {
+        "H1.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "unknown": 3,
+          "prediction": {
+            "classifier": "H1.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [
+              {
+                "owner": "package.json",
+                "name": "follow-redirects",
+                "spec": "^1.15.6",
+                "scope": "runtime",
+                "status": "UNKNOWN",
+                "version": null,
+                "reason": "unsupported_version_range"
+              },
+              {
+                "owner": "package.json",
+                "name": "form-data",
+                "spec": "^4.0.0",
+                "scope": "runtime",
+                "status": "UNKNOWN",
+                "version": null,
+                "reason": "unsupported_version_range"
+              },
+              {
+                "owner": "package.json",
+                "name": "proxy-from-env",
+                "spec": "^1.1.0",
+                "scope": "runtime",
+                "status": "UNKNOWN",
+                "version": null,
+                "reason": "unsupported_version_range"
+              }
+            ],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        },
+        "H2.1": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "unknown": 0,
+          "prediction": {
+            "classifier": "H2.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [
+              {
+                "owner": "package.json",
+                "name": "follow-redirects",
+                "spec": "^1.15.6",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.15.6",
+                "image_path": "/app/node_modules/follow-redirects/package.json",
+                "artifact_id": "33520efc18e60745",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "form-data",
+                "spec": "^4.0.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "4.0.0",
+                "image_path": "/app/node_modules/form-data/package.json",
+                "artifact_id": "ab3bc7769cfe98d5",
+                "reason": "root_declaration_and_local_installation"
+              },
+              {
+                "owner": "package.json",
+                "name": "proxy-from-env",
+                "spec": "^1.1.0",
+                "scope": "runtime",
+                "status": "DIRECT",
+                "version": "1.1.0",
+                "image_path": "/app/node_modules/proxy-from-env/package.json",
+                "artifact_id": "6e151e650edb2ed7",
+                "reason": "root_declaration_and_local_installation"
+              }
+            ],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        }
+      }
+    },
+    {
+      "pair": "paired-isarray-v1",
+      "reference_receipt_sha256": "a8e1da35ca1a89756803091523c04a55b2de76965b069f4956e85b47850833bc",
+      "scope": "root production, exact name/version, owner package.json",
+      "scores": {
+        "H1.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "unknown": 0,
+          "prediction": {
+            "classifier": "H1.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        },
+        "H2.1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "unknown": 0,
+          "prediction": {
+            "classifier": "H2.1",
+            "root_image_manifest": "/app/package.json",
+            "edges": [],
+            "excluded_scopes": [
+              "devDependencies",
+              "peer-only"
+            ],
+            "build_usage_proven": false
+          }
+        }
+      }
+    }
+  ]
+}

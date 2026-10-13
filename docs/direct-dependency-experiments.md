@@ -151,3 +151,17 @@
   затем проверить отдельный H2 на development и раскрытых regression-парах,
   после чего один раз оценить новый контроль. Не внедрять matcher напрямую.
 - [Протокол](npm-range-development-v1.md), [метрики](npm-range-development-v1.json).
+
+## R7 — H2.1 и предрегистрация нового контроля, 2026-10-13
+
+- Начало: main 666bbe1, дерево чистое, benchmark-процессов нет.
+- До интеграции выбраны Koa/Fastify/Hapi, только ls-remote HEAD; точные SHA
+  и протокол сохранены в benchmarks/npm-control-v2.json. Манифесты не читались.
+- H2.1 сохраняет тело classify H1.1, меняет только matcher на R6; тест проверяет
+  идентичность правил. 67 tests, Ruff, input/reference hashes и 9 SBOM schemas passed.
+- Раскрытый regression: Express 31/0/0 без изменения; Axios TP 0→3, FN 3→0,
+  FP=0; isarray без ложных рёбер, положительные метрики null. Не независимый gain.
+- Production не менялся. H2 и protocol SHA256 заморожены в отчёте до нового контроля.
+- Следующее: парные сборки трёх новых control repositories, однократная оценка
+  замороженного H2.1; не заменять неудобные случаи и не настраивать правила.
+- [Протокол и regression](npm-h2-regression-v1.md), [JSON](npm-h2-regression-v1.json).
