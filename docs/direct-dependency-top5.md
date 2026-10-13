@@ -124,3 +124,10 @@ UNKNOWN1 (неактивный Python marker), declaration coverage Flask 83.33%
 Это замороженный прототип с исходным nonblind holdout, не новая версия runtime
 и не основание менять глобальные места. Остальные кандидаты не переоценивались.
 [Протокол и ограничения](python-p1-control-v1.md), [метрики](python-p1-control-v1.json).
+
+### 2026-10-13 — P1 robustness, R14
+
+Выявлены 11 исключений и 2 DIRECT с некорректными ID на синтетических входах P1.
+Experimental guard устраняет их в этой выборке; predictions на трёх парных
+Python-проектах неизменны. Accuracy и места не меняются; runtime не обновлён.
+[Ограничения готовности и воспроизводимый аудит](python-p1-guard-v1.md).

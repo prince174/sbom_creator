@@ -259,3 +259,16 @@
 - Следующее: hardening недоверенных Python inputs и дополнительный независимый
   положительный контроль до интеграции; не тюнить на раскрытом holdout.
 - [Протокол](python-p1-control-v1.md), [данные](python-p1-control-v1.json).
+
+## R14 — input robustness Python P1, 2026-10-13
+
+- Frozen P1 на 16 некорректных синтетических входах: 11 exceptions, 2 DIRECT
+  с некорректными ID, 3 UNKNOWN. Достижимость в runtime не доказана.
+- Experimental guard: 0 exceptions/невалидных DIRECT на тех же случаях;
+  некорректный вход целиком UNKNOWN, coverage null, без изменения frozen P1.
+- Jinja/Flask/Packaging predictions полностью равны baseline, включая версии
+  и UNKNOWN. На контрольных парах повторены hashes/tree/OCI/metadata/3 schemas.
+- 29 tests + Ruff + replay passed. Runtime 0.6.0 неизменен. Не accuracy improvement;
+  не готовый production loader, общий ресурсный бюджет ещё не проверен.
+- Следующее: независимый положительный контроль, затем bounded loader/integration.
+- [Протокол](python-p1-guard-v1.md), [данные](python-p1-guard-v1.json).
