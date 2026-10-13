@@ -399,3 +399,15 @@
 - Следующее: bounded local parent resolution и реальная development fixture;
   remote parent/неизвестный профиль UNKNOWN. Затем owner/GAV matching.
 - [Протокол](java-scope-j1.md), [данные](java-scope-j1.json).
+
+## R24 — local parent identity chains, 2026-10-13
+
+- Mainfe0760f, clean; обнаруженные Python процессы принадлежат codex_worker.
+- Эксперимент читает regular Git blobs точного commit, проверяет literal parent
+  GAV, relativePath, границы, циклы и бюджеты. Не effective model resolver.
+-8development проектов,29POM:10local chains (7с переходом),5outside repository,
+  14unresolved/mismatched identity. Включены test/example POM, не module coverage.
+-14unit cases и Ruff passed. Новых сборок, изменений runtime и эталонов нет.
+  Commons Text UNKNOWN не устранён; улучшение direct accuracy не заявляется.
+- Следующее: Gson local inheritance/management + profiles; парный reference
+  конкретного модуля до оценки. [Протокол](java-local-parent-v1.md).
