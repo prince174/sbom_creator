@@ -272,3 +272,17 @@
   не готовый production loader, общий ресурсный бюджет ещё не проверен.
 - Следующее: независимый положительный контроль, затем bounded loader/integration.
 - [Протокол](python-p1-guard-v1.md), [данные](python-p1-guard-v1.json).
+
+## R15 — frozen P1 HTTPX control, 2026-10-13
+
+- Main 5c87b9a, чистое дерево, активных benchmark нет. HTTPX0.28.1 выбран до
+  source inspection этого этапа; обнаружен старый source cache/scan, not blind.
+- Реальная Hatchling wheel/venv/CycloneDX сборка, source commit закреплён;
+  frozen P1 и guard неизменны. TP4 FP0 FN0, versions4/4, UNKNOWN0, coverage100%.
+  Root version reference отсутствует/null. Runtime0.6.0 неизменен.
+- Ошибка pin hatch-fancy-pypi-readme24.2.0: исправлена на24.1.0; logs сохранены.
+- 34tests+Ruff; tree/hash/OCI/METADATA/3schemas passed. Новые immutable refs;
+  сетевое повторное разрешение версий не гарантирует идентичной сборки.
+- Следующее: bounded source loader и общий input budget, затем Python evidence
+  integration/replay. Контроль не использовать для подбора правил.
+- [Протокол](python-p1-control-v2.md), [данные](python-p1-control-v2.json).

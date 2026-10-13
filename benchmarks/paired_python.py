@@ -48,7 +48,7 @@ def verify_metadata(archive_path, bom, project_name, environment):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--resume-built-images", action="store_true")
-    parser.add_argument("--project", choices=["flask", "packaging"], required=True)
+    parser.add_argument("--project", choices=["flask", "packaging", "httpx"], required=True)
     args = parser.parse_args()
     frozen = "060f4d381c5c1fb332fcec598789caca960f6514c174a131d04f95fc1c9d214f"
     if shared.sha(ROOT / "benchmarks/python_direct_p1.py") != frozen:
@@ -56,7 +56,11 @@ def main():
     WORK = ROOT / ("benchmarks/.work/paired-" + args.project + "-v1")
     OUT = ROOT / ("benchmarks/references/paired-" + args.project + "-v1")
     manifest = json.loads((ROOT / "benchmarks/manifest.json").read_bytes())
-    entry = next(p for p in manifest["repositories"] if p["id"] == "python-" + args.project)
+    entry = (json.loads((ROOT / "benchmarks/python-control-v2.json").read_bytes()) if args.project == "httpx"
+             else next(p for p in manifest["repositories"] if p["id"] == "python-" + args.project))
+    recipe = ROOT / ("benchmarks/paired-httpx.Dockerfile" if args.project == "httpx" else "benchmarks/paired-python.Dockerfile")
+    if args.project == "httpx" and shared.sha(ROOT / "benchmarks/python_p1_guard.py") != entry["guard_sha256"]:
+        raise ValueError("Guard changed before control evaluation")
     COMMIT = entry["commit"]
     if (OUT / "receipt.json").exists():
         raise FileExistsError("Immutable pair already exists")
@@ -69,9 +73,9 @@ def main():
         run_command(["git", "-c", "core.autocrlf=false", "checkout", "--detach", COMMIT], WORK / "checkout.log", cwd=source)
     if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != COMMIT or subprocess.check_output(["git", "status", "--porcelain"], cwd=source, text=True).strip():
         raise ValueError("Checkout is not clean at requested commit")
-    if args.resume_built_images and shared.sha(ROOT / "benchmarks/paired-python.Dockerfile") != shared.sha(WORK / "Dockerfile"):
+    if args.resume_built_images and shared.sha(recipe) != shared.sha(WORK / "Dockerfile"):
         raise ValueError("Build recipe changed before resume")
-    shutil.copyfile(ROOT / "benchmarks/paired-python.Dockerfile", WORK / "Dockerfile")
+    shutil.copyfile(recipe, WORK / "Dockerfile")
     (WORK / ".dockerignore").write_text("**\n!Dockerfile\n!src/\n!src/**\nsrc/.git/\n", encoding="utf-8")
     for stage in (() if args.resume_built_images else ("build", "runtime")):
         run_command(["docker", "build", "--platform", "linux/amd64", "--target", stage, "--iidfile", str(WORK / (stage + ".id")), "--progress=plain", "--build-arg", "PROJECT=" + args.project, str(WORK)], WORK / (stage + ".log"), timeout=1800)
@@ -106,7 +110,7 @@ def main():
     shutil.copyfile(source / "pyproject.toml", OUT / "pyproject.toml")
     atomic_json(OUT / "application-tree.json", tree)
     atomic_json(OUT / "metadata-check.json", evidence)
-    receipt = {"experiment": "R13", "project": "python-" + args.project, "commit": COMMIT,
+    receipt = {"experiment": "R15" if args.project == "httpx" else "R13", "project": "python-" + args.project, "commit": COMMIT,
                "image_binding": binding, "venv_tree_equal": True, "reference_only_for_evaluation": True,
                "reference_hashes": {p.name: shared.sha(p) for p in OUT.iterdir() if p.is_file()},
                "outputs": {p.name: shared.sha(p) for p in analysis.iterdir() if p.is_file()},

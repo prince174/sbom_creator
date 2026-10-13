@@ -131,3 +131,12 @@ UNKNOWN1 (неактивный Python marker), declaration coverage Flask 83.33%
 Experimental guard устраняет их в этой выборке; predictions на трёх парных
 Python-проектах неизменны. Accuracy и места не меняются; runtime не обновлён.
 [Ограничения готовности и воспроизводимый аудит](python-p1-guard-v1.md).
+
+### 2026-10-13 — дополнительный P1 контроль, R15
+
+HTTPX0.28.1: TP4 FP0 FN0, versions4/4, UNKNOWN0, declaration coverage100%.
+Frozen P1+guard совпадает с P1. С R13: девять положительных контрольных рёбер
+на двух проектах плюс пустой Packaging; не общая Python accuracy. Source cache
+HTTPX существовал заранее, строго слепая выборка не заявлена. Runtime0.6.0
+неизменен; глобальные места не меняются.
+[Протокол](python-p1-control-v2.md), [данные](python-p1-control-v2.json).

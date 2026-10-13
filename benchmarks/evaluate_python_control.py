@@ -26,7 +26,7 @@ def metrics(tp, fp, fn):
             "f1": 2 * tp / (2 * tp + fp + fn) if 2 * tp + fp + fn else None}
 
 
-def evaluate(project):
+def evaluate(project, classifier=classify):
     work = ROOT / ("benchmarks/.work/paired-" + project + "-v1")
     out = ROOT / ("benchmarks/references/paired-" + project + "-v1")
     source_path = work / "src/pyproject.toml"
@@ -34,7 +34,7 @@ def evaluate(project):
     image_path = work / "analysis/image.syft.json"
     image = json.loads(image_path.read_bytes())
     started = time.perf_counter()
-    prediction = classify(source, image)
+    prediction = classifier(source, image)
     elapsed = time.perf_counter() - started
     # Evaluation-only evidence begins here.
     receipt = json.loads((out / "receipt.json").read_bytes())
