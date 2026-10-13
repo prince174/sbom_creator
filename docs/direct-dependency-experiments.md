@@ -183,3 +183,18 @@
   с полным runtime regression/schema/security gate. Union отдельно не расширять
   по раскрытому контролю. H2 production ещё не внедрён.
 - [Отчёт](npm-h2-control-v2.md), [рёбра и метрики](npm-h2-control-v2.json).
+
+## R9 — интеграция H2.1, 2026-10-13
+
+- Начало: main 324e198, дерево чистое, benchmark-процессов нет.
+- Подтверждённый npm-profile перенесён в src без benchmark imports; версия 0.6.0.
+  Manifest loader ограничен и валидирует типы/JSON; unsupported остаётся UNKNOWN.
+- Direct edges между существующими package identities в final/full; inventory
+  и старые graph edges сохранены. Добавлен direct-dependencies.json, inputs прежние.
+- 6 paired replay прошли настоящий Syft convert и pipeline; совпадение с frozen H2,
+  18 schema checks. Independent metrics остаются R8, не названы новым holdout.
+- Full tests 208 passed; прежний skip и отдельный Windows symlink permission skip.
+  Oversized test ID исправлен после ошибки setup, повтор успешен. Ruff passed.
+- Следующее: расширение development coverage и следующий язык с парным reference;
+  не трактовать оставшиеся компоненты как transitive и не настраивать union по R8.
+- [Отчёт](runtime-npm-v1.md), [replay](runtime-npm-v1.json). Deployment не менялся.

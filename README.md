@@ -6,6 +6,16 @@ Python-сервис получает **Bitbucket HTTPS URL + полный commit
 Основной режим API и CLI — детерминированные правила, без LLM и модельных ключей.
 Загрузку в Dependency-Track выполняет пользователь.
 
+**0.6.0: прямые npm-зависимости корня проекта.** Для поддерживаемых деклараций
+сервис добавляет связи от package-компонента приложения к пакетам в его локальном
+node_modules. Входы прежние; Docker/Node/LLM для этого не нужны. Полный inventory
+сохраняется. `direct-dependencies.json` содержит DIRECT/UNKNOWN, причины и SHA256
+исходного package.json. Это декларация runtime-зависимости, не доказательство
+исполнения или использования при сборке. Поддержаны стабильные x.y.z, ~x.y.z и
+^x.y.z; union, prerelease, workspaces и неоднозначные случаи остаются UNKNOWN.
+Dev/peer-only и остальные языки этим профилем не оцениваются.
+[Проверки интеграции и ограничения](docs/runtime-npm-v1.md).
+
 **0.5.0: сервис больше не требует Docker CLI, Engine или socket.** Образы получает
 Syft напрямую из registry. Сохранены правила, проверка payload и разделение ОС.
 [Подробный отчёт миграции и проверок](docs/direct-syft-v0.5.md).
@@ -178,6 +188,7 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 | `source.syft.json`, `image.syft.json` | Полные исходные каталоги |
 | `selected.syft.json` | Все подтверждённые записи образа, соответствующие `full.cdx.json` |
 | `decisions.json` | Все INCLUDE/EXCLUDE/UNKNOWN с evidence и причинами |
+| `direct-dependencies.json` | Прямые npm-зависимости корня, UNKNOWN и причины; граф не объявляется полным |
 | `coverage.json` | Catalogers, ограничения, неполнота и счётчики причин UNKNOWN |
 | `review.json` | UNKNOWN по группам проверки, происхождению, типу пакета, причине и следующему шагу |
 | `provenance.json` | Commit, immutable image/config/digest, версии и hashes |

@@ -14,7 +14,7 @@
 | Место | Решение | Precision / Recall / F1 прямых зависимостей | Плюсы | Минусы | Статус |
 |---|---|---|---|---|---|
 | — | B0: SBOM Creator 0.5.0, commit `20f287b60d358692c843526704cd44e71ed4012f` | Не измерены | Syft source/image; точные версии и payload evidence; ОС отдельно; runtime без Docker socket | Определяет наличие в образе, не принадлежность к прямым зависимостям проекта; базовые библиотеки могут попадать в основной SBOM; граф неполон | Стартовая версия, 6 языков, 60 тестовых проектов |
-| — | H1.1 / H2.1: эксперимент npm declarations + image locations, версия и SHA в [R4](npm-h1-development-v1.json) | Development Express: 100% / 100% / 100%, TP=31, FP=0, FN=0; Holdout Axios: TP=0, FP=0, FN=3, recall/F1=0%; precision не определена | Гипотеза: явно устанавливать владельца и scope до проверки наличия | Нужны отдельные правила для resolver, profiles/features и неоднозначных версий; выигрыш не доказан | Проверены Express development и 2 npm holdout; [R5](npm-h1-holdout-v1.md): coverage Axios 0%, isarray пустой; H1.1 отклонён; H2.1 контроль см. R8 |
+| — | H1.1 / H2.1: эксперимент npm declarations + image locations, версия и SHA в [R4](npm-h1-development-v1.json) | Development Express: 100% / 100% / 100%, TP=31, FP=0, FN=0; Holdout Axios: TP=0, FP=0, FN=3, recall/F1=0%; precision не определена | Гипотеза: явно устанавливать владельца и scope до проверки наличия | Нужны отдельные правила для resolver, profiles/features и неоднозначных версий; выигрыш не доказан | Проверены Express development и 2 npm holdout; [R5](npm-h1-holdout-v1.md): coverage Axios 0%, isarray пустой; H1.1 отклонён; H2.1 включён в 0.6.0, см. R8/R9 |
 | — | [Syft 1.51.1](https://github.com/anchore/syft), самостоятельный source/image baseline | Не измерены | Уже используемый каталогизатор; единый формат и scanner relationships | Сам по себе не гарантирует полноту графа direct/transitive; file ownership не равно dependency edge | 6 языков инвентаризируются в B0; самостоятельная direct-оценка не выполнена |
 | — | [cdxgen](https://github.com/cdxgen/cdxgen/tree/b84786dec587a20deb605192087388fc0604b12d), HEAD обзора `b84786d` | Не измерены | CycloneDX из исходников и образов, несколько экосистем | Перед прогоном необходимо закрепить режим и проверить, какие внешние команды и установки он выполняет; нельзя молча дать ему больше входных данных | Кандидат; поддержка и ограничения всех 6 языков в нашем режиме ещё не проверены; запусков 0 |
 | — | [Trivy](https://github.com/aquasecurity/trivy/tree/8c0b1f0fe00f1227c8cd7c23fe906523da849d5a), HEAD обзора `8c0b1f0` | Не измерены | Парсеры manifest/lockfile и графы для поддерживаемых форматов; независимый кандидат | Граф зависит от языка и файлов: для Java есть эвристики, для некоторых Node lockfile недостаточно сведений | Кандидат; 6-языковая выборка не прогонялась; запусков 0 |
@@ -95,3 +95,8 @@ H1 на тех же парах: TP=3 FP=0 FN=48. [Воспроизводимый
 и [версия/SHA/рёбра](npm-h2-control-v2.json). Выигрыш подтверждён для этого
 npm-профиля; H2 ещё не интегрирован в production. Общий ранг среди пяти подходов
 не назначен: Syft/cdxgen/Trivy на этих прямых рёбрах не сравнивались.
+
+R9, 2026-10-13: npm H2.1 интегрирован в **SBOM Creator 0.6.0**.
+[Шесть pipeline replay и ограничения](runtime-npm-v1.md): inventory не сокращён,
+18 схем валидны. Метрики прямых зависимостей относятся только к R8 npm-контролю
+(50/0/1); общий рейтинг инструментов и точность шести языков не установлены.

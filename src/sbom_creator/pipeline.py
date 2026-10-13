@@ -20,6 +20,7 @@ from .acquire import (
     validate_inputs,
 )
 from .core import reconcile, review_report, rules_assessor
+from .direct_evidence import annotate, load_manifest
 from .exporter import packages_only, split_inventory
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .payload import SUPPORTED as PAYLOAD_CATALOGERS
@@ -30,6 +31,7 @@ ARTIFACTS = (
     "final.cdx.json", "source.syft.json", "image.syft.json", "selected.syft.json",
     "decisions.json", "coverage.json", "provenance.json", "summary.json", "review.json",
     "os.cdx.json", "full.cdx.json",
+    "direct-dependencies.json",
 )
 
 
@@ -115,7 +117,7 @@ def catalogers(document):
     return sorted({a["foundBy"] for a in document["artifacts"]} | set(used or []))
 
 
-def _publish_catalogs(source, image, output, settings, assessor, provenance=None):
+def _publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None):
     """Also serves benchmark/replay; schemas and actual conversion always checked."""
     output = Path(output).resolve()
     if output.exists():
@@ -148,6 +150,8 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         cdx = convert(staging / "selected.syft.json", staging / "final.cdx.json", settings)
         cdx = packages_only(cdx, result["selected_syft"])
         validate_export_identity(cdx, result["selected_syft"])
+        direct = annotate(cdx, image, npm_manifest)
+        write_json(staging / "direct-dependencies.json", direct)
         counts = Counter(d["decision"] for d in result["decisions"])
         cdx.setdefault("metadata", {}).setdefault("properties", []).extend([
             {"name": "sbom-creator:build-link", "value": provenance["build_link"]},
@@ -156,6 +160,7 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
             {"name": "sbom-creator:provenance", "value": json.dumps(provenance, ensure_ascii=False)},
         ])
         coverage = result["coverage"]
+        coverage["direct_dependencies"] = {k: v for k, v in direct.items() if k != "edges"}
         checkout_coverage = provenance.get("git", {}).get("coverage", provenance.get("source_coverage", {}))
         incomplete_source = bool(checkout_coverage.get("gitmodules_present")
                                  or checkout_coverage.get("lfs_pointer_paths"))
@@ -204,9 +209,9 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
     return summary
 
 
-def publish_catalogs(source, image, output, settings, assessor, provenance=None):
+def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None):
     try:
-        return _publish_catalogs(source, image, output, settings, assessor, provenance)
+        return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest)
     except FileExistsError:
         raise
     except Exception as error:  # noqa: BLE001 -- safe diagnostic boundary
@@ -241,7 +246,7 @@ def analyze_local(source_path, image_reference, output, settings=None, mode="rul
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"])
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(checkout_path))
 
 
 def analyze(repository_url, commit, image_reference, output, settings=None, mode="rules"):
@@ -264,4 +269,4 @@ def analyze(repository_url, commit, image_reference, output, settings=None, mode
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"])
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(work / "checkout"))
