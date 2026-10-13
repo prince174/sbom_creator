@@ -411,3 +411,15 @@
   Commons Text UNKNOWN не устранён; улучшение direct accuracy не заявляется.
 - Следующее: Gson local inheritance/management + profiles; парный reference
   конкретного модуля до оценки. [Протокол](java-local-parent-v1.md).
+
+## R25 — Gson profile influence audit, 2026-10-14
+
+- Mainb5c768d, clean; только codex_worker Python процессы, benchmark нет.
+- Exact source commit и SHA R24: локальная цепочка Gson подтверждена.
+  Все4профиля NO_STATIC_REFERENCE_FOUND для dependency sections,2имеютbuild.
+- Добавлен аудитор косвенных property references, включая циклы. Это не
+  activation/effective-model resolver; settings/CLI/plugins не моделируются.
+-36Java tests и Ruff passed. Runtime/эталоны/топ5 неизменны; direct metrics null.
+- Следующее: парный Gson module build с CDX/native/effective POM/profiles,
+  затем проверка ограниченного наследования. Не использовать R1 как image pair.
+- [Протокол](gson-profile-impact-v1.md), [данные](gson-profile-impact-v1.json).

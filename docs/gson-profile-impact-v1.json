@@ -1,0 +1,65 @@
+{
+  "experiment": "R25",
+  "project": "java-gson",
+  "commit": "828a97be0f8d58108b140b77df8dc76b657f4a87",
+  "chain": {
+    "status": "LOCAL_CHAIN_FOUND",
+    "reason": "identity_only",
+    "chain": [
+      "gson/pom.xml",
+      "pom.xml"
+    ]
+  },
+  "audit": {
+    "profiles": [
+      {
+        "id": "jdk15",
+        "dependency_section": false,
+        "management_section": false,
+        "properties_affecting_declarations": [],
+        "build_section": true,
+        "activation": "UNKNOWN",
+        "declaration_impact": "NO_STATIC_REFERENCE_FOUND"
+      },
+      {
+        "id": "jdk21+",
+        "dependency_section": false,
+        "management_section": false,
+        "properties_affecting_declarations": [],
+        "build_section": false,
+        "activation": "UNKNOWN",
+        "declaration_impact": "NO_STATIC_REFERENCE_FOUND"
+      },
+      {
+        "id": "release",
+        "dependency_section": false,
+        "management_section": false,
+        "properties_affecting_declarations": [],
+        "build_section": true,
+        "activation": "UNKNOWN",
+        "declaration_impact": "NO_STATIC_REFERENCE_FOUND"
+      },
+      {
+        "id": "JDK17",
+        "dependency_section": false,
+        "management_section": false,
+        "properties_affecting_declarations": [],
+        "build_section": false,
+        "activation": "UNKNOWN",
+        "declaration_impact": "NO_STATIC_REFERENCE_FOUND"
+      }
+    ],
+    "referenced_properties": [],
+    "effective_model_resolved": false,
+    "direct_edges": [],
+    "limitation": "No settings/CLI/extensions/plugin effects; absence of a static reference is not proof of build invariance"
+  },
+  "partition": "development",
+  "runtime_changed": false,
+  "direct_accuracy": null,
+  "oracle_read": false,
+  "source_sha256": {
+    "pom.xml": "8acb1f3b72a6f026916ac0735bad9aab0293d527edb7b365327def13a9367b7a",
+    "gson/pom.xml": "c0e547bea998888e6e25c5886a90e762272bc88b5275343dd2c05ded6ca2e360"
+  }
+}
