@@ -201,7 +201,14 @@ def run_command(args: list[str], *, cwd: Path, env: dict[str, str], timeout: int
                     time.sleep(0.05)
                 if process.returncode:
                     raise RuntimeError(f"{label} failed (exit {process.returncode}); command output redacted")
-            return out.read_text(encoding="utf-8", errors="replace").strip()
+            # The process can write its last bytes between the loop check and poll().
+            if out.stat().st_size + err.stat().st_size > max_output_bytes:
+                raise RuntimeError(f"{label} exceeded output limit")
+            with out.open("rb") as stream:
+                raw = stream.read(max_output_bytes + 1)
+            if len(raw) + err.stat().st_size > max_output_bytes:
+                raise RuntimeError(f"{label} exceeded output limit")
+            return raw.decode("utf-8", errors="replace").strip()
         except FileNotFoundError:
             raise RuntimeError(f"{label} executable is unavailable") from None
         finally:

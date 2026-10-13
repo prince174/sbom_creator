@@ -313,3 +313,17 @@
   peak resources не измерены. Не объявлять production-ready.
 - Следующее: аудит acquisition/parser контракта размера Syft, затем integration.
 - [Протокол](python-p1-projection-v1.md), [данные](python-p1-projection-v1.json).
+
+## R18 — исправлен обход лимита вывода перед Syft JSON parsing, 2026-10-13
+
+- Main0f18bee, clean, benchmark нет. Runtime уже имел max_sbom_bytes64МиБ,
+  но race size-check→poll позволял завершившемуся процессу превысить лимит.
+- Два детерминированных теста stdout/stderr33при32 падали до исправления;
+  добавлена финальная проверка и read(limit+1). Ровно limit принимается.
+- 211tests passed,2skip,1knownwarning; Ruff; real Syft1.51.1 version passed.
+  128saved catalogs максимум8904584bytes, превышений64МиБ нет. Не новый scan.
+- Это runtime resource fix, не accuracy improvement; P1 не интегрирован,
+  inventory/3SBOM/API неизменны, deployed services не менялись.
+- Следующее: интеграция Python evidence и bounded manifest/projection,
+  Python/npm control replay + full regression/schema/security.
+- [Контракт и ограничения](syft-input-limit-r18.md).

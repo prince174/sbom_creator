@@ -156,3 +156,30 @@ def test_bounded_runner_times_out(tmp_path):
     with pytest.raises(RuntimeError, match="timed out"):
         acquire.run_command([sys.executable, "-c", "import time;time.sleep(10)"], cwd=tmp_path,
             env=os.environ.copy(), timeout=1, max_output_bytes=1024, label="Child")
+
+
+@pytest.mark.parametrize("channel,size,rejected", [("stdout", 33, True), ("stderr", 33, True), ("stdout", 32, False)])
+def test_output_written_between_size_check_and_exit(monkeypatch, tmp_path, channel, size, rejected):
+    class FinishedProcess:
+        returncode = 0
+
+        def __init__(self, *args, **kwargs):
+            self.stream = kwargs[channel]
+            self.written = False
+
+        def poll(self):
+            if not self.written:
+                self.stream.write(b"x" * size)
+                self.stream.flush()
+                self.written = True
+            return 0
+
+    monkeypatch.setattr(acquire.subprocess, "Popen", FinishedProcess)
+    def call():
+        return acquire.run_command(["fake"], cwd=tmp_path, env={}, timeout=1,
+                                   max_output_bytes=32, label="Test")
+    if rejected:
+        with pytest.raises(RuntimeError, match="output limit"):
+            call()
+    else:
+        assert call() == "x" * 32

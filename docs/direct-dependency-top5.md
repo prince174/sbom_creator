@@ -154,3 +154,9 @@ HTTPX существовал заранее, строго слепая выбо�
 FlaskUNKNOWN1. Регрессия R16 устранена без увеличения лимита. Accuracy исходного
 P1 и глобальные места неизменны. Только benchmark, preparse contract ещё открыт.
 [Протокол](python-p1-projection-v1.md), [данные](python-p1-projection-v1.json).
+
+### 2026-10-13 — R18, ресурсный контракт runtime
+
+Закрыта гонка проверки размера stdout/stderr перед JSON parsing. Dependency
+accuracy не переоценивалась, места и правила неизменны; Python P1 ещё benchmark.
+[Проверки и ограничения](syft-input-limit-r18.md).
