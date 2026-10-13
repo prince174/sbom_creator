@@ -243,3 +243,19 @@
 - P1 frozen SHA в отчёте. Следующее: paired Flask/Packaging из исходного holdout,
   no tuning; сохранить ограничения nonblind R1/R2 и честно считать UNKNOWN/FN.
 - [Протокол](python-p1-development-v1.md), [результат](python-p1-development-v1.json).
+
+## R13 — frozen Python P1, исходный holdout, 2026-10-13
+
+- Начало: main 8fc98cf, чистое дерево, активных benchmark-процессов нет.
+- Парные Flask/Packaging wheel/venv/CycloneDX сборки на исходных commit.
+  P1 SHA и split проверены; правила не менялись, runtime 0.6.0 неизменен.
+- Flask: TP5 FP0 FN0, пять точных версий; conditional importlib-metadata UNKNOWN,
+  неактивна в native Python3.12 profile. Покрытие деклараций 5/6, 83.33%.
+- Packaging: пустой прямой граф, метрики null; root version reference отсутствует.
+  Пять положительных рёбер одного проекта не доказывают общую Python accuracy.
+- 16 tests + Ruff; обе реальные сборки и hashes/tree/OCI/METADATA/3 schemas passed.
+  Не global blind control; зависимости разрешены при сборке, hashes сохранены,
+  fresh network rebuild может дать другие версии. Peak resources не измерены.
+- Следующее: hardening недоверенных Python inputs и дополнительный независимый
+  положительный контроль до интеграции; не тюнить на раскрытом holdout.
+- [Протокол](python-p1-control-v1.md), [данные](python-p1-control-v1.json).

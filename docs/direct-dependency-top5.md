@@ -115,3 +115,12 @@ R12, 2026-10-13: Python P1.0 декларационного подхода ре�
 эксперимент. [Jinja development](python-p1-development-v1.md): TP=1 FP=0 FN=0,
 1/1 версий совпала; holdout ещё не оценён, root-version accuracy null.
 Это не новая общая оценка сервиса и не основание повысить ранг среди 5 решений.
+
+### 2026-10-13 — Python P1, R13
+
+У статического подхода P1.0 появились контрольные парные Flask/Packaging:
+TP5 FP0 FN0, точные версии 5/5 на Flask; Packaging пустой, метрики null.
+UNKNOWN1 (неактивный Python marker), declaration coverage Flask 83.33%.
+Это замороженный прототип с исходным nonblind holdout, не новая версия runtime
+и не основание менять глобальные места. Остальные кандидаты не переоценивались.
+[Протокол и ограничения](python-p1-control-v1.md), [метрики](python-p1-control-v1.json).

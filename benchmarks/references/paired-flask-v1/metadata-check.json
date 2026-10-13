@@ -1,0 +1,45 @@
+{
+  "root_version": "3.1.0",
+  "direct": [
+    {
+      "name": "Jinja2",
+      "version": "3.1.6"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.1.9"
+    },
+    {
+      "name": "blinker",
+      "version": "1.9.0"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0"
+    }
+  ],
+  "conditional_requires_dist": [
+    "importlib-metadata>=3.6; python_version < \"3.10\"",
+    "asgiref>=3.2; extra == \"async\"",
+    "python-dotenv; extra == \"dotenv\""
+  ],
+  "marker_environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.12.15",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "6.6.87.2-microsoft-standard-WSL2",
+    "platform_system": "Linux",
+    "platform_version": "#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+    "python_full_version": "3.12.15",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.12",
+    "sys_platform": "linux",
+    "extra": ""
+  },
+  "build_requirements_excluded": true
+}

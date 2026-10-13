@@ -1,0 +1,72 @@
+{
+  "experiment": "R13",
+  "project": "python-packaging",
+  "commit": "d8e3b31b734926ebbcaff654279f6855a73e052f",
+  "image_binding": {
+    "index_digest": "sha256:bf56a64542763d2287aa4140e0d6bfbd8f799fb971fa964e92c3bc5ad6fb8dd7",
+    "platform_manifest_digest": "sha256:8c9353b28fdf9d1728f911ccf3395f4ff9522925935831d02f1e8904852d3633",
+    "config_digest": "sha256:102326a56bc83e589f60ad560f87c49b8f3a6f8f3f8173dc0fb8c2cbd7d9afef"
+  },
+  "venv_tree_equal": true,
+  "reference_only_for_evaluation": true,
+  "reference_hashes": {
+    "application-tree.json": "6a20d58a6d3f1892329004c54f280d35798240ee693bf3a76779a51bec917a65",
+    "builder-freeze.txt": "56c333b0f9b6c3a822952bb3f4f1ec4f0a8dde920508e79100473022b48cf158",
+    "Dockerfile": "35305b5fc7dd938d57abf369d9f02c6cc8963d9104fe578ca08a0683ff03d81f",
+    "generator-freeze.txt": "f90dbf7c048c85e1e5a741887178d3e70a12e88cf45ae8b7bbb23666e73321df",
+    "marker-environment.json": "a9876268fee4af5d71a9595e30efe396b7919025a683313a7a09da88ea74a270",
+    "metadata-check.json": "9fea548249b9d4770ef7cdb4237620108e259ba15c8d95d77a9f7f1f6a849ef3",
+    "pyproject.toml": "c5c36f6ffc933b86ecfaf251fc4d4e041627b142271e8c7ddb96a9aa61f8af3d",
+    "python-version.txt": "107400f96a6ed89b9a2deda6996e08eb4c58ebcbe59f14d749996e790db592d6",
+    "resolved.json": "059c37fffad8d4fff5e9a7ee7abd80912bcf8ea24471c6ca92e82bd8714a9d69",
+    "sbom.json": "e3d7defd56cb7e5bf9ab9f8a5b2d279253497e7e7c0f824916082c1f7466967d",
+    "wheels.sha256": "ecb7afedf1afb79a4f99d087d8b1c5eef69d19cebced353072e1b4a389edd966"
+  },
+  "outputs": {
+    "coverage.json": "0542cf55e4c6fa541d2643ef0bee1364c93086c00a957254712a3044f6da72aa",
+    "decisions.json": "02e97b98ac92cf2a7a1378c29c3a3110b307be81f782916696c75f94df6c039f",
+    "direct-dependencies.json": "c34127d92cc49b5c247ce9e3a0139a507b768a4f8d6ca1cb5bf171bc38a2e26c",
+    "final.cdx.json": "e581ed1f6ea1badd849261e3d4c219a6ea56d7a01b79c2cf4ab0358126b80228",
+    "full.cdx.json": "693176a4cc8a84a0c370977a798e974ae8a375d6dd5f5b3eb2ff2dfefab8d638",
+    "image.syft.json": "cf83a5ef6beddab21ee5c0a97bbb52c20946565184b6a1e10a24a6735afb6652",
+    "os.cdx.json": "3e8c5423285570e07f9089f65151a7ac8d2e5a5e84ad97f8a5f72ae97f449698",
+    "provenance.json": "f9d29e440883fef360719255dca59e6bb3013004919cde0cce9f59f0d22b61ed",
+    "review.json": "ce2a62d63603fb4d322373ea8ad421c469de87dd033f94033245ffd199c52750",
+    "selected.syft.json": "abda3ed8bdb043c465a61000d35df0b886432a85d95d07b25bc0211ee9fabdc8",
+    "source.syft.json": "96d5a41d14f0b79c307a37ac85a803af36ca56c6a62f1ab2e3017f25bf9f9d24",
+    "summary.json": "35a8c31edf8346c316842a91c0eff1535757be71b3b29d54c42159aad9eb5580"
+  },
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "CI_CONFIGURATION": 11,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 6
+    },
+    "unknown_groups": {
+      "ci_configuration": 11,
+      "image_evidence": 6
+    },
+    "source_count": 11,
+    "image_count": 127,
+    "selected_count": 121,
+    "final_count": 15,
+    "os_count": 106,
+    "full_count": 121,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "UNKNOWN": 17,
+      "INCLUDE": 109
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 4.453
+  },
+  "direct_precision": null,
+  "direct_recall": null,
+  "reason": "P1 evaluated separately; production runtime unchanged",
+  "classifier_sha256": "060f4d381c5c1fb332fcec598789caca960f6514c174a131d04f95fc1c9d214f",
+  "peak_resources": null
+}
