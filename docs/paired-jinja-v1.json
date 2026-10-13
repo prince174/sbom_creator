@@ -1,0 +1,55 @@
+{
+  "experiment": "R11",
+  "receipt_sha256": "3100a6d6488a34e7d75129cd3ce799bc4148707efaca57a8cca9e880640a3534",
+  "paired_image_verified": true,
+  "direct_source_installed_reference_agree": true,
+  "reference_root_version": null,
+  "root_version_validation": "unknown in reference",
+  "metadata": {
+    "root_version": "3.1.5",
+    "direct": [
+      {
+        "name": "MarkupSafe",
+        "version": "3.0.4"
+      }
+    ],
+    "conditional_requires_dist": [
+      "Babel>=2.7; extra == \"i18n\""
+    ],
+    "profile": "no extras; CPython 3.12 linux/amd64",
+    "build_requirements_excluded": true
+  },
+  "three_schemas_valid": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "CI_CONFIGURATION": 10,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 6
+    },
+    "unknown_groups": {
+      "ci_configuration": 10,
+      "image_evidence": 6
+    },
+    "source_count": 10,
+    "image_count": 128,
+    "selected_count": 122,
+    "final_count": 16,
+    "os_count": 106,
+    "full_count": 122,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 110,
+      "UNKNOWN": 16
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 4.594
+  },
+  "direct_precision": null,
+  "direct_recall": null,
+  "reason": "Python direct classifier absent",
+  "holdout_used": false
+}

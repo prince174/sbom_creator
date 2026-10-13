@@ -212,3 +212,20 @@
   проверка installed METADATA и root graph; затем отдельный Python-прототип,
   не использовать host markers или setup.py execution в runtime.
 - [Протокол](python-declarations-v1.md), [данные](python-declarations-v1.json).
+
+## R11 — парная Jinja wheel/venv сборка, 2026-10-13
+
+- Начало: main b0b8976, чистое дерево, benchmark-процессов нет.
+- Построен Jinja2 3.1.5 wheel, установлен с pinned MarkupSafe 3.0.4;
+  CycloneDX 7.5.0 и runtime используют одинаковый /project, tree/config проверены.
+- Source/installed/reference подтверждают одно прямое runtime-ребро MarkupSafe.
+  Корневая version в reference отсутствует (dynamic в pyproject): UNKNOWN,
+  эталон не исправлялся. Babel extra=i18n не выбран в профиле.
+- Registry allowlist harness исправлен после image_scan failure; продолжено
+  с готовым image archive без повторной сборки. Ошибка root-version проверки
+  выявила ограничение reference, теперь явно записано, не превращено в успех.
+- 11 tests, Ruff, hashes/OCI/metadata/3 schemas passed. 16 final/106 OS/122 full.
+  Python direct accuracy null, runtime не менялся, holdout не использовался.
+- Следующее: Syft installed metadata evidence и отдельный Python-прототип;
+  static unconditional dependencies, не исполнять setup.py/host markers.
+- [Протокол](paired-jinja-v1.md), [проверка](paired-jinja-v1.json).

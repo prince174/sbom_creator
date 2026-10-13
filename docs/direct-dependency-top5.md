@@ -105,3 +105,8 @@ R10, 2026-10-13: Python-расширение декларационного по
 [Аудит 8 development](python-declarations-v1.md): 6 static, 2 UNKNOWN, только
 2 непустых проекта с одной библиотекой. Это не метрики direct accuracy; runtime
 0.6.0 и позиции кандидатов не меняются. Следующая парная сборка — Jinja.
+
+R11, 2026-10-13: Python-ветка получила первую подтверждённую development-пару
+[Jinja](paired-jinja-v1.md): MarkupSafe 3.0.4 согласован source/installed/reference,
+но root version отсутствует в reference. Python accuracy по-прежнему не измерена;
+новые ранги/проценты не назначаются. Runtime 0.6.0 не менялся.
