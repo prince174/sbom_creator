@@ -110,3 +110,8 @@ R11, 2026-10-13: Python-ветка получила первую подтвер�
 [Jinja](paired-jinja-v1.md): MarkupSafe 3.0.4 согласован source/installed/reference,
 но root version отсутствует в reference. Python accuracy по-прежнему не измерена;
 новые ранги/проценты не назначаются. Runtime 0.6.0 не менялся.
+
+R12, 2026-10-13: Python P1.0 декларационного подхода реализован только как
+эксперимент. [Jinja development](python-p1-development-v1.md): TP=1 FP=0 FN=0,
+1/1 версий совпала; holdout ещё не оценён, root-version accuracy null.
+Это не новая общая оценка сервиса и не основание повысить ранг среди 5 решений.

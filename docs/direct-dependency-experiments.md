@@ -229,3 +229,17 @@
 - Следующее: Syft installed metadata evidence и отдельный Python-прототип;
   static unconditional dependencies, не исполнять setup.py/host markers.
 - [Протокол](paired-jinja-v1.md), [проверка](paired-jinja-v1.json).
+
+## R12 — Python P1.0 development, 2026-10-13
+
+- Начало: main aaddd9f, чистое дерево, benchmark-процессов нет.
+- Syft сохраняет Requires-Dist и METADATA paths. P1 связывает static безусловное
+  source requirement с installed root declaration и пакетом в том же окружении.
+- Jinja development: TP=1 FP=0 FN=0, version MarkupSafe 3.0.4 совпала. Это не
+  доказательство общей Python accuracy; root version reference отсутствует/null.
+- 11 tests + Ruff; R11 revalidation passed. Runtime 0.6.0 и inventory неизменны.
+- Ограничения: нет markers/extras/URLs/prerelease/dynamic dependencies; UNKNOWN,
+  нет host evaluation. Metadata path, не host-specific sitePackagesRootPath.
+- P1 frozen SHA в отчёте. Следующее: paired Flask/Packaging из исходного holdout,
+  no tuning; сохранить ограничения nonblind R1/R2 и честно считать UNKNOWN/FN.
+- [Протокол](python-p1-development-v1.md), [результат](python-p1-development-v1.json).
