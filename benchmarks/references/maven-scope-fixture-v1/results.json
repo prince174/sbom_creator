@@ -1,0 +1,95 @@
+{
+  "experiment": "R29",
+  "synthetic": true,
+  "runtime_changed": false,
+  "results": [
+    {
+      "case": "inherited",
+      "prediction": {
+        "status": "STATIC_MODEL_CANDIDATES",
+        "rows": [
+          {
+            "coordinate": [
+              "org.apache.commons",
+              "commons-lang3",
+              "3.17.0"
+            ],
+            "scope": "provided",
+            "owner_module": "child/pom.xml",
+            "management_pom": "pom.xml",
+            "status": "STATIC_MODEL_CANDIDATE",
+            "direct_edge_proven": false
+          }
+        ],
+        "effective_model_proven": false,
+        "limitation": "No settings/CLI/extensions/plugin effects; inherited declarations unsupported"
+      },
+      "effective_fields": [
+        [
+          "commons-lang3",
+          "3.17.0",
+          "provided"
+        ]
+      ],
+      "cyclonedx_direct": [
+        "pkg:maven/org.apache.commons/commons-lang3@3.17.0?type=jar"
+      ],
+      "profile_flags": ""
+    },
+    {
+      "case": "override",
+      "prediction": {
+        "status": "STATIC_MODEL_CANDIDATES",
+        "rows": [
+          {
+            "coordinate": [
+              "org.apache.commons",
+              "commons-lang3",
+              "3.17.0"
+            ],
+            "scope": "runtime",
+            "owner_module": "child/pom.xml",
+            "management_pom": "pom.xml",
+            "status": "STATIC_MODEL_CANDIDATE",
+            "direct_edge_proven": false
+          }
+        ],
+        "effective_model_proven": false,
+        "limitation": "No settings/CLI/extensions/plugin effects; inherited declarations unsupported"
+      },
+      "effective_fields": [
+        [
+          "commons-lang3",
+          "3.17.0",
+          "runtime"
+        ]
+      ],
+      "cyclonedx_direct": [
+        "pkg:maven/org.apache.commons/commons-lang3@3.17.0?type=jar"
+      ],
+      "profile_flags": ""
+    },
+    {
+      "case": "profile",
+      "prediction": {
+        "status": "UNKNOWN",
+        "reason": "profile_declaration_impact",
+        "rows": []
+      },
+      "effective_fields": [
+        [
+          "commons-lang3",
+          "3.17.0",
+          "test"
+        ]
+      ],
+      "cyclonedx_direct": [
+        "pkg:maven/org.apache.commons/commons-lang3@3.17.0?type=jar"
+      ],
+      "profile_flags": "-Pswitch"
+    }
+  ],
+  "image_pair_evaluated": false,
+  "direct_accuracy": null,
+  "reason": "Build-model counterexamples only; no analyzer image replay"
+}

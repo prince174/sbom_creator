@@ -462,3 +462,16 @@
 - Следующее: controlled Maven parent/override/profile-scope fixture + actual
   CDX/effective POM comparison до принятия direct classifier.
 - [Протокол](java-local-management-v1.md), [данные](java-local-management-v1.json).
+
+## R29 — built scope counterexamples, 2026-10-14
+
+- Main06fdbfd clean, benchmark нет.3synthetic fixtures реально package+CDX2.9.3
+  и effective POM на pinned Maven image, предсказание до oracle.
+- Parent provided и child runtime совпали. Активный profile даёт test,
+  prototype сохраняет UNKNOWN. CDX имеет одно ребро во всех3 при includeTestScope.
+- SHA/scope/root graph/3schemas revalidation и Ruff passed. Runtime неизменен.
+  Не3новых real projects, image replay не делался, direct metrics null.
+- Lifecycle plugin versions записаны в effective POM, отдельно recipe не pinned.
+- Следующее: frozen J1 candidate pipeline +2paired Java development coverage,
+  не скрывать UNKNOWN remote parents/profiles.
+- [Протокол](maven-scope-fixture-v1.md), [данные](maven-scope-fixture-v1.json).
