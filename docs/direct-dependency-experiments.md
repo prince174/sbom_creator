@@ -437,3 +437,16 @@
   Runtime0.7.0 не изменён, direct accuracy не измерена, holdout не использован.
 - Следующее: J1 owner/GAV на парном Gson, bounded local model без oracle input.
 - [Протокол](paired-gson-v1.md), [результат](paired-gson-v1.json).
+
+## R27 — Gson owner/GAV evidence, 2026-10-14
+
+- Main4e1ab73 clean, активных benchmark нет. Новый этап J1 в benchmarks.
+- Source declaration + module location + dependency-of + unique image GAV:
+  Gson2.11.0/error_prone_annotations2.27.0 CORROBORATED_CANDIDATE.
+- Direct/scope/build-use не доказаны.3test declarations UNKNOWN на этапе
+  identity evidence, их отсутствие не считается runtime FN. Oracle graph не читался.
+-8unit cases, Ruff, R26 hash/tree/OCI/JAR/native/3schema revalidation passed.
+  Runtime/эталоны/места топ5 неизменны, direct metrics null.
+- Следующее: bounded local dependencyManagement/declarations merge;
+  scope/owner сравнивать с reference только после prediction.
+- [Протокол](java-gav-evidence-v1.md), [данные](java-gav-evidence-v1.json).
