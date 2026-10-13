@@ -1,0 +1,80 @@
+{
+  "experiment": "R17",
+  "runtime_changed": false,
+  "accuracy_improvement_claimed": false,
+  "adoption": "experimental only; not integrated",
+  "boundary_sha256": "3eac382cc86b7a6ebc9086f032ac892ae2b01d4c32210078cb643e2e4417e35a",
+  "rows": [
+    {
+      "project": "jinja",
+      "receipt_sha256": "3100a6d6488a34e7d75129cd3ce799bc4148707efaca57a8cca9e880640a3534",
+      "prediction_identical": true,
+      "status": "evaluated",
+      "reason": null,
+      "seconds": 0.000788999954238534,
+      "peak_resources": null,
+      "direct": 1,
+      "unknown": 0
+    },
+    {
+      "project": "flask",
+      "receipt_sha256": "7517a5e66e61b58a0a35c60dafce01f0a36db499abf4e2af3bf5a5abefe82f8b",
+      "prediction_identical": true,
+      "status": "evaluated",
+      "reason": null,
+      "seconds": 0.0013885002117604017,
+      "peak_resources": null,
+      "direct": 5,
+      "unknown": 1,
+      "control": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "declaration_coverage": 0.8333333333333334,
+        "reference_root_version": "3.1.0"
+      }
+    },
+    {
+      "project": "packaging",
+      "receipt_sha256": "5934328123c178f6e45dfe72a1c4e95821775c38c210b964f1d4ce08d0a82bf4",
+      "prediction_identical": true,
+      "status": "evaluated",
+      "reason": null,
+      "seconds": 0.000510800164192915,
+      "peak_resources": null,
+      "direct": 0,
+      "unknown": 0,
+      "control": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "declaration_coverage": null,
+        "reference_root_version": null
+      }
+    },
+    {
+      "project": "httpx",
+      "receipt_sha256": "77b154df72fb6a80b5371ee20ca28d65fdc6567c146e00324e17be9269d32444",
+      "prediction_identical": true,
+      "status": "evaluated",
+      "reason": null,
+      "seconds": 0.0012477000709623098,
+      "peak_resources": null,
+      "direct": 4,
+      "unknown": 0,
+      "control": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "declaration_coverage": 1.0,
+        "reference_root_version": null
+      }
+    }
+  ],
+  "limitations": [
+    "Existing control replay, not new blind sample",
+    "No preparse Syft JSON budget here",
+    "Windows symlink creation test skipped",
+    "No full memory/CPU benchmark"
+  ]
+}

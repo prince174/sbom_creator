@@ -300,3 +300,16 @@
 - Следующее: ограниченная проекция полей P1 с equivalence/ambiguity tests,
   отдельно контракт размера Syft; не подгонять общий лимит к контролю.
 - [Протокол](python-p1-boundary-v1.md), [данные](python-p1-boundary-v1.json).
+
+## R17 — ограниченная проекция P1, 2026-10-13
+
+- Main72c9774, чистое дерево, benchmark нет. Лимиты R16 не увеличивались;
+  бюджет применяется к полям, читаемым frozen P1/guard, все кандидаты/ID сохранены.
+- Replay4пар полностью равен guarded P1: Jinja1DIRECT, Flask5+UNKNOWN1,
+  Packaging0, HTTPX4. Контроль TP9 FP0 FN0 восстановлен относительно отвергнутого
+  R16; относительно исходного P1 accuracy не выросла. Runtime неизменен.
+- 57tests+1Windows symlink skip, Ruff, hashes/paired control3schemas passed.
+- Ограничение: это parsed-object projection, не preparse Syft JSON limit;
+  peak resources не измерены. Не объявлять production-ready.
+- Следующее: аудит acquisition/parser контракта размера Syft, затем integration.
+- [Протокол](python-p1-projection-v1.md), [данные](python-p1-projection-v1.json).
