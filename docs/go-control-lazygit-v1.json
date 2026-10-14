@@ -1,0 +1,211 @@
+{
+  "experiment": "R44",
+  "partition": "fixed holdout, not blind",
+  "prediction": {
+    "status": "STATIC_IMPORT_CANDIDATES",
+    "modules": [
+      [
+        "github.com/adrg/xdg",
+        "v0.4.0"
+      ],
+      [
+        "github.com/atotto/clipboard",
+        "v0.1.4"
+      ],
+      [
+        "github.com/aybabtme/humanlog",
+        "v0.4.1"
+      ],
+      [
+        "github.com/cloudfoundry/jibber_jabber",
+        "v0.0.0-20151120183258-bcc4c8345a21"
+      ],
+      [
+        "github.com/creack/pty",
+        "v1.1.11"
+      ],
+      [
+        "github.com/gdamore/tcell/v2",
+        "v2.7.4"
+      ],
+      [
+        "github.com/go-errors/errors",
+        "v1.5.1"
+      ],
+      [
+        "github.com/gookit/color",
+        "v1.4.2"
+      ],
+      [
+        "github.com/imdario/mergo",
+        "v0.3.11"
+      ],
+      [
+        "github.com/integrii/flaggy",
+        "v1.4.0"
+      ],
+      [
+        "github.com/jesseduffield/generics",
+        "v0.0.0-20220320043834-727e535cbe68"
+      ],
+      [
+        "github.com/jesseduffield/go-git/v5",
+        "v5.1.2-0.20221018185014-fdd53fef665d"
+      ],
+      [
+        "github.com/jesseduffield/gocui",
+        "v0.3.1-0.20240906064314-bfab49c720d7"
+      ],
+      [
+        "github.com/jesseduffield/kill",
+        "v0.0.0-20220618033138-bfbe04675d10"
+      ],
+      [
+        "github.com/jesseduffield/lazycore",
+        "v0.0.0-20221012050358-03d2e40243c5"
+      ],
+      [
+        "github.com/jesseduffield/minimal/gitignore",
+        "v0.3.3-0.20211018110810-9cde264e6b1e"
+      ],
+      [
+        "github.com/kardianos/osext",
+        "v0.0.0-20190222173326-2bc1f35cddc0"
+      ],
+      [
+        "github.com/karimkhaleel/jsonschema",
+        "v0.0.0-20231001195015-d933f0d94ea3"
+      ],
+      [
+        "github.com/kyokomi/emoji/v2",
+        "v2.2.8"
+      ],
+      [
+        "github.com/lucasb-eyer/go-colorful",
+        "v1.2.0"
+      ],
+      [
+        "github.com/mattn/go-runewidth",
+        "v0.0.16"
+      ],
+      [
+        "github.com/mgutz/str",
+        "v1.2.0"
+      ],
+      [
+        "github.com/sahilm/fuzzy",
+        "v0.1.0"
+      ],
+      [
+        "github.com/samber/lo",
+        "v1.31.0"
+      ],
+      [
+        "github.com/sasha-s/go-deadlock",
+        "v0.3.1"
+      ],
+      [
+        "github.com/sirupsen/logrus",
+        "v1.4.2"
+      ],
+      [
+        "github.com/spf13/afero",
+        "v1.9.5"
+      ],
+      [
+        "github.com/spkg/bom",
+        "v0.0.0-20160624110644-59b7046e48ad"
+      ],
+      [
+        "github.com/stefanhaller/git-todo-parser",
+        "v0.0.7-0.20240406123903-fd957137b6e2"
+      ],
+      [
+        "golang.org/x/exp",
+        "v0.0.0-20220318154914-8dddf5d87bd8"
+      ],
+      [
+        "golang.org/x/sync",
+        "v0.8.0"
+      ],
+      [
+        "gopkg.in/ozeidan/fuzzy-patricia.v3",
+        "v3.0.0"
+      ],
+      [
+        "gopkg.in/yaml.v3",
+        "v3.0.1"
+      ]
+    ],
+    "visited_source_packages": [
+      ".",
+      "pkg/app",
+      "pkg/app/daemon",
+      "pkg/app/types",
+      "pkg/commands",
+      "pkg/commands/git_commands",
+      "pkg/commands/git_config",
+      "pkg/commands/hosting_service",
+      "pkg/commands/models",
+      "pkg/commands/oscommands",
+      "pkg/commands/patch",
+      "pkg/commands/types/enums",
+      "pkg/common",
+      "pkg/config",
+      "pkg/constants",
+      "pkg/env",
+      "pkg/gui",
+      "pkg/gui/context",
+      "pkg/gui/context/traits",
+      "pkg/gui/controllers",
+      "pkg/gui/controllers/helpers",
+      "pkg/gui/filetree",
+      "pkg/gui/keybindings",
+      "pkg/gui/mergeconflicts",
+      "pkg/gui/modes/cherrypicking",
+      "pkg/gui/modes/diffing",
+      "pkg/gui/modes/filtering",
+      "pkg/gui/modes/marked_base_commit",
+      "pkg/gui/patch_exploring",
+      "pkg/gui/popup",
+      "pkg/gui/presentation",
+      "pkg/gui/presentation/authors",
+      "pkg/gui/presentation/graph",
+      "pkg/gui/presentation/icons",
+      "pkg/gui/services/custom_commands",
+      "pkg/gui/status",
+      "pkg/gui/style",
+      "pkg/gui/types",
+      "pkg/i18n",
+      "pkg/integration/components",
+      "pkg/integration/types",
+      "pkg/logs",
+      "pkg/logs/tail",
+      "pkg/snake",
+      "pkg/tasks",
+      "pkg/theme",
+      "pkg/updates",
+      "pkg/utils",
+      "pkg/utils/yaml_utils"
+    ],
+    "direct_edge_proven": false,
+    "limitation": "Standard imports assumed by path shape; limited build context and single module"
+  },
+  "native_selected_main_edges": 33,
+  "cdx_module_root_edges": 34,
+  "candidate_tp": 33,
+  "candidate_fp": 0,
+  "reference_edges_without_candidate": 0,
+  "candidate_recall": 1.0,
+  "candidate_precision": 1.0,
+  "runtime_changed": false,
+  "frozen_rules_changed": false,
+  "receipt_sha256": "018ddd199db86d14b849178c82eb7bce1175a39f0723c81acab638ccef0b6153",
+  "module_root_edges_without_candidate": [
+    [
+      "github.com/xo/terminfo",
+      "v0.0.0-20210125001918-ca9a967f8778"
+    ]
+  ],
+  "replay_hashes_schemas_verified": true
+}

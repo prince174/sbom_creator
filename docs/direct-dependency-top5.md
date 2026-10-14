@@ -222,3 +222,11 @@ R31 не подтверждают direct runtime accuracy. Фильтр не п�
 но пропускает1module-declared edge в synthetic CDX из-за более узкого scope.
 Primary direct accuracy не заявляется, runtime unchanged. Frozen доcontrol.
 [Протокол](go-g2-imports-v1.md).
+
+### 2026-10-14 — R44, frozen Go positive control
+
+G2 на fixedholdout Lazygit: native selected-main TP33FP0FN0,versions33/33.
+Это experimental main-import graph; CDXmodule-root34 имеет1scope difference.
+Production0.7.0 unchanged, место не назначено. Emptyholdout HttprobeFP0,
+его precision/recallnull не добавляются к положительным метрикам.
+[Протокол](go-control-lazygit-v1.md).

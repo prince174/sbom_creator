@@ -650,3 +650,17 @@
 - Следующее: positivecontrol доG2acceptance либо Rust/Ruby pairedcorpus;
   никаких правил поholdout не менять.
 - [Протокол](go-control-httprobe-v1.md), [данные](go-control-httprobe-v1.json).
+
+## R44 — positive fixed Go control, 2026-10-14
+
+- Mainff8ea90 clean, benchmark нет. Fixedholdout lazygit,6frozenSHA verified
+  beforecontents. Go1.24.13 pinned/linuxamd64/CGO0/vendor/CDX1.12 build.
+- Native selectedmain33, G2matches33FP0FN0,versions33/33. CDXmodule-root34,
+  xoterminfo scope difference1. Не100%primaryprojectgraph, runtimeunchanged.
+- Initialmetadata go list -m all failedvendor; mainmodulelisting only заменён,
+  fullpackages/binarymetadata retained. No classifier/sourcechanges.
+- Fullreplay/hash/binary/cleancommit/OCI/4schemas+13Go tests+Ruff passed.
+  Verifier tuple/JSONlist comparison normalized. Pair63/OS0/full63 inventory.
+- Следующее: G2production guard/payload/multilayer/helperdelivery design,
+  module/main отдельно; Rust/Ruby расширять без тюнинга наcontrol.
+- [Протокол](go-control-lazygit-v1.md), [данные](go-control-lazygit-v1.json).

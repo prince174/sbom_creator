@@ -1,0 +1,7 @@
+{
+	"Path": "github.com/jesseduffield/lazygit",
+	"Main": true,
+	"Dir": "/src",
+	"GoMod": "/src/go.mod",
+	"GoVersion": "1.22"
+}
