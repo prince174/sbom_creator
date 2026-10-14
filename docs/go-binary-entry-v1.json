@@ -1,0 +1,36 @@
+{
+  "experiment": "R41",
+  "rows": [
+    {
+      "project": "paired-hey-v1",
+      "entry_import_path": "github.com/rakyll/hey",
+      "main_module": "github.com/rakyll/hey",
+      "source_directory_candidate": ".",
+      "binary_sha256": "8ebf15a3aa82f0080f3f2ddde5fe616a008c4fbdcff5cef48adaa3038c4a433d",
+      "image_binding": {
+        "index_digest": "sha256:0b1a9eddacc2b79b1aea12cdb87a8ccd8a4b3ca235216e257856882a2eb1bd26",
+        "platform_manifest_digest": "sha256:c2c81d46ec66e03c77d855447cdbfdea9ea1b1063720b6f28de288be4ad3433a",
+        "config_digest": "sha256:bc37d447975c6aaf076e7ae2663ca805fd0d0c71f04ad0581588a86f8a7e32dc"
+      },
+      "binary_commit": "af177063f85bd935c55f1f2ee59c2898d9654f82"
+    },
+    {
+      "project": "go-multimain-r39",
+      "entry_import_path": "github.com/rakyll/hey",
+      "main_module": "github.com/rakyll/hey",
+      "source_directory_candidate": ".",
+      "binary_sha256": "4930c3348dc6f23852399c25344b3add069d57a9f573f41cfa09e60b53215dda",
+      "image_binding": {
+        "index_digest": "sha256:35dbe9501b4e4aee24fce727aec946f3992e0351dcbbea5ac0748b6f3d78c363",
+        "platform_manifest_digest": "sha256:eee565592bb5790e88a2c194bf62ab6ca895b9e7108704a54845dd906f48e099",
+        "config_digest": "sha256:c59900b0a05fad8cf3c09694d3aa0a5197ef5b1251ae37152b15ce70a1f1323f"
+      },
+      "binary_commit": "fdd5b9f1f43b4a549a1eb3e2da2fd7fe664a462c"
+    }
+  ],
+  "helper_sha256": "3f1aaa4161684d89ca5b094b494555225f37ed9c33764aacaca161810fc33e06",
+  "helper_source_sha256": "9f58baa9a1059d2be8d782b4fe8520b29d821a4d0fbfca960c85160e3c55d0fc",
+  "runtime_changed": false,
+  "direct_accuracy": null,
+  "limitation": "Entry selection only; one-layer bounded fixture reader, no import graph or runtime integration"
+}

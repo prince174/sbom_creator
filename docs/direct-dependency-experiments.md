@@ -612,3 +612,16 @@
 - Следующее: binary payload debug/buildinfo.Path какexistingimageinput,
   неreferencehint; затемsourceimportgraph. Helper пока толькоbenchmark.
 - [Протокол](go-main-selection-v1.md), [данные](go-main-selection-v1.json).
+
+## R41 — binary entry from image payload, 2026-10-14
+
+- Main8e216ef clean, benchmark нет. ExternalGo debug/buildinfo reader noexecution.
+- OCI1layer bounded hashchecked payload→entry Path/mainmodule. Hey иmultimain
+  entryroot., снимаетR40ambiguity безreferencehint. Cleancommit checks passed.
+-2realpayload reads+invalidbinary rejection+Ruff passed. Rootmanifest fieldname
+  поправлено platform_manifest_digest. Layerhash/size/entry/binary budgets added.
+- Runtime unchanged, directgraphnotimplemented. Singlelayeronly, general malformed
+  inputs/whiteouts unsupported. SHAhelper/source/binary inreport.
+- Следующее: AST import traversal fromentry/platformcontext, rootmodule only,
+  test/othermain excluded; unsupportedUNKNOWN.
+- [Протокол](go-binary-entry-v1.md), [данные](go-binary-entry-v1.json).
