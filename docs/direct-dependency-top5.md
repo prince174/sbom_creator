@@ -208,3 +208,10 @@ Gson2.11.0 → error_prone_annotations2.27.0 подтверждены package/CD
 Commons Text UNKNOWN, лишних кандидатов0. Это не direct accuracy и не основание
 для места в рейтинге. Production0.7.0 неизменён.
 [Протокол и ограничения](java-j1-candidates-v1.md).
+
+### 2026-10-14 — R32, отрицательный результат Syft scope adapter
+
+На3сборочных synthetic cases фильтр R31 ошибочно сохраняет inherited provided
+и profile test как runtime candidates: raw scope absent. Поэтому2/2GAVсовпадения
+R31 не подтверждают direct runtime accuracy. Фильтр не принят, места не назначены.
+[Контрпримеры](syft-scope-counterexamples-v1.md).

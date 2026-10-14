@@ -499,3 +499,15 @@
 - Следующее: source Syft на R29 inherited/override/profile synthetic builds,
   проверить риск адаптера на известном build scope.
 - [Протокол](syft-java-source-baseline-v1.md), [данные](syft-java-source-baseline-v1.json).
+
+## R32 — negative scope-filter experiment, 2026-10-14
+
+- Main9372597 clean, активных benchmark нет. Syft1.51.1 source scan3R29fixtures.
+- Inherited provided и active profile test имеют raw scope absent; R31adapter
+  оставляет обоих. Runtime override сохраняется корректно.2контрпримера.
+- Простой explicit-scope filter отклонён для runtime: GAV-match не даёт scope.
+  Не общая accuracy Syft; выборка синтетическая, целевая. Runtime unchanged.
+- Catalogs отдельно frozen, hashes в report; R29hash/scope/CDX verifier и Ruff passed.
+- Следующее: независимый конкурент или paired coverage другого языка;
+  J1 не ослаблять до absent scope=compile.
+- [Протокол](syft-scope-counterexamples-v1.md), [данные](syft-scope-counterexamples-v1.json).
