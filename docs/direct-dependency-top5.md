@@ -215,3 +215,10 @@ Commons Text UNKNOWN, лишних кандидатов0. Это не direct acc
 и profile test как runtime candidates: raw scope absent. Поэтому2/2GAVсовпадения
 R31 не подтверждают direct runtime accuracy. Фильтр не принят, места не назначены.
 [Контрпримеры](syft-scope-counterexamples-v1.md).
+
+### 2026-10-14 — R42, Go experimental G2
+
+На Hey+synthetic G2 удалил1лишний selected-main candidate относительноG1,
+но пропускает1module-declared edge в synthetic CDX из-за более узкого scope.
+Primary direct accuracy не заявляется, runtime unchanged. Frozen доcontrol.
+[Протокол](go-g2-imports-v1.md).

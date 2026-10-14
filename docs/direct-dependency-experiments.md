@@ -625,3 +625,15 @@
 - Следующее: AST import traversal fromentry/platformcontext, rootmodule only,
   test/othermain excluded; unsupportedUNKNOWN.
 - [Протокол](go-binary-entry-v1.md), [данные](go-binary-entry-v1.json).
+
+## R42 — G2 source import traversal, 2026-10-14
+
+- Main8c89515 clean, benchmark нет. ASTindeximports +binaryentry+binarymodules.
+- Hey иsynthetic выбранныеmain: G2native matches1+1,extra0,missing0.
+  G1syntheticextra1 устранён. Но CDXmodule-root2 vsG2main1 →modulemissing1.
+- Не primaryaccuracyimprovement: scope различен, independentcontrol пока нет.
+  Runtime unchanged; G2 frozen6files hashes beforecontrol.
+-13G1/G2unit tests+actualparserbuild+2replay+Ruff passed. No new projectbuild.
+- Следующее: независимая paired control до тюнинга, module/main метрики отдельно;
+  корпуса Rust/Ruby ещё требуют paired references.
+- [Протокол](go-g2-imports-v1.md), [данные](go-g2-imports-v1.json).
