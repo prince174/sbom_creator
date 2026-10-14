@@ -664,3 +664,16 @@
 - Следующее: G2production guard/payload/multilayer/helperdelivery design,
   module/main отдельно; Rust/Ruby расширять без тюнинга наcontrol.
 - [Протокол](go-control-lazygit-v1.md), [данные](go-control-lazygit-v1.json).
+
+## R45 — Syft Go payload acquisition bridge, 2026-10-15
+
+- Maine35bf82 clean, benchmark нет. Productionalready SyftFiles content reader,
+  но binarypaths нетвglobs. Experimental singleexactpath config, runtimeunchanged.
+- Hey11.7MB/Lazygit29.3MB payload SHA match, packageinventory/edges unchanged.
+  PrivateJSON15.6/39.1MB under64MiB, payloadlimit32MiB.
+-2layeroverwrite image returnsnewbinary, notstale; graphunchanged.3scancomparison
+  +Ruff passed. Registry/deletions/manybinaryaggregateguards ещёнепроверены.
+- No project builds/new directmetrics. FrozenG2notchanged; этоacquisitioncheck.
+- Следующее: deletion/oversize/registryidentity +helperdelivery beforeintegration.
+- [Протокол](syft-go-payload-v1.md), [основной](syft-go-payload-v1.json),
+  [overlay](syft-go-overlay-v1.json).
