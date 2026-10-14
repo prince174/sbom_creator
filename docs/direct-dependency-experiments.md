@@ -637,3 +637,16 @@
 - Следующее: независимая paired control до тюнинга, module/main метрики отдельно;
   корпуса Rust/Ruby ещё требуют paired references.
 - [Протокол](go-g2-imports-v1.md), [данные](go-g2-imports-v1.json).
+
+## R43 — fixed Go empty control, 2026-10-14
+
+- Mainbd91b59 clean, benchmark нет. G2freeze6SHA checked before selection;
+  fixedholdout go-httprobe, notblindedR1R2 known. Selection saved beforecontents.
+- Paired Go1.24.13/CDX1.12 build, nativegraph0/CDXdirect0/G2zero. FP0,
+  precision/recallnull: emptycontrol не positiveaccuracy gain.
+- Firstharness failed on omittedcomponents emptyCDX. Benchmark-only getdefault[]
+  fixed; G2unchanged. Pair2/OS0/full2 presence, not2directdeps.
+- Freeze/hash/tree/OCI/4schemas/R36regression/Ruff passed. Runtime unchanged.
+- Следующее: positivecontrol доG2acceptance либо Rust/Ruby pairedcorpus;
+  никаких правил поholdout не менять.
+- [Протокол](go-control-httprobe-v1.md), [данные](go-control-httprobe-v1.json).

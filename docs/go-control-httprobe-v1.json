@@ -1,0 +1,24 @@
+{
+  "experiment": "R43",
+  "partition": "fixed holdout, not blinded R1/R2 were previously inspected",
+  "project": "go-httprobe",
+  "prediction": {
+    "status": "STATIC_IMPORT_CANDIDATES",
+    "modules": [],
+    "visited_source_packages": [
+      "."
+    ],
+    "direct_edge_proven": false,
+    "limitation": "Standard imports assumed by path shape; limited build context and single module"
+  },
+  "reference_main_direct": [],
+  "candidate_tp": 0,
+  "candidate_fp": 0,
+  "candidate_fn": 0,
+  "precision": null,
+  "recall": null,
+  "binary_sha256": "1b4cfd7b0bffbc16fbe3f16926d52c1d893c2f73fb4d4fb20c673a211d7e4f3f",
+  "runtime_changed": false,
+  "reason": "Empty external-dependency control; only absence of invented edges tested",
+  "receipt_sha256": "5b58b66cb5b13c0771223376d4f1bc6893bc077fb91065e332be53ae2a3697eb"
+}

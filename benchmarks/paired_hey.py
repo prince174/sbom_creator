@@ -41,7 +41,7 @@ def main(*, project_id='go-hey', experiment='R36', recipe_path=None):
     bom = json.loads((OUT / 'sbom.json').read_bytes())
     validate_cyclonedx(bom)
     refs = shared.root_dependencies(bom)
-    direct = [c['purl'] for c in bom['components'] if c['bom-ref'] in refs]
+    direct = [c['purl'] for c in bom.get('components', []) if c['bom-ref'] in refs]
     runtime = (WORK / 'runtime.id').read_text().strip()
     archive = WORK / 'image.tar'
     if not archive.exists():
