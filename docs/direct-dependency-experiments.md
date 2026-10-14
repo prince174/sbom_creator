@@ -487,3 +487,15 @@
 - Следующее: inherited declarations development case и source-only конкурент
   на тех же парах; holdout не расходовать на тюнинг.
 - [Протокол](java-j1-candidates-v1.md), [данные](java-j1-candidates-v1.json).
+
+## R31 — Syft source graph baseline, 2026-10-14
+
+- Maince520cb clean, benchmark нет. Saved Syft1.51.1 catalogs,2Java dev pairs.
+- Raw edges17:2reference GAV matches,15test вне runtime reference (не ошибки).
+- Explicit-scope adapter оставляет2/2matches, но оба raw scope absent.
+  J1R30 candidate coverage1/2; разные гарантии, superiority не доказано.
+- Unit+Ruff passed, hashes checked. Runtime/refs неизменны; Syft строка топ5
+  дополнена фактическим сравнением, без места/direct metrics.
+- Следующее: source Syft на R29 inherited/override/profile synthetic builds,
+  проверить риск адаптера на известном build scope.
+- [Протокол](syft-java-source-baseline-v1.md), [данные](syft-java-source-baseline-v1.json).
