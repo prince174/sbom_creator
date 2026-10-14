@@ -550,3 +550,17 @@
 - Следующее: независимая paired выборка следующего языка; Java adoption пока
   неизвестные профили не разрешены доказуемо.
 - [Протокол](trivy-profile-v1.md), [данные](trivy-profile-v1.json).
+
+## R36 — paired Go hey, 2026-10-14
+
+- Main4e36853 clean, benchmark нет. Development go-hey clean exactcommit.
+- Go1.24.13 pinned image; generator1.12.0 officialbinary SHA verified.
+  go build + appCDX + native package/module lists + binary build info.
+- Первая generation без.git упала; повтор с.git/buildvcs true прошёл,
+  failedrecipe/log сохранены. Native directx/net, transitivex/text в binary.
+- Binary tree builder/runtime равен, OCI/config/Syft binding passed;
+  final4/OS0/full4/INCLUDE4. Presence inventory не directaccuracy.
+- Repeat hashes/nativeimports/binarymodules/OCI/3schemas и Ruff passed.
+  Runtime0.7.0 unchanged, direct metrics null. Execution/peakresources не измерены.
+- Следующее: G1 root go.mod/import +binarymetadata; tags/replaces/workspace UNKNOWN.
+- [Протокол](paired-hey-v1.md), [данные](paired-hey-v1.json).
