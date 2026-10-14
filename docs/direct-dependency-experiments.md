@@ -688,3 +688,18 @@
 - Следующее: registry/auth/digestpinning, aggregatebudget/helperdelivery/guard
   передG2integration; frozencontrolrulesunchanged.
 - [Протокол](syft-go-payload-failures-v1.md), [данные](syft-go-payload-failures-v1.json).
+
+## R47 — aggregate Go payload budget, 2026-10-15
+
+- Main20ca1fc clean before experiment; no duplicate benchmark running.
+- Metadata preflight: total decoded payload <=32MiB, literal unique targets,
+  regular files, conservative base64/JSON estimate within64MiB output cap.
+- Actual scratch image: Hey11,718,317 + Lazygit29,263,807 bytes. Singles pass;
+  combined40,982,124 returns whole UNKNOWN before any content scan. No silent
+  target truncation; unknown dependency count null.
+- Eight pytest cases, Ruff and actual metadata scan passed. Parsed metadata
+  memory is not bounded by this preflight; output estimate is not a RAM proof.
+- Negative acceptance result: tighter resource budget reduces multibinary
+  coverage. Keep experimental; no runtime adoption or directaccuracy claim.
+- Next: registry/auth/digestpinning and helperdelivery/productionguards.
+- [Protocol](go-payload-aggregate-v1.md), [data](go-payload-aggregate-v1.json).

@@ -1,0 +1,34 @@
+{
+  "experiment": "R47",
+  "single_target_plans": [
+    {
+      "status": "PLANNED",
+      "paths": [
+        "/application/hey"
+      ],
+      "decoded_bytes": 11718317,
+      "base64_bytes": 15624424,
+      "estimated_output_bytes": 19904444
+    },
+    {
+      "status": "PLANNED",
+      "paths": [
+        "/application/lazygit"
+      ],
+      "decoded_bytes": 29263807,
+      "base64_bytes": 39018412,
+      "estimated_output_bytes": 43298432
+    }
+  ],
+  "combined_plan": {
+    "status": "UNKNOWN",
+    "reason": "aggregate_binary_budget",
+    "paths": [],
+    "unknown_count": null
+  },
+  "image_config_digest": "sha256:c15b7599adc6c9843f2749ef2b35293e196d1a94439848e3ee3a1cea5b2960d4",
+  "content_scans_started_for_combined": 0,
+  "runtime_changed": false,
+  "direct_accuracy": null,
+  "limitation": "Tighter resource bound makes this multibinary case wholly UNKNOWN; coverage tradeoff, not an accuracy improvement"
+}
