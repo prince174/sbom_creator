@@ -1,0 +1,138 @@
+{
+  "experiment": "R30",
+  "partition": "two development pairs, not holdout",
+  "rows": [
+    {
+      "project": "gson",
+      "receipt_sha256": "f707ff95692c21942c94d3ce0ac521bc6936a0aac578d7edf660862c32d35798",
+      "prediction": {
+        "status": "EXPERIMENTAL_CANDIDATES",
+        "candidates": [
+          {
+            "owner": [
+              "com.google.code.gson",
+              "gson",
+              "2.11.0"
+            ],
+            "dependency": [
+              "com.google.errorprone",
+              "error_prone_annotations",
+              "2.27.0"
+            ],
+            "scope": "compile",
+            "evidence": {
+              "status": "CORROBORATED_CANDIDATE",
+              "source_owner": "b4e45e86ff800da9",
+              "source_dependency": "8f7af927fdd0c1ff",
+              "image_owner": "102fb2a34e6f3b2e",
+              "image_dependency": "6173ecff6cb2069e",
+              "owner_gav": [
+                "com.google.code.gson",
+                "gson",
+                "2.11.0"
+              ],
+              "dependency_gav": [
+                "com.google.errorprone",
+                "error_prone_annotations",
+                "2.27.0"
+              ],
+              "module": "gson/pom.xml",
+              "direct_edge_proven": false,
+              "effective_scope": null,
+              "build_usage_proven": false
+            },
+            "direct_edge_proven": false
+          }
+        ],
+        "unknown_count": 0,
+        "static_model": {
+          "status": "STATIC_MODEL_CANDIDATES",
+          "rows": [
+            {
+              "coordinate": [
+                "com.google.errorprone",
+                "error_prone_annotations",
+                "2.27.0"
+              ],
+              "scope": "compile",
+              "owner_module": "gson/pom.xml",
+              "management_pom": null,
+              "status": "STATIC_MODEL_CANDIDATE",
+              "direct_edge_proven": false
+            },
+            {
+              "coordinate": [
+                "junit",
+                "junit",
+                "4.13.2"
+              ],
+              "scope": "test",
+              "owner_module": "gson/pom.xml",
+              "management_pom": "pom.xml",
+              "status": "STATIC_MODEL_CANDIDATE",
+              "direct_edge_proven": false
+            },
+            {
+              "coordinate": [
+                "com.google.truth",
+                "truth",
+                "1.4.2"
+              ],
+              "scope": "test",
+              "owner_module": "gson/pom.xml",
+              "management_pom": "pom.xml",
+              "status": "STATIC_MODEL_CANDIDATE",
+              "direct_edge_proven": false
+            },
+            {
+              "coordinate": [
+                "com.google.guava",
+                "guava-testlib",
+                "33.1.0-jre"
+              ],
+              "scope": "test",
+              "owner_module": "gson/pom.xml",
+              "management_pom": null,
+              "status": "STATIC_MODEL_CANDIDATE",
+              "direct_edge_proven": false
+            }
+          ],
+          "effective_model_proven": false,
+          "limitation": "No settings/CLI/extensions/plugin effects; inherited declarations unsupported"
+        },
+        "limitation": "Settings/CLI/plugin effects unresolved; not production direct edges"
+      },
+      "candidate_tp": 1,
+      "candidate_fp": 0,
+      "reference_edges_without_candidate": 0,
+      "reference_edges": 1
+    },
+    {
+      "project": "commons-text",
+      "receipt_sha256": "89f493f12c81df91eb2b26d812dfc03ec221027ca13ef04646a0de629ada4dd7",
+      "prediction": {
+        "status": "UNKNOWN",
+        "reason": "outside_repository",
+        "candidates": [],
+        "unknown_count": null
+      },
+      "candidate_tp": 0,
+      "candidate_fp": 0,
+      "reference_edges_without_candidate": 1,
+      "reference_edges": 1
+    }
+  ],
+  "candidate_reference_coverage": 0.5,
+  "direct_precision": null,
+  "direct_recall": null,
+  "runtime_changed": false,
+  "frozen_source_hashes": {
+    "java_j1_candidates.py": "dc7795ac68f74be1ca73adcd4646da186faee70f561fae3e6c523b009251ca24",
+    "java_local_management.py": "f17edb844943054560f4c6a2e01a07cf1a4872b2b2f8b12f995173df0b65fa65",
+    "java_local_parent.py": "82ce66305a9214c339379ff44ed712fa8ebcb1dd2c540a2d6a2e7b85a299b581",
+    "java_profile_impact.py": "eede84435158be55a7449bbe5c9b679097b57ea88d0494d2cefb9a5faa7be890",
+    "java_gav_evidence.py": "3d2daca7128ad3c3eb8af975d39bfa3ff17890e0fb804ae80ed1f22a29066ea3",
+    "audit_maven_declarations.py": "ea520b42a9ba87eda54a336c5b5fab8944817e13b0e056b9dcad0775a45248bd"
+  },
+  "limitation": "Provisional candidate agreement only. Whole-model UNKNOWN is not zero unknowns."
+}

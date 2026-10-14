@@ -475,3 +475,15 @@
 - Следующее: frozen J1 candidate pipeline +2paired Java development coverage,
   не скрывать UNKNOWN remote parents/profiles.
 - [Протокол](maven-scope-fixture-v1.md), [данные](maven-scope-fixture-v1.json).
+
+## R30 — combined J1 candidate baseline, 2026-10-14
+
+- Main2b0a4fc clean, benchmark нет. Объединены model/owner/sourceedge/imageGAV.
+-2paired development: Gson candidate1/reference1; Commons Text0/1,
+  whole-model UNKNOWN из-за внешнего parent, unknown_count=null.
+- Candidate reference coverage50%, extra0; не direct precision/recall.
+  Snapshot6source hashes сохранён. Production/reference неизменны.
+-51Java tests и Ruff passed. До принятия нужны независимые случаи и контроль.
+- Следующее: inherited declarations development case и source-only конкурент
+  на тех же парах; holdout не расходовать на тюнинг.
+- [Протокол](java-j1-candidates-v1.md), [данные](java-j1-candidates-v1.json).

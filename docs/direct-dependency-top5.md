@@ -201,3 +201,10 @@ owner/scope анализ. Direct метрики не изменились, ме�
 Gson2.11.0 → error_prone_annotations2.27.0 подтверждены package/CDX/native/JAR.
 Это расширение эталонов; direct accuracy Java ещё не измерена, места неизменны.
 [Протокол](paired-gson-v1.md).
+
+### 2026-10-14 — R30, Java J1 candidate baseline
+
+На двух paired development проектах покрыт1из2эталонных рёбер кандидатами;
+Commons Text UNKNOWN, лишних кандидатов0. Это не direct accuracy и не основание
+для места в рейтинге. Production0.7.0 неизменён.
+[Протокол и ограничения](java-j1-candidates-v1.md).
