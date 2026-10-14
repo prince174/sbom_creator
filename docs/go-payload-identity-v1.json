@@ -1,0 +1,20 @@
+{
+  "experiment": "R48",
+  "rows": [
+    {
+      "project": "paired-hey-v1",
+      "rejected": true,
+      "payload_returned": false,
+      "reason": "Rescanned image differs"
+    },
+    {
+      "project": "paired-lazygit-v1",
+      "rejected": true,
+      "payload_returned": false,
+      "reason": "Rescanned image differs"
+    }
+  ],
+  "runtime_changed": false,
+  "registry_tested": false,
+  "direct_accuracy": null
+}

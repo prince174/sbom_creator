@@ -703,3 +703,15 @@
   coverage. Keep experimental; no runtime adoption or directaccuracy claim.
 - Next: registry/auth/digestpinning and helperdelivery/productionguards.
 - [Protocol](go-payload-aggregate-v1.md), [data](go-payload-aggregate-v1.json).
+
+## R48 — reject mismatched payload identity, 2026-10-15
+
+- Main247add5 clean, no benchmark running. Continued acquisition guard checks.
+- Real Syft rescans of Hey/Lazygit with deliberately wrong expected config SHA
+  both rejected before returning payload. R45 retains matching-identity positives.
+- Targeted scanner tests and Ruff passed. Registry digest unit tests use mocked
+  metadata; no live registry/authentication claim. Official Syft source docs
+  confirm explicit registry backend exists, experimental bridge remains archive-only.
+- No runtime/classifier change or direct accuracy gain. Next: controlled registry
+  fixture, auth isolation and mutable-tag/digest identity, then helper delivery.
+- [Protocol](go-payload-identity-v1.md), [data](go-payload-identity-v1.json).
