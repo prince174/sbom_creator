@@ -1,0 +1,29 @@
+{
+  "experiment": "R37",
+  "partition": "hey development only",
+  "prediction": {
+    "status": "EXPERIMENTAL_CANDIDATES",
+    "candidates": [
+      {
+        "owner_id": "8dbf9543b8908aa0",
+        "dependency_id": "dc1eb05620f4ded6",
+        "name": "golang.org/x/net",
+        "version": "v0.0.0-20181017193950-04a2e542c03f",
+        "indirect": false,
+        "status": "DECLARED_BINARY_CANDIDATE",
+        "direct_edge_proven": false
+      }
+    ],
+    "unknown_count": 0,
+    "excluded_indirect": 1,
+    "limitation": "Import graph/build tags/scopes unknown; go.mod indirect flag alone is not build directness proof"
+  },
+  "candidate_matches": 1,
+  "extra_candidates": 0,
+  "reference_edges_without_candidate": 0,
+  "direct_precision": null,
+  "direct_recall": null,
+  "runtime_changed": false,
+  "classifier_sha256": "56057652c621387f24d96cca78be5ae7c9c5db7395f88368da2093c668e01a1e",
+  "limitation": "One declared binary candidate; import directness not proven from analyzer inputs"
+}

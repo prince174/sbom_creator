@@ -564,3 +564,15 @@
   Runtime0.7.0 unchanged, direct metrics null. Execution/peakresources не измерены.
 - Следующее: G1 root go.mod/import +binarymetadata; tags/replaces/workspace UNKNOWN.
 - [Протокол](paired-hey-v1.md), [данные](paired-hey-v1.json).
+
+## R37 — Go G1 declared binary candidates, 2026-10-14
+
+- Main6893508 clean, benchmark нет. SourceSyft не имеет owner/directgraph;
+  imageedges содержит transitive x/text иstdlib вместе с x/net.
+- G1 exactcommit/cleanbuild/mainModule/binarylocation +literal go.mod:
+  x/net candidate1 совпал с reference, indirectx/text excluded. Не direct proof.
+-10unit cases+Ruff passed. Inputs/ref hashes checked afterprediction.
+  Runtime/refs unchanged, direct metrics null, workspace/tags/imports unresolved.
+- Следующее: non-indirect dependency из другого main/test/tag, присутствующая
+  вbinary транзитивно; проверить FP до принятия G1.
+- [Протокол](go-g1-candidates-v1.md), [данные](go-g1-candidates-v1.json).
