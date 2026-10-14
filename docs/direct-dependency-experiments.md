@@ -677,3 +677,14 @@
 - Следующее: deletion/oversize/registryidentity +helperdelivery beforeintegration.
 - [Протокол](syft-go-payload-v1.md), [основной](syft-go-payload-v1.json),
   [overlay](syft-go-overlay-v1.json).
+
+## R46 — payload deletion/size boundaries, 2026-10-15
+
+- Main6cef34b clean, benchmark нет. External deleted/missing/oversize fixtures.
+- Actual image application/.wh.app проверен; finalSyft pathabsent, oldbytes
+  не возвращены. Missingpath и32MiB+1regularfile тоже unavailable.
+-3failurechecks повторены сwhiteoutaudit, Ruff passed. Runtime unchanged,
+  no directaccuracy improvement, no userapplication execution.
+- Следующее: registry/auth/digestpinning, aggregatebudget/helperdelivery/guard
+  передG2integration; frozencontrolrulesunchanged.
+- [Протокол](syft-go-payload-failures-v1.md), [данные](syft-go-payload-failures-v1.json).
