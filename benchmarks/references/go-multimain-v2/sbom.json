@@ -1,0 +1,113 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:eff03f8b-cc73-496f-ad92-33dcc8a9d25d",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-14T13:53:22Z",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-gomod",
+        "version": "v1.12.0",
+        "hashes": [
+          {
+            "alg": "MD5",
+            "content": "006b4568e9ddaba70c37d1472aafcf62"
+          },
+          {
+            "alg": "SHA-1",
+            "content": "50e4be634b73cd25b8beb9f1c6c6bc86fce5e0f1"
+          },
+          {
+            "alg": "SHA-256",
+            "content": "2238adac4b5e36926d388461e72ef1ae8caaf4ac11c221ac5fab4e76d7a29861"
+          },
+          {
+            "alg": "SHA-384",
+            "content": "e59914e5ac784513fb6a1ee9ea3a4fe33d783fdbeacefeeec75425eba770e2536165d0c16c7b6d30bbbd102ab1887741"
+          },
+          {
+            "alg": "SHA-512",
+            "content": "d9176bf0c6900b8f597058748051c18906f6f07d60eec1fcec0d440a95a3566e266a26e7c32e2a0899e05c1a213ff579408dcb075ab90391ff62951ae75c35bc"
+          }
+        ],
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-gomod",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ],
+    "component": {
+      "bom-ref": "pkg:golang/github.com/rakyll/hey@v0.1.5-0.20200806023257-af177063f85b?type=module",
+      "type": "application",
+      "name": "github.com/rakyll/hey",
+      "version": "v0.1.5-0.20200806023257-af177063f85b",
+      "purl": "pkg:golang/github.com/rakyll/hey@v0.1.5-0.20200806023257-af177063f85b?goarch=amd64\u0026goos=linux\u0026type=module",
+      "externalReferences": [
+        {
+          "url": "https://github.com/rakyll/hey",
+          "type": "vcs"
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:gomod:build:env:CGO_ENABLED",
+          "value": "0"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOARCH",
+          "value": "amd64"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOOS",
+          "value": "linux"
+        },
+        {
+          "name": "cdx:gomod:build:env:GOVERSION",
+          "value": "go1.24.13"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/golang.org/x/net@v0.0.0-20181017193950-04a2e542c03f?type=module",
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.0.0-20181017193950-04a2e542c03f",
+      "scope": "required",
+      "purl": "pkg:golang/golang.org/x/net@v0.0.0-20181017193950-04a2e542c03f?goarch=amd64\u0026goos=linux\u0026type=module"
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.0?type=module",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.0",
+      "scope": "required",
+      "purl": "pkg:golang/golang.org/x/text@v0.3.0?goarch=amd64\u0026goos=linux\u0026type=module"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:golang/github.com/rakyll/hey@v0.1.5-0.20200806023257-af177063f85b?type=module",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/net@v0.0.0-20181017193950-04a2e542c03f?type=module",
+        "pkg:golang/golang.org/x/text@v0.3.0?type=module"
+      ]
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/net@v0.0.0-20181017193950-04a2e542c03f?type=module"
+    },
+    {
+      "ref": "pkg:golang/golang.org/x/text@v0.3.0?type=module"
+    }
+  ]
+}

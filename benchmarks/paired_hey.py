@@ -17,7 +17,7 @@ OUT = ROOT / 'benchmarks/references/paired-hey-v1'
 COMMIT = 'af177063f85bd935c55f1f2ee59c2898d9654f82'
 
 
-def main(*, project_id='go-hey', experiment='R36'):
+def main(*, project_id='go-hey', experiment='R36', recipe_path=None):
     if (OUT / 'receipt.json').exists():
         raise FileExistsError('Immutable pair exists')
     source = WORK / 'src'
@@ -25,7 +25,7 @@ def main(*, project_id='go-hey', experiment='R36'):
         raise ValueError('Wrong commit')
     if subprocess.check_output(['git', 'status', '--porcelain'], cwd=source, text=True).strip():
         raise ValueError('Dirty source')
-    if shared.sha(WORK / 'Dockerfile') != shared.sha(ROOT / 'benchmarks/paired-hey.Dockerfile'):
+    if shared.sha(WORK / 'Dockerfile') != shared.sha(recipe_path or ROOT / 'benchmarks/paired-hey.Dockerfile'):
         raise ValueError('Recipe changed')
     OUT.mkdir(parents=True, exist_ok=True)
     shared.WORK = WORK

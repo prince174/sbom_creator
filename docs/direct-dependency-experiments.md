@@ -589,3 +589,15 @@
 - Следующее: новый namespace Linuxcleancheckout/gitstatus beforebuild;
   module-direct и selected-main-import-direct размечать отдельно.
 - [Протокол](go-multimain-v1.md), [аудит](go-multimain-audit-v1.json).
+
+## R39 — clean multimain repeat, 2026-10-14
+
+- Mainfb18413 clean, benchmark нет. Новая пара samefixturecommit с Linux
+  normalization и statusbefore/after; binarymodifiedfalse/exactrevision.
+- G1 candidates2 совпали сmoduleCDXdirect2, selectedmainnativeimports1:
+  x/text extra дляselected-main. Это граница G1, не общийprecision.
+- Tree/OCI/config/hash/4schemas/prediction revalidation и Ruff passed.
+  Runtime0.7.0 unchanged; R38неперезаписан. Dirtycauseнеизолирована.
+- Следующее: G2 static import subset сbinaryGOOS/GOARCH/tags; ownermodule/main
+  отдельно, unsupportedUNKNOWN; Hey+counterexample затемcontrol.
+- [Протокол](go-multimain-v2.md), [данные](go-multimain-v2.json).
