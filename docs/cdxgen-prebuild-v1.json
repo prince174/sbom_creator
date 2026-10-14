@@ -1,0 +1,34 @@
+{
+  "experiment": "R33",
+  "competitor": "cdxgen13.4.0",
+  "commit": "b84786dec587a20deb605192087388fc0604b12d",
+  "node_version": "v24.19.0",
+  "node_sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "lock_sha256": "9bd46bc2e1bddb1b9d7548e2c0144e97f5ab5e8face0d195e4edcd487f56575f",
+  "mode": "java/pre-build/no-install-deps/no-resolve-class/no-recurse, Node child denied",
+  "rows": [
+    {
+      "project": "gson",
+      "source_commit": "828a97be0f8d58108b140b77df8dc76b657f4a87",
+      "exit_code": 1,
+      "child_process_denied": true,
+      "sbom_generated": false,
+      "callsite": "lib/cli/jvmBom.js:816",
+      "direct_precision": null,
+      "direct_recall": null
+    },
+    {
+      "project": "commons-text",
+      "source_commit": "9430a2848a2593ee3bce32750305c28c549cabf8",
+      "exit_code": 1,
+      "child_process_denied": true,
+      "sbom_generated": false,
+      "callsite": "lib/cli/jvmBom.js:816",
+      "direct_precision": null,
+      "direct_recall": null
+    }
+  ],
+  "runtime_changed": false,
+  "holdout_read": false,
+  "limitation": "Mode compatibility failure; no accuracy measurement, not a test of build-enabled cdxgen"
+}

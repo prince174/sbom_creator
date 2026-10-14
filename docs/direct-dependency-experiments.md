@@ -511,3 +511,16 @@
 - Следующее: независимый конкурент или paired coverage другого языка;
   J1 не ослаблять до absent scope=compile.
 - [Протокол](syft-scope-counterexamples-v1.md), [данные](syft-scope-counterexamples-v1.json).
+
+## R33 — cdxgen pre-build compatibility, 2026-10-14
+
+- Mainaaa47ba clean, процессов benchmark нет. Pinned cdxgen13.4.0 b84786d.
+- Node24.19.0, pnpm12.10.1 frozen/ignore-scripts install; pnpm11 отклонён,
+  dlx12 native package missing; official Windows binary SHA512 verified.
+-2Java source-only pre-build scans с child denied завершились exit1, SBOMнет.
+  jvmBom.js816 вызывает Maven tree для parent. Clean-env repeat подтвердил.
+- Изолированный output/TEMP; initial fs-read/temp denials сохранены в логах.
+  Runtime/source неизменны, direct metrics null, не accuracy failure.
+- Ruff passed; топ5 cdxgen статус обновлён. Следующее: isolated build-enabled
+  comparison либо Trivy source baseline; не приписывать failed run precision0.
+- [Протокол](cdxgen-prebuild-v1.md), [данные](cdxgen-prebuild-v1.json).
