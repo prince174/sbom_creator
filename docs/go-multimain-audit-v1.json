@@ -1,0 +1,27 @@
+{
+  "experiment": "R38",
+  "native_main_import_modules": [
+    [
+      "golang.org/x/net",
+      "v0.0.0-20181017193950-04a2e542c03f"
+    ]
+  ],
+  "cyclonedx_root_edges": [
+    [
+      "golang.org/x/net",
+      "v0.0.0-20181017193950-04a2e542c03f"
+    ],
+    [
+      "golang.org/x/text",
+      "v0.3.0"
+    ]
+  ],
+  "label_agreement": false,
+  "binary_vcs_modified": true,
+  "eligible_for_direct_accuracy": false,
+  "classifier_outcome": "UNKNOWN/unconfirmed_commit",
+  "runtime_changed": false,
+  "direct_precision": null,
+  "direct_recall": null,
+  "reason": "Module-root declarations and selected-main package imports differ; dirty binary build"
+}

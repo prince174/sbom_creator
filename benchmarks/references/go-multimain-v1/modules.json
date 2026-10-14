@@ -1,0 +1,25 @@
+{
+	"Path": "github.com/rakyll/hey",
+	"Main": true,
+	"Dir": "/src",
+	"GoMod": "/src/go.mod",
+	"GoVersion": "1.13"
+}
+{
+	"Path": "golang.org/x/net",
+	"Version": "v0.0.0-20181017193950-04a2e542c03f",
+	"Time": "2018-10-17T19:39:50Z",
+	"Dir": "/go/pkg/mod/golang.org/x/net@v0.0.0-20181017193950-04a2e542c03f",
+	"GoMod": "/go/pkg/mod/cache/download/golang.org/x/net/@v/v0.0.0-20181017193950-04a2e542c03f.mod",
+	"Sum": "h1:4pRM7zYwpBjCnfA1jRmhItLxYJkaEnsmuAcRtA347DA=",
+	"GoModSum": "h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4="
+}
+{
+	"Path": "golang.org/x/text",
+	"Version": "v0.3.0",
+	"Time": "2017-12-14T13:08:43Z",
+	"Dir": "/go/pkg/mod/golang.org/x/text@v0.3.0",
+	"GoMod": "/go/pkg/mod/cache/download/golang.org/x/text/@v/v0.3.0.mod",
+	"Sum": "h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=",
+	"GoModSum": "h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ="
+}

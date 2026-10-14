@@ -17,7 +17,7 @@ OUT = ROOT / 'benchmarks/references/paired-hey-v1'
 COMMIT = 'af177063f85bd935c55f1f2ee59c2898d9654f82'
 
 
-def main():
+def main(*, project_id='go-hey', experiment='R36'):
     if (OUT / 'receipt.json').exists():
         raise FileExistsError('Immutable pair exists')
     source = WORK / 'src'
@@ -60,7 +60,7 @@ def main():
                        (WORK / 'generator-provenance.json', 'generator-provenance.json')]:
         shutil.copyfile(path, OUT / name)
     atomic_json(OUT / 'application-tree.json', tree)
-    atomic_json(OUT / 'receipt.json', {'experiment': 'R36', 'project': 'go-hey', 'commit': COMMIT,
+    atomic_json(OUT / 'receipt.json', {'experiment': experiment, 'project': project_id, 'commit': COMMIT,
                 'image_binding': binding, 'artifact_tree_equal': True, 'reference_only_for_evaluation': True,
                 'reference_hashes': {p.name: shared.sha(p) for p in OUT.iterdir() if p.is_file()},
                 'outputs': {p.name: shared.sha(p) for p in analysis.iterdir() if p.is_file()},

@@ -576,3 +576,16 @@
 - Следующее: non-indirect dependency из другого main/test/tag, присутствующая
   вbinary транзитивно; проверить FP до принятия G1.
 - [Протокол](go-g1-candidates-v1.md), [данные](go-g1-candidates-v1.json).
+
+## R38 — multimain negative labeling/build audit, 2026-10-14
+
+- Main4cd7dec clean, benchmark нет. Synthetichey othermain directlyimports x/text,
+  requireindirect removed; localfixturecommit, source derivative отдельно.
+- Native selectedmain directx/net; CDXrootmodule edgesx/net+x/text. Labelagreementfalse.
+- Binary vcs.modifiedtrue несмотря hostclean. G1 UNKNOWN/unconfirmedcommit,
+  FPне доказан; eligible_for_direct_accuracyfalse. Причинаdirtyне установлена.
+- Pairtree/binding/3schemas прошли, но этоpresencepair. Immutable failedlabels
+  сохранены, не groundtruth. R36repeat verifier+Ruff+hashaudit passed.
+- Следующее: новый namespace Linuxcleancheckout/gitstatus beforebuild;
+  module-direct и selected-main-import-direct размечать отдельно.
+- [Протокол](go-multimain-v1.md), [аудит](go-multimain-audit-v1.json).

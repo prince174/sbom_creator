@@ -1,0 +1,29 @@
+{
+  "experiment": "R38",
+  "synthetic": true,
+  "base_commit": "af177063f85bd935c55f1f2ee59c2898d9654f82",
+  "fixture_commit": "fdd5b9f1f43b4a549a1eb3e2da2fd7fe664a462c",
+  "prediction": {
+    "status": "UNKNOWN",
+    "reason": "unconfirmed_commit",
+    "candidates": [],
+    "unknown_count": null
+  },
+  "reference_direct": [
+    [
+      "golang.org/x/net",
+      "v0.0.0-20181017193950-04a2e542c03f"
+    ],
+    [
+      "golang.org/x/text",
+      "v0.3.0"
+    ]
+  ],
+  "candidate_extra": [],
+  "candidate_matches": 0,
+  "runtime_changed": false,
+  "direct_precision": null,
+  "direct_recall": null,
+  "receipt_sha256": "872c899860f6354941831e9685495808045e58e251fdc46323f1f9b2c1c897bd",
+  "reason": "One targeted multimain counterexample; not representative accuracy"
+}

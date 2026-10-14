@@ -1,0 +1,61 @@
+{
+  "experiment": "R38",
+  "project": "synthetic-hey-multimain",
+  "commit": "fdd5b9f1f43b4a549a1eb3e2da2fd7fe664a462c",
+  "image_binding": {
+    "index_digest": "sha256:71210c15f0f1bc5c458185ad4dbe5e6daccaa59918593e412c65335383672df3",
+    "platform_manifest_digest": "sha256:795d7bb54c8c4dc127b5dc67fb6f2feca9ad21c0c111930d917062fb1f020da3",
+    "config_digest": "sha256:e0bdecb018f0ff6872b8eea39763a476cd1e0032e09a6eeaca23bba691c05b43"
+  },
+  "artifact_tree_equal": true,
+  "reference_only_for_evaluation": true,
+  "reference_hashes": {
+    "application-tree.json": "83a1165736aae85de385bf6c9997ea6874e35afc9644a9a9c8ded789af7313c8",
+    "binary.sha256": "631b9f2143c282be7401636870ea2dfa88d6c5119b0f52fdf4b4a2c64bcf7597",
+    "build-info.txt": "f138d0a69f89dd05f5814b5354f314fd5cbde2998478693d438146a574fbb2c2",
+    "Dockerfile": "15c7af1cb8792d5e6e16b3b2989f0d2a11c6eb4a4bcd2d2d9216193fe9567a62",
+    "generator-provenance.json": "eb63a8d31107d6610b5eede2fd3374413ea0dd3ebc0d8062ca5654f0d4054615",
+    "go-version.txt": "07b0d66d21bcdfdc8456adcb17203f3af8656dc11549da62e6940f99b8d45444",
+    "go.mod": "3a17d7336e839a5c06ccafd105271b0412d713ac1c68d220967ab1ddf3f1bffb",
+    "modules.json": "82532441e0fff03548a257df959b0b0efee1ccf312e0010bc0ff2f22fb3e0e36",
+    "packages.json": "1d29a33fe22bda1e40c0435ae7b1c265db19266da9ce60f9fd5da4be63e31692",
+    "sbom.json": "38a6767415c69d7326a7d0cdeb7dc6dcdf620d4bf0262253090e839e8d1b5c15"
+  },
+  "outputs": {
+    "coverage.json": "4e3890c62dff0293d0fbeddf9d042790b9fb8834290221b8e417c0e34f131c80",
+    "decisions.json": "7c5c275dafc15dc354890ec5ffb6deeefc4034a8a95e485c49004eef658bb3ab",
+    "direct-dependencies.json": "c34127d92cc49b5c247ce9e3a0139a507b768a4f8d6ca1cb5bf171bc38a2e26c",
+    "final.cdx.json": "0e087f7695908c306296bb41ce0446beb9459e23c553b8a3afc9b941b5dd139d",
+    "full.cdx.json": "8e5b66eaba54324577e93bc177f0c183d9768a968d2f149589005e9ecd573018",
+    "image.syft.json": "45941e4244d9210b095373afb2b3a799f02c294e43ca66f424b4da7a1bf4111b",
+    "os.cdx.json": "7a521286851ea90311c090ffcdfe9336f41ed41b30a13aef9df7db5cf22d55cd",
+    "provenance.json": "dd3786cb8419ba13255763390238a4dbc7c5b7429fc5c47ca949815f076ed441",
+    "review.json": "cfeabbaec6cd25d5852272922b5059a44f45ae34a39a57d4edbc41de358f6e79",
+    "selected.syft.json": "45941e4244d9210b095373afb2b3a799f02c294e43ca66f424b4da7a1bf4111b",
+    "source.syft.json": "80cb0adec8d7bdb591eb3000493dfa14a1e727f073d101b04db31d894e361e08",
+    "summary.json": "fe36c27dc5c6ad8cfdd8418ac30e88123148ab30b926ce14d9b1c26fe8ca67ce"
+  },
+  "summary": {
+    "status": "succeeded",
+    "partial": false,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {},
+    "unknown_groups": {},
+    "source_count": 2,
+    "image_count": 4,
+    "selected_count": 4,
+    "final_count": 4,
+    "os_count": 0,
+    "full_count": 4,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.437
+  },
+  "direct_precision": null,
+  "direct_recall": null
+}
