@@ -537,3 +537,16 @@
 - ПервыйGson scan без disabletelemetry; протокол это фиксирует, остальные disabled.
 - Следующее: baseline runtime→profile test negativecase +independent Java control.
 - [Протокол](trivy-java-source-v1.md), [данные](trivy-java-source-v1.json).
+
+## R35 — Trivy profile counterexample, 2026-10-14
+
+- Main1a29ec8 clean, активных benchmark нет. Synthetic defaultcompile→profiletest.
+- Trivy source predicted1edge до oracle. Реальный package/CDX2.9.3 с-Pswitch:
+  effective scope test, includeTestScopefalse direct0.1runtime extra edge.
+- J1 UNKNOWN сохранился. Не общая accuracy и не новый realproject;
+  R34positive2edge metrics остаются ограниченной development оценкой.
+- Hash/Trivy1.7+reference1.6/schema/scope/graph/J1verification и Ruff passed.
+  Runtime/referenceprevious unchanged, top5Trivy limitation дополнена.
+- Следующее: независимая paired выборка следующего языка; Java adoption пока
+  неизвестные профили не разрешены доказуемо.
+- [Протокол](trivy-profile-v1.md), [данные](trivy-profile-v1.json).
