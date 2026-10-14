@@ -601,3 +601,14 @@
 - Следующее: G2 static import subset сbinaryGOOS/GOARCH/tags; ownermodule/main
   отдельно, unsupportedUNKNOWN; Hey+counterexample затемcontrol.
 - [Протокол](go-multimain-v2.md), [данные](go-multimain-v2.json).
+
+## R40 — G2 main selection stage, 2026-10-14
+
+- Mainded2676 clean, benchmark нет. Syft metadata не содержит mainpackagepath.
+- External Go1.24.13 AST/MatchFile helper, no projectexecution. Buildcontext
+  изimage, customtags/cgounsupported. Hey1maincandidate; multimain2→UNKNOWN.
+- Fixturecomments/OSfilename/tests/cgo filtering, actualhelperbuild и Ruff passed.
+  Directmetricsnull; coverage loss multi-main explicit, runtimeunchanged.
+- Следующее: binary payload debug/buildinfo.Path какexistingimageinput,
+  неreferencehint; затемsourceimportgraph. Helper пока толькоbenchmark.
+- [Протокол](go-main-selection-v1.md), [данные](go-main-selection-v1.json).
