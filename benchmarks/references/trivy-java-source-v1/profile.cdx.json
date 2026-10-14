@@ -1,0 +1,88 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:376d9d68-631a-41f3-b251-0d10c9a06d2f",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-14T08:46:00+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.75.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "04b90eae-b037-4d0d-a5d7-0b54d9693cdd",
+      "type": "application",
+      "name": "G:/code/sbom_creator/benchmarks/references/maven-scope-fixture-v1/profile/source/child",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "978acdf2-e87d-4b80-a8f3-876980ebcd14",
+      "type": "application",
+      "name": "pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/fixture/child@1",
+      "type": "library",
+      "group": "fixture",
+      "name": "child",
+      "version": "1",
+      "purl": "pkg:maven/fixture/child@1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "fixture:child:1::e6fc64fb"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "04b90eae-b037-4d0d-a5d7-0b54d9693cdd",
+      "dependsOn": [
+        "978acdf2-e87d-4b80-a8f3-876980ebcd14"
+      ]
+    },
+    {
+      "ref": "978acdf2-e87d-4b80-a8f3-876980ebcd14",
+      "dependsOn": [
+        "pkg:maven/fixture/child@1"
+      ]
+    },
+    {
+      "ref": "pkg:maven/fixture/child@1",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

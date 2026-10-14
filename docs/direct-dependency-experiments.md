@@ -524,3 +524,16 @@
 - Ruff passed; топ5 cdxgen статус обновлён. Следующее: isolated build-enabled
   comparison либо Trivy source baseline; не приписывать failed run precision0.
 - [Протокол](cdxgen-prebuild-v1.md), [данные](cdxgen-prebuild-v1.json).
+
+## R34 — Trivy Java source comparison, 2026-10-14
+
+- Main47bc776 clean, benchmark нет. Official Trivy0.75.0 Windows SHA verified.
+-2Java paired development source: TP2FP0FN0,versions2/2. Только2positiveedges,
+  network Maven metadata allowed, не superiority/6language accuracy.
+-3synthetic: provided excluded/runtime included/profile excluded. Последнее
+  не доказывает activation: inactiveprovided тоже исключён. Нужен counterexample.
+-5SBOM1.7 official schema validation, graph unit и Ruff passed. Source/runtime
+  неизменны, top5Trivy строка обновлена. Official schemas frozen с outputs.
+- ПервыйGson scan без disabletelemetry; протокол это фиксирует, остальные disabled.
+- Следующее: baseline runtime→profile test negativecase +independent Java control.
+- [Протокол](trivy-java-source-v1.md), [данные](trivy-java-source-v1.json).

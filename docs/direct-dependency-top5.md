@@ -8,8 +8,8 @@
 ## Таблица решений
 
 Обновление 2026-10-13: пять подходов в сравнении, но рейтинг не установлен.
-Измеренного победителя по прямым зависимостям пока нет; четыре кандидата не
-прошли сравнительный прогон. Обзор документации не является проверкой точности.
+Измеренного победителя по прямым зависимостям пока нет; полный сравнительный прогон по6языкам
+не завершён. Обзор документации не является проверкой точности.
 
 | Место | Решение | Precision / Recall / F1 прямых зависимостей | Плюсы | Минусы | Статус |
 |---|---|---|---|---|---|
@@ -17,7 +17,7 @@
 | — | SBOM Creator 0.7.0: npm H2.1 + Python P1, [R19](runtime-python-r19.md) | npm control: TP50 FP0 FN1, P100% / R98.04% / F199.01%; Python control: TP9 FP0 FN0, P/R/F1=100% на2положительных проектах | Владелец/декларация + установленный пакет; три inventory сохранены, без исполнения проекта | Python markers/extras/dynamic dependencies UNKNOWN; малая nonblind выборка; Java/Rust/Go/Ruby direct не измерены | JavaScript/Python интегрированы; [npm](runtime-npm-r19.json), [Python](runtime-python-r19.json); 2026-10-13 |
 | — | [Syft 1.51.1](https://github.com/anchore/syft), самостоятельный source/image baseline | Не измерены | Уже используемый каталогизатор; единый формат и scanner relationships | Сам по себе не гарантирует полноту графа direct/transitive; file ownership не равно dependency edge | 6 языков инвентаризируются в B0; [R31](syft-java-source-baseline-v1.md): source graph2Java development, filtered GAV2/2; effective scope UNKNOWN, direct accuracy не измерена |
 | — | [cdxgen](https://github.com/cdxgen/cdxgen/tree/b84786dec587a20deb605192087388fc0604b12d), HEAD обзора `b84786d` | Не измерены | CycloneDX из исходников и образов, несколько экосистем | Перед прогоном необходимо закрепить режим и проверить, какие внешние команды и установки он выполняет; нельзя молча дать ему больше входных данных | Кандидат; [R33](cdxgen-prebuild-v1.md):2Java pre-build запуска остановлены ChildProcess denied; accuracy не измерена, build-enabled режим не проверен |
-| — | [Trivy](https://github.com/aquasecurity/trivy/tree/8c0b1f0fe00f1227c8cd7c23fe906523da849d5a), HEAD обзора `8c0b1f0` | Не измерены | Парсеры manifest/lockfile и графы для поддерживаемых форматов; независимый кандидат | Граф зависит от языка и файлов: для Java есть эвристики, для некоторых Node lockfile недостаточно сведений | Кандидат; 6-языковая выборка не прогонялась; запусков 0 |
+| — | [Trivy0.75.0](https://github.com/aquasecurity/trivy/releases/tag/v0.75.0), [R34](trivy-java-source-v1.md) | Java development: TP2 FP0 FN0, P/R/F1=100%, версии2/2; только2рёбра | POM graph, разрешение local/remote Maven metadata; inherited provided исключён | Сеть к Maven repositories; activation profiles не доказана; малая development выборка | 2Java пары +3synthetic cases,5SBOM schema1.7 valid; другие языки и holdout ещё не сравнивались |
 
 Источники ограничений: [Syft cataloger capabilities](https://oss.anchore.com/docs/contributing/syft/),
 [Trivy Node.js](https://www.trivy.dev/docs/latest/guide/coverage/language/nodejs/),
