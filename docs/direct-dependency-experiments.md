@@ -999,3 +999,9 @@
   identities/versions independently from direct-edge metrics, not count equality.
 - Next: seven remaining Java pairs, then three-technique comparison.
 - [Pair](paired-commons-compress-v1.md).
+
+## R73 — Commons Lang Java pair, 2026-10-15
+
+- Exact-commit controlled Maven/CDX build, clean source, root graph agrees native/effective POM; empty runtime graph remains unscored.
+- Artifact tree, image binding and four schemas pass. Four Java pairs complete.
+- Next: Commons IO, then remaining Java pairs, component and direct comparisons separately.

@@ -1,0 +1,9 @@
+{
+  "groupId": "org.apache.commons",
+  "artifactId": "commons-lang3",
+  "version": "3.17.0",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false"
+}
