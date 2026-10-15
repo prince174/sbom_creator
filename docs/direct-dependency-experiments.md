@@ -838,3 +838,15 @@
 - SBOM provenance hash and Ruff passed. Runtime unchanged. Next: fresh fd pair,
   explicit target/features/profile and filtered metadata plus build artifacts.
 - [Protocol](rust-fd-scopes-v1.md), [data](rust-fd-scopes-v1.json).
+
+## R59 — Rust fd build checkpoint, 2026-10-15
+
+- Main78b99ee clean, no duplicate build running. Fresh pinned-base exact-commit
+  fd build/runtime stages completed in .work/paired-fd-v1; logs/IDs retained.
+- Explicit GNU Linux target/default features/debug/locked build. CDX0.5.9,
+  cargo-auditable0.6.6; filtered +unfiltered metadata and tool versions exported.
+- Actual generator help confirms default host target. Ruff passed; runtime
+  service unchanged. No paired receipt/accuracy claim yet.
+- Next: continue existing stage IDs, validate tree/archive/schema/edge scopes
+  and analyzer replay. Do not launch a duplicate build.
+- [Checkpoint](paired-fd-checkpoint-v1.md).
