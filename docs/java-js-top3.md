@@ -101,3 +101,5 @@ exact identities/versions, TP/FP/FN and count deltas are available.
 
 
 R88 expansion update (2026-10-16): [Javalin reactor evidence](java-js-expanded-results-v1.md) adds a real19-project build pair, but production service image scanning fails its64MiB output budget. No expanded-corpus winner or changed ranking is established; preserve this failure in coverage.
+
+R89 (2026-10-16): [local-archive metadata/evidence prototype](java-js-expanded-results-v1.md) bypasses Javalin's inline-output overflow with unchanged output/read limits. It is not registry-compatible and does not alter rankings: exact component P/R85.16% on8 agreeing development owners,6 scope-UNKNOWN owners,55 direct edges unmatched. No production integration.
