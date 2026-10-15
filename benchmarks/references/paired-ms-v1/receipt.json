@@ -1,0 +1,78 @@
+{
+  "experiment": "R5",
+  "project": "javascript-ms",
+  "commit": "1c6264b795492e8fdecbc82cb8802fcfbfc08d26",
+  "repository_url": "https://github.com/vercel/ms.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:2f01d867c33376508527a0e4fb9d8f56a6c05f6f1c38e693ec28a2575c131b1a",
+  "runtime_image": "sha256:2558470d5801cdca7d350e3aedb994a6714c015bca52890a31749a9f80e7c0ae",
+  "runtime_config_digest": "sha256:ffe81bd830cd2aad4ae6b98f50b0c0a2ebe207d932b4b7e42b001f30e7358ae5",
+  "archive_binding": {
+    "index_digest": "sha256:2558470d5801cdca7d350e3aedb994a6714c015bca52890a31749a9f80e7c0ae",
+    "platform_manifest_digest": "sha256:7e4287a61b978ac31193d670846b6c398bb8e53aef0e99eaa45381d28b5839db",
+    "config_digest": "sha256:ffe81bd830cd2aad4ae6b98f50b0c0a2ebe207d932b4b7e42b001f30e7358ae5",
+    "syft_archive_manifest_digest": "sha256:9b7295be8dbb500be619e8b5c116155fe66339e7df75f057e2361b2765b366bd",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 14,
+  "application_tree_sha256": "812f0e658efb84a396e1210468fb9a76e8a432739c9d4b368aa9625c65bfe6f7",
+  "reference_sha256": "ce0445cb944659d2f9be3a0d01a45a808dd9196585db4f05b699cfb261e3286a",
+  "package_lock_sha256": "6216b04f548010a16938f5f24e3071f9d75390e53606c258ce8c497a296d69ab",
+  "source_manifest_sha256": "1a6b4d9739790c0b94ab96c8cc0507e281c164c311ff4fbf5e57fb8d26290b40",
+  "recipe_sha256": "c94cbbc26ccc4badba9313d62fd916baba04b5abfc7385628ddb07afdd10d522",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope",
+  "declared_direct_count": 0,
+  "reference_root_edges": 0,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": 18.703,
+  "analysis_seconds": 15.125,
+  "timing_note": "Wall clock",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-ms-v1/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "CI_CONFIGURATION": 2
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "ci_configuration": 2
+    },
+    "source_count": 2,
+    "image_count": 292,
+    "selected_count": 288,
+    "final_count": 199,
+    "os_count": 89,
+    "full_count": 288,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 276,
+      "UNKNOWN": 6
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.141
+  },
+  "outputs": {
+    "final.cdx.json": "2a17989175282174bdc912745f977bd085ec02ff1a85367ce3ca45cbf62e2151",
+    "os.cdx.json": "f4d721997880cde0b5901e31e05c47fe4b9b420a3984bedb339daa0fb6d6d8bd",
+    "full.cdx.json": "2847faaa08f450e85264ffc819c553c0935a25d067e0fefe5d46ed69e2ad4506",
+    "source.syft.json": "bbb75568fccebb4664e577e7da44285f37ef9d7e9ef7809d76b3553561efc2a8",
+    "image.syft.json": "e16577c09a854485dde36ffac3266d6621836021a472b41d286f6d1e1fc8fb51",
+    "provenance.json": "1a94e2dfb8b0299637cccb0654901f8458297dbf069ee1717158ec2870c7100f"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier"
+}

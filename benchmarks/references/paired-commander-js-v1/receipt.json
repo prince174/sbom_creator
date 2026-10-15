@@ -1,0 +1,78 @@
+{
+  "experiment": "R5",
+  "project": "javascript-commander-js",
+  "commit": "e6f56c888c96d1339c2b974fee7e6ba4f2e3d218",
+  "repository_url": "https://github.com/tj/commander.js.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:1fa4a1f1064b8553f3a02249897265f64092e49875c28e6c5b7301ef2b1f6adb",
+  "runtime_image": "sha256:71ceac155e22701e792355d878ec452d8d37e243128fec74779eaa9c86bf00e1",
+  "runtime_config_digest": "sha256:2888309ab0bb9f90ffd74c8a48c672740cd57a53046faa77a52df56c1b5ec911",
+  "archive_binding": {
+    "index_digest": "sha256:71ceac155e22701e792355d878ec452d8d37e243128fec74779eaa9c86bf00e1",
+    "platform_manifest_digest": "sha256:87b9d62eb6239f293e9c6258a5b65bf4321e53b97b56c975fd8f1bfa125e1360",
+    "config_digest": "sha256:2888309ab0bb9f90ffd74c8a48c672740cd57a53046faa77a52df56c1b5ec911",
+    "syft_archive_manifest_digest": "sha256:b9709df7dfcd3d32901c2d7e9ebd1fd7690d764a2a665b0aec24504351e79056",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 250,
+  "application_tree_sha256": "d3d2f3b3c8f85503c2d2ac4e84fcea98d8a8abd7754f6d51613cf028707fa384",
+  "reference_sha256": "7ae7b1972b40be8df08521677827987c61e9ff2cc7287ad2bbd3e032487ccd6e",
+  "package_lock_sha256": "aa6f6ec42ef38d4d533e442274e3ae3f53f7c3e65e660050c4fc3d06f2b77331",
+  "source_manifest_sha256": "7c956844374e86a9686f2c6445e868a22f21c0c5cc836c6b5060bcc77a976c9d",
+  "recipe_sha256": "c94cbbc26ccc4badba9313d62fd916baba04b5abfc7385628ddb07afdd10d522",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope",
+  "declared_direct_count": 0,
+  "reference_root_edges": 0,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": 19.735,
+  "analysis_seconds": 16.204,
+  "timing_note": "Wall clock",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-commander-js-v1/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "CI_CONFIGURATION": 6
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "ci_configuration": 6
+    },
+    "source_count": 7,
+    "image_count": 292,
+    "selected_count": 288,
+    "final_count": 199,
+    "os_count": 89,
+    "full_count": 288,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 277,
+      "UNKNOWN": 10
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.516
+  },
+  "outputs": {
+    "final.cdx.json": "4bbf9c69745485b5ddfbcd5704a6cd6acee3ddf0d3b3fff80f032f7cd3bf7b04",
+    "os.cdx.json": "70049c91db56ac9ca22406e3484d4f2a98191d56b800ea3e1442b0e7ec4b4477",
+    "full.cdx.json": "8f825e8e30bb412c4bc1b49badc754aad33267d6d5081d5eff71c253c0dd41cc",
+    "source.syft.json": "345d3692ea8245171b3f2941b390c97ecaedb0021091d3bec787221181461e21",
+    "image.syft.json": "d7e4d4215476dfd7dd7d54042f3edd26bdad27b47a179c46cbab1a37201b78db",
+    "provenance.json": "0c45c64902521ae06cf72419a30f07cf46822a280111d554e55503ff620d9bde"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier"
+}

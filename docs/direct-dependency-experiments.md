@@ -977,3 +977,14 @@
 - Ruff passed. Eight JS/two Java pairs now complete. Next: ms/commander then
   Java expansion; workspace/optional/profile coverage tracked separately.
 - [Pair](paired-chalk-v1.md).
+
+## R71 — ten JavaScript reference pairs reached, 2026-10-15
+
+- Continued sequential ms/commander builds, both completed. Tree/config binding
+  and three schemas passed. Immutable receipts retained; no classifier changes.
+- Ten JS references now ready, Java remains2. Replay all ten uses saved R19
+  results for first six and current results for new four. ms direct evaluation
+  UNKNOWN, empty Chalk/Commander metrics null; no artificial accuracy gain.
+- Next: Java Commons Compress pair and eight remaining Java projects, explicit
+  workspace/optional/profile coverage; other languages deferred.
+- [Status](java-js-pair-status.md), [evaluations](java-js-pair-status.json).
