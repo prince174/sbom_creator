@@ -922,3 +922,14 @@
   then passed. No runtime change. Next: excess-edge scope audit/production modes
   and Java comparison, not Rust/Ruby expansion.
 - [Comparison](java-js-top3.md), raw results under results/npm-image-manifests-v1.
+
+## R66 — npm competitor scope normalization audit, 2026-10-15
+
+- Main7fe7bef clean, no duplicate running. All4 Trivy and49/52 cdxgen excess
+  edges map to dev-only root declarations. Raw production-scope mismatch is not
+  automatically wrong declaration discovery.
+- Manifest-only dev exclusion before oracle: Trivy51/0/0, cdxgen51/3/0; existing
+  H2.1 50/0/1. Preliminary ordering changes. Disclosed cases, no independent gain.
+- Evidence assertions/re-evaluation and Ruff pass; runtime unchanged. Next:
+  fresh Java/JS paired comparison and external reference-verification command.
+- [Evidence](npm-competitor-scopes-v1.md).

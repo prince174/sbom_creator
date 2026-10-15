@@ -1,5 +1,11 @@
 # Java / JavaScript: comparison of three techniques
 
+**R66 scope correction:** all4 Trivy excess edges and49/52 cdxgen excess edges
+are dev-only root declarations. An exploratory manifest-only scope adapter gives
+Trivy51/0/0, our saved H2.1 50/0/1, cdxgen51/3/0. This changes the preliminary
+ordering, but is not independent control proof. Raw results below remain valid
+for their unnormalized modes. [Evidence](npm-competitor-scopes-v1.md).
+
 ## R65: image manifest/lock variants, 2026-10-15
 
 Extracted root package.json and package-lock.json from the existing verified
