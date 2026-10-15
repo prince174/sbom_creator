@@ -1,0 +1,10 @@
+{
+  "owner": [
+    "commons-codec",
+    "commons-codec",
+    "1.17.1"
+  ],
+  "direct": [],
+  "scope": "compile/runtime; excludes test/provided/system",
+  "build_execution_of_each_dependency": "UNKNOWN"
+}

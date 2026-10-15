@@ -1,0 +1,9 @@
+{
+  "groupId": "commons-codec",
+  "artifactId": "commons-codec",
+  "version": "1.17.1",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false"
+}

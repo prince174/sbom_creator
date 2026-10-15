@@ -1019,3 +1019,7 @@
 - Equal-count mismatch/empty tests and Ruff pass. Next: finish Java pairs and
   compare identity resolvers against fixed references. Codec build already running.
 - [Baseline](project-components-baseline-v1.md).
+
+## R76 — Commons Codec Java pair, 2026-10-15
+
+- Exact-commit build/CDX/native/effective graph agreement; empty direct graph remains unscored. Tree/config binding and schemas pass. Six Java pairs complete. Next: Commons CSV.
