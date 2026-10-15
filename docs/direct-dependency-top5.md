@@ -257,3 +257,5 @@ R88 expansion update (2026-10-16): [Javalin reactor evidence](java-js-expanded-r
 
 
 R90 (2026-10-16): passive Trivy0.75.0 image mode with frozen Java DB improves exact component recognition on the same Javalin development image:128/0/0 vs Syft109/19/19 across8 scope-agreeing owners;6 owners remain scope UNKNOWN. Boot packaged comparison90/3/2 conservatively includes one packaging UNKNOWN among extras. This is a component-specific result, not a new direct-dependency rank or production acceptance. [Modes, resources and evidence](java-js-top3.md).
+
+R91 (2026-10-16): source+image integration is still experimental. Passive Trivy source owner candidates improve from42/0/13 to49/0/6 shipped direct edges on Javalin through an explicitly traced optional-declaration parser projection; recall89.09% is below target. POM containment extras remain separate, online metadata blocked by429, no runtime change or independent acceptance. [Evidence](java-js-top3.md).

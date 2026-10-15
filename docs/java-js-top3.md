@@ -119,3 +119,9 @@ exact identities/versions, TP/FP/FN and count deltas are available.
 R88 expansion update (2026-10-16): [Javalin reactor evidence](java-js-expanded-results-v1.md) adds a real19-project build pair, but production service image scanning fails its64MiB output budget. No expanded-corpus winner or changed ranking is established; preserve this failure in coverage.
 
 R89 (2026-10-16): [local-archive metadata/evidence prototype](java-js-expanded-results-v1.md) bypasses Javalin's inline-output overflow with unchanged output/read limits. It is not registry-compatible and does not alter rankings: exact component P/R85.16% on8 agreeing development owners,6 scope-UNKNOWN owners,55 direct edges unmatched. No production integration.
+
+## R91 — owner/direct graph experiment, 2026-10-16
+
+Same Javalin source commit, passive Trivy0.75.0 POM parsing, no Maven/project execution. Distinct POM-path wrappers bind owner refs despite repeated PURLs. Raw offline source:42/0/13 direct edges over14 shipped owners (P100%/R76.36%). Experimental unprofiled-root optional projection:49/0/6 (P100%/R89.09%, F194.23%). Thus the ready image engine's strong component scores do not yet solve direct dependencies. This source projection preserves the original checkout but changes parser input; its component/transitive graph must not be used as truth.4 non-shipped POM owners remain separately reported;18 module-containment extras are still unresolved in full source graph.
+
+[Raw and projected per-owner evidence](../benchmarks/results/trivy-reactor-source-optional-v1/evaluation.json), [candidate freeze](../benchmarks/results/trivy-reactor-source-optional-v1/candidate-freeze.json). Online metadata attempt returned Maven Central429, no score; backoff retained.29 tests and Ruff passed. No runtime integration or independent acceptance. Six unresolved managed versions remain misses, not image-based guesses.

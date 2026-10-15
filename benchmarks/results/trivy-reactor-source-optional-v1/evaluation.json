@@ -1,0 +1,797 @@
+{
+  "development_only": true,
+  "source_clean_verified": true,
+  "schemas_valid": true,
+  "reports": [
+    {
+      "mode": "raw_offline",
+      "rows": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "path": "javalin",
+          "shipped": true,
+          "direct": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 8,
+            "predicted": 5,
+            "reference": 13,
+            "precision": 1.0,
+            "recall": 0.38461538461538464,
+            "f1": 0.5555555555555556
+          },
+          "missing": [
+            "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+            "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+            "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+            "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+            "pkg:maven/com.google.code.gson/gson@2.14.0",
+            "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+            "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+            "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+          "path": "javalin-bom",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 1,
+            "reference": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "path": "javalin-bundle",
+          "shipped": true,
+          "direct": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 9,
+            "reference": 10,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526315
+          },
+          "missing": [
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "path": "javalin-testtools",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+          "path": "javalin-utils",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 10,
+            "fn": 0,
+            "predicted": 11,
+            "reference": 1,
+            "precision": 0.09090909090909091,
+            "recall": 1.0,
+            "f1": 0.16666666666666666
+          },
+          "missing": [],
+          "extra": [
+            "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT"
+          ],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "path": "javalin-ssl",
+          "shipped": true,
+          "direct": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 4,
+            "reference": 7,
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1": 0.7272727272727273
+          },
+          "missing": [
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+            "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "path": "javalin-micrometer",
+          "shipped": true,
+          "direct": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 3,
+            "reference": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "missing": [
+            "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "path": "jacoco-coverage-report",
+          "shipped": false,
+          "direct": {
+            "tp": 14,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 14,
+            "reference": 14,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-context-mock",
+          "shipped": true,
+          "direct": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 8,
+            "fn": 0,
+            "predicted": 9,
+            "reference": 1,
+            "precision": 0.1111111111111111,
+            "recall": 1.0,
+            "f1": 0.2
+          },
+          "missing": [],
+          "extra": [
+            "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT"
+          ],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        }
+      ],
+      "shipped_owners": 14,
+      "shipped_direct": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 13,
+        "precision": 1.0,
+        "recall": 0.7636363636363637,
+        "f1": 0.865979381443299
+      },
+      "all_module_direct": {
+        "tp": 59,
+        "fp": 18,
+        "fn": 13
+      }
+    },
+    {
+      "mode": "optional_projection_offline",
+      "rows": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "path": "javalin",
+          "shipped": true,
+          "direct": {
+            "tp": 11,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 11,
+            "reference": 13,
+            "precision": 1.0,
+            "recall": 0.8461538461538461,
+            "f1": 0.9166666666666666
+          },
+          "missing": [
+            "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+            "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+          "path": "javalin-bom",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 1,
+            "reference": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "path": "javalin-bundle",
+          "shipped": true,
+          "direct": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 9,
+            "reference": 10,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526315
+          },
+          "missing": [
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "path": "javalin-testtools",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+          "path": "javalin-utils",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 10,
+            "fn": 0,
+            "predicted": 11,
+            "reference": 1,
+            "precision": 0.09090909090909091,
+            "recall": 1.0,
+            "f1": 0.16666666666666666
+          },
+          "missing": [],
+          "extra": [
+            "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT"
+          ],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "path": "javalin-ssl",
+          "shipped": true,
+          "direct": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 4,
+            "reference": 7,
+            "precision": 1.0,
+            "recall": 0.5714285714285714,
+            "f1": 0.7272727272727273
+          },
+          "missing": [
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+            "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+            "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12"
+          ],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "path": "javalin-micrometer",
+          "shipped": true,
+          "direct": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 4,
+            "reference": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "path": "jacoco-coverage-report",
+          "shipped": false,
+          "direct": {
+            "tp": 14,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 14,
+            "reference": 14,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-context-mock",
+          "shipped": true,
+          "direct": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering",
+          "shipped": false,
+          "direct": {
+            "tp": 1,
+            "fp": 8,
+            "fn": 0,
+            "predicted": 9,
+            "reference": 1,
+            "precision": 0.1111111111111111,
+            "recall": 1.0,
+            "f1": 0.2
+          },
+          "missing": [],
+          "extra": [
+            "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+            "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT"
+          ],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+          "shipped": true,
+          "direct": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "missing": [],
+          "extra": [],
+          "unknown_targets": 0,
+          "status": "CANDIDATE"
+        }
+      ],
+      "shipped_owners": 14,
+      "shipped_direct": {
+        "tp": 49,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.8909090909090909,
+        "f1": 0.9423076923076923
+      },
+      "all_module_direct": {
+        "tp": 66,
+        "fp": 18,
+        "fn": 6
+      }
+    }
+  ],
+  "runtime_changed": false,
+  "limitation": "One disclosed development project. Source graphs do not prove activated production scope or runtime use. POM-only containment edges preserved as extras. Online projection failed Maven429; no score for failed scan. No holdout or acceptance claim."
+}
