@@ -757,3 +757,14 @@
 - Next: bounded invocation and unsupported-build guards before integration;
   keep module-root and selected-main metrics separate.
 - [Protocol](go-helper-delivery-v1.md), [data](go-helper-delivery-v1.json).
+
+## R52 — experimental G2 context gate, 2026-10-15
+
+- Main097b61e clean, no duplicate benchmark running. Frozen G2 files unchanged.
+- Separate pure eligibility gate rejects unsupported metadata before traversal;
+  includes duplicate settings and module-prefix collision/path traversal guards.
+- Actual Hey metadata positive +13 negative mutations pass. G1/G2 regression:
+  total27 tests, Ruff passed. Eligible does not mean proven direct dependency.
+- No runtime acceptance or accuracy claim; corpus coverage remains unmeasured.
+  Next: bounded invocation/hostile input checks and positive-control replay.
+- [Protocol](go-g2-context-v1.md).
