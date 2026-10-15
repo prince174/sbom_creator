@@ -1,0 +1,10 @@
+{
+  "owner": [
+    "commons-cli",
+    "commons-cli",
+    "1.9.0"
+  ],
+  "direct": [],
+  "scope": "compile/runtime; excludes test/provided/system",
+  "build_execution_of_each_dependency": "UNKNOWN"
+}

@@ -1035,3 +1035,8 @@
 ## R79 — SLF4J module Java pair, 2026-10-15
 
 - Exact-commit slf4j-api module in multi-module checkout built with CycloneDX makeBom; effective/native module owner agrees, direct runtime graph empty. Tree/config binding and schemas pass. Nine Java pairs complete. Next: Commons CLI.
+
+## R80 — ten Java reference pairs completed, 2026-10-15
+
+- Commons CLI exact-commit Maven/CDX pair verified; native/effective empty runtime root, tree/config binding and schemas pass.
+- Ten Java and ten JavaScript pairs now complete. Empty positive graphs do not inflate accuracy. Next: full20-pair technique comparison with component and direct scopes separate.

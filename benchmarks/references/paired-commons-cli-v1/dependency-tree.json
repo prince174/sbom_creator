@@ -1,0 +1,9 @@
+{
+  "groupId": "commons-cli",
+  "artifactId": "commons-cli",
+  "version": "1.9.0",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false"
+}
