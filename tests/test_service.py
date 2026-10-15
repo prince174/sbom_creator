@@ -24,7 +24,8 @@ def test_missing_token_file_returns_configuration_unavailable(tmp_path, monkeypa
         assert client.post("/v1/analyses", json=REQUEST).status_code == 503
 
 
-def test_failed_job_blocks_artifacts_and_redacts_error(tmp_path, monkeypatch):
+def test_failed_job_blocks_artifacts_and_redacts_error(tmp_path, monkeypatch, caplog):
+    caplog.set_level('INFO', logger='uvicorn.error')
     monkeypatch.setenv("SBOM_API_TOKEN", "test-token")
 
     def failing(*args, **kwargs):
@@ -43,6 +44,9 @@ def test_failed_job_blocks_artifacts_and_redacts_error(tmp_path, monkeypatch):
             time.sleep(0.01)
         assert response.json()["status"] == "failed"
         assert "secret-value" not in response.text
+        assert 'secret-value' not in caplog.text
+        assert 'analysis.received' in caplog.text
+        assert 'analysis.failed' in caplog.text
         assert client.get(path + "/artifacts/final.cdx.json", headers=headers).status_code == 409
 
 
