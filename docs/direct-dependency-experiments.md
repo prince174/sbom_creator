@@ -729,3 +729,17 @@
   not claimed, direct accuracy null. Next: authenticated TLS fixture and helper
   delivery/production guards. No algorithm acceptance or top5 ranking change.
 - [Protocol](go-registry-identity-v1.md), [data](go-registry-identity-v1.json).
+
+## R50 — authenticated TLS payload fixture, 2026-10-15
+
+- Main6771828 clean; no benchmark running, unrelated services untouched.
+- Read pinned Syft registry option source. Optional CA/auth in experimental
+  registry scan helper; isolated temporary Docker config and random test password.
+- Actual TLS/basic-auth read passed; missing/wrong credentials, wrong authority
+  and unrelated CA all rejected. No raw scan/credential data in report.
+- Owned loopback registry and temporary key/password files removed. Ruff,
+  R49 tag-race regression and24 targeted tests passed.
+- No production/classifier acceptance, direct accuracy null. Limits: no bearer
+  flow/proxy/index/general isolation proof. Next: helper delivery/guards with
+  module-root and selected-main meanings kept separate.
+- [Protocol](go-registry-auth-v1.md), [data](go-registry-auth-v1.json).

@@ -14,18 +14,23 @@ from sbom_creator.payload import SyftFiles
 from sbom_creator.scanner import TRUSTED_CONFIG, _image_identity
 
 
-def scan(reference, expected=None):
+def scan(reference, expected=None, *, ca=None, password=None, auth_authority=None):
     authority = reference.split('/')[0]
     if not authority.startswith('localhost:'):
         raise ValueError('Loopback fixture only')
     with tempfile.TemporaryDirectory(prefix='sbom-registry-r49-') as folder:
         config = Path(folder) / 'syft.yaml'
-        config.write_text(TRUSTED_CONFIG + '\nregistry:\n  insecure-use-http: true\n'
+        registry = ('\nregistry:\n  ca-cert: ' + json.dumps(str(ca)) + '\n'
+                    if ca else '\nregistry:\n  insecure-use-http: true\n')
+        config.write_text(TRUSTED_CONFIG + registry +
                           'file:\n  metadata:\n    selection: all\n  content:\n'
                           '    skip-files-above-size: 33554432\n'
                           '    globs: ["/application/hey"]\n', encoding='utf-8')
         env = clean_environment()
         env.update(TEMP=folder, TMP=folder, TMPDIR=folder, DOCKER_CONFIG=folder)
+        if password is not None:
+            env.update(SYFT_REGISTRY_AUTH_AUTHORITY=auth_authority or authority,
+                       SYFT_REGISTRY_AUTH_USERNAME='fixture', SYFT_REGISTRY_AUTH_PASSWORD=password)
         raw = run_command([str(ROOT / '.tools/syft/syft.exe'), 'scan', 'registry:' + reference,
                            '--platform', 'linux/amd64', '--scope', 'squashed',
                            '--override-default-catalogers', 'image', '-o', 'syft-json',

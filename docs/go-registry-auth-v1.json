@@ -1,0 +1,16 @@
+{
+  "experiment": "R50",
+  "registry_image_id": "sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+  "hash_helper_image_id": "sha256:7f4fc7459b4cf323044789283212950094af9800b707cbd46fc5e525fb3ad886",
+  "image_config_digest": "sha256:bc37d447975c6aaf076e7ae2663ca805fd0d0c71f04ad0581588a86f8a7e32dc",
+  "payload_sha256": "8ebf15a3aa82f0080f3f2ddde5fe616a008c4fbdcff5cef48adaa3038c4a433d",
+  "authenticated_tls_read": true,
+  "negative_checks": {
+    "missing_credentials": "rejected",
+    "wrong_password": "rejected",
+    "wrong_authority": "rejected",
+    "untrusted_ca": "rejected"
+  },
+  "runtime_changed": false,
+  "direct_accuracy": null
+}
