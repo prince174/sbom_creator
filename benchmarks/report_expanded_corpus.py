@@ -25,6 +25,28 @@ def main():
             if receipt['commit']!=project['commit']:raise ValueError('Expansion revision differs')
             work=ROOT/'benchmarks/.work'/path.parent.name
             analysis=work/'analysis'
+            if receipt.get('analysis_status', {}).get('status') == 'FAILED_OUTPUT_BUDGET':
+                for relative, digest in receipt['reference_hashes'].items():
+                    if hashlib.sha256((path.parent/relative).read_bytes()).hexdigest() != digest:
+                        raise ValueError('Failed-analysis reference evidence changed')
+                reference = json.loads((path.parent/'sbom.json').read_bytes())
+                validate_cyclonedx(reference)
+                labels = json.loads((path.parent/'module-labels.json').read_bytes())
+                shipped = [label for label in labels if label['image_prefix']]
+                for label in labels:
+                    validate_cyclonedx(json.loads((path.parent/'modules'/label['path']/'sbom.json').read_bytes()))
+                row.update(status='PAIRED', pair=path.parent.name,
+                           analysis_status=receipt['analysis_status'],
+                           reference_components=len(all_components(reference)),
+                           reference_module_count=len(labels), shipped_module_count=len(shipped),
+                           reference_module_direct_edges=sum(len(label['direct']) for label in labels),
+                           known_shipped_module_direct_unmatched=sum(len(label['direct']) for label in shipped),
+                           components=None, direct={'status': 'FAILED_ANALYSIS'},
+                           component_metrics_status='FAILED_OUTPUT_BUDGET',
+                           receipt_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                           scope_note='Aggregate includes reactor artifacts; per-owner labels separate. Failed service output is not an empty successful prediction. All known shipped edges remain unmatched, not excluded from coverage.')
+                rows.append(row)
+                continue
             final=json.loads((analysis/'final.cdx.json').read_bytes())
             for view in ('final','os','full'):
                 validate_cyclonedx(json.loads((analysis/(view+'.cdx.json')).read_bytes()))

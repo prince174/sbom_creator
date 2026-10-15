@@ -1,0 +1,254 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:293662c3-e682-3110-9436-48167b49c88b",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.3",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "e7c87ab327b65b23c681fc9dc8bb620b"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "fa3f0f04f4d5077b5e085d4d09aa2e68aeba5260"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "c452d5eebe28bc86bef2e7c72d129f04f60877bef843eac8120f01fb655be293"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "ec0344ed2ffe62d565aaf936a37140d04c7fffa8669a666be0366cd44eec3195232d79841cdec47030b79068216ac7e1a8c805255758e3d418dae32a4b9b9beb"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "3df26b2a00d87fe090851975ebcc30217f98634e7c47d07128e148f325ebfe3bc0790b2f52ad4591734b7b0de738f003"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "470c1b4962379b5b6494c75bd1475da3519bbe2543999c95f26b4021164d3d05419b0c3f704443162fe5433a204250e9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "900e9c4edb18940ed3c4a4ba6946957fa613ef0d4b0c380551638f229206373c"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "5e36433e18ae24f7460902da27818874df5d1d73df1a97e49e7369335f7cc61ca595466a2d37789fba7eaa7f7f251b29216c3d7a78910b2ec38e2ed68ea84876"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT?type=jar",
+      "group" : "io.javalin",
+      "name" : "javalin-rendering-mustache",
+      "version" : "7.2.4-SNAPSHOT",
+      "description" : "Javalin rendering plugin for Mustache template engine",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://javalin.io/javalin-utils/javalin-rendering-mustache"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/javalin/javalin/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/javalin/javalin.git/javalin-utils/javalin-rendering-mustache"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14?type=jar",
+      "group" : "com.github.spullara.mustache.java",
+      "name" : "compiler",
+      "version" : "0.9.14",
+      "description" : "Implementation of mustache.js for Java",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "98d75faf04c0855013d77df55e71421a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e6df8b5aabb80d6eb6d8fef312a56d66b7659ba6"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "99a7e7855609135006f078e6de7ee69daad9c42f98e679d56f80653cb17526b9"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "6033185c373e7144cf919a9df6bdd90f3784485531b9a11aed4605cc1c274ffb4e3525f251c56d251822cda83373344e8330a08eca180337a129c01596acc0f0"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "5e0305104977e5597beb59265291d46b4d440a81c067705690e9eb58effd8730a61686f4067f802edf9a91cfe7bb85f6"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "5c131e4373a6aabb8ca0437ef77cc8ab9de512eff041947a3fa6714d08d5d05c8c8948d9d999dbdfb52dd8c42a4ca536"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "81d98b96fe10bf1494f45755249d74b7837212a1f3f960b78bd69565d6667d34"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "d308d21c10aa1f461a295c839237abbc09601cce30908845ce577b91e577a5de1fb2e55042e254a2ae38c576b9f3579848e4da602df4acef0a509e57091b6159"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://github.com/spullara/mustache.java"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "vcs",
+          "url" : "http://github.com/spullara/mustache.java"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "group" : "org.jetbrains.kotlin",
+      "name" : "kotlin-stdlib",
+      "version" : "2.2.20",
+      "description" : "Kotlin Standard Library",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "1d746838e4cff4630930e9b1aed8da0a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5380b19fa1924399b62ce3a1faffebb2b4f82272"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "22075ba5931e86fcf471249b88593f0651a356a71a2f3152e25effca9a7420a1562579877aca40c98f625bf5a35fa983393a939cb54bbb4c58de13676254d62d"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "99bd04d023ce2816dab6b2444797236d23de36e3258da3739ec5d21908734e433f48445455566f5c1d86273ce59c8a8f"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "7530e5950cdd01423f3ced86b4d7453108d436cd0ce4597ba94ca8aeed0f0a84cb2b8287eb209ca02157d7bb180131b9"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "ecff6e435f420f4e079f9a354414b3f274b5ba59671457ae9ae2dd02adf8d1aa"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "b7ca6270fd2daed8a241e352d1d049e42b8e3f49ab64ad9e30e8cba114a12b45cee12cfc1f629f538eaf9643b26281768c1a881b66536c588122b06212bb4aca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://kotlinlang.org/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/JetBrains/kotlin"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14?type=jar",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

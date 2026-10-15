@@ -1,0 +1,632 @@
+[
+  {
+    "path": "javalin",
+    "packaging": "jar",
+    "artifact": "javalin",
+    "owner": [
+      "io.javalin",
+      "javalin",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.aayushatharva.brotli4j",
+        "brotli4j",
+        "1.23.0"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.2"
+      ],
+      [
+        "com.fasterxml.jackson.module",
+        "jackson-module-kotlin",
+        "2.22.2"
+      ],
+      [
+        "com.github.luben",
+        "zstd-jni",
+        "1.5.7-15"
+      ],
+      [
+        "com.google.code.gson",
+        "gson",
+        "2.14.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.12"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.12"
+      ],
+      [
+        "org.eclipse.jetty.ee10.websocket",
+        "jetty-ee10-websocket-jetty-server",
+        "12.1.12"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.18"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-simple",
+        "2.0.18"
+      ],
+      [
+        "tools.jackson.core",
+        "jackson-databind",
+        "3.2.2"
+      ],
+      [
+        "tools.jackson.module",
+        "jackson-module-kotlin",
+        "3.2.2"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin/"
+  },
+  {
+    "path": "javalin-bom",
+    "packaging": "pom",
+    "artifact": "javalin-bom",
+    "owner": [
+      "io.javalin",
+      "javalin-bom",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": null
+  },
+  {
+    "path": "javalin-bundle",
+    "packaging": "jar",
+    "artifact": "javalin-bundle",
+    "owner": [
+      "io.javalin",
+      "javalin-bundle",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.6.3"
+      ],
+      [
+        "com.aayushatharva.brotli4j",
+        "brotli4j",
+        "1.23.0"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.2"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-jsr310",
+        "2.22.2"
+      ],
+      [
+        "com.fasterxml.jackson.module",
+        "jackson-module-kotlin",
+        "2.22.2"
+      ],
+      [
+        "io.javalin",
+        "javalin",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-context-mock",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-testtools",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "org.eclipse.jetty.http2",
+        "jetty-http2-server",
+        "12.1.12"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-bundle/"
+  },
+  {
+    "path": "javalin-testtools",
+    "packaging": "jar",
+    "artifact": "javalin-testtools",
+    "owner": [
+      "io.javalin",
+      "javalin-testtools",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.javalin",
+        "javalin",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-testtools/"
+  },
+  {
+    "path": "javalin-utils",
+    "packaging": "pom",
+    "artifact": "javalin-utils",
+    "owner": [
+      "io.javalin",
+      "javalin-utils",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": null
+  },
+  {
+    "path": "javalin-ssl",
+    "packaging": "jar",
+    "artifact": "javalin-ssl",
+    "owner": [
+      "io.javalin.community.ssl",
+      "javalin-ssl",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.github.hakky54",
+        "ayza",
+        "10.0.7"
+      ],
+      [
+        "io.github.hakky54",
+        "ayza-for-jetty",
+        "10.0.7"
+      ],
+      [
+        "io.github.hakky54",
+        "ayza-for-pem",
+        "10.0.7"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-alpn-java-server",
+        "12.1.12"
+      ],
+      [
+        "org.eclipse.jetty.http2",
+        "jetty-http2-client-transport",
+        "12.1.12"
+      ],
+      [
+        "org.eclipse.jetty.http2",
+        "jetty-http2-server",
+        "12.1.12"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-ssl/"
+  },
+  {
+    "path": "javalin-micrometer",
+    "packaging": "jar",
+    "artifact": "javalin-micrometer",
+    "owner": [
+      "io.javalin",
+      "javalin-micrometer",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.micrometer",
+        "micrometer-core",
+        "1.17.1"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-jetty12",
+        "1.17.1"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.17.1"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-micrometer/"
+  },
+  {
+    "path": "jacoco-coverage-report",
+    "packaging": "pom",
+    "artifact": "jacoco-coverage-report",
+    "owner": [
+      "io.javalin",
+      "jacoco-coverage-report",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.javalin",
+        "javalin",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-context-mock",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-micrometer",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-commonmark",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-freemarker",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-handlebars",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-jte",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-mustache",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-pebble",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-thymeleaf",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-rendering-velocity",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin",
+        "javalin-testtools",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "io.javalin.community.ssl",
+        "javalin-ssl",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": null
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock",
+    "packaging": "jar",
+    "artifact": "javalin-context-mock",
+    "owner": [
+      "io.javalin",
+      "javalin-context-mock",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.javalin",
+        "javalin",
+        "7.2.4-SNAPSHOT"
+      ],
+      [
+        "org.eclipse.jetty.toolchain",
+        "jetty-jakarta-servlet-api",
+        "5.0.2"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-context-mock/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering",
+    "packaging": "pom",
+    "artifact": "javalin-rendering",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": null
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-velocity",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-velocity",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.apache.velocity",
+        "velocity-engine-core",
+        "2.4.1"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-freemarker",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-freemarker",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.freemarker",
+        "freemarker",
+        "2.3.35"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-thymeleaf",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-thymeleaf",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ],
+      [
+        "org.thymeleaf",
+        "thymeleaf",
+        "3.1.5.RELEASE"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-mustache",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-mustache",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.github.spullara.mustache.java",
+        "compiler",
+        "0.9.14"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-handlebars",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-handlebars",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.github.jknack",
+        "handlebars",
+        "4.5.4"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-pebble",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-pebble",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.pebbletemplates",
+        "pebble",
+        "4.1.2"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-commonmark",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-commonmark",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "org.commonmark",
+        "commonmark",
+        "0.30.0"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+    "packaging": "jar",
+    "artifact": "javalin-rendering-jte",
+    "owner": [
+      "io.javalin",
+      "javalin-rendering-jte",
+      "7.2.4-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "gg.jte",
+        "jte",
+        "3.2.3"
+      ],
+      [
+        "org.jetbrains.kotlin",
+        "kotlin-stdlib",
+        "2.2.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/"
+  }
+]

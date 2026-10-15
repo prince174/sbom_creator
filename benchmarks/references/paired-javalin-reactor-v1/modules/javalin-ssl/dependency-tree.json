@@ -1,0 +1,251 @@
+{
+  "groupId": "io.javalin.community.ssl",
+  "artifactId": "javalin-ssl",
+  "version": "7.2.4-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "org.eclipse.jetty.http2",
+      "artifactId": "jetty-http2-client-transport",
+      "version": "12.1.12",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-alpn-java-client",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.eclipse.jetty",
+              "artifactId": "jetty-alpn-client",
+              "version": "12.1.12",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-client",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.eclipse.jetty.compression",
+              "artifactId": "jetty-compression-gzip",
+              "version": "12.1.12",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "org.eclipse.jetty.compression",
+                  "artifactId": "jetty-compression-common",
+                  "version": "12.1.12",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            }
+            ]
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-client",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "org.eclipse.jetty.http2",
+      "artifactId": "jetty-http2-server",
+      "version": "12.1.12",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-common",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.eclipse.jetty.http2",
+              "artifactId": "jetty-http2-hpack",
+              "version": "12.1.12",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        }
+        ]
+    },
+    {
+      "groupId": "org.eclipse.jetty",
+      "artifactId": "jetty-alpn-java-server",
+      "version": "12.1.12",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-alpn-server",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-io",
+          "version": "12.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.eclipse.jetty",
+              "artifactId": "jetty-util",
+              "version": "12.1.12",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        }
+        ]
+    },
+    {
+      "groupId": "io.github.hakky54",
+      "artifactId": "ayza",
+      "version": "10.0.7",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "sude",
+          "version": "2.0.2",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "laleler",
+          "version": "1.0.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "desidero",
+          "version": "1.0.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "io.github.hakky54",
+      "artifactId": "ayza-for-pem",
+      "version": "10.0.7",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.bouncycastle",
+          "artifactId": "bcpkix-jdk18on",
+          "version": "1.85",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.bouncycastle",
+              "artifactId": "bcutil-jdk18on",
+              "version": "1.85",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "org.bouncycastle",
+                  "artifactId": "bcprov-jdk18on",
+                  "version": "1.85",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            }
+            ]
+        }
+        ]
+    },
+    {
+      "groupId": "io.github.hakky54",
+      "artifactId": "ayza-for-jetty",
+      "version": "10.0.7",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "2.2.20",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    }
+    ]
+}

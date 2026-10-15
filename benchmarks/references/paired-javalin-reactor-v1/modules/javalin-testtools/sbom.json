@@ -1,0 +1,331 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:d386a2bf-86fb-3379-b60d-662c893a4fd6",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.3",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "e7c87ab327b65b23c681fc9dc8bb620b"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "fa3f0f04f4d5077b5e085d4d09aa2e68aeba5260"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "c452d5eebe28bc86bef2e7c72d129f04f60877bef843eac8120f01fb655be293"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "ec0344ed2ffe62d565aaf936a37140d04c7fffa8669a666be0366cd44eec3195232d79841cdec47030b79068216ac7e1a8c805255758e3d418dae32a4b9b9beb"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "3df26b2a00d87fe090851975ebcc30217f98634e7c47d07128e148f325ebfe3bc0790b2f52ad4591734b7b0de738f003"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "470c1b4962379b5b6494c75bd1475da3519bbe2543999c95f26b4021164d3d05419b0c3f704443162fe5433a204250e9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "900e9c4edb18940ed3c4a4ba6946957fa613ef0d4b0c380551638f229206373c"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "5e36433e18ae24f7460902da27818874df5d1d73df1a97e49e7369335f7cc61ca595466a2d37789fba7eaa7f7f251b29216c3d7a78910b2ec38e2ed68ea84876"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT?type=jar",
+      "group" : "io.javalin",
+      "name" : "javalin-testtools",
+      "version" : "7.2.4-SNAPSHOT",
+      "description" : "Testing utilities and helpers for Javalin applications",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://javalin.io/javalin-testtools"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/javalin/javalin/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/javalin/javalin.git/javalin-testtools"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+      "group" : "io.javalin",
+      "name" : "javalin",
+      "version" : "7.2.4-SNAPSHOT",
+      "description" : "Javalin: Simple REST APIs for Java and Kotlin",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "2dd248696a6037360a65a0f82b5e3a2d"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "faf94d1fa3bb00a45dbdb90de4e7eaf6c3f7c935"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "7f3f98c695d441a1e6d23045895f89ad9e5fe207564a312344d3750dc4c2fb4189ff2d1ec677e917274f67a1d1aa4a2cdf25619a2564cfba52ea75e19f0a4f96"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "171e29dc2f1669bb65c821f760f96e19c25c819806a6032cdd0d387e82a47ae496dab89ba64ea89266a016ea2f63ab02"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "45266c3daed7b35b3e781a8b1b8e5b7327a064bb5a0e21bb4d3ab4282078fde22adc2fa954b6e4430bcdc165cb3c2d8b"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "d3a3463805e1f86ba5ea4a6a92161bc28bf89723464d0b4c50c3439d33fd39c9"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "953120953983acecf8e9eff7aa20da96896407c4c26f5cd5e4e6a11bd01b82cfdf93f6e81e5ef4874efd37948159e2f15d41bccfada9875746288f90ae75d028"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://javalin.io/javalin"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/javalin/javalin/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/javalin/javalin.git/javalin"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "publisher" : "QOS.ch",
+      "group" : "org.slf4j",
+      "name" : "slf4j-api",
+      "version" : "2.0.18",
+      "description" : "The slf4j API",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "fe2837bd49bfb76657419002fed20ca9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "78a9e7a37cd6360e0b818e86341b24123d28d4df"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "539288fa0c96cea750d11293dbed4c562630587aa7cd88bbf76ad04390d1c40636506da48faa6453090c7e9baa6b690b9fbded55a7e2b4a91547eeea011f971a"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "917885c7812289f5178f68e3c421153d55abd7fe5cc9a071ffdc5de48b7afc79c352c667a20a3ad0f3b4660952932513"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "d6898eb5dd2e5caa2185c6cd2804735802b3848a3041b82ef7faa7904b3eaf5ac382d43a70a71e22b77a929e10ae2aaf"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "6bbc9103bec05ef3280dd895d8c6267ccf8b940df03c9f5145cfaa77f6e9a41a"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "e2913e96e4b1c94e7cb5c46828d1afe68c5a7248293d5c16aaa9ab462ee8e0ff97dd3d1155d2a64f66ccd9bc1ac0c83476cc886b675004b2f84aaaf50e2b2af2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.slf4j.org"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "group" : "org.jetbrains.kotlin",
+      "name" : "kotlin-stdlib",
+      "version" : "2.2.20",
+      "description" : "Kotlin Standard Library",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "1d746838e4cff4630930e9b1aed8da0a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5380b19fa1924399b62ce3a1faffebb2b4f82272"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "22075ba5931e86fcf471249b88593f0651a356a71a2f3152e25effca9a7420a1562579877aca40c98f625bf5a35fa983393a939cb54bbb4c58de13676254d62d"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "99bd04d023ce2816dab6b2444797236d23de36e3258da3739ec5d21908734e433f48445455566f5c1d86273ce59c8a8f"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "7530e5950cdd01423f3ced86b4d7453108d436cd0ce4597ba94ca8aeed0f0a84cb2b8287eb209ca02157d7bb180131b9"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "ecff6e435f420f4e079f9a354414b3f274b5ba59671457ae9ae2dd02adf8d1aa"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "b7ca6270fd2daed8a241e352d1d049e42b8e3f49ab64ad9e30e8cba114a12b45cee12cfc1f629f538eaf9643b26281768c1a881b66536c588122b06212bb4aca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://kotlinlang.org/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/JetBrains/kotlin"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

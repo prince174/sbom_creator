@@ -1,0 +1,384 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:9db4ea80-8a71-3837-8ccc-251110f7dafc",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.3",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "e7c87ab327b65b23c681fc9dc8bb620b"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "fa3f0f04f4d5077b5e085d4d09aa2e68aeba5260"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "c452d5eebe28bc86bef2e7c72d129f04f60877bef843eac8120f01fb655be293"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "ec0344ed2ffe62d565aaf936a37140d04c7fffa8669a666be0366cd44eec3195232d79841cdec47030b79068216ac7e1a8c805255758e3d418dae32a4b9b9beb"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "3df26b2a00d87fe090851975ebcc30217f98634e7c47d07128e148f325ebfe3bc0790b2f52ad4591734b7b0de738f003"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "470c1b4962379b5b6494c75bd1475da3519bbe2543999c95f26b4021164d3d05419b0c3f704443162fe5433a204250e9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "900e9c4edb18940ed3c4a4ba6946957fa613ef0d4b0c380551638f229206373c"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "5e36433e18ae24f7460902da27818874df5d1d73df1a97e49e7369335f7cc61ca595466a2d37789fba7eaa7f7f251b29216c3d7a78910b2ec38e2ed68ea84876"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT?type=jar",
+      "group" : "io.javalin",
+      "name" : "javalin-rendering-jte",
+      "version" : "7.2.4-SNAPSHOT",
+      "description" : "Javalin rendering plugin for jte (Java Template Engine)",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://javalin.io/javalin-utils/javalin-rendering-jte"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/javalin/javalin/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/javalin/javalin.git/javalin-utils/javalin-rendering-jte"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/gg.jte/jte@3.2.3?type=jar",
+      "group" : "gg.jte",
+      "name" : "jte",
+      "version" : "3.2.3",
+      "description" : "A template engine using plain Java code.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "4472172fce307f217a676e3f5cca8c07"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "78aef9da8807927b884ed6cc8cc2e19bab0aa1f8"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "a33feb90d91cfdf876e99bba5647179e203f98a98088a9046da5a894554dc0a9"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "bfc2fa22cf208763b2f286986b9adc8fa53824c659de660b1b3ee30cbc12b929b24c5549af67cc718e64d1b153ef5afa37d73befd43668aa2ba430a600a50330"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "fa391907fadfad676522595aa6d0b3a81ecc5e7d7d39d347f9ecc64748607ef9fb1064a793496cbb45ca0b041a633c88"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "e26e9bbfb29aaede9c107223c969034bd954fb2ac4afc2dce29cfe6a0c6c590442000197d47f10e78c724160830d2ab7"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "81b0740ca1480f52f7521191e540556333f2df3fcb1d6a8e2863352d076576bf"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "90ac76c1fcd2704e0cc6c2cf10758751b55e67c9b03b74187cff6a53eb7a11443387d43e02260687d9628b200bede42156057e11404de185290a053db70c3da9"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/gg.jte/jte@3.2.3?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://jte.gg/jte"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/casid/jte.git/jte"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar",
+      "group" : "gg.jte",
+      "name" : "jte-runtime",
+      "version" : "3.2.3",
+      "description" : "A template engine using plain Java code.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "6edb235d0f35a18ac15fa592da2fc991"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "1f323a55782e53b35c8bb5f91732f236af47ae34"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "f9e8e4470d83d93e4ec146e795783f08b433f3753db6b0662fccb2d5c41ee020"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "cddd81c50d2b03d13aefa3de83285a76f046decfa59212ab3ae35e5dede7b45883b203343ea95e2e47cb3a7f9bbbce1f5696864ccfffffc46d61e2c0e04de489"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "199dbe11fed183617db99c8ff366b667b3369d696a32ab84861b9ffa0bc1701241a9b3a2d96d245fefd502a1b7ec9b1e"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "baaeb03231db9a120dd40381912dda41fcb424bd3d36e33669290fe2be24adb42ab781e227cb1b7f96dfc6a80e685867"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "61484a64d2088d1285934a31a6546c1679a14502153d8fdb811a1c40eeb61218"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "255137476bd9bdbd7e87c4fe25aa2443c46a6351b79b2dbe14f660588785622b3d736238fe1d2ed775bc41939841bbc3554a8c3ef4e79ddbbc4b21acfb5616c0"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://jte.gg/jte-runtime"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/casid/jte.git/jte-runtime"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/gg.jte/jte-extension-api@3.2.3?type=jar",
+      "group" : "gg.jte",
+      "name" : "jte-extension-api",
+      "version" : "3.2.3",
+      "description" : "A template engine using plain Java code.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "4943e5f4d608415f1b9fbecb378fb2bb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "a09f5cb137fac62cebf02f1c64786b53edfd668c"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "567ec69230d72231ee57710aab7c41d3c52970f0cf8be0cec22404a5191d1e67"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "dc6c9463464aa27c9f38a4ceca17a5e22292f7cb819346306bbe979a5dc7f5d22d8f67b96a2dc14da05df2a1b8007b343f93a9fa8c5ae607879db6237a615e39"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "8c06dd27e4a9b4ac9d5ccdaf085afd91197540314226b9474e33862b0284814efa17215424d34d27e2c42f0480d53172"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "fa5e24b670eda2735b57d06364f24a3f72ce909b1d0ff36684ff054499291a5cf450519aa24a3c74cec152dfe1ca3824"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "dc7ac7a97bb1ad0df7904a5064aa80f64d23242ad6fca37b73ea7e9b85517a1f"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "2a045529087eab643606da55f63ac633d303a3d90022e02981ba3f9cf909f1121f84f3976330ce8ce1ade9a31d160dd0d6c8ac8cbf835f7a34d843ba72feb166"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/gg.jte/jte-extension-api@3.2.3?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://jte.gg/jte-extension-api"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/casid/jte.git/jte-extension-api"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "group" : "org.jetbrains.kotlin",
+      "name" : "kotlin-stdlib",
+      "version" : "2.2.20",
+      "description" : "Kotlin Standard Library",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "1d746838e4cff4630930e9b1aed8da0a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5380b19fa1924399b62ce3a1faffebb2b4f82272"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "22075ba5931e86fcf471249b88593f0651a356a71a2f3152e25effca9a7420a1562579877aca40c98f625bf5a35fa983393a939cb54bbb4c58de13676254d62d"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "99bd04d023ce2816dab6b2444797236d23de36e3258da3739ec5d21908734e433f48445455566f5c1d86273ce59c8a8f"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "7530e5950cdd01423f3ced86b4d7453108d436cd0ce4597ba94ca8aeed0f0a84cb2b8287eb209ca02157d7bb180131b9"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "ecff6e435f420f4e079f9a354414b3f274b5ba59671457ae9ae2dd02adf8d1aa"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "b7ca6270fd2daed8a241e352d1d049e42b8e3f49ab64ad9e30e8cba114a12b45cee12cfc1f629f538eaf9643b26281768c1a881b66536c588122b06212bb4aca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://kotlinlang.org/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/JetBrains/kotlin"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/gg.jte/jte@3.2.3?type=jar",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/gg.jte/jte@3.2.3?type=jar",
+      "dependsOn" : [
+        "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar",
+        "pkg:maven/gg.jte/jte-extension-api@3.2.3?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/gg.jte/jte-extension-api@3.2.3?type=jar",
+      "dependsOn" : [
+        "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

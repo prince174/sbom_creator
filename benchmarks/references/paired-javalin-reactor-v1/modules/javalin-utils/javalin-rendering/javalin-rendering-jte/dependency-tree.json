@@ -1,0 +1,49 @@
+{
+  "groupId": "io.javalin",
+  "artifactId": "javalin-rendering-jte",
+  "version": "7.2.4-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "gg.jte",
+      "artifactId": "jte",
+      "version": "3.2.3",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "gg.jte",
+          "artifactId": "jte-runtime",
+          "version": "3.2.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "gg.jte",
+          "artifactId": "jte-extension-api",
+          "version": "3.2.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "2.2.20",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    }
+    ]
+}

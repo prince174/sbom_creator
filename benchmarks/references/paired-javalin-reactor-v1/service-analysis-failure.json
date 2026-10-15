@@ -1,0 +1,7 @@
+{
+  "stage": "image_scan",
+  "type": "RuntimeError",
+  "reason": "Syft exceeded output limit",
+  "max_sbom_bytes": 67108864,
+  "runtime_limits_changed": false
+}

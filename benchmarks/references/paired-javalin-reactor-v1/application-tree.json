@@ -1,0 +1,1491 @@
+[
+  {
+    "path": "javalin",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-bundle",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-bundle/asm-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
+  },
+  {
+    "path": "javalin-bundle/asm-commons-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
+  },
+  {
+    "path": "javalin-bundle/asm-tree-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
+  },
+  {
+    "path": "javalin-bundle/brotli4j-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b"
+  },
+  {
+    "path": "javalin-bundle/jackson-annotations-2.22.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+  },
+  {
+    "path": "javalin-bundle/jackson-core-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ff167a6317be15895706c26668f45b898efe40ab8780970658210fe1393d52a6"
+  },
+  {
+    "path": "javalin-bundle/jackson-databind-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d0da14c12b16b5d54719aa172d83b542ff4abeb8b0fb7db476fde8ceece760ca"
+  },
+  {
+    "path": "javalin-bundle/jackson-datatype-jsr310-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "9df71cc7fb3781fd0bed6c05eebbfa8b39292a49f5619e76fdd0d889f64c8f33"
+  },
+  {
+    "path": "javalin-bundle/jackson-module-kotlin-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "174e917ea64c0559df824e92317782a92eba7278de488d4a11df0b8597791874"
+  },
+  {
+    "path": "javalin-bundle/jakarta.annotation-api-2.1.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe"
+  },
+  {
+    "path": "javalin-bundle/jakarta.enterprise.cdi-api-4.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "beaf74c4f2618189309e3f4a09c43effab633dd96aa1f6dc58a6ba7ee0042717"
+  },
+  {
+    "path": "javalin-bundle/jakarta.enterprise.lang-model-4.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "53acafe65b6ef0195fa1b8a0ef2650e5aa024c32cb4059c4df372d6b32089cd3"
+  },
+  {
+    "path": "javalin-bundle/jakarta.inject-api-2.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+  },
+  {
+    "path": "javalin-bundle/jakarta.interceptor-api-2.1.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ef787d3f713fc6ff4f02cd4b0dbed08f93d8af3400c90cbb43fb4b5c0583710b"
+  },
+  {
+    "path": "javalin-bundle/jakarta.servlet-api-6.0.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c034eb1afb158987dbb53a5fea0cadf611c8dae8daadd59c44d9d5ab70129cef"
+  },
+  {
+    "path": "javalin-bundle/jakarta.transaction-api-2.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875"
+  },
+  {
+    "path": "javalin-bundle/javalin-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076"
+  },
+  {
+    "path": "javalin-bundle/javalin-bundle-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "91a45a0448d96a6ea9c8eb91357907336c097f46b210d86671b4b42b1796fe84"
+  },
+  {
+    "path": "javalin-bundle/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb"
+  },
+  {
+    "path": "javalin-bundle/javalin-testtools-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015"
+  },
+  {
+    "path": "javalin-bundle/jetty-annotations-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ce51d231435cdd774336abcb44a7817195fd12487ed213327e8d43db172af467"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee-webapp-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f70d9b30fdfd970e8bbc462b9d6b4cb85f850428d8640529fcc1f1912b2941b4"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-annotations-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c45ba9ff724845ef5848f86cf164c87824d4be18095216b9cba66a94a72b83b6"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-plus-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "80d050384ef31c921e0fbeeded3c70fc8d35a29b7951511a9ccfaeb06b5e29c7"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-servlet-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "021375ea80d84b5f9d46260916fc0450dc4fae5a95ce80f8289e87a0db07de47"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-webapp-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "84de1014bb79f957f0fc66d3db9b2bc7eec19f01c8ace4e250b4707af0eed0f3"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-websocket-jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bce3641addd34a0d9a3ce8080f31f3b7f45b2bbdf3e7d5655ccd5f4d529c7816"
+  },
+  {
+    "path": "javalin-bundle/jetty-ee10-websocket-servlet-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "83a58b4ee3bf6d0284c50304725cf93b694a67b1b1cc139af72500296dbf7359"
+  },
+  {
+    "path": "javalin-bundle/jetty-http-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e"
+  },
+  {
+    "path": "javalin-bundle/jetty-http2-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "31c4e73da6a83e6b77531aa9a2aa8e8b64265512672b7db18476872b01b22acd"
+  },
+  {
+    "path": "javalin-bundle/jetty-http2-hpack-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b59a90111b03359a18a499a5b21b83555a1990ed26df01dc15d477e6800c8674"
+  },
+  {
+    "path": "javalin-bundle/jetty-http2-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "e84feb7c6bd11c3a49b0a60a9a37ade908677ae8fceb056e3ae2f3b907ebed3f"
+  },
+  {
+    "path": "javalin-bundle/jetty-io-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc"
+  },
+  {
+    "path": "javalin-bundle/jetty-jakarta-servlet-api-5.0.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "efb20997729f32bfa6c8a8319037c353f7ad460d5d49f336bf232998ea2358db"
+  },
+  {
+    "path": "javalin-bundle/jetty-jndi-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a701368f9810433103836f0f2c0c0f6a2ca49f951d25d155e4e507821cb54b43"
+  },
+  {
+    "path": "javalin-bundle/jetty-plus-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0e29a87abf5b651f77e5c3e7c726f0ecef30a9bc57a5e0aa5aa3f784cfc0a7bd"
+  },
+  {
+    "path": "javalin-bundle/jetty-security-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "fcc0206c1ac66b632ef29a59ccf76c3f3737a62ef54694b1d111eeb2e6efe804"
+  },
+  {
+    "path": "javalin-bundle/jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787"
+  },
+  {
+    "path": "javalin-bundle/jetty-session-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "73aea4cdd91f2027da1a09cd5953b661625017971d53d8e1ff342f8547752b06"
+  },
+  {
+    "path": "javalin-bundle/jetty-util-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2"
+  },
+  {
+    "path": "javalin-bundle/jetty-websocket-core-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a1ef0c79a4b8b9e4ce969e70d8de9fbed4776625863bdbd5eb5f69fb70208399"
+  },
+  {
+    "path": "javalin-bundle/jetty-websocket-core-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d91becae70e7b15e6200f40d02239d8315f8b26c90d4ab38348fcdad41c0ebf5"
+  },
+  {
+    "path": "javalin-bundle/jetty-websocket-jetty-api-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "887090638bf758dce9268478a3ccf168929de52dcdecdddb4eaff62263cbd961"
+  },
+  {
+    "path": "javalin-bundle/jetty-websocket-jetty-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "933d05b566effad97f84b5d986be810a2928685c875d7fb90f301163f24d2718"
+  },
+  {
+    "path": "javalin-bundle/jetty-websocket-jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0b189ffab87b02a4da1187dc4022410c5f235b5a1a7ccfeea3cc4846a8e80664"
+  },
+  {
+    "path": "javalin-bundle/jetty-xml-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "1c7b6320e3ad4ccca861ecfd1347f10ac6130ca2c2eb788a6b5dff3ab0c0f532"
+  },
+  {
+    "path": "javalin-bundle/kotlin-reflect-2.1.21.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bcd75a36ca4ad8e06117214ed807f8dea2fe61a71e07f91ca14f4335024b8463"
+  },
+  {
+    "path": "javalin-bundle/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-bundle/logback-classic-1.6.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "beebede8db065fe1b72909ecc66bb49acda618901635d86c25fce14a5915e37e"
+  },
+  {
+    "path": "javalin-bundle/logback-core-1.6.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a6967a28c8b086dee75a694d2f6fb8830c71153539866d7d8af065c9b6df91e0"
+  },
+  {
+    "path": "javalin-bundle/native-linux-x86_64-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c504e243961c4229d8e486ca8f87b757ad9a033dda471061c0134c050ddcaa7c"
+  },
+  {
+    "path": "javalin-bundle/service-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7f298d44dbb7688419f0179ee1dfa0e4436633272b05d38a5faf3a2b8d08697b"
+  },
+  {
+    "path": "javalin-bundle/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-micrometer",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-micrometer/HdrHistogram-2.2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8"
+  },
+  {
+    "path": "javalin-micrometer/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "576a99688f9327f2bf3f0abeb7f5868e6817c3759a6e67b89092fb4365c084ab"
+  },
+  {
+    "path": "javalin-micrometer/jspecify-1.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66"
+  },
+  {
+    "path": "javalin-micrometer/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-micrometer/micrometer-commons-1.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd"
+  },
+  {
+    "path": "javalin-micrometer/micrometer-core-1.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "9ca47dfa831409b40253c8dc98c17b9d3e050ebbde4d1543c5521dca2b95ad56"
+  },
+  {
+    "path": "javalin-micrometer/micrometer-jetty12-1.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0248a047728765358cbcf49329feac23abf95229fa8d94bda6a68e6e3f32ecd6"
+  },
+  {
+    "path": "javalin-micrometer/micrometer-observation-1.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "eb34f0cd84a879393ae5c21160fc06385ccdc74f36a4d1e31b199f59acfdaf71"
+  },
+  {
+    "path": "javalin-micrometer/micrometer-registry-prometheus-1.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ac24d43f123e103828a23a86f092a8709d87d309ad3212e798305654e951a8ce"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-config-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bc9455f938df76ec4add13fe31903a5bb583c605679a16a779d6a6c2b21218f2"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-core-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f9e5f1c8a20073347c88941d43e8c64ae6810afe0a61cbfe9c2f4efffe72808b"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-exposition-formats-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7352ca8b50e861eca3567ceb332e9590a06742a9d177cff54e52c8cff4c4fb90"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-exposition-textformats-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7e49065895a35181c57f2c3c6d07b7b3f9b5754cd6422e0a7bd793f20a29c28a"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-model-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "e6d94538f8735c4161c36a660298f3a0fa8e4b281ceaf209723aaf9e212d292d"
+  },
+  {
+    "path": "javalin-micrometer/prometheus-metrics-tracer-common-1.7.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b7e8699032f0f1501556eeafd20fcfdd89b355f5d22b6d8361d723d467d88ed4"
+  },
+  {
+    "path": "javalin-ssl",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-ssl/ayza-10.0.7.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "42f3de9e3266968689dad505b97044375366cddd3ef585bf664afbc3fc473ca7"
+  },
+  {
+    "path": "javalin-ssl/ayza-for-jetty-10.0.7.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "4fa3198af07b59ee06c66b437942573e16aecbe6385f7ec166c14b4b317bbf8a"
+  },
+  {
+    "path": "javalin-ssl/ayza-for-pem-10.0.7.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ddba9bca16b5086e52082c4549395d6d36bdbf88d0c4eebc80952eebff17dc95"
+  },
+  {
+    "path": "javalin-ssl/bcpkix-jdk18on-1.85.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996"
+  },
+  {
+    "path": "javalin-ssl/bcprov-jdk18on-1.85.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7"
+  },
+  {
+    "path": "javalin-ssl/bcutil-jdk18on-1.85.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d"
+  },
+  {
+    "path": "javalin-ssl/desidero-1.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b68dfd47ddb1bf669e5592c2f85b43d744fbc6495293499143e46add678d7dcc"
+  },
+  {
+    "path": "javalin-ssl/javalin-ssl-7.2.4-SNAPSHOT.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "cf47da28ecc00382272fd4ef40bf247ab176e3e7bbb0818aa52a2aa98b81196d"
+  },
+  {
+    "path": "javalin-ssl/jetty-alpn-client-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "24a38f8a33903ffc9379a22982bb66f0d0b27d1a932ebe7eed323f91353a4513"
+  },
+  {
+    "path": "javalin-ssl/jetty-alpn-java-client-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c79299e82784d611cd16a40465e56d3cc1d32b601427c84cbdd2a27d14075abd"
+  },
+  {
+    "path": "javalin-ssl/jetty-alpn-java-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "47ada2ed59a9ec10f56837f08e2ed086c148dd4b7cd3ba9ceab1b9ee0f985518"
+  },
+  {
+    "path": "javalin-ssl/jetty-alpn-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "48c84d4e7723218c61c5c9849b558319401e3cd6333cd5c85c0ec2391402c51f"
+  },
+  {
+    "path": "javalin-ssl/jetty-client-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d3888e13a893faafda80863c4ef8ea6f9fc3d4a59435997a600407c2d8b2b3d6"
+  },
+  {
+    "path": "javalin-ssl/jetty-compression-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a563077b2d760022fc0de241fec29ebd5b31ed629060235c395b0389f304a148"
+  },
+  {
+    "path": "javalin-ssl/jetty-compression-gzip-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "71315ebfed13187554daaa7fdc41b143f7d3eebdebc8b230b41a96bcb1bc7d04"
+  },
+  {
+    "path": "javalin-ssl/jetty-http-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e"
+  },
+  {
+    "path": "javalin-ssl/jetty-http2-client-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "138bf1229dd31b4e76e7ff3777b2d846c1a28ee51536499b2a4af7561ce439fd"
+  },
+  {
+    "path": "javalin-ssl/jetty-http2-client-transport-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "97b5755ab9c803f8f4d13f7e4f7cfcd2a3ce135e077042086829d399914119ea"
+  },
+  {
+    "path": "javalin-ssl/jetty-http2-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "31c4e73da6a83e6b77531aa9a2aa8e8b64265512672b7db18476872b01b22acd"
+  },
+  {
+    "path": "javalin-ssl/jetty-http2-hpack-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b59a90111b03359a18a499a5b21b83555a1990ed26df01dc15d477e6800c8674"
+  },
+  {
+    "path": "javalin-ssl/jetty-http2-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "e84feb7c6bd11c3a49b0a60a9a37ade908677ae8fceb056e3ae2f3b907ebed3f"
+  },
+  {
+    "path": "javalin-ssl/jetty-io-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc"
+  },
+  {
+    "path": "javalin-ssl/jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787"
+  },
+  {
+    "path": "javalin-ssl/jetty-util-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2"
+  },
+  {
+    "path": "javalin-ssl/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-ssl/laleler-1.0.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "65fa541b120d967a9ef90850322327398e245a3975aec0c8dc730fa5ec450a6b"
+  },
+  {
+    "path": "javalin-ssl/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-ssl/sude-2.0.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f88e3d031dbbd2fea1b98481df0646a25b8d63d92796d6f30f907d5187595b39"
+  },
+  {
+    "path": "javalin-testtools",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-testtools/javalin-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076"
+  },
+  {
+    "path": "javalin-testtools/javalin-testtools-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015"
+  },
+  {
+    "path": "javalin-testtools/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-testtools/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock/javalin-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076"
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb"
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock/jetty-jakarta-servlet-api-5.0.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "efb20997729f32bfa6c8a8319037c353f7ad460d5d49f336bf232998ea2358db"
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-context-mock/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/commonmark-0.30.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "090f0a758ac2f4f51aa86dff9dff0fdf7403666d0efd29f59886dc8e8b1eac53"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "854349639f397a4af5ab39f2dc5a9673c218610daffd6984a7ca48d1488ec47b"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/freemarker-2.3.35.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0fac87dddd78f1223139e8ef88e819c7f483c0a3835cdf5982ad5e4576d1d896"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "dd66640832e8b792c78a0b2aca42ebb3eca1b267731f3b10f5d849016d19c9b8"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-7.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "2f67e11ceec819ebd88ddee5300aba699b1cbab2e20c22e97cf027d3be93959b"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-analysis-7.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "46b8a8efd4b94facb5ab4b35afe30ee0546ae7a43d2c64e6def56c2f168fefa5"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-commons-7.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "87cd8bb3c6bf6bcbb33fca48060c5065f66ebf6a3d7de9bf18bff51bcf156ebc"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-tree-7.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f91a4a8aa868c5c4665bb4fd134019a91f9f8b9216527fba295e3c8b5422b78b"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-util-7.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "182128592742ed4883ac82bf205f137b6bfbe1234c68e6feb13759e75a85b729"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/commons-lang3-3.20.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/commons-text-1.15.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/handlebars-4.5.4.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "3b486535d0606306c9abca7b5a48066a2ec8186ecdd03e2ff02c70b15c13840c"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "552876b9f2f296542ad51e410c611034382255999fdac2f6ac6be048c7b5814f"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/nashorn-core-15.4.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6f816e84dfd63a81d4eaa7829c08337bbaff3ec683ff3bf6bbd90d017a00dc6f"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "332956679f917b22ec9acf88ca05115ce431b4e88c118a28d2911dd24045dd95"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/jte-3.2.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a33feb90d91cfdf876e99bba5647179e203f98a98088a9046da5a894554dc0a9"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/jte-extension-api-3.2.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "567ec69230d72231ee57710aab7c41d3c52970f0cf8be0cec22404a5191d1e67"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/jte-runtime-3.2.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f9e8e4470d83d93e4ec146e795783f08b433f3753db6b0662fccb2d5c41ee020"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache/compiler-0.9.14.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "99a7e7855609135006f078e6de7ee69daad9c42f98e679d56f80653cb17526b9"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7afb1efb457483fa64765073befdc709570a0fa50f8c49cad3e35cf5fb23753e"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "3c866a12627e7c59aeaf6f682e7875a22c383af5c776ccea67c6081a10f1b238"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pebble-4.1.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bd4021cebeb3d34ca80dc1e406b6ec23baa3ead4b9b82d5282fdacc64f655cd7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/unbescape-1.1.6.RELEASE.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "597cf87d5b1a4f385b9d1cec974b7b483abb3ee85fc5b3f8b62af8e4bec95c2c"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/attoparser-2.0.7.RELEASE.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "75dd1c045492bff8e1963aabb28bfe903c2064e11e27fe2f0f0aff1ad3d84476"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "67c122d121b741b0c3e00b77b9b4037a875c24c6f0e0ad377f0b3772f779eea9"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javassist-3.29.0-GA.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "62d4065362e8969ce654f2b5541de1efb5b5bca6c146dbd38a595ea4df64cd31"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/ognl-3.3.4.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "47fdd450407ff09b57df02f466f9b4c7d32818962d65f9d98e445c8b4d047603"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/thymeleaf-3.1.5.RELEASE.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "4011795f8494dd69e764b7709443dd13d3068ba8ac37624f61d7084f4429cbe2"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/unbescape-1.1.6.RELEASE.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "597cf87d5b1a4f385b9d1cec974b7b483abb3ee85fc5b3f8b62af8e4bec95c2c"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+    "mode": 493,
+    "type": "5",
+    "link": ""
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/commons-lang3-3.17.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6ee731df5c8e5a2976a1ca023b6bb320ea8d3539fbe64c8a1d5cb765127c33b4"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "84d5e1bf7d919c337e8369f0accfeb1cd8ef28918e7cbda436a213049b6b8496"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/velocity-engine-core-2.4.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+  },
+  {
+    "path": "javalin/asm-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb"
+  },
+  {
+    "path": "javalin/asm-commons-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895"
+  },
+  {
+    "path": "javalin/asm-tree-9.10.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b"
+  },
+  {
+    "path": "javalin/brotli4j-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b"
+  },
+  {
+    "path": "javalin/error_prone_annotations-2.48.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b49c5c958316ed67a09c699dda9aa749caf434d51d863dea599ef36a49b9c855"
+  },
+  {
+    "path": "javalin/gson-2.14.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f"
+  },
+  {
+    "path": "javalin/jackson-annotations-2.22.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+  },
+  {
+    "path": "javalin/jackson-core-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ff167a6317be15895706c26668f45b898efe40ab8780970658210fe1393d52a6"
+  },
+  {
+    "path": "javalin/jackson-core-3.2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "93d9090b8c505b2f942ad85dd5821e8c401bfbafafff11708a3fbe2ef9da18ca"
+  },
+  {
+    "path": "javalin/jackson-databind-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d0da14c12b16b5d54719aa172d83b542ff4abeb8b0fb7db476fde8ceece760ca"
+  },
+  {
+    "path": "javalin/jackson-databind-3.2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d27509f990d990fc779a01f3f612005ff6c67dc3bb0a720f5f4d9b2f5c713401"
+  },
+  {
+    "path": "javalin/jackson-module-kotlin-2.22.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "174e917ea64c0559df824e92317782a92eba7278de488d4a11df0b8597791874"
+  },
+  {
+    "path": "javalin/jackson-module-kotlin-3.2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d497603e016ca0a07fba3a44af5cfa192064b6c851886300e73cb6cd3d7c39cb"
+  },
+  {
+    "path": "javalin/jakarta.annotation-api-2.1.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe"
+  },
+  {
+    "path": "javalin/jakarta.enterprise.cdi-api-4.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "beaf74c4f2618189309e3f4a09c43effab633dd96aa1f6dc58a6ba7ee0042717"
+  },
+  {
+    "path": "javalin/jakarta.enterprise.lang-model-4.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "53acafe65b6ef0195fa1b8a0ef2650e5aa024c32cb4059c4df372d6b32089cd3"
+  },
+  {
+    "path": "javalin/jakarta.inject-api-2.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+  },
+  {
+    "path": "javalin/jakarta.interceptor-api-2.1.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ef787d3f713fc6ff4f02cd4b0dbed08f93d8af3400c90cbb43fb4b5c0583710b"
+  },
+  {
+    "path": "javalin/jakarta.servlet-api-6.0.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c034eb1afb158987dbb53a5fea0cadf611c8dae8daadd59c44d9d5ab70129cef"
+  },
+  {
+    "path": "javalin/jakarta.transaction-api-2.0.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875"
+  },
+  {
+    "path": "javalin/javalin-7.2.4-SNAPSHOT.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076"
+  },
+  {
+    "path": "javalin/jetty-annotations-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ce51d231435cdd774336abcb44a7817195fd12487ed213327e8d43db172af467"
+  },
+  {
+    "path": "javalin/jetty-ee-webapp-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f70d9b30fdfd970e8bbc462b9d6b4cb85f850428d8640529fcc1f1912b2941b4"
+  },
+  {
+    "path": "javalin/jetty-ee10-annotations-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c45ba9ff724845ef5848f86cf164c87824d4be18095216b9cba66a94a72b83b6"
+  },
+  {
+    "path": "javalin/jetty-ee10-plus-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "80d050384ef31c921e0fbeeded3c70fc8d35a29b7951511a9ccfaeb06b5e29c7"
+  },
+  {
+    "path": "javalin/jetty-ee10-servlet-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "021375ea80d84b5f9d46260916fc0450dc4fae5a95ce80f8289e87a0db07de47"
+  },
+  {
+    "path": "javalin/jetty-ee10-webapp-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "84de1014bb79f957f0fc66d3db9b2bc7eec19f01c8ace4e250b4707af0eed0f3"
+  },
+  {
+    "path": "javalin/jetty-ee10-websocket-jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bce3641addd34a0d9a3ce8080f31f3b7f45b2bbdf3e7d5655ccd5f4d529c7816"
+  },
+  {
+    "path": "javalin/jetty-ee10-websocket-servlet-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "83a58b4ee3bf6d0284c50304725cf93b694a67b1b1cc139af72500296dbf7359"
+  },
+  {
+    "path": "javalin/jetty-http-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e"
+  },
+  {
+    "path": "javalin/jetty-io-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc"
+  },
+  {
+    "path": "javalin/jetty-jndi-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a701368f9810433103836f0f2c0c0f6a2ca49f951d25d155e4e507821cb54b43"
+  },
+  {
+    "path": "javalin/jetty-plus-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0e29a87abf5b651f77e5c3e7c726f0ecef30a9bc57a5e0aa5aa3f784cfc0a7bd"
+  },
+  {
+    "path": "javalin/jetty-security-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "fcc0206c1ac66b632ef29a59ccf76c3f3737a62ef54694b1d111eeb2e6efe804"
+  },
+  {
+    "path": "javalin/jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787"
+  },
+  {
+    "path": "javalin/jetty-session-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "73aea4cdd91f2027da1a09cd5953b661625017971d53d8e1ff342f8547752b06"
+  },
+  {
+    "path": "javalin/jetty-util-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2"
+  },
+  {
+    "path": "javalin/jetty-websocket-core-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "a1ef0c79a4b8b9e4ce969e70d8de9fbed4776625863bdbd5eb5f69fb70208399"
+  },
+  {
+    "path": "javalin/jetty-websocket-core-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "d91becae70e7b15e6200f40d02239d8315f8b26c90d4ab38348fcdad41c0ebf5"
+  },
+  {
+    "path": "javalin/jetty-websocket-jetty-api-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "887090638bf758dce9268478a3ccf168929de52dcdecdddb4eaff62263cbd961"
+  },
+  {
+    "path": "javalin/jetty-websocket-jetty-common-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "933d05b566effad97f84b5d986be810a2928685c875d7fb90f301163f24d2718"
+  },
+  {
+    "path": "javalin/jetty-websocket-jetty-server-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0b189ffab87b02a4da1187dc4022410c5f235b5a1a7ccfeea3cc4846a8e80664"
+  },
+  {
+    "path": "javalin/jetty-xml-12.1.12.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "1c7b6320e3ad4ccca861ecfd1347f10ac6130ca2c2eb788a6b5dff3ab0c0f532"
+  },
+  {
+    "path": "javalin/kotlin-reflect-2.1.21.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bcd75a36ca4ad8e06117214ed807f8dea2fe61a71e07f91ca14f4335024b8463"
+  },
+  {
+    "path": "javalin/kotlin-stdlib-2.2.20.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+  },
+  {
+    "path": "javalin/native-linux-x86_64-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "c504e243961c4229d8e486ca8f87b757ad9a033dda471061c0134c050ddcaa7c"
+  },
+  {
+    "path": "javalin/service-1.23.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7f298d44dbb7688419f0179ee1dfa0e4436633272b05d38a5faf3a2b8d08697b"
+  },
+  {
+    "path": "javalin/slf4j-api-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+  },
+  {
+    "path": "javalin/slf4j-simple-2.0.18.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "8268bd018a5709b07209e0d8ca6221a37584ba1bc12ba985b8335a82c648bdd0"
+  },
+  {
+    "path": "javalin/zstd-jni-1.5.7-15.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "88af05c50951c2c8d0fe10c7b3451736204fcc389eaad01e767e7acc64e75fe2"
+  }
+]

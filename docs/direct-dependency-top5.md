@@ -251,3 +251,6 @@ Production0.7.0 unchanged, место не назначено. Emptyholdout Http
 [Протокол](go-control-lazygit-v1.md).
 
 R83: build-enabled cdxgen13.4 Java is now measured: original10 pairs11/0/0 exact components and direct edges, additional independent DBCP3/0/0. See [mode-specific report](cdxgen-build-enabled-v1.md). Passive Java failure is a permission-mode result; the successful external Maven mode is not a production runtime candidate without changing the no-project-execution contract. No global cross-mode ranking.
+
+
+R88 expansion update (2026-10-16): [Javalin reactor evidence](java-js-expanded-results-v1.md) adds a real19-project build pair, but production service image scanning fails its64MiB output budget. No expanded-corpus winner or changed ranking is established; preserve this failure in coverage.

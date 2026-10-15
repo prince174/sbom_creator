@@ -1,11 +1,12 @@
 # Expansion results v1 — 2026-10-15
 
-Four additional real-build pairs are complete: two Java and two JavaScript. There are now12 primary Java +12 primary JS pairs, plus the separate DBCP Java control:25 total (13Java/12JS). The frozen expansion still has16 pending repositories, eight per language. The target remains20 primary pairs each; pinned candidates are not counted as built. Original20 comparisons retain their fixed sampling definition.
+Five additional real-build pairs are complete: three Java and two JavaScript. There are now13 primary Java +12 primary JS pairs, plus the separate DBCP Java control:26 total (14Java/12JS). The frozen expansion still has15 pending repositories, seven Java and eight JavaScript. Javalin is a completed build/reference/image pair with a failed service analysis, not a successful accuracy case. The target remains20 primary pairs each; pinned candidates are not counted as built. Original20 comparisons retain their fixed sampling definition.
 
 | New pair | Partition | Build-reference components, root excluded | Direct build-reference edges | Max shortest root hop / graph edges | Validation |
 |---|---|---:|---:|---|---|
 | Commons Configuration2.11.0 |development|22|15|4 /31|Real Maven package, native/effective/CDX root agreement; artifact tree/config/schema |
 | Spring Petclinic4.0.0-SNAPSHOT, exact commit |development|106|16|7 /216|Real Spring Boot package; JRE image; isolated health UP; artifact tree/config/schema |
+| Javalin7.2.4-SNAPSHOT, exact commit |development|128 aggregate, includes reactor artifacts|72 across18 module owners;55 across14 shipped owners|Per-module labels retained|Real19-project reactor install; aggregate plus18 module CycloneDX references; native/effective/CDX agreement; image/tree binding; service fails output budget|
 | Pino9.6.0 |holdout|12|11|2 /14|Package build/prune; native npm root versions; isolated logger smoke; no-lock derivative |
 | Nest TypeScript starter1.0.0, exact commit |holdout|107|6|8 /191|Actual nest build; native npm root versions; compiled HTTP app smoke; no-lock derivative |
 
@@ -17,6 +18,7 @@ First unchanged-service results, exact names and versions:
 |---|---|---|---|
 | Commons Configuration |21/1/1, P/R95.45% |UNKNOWN;15 known reference root edges remain unmatched |xml-resolver namespace mismatch is retained |
 | Spring Petclinic |Acceptance metrics UNKNOWN; raw build-reference delta retained separately |UNKNOWN |Build-resolved and packaged-image scope need adjudication; confirmed payload/identity failure below |
+| Javalin reactor |Unavailable: service scan exceeds64MiB output budget |FAILED_ANALYSIS;55 shipped-owner reference edges unmatched |No final/os/full published; do not treat missing output as a successful empty scan |
 | Pino, including no-lock |12/1/0, P92.31%, R100% |11/0/0; versions100% |Extra transport test fixture remains visible |
 | Nest, including no-lock |106/0/1, P100%, R99.07% |6/0/0; versions100% |Missing @tokenizer/token@0.3.0 is retained |
 
@@ -31,3 +33,8 @@ Checks:298 tests passed,3 platform skips, known Starlette warning; targeted acqu
 Next: retain these as regression cases, obtain scoped packaged-reference labels for boot images, implement bounded large/nested/resource-JAR evidence handling with resource/security tests, and continue real module/workspace/Gradle builds from the frozen list. Those strata remain unbuilt gaps, not successes. Continue top-three comparisons on the expanded admitted scopes; previous small-corpus rankings cannot establish general production accuracy.
 
 Boot packaging adjudication (R87, 2026-10-16): the evaluation-only [v3 artifact report](../benchmarks/results/boot-packaging-labels-v3/report.json) confirms92 packaged dependencies (90 class,2 resource),14 absent build artifacts and1 UNKNOWN packaging-added artifact. All106 build artifacts have primary CycloneDX SHA256 labels. Full16 build-direct edges remain separate from9 packaged direct edges. These labels do not repair the service's zero confirmed Boot payloads or establish runtime execution; acceptance remains incomplete. First Javalin reactor build failed on missing build-context .git metadata and does not increase pair counts.
+
+
+R88 (2026-10-16): Javalin exact commit20ba71b211b5efa91f5c10ccb467326b86a1e5dc now builds all19 reactor projects. [Receipt](../benchmarks/references/paired-javalin-reactor-v1/receipt.json) binds real CycloneDX2.9.3 aggregate plus18 module SBOMs to the final artifact image by digest.14 JAR owners are shipped;4 POM-only owners remain separately labelled. All72 owner-direct edges agree between per-module CycloneDX, native trees and effective declarations;55 belong to shipped JAR owners. The aggregate's128 components include reactor artifacts and cannot be used as a runtime direct list.
+
+The first failure was missing Git metadata; isolated source context now includes exact commit metadata while excluding local Git config/hooks/logs. A second attempt built successfully but CLI aggregate execution wrote only the root SBOM; explicit module makeBom addon invocations retain separate owner graphs ([plugin goals](https://cyclonedx.github.io/cyclonedx-maven-plugin/makeAggregateBom-mojo.html)). No sources/commit were changed. The same production service then failed image scanning: Syft exceeded its64MiB captured output budget on the84,517,376-byte multi-owner artifact image. Diagnostic retry confirmed the cause. Limits remain intact; failure is saved, with no fabricated component metrics or published three-view output. Required next work is bounded artifact evidence acquisition, not excluding this difficult project.77 targeted acquisition/payload/scanner/benchmark tests pass,1 platform skip; Ruff passes. This stage expands evidence only; no algorithm improvement or >90% claim.

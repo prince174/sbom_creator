@@ -1,0 +1,975 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:49b1b13f-d372-336b-86de-3b12bf0456f2",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.3",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "e7c87ab327b65b23c681fc9dc8bb620b"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "fa3f0f04f4d5077b5e085d4d09aa2e68aeba5260"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "c452d5eebe28bc86bef2e7c72d129f04f60877bef843eac8120f01fb655be293"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "ec0344ed2ffe62d565aaf936a37140d04c7fffa8669a666be0366cd44eec3195232d79841cdec47030b79068216ac7e1a8c805255758e3d418dae32a4b9b9beb"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "3df26b2a00d87fe090851975ebcc30217f98634e7c47d07128e148f325ebfe3bc0790b2f52ad4591734b7b0de738f003"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "470c1b4962379b5b6494c75bd1475da3519bbe2543999c95f26b4021164d3d05419b0c3f704443162fe5433a204250e9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "900e9c4edb18940ed3c4a4ba6946957fa613ef0d4b0c380551638f229206373c"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "5e36433e18ae24f7460902da27818874df5d1d73df1a97e49e7369335f7cc61ca595466a2d37789fba7eaa7f7f251b29216c3d7a78910b2ec38e2ed68ea84876"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT?type=jar",
+      "group" : "io.javalin",
+      "name" : "javalin-rendering-handlebars",
+      "version" : "7.2.4-SNAPSHOT",
+      "description" : "Javalin rendering plugin for Handlebars template engine",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://javalin.io/javalin-utils/javalin-rendering-handlebars"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://central.sonatype.com/api/v1/publisher"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/javalin/javalin/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/javalin/javalin.git/javalin-utils/javalin-rendering-handlebars"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,runtime"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "publisher" : "QOS.ch",
+      "group" : "org.slf4j",
+      "name" : "slf4j-api",
+      "version" : "2.0.18",
+      "description" : "The slf4j API",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "fe2837bd49bfb76657419002fed20ca9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "78a9e7a37cd6360e0b818e86341b24123d28d4df"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "539288fa0c96cea750d11293dbed4c562630587aa7cd88bbf76ad04390d1c40636506da48faa6453090c7e9baa6b690b9fbded55a7e2b4a91547eeea011f971a"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "917885c7812289f5178f68e3c421153d55abd7fe5cc9a071ffdc5de48b7afc79c352c667a20a3ad0f3b4660952932513"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "d6898eb5dd2e5caa2185c6cd2804735802b3848a3041b82ef7faa7904b3eaf5ac382d43a70a71e22b77a929e10ae2aaf"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "6bbc9103bec05ef3280dd895d8c6267ccf8b940df03c9f5145cfaa77f6e9a41a"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "e2913e96e4b1c94e7cb5c46828d1afe68c5a7248293d5c16aaa9ab462ee8e0ff97dd3d1155d2a64f66ccd9bc1ac0c83476cc886b675004b2f84aaaf50e2b2af2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.slf4j.org"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/com.github.jknack/handlebars@4.5.4?type=jar",
+      "group" : "com.github.jknack",
+      "name" : "handlebars",
+      "version" : "4.5.4",
+      "description" : "Logic-less and semantic templates with Java",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "e9bc68ab259fdc4a134b5729881756d4"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "e864112bd3731eb1504fb655d276cea8ce2e834f"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "3b486535d0606306c9abca7b5a48066a2ec8186ecdd03e2ff02c70b15c13840c"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "0b67fca27090235139505634f0b72d8eec78e9878e8c221b1528d6ccf11014e33e7a4367f7c4530263b34704886b2cb867e9b5d62dbd4498b084ad91420cab8d"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "84f9781729368313a8064661780321346fa7fa12a2e8bd5f1c1dedb7ce5006e247662f49efc12111ddbe3c0ac9b77571"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "5d924e664b1ce937e1e7f4d98fe8c89a602aa4bfde505a78810b1031dd923b9636e9050123bdbf476e6150eaebfc5212"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "7f27f732af2fd1cb51ea753979e97cec36859613169623c698e4f44527bdf5ca"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "813ffd5ea794916a4204ff87c9cbc9237b0e14e9a25cd5ba2a833ca97e7ff335558bc6f9a2b5b064180db1f93c12881d78b478b73975a39231ea29474dc3a3da"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/com.github.jknack/handlebars@4.5.4?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/jknack/handlebars.java/handlebars"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://ossrh-staging-api.central.sonatype.com/service/local/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "scm:git:git@github.com:jknack/handlebars.java.git/handlebars"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.commons",
+      "name" : "commons-lang3",
+      "version" : "3.20.0",
+      "description" : "Apache Commons Lang, a package of Java utility classes for the classes that are in java.lang's hierarchy, or are considered to be so standard as to justify existence in java.lang. The code is tested using the latest revision of the JDK for supported LTS releases: 8, 11, 17, 21 and 25 currently. See https://github.com/apache/commons-lang/blob/master/.github/workflows/maven.yml Please ensure your build environment is up-to-date and kindly report any build issues.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "4b29562ded527aa074e1d44f8646dac5"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "65897b3e5731220962e659e001904af3c3cbeba9"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "1c72db334ea44f932c35e602b78907865f5bab43e30c871c9be67c8184eaa778f32d7bc3ab525d5921cd28619d3f9babfd483f17de54f007ee07db2e074b0307"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "77dd27c4d5e9372c002bd6878d2cfaaec3cf46dd57d65de63d7f2e09351344531cfa81a537b56628ac6db18adee7e484"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "3456de40eef224b3ad195d2f218dd28eacb0da07607aee7ead94bd8d54bd8311d51c28d4066db4bf8b69a2df48c415f5"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "36e3f71352fa14bc580db45a05b09b063392c6d39acf9e24ffa6a67bbc07a336"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "6ecbc05bb5cd3f7537078b0cf51b0a5f7189dfa60c22e5ec0d6b9e2fd3f7fa7566770b5da87e0c9929f48769933c3e3a473fd5cc7231672fca36ab1fee1f8670"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://commons.apache.org/proper/commons-lang/"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://github.com/apache/commons-lang/actions"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/LANG"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/commons-user/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitbox.apache.org/repos/asf/commons-lang.git"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.apache.commons/commons-text@1.15.0?type=jar",
+      "publisher" : "The Apache Software Foundation",
+      "group" : "org.apache.commons",
+      "name" : "commons-text",
+      "version" : "1.15.0",
+      "description" : "Apache Commons Text is a set of utility functions and reusable components for processing and manipulating text in a Java environment.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "756b7c5438d89a0c311d811c1a06d19a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "9899093aa40f0199d6c39b131b8f087cdb37e399"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "be41b2c3a347bfd6eea3a957fb9a8d631c32b973fbbbe3e097d544d893ab4e587c3dfc38e89b4039b815b17d268cc7940e1ffb464050c7924acb56cc422613fb"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "d3df5a4656967277d738e9d981d7b065dcda91f25553f8fc5c3d26edf07079cc5526508b0951da45ef614663ee9d471d"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "bedce93fea6c4aaaf7feb52f75d4265c41b3b0d39976248b4d9d5b879d18403335364b3f845585ce5fceb80a34c592df"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "48fd7a8921eca0e1dc185a0ad5f8e89ab3399f0327bc57cd9e09988fce75d1ef"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "f996b808d5f7bff8ac7aa79a2f73b93a4edb687cace7b54089246b6b4005ebbaab00f752a79205479023c802a56e42605806113d6af36e28469fa6a63ae710d2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.apache.commons/commons-text@1.15.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://commons.apache.org/proper/commons-text"
+        },
+        {
+          "type" : "build-system",
+          "url" : "https://github.com/apache/commons-text/actions"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://repository.apache.org/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://issues.apache.org/jira/browse/TEXT"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail-archives.apache.org/mod_mbox/commons-user/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitbox.apache.org/repos/asf?p=commons-text.git"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4?type=jar",
+      "group" : "org.openjdk.nashorn",
+      "name" : "nashorn-core",
+      "version" : "15.4",
+      "description" : "Nashorn is an Open Source JavaScript (ECMAScript 5.1 and some 6 features) engine for the JVM.",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "a9b3360e6a486cf62c1952c7816b7d97"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "f67f5ffaa5f5130cf6fb9b133da00c7df3b532a5"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "6f816e84dfd63a81d4eaa7829c08337bbaff3ec683ff3bf6bbd90d017a00dc6f"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "3b560e1ae67d5d5d19250849dee3f813d2c801e56ba85d90439a067378a47f95020910da85b7c8afb6675ea2e25cd274953483efd07e89097656aadc804c8020"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "b88e7b4d6716d9bc0bd15449059b0a5214267fe92b19a951019f4bad1b7b407c4146e086a6ad91b731ce68b1f8a1607a"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "54bef9c94a7df0fd26dd48fd63f98927430b5f3aeb4fa08a9512e71f3033d260c79153a34195e526b8d21bdab520324d"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "cbfb4e53e18d407c5c50211c58c9c744ac5f3abc75fec97631bb25278845635e"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "67738c7a2707b609ad56e4b0135276ea68bd63afbac2e9ad1501cbf48d64665e7914007a402361cb39ab60b07862d304c188cda589266efdecb3601f082222b2"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "name" : "GPL v2 with the Classpath exception",
+            "url" : "https://github.com/openjdk/nashorn/blob/main/LICENSE"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/openjdk/nashorn"
+        },
+        {
+          "type" : "vcs",
+          "url" : "http://github.com/openjdk/nashorn/tree/main"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+      "publisher" : "OW2",
+      "group" : "org.ow2.asm",
+      "name" : "asm",
+      "version" : "7.3.1",
+      "description" : "ASM, a very small and fast Java bytecode manipulation framework",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "542c066ed00a4fa9857e9343e2c595b9"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7ec32f922315924e82bf58b36ee1b673b2a9b820"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "2f67e11ceec819ebd88ddee5300aba699b1cbab2e20c22e97cf027d3be93959b"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "c2d35db05912e943f64014980cbe3a1b17307cd525448f6bb75374c9f8c4c99d0f566b3588b6b2380ff3aa40aa85b436f5ade4d4bc0d4fd3d41cc3bd310c9a16"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "9a88a419e7cd2ab3cbd8b48f6a024ab28734a142c3184135d0064f43742e516ff0a3d5b2ee5bbc1cf5f5a60816cd8a0e"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "b0e79aa478b6622b3470e4efdc6db298e6bb077b99b49baa7e3e1eee6e4ac64dc48cc9170ff1237cef0f4705bc7539f3"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "6e3969a0f1b9b2f26cad7361ce3da42f25823c88752c4bacd82d322b6604fd72"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "c08f45bedf7a09fa6829228c127dc475dea8888a8d02954319e7202d0e27314494180ec5cf6e1b6825aada8430ef1350df37c0a772899cfa3b7388eee1e1ec74"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://asm.ow2.io/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://repository.ow2.org/nexus/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://gitlab.ow2.org/asm/asm/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail.ow2.org/wws/arc/asm/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitlab.ow2.org/asm/asm/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.ow2.asm/asm-commons@7.3.1?type=jar",
+      "publisher" : "OW2",
+      "group" : "org.ow2.asm",
+      "name" : "asm-commons",
+      "version" : "7.3.1",
+      "description" : "Usefull class adapters based on ASM, a very small and fast Java bytecode manipulation framework",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "be985ed0af52424f8f5d27ec71c249ab"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "daaa79ef260eb67404b9a52bc319a024c7f49cfe"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "87cd8bb3c6bf6bcbb33fca48060c5065f66ebf6a3d7de9bf18bff51bcf156ebc"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "c9488ab914666b5dbdfeaf82be7da350c33808f591cb3acc6c9c684c6cdc77abf6b0c4043d6fa11a38a503e93759442f2c968fa3162f3042e7b947173675bec5"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "376ac728a2de913e2ef57ca7ec46a829177281ad94b9e748fb9bf9ad6e4d13435cc7e300ebfbd105b28f05253365df2f"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "22a3d8d64ea718538affad24a3ff12fc76d965cbf1c8cd147c5bb9ce80c1579b0a47dc02d1a16958dcda9b50b0ac1a86"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "cb209df89c5a89ccbd69dcb35fc353e155c4530f1fdccd65ac20b015a5e4ca6c"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "8397aef95b8c2bd6c2a23e48e555e946d6439ff9fbc92b975e4b308c6c5966d5cc3303038b196f6ea425cf7eb18ab8e29594e8997833d5d064ba35fbf29108e3"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.ow2.asm/asm-commons@7.3.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://asm.ow2.io/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://repository.ow2.org/nexus/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://gitlab.ow2.org/asm/asm/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail.ow2.org/wws/arc/asm/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitlab.ow2.org/asm/asm/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar",
+      "publisher" : "OW2",
+      "group" : "org.ow2.asm",
+      "name" : "asm-analysis",
+      "version" : "7.3.1",
+      "description" : "Static code analysis API of ASM, a very small and fast Java bytecode manipulation framework",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "b5b082ef17f6d6bb3d8ed9c129161bdb"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "045dfd299ea0c17d534499c4f06417ceccfa2d02"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "46b8a8efd4b94facb5ab4b35afe30ee0546ae7a43d2c64e6def56c2f168fefa5"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "708fb7693663c2d5bd9338e13c8aa1bf8491affff7a8ad037d1d171a3ce5c24bebfd99c6b45051badcd5bd185c2342a1633c4a713e47216540ba3dc003e24b2a"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "1c05cacc95161a12891b77f3ad27384acbd93514652cffca8a44b09e1e3e5d0e26d167d95043130a4a3247d536b58a59"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "d9e891cc865b80b1c51625a08e51b5447b2e9ebdbb60ebf58def1f48ac958bfe05dcd39521e7feb694da426cf1619027"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "4b870cc2796b9e41269bdfd9ead74fc5bb9491c1d68671842971498ba5b3eb55"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "6a8b84e9077162ff82ffe48f4b13b2db933b09f3723076ca7056c9e14759fa3b0b4301e24e582da649ae0afab5e5c7e0ff0311d70d0e876811a45193aff39080"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://asm.ow2.io/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://repository.ow2.org/nexus/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://gitlab.ow2.org/asm/asm/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail.ow2.org/wws/arc/asm/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitlab.ow2.org/asm/asm/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+      "publisher" : "OW2",
+      "group" : "org.ow2.asm",
+      "name" : "asm-tree",
+      "version" : "7.3.1",
+      "description" : "Tree API of ASM, a very small and fast Java bytecode manipulation framework",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "3ef0bd9837a905e0b2d443de9199a409"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "587ce54d243145b2e89598bfcea7823ded73be5d"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "f91a4a8aa868c5c4665bb4fd134019a91f9f8b9216527fba295e3c8b5422b78b"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "31f1b5c4cc57148ca88070be9151cddcabe45c250fe81598eed588899f2852966f8bc7e6fd5032704bab04182db811c5000d9bb4b85108c4d207281aae658653"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "4e217d97967171b594f6dbb987f1636b709d88d91e47d1cfc2f70e4361a76111795b69894d2168f4e3d6355bbad89931"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "5f1bf0928173318033fbbabac96468a1b9cc7793f2e08ab74b48ebed80301ec957acdb435a728f35c248ef6be7b4fb26"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "3e8a48b0c3a4a135d676d5bf14c02896ebe8ae576e73159c9476d8e7bd5923f4"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "152f1031b3db062fc60160fa43e2b415bedd5414cd61a6ff3b60986d1443fe7a14436125883af1d5b1a478b771bad9e750eabc6b8519bf145bbb5415d43d91bb"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://asm.ow2.io/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://repository.ow2.org/nexus/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://gitlab.ow2.org/asm/asm/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail.ow2.org/wws/arc/asm/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitlab.ow2.org/asm/asm/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.ow2.asm/asm-util@7.3.1?type=jar",
+      "publisher" : "OW2",
+      "group" : "org.ow2.asm",
+      "name" : "asm-util",
+      "version" : "7.3.1",
+      "description" : "Utilities for ASM, a very small and fast Java bytecode manipulation framework",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "181141e54fdd56474937d7ebfb325ba3"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "cac1bf54c2fb86671c357d281d1060fe5d50a0de"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "182128592742ed4883ac82bf205f137b6bfbe1234c68e6feb13759e75a85b729"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "dc79e698122c8102365a2976f7f2f91208954b35c4291056a46c1390013a9a42245a49fb87b43cb265927ac93972e26cc1bc47222bddfafe78a3d60415ed0142"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "6e7921cc218a0bceadd82a27da3c8970105a5c030f6d6fbc9d72b0c94f7f4936065f121d4e34dbdf8cb6cd33821fef94"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "0ddac628110271305b2ebbae10cf117755b420e07685542a0be68dfaa5b5dc69f17f13340963b837e69c82111842c4c3"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "863b0f69f0b09026e2c1bad142316e1dfc372f9b505c66a49eb672c237a92b8f"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "908c9541631afafec4ea3296c4b2979a45705d5a01770f93048677a75526a4510122afe9df9ccb7d89c85add557055bf616e65950a692c544647045802855eef"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "BSD-3-Clause",
+            "url" : "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.ow2.asm/asm-util@7.3.1?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://asm.ow2.io/"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "http://repository.ow2.org/nexus/service/local/staging/deploy/maven2"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://gitlab.ow2.org/asm/asm/issues"
+        },
+        {
+          "type" : "mailing-list",
+          "url" : "https://mail.ow2.org/wws/arc/asm/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://gitlab.ow2.org/asm/asm/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "group" : "org.jetbrains.kotlin",
+      "name" : "kotlin-stdlib",
+      "version" : "2.2.20",
+      "description" : "Kotlin Standard Library",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "1d746838e4cff4630930e9b1aed8da0a"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "5380b19fa1924399b62ce3a1faffebb2b4f82272"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "22075ba5931e86fcf471249b88593f0651a356a71a2f3152e25effca9a7420a1562579877aca40c98f625bf5a35fa983393a939cb54bbb4c58de13676254d62d"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "99bd04d023ce2816dab6b2444797236d23de36e3258da3739ec5d21908734e433f48445455566f5c1d86273ce59c8a8f"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "7530e5950cdd01423f3ced86b4d7453108d436cd0ce4597ba94ca8aeed0f0a84cb2b8287eb209ca02157d7bb180131b9"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "ecff6e435f420f4e079f9a354414b3f274b5ba59671457ae9ae2dd02adf8d1aa"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "b7ca6270fd2daed8a241e352d1d049e42b8e3f49ab64ad9e30e8cba114a12b45cee12cfc1f629f538eaf9643b26281768c1a881b66536c588122b06212bb4aca"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0",
+            "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://kotlinlang.org/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/JetBrains/kotlin"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT?type=jar",
+      "dependsOn" : [
+        "pkg:maven/com.github.jknack/handlebars@4.5.4?type=jar",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/com.github.jknack/handlebars@4.5.4?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar",
+        "pkg:maven/org.apache.commons/commons-text@1.15.0?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+        "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.apache.commons/commons-text@1.15.0?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-commons@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-util@7.3.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.ow2.asm/asm-commons@7.3.1?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.ow2.asm/asm-util@7.3.1?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+        "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}

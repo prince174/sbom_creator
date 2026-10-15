@@ -242,7 +242,28 @@
       "language": "Java",
       "partition": "development",
       "commit": "20ba71b211b5efa91f5c10ccb467326b86a1e5dc",
-      "status": "PINNED_NOT_BUILT"
+      "status": "PAIRED",
+      "pair": "paired-javalin-reactor-v1",
+      "analysis_status": {
+        "stage": "image_scan",
+        "type": "RuntimeError",
+        "reason": "Syft exceeded output limit",
+        "max_sbom_bytes": 67108864,
+        "runtime_limits_changed": false,
+        "status": "FAILED_OUTPUT_BUDGET"
+      },
+      "reference_components": 128,
+      "reference_module_count": 18,
+      "shipped_module_count": 14,
+      "reference_module_direct_edges": 72,
+      "known_shipped_module_direct_unmatched": 55,
+      "components": null,
+      "direct": {
+        "status": "FAILED_ANALYSIS"
+      },
+      "component_metrics_status": "FAILED_OUTPUT_BUDGET",
+      "receipt_sha256": "7abd5a64078f9aea84f6e8a0351dfa3a7f9d945fc2aeda8cc1e8265aec3fad10",
+      "scope_note": "Aggregate includes reactor artifacts; per-owner labels separate. Failed service output is not an empty successful prediction. All known shipped edges remain unmatched, not excluded from coverage."
     },
     {
       "project": "java-petclinic-microservices",

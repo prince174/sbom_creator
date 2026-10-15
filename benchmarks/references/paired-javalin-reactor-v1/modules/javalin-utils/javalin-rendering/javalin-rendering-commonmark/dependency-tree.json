@@ -1,0 +1,29 @@
+{
+  "groupId": "io.javalin",
+  "artifactId": "javalin-rendering-commonmark",
+  "version": "7.2.4-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "org.commonmark",
+      "artifactId": "commonmark",
+      "version": "0.30.0",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "2.2.20",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    }
+    ]
+}

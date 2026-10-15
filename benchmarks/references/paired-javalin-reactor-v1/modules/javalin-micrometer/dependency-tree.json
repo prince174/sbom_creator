@@ -1,0 +1,145 @@
+{
+  "groupId": "io.javalin",
+  "artifactId": "javalin-micrometer",
+  "version": "7.2.4-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "io.micrometer",
+      "artifactId": "micrometer-core",
+      "version": "1.17.1",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.jspecify",
+          "artifactId": "jspecify",
+          "version": "1.0.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.micrometer",
+          "artifactId": "micrometer-commons",
+          "version": "1.17.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.micrometer",
+          "artifactId": "micrometer-observation",
+          "version": "1.17.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.hdrhistogram",
+          "artifactId": "HdrHistogram",
+          "version": "2.2.2",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "io.micrometer",
+      "artifactId": "micrometer-jetty12",
+      "version": "1.17.1",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "io.micrometer",
+      "artifactId": "micrometer-registry-prometheus",
+      "version": "1.17.1",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "true",
+      "children": [
+        {
+          "groupId": "io.prometheus",
+          "artifactId": "prometheus-metrics-core",
+          "version": "1.7.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "true",
+          "children": [
+            {
+              "groupId": "io.prometheus",
+              "artifactId": "prometheus-metrics-model",
+              "version": "1.7.0",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "true"
+            },
+            {
+              "groupId": "io.prometheus",
+              "artifactId": "prometheus-metrics-config",
+              "version": "1.7.0",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "true"
+            }
+            ]
+        },
+        {
+          "groupId": "io.prometheus",
+          "artifactId": "prometheus-metrics-tracer-common",
+          "version": "1.7.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "true"
+        },
+        {
+          "groupId": "io.prometheus",
+          "artifactId": "prometheus-metrics-exposition-formats",
+          "version": "1.7.0",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "true",
+          "children": [
+            {
+              "groupId": "io.prometheus",
+              "artifactId": "prometheus-metrics-exposition-textformats",
+              "version": "1.7.0",
+              "type": "jar",
+              "scope": "runtime",
+              "classifier": "",
+              "optional": "true"
+            }
+            ]
+        }
+        ]
+    },
+    {
+      "groupId": "org.jetbrains.kotlin",
+      "artifactId": "kotlin-stdlib",
+      "version": "2.2.20",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    }
+    ]
+}
