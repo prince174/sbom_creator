@@ -15,10 +15,11 @@ def metrics(actual, expected):
 
 def main():
     rows = []
+    selected = set(json.loads((ROOT / 'benchmarks/java-js-twenty-split.json').read_bytes())['development_projects'])
     for receipt_path in sorted((ROOT / 'benchmarks/references').glob('paired-*/receipt.json')):
         receipt = json.loads(receipt_path.read_bytes())
         project = receipt.get('project', '')
-        if not project.startswith(('java-', 'javascript-')):
+        if project not in selected:
             continue
         pair = receipt_path.parent.name
         work = ROOT / 'benchmarks/.work' / pair

@@ -247,3 +247,5 @@ G2 на fixedholdout Lazygit: native selected-main TP33FP0FN0,versions33/33.
 Production0.7.0 unchanged, место не назначено. Emptyholdout HttprobeFP0,
 его precision/recallnull не добавляются к положительным метрикам.
 [Протокол](go-control-lazygit-v1.md).
+
+R83: build-enabled cdxgen13.4 Java is now measured: original10 pairs11/0/0 exact components and direct edges, additional independent DBCP3/0/0. See [mode-specific report](cdxgen-build-enabled-v1.md). Passive Java failure is a permission-mode result; the successful external Maven mode is not a production runtime candidate without changing the no-project-execution contract. No global cross-mode ranking.

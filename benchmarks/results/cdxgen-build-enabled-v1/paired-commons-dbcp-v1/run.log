@@ -1,0 +1,27 @@
+v24.22.0
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: /usr/share/maven
+Java version: 17.0.20.1, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.6.87.2-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+[1mCycloneDX Generator 13.4.0[0m
+Runtime: Node.js, Version: 24.22.0
++------------------------+------------+--------------------------+----------------------------------------------------+
+|                                           SECURE MODE: Environment audit                                            |
+|                                                       1 high                                                        |
++------------------------+------------+--------------------------+----------------------------------------------------+
+| Category               | Severity   | Variable(s)              | Details                                            |
++------------------------+------------+--------------------------+----------------------------------------------------+
+| Privilege              | HIGH       | UID                      | cdxgen is running as root (UID 0). Any code execut |
+|                        |            |                          | ed during SBOM generation—including package manage |
+|                        |            |                          | r install hooks—will run with full system privileg |
+|                        |            |                          | es.                                                |
+|                        |            |                          | Mitigation: Run cdxgen as a non-privileged user. U |
+|                        |            |                          | se a container or VM with a dedicated low-privileg |
+|                        |            |                          | e account.                                         |
++------------------------+------------+--------------------------+----------------------------------------------------+
+SECURE MODE: DO NOT run cdxgen with root privileges.
+✔ Preparing environment  0.0s
+✔ Generating BOM  3 components  24.7s
+✔ Post-processing BOM  0.0s
+✔ Validating BOM  valid (js)  0.0s

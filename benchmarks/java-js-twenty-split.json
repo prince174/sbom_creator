@@ -1,0 +1,27 @@
+{
+  "development_projects": [
+    "java-commons-cli",
+    "java-commons-codec",
+    "java-commons-compress",
+    "java-commons-csv",
+    "java-commons-io",
+    "java-commons-lang",
+    "java-commons-text",
+    "java-gson",
+    "java-jsoup",
+    "java-slf4j",
+    "javascript-axios",
+    "javascript-chalk",
+    "javascript-commander-js",
+    "javascript-debug",
+    "javascript-express",
+    "javascript-fastify",
+    "javascript-hapi",
+    "javascript-isarray",
+    "javascript-koa",
+    "javascript-ms"
+  ],
+  "excluded_positive_control": [
+    "java-commons-dbcp"
+  ]
+}

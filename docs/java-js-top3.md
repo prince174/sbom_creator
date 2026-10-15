@@ -86,3 +86,7 @@ Next: use manifests/locks legitimately acquired from each paired image to test
 source+image variants; normalize owner and production scope without reading the
 reference; expand Java paired projects. Rank only after comparable coverage,
 exact identities/versions, TP/FP/FN and count deltas are available.
+
+## R83 update — external Maven mode, 2026-10-15
+
+[cdxgen13.4 with native Maven allowed](cdxgen-build-enabled-v1.md) now produces valid SBOMs on all10 Java development pairs: exact components/direct11/0/0 (four positive roots), plus independent DBCP control3/0/0. This replaces NO_SBOM only for the new build-enabled mode; the previous passive failure remains reproducible. It is the strongest measured ready-made Java result with Maven execution permitted, but is not production-compatible as-is. Keep execution modes separate when choosing a runtime technique. JS lock-assisted scores do not establish no-lock production accuracy.

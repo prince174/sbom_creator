@@ -1061,3 +1061,10 @@
 - Runtime evaluator now indexes nested components and metadata owner; regression covers nested root and dangling analysis targets. Full service suite 276 passed, 3 platform skips; Ruff passed.
 - User clarified lockfile may be absent in production. Lock-assisted JS scores are a separate favorable stratum; they cannot establish no-lock production accuracy. Next: source manifest plus image package metadata replay without source or image lockfiles; UNKNOWN for unresolved owners/versions.
 - cdxgen13.4 Java failure diagnosed in jvmBom.js createJavaBom: attempts Maven dependency:tree -N through safeSpawnSync despite passive flags; Node child-process policy rejects it. Not a general Java capability failure.
+
+## R83 — build-enabled cdxgen Java comparison, 2026-10-15
+
+- Corrected the overly restrictive competitor protocol: cdxgen13.4 may execute Maven in an external capability-dropped container without secrets/socket. Service runtime remains passive. Source read-only; oracle only read after prediction; all 11 schemas and zero process exits checked.
+- Original 10 Java projects: components/direct11/0/0 on four positive roots. Frozen DBCP control3/0/0. Six empty roots do not inflate accuracy. This substantially improves cdxgen's measured Java compatibility, but does not satisfy production integration because it invokes project build tooling.
+- [Detailed report](cdxgen-build-enabled-v1.md), commands/tool versions/image digest/raw logs retained. CPU/memory limits are not peak usage. No cross-mode speed ranking.
+- Explicit fixed20 development selection prevents new control receipts entering tuning replays. Targeted graph/count/optional tests7 pass and Ruff passes. No runtime algorithm change in this stage.

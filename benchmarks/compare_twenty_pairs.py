@@ -14,9 +14,11 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     rows = []
     receipts = []
+    split = json.loads((ROOT / 'benchmarks/java-js-twenty-split.json').read_bytes())
+    selected = set(split['development_projects'])
     for path in sorted((ROOT / 'benchmarks/references').glob('paired-*/receipt.json')):
         receipt = json.loads(path.read_bytes())
-        if receipt.get('project', '').startswith(('java-', 'javascript-')):
+        if receipt.get('project') in selected:
             receipts.append((path, receipt))
     if len(receipts) != 20:
         raise ValueError('Expected20 Java/JS pairs')

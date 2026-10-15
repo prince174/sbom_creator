@@ -35,10 +35,11 @@ def optional_declarations(raw):
 def main():
     directory = ROOT / 'benchmarks/results/java-js-twenty-v1'
     rows = []
+    selected = set(json.loads((ROOT / 'benchmarks/java-js-twenty-split.json').read_bytes())['development_projects'])
     for receipt_path in sorted((ROOT / 'benchmarks/references').glob('paired-*/receipt.json')):
         receipt = json.loads(receipt_path.read_bytes())
         project = receipt.get('project', '')
-        if not project.startswith('java-'):
+        if project not in selected or not project.startswith('java-'):
             continue
         work = ROOT / 'benchmarks/.work' / receipt_path.parent.name
         source = work / 'src' / ('gson/pom.xml' if project == 'java-gson' else 'slf4j-api/pom.xml' if project == 'java-slf4j' else 'pom.xml')
