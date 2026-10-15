@@ -1,0 +1,78 @@
+{
+  "experiment": "R5",
+  "project": "javascript-chalk",
+  "commit": "5dbc1e2633f3874f43c144fa4919934bc934c495",
+  "repository_url": "https://github.com/chalk/chalk.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:b7e1bc940caeed66b7eb5b3da7245aacbc7f6bfdcf838085f070f81aee1bff1b",
+  "runtime_image": "sha256:b14745436ea64b61a38f82557f088af35e7d36a13ccbb7ad5bfc59fddb3df5ec",
+  "runtime_config_digest": "sha256:91992a790a1d8b943a8e3ce9c6f18a06240fb12917b911a68d40232baca742d0",
+  "archive_binding": {
+    "index_digest": "sha256:b14745436ea64b61a38f82557f088af35e7d36a13ccbb7ad5bfc59fddb3df5ec",
+    "platform_manifest_digest": "sha256:3c5dc5a038ae64c9ca8efc1eea7bd6f18c24fce42b3b7d2ab8d218c9aff36e92",
+    "config_digest": "sha256:91992a790a1d8b943a8e3ce9c6f18a06240fb12917b911a68d40232baca742d0",
+    "syft_archive_manifest_digest": "sha256:70e23d8c721601dc122f41f76d8f9853cf21eafab66212ca910d34bf68275183",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 67,
+  "application_tree_sha256": "13390346be4b784d6357b018b5b45abcdad68971bb7482547e41adcfaa4fd707",
+  "reference_sha256": "a677bfa638e015576dbf1b49aade00fb9ce4aa5047c7b64396217b89ec7465e7",
+  "package_lock_sha256": "1feab23208eba7f1e90a90066ad9591c6335e3b48ea603ba95475e4bdc5d0377",
+  "source_manifest_sha256": "923f1639eaaa3146629afd78cdb05e00bb51a41f18b27c817d7c652b1ee0bf62",
+  "recipe_sha256": "c94cbbc26ccc4badba9313d62fd916baba04b5abfc7385628ddb07afdd10d522",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope",
+  "declared_direct_count": 0,
+  "reference_root_edges": 0,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": 71.125,
+  "analysis_seconds": 15.938,
+  "timing_note": "Wall clock",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-chalk-v1/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "CI_CONFIGURATION": 3
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "ci_configuration": 3
+    },
+    "source_count": 3,
+    "image_count": 292,
+    "selected_count": 288,
+    "final_count": 199,
+    "os_count": 89,
+    "full_count": 288,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 277,
+      "UNKNOWN": 7
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.312
+  },
+  "outputs": {
+    "final.cdx.json": "7a7acdd15bfcbd2b22a314df05a70c0e0d3a1b4e05c231426f573a2e193dffaa",
+    "os.cdx.json": "fdb7466611cfc87a93494a21bda22fa957b099e781a9d8c02908d51bcbd08f78",
+    "full.cdx.json": "7bb6e4756ec5ece0673df53e151e09375cea11be738ebf73c9849f7dcc3505a2",
+    "source.syft.json": "d53f86a288eeca0149a68dc9b190ed1cbc0b2862ca3c2103e85b8edb226679ad",
+    "image.syft.json": "4e2814ceb8b8a9cc6032e24e4b0c0e0c24a553815a90d37ba82e77a94af66885",
+    "provenance.json": "ffff9d06c6d2b07d749fb0433c8555f594571fd8dd1e55488bbfaedc6b251c01"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier"
+}

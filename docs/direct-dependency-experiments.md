@@ -967,3 +967,13 @@
 - User reiterated Java/JavaScript only. Seven JS/two Java pairs complete.
   Next: remaining JS builds and Java expansion; other languages deferred.
 - [Pair](paired-debug-v1.md).
+
+## R70 — Chalk pair and API reference isolation, 2026-10-15
+
+- Existing Chalk build completed; no duplicate. Tree/image binding/three schemas
+  passed. Empty direct graph yields0/0/0 with null accuracy, not100% success.
+- API test verifies reference never passed to runner, evaluation happens after
+  analysis, artifact authenticated/downloadable. Eight API/evaluator tests pass.
+- Ruff passed. Eight JS/two Java pairs now complete. Next: ms/commander then
+  Java expansion; workspace/optional/profile coverage tracked separately.
+- [Pair](paired-chalk-v1.md).

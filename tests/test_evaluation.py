@@ -1,9 +1,12 @@
 import json
+import time
 
 import pytest
+from fastapi.testclient import TestClient
 
+from sbom_creator.acquire import Settings
 from sbom_creator.evaluation import compare
-from sbom_creator.service import Request
+from sbom_creator.service import Request, create_app
 
 
 def test_request_modes_do_not_mix_reference_and_production():
@@ -37,3 +40,36 @@ def test_reference_only_evaluates_completed_direct_edges(tmp_path):
     assert mismatch['version_accuracy'] == 0
     assert mismatch['count_delta'] == 0
     assert mismatch['missing'] and mismatch['extra']
+
+
+def test_api_reference_never_reaches_runner(tmp_path, monkeypatch):
+    monkeypatch.setenv('SBOM_API_TOKEN', 'token')
+    events = []
+    def runner(*args, **kwargs):
+        assert set(kwargs) == {'settings', 'mode'}
+        events.append('analysis')
+        args[3].mkdir()
+        return {'status': 'succeeded'}
+    def evaluation(*args):
+        assert events == ['analysis']
+        events.append('evaluation')
+        return {'status': 'UNKNOWN', 'reason': 'scope_not_established'}
+    monkeypatch.setattr('sbom_creator.service.compare', evaluation)
+    settings = Settings(bitbucket_hosts=('example.com',), registry_hosts=('registry.example',))
+    payload = {'repository_url': 'https://example.com/r.git', 'commit': 'a' * 40,
+               'image': 'registry.example/app:1', 'run_mode': 'verification',
+               'reference_sbom': {'bomFormat': 'CycloneDX', 'specVersion': '1.6', 'version': 1}}
+    headers = {'Authorization': 'Bearer token'}
+    with TestClient(create_app(tmp_path, runner=runner, settings=settings)) as client:
+        response = client.post('/v1/analyses', json=payload, headers=headers)
+        assert response.status_code == 202
+        for _ in range(100):
+            state = client.get(response.json()['status_url'], headers=headers).json()
+            if state['status'] not in ('queued', 'running'):
+                break
+            time.sleep(0.01)
+        assert state['status'] == 'succeeded'
+        assert 'evaluation.json' in state['artifacts']
+        artifact = client.get(response.json()['status_url'] + '/artifacts/evaluation.json', headers=headers)
+        assert artifact.status_code == 200
+        assert events == ['analysis', 'evaluation']
