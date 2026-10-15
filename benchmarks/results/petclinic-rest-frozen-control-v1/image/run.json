@@ -1,0 +1,23 @@
+{
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "image",
+    "--input",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-petclinic-rest-v1\\image.tar",
+    "--offline-scan",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-reactor-image-v1\\cache",
+    "--format",
+    "cyclonedx",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\petclinic-rest-frozen-control-v1\\image\\sbom.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.1559999999881256,
+  "candidate_freeze_sha256": "b10db075dd6b449e6232802b1974ba457404b80a5840f4a726d656de3bd4eeb2",
+  "oracle_read": false,
+  "runtime_changed": false
+}

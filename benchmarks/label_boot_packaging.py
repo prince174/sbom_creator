@@ -3,6 +3,7 @@
 Never imported by the service or classifier. Build declarations are not silently
 replaced with the packaged subset; both sets and unresolved labels are retained.
 """
+import argparse
 import hashlib
 import json
 import re
@@ -62,9 +63,15 @@ def payload_kind(stream):
 
 
 def main():
-    reference_dir = ROOT / 'benchmarks/references/paired-spring-petclinic-v1'
-    work = ROOT / 'benchmarks/.work/paired-spring-petclinic-v1'
-    output = ROOT / 'benchmarks/results/boot-packaging-labels-v3'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pair', default='paired-spring-petclinic-v1')
+    parser.add_argument('--output', default='benchmarks/results/boot-packaging-labels-v3')
+    args = parser.parse_args()
+    if not re.fullmatch(r'paired-[a-z0-9-]+-v1', args.pair):
+        raise ValueError('Unsafe pair name')
+    reference_dir = ROOT / 'benchmarks/references' / args.pair
+    work = ROOT / 'benchmarks/.work' / args.pair
+    output = ROOT / args.output
     if (output / 'report.json').exists():
         raise FileExistsError('Completed labels are immutable')
     receipt = json.loads((reference_dir / 'receipt.json').read_bytes())

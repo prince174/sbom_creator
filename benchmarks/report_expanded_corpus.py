@@ -82,6 +82,23 @@ def main():
                 row.update(component_metrics_status='DIAGNOSTIC_BUILD_IMAGE_SCOPE_NOT_ADJUDICATED',
                            acceptance_component_metrics=None,
                            scope_note='Build-resolved starters/POMs/devtools and packaged payload can differ. Raw set delta is not automatically a runtime FP/FN verdict; budget and identity failures remain independently demonstrated.')
+            if receipt.get('runtime_kind') == 'spring-boot-jar':
+                label_reports = {
+                    'java-spring-petclinic': 'boot-packaging-labels-v3',
+                    'java-petclinic-rest': 'petclinic-rest-packaging-labels-v1',
+                }
+                label_name = label_reports.get(project['id'])
+                label_path = ROOT/'benchmarks/results'/label_name/'report.json' if label_name else None
+                if label_path is not None and label_path.exists():
+                    labels = json.loads(label_path.read_bytes())
+                    if labels['commit'] != receipt['commit'] or labels['unlabelled_build_reference']:
+                        raise ValueError('Packaging label binding/coverage differs')
+                    row['components'] = metrics(predicted, set(labels['packaged']))
+                    row['component_metrics_status'] = 'KNOWN_PACKAGED_LABELS_WITH_ADDITIONAL_UNKNOWN'
+                    row['packaged_reference_components'] = len(labels['packaged'])
+                    row['packaged_unknown_artifacts'] = len(labels['unknown_packaged'])
+                    row['packaging_labels_sha256'] = hashlib.sha256(label_path.read_bytes()).hexdigest()
+                    row['scope_note'] = 'Known packaged dependency labels evaluated separately from full build graph; packaging-added UNKNOWN retained. Failed payload corroboration counts as missing known components, not hidden coverage.'
         rows.append(row)
     report={'candidate_unchanged':unchanged,'rows':rows,'target_per_language':20,
             'limitation':'Expansion strata reported separately, fixed fixture paths for inventory scoring; no generic ownership or aggregate production success claim.'}

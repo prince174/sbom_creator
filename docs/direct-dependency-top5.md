@@ -1,6 +1,6 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
-Расширенная выборка: [26 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md). Новые Spring Boot/TypeScript приложения показаны отдельно; рейтинг старой выборки не переносится автоматически.
+Расширенная выборка: [27 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md). Новые Spring Boot/TypeScript приложения показаны отдельно; рейтинг старой выборки не переносится автоматически.
 
 2026-10-15: актуальные режимы и результаты — [сравнение Java/JavaScript](java-js-top3.md), [cdxgen с Maven](cdxgen-build-enabled-v1.md), [сервис без JS lockfile](java-js-no-lock-v1.md). Старые staged-метрики ниже относятся к историческим выборкам.
 Java ещё не проходит порог в production; новый optional/fingerprint supplement
@@ -261,3 +261,5 @@ R90 (2026-10-16): passive Trivy0.75.0 image mode with frozen Java DB improves ex
 R91 (2026-10-16): source+image integration is still experimental. Passive Trivy source owner candidates improve from42/0/13 to49/0/6 shipped direct edges on Javalin through an explicitly traced optional-declaration parser projection; recall89.09% is below target. POM containment extras remain separate, online metadata blocked by429, no runtime change or independent acceptance. [Evidence](java-js-top3.md).
 
 R92 (2026-10-16): passive Trivy source optional projection with public mirror POM metadata gives55/0/0 direct edges across14 shipped Javalin owners, repeated on19 source graphs; one development repository only. All-module72/18/0 and6 component-scope UNKNOWN owners remain visible. No runtime integration or overall rank change; [limitations and evidence](java-js-top3.md).
+
+R93 (2026-10-16): a fresh Petclinic REST reference pair validates frozen passive Trivy candidate21/0/0 direct and104/3/2 packaged components (P97.20%/R98.11%), while unchanged service final remains0/0/106. One positive Boot control is not independent optional/reactor validation or runtime acceptance. [Scope, baseline and evidence](java-js-top3.md).

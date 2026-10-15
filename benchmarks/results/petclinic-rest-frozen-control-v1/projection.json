@@ -1,0 +1,12 @@
+{
+  "source_commit": "afc8fc1d3b8ec8de69414482b3bd70a1da78cb95",
+  "files": [
+    {
+      "path": "pom.xml",
+      "original_sha256": "260976f9fb3d5028b73e28dc147fe808822f8248b7c19b01b96a6dddb90ab5bb",
+      "projection_sha256": "260976f9fb3d5028b73e28dc147fe808822f8248b7c19b01b96a6dddb90ab5bb",
+      "optional_declarations": []
+    }
+  ],
+  "oracle_read": false
+}
