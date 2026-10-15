@@ -1005,3 +1005,7 @@
 - Exact-commit controlled Maven/CDX build, clean source, root graph agrees native/effective POM; empty runtime graph remains unscored.
 - Artifact tree, image binding and four schemas pass. Four Java pairs complete.
 - Next: Commons IO, then remaining Java pairs, component and direct comparisons separately.
+
+## R74 — Commons IO Java pair, 2026-10-15
+
+- Exact-commit Maven/CDX pair completed, tree/config binding and schemas pass. Empty direct graph unscored. Five Java pairs complete. Next: Commons Codec.
