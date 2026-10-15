@@ -790,3 +790,15 @@
 - Runtime unchanged. Next: original Go corpus eligibility/UNKNOWN audit before
   integration, with paired reference expansion evaluated separately.
 - [Protocol](go-helper-failures-v1.md), [data](go-helper-failures-v1.json).
+
+## R55 — ten-project Go source prerequisite audit, 2026-10-15
+
+- Main40e8a2a clean; no duplicate benchmark running. Exact commits/clean trees
+  and frozen rule hashes verified, unchanged development/control membership.
+- Source parser10/10, narrow declaration reader7/10. Assetfinder missing root
+  go.mod; yq/upterm unsupported syntax. These stay UNKNOWN, no rule relaxation.
+- Binary context UNKNOWN for all rows in this source-only audit; not a claim
+  that prior paired evidence vanished. No direct coverage/accuracy metrics.
+- Ruff +27 tests passed. Runtime unchanged. Next: paired waybackurls development
+  build/image reference, then other development fixtures and Rust/Ruby expansion.
+- [Protocol](go-corpus-context-v1.md), [data](go-corpus-context-v1.json).
