@@ -874,3 +874,15 @@
   after exception-type lint correction. No runtime change.
 - Next: lockfile/image version-owner ambiguity assessment on development pair.
 - [Protocol](fd-declarations-v1.md), [data](fd-declarations-v1.json).
+
+## R62 — fd lock/image version association, 2026-10-15
+
+- Mainaa9395d clean, no duplicate check running. Source/lock/image candidate
+  association precedes oracle access; uniqueness and default registry required.
+-20 associated versions overlap22 reference edges; two remain without candidate,
+  no outside associations. This is not direct-edge proof or accuracy improvement.
+- Activation UNKNOWN, direct_edge_provenfalse, ambiguous/missing rows retained.
+  Cargo requirement solving/overrides not implemented; no runtime adoption.
+- Two tests and Ruff passed. Next: inspect missing identities before control
+  evaluation, without silently reducing coverage.
+- [Protocol](fd-versions-v1.md), [data](fd-versions-v1.json).
