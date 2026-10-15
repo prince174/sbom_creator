@@ -1027,3 +1027,7 @@
 ## R77 — Commons CSV Java pair, 2026-10-15
 
 - Exact-commit Maven/CDX/native/effective POM agree two direct runtime edges; tree/config binding and schemas pass. Seven Java pairs complete. Next: Jsoup.
+
+## R78 — Jsoup Java pair, 2026-10-15
+
+- Exact-commit Maven/CDX/native/effective graph agreement; zero external direct runtime dependencies unscored. Tree/config binding and schemas pass. Eight Java pairs complete. Next: SLF4J module.

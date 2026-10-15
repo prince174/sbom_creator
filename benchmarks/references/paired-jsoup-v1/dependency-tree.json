@@ -1,0 +1,9 @@
+{
+  "groupId": "org.jsoup",
+  "artifactId": "jsoup",
+  "version": "1.18.3",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false"
+}
