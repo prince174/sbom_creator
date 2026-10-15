@@ -863,3 +863,14 @@
 - Ruff/pairing-reference tests passed. Runtime unchanged. Next: Rust declaration
   ownership/scope assessment on development pair and Ruby paired expansion.
 - [Protocol](paired-fd-v1.md), [data](paired-fd-v1.json).
+
+## R61 — fd source ownership/scope association, 2026-10-15
+
+- Main89ed4e0 clean; no duplicate experiment. Source-only extraction26 root
+  declarations before opening reference; version requirements remain unresolved.
+-22 build reference edges uniquely associated by name/kind/target. Four other
+  declarations retained; activation UNKNOWN. Association is not direct accuracy.
+- Cargo docs checked; alias/optional/inheritance preservation test and Ruff pass
+  after exception-type lint correction. No runtime change.
+- Next: lockfile/image version-owner ambiguity assessment on development pair.
+- [Protocol](fd-declarations-v1.md), [data](fd-declarations-v1.json).
