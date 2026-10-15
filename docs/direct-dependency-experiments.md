@@ -768,3 +768,14 @@
 - No runtime acceptance or accuracy claim; corpus coverage remains unmeasured.
   Next: bounded invocation/hostile input checks and positive-control replay.
 - [Protocol](go-g2-context-v1.md).
+
+## R53 — bounded context-gated replay, 2026-10-15
+
+- Main7a52764 clean, no duplicate benchmark running. Frozen hashes checked.
+- Passive helpers bounded to30s/4MiB output, payload32MiB. Existing four fixtures
+  remain eligible; unchanged selected-main TP1/1/0/33, all FP0/FN0.
+- Empty httprobe P/R null; partitions separate. Gate4/4 only known cached set,
+  no new accuracy gain or general coverage claim. Runtime unchanged.
+-27 tests passed. Initial Ruff B023 fixed by explicit context binding, then passed.
+- Next: hostile helper inputs and whole-corpus coverage before any integration.
+- [Protocol](go-context-replay-v1.md), [data](go-context-replay-v1.json).
