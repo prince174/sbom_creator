@@ -1,0 +1,15 @@
+{
+  "experiment": "R49",
+  "registry_image_id": "sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+  "original_config_digest": "sha256:bc37d447975c6aaf076e7ae2663ca805fd0d0c71f04ad0581588a86f8a7e32dc",
+  "replacement_config_digest": "sha256:c59900b0a05fad8cf3c09694d3aa0a5197ef5b1251ae37152b15ce70a1f1323f",
+  "original_manifest_digest": "sha256:c2c81d46ec66e03c77d855447cdbfdea9ea1b1063720b6f28de288be4ad3433a",
+  "original_payload_sha256": "8ebf15a3aa82f0080f3f2ddde5fe616a008c4fbdcff5cef48adaa3038c4a433d",
+  "replacement_payload_sha256": "4930c3348dc6f23852399c25344b3add069d57a9f573f41cfa09e60b53215dda",
+  "mutable_tag_mismatch_rejected": true,
+  "pinned_original_payload_retained": true,
+  "authentication_tested": false,
+  "transport": "isolated loopback HTTP fixture only",
+  "runtime_changed": false,
+  "direct_accuracy": null
+}

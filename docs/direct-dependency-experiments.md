@@ -715,3 +715,17 @@
 - No runtime/classifier change or direct accuracy gain. Next: controlled registry
   fixture, auth isolation and mutable-tag/digest identity, then helper delivery.
 - [Protocol](go-payload-identity-v1.md), [data](go-payload-identity-v1.json).
+
+## R49 — registry payload/tag-race fixture, 2026-10-15
+
+- Maind067bfa clean, no duplicate check running; inspected existing registry
+  harness and pinned Syft registry configuration source before implementation.
+- Dedicated loopback registry: Hey tag scanned, replaced with clean multimain
+  image, changed expected config rejected; original immutable manifest rescan
+  retained original payload. Actual network scans, no mocked registry metadata.
+- Ruff and24 targeted tests passed; owned registry container removed. Docker
+  only in external fixture harness; production/frozenG2 unchanged.
+- Limit: unauthenticated loopback HTTP only. TLS/auth/isolation/index behavior
+  not claimed, direct accuracy null. Next: authenticated TLS fixture and helper
+  delivery/production guards. No algorithm acceptance or top5 ranking change.
+- [Protocol](go-registry-identity-v1.md), [data](go-registry-identity-v1.json).
