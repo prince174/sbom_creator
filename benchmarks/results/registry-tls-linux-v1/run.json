@@ -1,0 +1,27 @@
+{
+  "status": "PASSED",
+  "tool": {
+    "version": "0.22.1",
+    "platform": "linux/amd64",
+    "archive_url": "https://github.com/google/go-containerregistry/releases/download/v0.22.1/go-containerregistry_Linux_x86_64.tar.gz",
+    "archive_sha256": "0ab7a1d6932a213aed964ce97666c3077fe691c8606413674a8b3e0b9ec4cda0",
+    "checksums_url": "https://github.com/google/go-containerregistry/releases/download/v0.22.1/checksums.txt",
+    "binary_sha256": "8e75c326adb43b053cfd78b9b987663f8f4fe4557f4d3915905643f25c730992",
+    "verification": "official release SHA256 matches; no detached-signature claim"
+  },
+  "linux_image_id": "sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de",
+  "elapsed_seconds": 7.421999999991385,
+  "external_docker_launcher_only": true,
+  "runtime_changed": false,
+  "container_network": "none",
+  "socket_mounted": false,
+  "source_or_reference_mounted": false,
+  "read_only_root": true,
+  "user": "65532:65532",
+  "memory_limit_bytes": 536870912,
+  "artifact_size_limit_sampled_bytes": 268435456,
+  "code_sha256": {
+    "check_registry_tls_linux.py": "2cdfddb0ca936b74508710252760b40ddf000c3c0a03bde2e82e453d928c3dd8",
+    "registry_fixture.py": "a0d85537cd3bab4cac6ad5369f80216cfeb2e8feb241109a4e0a660efba01606"
+  }
+}
