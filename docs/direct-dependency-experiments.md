@@ -957,3 +957,13 @@
 - Targeted API/evaluator tests and Ruff passed. Next: finish new Debug pair
   already building, then remaining Java/JS corpus. No duplicate build.
 - [Replay](evaluation-replay-v1.json).
+
+## R69 — Debug JavaScript pair, 2026-10-15
+
+- Continued already-running Debug build; no duplicate. CycloneDX build/root ms
+  dependency matched runtime and evaluator TP1/FP0/FN0, versions1/1, UNKNOWN0.
+- Tree/image binding/three schemas passed in pairing harness; Ruff passed.
+  Only harness project choices extended; classifier unchanged.
+- User reiterated Java/JavaScript only. Seven JS/two Java pairs complete.
+  Next: remaining JS builds and Java expansion; other languages deferred.
+- [Pair](paired-debug-v1.md).

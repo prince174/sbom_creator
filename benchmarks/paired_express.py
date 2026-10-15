@@ -103,7 +103,7 @@ def main():
     parser.add_argument("--resume-validation", action="store_true")
     parser.add_argument("--resume-built-images", action="store_true", help="Reuse exported app trees after pre-analysis validation failure")
     parser.add_argument("--run-id", default="v1", help="Fresh evidence namespace; completed receipts are immutable")
-    parser.add_argument("--project", choices=("express", "axios", "isarray", "koa", "fastify", "hapi"), default="express")
+    parser.add_argument("--project", choices=("express", "axios", "isarray", "koa", "fastify", "hapi", "debug", "ms", "chalk", "commander-js"), default="express")
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,40}", args.run_id):
         raise ValueError("Invalid run ID")

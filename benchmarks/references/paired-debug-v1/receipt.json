@@ -1,0 +1,76 @@
+{
+  "experiment": "R5",
+  "project": "javascript-debug",
+  "commit": "7e3814cc603bf64fdd69e714e0cf5611ec31f43b",
+  "repository_url": "https://github.com/debug-js/debug.git",
+  "platform": "linux/amd64",
+  "builder_image": "sha256:731f30ce96764a3a97a29670d6120526eed3e6c95d1c18be16563a8505d83428",
+  "runtime_image": "sha256:0a609007e6974d34c75c15f52d26fa41df6f7ce27a615a64e2ccd66d8ae9fe86",
+  "runtime_config_digest": "sha256:c90854e5822498a8df6ada732a5484f21f72fdbece93835d954bbf7aea188120",
+  "archive_binding": {
+    "index_digest": "sha256:0a609007e6974d34c75c15f52d26fa41df6f7ce27a615a64e2ccd66d8ae9fe86",
+    "platform_manifest_digest": "sha256:3e3b9f0a55a8a13950994752f87d0a9dfe8076d1c18ca95ee987bf9a4927e1a7",
+    "config_digest": "sha256:c90854e5822498a8df6ada732a5484f21f72fdbece93835d954bbf7aea188120",
+    "syft_archive_manifest_digest": "sha256:fd885d81e649383256a65ec317021654039dea3717d972effc51f53c78f6da8b",
+    "note": "Docker archive scanner may synthesize a Docker manifest; bind using verified identical config bytes (including rootfs diff IDs), not equality with the OCI manifest digest"
+  },
+  "application_tree_equal": true,
+  "application_entries": 29,
+  "application_tree_sha256": "2001b1c9844f3b98819b042158a8f2ca8d105b85f7a739a5ca8340cc88359ed7",
+  "reference_sha256": "20ce578589aad105879e12651a8e8238979153941f5b194761e411629879b5f5",
+  "package_lock_sha256": "21914b798c88ccf9570bb8b1a0328415afc7531de85634b17a3f08da9194e0cd",
+  "source_manifest_sha256": "47344a5e8738d8b35ca7bcf3fb4b71081442bd82e8ad9847d9bc3c46ccf4a0e8",
+  "recipe_sha256": "c94cbbc26ccc4badba9313d62fd916baba04b5abfc7385628ddb07afdd10d522",
+  "reference_generator": "@cyclonedx/cyclonedx-npm@6.0.1",
+  "runtime_scope": "npm install including dev with install scripts disabled; explicit build if present, otherwise pack; prune dev; reference production scope",
+  "declared_direct_count": 1,
+  "reference_root_edges": 1,
+  "reference_graph_matches_declarations": true,
+  "oracle_passed_to_analyzer": false,
+  "analyzer_inputs": [
+    "clean source checkout at commit",
+    "runtime image archive"
+  ],
+  "build_seconds": 79.172,
+  "analysis_seconds": 15.86,
+  "timing_note": "Wall clock",
+  "resource_metrics": null,
+  "resource_metrics_reason": "Peak CPU/RSS not instrumented",
+  "analysis_directory": "benchmarks/.work/paired-debug-v1/analysis",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4
+    },
+    "unknown_groups": {
+      "image_evidence": 4
+    },
+    "source_count": 0,
+    "image_count": 293,
+    "selected_count": 289,
+    "final_count": 200,
+    "os_count": 89,
+    "full_count": 289,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 277,
+      "UNKNOWN": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.375
+  },
+  "outputs": {
+    "final.cdx.json": "8cc24129011c46a7d003da5aab49de3cd4818f3d1cd3fca5dbce876afbb9623c",
+    "os.cdx.json": "eafca4a9c7b5274b111c47e0ef2ddabfb3229f8ec956161469e0c4e8235d9b55",
+    "full.cdx.json": "6bc934c58d3ac966cd64978afc444f08aaef0ea0de01f1eed7b2fa22081b359d",
+    "source.syft.json": "affb2793a79089dae70b3d3fa4811068d852b6f5786fa1b74dd0e7ee82038af8",
+    "image.syft.json": "04bc0957f334667434b7bebe23446673d4ed8dcb45974932e229e0d9716d0272",
+    "provenance.json": "7ff2bc7483a4e17298e2ce69ad8069556896218273218853299d1e21c72a89be"
+  },
+  "direct_accuracy": null,
+  "direct_accuracy_reason": "B0 inventory is not a direct dependency classifier"
+}
