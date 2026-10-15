@@ -101,5 +101,3 @@ class Fixture:
                         with archive.extractfile(member) as stream:
                             shutil.copyfileobj(stream, self.wfile, 128 * 1024)
         return Handler
-
-

@@ -1,0 +1,18 @@
+{
+  "development_only": true,
+  "runtime_changed": false,
+  "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+  "code_sha256": "73ed8c55d728414fef3ea4e087c3b3d600066eadd39c843a64c66acd11565d8a",
+  "limits": {
+    "CHUNK": 1048576,
+    "MAX_OUTER": 134217728,
+    "MAX_NESTED": 33554432,
+    "MAX_COPY": 268435456,
+    "MAX_INDEX": 2097152,
+    "MAX_INDEX_TOTAL": 16777216,
+    "MAX_ENTRIES": 100000,
+    "MAX_LAYER_BYTES": 536870912,
+    "MAX_RATIO": 200,
+    "MAX_DEPTH": 8
+  }
+}

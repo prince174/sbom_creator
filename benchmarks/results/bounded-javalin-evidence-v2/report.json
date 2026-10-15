@@ -1,0 +1,26 @@
+{
+  "status": "NO_PREVIOUS_WITNESS_LOST",
+  "runtime_changed": false,
+  "oracle_read": false,
+  "elapsed_seconds": 14.76600000000326,
+  "code_sha256": "6c2307d17f4f7d4a0f412cf3290ea2fd55ecd7c0887a177b40149b5226e5e22b",
+  "previous_confirmed": 198,
+  "candidate_confirmed": 199,
+  "lost": [],
+  "gained": [
+    "fc631fbc9f01d63c"
+  ],
+  "artifact_count": 200,
+  "stats": {
+    "copied_bytes": 92517293,
+    "ordinary_read_bytes": 0,
+    "index_bytes": 5369613,
+    "zip_entries": 53586,
+    "source_files": 199,
+    "nested_files": 0,
+    "class_witnesses": 198,
+    "resource_witnesses": 1,
+    "rejections": 1
+  },
+  "limitation": "Evidence coverage, not component identity accuracy or independent acceptance"
+}
