@@ -1,0 +1,14 @@
+/application/waybackurls: go1.24.13
+	path	github.com/tomnomnom/waybackurls
+	mod	github.com/tomnomnom/waybackurls	v0.1.0	
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	DefaultGODEBUG=asynctimerchan=1,gotestjsonbuildtext=1,gotypesalias=0,httpcookiemaxnum=0,httplaxcontentlength=1,httpmuxgo121=1,httpservecontentkeepheaders=1,multipathtcp=0,netedns0=0,panicnil=1,randseednop=0,rsa1024min=0,tls10server=1,tls3des=1,tlsmlkem=0,tlsrsakex=1,tlsunsafeekm=1,urlmaxqueryparams=0,winreadlinkvolume=0,winsymlink=0,x509keypairleaf=0,x509negativeserial=1,x509rsacrt=0,x509usepolicies=0
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=86aeb97852707e1a6fb3bcd33e61d5433a6476c5
+	build	vcs.time=2022-04-05T10:17:18Z
+	build	vcs.modified=false

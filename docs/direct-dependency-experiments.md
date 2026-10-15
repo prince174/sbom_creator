@@ -802,3 +802,14 @@
 - Ruff +27 tests passed. Runtime unchanged. Next: paired waybackurls development
   build/image reference, then other development fixtures and Rust/Ruby expansion.
 - [Protocol](go-corpus-context-v1.md), [data](go-corpus-context-v1.json).
+
+## R56 — paired waybackurls development build, 2026-10-15
+
+- Main66b7868 clean, no duplicate build running. Controlled exact-commit build
+  with pinned Go1.24/CGO0/linuxamd64 and CDXgomod1.12 during actual build.
+- Immutable reference receipt, binary/tree/image binding and three output schemas
+  checked. Native/CDX/G2 external edges0; P/R null, not accuracy improvement.
+- Runtime inventory2/OS0/full2 reflects app+stdlib, not two direct dependencies.
+- Passive verifier +Ruff passed. Production/frozen classifier unchanged.
+- Next: paired unfurl development positive fixture, then Rust/Ruby expansion.
+- [Protocol](paired-waybackurls-v1.md), [data](paired-waybackurls-v1.json).
