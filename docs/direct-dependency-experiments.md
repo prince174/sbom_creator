@@ -1023,3 +1023,7 @@
 ## R76 — Commons Codec Java pair, 2026-10-15
 
 - Exact-commit build/CDX/native/effective graph agreement; empty direct graph remains unscored. Tree/config binding and schemas pass. Six Java pairs complete. Next: Commons CSV.
+
+## R77 — Commons CSV Java pair, 2026-10-15
+
+- Exact-commit Maven/CDX/native/effective POM agree two direct runtime edges; tree/config binding and schemas pass. Seven Java pairs complete. Next: Jsoup.

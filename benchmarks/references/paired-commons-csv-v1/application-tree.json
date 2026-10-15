@@ -1,0 +1,23 @@
+[
+  {
+    "path": "commons-codec-1.17.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "4148332728490cef12b29dac4c385f46982f04285132c6fa51ad7267d7dc7a8b"
+  },
+  {
+    "path": "commons-csv-1.13.0.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "648035ab973875787f3a12313cf239e86b51b4d209f91106ba90eba2fbd561cc"
+  },
+  {
+    "path": "commons-io-2.18.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f3ca0f8d63c40e23a56d54101c60d5edee136b42d84bfb85bc7963093109cf8b"
+  }
+]
