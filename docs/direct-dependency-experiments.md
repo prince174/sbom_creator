@@ -779,3 +779,14 @@
 -27 tests passed. Initial Ruff B023 fixed by explicit context binding, then passed.
 - Next: hostile helper inputs and whole-corpus coverage before any integration.
 - [Protocol](go-context-replay-v1.md), [data](go-context-replay-v1.json).
+
+## R54 — passive helper negative inputs, 2026-10-15
+
+- Main98227d9 clean, no duplicate check running. Frozen helper sources unchanged.
+- Invalid/oversized binaries and malformed/oversized source rejected under5s/
+  4KiB invocation budgets. Valid panic-init source parsed without executing init.
+- Ruff passed; acquisition/context suites40 passed1 platform skip. Temporary
+  inputs removed. Deterministic examples only, no general security/accuracy claim.
+- Runtime unchanged. Next: original Go corpus eligibility/UNKNOWN audit before
+  integration, with paired reference expansion evaluated separately.
+- [Protocol](go-helper-failures-v1.md), [data](go-helper-failures-v1.json).
