@@ -1,6 +1,6 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
-2026-10-15: [полное сравнение20пар Java/JavaScript](java-js-twenty-comparison.md).
+2026-10-15: актуальные режимы и результаты — [сравнение Java/JavaScript](java-js-top3.md), [cdxgen с Maven](cdxgen-build-enabled-v1.md), [сервис без JS lockfile](java-js-no-lock-v1.md). Старые staged-метрики ниже относятся к историческим выборкам.
 Java ещё не проходит порог в production; новый optional/fingerprint supplement
 остаётся экспериментом до независимой проверки и интеграции. Общие места не назначены.
 

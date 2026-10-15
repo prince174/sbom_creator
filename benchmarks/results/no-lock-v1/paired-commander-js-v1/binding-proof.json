@@ -1,0 +1,29 @@
+{
+  "unchanged_nonlock_application_tree": true,
+  "removed_lock_paths": [
+    "node_modules/.package-lock.json",
+    "package-lock.json"
+  ],
+  "final_project_coordinates": [
+    "pkg:npm/commander@13.1.0"
+  ],
+  "image_binding": {
+    "index_digest": "sha256:08ad5bc04c7064d45592382d08be8ccdcafa9bd5fecd8a7e4856b1477c87127d",
+    "platform_manifest_digest": "sha256:0065b3534d0da59cd1d6e4036df3f0e1ab435b4cf6a5a4992f24e2762733f2a5",
+    "config_digest": "sha256:8d43e4a0f2c9e055a5dcb8017d4ec2968c55b391bf63016ad616f125934ea6b4"
+  },
+  "output_hashes": {
+    "coverage.json": "38444d57f84153cc08a7e5b8075a3ddea278e5aa6e77edc616960c25eedd020a",
+    "decisions.json": "774139be64aa98c8061b33c16b23f375c17a01456b66e4a29e6e2893a632b9a2",
+    "direct-dependencies.json": "95055f7afa047add71e62b3c65e8f7bde712b4c4ac84ab6925aa6c1c84ca5717",
+    "final.cdx.json": "d82c711b47b8f790d5d2131b40e5df6098300e7f92fb5d03e116a4f5c043e919",
+    "full.cdx.json": "af99edf2a60f7352ff0cdbb0d274515d0495683ef6aab5351d8bc2f9c5e63ab6",
+    "image.syft.json": "65b51270902fd9dc7b1513565ebf6469045af63ee2aa62db44f43aa4b9d6793a",
+    "os.cdx.json": "68fba35e9ae302b15eea20ea440075fb002c91befee24c4adaafb6388012dff9",
+    "provenance.json": "c5568a82201a8428d90283d74d437e725b5de5ca9dfd7075f83bd1f2b703cbd1",
+    "review.json": "9a61c6bd1a4cfb16f246635debd5028dd901a89c2fd30bbf80cece081239b558",
+    "selected.syft.json": "434f722c1b8f95db7fd7b34e7cf326b1255be9bb185efa0cd49ae60d1d39c3e9",
+    "source.syft.json": "dcd72a8ed179165e1f422ed458ca8185ef177e78539ba6763e8add6b6f5e3fc4",
+    "summary.json": "57ac97f5816b704609cc4eb81de2b2d1b9909e7723f582511b6eb4a40b464ad1"
+  }
+}

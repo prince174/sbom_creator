@@ -1,10 +1,16 @@
 # Java / JavaScript: comparison of three techniques
 
-**Current20-pair comparison completed:** ten Java and ten JavaScript pairs.
-Use [measured results and candidate limitations](java-js-twenty-comparison.md).
-JS production-normalized Trivy/cdxgen components188/0/0; Java Trivy7/0/4,
-Syft9/2/2, passive cdxgen unavailable. Exploratory Java supplement11/0/0 is
-not yet accepted into production. Older staged results below are historical.
+Current status, 2026-10-15: ten Java and ten JS primary real-build pairs, plus one independent positive Java control. Scores below use exact coordinates and versions; root excluded. No universal cross-mode ranking is assigned.
+
+| Technique / mode | Java components and direct TP/FP/FN | JS components / direct TP/FP/FN | Status |
+|---|---|---|---|
+| cdxgen13.4.0, external native Maven |11/0/0 on10 primary projects; DBCP control3/0/0 |Passive lock-assisted188/0/0 components;86/3/0 direct |Java Maven mode succeeds, requires project tooling; not production-compatible as-is |
+| Trivy0.75.0, passive plus scope adapters |7/0/4; optional/fingerprint development supplement11/0/0 |Lock-assisted188/0/0 components;86/0/0 direct on six established positive roots |Passive candidate; JS no-lock engine comparison still pending |
+| Syft1.51.1 inventory + service H2.1 declaration/image |9/2/2 components; Java direct unsupported |No-lock service188/8/0 components;85/0/1 direct |Production runtime; JS fixed /app scoring projection, not a generic ownership guarantee |
+
+[Full20-pair passive comparison](java-js-twenty-comparison.md), [external Maven/cdxgen](cdxgen-build-enabled-v1.md), [no-lock service replay](java-js-no-lock-v1.md). Six empty Java and four empty JS roots do not inflate accuracy. JS owner-status coverage9/10; Axios component precision61.54% remains a known weak case. The no-lock service aggregate is P95.92%/R100% components and P100%/R98.84% direct, but independent general ownership validation and Java runtime integration remain open. Do not declare the full production goal complete.
+
+## Historical stages (scope and corpus differ from current results)
 
 **R66 scope correction:** all4 Trivy excess edges and49/52 cdxgen excess edges
 are dev-only root declarations. An exploratory manifest-only scope adapter gives

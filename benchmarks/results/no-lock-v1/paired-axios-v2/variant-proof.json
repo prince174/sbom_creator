@@ -1,0 +1,24 @@
+{
+  "unchanged_nonlock_application_tree": true,
+  "removed_lock_paths": [
+    "node_modules/.package-lock.json",
+    "node_modules/combined-stream/yarn.lock",
+    "package-lock.json"
+  ],
+  "final_project_coordinates": [
+    "pkg:npm/asynckit@0.4.0",
+    "pkg:npm/axios@1.7.9",
+    "pkg:npm/cjs-entrypoint-test@1.0.0",
+    "pkg:npm/combined-stream@1.0.8",
+    "pkg:npm/commonjs-typings-test@1.0.0",
+    "pkg:npm/delayed-stream@1.0.0",
+    "pkg:npm/esm-entrypoint-test@1.0.0",
+    "pkg:npm/esm-typings-test@1.0.0",
+    "pkg:npm/follow-redirects@1.15.6",
+    "pkg:npm/form-data@4.0.0",
+    "pkg:npm/mime-db@1.52.0",
+    "pkg:npm/mime-types@2.1.35",
+    "pkg:npm/proxy-from-env@1.1.0",
+    "pkg:npm/ts-entrypoint-test@1.0.0"
+  ]
+}

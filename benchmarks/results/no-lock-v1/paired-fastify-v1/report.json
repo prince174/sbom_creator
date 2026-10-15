@@ -1,0 +1,58 @@
+{
+  "project": "javascript-fastify",
+  "original_commit": "3ad5a426371ed652e3ddc759d6b389b76fb86eaa",
+  "source_variant": "Only project lockfiles and .git omitted; no dependency resolution",
+  "image_variant": "Original runtime plus deletion of project lockfiles under /app only",
+  "parent_image": "sha256:10ff4cc933082da73b37aaf5883d391e1ea739a4882512f5e18a57688d20dd68",
+  "derivative_image": "sha256:babb3faaa6c08509037fdf17abbfd9f262c3b4a907a34a36d1889bcf0f1e7efb",
+  "project_scope": "/app/",
+  "components": {
+    "tp": 47,
+    "fp": 3,
+    "fn": 0,
+    "predicted": 50,
+    "reference": 47,
+    "precision": 0.94,
+    "recall": 1.0,
+    "f1": 0.9690721649484536
+  },
+  "direct": {
+    "status": "MEASURED",
+    "scope": "runtime",
+    "reference_build_binding": "caller_asserted_not_attested",
+    "reference_sha256": "84de3fad9d773b678efaa36b9c25cd2279c51d8d2bca84be4a20bd805a0c5fcb",
+    "result_sha256": "4c0956aef9050bdd771eaa7e53bb38e525eb0a9b06090c990b16a56c730e20c5",
+    "reference_used_as_analysis_input": false,
+    "precision": 1.0,
+    "recall": 0.9333333333333333,
+    "f1": 0.9655172413793104,
+    "reason": null,
+    "tp": 14,
+    "fp": 0,
+    "fn": 1,
+    "reference_direct": 15,
+    "predicted_direct": 14,
+    "count_delta": -1,
+    "unknown_declarations": 1,
+    "declaration_coverage": 0.9333333333333333,
+    "missing": [
+      [
+        "npm",
+        null,
+        "pino",
+        "10.4.0"
+      ]
+    ],
+    "extra": [],
+    "version_accuracy": 1.0
+  },
+  "seconds": 31.23399999999674,
+  "missing": [],
+  "extra": [
+    "pkg:npm/benchmark@1.0.0",
+    "pkg:npm/benchmarks@1.0.0",
+    "pkg:npm/transport@0.0.1"
+  ],
+  "runtime_changed": false,
+  "limitation": "Fixed fixture installation path; derived inputs, original oracle. Platform inventory preserved."
+}

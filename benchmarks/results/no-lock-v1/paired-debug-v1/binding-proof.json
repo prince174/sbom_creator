@@ -1,0 +1,30 @@
+{
+  "unchanged_nonlock_application_tree": true,
+  "removed_lock_paths": [
+    "node_modules/.package-lock.json",
+    "package-lock.json"
+  ],
+  "final_project_coordinates": [
+    "pkg:npm/debug@4.4.0",
+    "pkg:npm/ms@2.1.3"
+  ],
+  "image_binding": {
+    "index_digest": "sha256:65671d5a1351f5027963503629ca9abd1507a839e4dcd4eb24163fc0c962dbac",
+    "platform_manifest_digest": "sha256:255459b991490e169f227c8fb971495486ca9b16c9d1cfa593037d42839b6b2a",
+    "config_digest": "sha256:db43cc58a15988c29bcf99e340bf0c49a950c33b5c684bd83a9e8960e7a63b7d"
+  },
+  "output_hashes": {
+    "coverage.json": "7ac42861c92fc2c19a4274c80a65df3f07fa5f18e22748cd8f59e3a22c30d488",
+    "decisions.json": "c351971d14ac95e9e8101a3b20efccffe02bf6bfe19b5e8a2ad2e1e2875a1a9e",
+    "direct-dependencies.json": "1eff9321d6d209056990f223dc2c2a23b67655633ecc0fb03c265869465dcc1c",
+    "final.cdx.json": "f5d40f2c7a5f4d852463046f349dfdf674c1a5a6d500c2e31b89d34ad17c52ed",
+    "full.cdx.json": "948216237cfa2acb6c3787003f0711ac80639ea705499673ac8ac8a4ad449b28",
+    "image.syft.json": "423ca27cbb2475df94b53f3955a74fbd70253d8d4b34ae9eaea4f311a5494a6e",
+    "os.cdx.json": "2a12d59441b4a28361394128d03c3ed3df0b17758f2828d60d9838469b13684e",
+    "provenance.json": "634822a138bf913899b1ea91bc29e75ce5c8080508faa3c010a8f20b59742f2d",
+    "review.json": "09d669376b838a0989027ed5b0d1dfb424046ff1416a85cab8b8b3136920f0a9",
+    "selected.syft.json": "42e354da69573147cba7251fb02b67aa987a48162d2a1965648015cb5a1ae6bb",
+    "source.syft.json": "2b37db2b39e803d7f6dcdf2c8abba7b238c88dabd8b6028f7919b92667429347",
+    "summary.json": "c8b5e94fab89b54fad182ceea678952961f8f20d7a790bde4fb76ff1a268329f"
+  }
+}

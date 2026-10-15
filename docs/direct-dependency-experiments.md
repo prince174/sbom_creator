@@ -1068,3 +1068,10 @@
 - Original 10 Java projects: components/direct11/0/0 on four positive roots. Frozen DBCP control3/0/0. Six empty roots do not inflate accuracy. This substantially improves cdxgen's measured Java compatibility, but does not satisfy production integration because it invokes project build tooling.
 - [Detailed report](cdxgen-build-enabled-v1.md), commands/tool versions/image digest/raw logs retained. CPU/memory limits are not peak usage. No cross-mode speed ranking.
 - Explicit fixed20 development selection prevents new control receipts entering tuning replays. Targeted graph/count/optional tests7 pass and Ruff passes. No runtime algorithm change in this stage.
+
+## R84 — service replay without JS project lockfiles, 2026-10-15
+
+- All10 disclosed JS fixtures replayed with project lockfiles absent from source and runtime /app. No install/resolution/project execution. Non-lock file/mode/link/hash tree equality, derivative OCI/scanned-config binding and final project projection verified. Original reference pairs unchanged.
+- Exact components188/8/0, P95.92%, R100%, F197.92%; positive-root macro P92.59%, R100%. Direct85/0/1, P100%, R98.84%, F199.42%. Owner-status coverage9/10; UNKNOWN ms has zero known reference direct edges, not counted as success. Four empty roots excluded from accuracy means.
+- Axios component precision61.54% and Fastify94% remain visible; eight test/benchmark fixture coordinates retained. Existing pino direct FN retained. Lock-assisted engine scores do not substitute for this no-lock service replay.
+-284 tests passed,3 skipped; Ruff and30 schema/payload/binding checks pass. [Report](java-js-no-lock-v1.md). No runtime algorithm improvement claimed; next independent generic ownership validation and passive Java integration. Automation updated to preserve no-lock and full external cdxgen requirements, stale pair counts corrected.

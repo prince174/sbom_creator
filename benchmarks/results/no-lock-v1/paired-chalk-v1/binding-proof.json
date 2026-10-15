@@ -1,0 +1,29 @@
+{
+  "unchanged_nonlock_application_tree": true,
+  "removed_lock_paths": [
+    "node_modules/.package-lock.json",
+    "package-lock.json"
+  ],
+  "final_project_coordinates": [
+    "pkg:npm/chalk@5.4.1"
+  ],
+  "image_binding": {
+    "index_digest": "sha256:56579a7345f7fa3ac026c0427d95234da2db0982c97444cc79328f97a467798e",
+    "platform_manifest_digest": "sha256:98aa7efbdd2cc9e8473639266140f64959678f58aae1c162cf9d4bde1ad4808d",
+    "config_digest": "sha256:b05dee8a81f6a21249a1d7f3838c38ed19f8501671fd7c54a513e2015f83ce32"
+  },
+  "output_hashes": {
+    "coverage.json": "ad339a951429cc7fc54ce5ccc8eea7c24217abdbeabdbc33280e1e6ef6996a8a",
+    "decisions.json": "df852b475686b1ed37203e15f6ced620ee59ff7ef7ecda9ea2628fe665c5b520",
+    "direct-dependencies.json": "526ce105a6974ac9c0f2bd33b903ac3f47cb9e2cdfeefe78b4f416f0fae00ced",
+    "final.cdx.json": "b71ceeaaf734e6910e677c67d6ad6010f99704e687773f117e1b9d6a49a48716",
+    "full.cdx.json": "b35c431fa720939635049321a419bfd7548eb1e2b85df1211e86c6c7deff94bd",
+    "image.syft.json": "672e00d6ab2810b1a35bb4b358371fa99361b540e4367a3568c143c7670cb7a0",
+    "os.cdx.json": "df89fc285ff74ed3ebd4b0a34a48ac8cc87b3c55e8cc94d7cdcdf3a79db6b050",
+    "provenance.json": "28b266bc2bded0b29336322fa33972c25785531ccec7deb656b526452a88befd",
+    "review.json": "945c339c84cfaa35b3fa6153692445a967dee8a0b31b7133a64517ea37f00f1e",
+    "selected.syft.json": "56cca2b81e518cb8158002f0926edf3e9d4016dd3318b08da78273598c8b421a",
+    "source.syft.json": "0915e69f897af383fa5be97fe4266fdcb8ca552b48e2388aa854d1b12a84806d",
+    "summary.json": "85858a0c02f80a75ab26bee9957c6035ad9d74b92df718ca35151d3dbc135117"
+  }
+}
