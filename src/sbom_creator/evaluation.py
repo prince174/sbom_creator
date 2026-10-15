@@ -1,4 +1,5 @@
 """Post-analysis reference evaluation. Never called by dependency classifiers."""
+import hashlib
 import json
 from pathlib import Path
 
@@ -36,6 +37,8 @@ def compare(result_directory, reference, scope='unknown'):
     owner = identity(root)
     expected_nodes = [n for n in reference.get('dependencies', []) if n['ref'] == root.get('bom-ref')]
     base = {'status': 'UNKNOWN', 'scope': scope, 'reference_build_binding': 'caller_asserted_not_attested',
+            'reference_sha256': hashlib.sha256(json.dumps(reference, sort_keys=True, separators=(',', ':')).encode()).hexdigest(),
+            'result_sha256': hashlib.sha256((path / 'final.cdx.json').read_bytes()).hexdigest(),
             'reference_used_as_analysis_input': False, 'precision': None, 'recall': None, 'f1': None}
     if scope != 'runtime' or owner is None or len(expected_nodes) != 1:
         return dict(base, reason='scope_or_reference_root_not_established')
@@ -50,10 +53,18 @@ def compare(result_directory, reference, scope='unknown'):
     if None in actual or None in expected:
         return dict(base, reason='package_identity_unavailable')
     tp, fp, fn = len(actual & expected), len(actual - expected), len(expected - actual)
+    unknown = sum(e.get('status') == 'UNKNOWN' for e in report.get('edges', []))
+    names = {p[:3] for p in actual} & {p[:3] for p in expected}
+    version_correct = sum({p[3] for p in actual if p[:3] == name} ==
+                          {p[3] for p in expected if p[:3] == name} for name in names)
     return dict(base, status='MEASURED', reason=None, tp=tp, fp=fp, fn=fn,
                 reference_direct=len(expected), predicted_direct=len(actual),
                 count_delta=len(actual) - len(expected),
-                unknown_declarations=sum(e.get('status') == 'UNKNOWN' for e in report.get('edges', [])),
+                unknown_declarations=unknown,
+                declaration_coverage=len(actual) / (len(actual) + unknown) if actual or unknown else None,
+                missing=[list(p) for p in sorted(expected - actual, key=repr)],
+                extra=[list(p) for p in sorted(actual - expected, key=repr)],
+                version_accuracy=version_correct / len(names) if names else None,
                 precision=tp / (tp + fp) if tp + fp else None,
                 recall=tp / (tp + fn) if tp + fn else None,
                 f1=2 * tp / (2 * tp + fp + fn) if 2 * tp + fp + fn else None)

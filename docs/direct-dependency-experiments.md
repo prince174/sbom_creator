@@ -946,3 +946,14 @@
 - New user question: prefer ready-made engines and standard postbuild/package
   manager approaches; do not duplicate complete Maven/npm resolution logic.
 - [Contract and limitations](verification-mode.md).
+
+## R68 — real npm verification replay, 2026-10-15
+
+- Maine309fc8 clean initially; continued user Java/JS task. Existing six npm
+  runtime results reproduce31/3/0/18/14/18 TP and only Fastify FN1, no FP.
+- Empty isarray metrics null. Added missing/extra coordinates, version accuracy,
+  declaration coverage and input/result hashes; equal-count wrong-version test
+  produces FP1/FN1 rather than success. No classifier changes.
+- Targeted API/evaluator tests and Ruff passed. Next: finish new Debug pair
+  already building, then remaining Java/JS corpus. No duplicate build.
+- [Replay](evaluation-replay-v1.json).

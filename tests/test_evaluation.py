@@ -29,3 +29,11 @@ def test_reference_only_evaluates_completed_direct_edges(tmp_path):
     result = compare(tmp_path, bom, 'runtime')
     assert (result['tp'], result['fp'], result['fn']) == (1, 0, 0)
     assert result['reference_used_as_analysis_input'] is False
+    assert result['version_accuracy'] == 1
+    actual['components'][1] = dict(actual['components'][1], purl='pkg:npm/dep@3')
+    (tmp_path / 'final.cdx.json').write_text(json.dumps(actual))
+    mismatch = compare(tmp_path, bom, 'runtime')
+    assert (mismatch['tp'], mismatch['fp'], mismatch['fn']) == (0, 1, 1)
+    assert mismatch['version_accuracy'] == 0
+    assert mismatch['count_delta'] == 0
+    assert mismatch['missing'] and mismatch['extra']
