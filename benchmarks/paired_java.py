@@ -15,6 +15,7 @@ from sbom_creator.pipeline import analyze_local
 from sbom_creator.validation import validate_cyclonedx
 
 BASE = 'maven:3.9-eclipse-temurin-17@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584'
+JRE = 'eclipse-temurin:17-jre-jammy@sha256:8993f1aed8b25fcea7a7047a7949c1866fa558fc6830d938c22c4f13b26be9d7'
 
 
 def recipe(project):
@@ -23,7 +24,7 @@ def recipe(project):
     module = 'slf4j-api' if project['id'] == 'java-slf4j' else '.'
     mvn = ('mvn -B -ntp -f ' + module + '/pom.xml -DskipTests -Dmaven.test.skip=true '
            '-Dcheckstyle.skip -Drat.skip=true -Dmaven.javadoc.skip=true -Dspotless.skip=true ')
-    return (f'FROM {BASE} AS build\nENV MAVEN_OPTS=-XX:ActiveProcessorCount=2\nWORKDIR /src\nCOPY src/ /src/\n'
+    text = (f'FROM {BASE} AS build\nENV MAVEN_OPTS=-XX:ActiveProcessorCount=2\nWORKDIR /src\nCOPY src/ /src/\n'
             'RUN mkdir /reference /application\n'
             'RUN --mount=type=cache,target=/root/.m2 ' + mvn +
             'package org.cyclonedx:cyclonedx-maven-plugin:2.9.3:makeBom -DoutputFormat=json -DoutputName=sbom '
@@ -39,6 +40,12 @@ def recipe(project):
             'org.apache.maven.plugins:maven-help-plugin:3.5.1:active-profiles -Doutput=/reference/active-profiles.txt && '
             'mvn --version > /reference/maven-version.txt && sha256sum /application/*.jar > /reference/jars.sha256\n'
             'FROM scratch AS runtime\nCOPY --from=build /application /application\nUSER 65532:65532\nCMD ["/not-executed-library-artifact-fixture"]\n')
+    if project.get('runtime_kind') == 'spring-boot-jar':
+        text = text.replace(f'if [ -d {module}/target/dependency ]; then find {module}/target/dependency -name \'*.jar\' -exec cp {{}} /application/ \\; ; fi', 'true')
+        text = text.replace('FROM scratch AS runtime', f'FROM {JRE} AS runtime')
+        text = text.replace('CMD ["/not-executed-library-artifact-fixture"]',
+                            'CMD ' + json.dumps(['java', '-jar', f'/application/{artifact}-{version}.jar']))
+    return text
 
 
 def verify_root(bom, native, effective):
@@ -65,9 +72,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--project', required=True)
     parser.add_argument('--manifest', default='benchmarks/manifest.json')
+    parser.add_argument('--runtime-kind', choices=('library-artifacts', 'spring-boot-jar'), default='library-artifacts')
     args = parser.parse_args()
     project = next(p for p in json.loads((ROOT / args.manifest).read_bytes())['repositories']
                    if p['id'] == args.project and p['language'] == 'Java')
+    project = dict(project, runtime_kind=args.runtime_kind)
     name = project['id'].removeprefix('java-')
     work = ROOT / 'benchmarks/.work' / ('paired-' + name + '-v1')
     out = ROOT / 'benchmarks/references' / ('paired-' + name + '-v1')
@@ -76,7 +85,9 @@ def main():
     work.mkdir(parents=True, exist_ok=True)
     source = work / 'src'
     if not source.exists():
-        run_command(['git', 'clone', '--no-hardlinks', '--no-checkout', str(ROOT / 'benchmarks/.work' / project['id'] / 'src'), str(source)], work / 'clone.log')
+        clone_source = (project['repository_url'] if args.manifest != 'benchmarks/manifest.json'
+                        else str(ROOT / 'benchmarks/.work' / project['id'] / 'src'))
+        run_command(['git', 'clone', '--no-hardlinks', '--no-checkout', clone_source, str(source)], work / 'clone.log')
         run_command(['git', '-c', 'core.autocrlf=false', 'checkout', '--detach', project['commit']], work / 'checkout.log', cwd=source)
     if command(['git', '-C', str(source), 'rev-parse', 'HEAD']) != project['commit'] or command(['git', '-C', str(source), 'status', '--porcelain']):
         raise ValueError('Source commit or cleanliness differs')
@@ -123,7 +134,8 @@ def main():
         'reference_hashes': {p.name: shared.sha(p) for p in out.iterdir() if p.is_file() and p.name != 'receipt.json'},
         'outputs': {p.name: shared.sha(p) for p in analysis.iterdir() if p.is_file()},
         'summary': json.loads((analysis / 'summary.json').read_bytes()), 'direct_accuracy': None,
-        'limitation': 'Library artifact image, no JRE/application execution; direct classifier not inferred from inventory'})
+        'runtime_kind': args.runtime_kind,
+        'limitation': 'Application not executed; direct classifier not inferred from inventory. Library mode has no JRE.'})
     print(json.dumps({'project': project['id'], 'paired': True, 'direct_edges': len(labels['direct'])}))
 
 

@@ -103,13 +103,17 @@ def main():
     parser.add_argument("--resume-validation", action="store_true")
     parser.add_argument("--resume-built-images", action="store_true", help="Reuse exported app trees after pre-analysis validation failure")
     parser.add_argument("--run-id", default="v1", help="Fresh evidence namespace; completed receipts are immutable")
-    parser.add_argument("--project", choices=("express", "axios", "isarray", "koa", "fastify", "hapi", "debug", "ms", "chalk", "commander-js"), default="express")
+    parser.add_argument("--project", default="express")
+    parser.add_argument("--manifest", default="benchmarks/manifest.json")
     args = parser.parse_args()
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,60}", args.project):
+        raise ValueError("Invalid project ID")
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,40}", args.run_id):
         raise ValueError("Invalid run ID")
     project_id = "javascript-" + args.project
-    projects = json.loads((ROOT / "benchmarks/manifest.json").read_bytes())["repositories"]
-    control = args.project in ("koa", "fastify", "hapi")
+    projects = json.loads((ROOT / args.manifest).read_bytes())["repositories"]
+    custom = args.manifest != "benchmarks/manifest.json"
+    control = not custom and args.project in ("koa", "fastify", "hapi")
     if control:
         frozen = json.loads((ROOT / "docs/npm-h2-regression-v1.json").read_bytes())["hashes"]
         if any(sha(ROOT / "benchmarks" / name) != digest for name, digest in frozen.items()):
@@ -132,7 +136,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     source = WORK / "src"
     if not source.exists():
-        clone_source = project["repository_url"] if control else str(ROOT / "benchmarks/.work" / project_id / "src")
+        clone_source = project["repository_url"] if control or custom else str(ROOT / "benchmarks/.work" / project_id / "src")
         run_command(["git", "clone", "--no-hardlinks", "--no-checkout", clone_source, str(source)], WORK / "clone.log")
         run_command(["git", "-c", "core.autocrlf=false", "checkout", "--detach", COMMIT], WORK / "checkout.log", cwd=source)
     if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != COMMIT:
@@ -203,7 +207,7 @@ def main():
             raise ValueError("Analyzer input evidence changed")
     for name in ("final.cdx.json", "os.cdx.json", "full.cdx.json"):
         validate_cyclonedx(json.loads((result_dir / name).read_bytes()))
-    receipt = {"experiment": "R8" if control else ("R3" if args.project == "express" else "R5"), "project": project_id, "commit": COMMIT,
+    receipt = {"experiment": "expanded-v1" if custom else "R8" if control else ("R3" if args.project == "express" else "R5"), "project": project_id, "commit": COMMIT,
                "repository_url": project["repository_url"], "platform": "linux/amd64",
                "builder_image": builder, "runtime_image": runtime, "runtime_config_digest": binding["config_digest"], "archive_binding": binding,
                "application_tree_equal": True, "application_entries": len(after), "application_tree_sha256": sha(OUT / "application-tree.json"),

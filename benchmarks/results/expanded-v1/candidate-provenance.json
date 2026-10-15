@@ -1,0 +1,7 @@
+{
+  "baseline_commit": "4f29791",
+  "source_tree": "b431c8427b922e1f6cd36e2ba7710005de63a5b2",
+  "service_source_unchanged": true,
+  "holdout_rule_tuning_performed": false,
+  "note": "Only benchmark acquisition, reporting and fixtures changed. All new results are original candidate measurements."
+}

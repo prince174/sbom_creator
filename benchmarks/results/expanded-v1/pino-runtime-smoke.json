@@ -1,0 +1,22 @@
+{
+  "image": "sha256:0f957f9c66bbb6c8aa26692be666d5885bc05c9cc3920996dcfc1a1b06aebad3",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network=none",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--memory=256m",
+    "--cpus=1",
+    "--entrypoint",
+    "node",
+    "sha256:0f957f9c66bbb6c8aa26692be666d5885bc05c9cc3920996dcfc1a1b06aebad3",
+    "-e",
+    "const p=require('./'); if(typeof p!=='function') throw Error('missing pino export'); p().info({benchmark:true},'smoke-ok')"
+  ],
+  "returncode": 0,
+  "stdout": "{\"level\":30,\"time\":1792089295540,\"pid\":1,\"hostname\":\"de8230dc98ec\",\"benchmark\":true,\"msg\":\"smoke-ok\"}\n",
+  "stderr": "",
+  "scope": "Disposable isolated benchmark runtime; no deployed service changed"
+}

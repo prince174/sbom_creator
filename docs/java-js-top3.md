@@ -1,6 +1,8 @@
 # Java / JavaScript: comparison of three techniques
 
-Current status, 2026-10-15: ten Java and ten JS primary real-build pairs, plus one independent positive Java control. Scores below use exact coordinates and versions; root excluded. No universal cross-mode ranking is assigned.
+Original fixed20 comparison, 2026-10-15: ten Java and ten JS primary real-build pairs, plus one independent positive Java control. Scores below use exact coordinates and versions; root excluded. No universal cross-mode ranking is assigned.
+
+Expansion: [four new built pairs and observed failures](java-js-expanded-results-v1.md), [frozen20-candidate protocol](java-js-expanded-corpus-v1.md). Current total25 triples (13Java/12JS, including DBCP extra control);16 new candidates pending. Spring Boot large-JAR evidence and image/build scope gaps prevent a general production success claim. The table below remains the original fixed20 result, not an expanded-corpus ranking.
 
 | Technique / mode | Java components and direct TP/FP/FN | JS components / direct TP/FP/FN | Status |
 |---|---|---|---|

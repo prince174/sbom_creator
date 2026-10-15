@@ -1,0 +1,52 @@
+{
+  "image": "sha256:0f957f9c66bbb6c8aa26692be666d5885bc05c9cc3920996dcfc1a1b06aebad3",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "sbom-npm-native-24c25be407",
+    "--network=none",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--memory=512m",
+    "--cpus=2",
+    "--pids-limit=256",
+    "--entrypoint",
+    "npm",
+    "sha256:0f957f9c66bbb6c8aa26692be666d5885bc05c9cc3920996dcfc1a1b06aebad3",
+    "ls",
+    "--all",
+    "--omit=dev",
+    "--json"
+  ],
+  "returncode": 0,
+  "expected": {
+    "atomic-sleep": "1.0.0",
+    "fast-redact": "3.5.0",
+    "on-exit-leak-free": "2.1.2",
+    "pino-abstract-transport": "2.0.0",
+    "pino-std-serializers": "7.1.0",
+    "process-warning": "4.0.1",
+    "quick-format-unescaped": "4.0.4",
+    "real-require": "0.2.0",
+    "safe-stable-stringify": "2.5.0",
+    "sonic-boom": "4.2.1",
+    "thread-stream": "3.2.0"
+  },
+  "actual": {
+    "atomic-sleep": "1.0.0",
+    "fast-redact": "3.5.0",
+    "on-exit-leak-free": "2.1.2",
+    "pino-abstract-transport": "2.0.0",
+    "pino-std-serializers": "7.1.0",
+    "process-warning": "4.0.1",
+    "quick-format-unescaped": "4.0.4",
+    "real-require": "0.2.0",
+    "safe-stable-stringify": "2.5.0",
+    "sonic-boom": "4.2.1",
+    "thread-stream": "3.2.0"
+  },
+  "status": "VERIFIED",
+  "scope": "Root production dependencies; workspaces rejected; no project execution or network"
+}

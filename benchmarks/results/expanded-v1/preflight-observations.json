@@ -1,0 +1,5 @@
+{
+  "petclinic_source": "Local copy of partial Git cache lacked promised blobs; preserved incomplete scratch checkout, fetched full clean exact commit from upstream. No source changes accepted.",
+  "nest_no_lock": "Initial verification guard rejected unequal raw-image and final-service inventories. Evaluator now scores final output and retains raw inventory separately; rescans not duplicated. One genuine final-output omission retained.",
+  "runtime_classifier_changed": false
+}

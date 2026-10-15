@@ -1,0 +1,28 @@
+{
+  "unchanged_nonlock_application_tree": true,
+  "removed_lock_paths": [
+    "node_modules/.package-lock.json",
+    "package-lock.json"
+  ],
+  "final_project_coordinates": [
+    "pkg:npm/atomic-sleep@1.0.0",
+    "pkg:npm/fast-redact@3.5.0",
+    "pkg:npm/on-exit-leak-free@2.1.2",
+    "pkg:npm/pino-abstract-transport@2.0.0",
+    "pkg:npm/pino-std-serializers@7.1.0",
+    "pkg:npm/pino@9.6.0",
+    "pkg:npm/process-warning@4.0.1",
+    "pkg:npm/quick-format-unescaped@4.0.4",
+    "pkg:npm/real-require@0.2.0",
+    "pkg:npm/safe-stable-stringify@2.5.0",
+    "pkg:npm/sonic-boom@4.2.1",
+    "pkg:npm/split2@4.2.0",
+    "pkg:npm/thread-stream@3.2.0",
+    "pkg:npm/transport@0.0.1"
+  ],
+  "binding": {
+    "index_digest": "sha256:5209fddbd8dc3217d207e03d91aa77fce1a42dda4b75b4491f322dec7707408e",
+    "platform_manifest_digest": "sha256:6495f7dd3cb215c6701c89d599e324bd121b7a3350cd72a4a6910e791f2f9fb2",
+    "config_digest": "sha256:8e2d2f3e28542b9cd54b0132870ef5000fce60dfc03f19808a5b605e4ff074a0"
+  }
+}

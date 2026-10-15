@@ -1,0 +1,78 @@
+{
+  "version": "9.6.0",
+  "name": "pino",
+  "dependencies": {
+    "atomic-sleep": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz",
+      "overridden": false
+    },
+    "fast-redact": {
+      "version": "3.5.0",
+      "resolved": "https://registry.npmjs.org/fast-redact/-/fast-redact-3.5.0.tgz",
+      "overridden": false
+    },
+    "on-exit-leak-free": {
+      "version": "2.1.2",
+      "resolved": "https://registry.npmjs.org/on-exit-leak-free/-/on-exit-leak-free-2.1.2.tgz",
+      "overridden": false
+    },
+    "pino-abstract-transport": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-2.0.0.tgz",
+      "overridden": false,
+      "dependencies": {
+        "split2": {
+          "version": "4.2.0",
+          "resolved": "https://registry.npmjs.org/split2/-/split2-4.2.0.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "pino-std-serializers": {
+      "version": "7.1.0",
+      "resolved": "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-7.1.0.tgz",
+      "overridden": false
+    },
+    "process-warning": {
+      "version": "4.0.1",
+      "resolved": "https://registry.npmjs.org/process-warning/-/process-warning-4.0.1.tgz",
+      "overridden": false
+    },
+    "quick-format-unescaped": {
+      "version": "4.0.4",
+      "resolved": "https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz",
+      "overridden": false
+    },
+    "real-require": {
+      "version": "0.2.0",
+      "resolved": "https://registry.npmjs.org/real-require/-/real-require-0.2.0.tgz",
+      "overridden": false
+    },
+    "safe-stable-stringify": {
+      "version": "2.5.0",
+      "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz",
+      "overridden": false
+    },
+    "sonic-boom": {
+      "version": "4.2.1",
+      "resolved": "https://registry.npmjs.org/sonic-boom/-/sonic-boom-4.2.1.tgz",
+      "overridden": false,
+      "dependencies": {
+        "atomic-sleep": {
+          "version": "1.0.0"
+        }
+      }
+    },
+    "thread-stream": {
+      "version": "3.2.0",
+      "resolved": "https://registry.npmjs.org/thread-stream/-/thread-stream-3.2.0.tgz",
+      "overridden": false,
+      "dependencies": {
+        "real-require": {
+          "version": "0.2.0"
+        }
+      }
+    }
+  }
+}

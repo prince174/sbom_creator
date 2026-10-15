@@ -1,0 +1,28 @@
+{
+  "candidate_unchanged": true,
+  "partition": "holdout",
+  "evaluation": {
+    "status": "MEASURED",
+    "scope": "runtime",
+    "reference_build_binding": "caller_asserted_not_attested",
+    "reference_sha256": "4a4c7e2fe910de55aa0eddcf4b03ecad906387580a7850c881d62bdf474aad0d",
+    "result_sha256": "efd4953be51d1d583fd73193a5377582471e5f4ee4f1142c4036eef03ae8d341",
+    "reference_used_as_analysis_input": false,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "reason": null,
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "reference_direct": 11,
+    "predicted_direct": 11,
+    "count_delta": 0,
+    "unknown_declarations": 0,
+    "declaration_coverage": 1.0,
+    "missing": [],
+    "extra": [],
+    "version_accuracy": 1.0
+  },
+  "note": "First result; no classifier tuning. No-lock ablation pending separately."
+}
