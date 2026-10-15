@@ -886,3 +886,14 @@
 - Two tests and Ruff passed. Next: inspect missing identities before control
   evaluation, without silently reducing coverage.
 - [Protocol](fd-versions-v1.md), [data](fd-versions-v1.json).
+
+## R63 — explain fd UNKNOWN identities, 2026-10-15
+
+- Main6606d20 clean, no duplicate checks running. No candidate rule changes.
+- nix0.24.3/0.29.0 both in lock/image; root requirement0.29.0 retained, no
+  unimplemented Cargo resolution replaced by newest/first heuristic.
+- version_check0.9.5 declared build scope, in lock, absent from image. Expected
+  lifecycle distinction, not automatically scanner error or runtime dependency.
+- Evidence assertions and Ruff passed. UNKNOWN retained, direct accuracy null.
+- Next: Ruby paired reference; defer Rust requirement solver/control evaluation.
+- [Protocol](fd-unknowns-v1.md), [data](fd-unknowns-v1.json).

@@ -1,0 +1,59 @@
+{
+  "experiment": "R63",
+  "rows": [
+    {
+      "name": "nix",
+      "source_declarations": [
+        {
+          "owner": "fd-find",
+          "alias": "nix",
+          "name": "nix",
+          "scope": "normal",
+          "target": "cfg(unix)",
+          "optional": false,
+          "version_requirement": "0.29.0",
+          "workspace_inherited": false,
+          "build_activation": "UNKNOWN",
+          "resolved_version": null
+        }
+      ],
+      "lock_versions": [
+        "0.24.3",
+        "0.29.0"
+      ],
+      "image_versions": [
+        "0.24.3",
+        "0.29.0"
+      ],
+      "association_status": "UNKNOWN",
+      "direct_edge_proven": false
+    },
+    {
+      "name": "version_check",
+      "source_declarations": [
+        {
+          "owner": "fd-find",
+          "alias": "version_check",
+          "name": "version_check",
+          "scope": "build",
+          "target": null,
+          "optional": false,
+          "version_requirement": "0.9",
+          "workspace_inherited": false,
+          "build_activation": "UNKNOWN",
+          "resolved_version": null
+        }
+      ],
+      "lock_versions": [
+        "0.9.5"
+      ],
+      "image_versions": [],
+      "association_status": "UNKNOWN",
+      "direct_edge_proven": false
+    }
+  ],
+  "runtime_changed": false,
+  "rules_changed": false,
+  "direct_accuracy": null,
+  "conclusion": "Do not choose a version by name or require build dependencies to survive in the runtime image"
+}
