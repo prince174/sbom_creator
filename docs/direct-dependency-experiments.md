@@ -1031,3 +1031,7 @@
 ## R78 — Jsoup Java pair, 2026-10-15
 
 - Exact-commit Maven/CDX/native/effective graph agreement; zero external direct runtime dependencies unscored. Tree/config binding and schemas pass. Eight Java pairs complete. Next: SLF4J module.
+
+## R79 — SLF4J module Java pair, 2026-10-15
+
+- Exact-commit slf4j-api module in multi-module checkout built with CycloneDX makeBom; effective/native module owner agrees, direct runtime graph empty. Tree/config binding and schemas pass. Nine Java pairs complete. Next: Commons CLI.
