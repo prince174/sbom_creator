@@ -10,6 +10,21 @@ from run import ROOT, atomic_json
 NODE = 'C:/Users/prince74/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe'
 
 
+def all_components(document, include_root=False):
+    result = []
+    def collect(items):
+        for component in items:
+            result.append(component)
+            collect(component.get('components', []))
+    collect(document.get('components', []))
+    root = document.get('metadata', {}).get('component')
+    if root:
+        if include_root:
+            result.append(root)
+        collect(root.get('components', []))
+    return result
+
+
 def coord(component):
     purl = component.get('purl', '').split('?')[0].split('#')[0]
     if not purl.startswith(('pkg:npm/', 'pkg:maven/')) or '@' not in purl:
@@ -18,10 +33,7 @@ def coord(component):
 
 
 def graph(document, owner, *, npm_lock_wrapper=False):
-    components = list(document.get('components', []))
-    root = document.get('metadata', {}).get('component')
-    if root:
-        components.append(root)
+    components = all_components(document, include_root=True)
     by_ref = {c['bom-ref']: c for c in components if 'bom-ref' in c}
     owners = {c['bom-ref'] for c in components if coord(c) == owner}
     if not owners and npm_lock_wrapper:

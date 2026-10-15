@@ -1040,3 +1040,16 @@
 
 - Commons CLI exact-commit Maven/CDX pair verified; native/effective empty runtime root, tree/config binding and schemas pass.
 - Ten Java and ten JavaScript pairs now complete. Empty positive graphs do not inflate accuracy. Next: full20-pair technique comparison with component and direct scopes separate.
+
+## R81 — full20-pair comparison and optional fingerprint candidate, 2026-10-15
+
+-40 competitor attempts completed;30 SBOM schemas valid. TrivyJava7/0/4,
+  JS components188/0/0; passive Java cdxgen unavailable. No missing-run zero success.
+- Fixed shallow nested-component evaluation; regression test added. Raw Syft
+  fixture-scope Java9/2/2, JS188/8/0. Preserve platform inventory separately.
+- Exploratory explicit optional declarations + image claims + repository SHA256
+  resolves four missing Java candidates:11/0/0. No oracle hints/alias table.
+  No runtime adoption or independent gain claim; freeze/control needed next.
+-275 service tests pass3 skipped; targeted graph/count/optional tests and Ruff
+  pass;20-pair status updated. User's >90% production goal not yet complete.
+- [Comparison](java-js-twenty-comparison.md).

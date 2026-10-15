@@ -1,0 +1,95 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:eb3dd7d2-134e-40c8-b6ee-0128794af455",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-15T17:40:02+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.75.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "b1129876-cf11-49eb-84b5-b3549ddef887",
+      "type": "application",
+      "name": "G:/code/sbom_creator/benchmarks/.work/paired-commons-cli-v1/src",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "41ddc947-8cdb-4e9d-9781-bd5727837b19",
+      "type": "application",
+      "name": "pom.xml",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pom"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/commons-cli/commons-cli@1.9.0",
+      "type": "library",
+      "group": "commons-cli",
+      "name": "commons-cli",
+      "version": "1.9.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/commons-cli/commons-cli@1.9.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgID",
+          "value": "commons-cli:commons-cli:1.9.0::b5af2056"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pom"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "41ddc947-8cdb-4e9d-9781-bd5727837b19",
+      "dependsOn": [
+        "pkg:maven/commons-cli/commons-cli@1.9.0"
+      ]
+    },
+    {
+      "ref": "b1129876-cf11-49eb-84b5-b3549ddef887",
+      "dependsOn": [
+        "41ddc947-8cdb-4e9d-9781-bd5727837b19"
+      ]
+    },
+    {
+      "ref": "pkg:maven/commons-cli/commons-cli@1.9.0",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

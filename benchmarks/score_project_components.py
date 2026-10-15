@@ -1,7 +1,7 @@
 """Fixture-scope component baseline, separate from whole-image inventory."""
 import json
 
-from compare_java_js import coord
+from compare_java_js import all_components, coord
 from run import ROOT, atomic_json
 
 
@@ -28,11 +28,11 @@ def main():
         prefix = '/app/' if project.startswith('javascript-') else '/application/'
         projected = {coord(a) for a in image['artifacts'] if coord(a) and
                      any(p.get('path', '').startswith(prefix) for p in a.get('locations', []))}
-        all_packages = {coord(c) for c in final.get('components', []) if coord(c)}
+        all_packages = {coord(c) for c in all_components(final) if coord(c)}
         # Oracle is opened after prediction. Root application excluded consistently.
         reference = json.loads((receipt_path.parent / 'sbom.json').read_bytes())
         owner = coord(reference.get('metadata', {}).get('component', {}))
-        expected = {coord(c) for c in reference.get('components', []) if coord(c)} - {owner}
+        expected = {coord(c) for c in all_components(reference) if coord(c)} - {owner}
         projected.discard(owner)
         all_packages.discard(owner)
         rows.append({'project': project, 'fixture_scope': prefix, 'project_components': metrics(projected, expected),

@@ -1,5 +1,11 @@
 # Java / JavaScript: comparison of three techniques
 
+**Current20-pair comparison completed:** ten Java and ten JavaScript pairs.
+Use [measured results and candidate limitations](java-js-twenty-comparison.md).
+JS production-normalized Trivy/cdxgen components188/0/0; Java Trivy7/0/4,
+Syft9/2/2, passive cdxgen unavailable. Exploratory Java supplement11/0/0 is
+not yet accepted into production. Older staged results below are historical.
+
 **R66 scope correction:** all4 Trivy excess edges and49/52 cdxgen excess edges
 are dev-only root declarations. An exploratory manifest-only scope adapter gives
 Trivy51/0/0, our saved H2.1 50/0/1, cdxgen51/3/0. This changes the preliminary

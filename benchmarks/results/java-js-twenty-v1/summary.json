@@ -1,0 +1,846 @@
+{
+  "rows": [
+    {
+      "project": "javascript-axios",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 3,
+      "reference_components": 8,
+      "components": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 3,
+        "reference": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-axios",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 3,
+      "reference_components": 8,
+      "components": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 3,
+        "reference": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-chalk",
+      "tool": "trivy",
+      "status": "GRAPH_UNKNOWN",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "javascript-chalk",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "javascript-commander-js",
+      "tool": "trivy",
+      "status": "GRAPH_UNKNOWN",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "javascript-commander-js",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-commons-cli",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-commons-cli",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    },
+    {
+      "project": "java-commons-codec",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-commons-codec",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    },
+    {
+      "project": "java-commons-compress",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 7,
+      "reference_components": 7,
+      "components": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 4,
+        "predicted": 3,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 0.42857142857142855,
+        "f1": 0.6
+      },
+      "direct": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 4,
+        "predicted": 3,
+        "reference": 7,
+        "precision": 1.0,
+        "recall": 0.42857142857142855,
+        "f1": 0.6
+      }
+    },
+    {
+      "project": "java-commons-compress",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 7,
+      "reference_components": 7
+    },
+    {
+      "project": "java-commons-csv",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 2,
+      "reference_components": 2,
+      "components": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "java-commons-csv",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 2,
+      "reference_components": 2
+    },
+    {
+      "project": "java-commons-io",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-commons-io",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    },
+    {
+      "project": "java-commons-lang",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-commons-lang",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    },
+    {
+      "project": "java-commons-text",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 1,
+      "reference_components": 1,
+      "components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "java-commons-text",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 1,
+      "reference_components": 1
+    },
+    {
+      "project": "javascript-debug",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 1,
+      "reference_components": 1,
+      "components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-debug",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 1,
+      "reference_components": 1,
+      "components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-express",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 31,
+      "reference_components": 68,
+      "components": {
+        "tp": 68,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 68,
+        "reference": 68,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 31,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 31,
+        "reference": 31,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-express",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 31,
+      "reference_components": 68,
+      "components": {
+        "tp": 68,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 68,
+        "reference": 68,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 31,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 31,
+        "reference": 31,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-fastify",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 15,
+      "reference_components": 47,
+      "components": {
+        "tp": 47,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 47,
+        "reference": 47,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 15,
+        "reference": 15,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-fastify",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 15,
+      "reference_components": 47,
+      "components": {
+        "tp": 47,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 47,
+        "reference": 47,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 15,
+        "fp": 1,
+        "fn": 0,
+        "predicted": 16,
+        "reference": 15,
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.967741935483871
+      }
+    },
+    {
+      "project": "java-gson",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 1,
+      "reference_components": 1,
+      "components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "java-gson",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 1,
+      "reference_components": 1
+    },
+    {
+      "project": "javascript-hapi",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 18,
+      "reference_components": 29,
+      "components": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 29,
+        "reference": 29,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-hapi",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 18,
+      "reference_components": 29,
+      "components": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 29,
+        "reference": 29,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 18,
+        "fp": 2,
+        "fn": 0,
+        "predicted": 20,
+        "reference": 18,
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526315
+      }
+    },
+    {
+      "project": "javascript-isarray",
+      "tool": "trivy",
+      "status": "GRAPH_UNKNOWN",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "javascript-isarray",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-jsoup",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-jsoup",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    },
+    {
+      "project": "javascript-koa",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 18,
+      "reference_components": 35,
+      "components": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 35,
+        "reference": 35,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-koa",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 18,
+      "reference_components": 35,
+      "components": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 35,
+        "reference": 35,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "direct": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    {
+      "project": "javascript-ms",
+      "tool": "trivy",
+      "status": "GRAPH_UNKNOWN",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "javascript-ms",
+      "tool": "cdxgen",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-slf4j",
+      "tool": "trivy",
+      "status": "MEASURED",
+      "reference_direct": 0,
+      "reference_components": 0,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    {
+      "project": "java-slf4j",
+      "tool": "cdxgen",
+      "status": "NO_SBOM",
+      "reference_direct": 0,
+      "reference_components": 0
+    }
+  ],
+  "runtime_changed": false,
+  "limitation": "Disclosed fixed corpus; source Maven mode and image npm manifest mode. No execution allowed. No claim of independent holdout gain."
+}

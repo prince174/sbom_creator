@@ -23,3 +23,5 @@ Run `python benchmarks/score_project_components.py`. Two tests verify equal-coun
 mismatches and empty metrics; Ruff passes. Next: complete all Java pairs, compare
 ready-made identity/graph techniques on fixed scopes and explain differences
 without oracle-informed corrections.
+
+R81 update: all 20 pairs are now included. Recursive CycloneDX inventory traversal corrects the former JS reference count from 178 to 188. See [full comparison](java-js-twenty-comparison.md); the previous shallow-count interpretation is superseded.

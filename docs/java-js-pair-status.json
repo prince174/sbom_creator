@@ -258,8 +258,17 @@
     }
   ],
   "java_completed": [
+    "commons-cli-v1",
+    "commons-codec-v1",
+    "commons-compress-v1",
+    "commons-csv-v1",
+    "commons-io-v1",
+    "commons-lang-v1",
     "commons-text-v1",
-    "gson-v1"
+    "gson-v1",
+    "jsoup-v1",
+    "slf4j-v1"
   ],
-  "target_per_language": 10
+  "target_per_language": 10,
+  "component_comparison": "java-js-twenty-comparison.md"
 }

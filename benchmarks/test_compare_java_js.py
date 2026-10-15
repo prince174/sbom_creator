@@ -1,4 +1,12 @@
-from compare_java_js import graph
+from compare_java_js import all_components, graph
+
+
+def test_nested_components_are_not_missing_dependencies():
+    child = {'bom-ref': 'child', 'purl': 'pkg:npm/dep@2'}
+    document = {'components': [{'bom-ref': 'owner', 'purl': 'pkg:npm/app@1', 'components': [child]}],
+                'dependencies': [{'ref': 'owner', 'dependsOn': ['child']}]}
+    assert child in all_components(document)
+    assert graph(document, 'pkg:npm/app@1') == {'pkg:npm/dep@2'}
 
 
 def test_missing_owner_graph_unknown_not_empty():

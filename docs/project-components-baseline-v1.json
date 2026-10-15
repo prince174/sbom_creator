@@ -61,6 +61,42 @@
       "extra": []
     },
     {
+      "project": "java-commons-cli",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "java-commons-codec",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
       "project": "java-commons-compress",
       "fixture_scope": "/application/",
       "project_components": {
@@ -83,6 +119,24 @@
         "pkg:maven/org.objectweb.asm/asm@9.7",
         "pkg:maven/org.tukaani.xz/xz@1.10"
       ]
+    },
+    {
+      "project": "java-commons-csv",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "unscoped_final_count": 2,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
     },
     {
       "project": "java-commons-io",
@@ -160,35 +214,32 @@
       "project": "javascript-express",
       "fixture_scope": "/app/",
       "project_components": {
-        "tp": 66,
-        "fp": 2,
+        "tp": 68,
+        "fp": 0,
         "fn": 0,
         "predicted": 68,
-        "reference": 66,
-        "precision": 0.9705882352941176,
+        "reference": 68,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1": 0.9850746268656716
+        "f1": 1.0
       },
       "unscoped_final_count": 253,
       "excluded_platform_or_other_count": 185,
       "missing": [],
-      "extra": [
-        "pkg:npm/encodeurl@1.0.2",
-        "pkg:npm/ms@2.1.3"
-      ]
+      "extra": []
     },
     {
       "project": "javascript-fastify",
       "fixture_scope": "/app/",
       "project_components": {
-        "tp": 46,
-        "fp": 4,
+        "tp": 47,
+        "fp": 3,
         "fn": 0,
         "predicted": 50,
-        "reference": 46,
-        "precision": 0.92,
+        "reference": 47,
+        "precision": 0.94,
         "recall": 1.0,
-        "f1": 0.9583333333333334
+        "f1": 0.9690721649484536
       },
       "unscoped_final_count": 237,
       "excluded_platform_or_other_count": 187,
@@ -196,7 +247,6 @@
       "extra": [
         "pkg:npm/benchmark@1.0.0",
         "pkg:npm/benchmarks@1.0.0",
-        "pkg:npm/fast-uri@3.1.8",
         "pkg:npm/transport@0.0.1"
       ]
     },
@@ -222,21 +272,19 @@
       "project": "javascript-hapi",
       "fixture_scope": "/app/",
       "project_components": {
-        "tp": 28,
-        "fp": 1,
+        "tp": 29,
+        "fp": 0,
         "fn": 0,
         "predicted": 29,
-        "reference": 28,
-        "precision": 0.9655172413793104,
+        "reference": 29,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1": 0.9824561403508771
+        "f1": 1.0
       },
       "unscoped_final_count": 216,
       "excluded_platform_or_other_count": 187,
       "missing": [],
-      "extra": [
-        "pkg:npm/@hapi/bourne@3.0.0"
-      ]
+      "extra": []
     },
     {
       "project": "javascript-isarray",
@@ -257,29 +305,40 @@
       "extra": []
     },
     {
+      "project": "java-jsoup",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
       "project": "javascript-koa",
       "fixture_scope": "/app/",
       "project_components": {
-        "tp": 29,
-        "fp": 6,
+        "tp": 35,
+        "fp": 0,
         "fn": 0,
         "predicted": 35,
-        "reference": 29,
-        "precision": 0.8285714285714286,
+        "reference": 35,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1": 0.90625
+        "f1": 1.0
       },
       "unscoped_final_count": 222,
       "excluded_platform_or_other_count": 187,
       "missing": [],
-      "extra": [
-        "pkg:npm/content-type@2.0.0",
-        "pkg:npm/depd@1.1.2",
-        "pkg:npm/http-errors@1.8.1",
-        "pkg:npm/mime-db@1.52.0",
-        "pkg:npm/mime-types@2.1.35",
-        "pkg:npm/statuses@1.5.0"
-      ]
+      "extra": []
     },
     {
       "project": "javascript-ms",
@@ -296,6 +355,24 @@
       },
       "unscoped_final_count": 186,
       "excluded_platform_or_other_count": 186,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "java-slf4j",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
       "missing": [],
       "extra": []
     }

@@ -1,5 +1,9 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
+2026-10-15: [полное сравнение20пар Java/JavaScript](java-js-twenty-comparison.md).
+Java ещё не проходит порог в production; новый optional/fingerprint supplement
+остаётся экспериментом до независимой проверки и интеграции. Общие места не назначены.
+
 R66 уточнение scope: после исключения dev-only деклараций по входному манифесту
 Trivy51/0/0, H2.1 50/0/1, cdxgen51/3/0 на трёх раскрытых npm-проектах.
 Это exploratory adapter, не независимый новый control. [Подробности](npm-competitor-scopes-v1.md).
