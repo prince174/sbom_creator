@@ -1,0 +1,25 @@
+{
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "image",
+    "--input",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-javalin-reactor-v1\\image.tar",
+    "--format",
+    "cyclonedx",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--offline-scan",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-reactor-image-v1\\cache",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\trivy-reactor-image-v2\\sbom.json"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 1.7030000000086147,
+  "version": "0.75.0",
+  "mode": "image archive CycloneDX offline no Java DB",
+  "runtime_changed": false,
+  "status": "FAILED_MISSING_JAVA_DB",
+  "accuracy": null
+}

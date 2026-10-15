@@ -1,6 +1,6 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
-Расширенная выборка: [25 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md). Новые Spring Boot/TypeScript приложения показаны отдельно; рейтинг старой выборки не переносится автоматически.
+Расширенная выборка: [26 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md). Новые Spring Boot/TypeScript приложения показаны отдельно; рейтинг старой выборки не переносится автоматически.
 
 2026-10-15: актуальные режимы и результаты — [сравнение Java/JavaScript](java-js-top3.md), [cdxgen с Maven](cdxgen-build-enabled-v1.md), [сервис без JS lockfile](java-js-no-lock-v1.md). Старые staged-метрики ниже относятся к историческим выборкам.
 Java ещё не проходит порог в production; новый optional/fingerprint supplement
@@ -254,3 +254,6 @@ R83: build-enabled cdxgen13.4 Java is now measured: original10 pairs11/0/0 exact
 
 
 R88 expansion update (2026-10-16): [Javalin reactor evidence](java-js-expanded-results-v1.md) adds a real19-project build pair, but production service image scanning fails its64MiB output budget. No expanded-corpus winner or changed ranking is established; preserve this failure in coverage.
+
+
+R90 (2026-10-16): passive Trivy0.75.0 image mode with frozen Java DB improves exact component recognition on the same Javalin development image:128/0/0 vs Syft109/19/19 across8 scope-agreeing owners;6 owners remain scope UNKNOWN. Boot packaged comparison90/3/2 conservatively includes one packaging UNKNOWN among extras. This is a component-specific result, not a new direct-dependency rank or production acceptance. [Modes, resources and evidence](java-js-top3.md).

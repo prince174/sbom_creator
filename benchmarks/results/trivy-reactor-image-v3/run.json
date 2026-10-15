@@ -1,0 +1,34 @@
+{
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "image",
+    "--input",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-javalin-reactor-v1\\image.tar",
+    "--format",
+    "cyclonedx",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--offline-scan",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-reactor-image-v1\\cache",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\trivy-reactor-image-v3\\sbom.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 3.3280000000086147,
+  "version": "0.75.0",
+  "binary_sha256": "3b4fcf6fec53c4c73c325cfd518c7264100695b19e6c59c6a777e4a67dc9f0e6",
+  "mode": "image archive CycloneDX offline frozen Java DB",
+  "runtime_changed": false,
+  "database": {
+    "sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+    "bytes": 1553915904,
+    "metadata": {
+      "Version": 1,
+      "NextUpdate": "2026-10-18T00:58:48.74513702Z",
+      "UpdatedAt": "2026-10-15T00:58:48.745137381Z",
+      "DownloadedAt": "2026-10-15T20:27:32.4115773Z"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "image",
+    "--input",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-javalin-reactor-v1\\image.tar",
+    "--format",
+    "json",
+    "--list-all-pkgs",
+    "--scanners",
+    "license",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--offline-scan",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-reactor-image-v1\\cache",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\trivy-reactor-image-v1\\inventory.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.0309999999881256,
+  "version": "0.75.0",
+  "mode": "image archive offline no Java DB",
+  "runtime_changed": false,
+  "status": "INVALID_FOR_JAR_COMPARISON_LICENSE_PROFILE_DISABLED_JAR_ANALYSIS",
+  "accuracy": null
+}

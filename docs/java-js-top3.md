@@ -1,3 +1,19 @@
+## R90 — passive Java image identity comparison, 2026-10-16
+
+Same immutable Javalin image, eight module owners whose CycloneDX/native runtime component sets agree. One development project, not eight independent projects. Six additional shipped owners retain UNKNOWN component scope. No source execution, lockfile or oracle input to either scanner.
+
+| Technique / mode | Exact component TP/FP/FN | Precision / recall | Direct edges | Status |
+|---|---:|---:|---|---|
+| Trivy0.75.0, offline image + frozen Java DB |128/0/0|100% /100%|UNKNOWN;55 shipped-owner edges unmatched|Strongest of these two measured image identity modes; not integrated |
+| Syft1.51.1, same image metadata inventory |109/19/19|85.16% /85.16%|UNKNOWN;55 unmatched|Raw inventory agrees with R89 final coordinate score on these eight owners |
+| cdxgen13.4 |Not measured on this same image stratum|Not ranked|External Maven results belong to a different mode|Original-corpus build-enabled success does not establish expanded image-only accuracy |
+
+Exact PURL comparison includes versions; all128 matched owner-component occurrences have correct versions. Macro P/R100% over the eight agreeing positive owners; scope coverage8/14 owners only. No overall production >90% claim. Kotlin/ASM identities causing Syft errors are correctly identified in this Trivy run. Image inventory does not establish directness or payload execution and cannot replace service evidence gating without validation.
+
+Boot cross-check: Trivy finds90/92 hash-labelled packaged dependencies, with3 conservative extras: P96.77%, R97.83%, F197.30%. One extra is UNKNOWN packaging-added jarmode-tools, charged as FP for a lower bound; actual Hibernate group and version discrepancies remain. Application owner excluded, full image retained.16 build-direct edges remain unmatched. Both are disclosed development cases.
+
+[Reactor evidence](../benchmarks/results/trivy-reactor-image-v3/evaluation.json), [same-image raw Syft comparison](../benchmarks/results/trivy-reactor-image-v3/syft-raw-comparison.json), [Boot evidence](../benchmarks/results/trivy-boot-image-v1/evaluation.json). Repeat confirms all200 exact coordinate/path pairs. First license-only run returned zero language files and is invalid for JAR evaluation; first offline SBOM run failed without Java DB. Both negative attempts retained. Public Java DB bootstrap downloaded938MiB, expanded1,553,915,904bytes; frozen SHA256/metadata retained, DB stays in local benchmark cache. Exact-cache replay is reproducible; public tag is mutable and is not an immutable retrieval guarantee. CPU/RSS not measured; no timing rank.22 targeted schema/graph tests passed; Ruff passed. Next: fresh independent positive controls and source+image owner graphs before integration.
+
 # Java / JavaScript: comparison of three techniques
 
 Original fixed20 comparison, 2026-10-15: ten Java and ten JS primary real-build pairs, plus one independent positive Java control. Scores below use exact coordinates and versions; root excluded. No universal cross-mode ranking is assigned.
