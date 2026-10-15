@@ -7,12 +7,14 @@ import uuid
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
 from pathlib import Path
+from typing import Literal
 
 from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.responses import FileResponse
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from .acquire import Settings, validate_inputs
+from .evaluation import compare, validate_reference
 from .pipeline import ARTIFACTS, analyze, write_json
 
 
@@ -21,6 +23,19 @@ class Request(BaseModel):
     repository_url: str = Field(max_length=2048)
     commit: str = Field(pattern=r"^(?:[0-9a-fA-F]{40}|[0-9a-fA-F]{64})$")
     image: str = Field(max_length=2048)
+    run_mode: Literal['production', 'verification'] = 'production'
+    reference_sbom: dict | None = None
+    reference_scope: Literal['runtime', 'unknown'] = 'unknown'
+
+    @model_validator(mode='after')
+    def reference_contract(self):
+        if self.run_mode == 'production' and self.reference_sbom is not None:
+            raise ValueError('Production mode does not accept a reference')
+        if self.run_mode == 'verification':
+            if self.reference_sbom is None:
+                raise ValueError('Verification requires reference_sbom')
+            validate_reference(self.reference_sbom)
+        return self
 
 
 def api_token():
@@ -95,9 +110,15 @@ def create_app(workspace=None, runner=analyze, settings=None):
             save_status(directory / "status.json", {"id": job_id, "status": "running"})
             result = runner(request.repository_url, request.commit, request.image,
                             directory / "result", settings=configured, mode="rules")
+            artifacts = list(ARTIFACTS)
+            if request.run_mode == 'verification':
+                evaluation = compare(directory / 'result', request.reference_sbom, request.reference_scope)
+                write_json(directory / 'result/evaluation.json', evaluation)
+                result = dict(result, evaluation=evaluation)
+                artifacts.append('evaluation.json')
             save_status(directory / "status.json",
                        {"id": job_id, "status": "succeeded", "result": result,
-                        "artifacts": list(ARTIFACTS)})
+                        "artifacts": artifacts})
         except Exception as error:  # noqa: BLE001 -- job boundary must persist every failure
             # External command/model errors may contain credentials; never serialize raw errors.
             save_status(directory / "status.json", {"id": job_id, "status": "failed",
@@ -139,7 +160,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         state = read_status(directory / "status.json")
         if state["status"] != "succeeded":
             raise HTTPException(409, "Job has no published results")
-        if name not in ARTIFACTS or not (directory / "result" / name).is_file():
+        if name not in state.get('artifacts', []) or not (directory / "result" / name).is_file():
             raise HTTPException(404, "Artifact not found")
         return FileResponse(directory / "result" / name, media_type="application/json", filename=name)
 

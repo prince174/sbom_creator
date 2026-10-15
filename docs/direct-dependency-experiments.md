@@ -933,3 +933,16 @@
 - Evidence assertions/re-evaluation and Ruff pass; runtime unchanged. Next:
   fresh Java/JS paired comparison and external reference-verification command.
 - [Evidence](npm-competitor-scopes-v1.md).
+
+## R67 — optional post-analysis reference evaluation, 2026-10-15
+
+- User authorized production/verification modes and20 Java/JS paired projects.
+  Production defaults unchanged; reference only evaluated after runner completes.
+- CLI/API optional verification with reference CycloneDX1.6,8MiB validation,
+  explicit runtime scope; missing owner/profile/scope =>UNKNOWN. Build binding
+  caller-asserted, no cryptographic attestation claim. No classifier gain claimed.
+-274 tests passed3 skipped, Ruff passed; known Starlette deprecation warning.
+  Three inventory outputs unchanged. First stage only,20-pair target outstanding.
+- New user question: prefer ready-made engines and standard postbuild/package
+  manager approaches; do not duplicate complete Maven/npm resolution logic.
+- [Contract and limitations](verification-mode.md).
