@@ -1,0 +1,72 @@
+{
+  "experiment": "R60",
+  "project": "rust-fd",
+  "commit": "b19136871310b01500b4f09eadd7387b8476be47",
+  "image_binding": {
+    "index_digest": "sha256:39bfcd5f5dbc8fe8ee5c0900e1a15c6398134d3886247a1e94e0e4efc455fde5",
+    "platform_manifest_digest": "sha256:56c6edac89f03763a96a8ba0a1ef722b98979098d04833f7a28577f861fa7a38",
+    "config_digest": "sha256:2703bcb73de7f9fde9d3e2f93d421f4e906d03a80b131090c2da9f2a08614c43"
+  },
+  "artifact_tree_equal": true,
+  "reference_only_for_evaluation": true,
+  "reference_hashes": {
+    "application-tree.json": "42ab064524239f54704316a6527f3b8057b32fd11cc9e284ab2a40e1420b0c08",
+    "Cargo.lock": "dbe6158dbf001a489a53617a531d11dbee22daed2529f87790547ee65d1018d4",
+    "Cargo.toml": "de934f7081bbf86223d6cdea7c0b9456ae48f5c6ce4545854293d4ff3d47f66c",
+    "cargo.txt": "c8cd2e547fb0745a8738926a5c1318d17af1507f07b382d13dc704cc38684566",
+    "direct-edge-kinds.json": "fb98a89073dec43af52f4b4fcf0728622381fb5e848d1841b8fcd09d4ab8e3ec",
+    "Dockerfile": "dd7a453c075ebea9913c0c9694005a91f80bcdd5f83f5049903abac5de56d1bc",
+    "filtered.json": "9442e9f784806d235ffcff66a77000af7237604211cea01421fa35a619a417bb",
+    "generator-help.txt": "b6313e0331e8c89057eecb4f20692bb78835106eda275a9deb21ca8a254b5696",
+    "generator-version.txt": "b973b12146c8c66df2041078e7d319e79dc93cab01aa91fe31659e949ff7be86",
+    "resolved.json": "0dfe20b6f61a96180c0944b42a9cde92f76a909a7bc8f566167b6a85e1b01807",
+    "rustc.txt": "e569d7e196207e57f20aae13320a6b747b909de88c603c401bdb14ee3eeb121c",
+    "sbom.json": "9105113a2c52985cd417606048f0ab55dd20aa078d43832954e530a2a88e0395"
+  },
+  "outputs": {
+    "coverage.json": "ee052a04d76a72d58440ff1f03e5bc0e53ea9921e504fac864293eda7811116c",
+    "decisions.json": "81c7f4a4ac644b879fadf836c782c0a822bcffcf729488d10594c6522c29cb8e",
+    "direct-dependencies.json": "c34127d92cc49b5c247ce9e3a0139a507b768a4f8d6ca1cb5bf171bc38a2e26c",
+    "final.cdx.json": "c703656db93f5d185e964cc7286a54d97f60a812d807ebb5e8b1308fa1de3802",
+    "full.cdx.json": "2e70e5df40de5e442e44eb2513978fd7c5418f5d27928042d1a3c0b627e7f4af",
+    "image.syft.json": "db2d8d9f9824ebaef092963540ced3f4f367679917d12cd60e4aa94f80984a4d",
+    "os.cdx.json": "8c2dac963df5462d6a26b9c1fa6741c1683353df9cb05b1d1555434d7226b025",
+    "provenance.json": "087d99c6aa13b2463f86705f0d91d35773baae842c473ab4de01210d2381fe7f",
+    "review.json": "d14a8f80acf562c4f7cc98e4f7249b4f19aa07bb5e94877db3e08985f44be318",
+    "selected.syft.json": "2b79f70d83c15b2d4541aea636de04f4fbc33f4ca0deb36d7aa410b310e2c1c6",
+    "source.syft.json": "2a619720727e0531fc0d3d915e2d6ab1312e887fe829a02527d6014d259835ed",
+    "summary.json": "c360a5c0ea42455a9cc5c0fcc7cb69041a339b6127ed92980459608eba988797"
+  },
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "SOURCE_ONLY": 53,
+      "CI_CONFIGURATION": 7,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 3
+    },
+    "unknown_groups": {
+      "source_declarations": 53,
+      "ci_configuration": 7,
+      "image_evidence": 3
+    },
+    "source_count": 121,
+    "image_count": 153,
+    "selected_count": 150,
+    "final_count": 61,
+    "os_count": 89,
+    "full_count": 150,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 150,
+      "UNKNOWN": 63
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 3.484
+  },
+  "direct_precision": null,
+  "direct_recall": null
+}

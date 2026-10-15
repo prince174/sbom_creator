@@ -850,3 +850,16 @@
 - Next: continue existing stage IDs, validate tree/archive/schema/edge scopes
   and analyzer replay. Do not launch a duplicate build.
 - [Checkpoint](paired-fd-checkpoint-v1.md).
+
+## R60 — Rust fd pair validation completed, 2026-10-15
+
+- Main89a3d83 clean, no duplicate build. Continued R59 IDs; no rebuild.
+- Builder/runtime trees equal, archive/config identity bound to analyzer image;
+  three output1.6 schemas and reference1.5 schema verified.
+- Initial wrong1.6-only reference validation fixed by existing benchmark1.5
+  validator. Existing finished analysis resumed without overwriting outputs.
+- Immutable receipt includes target-filtered metadata;22 root edges normal21/
+  build1 mapped. Execution not inferred. Baseline UNKNOWN retained, accuracy null.
+- Ruff/pairing-reference tests passed. Runtime unchanged. Next: Rust declaration
+  ownership/scope assessment on development pair and Ruby paired expansion.
+- [Protocol](paired-fd-v1.md), [data](paired-fd-v1.json).

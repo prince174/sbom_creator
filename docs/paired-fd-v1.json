@@ -1,0 +1,43 @@
+{
+  "experiment": "R60",
+  "project": "rust-fd",
+  "root_edges": 22,
+  "kind_occurrences": {
+    "normal": 21,
+    "build": 1
+  },
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "SOURCE_ONLY": 53,
+      "CI_CONFIGURATION": 7,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 3
+    },
+    "unknown_groups": {
+      "source_declarations": 53,
+      "ci_configuration": 7,
+      "image_evidence": 3
+    },
+    "source_count": 121,
+    "image_count": 153,
+    "selected_count": 150,
+    "final_count": 61,
+    "os_count": 89,
+    "full_count": 150,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 150,
+      "UNKNOWN": 63
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 3.484
+  },
+  "receipt_sha256": "2501ed7cf86f85674f4921edbe5216e54d39e64f3d7e62e365bc6ab2b1a6df1c",
+  "runtime_changed": false,
+  "direct_accuracy": null,
+  "limitation": "Paired reference; scopes recorded, execution not proven; no classifier gain claimed"
+}
