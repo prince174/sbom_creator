@@ -1,0 +1,163 @@
+[
+  {
+    "path": "commons-beanutils-1.9.4.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7d938c81789028045c08c065e94be75fc280527620d5bd62b519d5838532368a"
+  },
+  {
+    "path": "commons-codec-1.17.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "f700de80ac270d0344fdea7468201d8b9c805e5c648331c3619f2ee067ccfc59"
+  },
+  {
+    "path": "commons-collections-3.2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "eeeae917917144a68a741d4c0dff66aa5c5c5fd85593ff217bced3fc8ca783b8"
+  },
+  {
+    "path": "commons-configuration2-2.11.0.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "48957fc3a0d9fbd221fe4f5ff6d0294ce6646ea139793c36706703da59402683"
+  },
+  {
+    "path": "commons-jexl-2.1.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "03c9a9fae5da78ce52c0bf24467cc37355b7e23196dff4839e2c0ff018a01306"
+  },
+  {
+    "path": "commons-jxpath-1.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "fcbc0ad917d9d6a73c6df21fac322e00d213ef19cd94815a007c407a8a3ff449"
+  },
+  {
+    "path": "commons-lang3-3.14.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c"
+  },
+  {
+    "path": "commons-logging-1.3.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6b858424f518015f32bfcd1183a373f4a827d72d026b6031da0c91cf0e8f3489"
+  },
+  {
+    "path": "commons-text-1.12.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "de023257ff166044a56bd1aa9124e843cd05dac5806cc705a9311f3556d5a15f"
+  },
+  {
+    "path": "commons-vfs2-2.9.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "266f96b77aa18773191f6992fc7910999bf8ee8a244ec67a3398b486eb726a7f"
+  },
+  {
+    "path": "hadoop-hdfs-client-3.3.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "23e86d658b016394c263f80b8e318f232167a8862a07a3d50e5369175f3e8a58"
+  },
+  {
+    "path": "jackson-annotations-2.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "fccad82e13172c0e4384db71577219c9b8631c0820f4b18daaa57016fb661c76"
+  },
+  {
+    "path": "jackson-core-2.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "ddb26c8a1f1a84535e8213c48b35b253370434e3287b3cf15777856fc4e58ce6"
+  },
+  {
+    "path": "jackson-databind-2.17.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "b6ca2f7d5b1ab245cec5495ec339773d2d90554c48592590673fb18f4400a948"
+  },
+  {
+    "path": "log4j-1.2-api-2.23.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "4d0433042361e962656250e1568f0008c9fac2e48c74f53ca51563a14363b927"
+  },
+  {
+    "path": "log4j-api-2.23.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "92ec1fd36ab3bc09de6198d2d7c0914685c0f7127ea931acc32fd2ecdd82ea89"
+  },
+  {
+    "path": "log4j-core-2.23.1.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7079368005fc34f56248f57f8a8a53361c3a53e9007d556dbc66fc669df081b5"
+  },
+  {
+    "path": "okhttp-2.7.5.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "88ac9fd1bb51f82bcc664cc1eb9c225c90dc4389d660231b4cc737bebfe7d0aa"
+  },
+  {
+    "path": "okio-1.6.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "114bdc1f47338a68bcbc95abf2f5cdc72beeec91812f2fcd7b521c1937876266"
+  },
+  {
+    "path": "snakeyaml-2.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "1467931448a0817696ae2805b7b8b20bfb082652bf9c4efaed528930dc49389b"
+  },
+  {
+    "path": "spring-beans-5.3.35.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "7e7ec170dc808921d94e33b2842177522687e1addc198ed36907f3cc94ad057a"
+  },
+  {
+    "path": "spring-core-5.3.35.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0db5d0c46af572aed4c5e4f91a2957985e54be056c4f6f611c33ef9e9b2da684"
+  },
+  {
+    "path": "xml-resolver-1.2.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "47dcde8986019314ef78ae7280a94973a21d2ed95075a40a000b42da956429e1"
+  }
+]

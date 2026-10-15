@@ -1,0 +1,146 @@
+plugins {
+    alias(libs.plugins.sonarqube)
+    alias(libs.plugins.asciidoctor)
+    alias(libs.plugins.test.retry)
+    alias(libs.plugins.nexus.publish)
+    alias(libs.plugins.bnd.builder) apply false
+    alias(libs.plugins.jmh)
+    id("idea")
+    id("jacoco-report-aggregation")
+    id("jvm-test-suite")
+}
+
+allprojects {
+    apply plugin: "jacoco"
+
+    version = version == "unspecified" ? "0.1.0-SNAPSHOT" : version
+    group = "io.github.resilience4j"
+    description = "Resilience4j is a lightweight, easy-to-use fault tolerance library designed for Java8 and functional programming"
+
+    repositories {
+        mavenCentral()
+    }
+
+    jacoco {
+        toolVersion = "0.8.12"
+    }
+}
+
+ext {
+    coreProjects = subprojects.findAll {
+        p -> !p.name.endsWith("-bom")
+    }
+}
+
+normalization {
+    runtimeClasspath {
+        metaInf {
+            ignoreAttribute("Build-Time")
+            ignoreAttribute("Build-Date")
+        }
+    }
+}
+
+dependencies {
+    coreProjects.each { jacocoAggregation(project(":${it.name}")) }
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl = uri("https://ossrh-staging-api.central.sonatype.com/service/local/")
+            snapshotRepositoryUrl = uri("https://central.sonatype.com/repository/maven-snapshots/")
+        }
+    }
+}
+
+configure(project.coreProjects) {
+    apply plugin: "java"
+    apply plugin: "java-library"
+    apply plugin: "maven-publish"
+    apply plugin: "signing"
+    apply from: "${rootDir}/publishing.gradle"
+    apply plugin: "org.gradle.test-retry"
+    apply plugin: "me.champeau.jmh"
+
+    tasks.withType(Test).all {
+        if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
+            jvmArgs += [
+                    "--add-opens=java.base/java.lang=ALL-UNNAMED",
+                    "--add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED",
+                    "--add-opens=java.base/java.time=ALL-UNNAMED",
+                    "--add-opens=java.base/java.io=ALL-UNNAMED",
+            ]
+        }
+        if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_21)) {
+            jvmArgs += ["-XX:+EnableDynamicAgentLoading"]
+        }
+    }
+
+    dependencies {
+        implementation(libs.slf4j)
+
+        // JSR-305 only used for non-required meta-annotations
+        compileOnly(libs.jsr305)
+
+        testImplementation(platform(libs.junit.bom))
+        testRuntimeOnly(libs.junit.platform.launcher)
+        testImplementation(libs.bundles.testing)
+    }
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+        options.deprecation = true
+        options.encoding = "UTF-8"
+        options.compilerArgs += ["-Xlint:unchecked", "-parameters"]
+    }
+
+    test {
+        retry {
+            maxRetries = 3
+            maxFailures = 20
+            failOnPassedAfterRetry = true
+        }
+        useJUnitPlatform()
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.required.set(true)
+        }
+    }
+
+    afterEvaluate {
+        jar {
+            from("../") {
+                include "COPYRIGHT.txt"
+                include "LICENSE.txt"
+            }
+
+            inputs.property("moduleName", moduleName)
+            manifest.attributes(
+                    "Automatic-Module-Name": moduleName
+            )
+        }
+    }
+}
+
+def allTestCoverageFile = "${rootProject.projectDir}/build/reports/jacoco/testCodeCoverageReport/testCodeCoverageReport.xml"
+
+sonarqube {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.organization", "resilience4j"
+        property "sonar.projectName", "resilience4j"
+        property "sonar.projectKey", "resilience4j_resilience4j"
+        property "sonar.links.homepage", "https://github.com/resilience4j/resilience4j"
+        property "sonar.links.ci", "https://github.com/resilience4j/resilience4j/actions"
+        property "sonar.links.scm", "https://github.com/resilience4j/resilience4j"
+        property "sonar.links.issue", "https://github.com/resilience4j/resilience4j/issues"
+        property "sonar.language", "java"
+        property "sonar.coverage.jacoco.xmlReportPaths", allTestCoverageFile
+    }
+}
+
+tasks.check.dependsOn tasks.testCodeCoverageReport

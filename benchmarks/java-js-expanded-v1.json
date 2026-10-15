@@ -1,0 +1,928 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "target_primary_pairs_per_language": 20,
+  "repositories": [
+    {
+      "id": "java-commons-configuration",
+      "language": "Java",
+      "repository_url": "https://github.com/apache/commons-configuration.git",
+      "release_ref": "refs/tags/rel/commons-configuration-2.11.0",
+      "commit": "f428261556f4cba56a6d49a4824803cff056fbed",
+      "partition": "development",
+      "planned_challenges": [
+        "optional",
+        "exclusions",
+        "many-direct"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/apache/commons-configuration/f428261556f4cba56a6d49a4824803cff056fbed/pom.xml",
+          "sha256": "73f632c0a21c2bfdab8a72a7a38cd065a19537b3822e69a53ec7017b039a2ffa"
+        }
+      },
+      "declared_root_modules": [],
+      "declared_root_dependency_count": 31,
+      "expected_package": "org.apache.commons:commons-configuration2",
+      "expected_version": "2.11.0"
+    },
+    {
+      "id": "java-spring-petclinic",
+      "language": "Java",
+      "repository_url": "https://github.com/spring-projects/spring-petclinic.git",
+      "release_ref": "HEAD",
+      "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+      "partition": "development",
+      "planned_challenges": [
+        "spring-boot-app",
+        "profiles",
+        "dependency-management"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/spring-projects/spring-petclinic/500158f732419217507c7656904b8e6aa1bcc0d6/pom.xml",
+          "sha256": "7e61df0a43d538a5404e8130a55b8085541ec8e841fcf39f81bb6d3d81dcd2f4"
+        },
+        "build.gradle": {
+          "source": "https://raw.githubusercontent.com/spring-projects/spring-petclinic/500158f732419217507c7656904b8e6aa1bcc0d6/build.gradle",
+          "sha256": "e69845805301a92db8877b0f73a3705cf9131b4f548b1b270929c15b3f113afe"
+        },
+        "settings.gradle": {
+          "source": "https://raw.githubusercontent.com/spring-projects/spring-petclinic/500158f732419217507c7656904b8e6aa1bcc0d6/settings.gradle",
+          "sha256": "f6468724ac5adae1f9e17c61eac5f20f849c6af43c8e2a94222d6e59ce6abce1"
+        }
+      },
+      "declared_root_modules": [],
+      "declared_root_dependency_count": 28,
+      "expected_package": "org.springframework.samples:spring-petclinic",
+      "expected_version": "4.0.0-SNAPSHOT"
+    },
+    {
+      "id": "java-petclinic-rest",
+      "language": "Java",
+      "repository_url": "https://github.com/spring-petclinic/spring-petclinic-rest.git",
+      "release_ref": "HEAD",
+      "commit": "afc8fc1d3b8ec8de69414482b3bd70a1da78cb95",
+      "partition": "holdout",
+      "planned_challenges": [
+        "spring-boot-rest",
+        "profiles",
+        "database-drivers"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/spring-petclinic/spring-petclinic-rest/afc8fc1d3b8ec8de69414482b3bd70a1da78cb95/pom.xml",
+          "sha256": "260976f9fb3d5028b73e28dc147fe808822f8248b7c19b01b96a6dddb90ab5bb"
+        }
+      },
+      "declared_root_modules": [],
+      "declared_root_dependency_count": 25,
+      "expected_package": "org.springframework.samples:spring-petclinic-rest",
+      "expected_version": "4.0.2"
+    },
+    {
+      "id": "java-dropwizard",
+      "language": "Java",
+      "repository_url": "https://github.com/dropwizard/dropwizard.git",
+      "release_ref": "HEAD",
+      "commit": "14b738b8ca8a52cb245f855cee0dcc68327f1d72",
+      "partition": "holdout",
+      "planned_challenges": [
+        "maven-reactor",
+        "bom",
+        "modules"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/dropwizard/dropwizard/14b738b8ca8a52cb245f855cee0dcc68327f1d72/pom.xml",
+          "sha256": "8e6786c6d5bccf5470749bc136d180ca059e66ef0fb551c167affb2d7f3a3273"
+        }
+      },
+      "declared_root_modules": [
+        "dropwizard-bom",
+        "dropwizard-dependencies",
+        "dropwizard-parent",
+        "dropwizard-core",
+        "dropwizard-client",
+        "dropwizard-db",
+        "dropwizard-jdbi3",
+        "dropwizard-migrations",
+        "dropwizard-hibernate",
+        "dropwizard-auth",
+        "dropwizard-forms",
+        "dropwizard-views",
+        "dropwizard-views-freemarker",
+        "dropwizard-views-mustache",
+        "dropwizard-testing",
+        "dropwizard-util",
+        "dropwizard-jackson",
+        "dropwizard-validation",
+        "dropwizard-configuration",
+        "dropwizard-logging",
+        "dropwizard-metrics",
+        "dropwizard-metrics-graphite",
+        "dropwizard-jersey",
+        "dropwizard-jetty",
+        "dropwizard-servlets",
+        "dropwizard-lifecycle",
+        "dropwizard-assets",
+        "dropwizard-http2",
+        "dropwizard-request-logging",
+        "dropwizard-json-logging",
+        "dropwizard-health",
+        "dropwizard-unix-socket",
+        "dropwizard-example",
+        "docs/source/examples"
+      ],
+      "declared_root_dependency_count": 0,
+      "expected_package": "io.dropwizard:dropwizard-project",
+      "expected_version": "5.0.3-SNAPSHOT"
+    },
+    {
+      "id": "java-vertx-web",
+      "language": "Java",
+      "repository_url": "https://github.com/vert-x3/vertx-web.git",
+      "release_ref": "HEAD",
+      "commit": "50ff95441507417be48e77f47f309ebb65a998ad",
+      "partition": "development",
+      "planned_challenges": [
+        "maven-reactor",
+        "modules",
+        "optional"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/vert-x3/vertx-web/50ff95441507417be48e77f47f309ebb65a998ad/pom.xml",
+          "sha256": "cb3366603784d4108de86f5e8f4b1fc25304ea8465d89ee9f6ac6ac85c610cce"
+        }
+      },
+      "declared_root_modules": [
+        "vertx-web-common",
+        "vertx-web",
+        "vertx-web-client",
+        "vertx-template-engines",
+        "vertx-web-graphql",
+        "vertx-web-session-stores",
+        "vertx-web-api-service",
+        "vertx-web-validation",
+        "vertx-web-openapi-router",
+        "vertx-web-proxy"
+      ],
+      "declared_root_dependency_count": 8,
+      "expected_package": "io.vertx:vertx-web-parent",
+      "expected_version": "5.3.0-SNAPSHOT"
+    },
+    {
+      "id": "java-jib",
+      "language": "Java",
+      "repository_url": "https://github.com/GoogleContainerTools/jib.git",
+      "release_ref": "HEAD",
+      "commit": "fb949e2676afbbd7dd7a1ef61e20251931325654",
+      "partition": "development",
+      "planned_challenges": [
+        "gradle-multimodule",
+        "plugins"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "build.gradle": {
+          "source": "https://raw.githubusercontent.com/GoogleContainerTools/jib/fb949e2676afbbd7dd7a1ef61e20251931325654/build.gradle",
+          "sha256": "be025e0f8110de6341607c0aeb1dab01a0b4efb6ac8e8f7ac6ba8ac1d75d3e1d"
+        },
+        "settings.gradle": {
+          "source": "https://raw.githubusercontent.com/GoogleContainerTools/jib/fb949e2676afbbd7dd7a1ef61e20251931325654/settings.gradle",
+          "sha256": "4ec98dad775c157e63d423940e9b6699efaaf5ffda2c4a63591e3e168b8dfccb"
+        }
+      }
+    },
+    {
+      "id": "java-okhttp",
+      "language": "Java",
+      "repository_url": "https://github.com/square/okhttp.git",
+      "release_ref": "HEAD",
+      "commit": "5a4b597d11b719128dd8f87e3ef8657286734c64",
+      "partition": "holdout",
+      "planned_challenges": [
+        "gradle-kotlin",
+        "multiplatform",
+        "modules"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "build.gradle.kts": {
+          "source": "https://raw.githubusercontent.com/square/okhttp/5a4b597d11b719128dd8f87e3ef8657286734c64/build.gradle.kts",
+          "sha256": "9a977ed84d3d665f6f4cea4504f1312026216f7e4a3ae9d5dba3f9abb364966d"
+        },
+        "settings.gradle.kts": {
+          "source": "https://raw.githubusercontent.com/square/okhttp/5a4b597d11b719128dd8f87e3ef8657286734c64/settings.gradle.kts",
+          "sha256": "16d09183f3c4867b487a33ed4d3c137bc8f57c9fc4e328d5f4c0860c1df469dc"
+        }
+      }
+    },
+    {
+      "id": "java-resilience4j",
+      "language": "Java",
+      "repository_url": "https://github.com/resilience4j/resilience4j.git",
+      "release_ref": "HEAD",
+      "commit": "b7c0069802e373ed72dff0b817c270fbb6e966ba",
+      "partition": "holdout",
+      "planned_challenges": [
+        "gradle-multimodule",
+        "optional-integrations"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "build.gradle": {
+          "source": "https://raw.githubusercontent.com/resilience4j/resilience4j/b7c0069802e373ed72dff0b817c270fbb6e966ba/build.gradle",
+          "sha256": "be0c42acec8dd92c0c43c8e99e8621dd07012d838c3a178a007113c9260df117"
+        },
+        "settings.gradle": {
+          "source": "https://raw.githubusercontent.com/resilience4j/resilience4j/b7c0069802e373ed72dff0b817c270fbb6e966ba/settings.gradle",
+          "sha256": "49bfa9473aefb8cbd84d70975a5cb66efef08d25198a9fd5424b489e6f7767b6"
+        }
+      }
+    },
+    {
+      "id": "java-javalin",
+      "language": "Java",
+      "repository_url": "https://github.com/javalin/javalin.git",
+      "release_ref": "HEAD",
+      "commit": "20ba71b211b5efa91f5c10ccb467326b86a1e5dc",
+      "partition": "development",
+      "planned_challenges": [
+        "maven-reactor",
+        "kotlin-java",
+        "profiles"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/javalin/javalin/20ba71b211b5efa91f5c10ccb467326b86a1e5dc/pom.xml",
+          "sha256": "16bae80b35554adfc0e41c4b88dc2b7e728eb1a1b14a64f576904603680a397e"
+        }
+      },
+      "declared_root_modules": [
+        "javalin",
+        "javalin-bom",
+        "javalin-bundle",
+        "javalin-testtools",
+        "javalin-utils",
+        "javalin-ssl",
+        "javalin-micrometer",
+        "jacoco-coverage-report"
+      ],
+      "declared_root_dependency_count": 1,
+      "expected_package": "io.javalin:javalin-parent",
+      "expected_version": "7.2.4-SNAPSHOT"
+    },
+    {
+      "id": "java-petclinic-microservices",
+      "language": "Java",
+      "repository_url": "https://github.com/spring-petclinic/spring-petclinic-microservices.git",
+      "release_ref": "HEAD",
+      "commit": "1d76b00d683e86b62867a6bf59530f8ab301244f",
+      "partition": "development",
+      "planned_challenges": [
+        "multiple-services",
+        "spring-bom",
+        "profiles"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "pom.xml": {
+          "source": "https://raw.githubusercontent.com/spring-petclinic/spring-petclinic-microservices/1d76b00d683e86b62867a6bf59530f8ab301244f/pom.xml",
+          "sha256": "9e7534c64e5b0892f5044d50b1f12704fa58df8e6ce8947d1343536933c5ef69"
+        }
+      },
+      "declared_root_modules": [
+        "spring-petclinic-admin-server",
+        "spring-petclinic-customers-service",
+        "spring-petclinic-vets-service",
+        "spring-petclinic-visits-service",
+        "spring-petclinic-genai-service",
+        "spring-petclinic-config-server",
+        "spring-petclinic-discovery-server",
+        "spring-petclinic-api-gateway"
+      ],
+      "declared_root_dependency_count": 0,
+      "expected_package": "org.springframework.samples:spring-petclinic-microservices",
+      "expected_version": "4.0.1"
+    },
+    {
+      "id": "javascript-pino",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/pinojs/pino.git",
+      "release_ref": "refs/tags/v9.6.0",
+      "commit": "4df424cf0b79bf2f35c2a38c7f40ac54bb014384",
+      "partition": "holdout",
+      "planned_challenges": [
+        "many-direct",
+        "transport",
+        "dev-runtime"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/pinojs/pino/4df424cf0b79bf2f35c2a38c7f40ac54bb014384/package.json",
+          "sha256": "d39a0061450dd629dd433daf7b7c2d82347ba3ce3f0ca3588ba17ea8f5e61c20"
+        }
+      },
+      "declared_root_dependency_count": 11,
+      "declared_workspaces": null,
+      "package_manager": null,
+      "scripts": {
+        "docs": "docsify serve",
+        "browser-test": "airtap --local 8080 test/browser*test.js",
+        "lint": "eslint .",
+        "prepublishOnly": "tap --no-check-coverage test/internals/version.test.js",
+        "test": "npm run lint && npm run transpile && tap --ts && jest test/jest && npm run test-types",
+        "test-ci": "npm run lint && npm run transpile && tap --ts --no-check-coverage --coverage-report=lcovonly && npm run test-types",
+        "test-ci-pnpm": "pnpm run lint && npm run transpile && tap --ts --no-coverage --no-check-coverage && pnpm run test-types",
+        "test-ci-yarn-pnp": "yarn run lint && npm run transpile && tap --ts --no-check-coverage --coverage-report=lcovonly",
+        "test-types": "tsc && tsd && ts-node test/types/pino.ts",
+        "test:smoke": "smoker smoke:pino && smoker smoke:browser && smoker smoke:file",
+        "smoke:pino": "node ./pino.js",
+        "smoke:browser": "node ./browser.js",
+        "smoke:file": "node ./file.js",
+        "transpile": "node ./test/fixtures/ts/transpile.cjs",
+        "cov-ui": "tap --ts --coverage-report=html",
+        "bench": "node benchmarks/utils/runbench all",
+        "bench-basic": "node benchmarks/utils/runbench basic",
+        "bench-object": "node benchmarks/utils/runbench object",
+        "bench-deep-object": "node benchmarks/utils/runbench deep-object",
+        "bench-multi-arg": "node benchmarks/utils/runbench multi-arg",
+        "bench-longs-tring": "node benchmarks/utils/runbench long-string",
+        "bench-child": "node benchmarks/utils/runbench child",
+        "bench-child-child": "node benchmarks/utils/runbench child-child",
+        "bench-child-creation": "node benchmarks/utils/runbench child-creation",
+        "bench-formatters": "node benchmarks/utils/runbench formatters",
+        "update-bench-doc": "node benchmarks/utils/generate-benchmark-doc > docs/benchmarks.md"
+      },
+      "engines": {}
+    },
+    {
+      "id": "javascript-http-server",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/http-party/http-server.git",
+      "release_ref": "HEAD",
+      "commit": "0d3b7bb5b6e8a59fd450ae2dca65870009cfcd8b",
+      "partition": "development",
+      "planned_challenges": [
+        "cli-app",
+        "many-direct"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/http-party/http-server/0d3b7bb5b6e8a59fd450ae2dca65870009cfcd8b/package.json",
+          "sha256": "e62b96d7ac86228b66967fdb9dbe2bc35ae2fe01dc21bb45a222211e48d1968a"
+        }
+      },
+      "declared_root_dependency_count": 14,
+      "declared_workspaces": null,
+      "package_manager": null,
+      "scripts": {
+        "start": "node ./bin/http-server",
+        "test": "tap --reporter=terse --allow-incomplete-coverage test/*.test.js",
+        "test-watch": "tap --reporter=terse --allow-incomplete-coverage --watch test/*.test.js"
+      },
+      "engines": {
+        "node": ">=16.20.2"
+      }
+    },
+    {
+      "id": "javascript-fastify-cli",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/fastify/fastify-cli.git",
+      "release_ref": "HEAD",
+      "commit": "0493a1e74b140999f97ab8448dc20637d3d403e2",
+      "partition": "development",
+      "planned_challenges": [
+        "cli-app",
+        "plugins",
+        "dev-runtime"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/fastify/fastify-cli/0493a1e74b140999f97ab8448dc20637d3d403e2/package.json",
+          "sha256": "abcded75c1015a4b9b6b8910e2176c38f737adbf6cc61de2e456583888ab97e1"
+        }
+      },
+      "declared_root_dependency_count": 13,
+      "declared_workspaces": null,
+      "package_manager": null,
+      "scripts": {
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "test": "xcopy /e /k /i . \"..\\node_modules\\fastify-cli\" || rsync -r --exclude=node_modules ./ node_modules/fastify-cli || echo 'this is fine' && npm run unit:suites && c8 --clean npm run test:cli-and-typescript",
+        "unit:cjs": "node suite-runner.js \"templates/app/test/**/*.test.js\"",
+        "unit:esm": "node suite-runner.js \"templates/app-esm/test/**/*.test.js\"",
+        "unit:ts-cjs": "cross-env TS_NODE_PROJECT=./test/configs/ts-cjs.tsconfig.json node -r ts-node/register suite-runner.js \"templates/app-ts/test/**/*.test.ts\"",
+        "unit:ts-esm": "cross-env TS_NODE_PROJECT=./test/configs/ts-esm.tsconfig.json FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import ./test/configs/register-ts-esm.mjs suite-runner.js \"templates/app-ts-esm/test/**/*.test.ts\"",
+        "unit:suites": "node should-skip-test-suites.js || npm run all-suites",
+        "all-suites": "npm run unit:cjs && npm run unit:esm && npm run unit:ts-cjs && npm run unit:ts-esm",
+        "unit:cli-js-esm": "node suite-runner.js \"test/esm/**/*.test.js\"",
+        "unit:cli-js": "node suite-runner.js \"test/**/*.test.js\"",
+        "unit:cli-ts": "cross-env TS_NODE_PROJECT=./test/configs/ts-cjs.tsconfig.json node -r ts-node/register suite-runner.js \"test/**/*.test.ts\"",
+        "unit:cli": "npm run unit:cli-js && npm run unit:cli-ts && npm run unit:cli-js-esm",
+        "test:cli-and-typescript": "npm run unit:cli && npm run test:typescript",
+        "test:typescript": "tstyche"
+      },
+      "engines": {}
+    },
+    {
+      "id": "javascript-nest-starter",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/nestjs/typescript-starter.git",
+      "release_ref": "HEAD",
+      "commit": "a122dea65cd0610ee205d7765ed46f9d73629141",
+      "partition": "holdout",
+      "planned_challenges": [
+        "typescript-build",
+        "peer",
+        "application"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/nestjs/typescript-starter/a122dea65cd0610ee205d7765ed46f9d73629141/package.json",
+          "sha256": "60e35722e8bef28f3eddb70a928d37fcbcdc46fe48f1afbf7e35026d6b6e675b"
+        }
+      },
+      "declared_root_dependency_count": 6,
+      "declared_workspaces": null,
+      "package_manager": null,
+      "scripts": {
+        "build": "nest build",
+        "deploy": "nest deploy",
+        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+        "start": "nest start",
+        "start:dev": "nest start --watch",
+        "start:debug": "nest start --debug --watch",
+        "start:prod": "node dist/main",
+        "lint": "oxlint src/ test/",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:cov": "vitest run --coverage",
+        "test:debug": "vitest --inspect-brk --no-file-parallelism",
+        "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+      },
+      "engines": {}
+    },
+    {
+      "id": "javascript-nest",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/nestjs/nest.git",
+      "release_ref": "HEAD",
+      "commit": "1c2f689518412cbc6a6bc09662dd5cfed779f2bf",
+      "partition": "development",
+      "planned_challenges": [
+        "monorepo",
+        "peer",
+        "typescript-build"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/nestjs/nest/1c2f689518412cbc6a6bc09662dd5cfed779f2bf/package.json",
+          "sha256": "a4a40d5648816f7c4a1d3f67f8b7bec577fc2aae0ba121961cae5f631bdab7d6"
+        }
+      },
+      "declared_root_dependency_count": 19,
+      "declared_workspaces": [
+        "packages/*"
+      ],
+      "package_manager": null,
+      "scripts": {
+        "build": "tsc -b -v packages",
+        "postbuild": "npm run move:node_modules",
+        "build:dev": "tsc -b -v packages --watch",
+        "prebuild:prod": "npm run clean",
+        "build:prod": "tsc -b -v packages",
+        "changelog": "lerna-changelog",
+        "clean": "tsc -b --clean packages",
+        "move:samples": "gulp move:samples",
+        "move:node_modules": "gulp move:node_modules",
+        "build:samples": "gulp install:samples && npm run build && npm run move:samples && gulp build:samples",
+        "codechecks:benchmarks": "codechecks ./tools/benchmarks/check-benchmarks.ts",
+        "coverage": "vitest run --coverage --config vitest.config.coverage.mts || true",
+        "format": "prettier \"**/*.ts\" \"packages/**/*.json\" --ignore-path ./.prettierignore --write && git status",
+        "postinstall": "opencollective",
+        "test": "vitest run",
+        "test:dev": "vitest",
+        "test:cov": "vitest run --coverage --config vitest.config.coverage.mts || true",
+        "test:integration": "vitest run --config vitest.config.integration.mts",
+        "test:docker:up": "node scripts/docker-compose.js -f integration/docker-compose.yml up -d",
+        "test:docker:wait:rmq": "node scripts/wait-for-rabbitmq.js",
+        "test:docker:down": "node scripts/docker-compose.js -f integration/docker-compose.yml down",
+        "lint": "oxlint packages integration",
+        "lint:fix": "oxlint --fix packages integration",
+        "lint:ci": "oxlint packages",
+        "prerelease": "gulp copy-misc",
+        "publish": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --exact -m \"chore(release): publish %s release\"",
+        "prepublishOnly": "npm run changelog | pbcopy",
+        "publish:beta": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=beta -m \"chore(release): publish %s release\"",
+        "publish:next": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=next --no-git-tag-version --no-push -m \"chore(release): publish %s release\"",
+        "publish:rc": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --npm-tag=rc -m \"chore(release): publish %s release\"",
+        "publish:test": "npm run prerelease && npm run build:prod && ./node_modules/.bin/lerna publish --force-publish --npm-tag=test --no-git-tag-version --no-push -m \"chore(release): publish %s release\"",
+        "prepare": "husky"
+      },
+      "engines": {
+        "node": ">= 20"
+      }
+    },
+    {
+      "id": "javascript-eslint",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/eslint/eslint.git",
+      "release_ref": "HEAD",
+      "commit": "95e51a0518b15015304eca9844b3f64c1fc167ca",
+      "partition": "holdout",
+      "planned_challenges": [
+        "workspaces",
+        "cli-app",
+        "optional"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/eslint/eslint/95e51a0518b15015304eca9844b3f64c1fc167ca/package.json",
+          "sha256": "f8a562d091f7531315c09a355fed2c073effd3b4a7ae32d8fb2d95d340636971"
+        }
+      },
+      "declared_root_dependency_count": 30,
+      "declared_workspaces": [
+        "packages/*"
+      ],
+      "package_manager": null,
+      "scripts": {
+        "build:docs:update-links": "node tools/fetch-docs-links.js",
+        "build:site": "node Makefile.js gensite",
+        "build:webpack": "node Makefile.js webpack",
+        "build:readme": "node tools/update-readme.js",
+        "build:rules-index": "node Makefile.js generateRuleIndexPage",
+        "fmt": "prettier --write .",
+        "fmt:check": "prettier --check .",
+        "lint": "node Makefile.js lint",
+        "lint:docs:js": "node Makefile.js lintDocsJS",
+        "lint:docs:rule-examples": "node Makefile.js checkRuleExamples",
+        "lint:unused": "knip",
+        "lint:fix": "node Makefile.js lint -- fix",
+        "lint:fix:docs:js": "node Makefile.js lintDocsJS -- fix",
+        "lint:rule-types": "node tools/update-rule-type-headers.js --check",
+        "lint:types": "attw --pack",
+        "release:generate:alpha": "node Makefile.js generatePrerelease -- alpha",
+        "release:generate:beta": "node Makefile.js generatePrerelease -- beta",
+        "release:generate:latest": "node Makefile.js generateRelease -- latest",
+        "release:generate:maintenance": "node Makefile.js generateRelease -- maintenance",
+        "release:generate:rc": "node Makefile.js generatePrerelease -- rc",
+        "release:publish": "node Makefile.js publishRelease",
+        "test": "node Makefile.js test",
+        "test:browser": "node Makefile.js cypress",
+        "test:cli": "mocha",
+        "test:ecosystem": "node tools/test-ecosystem/index.mjs",
+        "test:ecosystem:update": "node tools/test-ecosystem/update.mjs",
+        "test:emfile": "node tools/check-emfile-handling.js",
+        "test:fuzz": "node Makefile.js fuzz",
+        "test:performance": "node Makefile.js perf",
+        "test:pnpm": "cd tests/pnpm && node check.js && pnpm install && pnpm exec tsc",
+        "test:types": "tsc -p tests/lib/types/tsconfig.json && npm run test:types --workspaces --if-present",
+        "test:types:5.3": "npx -p typescript@5.3 -y -- tsc -p tsconfig.types-legacy.json",
+        "test:types:5.x": "npx -p typescript@5.x -y -- tsc -p tsconfig.types.json",
+        "test:types:7.x": "npx -p @typescript/native-preview@latest -y -- tsgo -p tsconfig.types.json",
+        "test:types:all": "npm run test:types && npm run test:types:5.3 && npm run test:types:5.x && npm run test:types:7.x"
+      },
+      "engines": {
+        "node": "^20.19.0 || ^22.13.0 || >=24"
+      }
+    },
+    {
+      "id": "javascript-vite",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/vitejs/vite.git",
+      "release_ref": "HEAD",
+      "commit": "928e721b36690ac0f3f118290a21fc0cc4349055",
+      "partition": "development",
+      "planned_challenges": [
+        "pnpm-workspace",
+        "typescript-build",
+        "native-optional"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/vitejs/vite/928e721b36690ac0f3f118290a21fc0cc4349055/package.json",
+          "sha256": "105a19c6d4f5b8c90ef1539f596f43a562f34992b8c3a151b6946a5a3d1a0e13"
+        },
+        "pnpm-workspace.yaml": {
+          "source": "https://raw.githubusercontent.com/vitejs/vite/928e721b36690ac0f3f118290a21fc0cc4349055/pnpm-workspace.yaml",
+          "sha256": "142f27990eb97096206c6f6438e2dc4d84d6cf0595a65f4b3fcbadcc27fd1439"
+        }
+      },
+      "declared_root_dependency_count": 0,
+      "declared_workspaces": null,
+      "package_manager": "pnpm@12.11.2",
+      "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "postinstall": "simple-git-hooks",
+        "format": "oxfmt",
+        "lint": "oxlint .",
+        "typecheck": "tsc -p scripts && pnpm -r --parallel run typecheck",
+        "test": "pnpm test-unit && pnpm test-serve && pnpm test-build",
+        "test-serve": "vitest run -c vitest.config.e2e.ts",
+        "test-serve-bundled": "VITE_TEST_BUNDLED_DEV=1 vitest run -c vitest.config.e2e.ts",
+        "test-build": "VITE_TEST_BUILD=1 vitest run -c vitest.config.e2e.ts",
+        "test-unit": "vitest run",
+        "test-docs": "pnpm run docs-build",
+        "debug-serve": "VITE_DEBUG_SERVE=1 vitest run -c vitest.config.e2e.ts",
+        "debug-build": "VITE_TEST_BUILD=1 VITE_PRESERVE_BUILD_ARTIFACTS=1 vitest run -c vitest.config.e2e.ts",
+        "docs": "pnpm --filter=./docs run docs",
+        "docs-build": "pnpm --filter=./docs run docs-build",
+        "docs-serve": "pnpm --filter=./docs run docs-serve",
+        "build": "pnpm -r --filter='./packages/*' run build",
+        "dev": "pnpm -r --parallel --filter='./packages/*' run dev",
+        "ci-publish": "tsx scripts/publishCI.ts",
+        "ci-docs": "pnpm build && pnpm docs-build",
+        "merge-changelog": "tsx scripts/mergeChangelog.ts"
+      },
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      }
+    },
+    {
+      "id": "javascript-verdaccio",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/verdaccio/verdaccio.git",
+      "release_ref": "HEAD",
+      "commit": "3fc219a205814e4554da6c35c81ebe1e017fef8e",
+      "partition": "holdout",
+      "planned_challenges": [
+        "monorepo",
+        "plugins",
+        "application"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/verdaccio/verdaccio/3fc219a205814e4554da6c35c81ebe1e017fef8e/package.json",
+          "sha256": "a0fafc32663a13c9b0b7441d603c730ace685497665cc34c75e52a57d99b622b"
+        },
+        "pnpm-workspace.yaml": {
+          "source": "https://raw.githubusercontent.com/verdaccio/verdaccio/3fc219a205814e4554da6c35c81ebe1e017fef8e/pnpm-workspace.yaml",
+          "sha256": "7eeb3674cdef7a354375a99b8f66720f32bc1cb526b0a3d5c14c6091e8b35ec4"
+        }
+      },
+      "declared_root_dependency_count": 0,
+      "declared_workspaces": null,
+      "package_manager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457",
+      "scripts": {
+        "prepare": "husky",
+        "clean": "pnpm --filter \"./packages/**\" run clean",
+        "build": "pnpm --filter \"./packages/**\" build",
+        "docker": "docker build -t verdaccio/verdaccio:local-master . --no-cache",
+        "docker:test": "docker build -f packages/tools/Dockerfile -t verdaccio/ci-test:local . --no-cache",
+        "format": "oxfmt",
+        "format:check": "oxfmt --check",
+        "lint": "oxlint --max-warnings 28",
+        "lint:fix": "oxlint --fix",
+        "test": "pnpm --filter \"./packages/**\" test",
+        "type-check": "pnpm --filter \"./packages/**\" run type-check",
+        "e2e:ui:start": "node packages/verdaccio/bin/verdaccio --config ./scripts/e2e-ui-config.yaml",
+        "e2e:ui:run": "cypress run",
+        "e2e:ui:open": "cypress open",
+        "e2e:ui:local": "./scripts/e2e-ui-local.sh",
+        "e2e:ui:local:open": "./scripts/e2e-ui-local.sh --open",
+        "start": "concurrently --kill-others \"pnpm _start:server\" \"pnpm _start:web\"",
+        "start:watch": "concurrently --kill-others \"pnpm _build:watch\" \"pnpm _start:server\" \"pnpm _debug:reload\"",
+        "_build:watch": "pnpm run --parallel watch --filter ./packages",
+        "_start:server": "node --inspect packages/verdaccio/debug/bootstrap.js --listen 8000",
+        "_start:web": "pnpm --filter ...@verdaccio/ui-theme start",
+        "_debug:reload": "nodemon -d 3 packages/verdaccio/debug/bootstrap.js",
+        "start:ts": "ts-node packages/verdaccio/src/start.ts -- --listen 8000",
+        "debug": "node --trace-warnings --trace-uncaught --inspect packages/verdaccio/debug/bootstrap.js",
+        "debug:break": "node --trace-warnings --trace-uncaught --inspect-brk packages/verdaccio/debug/bootstrap.js",
+        "changeset": "changeset",
+        "changeset:check": "changeset status --since=master",
+        "ci:version": "run-s ci:version:changeset ci:version:install",
+        "ci:version:install": "pnpm install --no-frozen-lockfile --config.prefer-online=true",
+        "ci:version:changeset": "changeset version",
+        "ci:publish": "changeset publish",
+        "ts:ref": "update-ts-references --discardComments --rootConfigName tsconfig.base.json",
+        "ui:storybook:build": "pnpm --filter ...@verdaccio/ui-components build-storybook",
+        "ui:storybook": "pnpm --filter ...@verdaccio/ui-components start",
+        "translations": "local-crowdin-api translations",
+        "crowdin:upload": "crowdin upload sources --auto-update --config ./crowdin.yaml",
+        "crowdin:download": "crowdin download --verbose --config ./crowdin.yaml",
+        "crowdin:sync": "pnpm crowdin:upload && pnpm crowdin:download",
+        "local:registry": "pnpm --filter ...@verdaccio/local-publish start",
+        "local:snapshots": "changeset version --snapshot",
+        "local:publish": "cross-env npm_config_registry=http://localhost:4873 changeset publish --no-git-tag",
+        "local:publish:release": "concurrently \"pnpm local:registry\" \"pnpm local:publish\"",
+        "global:install": "pnpm build && node scripts/global-install.js"
+      },
+      "engines": {
+        "node": ">=24"
+      }
+    },
+    {
+      "id": "javascript-sveltekit",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/sveltejs/kit.git",
+      "release_ref": "HEAD",
+      "commit": "73bf98cabea2ef18e1bfef40be5229a43e79b05c",
+      "partition": "development",
+      "planned_challenges": [
+        "pnpm-workspace",
+        "peer",
+        "application-build"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/sveltejs/kit/73bf98cabea2ef18e1bfef40be5229a43e79b05c/package.json",
+          "sha256": "f2521bd4a5c28a5967f8855f97733cc804a3b141d872f11f89d2522eb06924b8"
+        },
+        "pnpm-workspace.yaml": {
+          "source": "https://raw.githubusercontent.com/sveltejs/kit/73bf98cabea2ef18e1bfef40be5229a43e79b05c/pnpm-workspace.yaml",
+          "sha256": "e9cb8769299bad7a0987fb462915a5911a90d779f95294aa65778a5cca4b8a25"
+        }
+      },
+      "declared_root_dependency_count": 0,
+      "declared_workspaces": null,
+      "package_manager": "pnpm@12.11.2+sha512.25a51652a196785af5f28bda6dfe8dc582ebefa4ac1d180221ce1390231c5fb76637822ea4b6e4633ce74acdcb0a77f725af11bad38177fdeddaee818a955cb9",
+      "scripts": {
+        "test:kit": "pnpm run --dir packages/kit test",
+        "test:kit:unit": "cd packages/kit && vitest run -c vitest.kit.config.js",
+        "test:kit:dev": "pnpm run --dir packages/kit test:dev",
+        "test:kit:build": "pnpm run --dir packages/kit test:build",
+        "test:kit:dev:basics": "pnpm run --dir packages/kit test:dev:basics",
+        "test:kit:dev:rest": "pnpm run --dir packages/kit test:dev:rest",
+        "test:kit:build:basics": "pnpm run --dir packages/kit test:build:basics",
+        "test:kit:build:rest": "pnpm run --dir packages/kit test:build:rest",
+        "test:cross-platform:dev": "pnpm run --dir packages/kit test:cross-platform:dev",
+        "test:cross-platform:build": "pnpm run --dir packages/kit test:cross-platform:build",
+        "test:server-side-route-resolution:dev": "pnpm run --dir packages/kit test:server-side-route-resolution:dev",
+        "test:server-side-route-resolution:build": "pnpm run --dir packages/kit test:server-side-route-resolution:build",
+        "test:svelte-async:dev": "pnpm run --dir packages/kit test:svelte-async:dev",
+        "test:svelte-async:build": "pnpm run --dir packages/kit test:svelte-async:build",
+        "test:vite-ecosystem-ci": "pnpm --dir packages/kit test",
+        "test:others": "pnpm -F @sveltejs/kit prepublishOnly && pnpm -r --filter='./packages/*' --filter=!./packages/kit/ test",
+        "test:others:unit": "pnpm -F @sveltejs/kit prepublishOnly && pnpm -r --filter=\"./packages/*\" --filter=\"!./packages/kit\" --workspace-concurrency=1 test:unit",
+        "test:unit": "vitest run",
+        "check": "pnpm --filter='./packages/**' prepublishOnly && pnpm --filter='./packages/**' --filter='!./packages/kit/test/build-errors/**' check",
+        "lint": "oxfmt --check . && echo '\nRunning eslint...' && eslint --cache --cache-location node_modules/.eslintcache 'packages/**/*.{js,d.ts}'",
+        "format": "oxfmt --write .",
+        "precommit": "pnpm format && pnpm lint",
+        "changeset:version": "changeset version && pnpm -r generate:version && git add --all",
+        "changeset:release": "changeset publish",
+        "sync-all": "node scripts/sync-all.js"
+      },
+      "engines": {
+        "pnpm": ">=11.0.0"
+      }
+    },
+    {
+      "id": "javascript-next",
+      "language": "JavaScript",
+      "repository_url": "https://github.com/vercel/next.js.git",
+      "release_ref": "HEAD",
+      "commit": "fb20d9af8b89e2507466702d6844f9e984012fb8",
+      "partition": "development",
+      "planned_challenges": [
+        "pnpm-workspace",
+        "native-optional",
+        "framework-build"
+      ],
+      "status": "PINNED_NOT_BUILT",
+      "manifests": {
+        "package.json": {
+          "source": "https://raw.githubusercontent.com/vercel/next.js/fb20d9af8b89e2507466702d6844f9e984012fb8/package.json",
+          "sha256": "0c7af1824d0c9e390a4d42e9ec273f8e17ccaedc71580099052c14e15192b5f4"
+        },
+        "pnpm-workspace.yaml": {
+          "source": "https://raw.githubusercontent.com/vercel/next.js/fb20d9af8b89e2507466702d6844f9e984012fb8/pnpm-workspace.yaml",
+          "sha256": "38f5d795abcaa1fe0ed7c784bf4b33abbaac7e0afb983f4a63c1c1a41254e3d1"
+        }
+      },
+      "declared_root_dependency_count": 0,
+      "declared_workspaces": null,
+      "package_manager": "pnpm@12.9.1",
+      "scripts": {
+        "new-error": "turbo gen error",
+        "new-test": "turbo gen test",
+        "pr-adopt": "node scripts/adopt-pr.js",
+        "clean": "pnpm --filter \"./packages/**\" run clean && pnpm --filter \"./packages/**\" exec node ../../scripts/rm.mjs dist node_modules",
+        "build": "turbo run build --remote-cache-timeout 60 --summarize true",
+        "build-all": "turbo run build build-native-auto --remote-cache-timeout 60 --summarize true",
+        "dev": "turbo run dev --parallel --filter=\"!@next/bundle-analyzer-ui\"",
+        "bench:render-pipeline": "tsx bench/render-pipeline/benchmark.ts",
+        "bench:render-pipeline:analyze": "tsx bench/render-pipeline/analyze-profiles.ts",
+        "bench:render-pipeline:client": "tsx bench/render-pipeline/client-trace.ts",
+        "bench:dev-validation": "tsx bench/dev-validation/benchmark.ts",
+        "pack-next": "tsx scripts/pack-next.ts",
+        "eval": "node run-evals.js",
+        "eval:upgrade": "node evals/next-upgrade/run.js",
+        "test-types": "tsc",
+        "test-unit": "jest test/unit/ packages/next/ packages/font",
+        "test-dev": "scripts/run-jest.sh --mode=dev --bundler=webpack --headless --",
+        "test-dev-webpack": "scripts/run-jest.sh --mode=dev --bundler=webpack --headless --",
+        "test-dev-experimental": "scripts/run-jest.sh --mode=dev --bundler=webpack --experimental --headless --",
+        "test-dev-experimental-webpack": "scripts/run-jest.sh --mode=dev --bundler=webpack --experimental --headless --",
+        "test-dev-rspack": "scripts/run-jest.sh --mode=dev --bundler=rspack --headless --",
+        "test-dev-experimental-rspack": "scripts/run-jest.sh --mode=dev --bundler=rspack --experimental --headless --",
+        "test-dev-turbo": "scripts/run-jest.sh --mode=dev --bundler=turbo --headless --",
+        "test-dev-experimental-turbo": "scripts/run-jest.sh --mode=dev --bundler=turbo --experimental --headless --",
+        "test-start": "scripts/run-jest.sh --mode=start --bundler=webpack --headless --",
+        "test-start-webpack": "scripts/run-jest.sh --mode=start --bundler=webpack --headless --",
+        "test-start-experimental": "scripts/run-jest.sh --mode=start --bundler=webpack --experimental --headless --",
+        "test-start-experimental-webpack": "scripts/run-jest.sh --mode=start --bundler=webpack --experimental --headless --",
+        "test-start-rspack": "scripts/run-jest.sh --mode=start --bundler=rspack --headless --",
+        "test-start-experimental-rspack": "scripts/run-jest.sh --mode=start --bundler=rspack --experimental --headless --",
+        "test-start-turbo": "scripts/run-jest.sh --mode=start --bundler=turbo --headless --",
+        "test-start-experimental-turbo": "scripts/run-jest.sh --mode=start --bundler=turbo --experimental --headless --",
+        "test-deploy": "scripts/run-jest.sh --mode=deploy --bundler=webpack --headless --",
+        "test-deploy-webpack": "scripts/run-jest.sh --mode=deploy --bundler=webpack --headless --",
+        "test-deploy-turbo": "scripts/run-jest.sh --mode=deploy --bundler=turbo --headless --",
+        "testonly-dev": "scripts/run-jest.sh --mode=dev --bundler=webpack --",
+        "testonly-dev-webpack": "scripts/run-jest.sh --mode=dev --bundler=webpack --",
+        "testonly-dev-rspack": "scripts/run-jest.sh --mode=dev --bundler=rspack --",
+        "testonly-dev-turbo": "scripts/run-jest.sh --mode=dev --bundler=turbo --",
+        "testonly-start": "scripts/run-jest.sh --mode=start --bundler=webpack --",
+        "testonly-start-webpack": "scripts/run-jest.sh --mode=start --bundler=webpack --",
+        "testonly-start-rspack": "scripts/run-jest.sh --mode=start --bundler=rspack --",
+        "testonly-start-turbo": "scripts/run-jest.sh --mode=start --bundler=turbo --",
+        "testonly-deploy": "scripts/run-jest.sh --mode=deploy --bundler=webpack --",
+        "testonly-deploy-webpack": "scripts/run-jest.sh --mode=deploy --bundler=webpack --",
+        "testonly-deploy-turbo": "scripts/run-jest.sh --mode=deploy --bundler=turbo --",
+        "test": "scripts/run-jest.sh --bundler=webpack --headless --",
+        "test-webpack": "scripts/run-jest.sh --bundler=webpack --headless --",
+        "test-rspack": "scripts/run-jest.sh --bundler=rspack --headless --",
+        "test-turbo": "scripts/run-jest.sh --bundler=turbo --headless --",
+        "testonly": "jest --runInBand",
+        "testheadless": "scripts/run-jest.sh --headless --",
+        "git-reset": "git reset --hard HEAD",
+        "git-clean": "git clean -d -x -e node_modules -e packages -f",
+        "typescript": "tsc --noEmit",
+        "lint-typescript": "turbo run typescript",
+        "lint-eslint": "eslint --config eslint.cli.config.mjs",
+        "lint-ast-grep": "ast-grep scan",
+        "lint-no-typescript": "cross-env NODE_OPTIONS=\"--max-old-space-size=8192\" run-p prettier-check \"lint-eslint .\" lint-language",
+        "types-and-precompiled": "run-p \"lint-typescript --log-order=stream\" check-compiler-fixtures types:test-lib && pnpm check-precompiled",
+        "check-compiler-fixtures": "find crates/next-custom-transforms/tests/fixture -type f -name 'tsconfig.json' -print0 | xargs --null -I'{}' pnpm tsc --noEmit --project '{}'",
+        "validate-externals-doc": "node ./scripts/validate-externals-doc.js",
+        "check-unused-turbo-tasks": "node scripts/check-unused-turbo-tasks.mjs",
+        "generate-browser-variant-aliases": "node scripts/generate-browser-variant-aliases.mjs",
+        "lint": "run-p test-types lint-typescript prettier-check \"lint-eslint .\" lint-ast-grep lint-language check-unused-turbo-tasks",
+        "lint-fix": "pnpm prettier-fix && pnpm lint-eslint --fix .",
+        "lint-language": "alex . --quiet",
+        "prettier-check": "prettier --check .",
+        "check-examples": "./scripts/check-examples.sh",
+        "get-test-timings": "node run-tests.js --timings --write-timings -g 1/1",
+        "prettier-fix": "prettier --write .",
+        "types": "pnpm --filter \"./packages/**\" --stream run types",
+        "types:test-lib": "tsc --project test/lib/tsconfig.json",
+        "check-precompiled": "./scripts/check-pre-compiled.sh",
+        "lint-staged": "lint-staged",
+        "next-with-deps": "./scripts/next-with-deps.sh",
+        "next": "cross-env NEXT_PRIVATE_LOCAL_DEV=1 NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"--trace-deprecation --enable-source-maps\" next",
+        "next-no-sourcemaps": "echo 'No longer supported. Use `pnpm next --disable-source-maps` instead'; exit 1;",
+        "debug": "cross-env NEXT_PRIVATE_LOCAL_DEV=1 NEXT_TELEMETRY_DISABLED=1 node --inspect --trace-deprecation --enable-source-maps packages/next/dist/bin/next",
+        "debug-brk": "cross-env NEXT_PRIVATE_LOCAL_DEV=1 NEXT_TELEMETRY_DISABLED=1 node --inspect-brk --trace-deprecation --enable-source-maps packages/next/dist/bin/next",
+        "pnpm:devPreinstall": "node scripts/create-next-bin-placeholder.mjs",
+        "postinstall": "node scripts/git-configure.mjs && node scripts/install-native.mjs",
+        "prepare": "husky",
+        "sync-react": "node ./scripts/sync-react.js",
+        "update-google-fonts": "node ./scripts/update-google-fonts.js",
+        "patch-next": "tsx scripts/patch-next.ts",
+        "unpack-next": "tsx scripts/unpack-next.ts",
+        "swc-build-native": "tsx scripts/build-native.ts",
+        "swc-build-wasm": "tsx scripts/build-wasm.cjs",
+        "build-turbopack-cli": "cargo build -p turbopack-cli --release",
+        "sweep": "tsx scripts/sweep.cjs",
+        "storybook": "turbo run storybook",
+        "build-storybook": "turbo run build-storybook",
+        "test-storybook": "turbo run test-storybook",
+        "with-rspack": "cross-env NEXT_RSPACK=1 NEXT_TEST_USE_RSPACK=1",
+        "with-turbo": "cross-env IS_TURBOPACK_TEST=1",
+        "with-webpack": "cross-env IS_WEBPACK_TEST=1",
+        "with-experimental": "cross-env __NEXT_CACHE_COMPONENTS=true"
+      },
+      "engines": {
+        "node": ">=20.9.0"
+      }
+    }
+  ],
+  "candidate_freeze": {
+    "src/sbom_creator/npm_direct.py": "488b4920cff395b961c95982a55ae9b68841852b7cfa1c21fc59f78b43317876",
+    "src/sbom_creator/core.py": "a4ce9efbf9381dc2099109ca472588ee51a69cb54384661ff602b8b175bdd8a5",
+    "src/sbom_creator/pipeline.py": "68a49e74b144a3c7e74a984e7251906b336f7749b8af848e3c2588c1caa147e8",
+    "benchmarks/maven_optional_fingerprint.py": "b4fbd6359929641f4a16329ff196f1b2cf5ad5a97c535b7f47fdef9653d84d27"
+  },
+  "protocol": "Fixed expansion, 6 development + 4 holdout per language. Holdout accuracy is not used to change rules. Existing20 primary pairs unchanged; DBCP extra control remains separate. Planned challenges require verification in actual builds. All failures and UNKNOWN retained; no empty-example accuracy."
+}
