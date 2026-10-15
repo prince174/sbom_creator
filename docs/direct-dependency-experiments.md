@@ -743,3 +743,17 @@
   flow/proxy/index/general isolation proof. Next: helper delivery/guards with
   module-root and selected-main meanings kept separate.
 - [Protocol](go-registry-auth-v1.md), [data](go-registry-auth-v1.json).
+
+## R51 — compiler-free Linux helper delivery, 2026-10-15
+
+- Main6f95734 clean; no duplicate experiment running. Frozen R42 hashes verified.
+- Pinned Go1.24 offline build of two passive readers; two different source paths
+  produce identical binaries with trimpath/buildvcsfalse. Same builder, not an
+  independent reproducible toolchain claim.
+- Scratch/nonroot/read-only/no-network/cap-drop readers match frozen Windows
+  outputs exactly on Hey source+binary. No application build or execution.
+- Ruff +13 G1/G2 tests passed. No production Dockerfile/runtime/classifier
+  change, accuracy null. This removes packaging uncertainty only.
+- Next: bounded invocation and unsupported-build guards before integration;
+  keep module-root and selected-main metrics separate.
+- [Protocol](go-helper-delivery-v1.md), [data](go-helper-delivery-v1.json).

@@ -1,0 +1,16 @@
+{
+  "experiment": "R51",
+  "builder": "golang:1.24-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac",
+  "fixture_image_id": "sha256:e4bdb684e42dd030617f3141a527edfd3e7ab39ca7b47a0aa604d4ec39627d95",
+  "helper_sources": {
+    "go_source_index.go": "dbdabd8fbf25b2bfd742835573c475eba4b16c323a221b7fca68ca73c0ac3270",
+    "go_binary_info.go": "9f58baa9a1059d2be8d782b4fe8520b29d821a4d0fbfca960c85160e3c55d0fc"
+  },
+  "different_build_paths_identical": true,
+  "linux_windows_outputs_equal": true,
+  "read_only_nonroot_no_network_no_capabilities": true,
+  "compiler_in_final_image": false,
+  "parser_version": "go1.24.13",
+  "runtime_changed": false,
+  "direct_accuracy": null
+}
