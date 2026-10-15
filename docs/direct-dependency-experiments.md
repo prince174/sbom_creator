@@ -1009,3 +1009,13 @@
 ## R74 — Commons IO Java pair, 2026-10-15
 
 - Exact-commit Maven/CDX pair completed, tree/config binding and schemas pass. Empty direct graph unscored. Five Java pairs complete. Next: Commons Codec.
+
+## R75 — component identity baseline, 2026-10-15
+
+- Component identity/version scoring added as separate benchmark. Known fixture
+  app paths only; whole-image platform records retained, no runtime filtering.
+- Commons Compress7vs7 hides two namespace mismatches (ASM/XZ), only5exact matches.
+  Some npm app-local extras remain. No >90% acceptance or alias guessing.
+- Equal-count mismatch/empty tests and Ruff pass. Next: finish Java pairs and
+  compare identity resolvers against fixed references. Codec build already running.
+- [Baseline](project-components-baseline-v1.md).

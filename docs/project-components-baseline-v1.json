@@ -1,0 +1,305 @@
+{
+  "rows": [
+    {
+      "project": "javascript-axios",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 8,
+        "fp": 5,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 8,
+        "precision": 0.6153846153846154,
+        "recall": 1.0,
+        "f1": 0.7619047619047619
+      },
+      "unscoped_final_count": 200,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": [
+        "pkg:npm/cjs-entrypoint-test@1.0.0",
+        "pkg:npm/commonjs-typings-test@1.0.0",
+        "pkg:npm/esm-entrypoint-test@1.0.0",
+        "pkg:npm/esm-typings-test@1.0.0",
+        "pkg:npm/ts-entrypoint-test@1.0.0"
+      ]
+    },
+    {
+      "project": "javascript-chalk",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 187,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "javascript-commander-js",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 187,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "java-commons-compress",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 2,
+        "predicted": 7,
+        "reference": 7,
+        "precision": 0.7142857142857143,
+        "recall": 0.7142857142857143,
+        "f1": 0.7142857142857143
+      },
+      "unscoped_final_count": 7,
+      "excluded_platform_or_other_count": 0,
+      "missing": [
+        "pkg:maven/org.ow2.asm/asm@9.7",
+        "pkg:maven/org.tukaani/xz@1.10"
+      ],
+      "extra": [
+        "pkg:maven/org.objectweb.asm/asm@9.7",
+        "pkg:maven/org.tukaani.xz/xz@1.10"
+      ]
+    },
+    {
+      "project": "java-commons-io",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "java-commons-lang",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 0,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "java-commons-text",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "unscoped_final_count": 1,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "javascript-debug",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "unscoped_final_count": 187,
+      "excluded_platform_or_other_count": 186,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "javascript-express",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 66,
+        "fp": 2,
+        "fn": 0,
+        "predicted": 68,
+        "reference": 66,
+        "precision": 0.9705882352941176,
+        "recall": 1.0,
+        "f1": 0.9850746268656716
+      },
+      "unscoped_final_count": 253,
+      "excluded_platform_or_other_count": 185,
+      "missing": [],
+      "extra": [
+        "pkg:npm/encodeurl@1.0.2",
+        "pkg:npm/ms@2.1.3"
+      ]
+    },
+    {
+      "project": "javascript-fastify",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 46,
+        "fp": 4,
+        "fn": 0,
+        "predicted": 50,
+        "reference": 46,
+        "precision": 0.92,
+        "recall": 1.0,
+        "f1": 0.9583333333333334
+      },
+      "unscoped_final_count": 237,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": [
+        "pkg:npm/benchmark@1.0.0",
+        "pkg:npm/benchmarks@1.0.0",
+        "pkg:npm/fast-uri@3.1.8",
+        "pkg:npm/transport@0.0.1"
+      ]
+    },
+    {
+      "project": "java-gson",
+      "fixture_scope": "/application/",
+      "project_components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "unscoped_final_count": 1,
+      "excluded_platform_or_other_count": 0,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "javascript-hapi",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 28,
+        "fp": 1,
+        "fn": 0,
+        "predicted": 29,
+        "reference": 28,
+        "precision": 0.9655172413793104,
+        "recall": 1.0,
+        "f1": 0.9824561403508771
+      },
+      "unscoped_final_count": 216,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": [
+        "pkg:npm/@hapi/bourne@3.0.0"
+      ]
+    },
+    {
+      "project": "javascript-isarray",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 187,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": []
+    },
+    {
+      "project": "javascript-koa",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 29,
+        "fp": 6,
+        "fn": 0,
+        "predicted": 35,
+        "reference": 29,
+        "precision": 0.8285714285714286,
+        "recall": 1.0,
+        "f1": 0.90625
+      },
+      "unscoped_final_count": 222,
+      "excluded_platform_or_other_count": 187,
+      "missing": [],
+      "extra": [
+        "pkg:npm/content-type@2.0.0",
+        "pkg:npm/depd@1.1.2",
+        "pkg:npm/http-errors@1.8.1",
+        "pkg:npm/mime-db@1.52.0",
+        "pkg:npm/mime-types@2.1.35",
+        "pkg:npm/statuses@1.5.0"
+      ]
+    },
+    {
+      "project": "javascript-ms",
+      "fixture_scope": "/app/",
+      "project_components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "unscoped_final_count": 186,
+      "excluded_platform_or_other_count": 186,
+      "missing": [],
+      "extra": []
+    }
+  ],
+  "runtime_changed": false,
+  "limitation": "Known fixture installation paths only; not a general production ownership classifier. No direct-edge claim."
+}
