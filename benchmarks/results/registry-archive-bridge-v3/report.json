@@ -1,0 +1,54 @@
+{
+  "status": "ACQUISITION_AND_ANALYSIS_COMPLETED",
+  "runtime_changed": false,
+  "mode": "external loopback HTTP fixture",
+  "negative_transport_checks": {},
+  "tool": {
+    "version": "0.22.1",
+    "archive_url": "https://github.com/google/go-containerregistry/releases/download/v0.22.1/go-containerregistry_Windows_x86_64.tar.gz",
+    "checksums_url": "https://github.com/google/go-containerregistry/releases/download/v0.22.1/checksums.txt",
+    "archive_sha256": "0e073ea8192c3b8442ec8aaf44d53c1050a09084669fae3a6ceb0f2026cf8b21",
+    "binary_sha256": "e22e47202cece45d09fe92919bdb683f56f548d360cb96f6a852defd965c935d",
+    "verification": "release checksums match; no detached signature verification"
+  },
+  "docker_invoked": false,
+  "project_executed": false,
+  "oracle_read_by_predictor": false,
+  "manifest_digest": "sha256:21dd5ecd9b0d81edc0bce0ca2c59374895f936f8ccc0cb6d8a4cb74245e8de13",
+  "config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+  "diff_ids": [
+    "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+  ],
+  "requests": [
+    "/v2/",
+    "/v2/fixture/manifests/sha256:21dd5ecd9b0d81edc0bce0ca2c59374895f936f8ccc0cb6d8a4cb74245e8de13",
+    "/v2/fixture/blobs/sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+    "/v2/fixture/blobs/sha256:20a96bea5af8f6b1bfba4ce1d1bbcc47ae6520aefb53f9405ed9f28def63a8e8"
+  ],
+  "archive_bytes": 84506624,
+  "pull_seconds": 0.5469999999913853,
+  "analysis_seconds": 28.594000000011874,
+  "archive_reads": {
+    "read_bytes": 93180452,
+    "read_calls": 200,
+    "budget_rejections": 0
+  },
+  "previous_reads": {
+    "read_bytes": 93180452,
+    "read_calls": 200,
+    "budget_rejections": 0
+  },
+  "three_views_schema_valid": true,
+  "component_coordinates_equal_r89": {
+    "final": true,
+    "os": true,
+    "full": true
+  },
+  "catalog_bytes": 5105429,
+  "limitations": [
+    "No cross-host redirect/credential-helper attack tests or runtime integration yet",
+    "Archive size is sampled, not a strict filesystem quota",
+    "Large/nested/resource JAR and direct/identity quality unchanged",
+    "No new accuracy or independent-control claim; prototype only"
+  ]
+}
