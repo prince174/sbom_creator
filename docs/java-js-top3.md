@@ -1,5 +1,31 @@
 # Java / JavaScript: comparison of three techniques
 
+## R65: image manifest/lock variants, 2026-10-15
+
+Extracted root package.json and package-lock.json from the existing verified
+runtime image exports, never from CycloneDX references. Same input files for
+Trivy and cdxgen; no project execution or installation. All six generated SBOMs
+pass their1.7/1.6 schemas. Input hashes, raw outputs and results are retained in
+[the report](../benchmarks/results/npm-image-manifests-v1/summary.json).
+
+| Technique | Koa predicted/reference | Fastify | Hapi | TP/FP/FN | Precision/recall/F1 |
+|---|---:|---:|---:|---|---|
+| Our declaration/image H2.1 (prior R8/R19) |18/18|14/15|18/18|50/0/1|100%/98.04%/99.01%|
+| Trivy0.75.0 image manifest/lock |18/18|18/15|19/18|51/4/0|92.73%/100%/96.23%|
+| cdxgen13.4.0 image manifest/lock |23/18|50/15|30/18|51/52/0|49.51%/100%/66.23%|
+
+On this three-project set, preliminary order by direct-edge F1 and false-positive
+avoidance is our H2.1, Trivy, cdxgen. Trivy has better recall, so this is a
+precision/recall tradeoff, not dominance. Output edge counts include scope
+differences relative to the production reference; excess edges are not silently
+removed. No general tool ranking or Java result follows from these npm cases.
+Our current row is a saved measured baseline, not a new runtime replay.
+
+These image-derived inputs resolve the earlier missing source-lock graphs for
+Fastify/Hapi. Raw source-mode R64 failures remain below as separate observations.
+No production changes. Next: inspect excess-edge scopes, repeat with normalized
+production modes selected without oracle hints, and complete Java comparison.
+
 Priority updated 2026-10-15 at the user's request: Java and JavaScript first.
 Other language expansion is deferred. Direct dependencies take priority over
 transitive inventory counts. Available verified real pairs: six JavaScript and

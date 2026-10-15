@@ -1,0 +1,108 @@
+{
+  "experiment": "R65",
+  "rows": [
+    {
+      "project": "koa",
+      "tool": "trivy",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 18,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "b9b154ea4b4c219b3e670fa22f737943aecdbe64a61adfade8face191e53d595",
+        "package.json": "9a019deef09df60eef7398f5fc7c68e0894b5bcb734b4b86023a15d267e32901"
+      },
+      "predicted_direct": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "count_delta": 0
+    },
+    {
+      "project": "koa",
+      "tool": "cdxgen",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 18,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "b9b154ea4b4c219b3e670fa22f737943aecdbe64a61adfade8face191e53d595",
+        "package.json": "9a019deef09df60eef7398f5fc7c68e0894b5bcb734b4b86023a15d267e32901"
+      },
+      "predicted_direct": 23,
+      "tp": 18,
+      "fp": 5,
+      "fn": 0,
+      "count_delta": 5
+    },
+    {
+      "project": "fastify",
+      "tool": "trivy",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 15,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "a4c09e7440ce0a027daeaf02033a98fdbcffcbb360968cabc8ace8a7e607daff",
+        "package.json": "4bfab1c73710d1f815e2c5bf7af3659f6a58da3d7875506ee8c7a051be561d96"
+      },
+      "predicted_direct": 18,
+      "tp": 15,
+      "fp": 3,
+      "fn": 0,
+      "count_delta": 3
+    },
+    {
+      "project": "fastify",
+      "tool": "cdxgen",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 15,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "a4c09e7440ce0a027daeaf02033a98fdbcffcbb360968cabc8ace8a7e607daff",
+        "package.json": "4bfab1c73710d1f815e2c5bf7af3659f6a58da3d7875506ee8c7a051be561d96"
+      },
+      "predicted_direct": 50,
+      "tp": 15,
+      "fp": 35,
+      "fn": 0,
+      "count_delta": 35
+    },
+    {
+      "project": "hapi",
+      "tool": "trivy",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 18,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "1b9df12df1d308c54b62638f00d15b25026a77ef20c473ac86bdf993fc5acd5b",
+        "package.json": "8d3dd782d4ff37792d184efa35e64970830d474789d1f1ab9439dc2b08b1234f"
+      },
+      "predicted_direct": 19,
+      "tp": 18,
+      "fp": 1,
+      "fn": 0,
+      "count_delta": 1
+    },
+    {
+      "project": "hapi",
+      "tool": "cdxgen",
+      "mode": "runtime image root manifest/lock, no project execution",
+      "reference_direct": 18,
+      "status": "MEASURED",
+      "schema_valid": true,
+      "input_hashes": {
+        "package-lock.json": "1b9df12df1d308c54b62638f00d15b25026a77ef20c473ac86bdf993fc5acd5b",
+        "package.json": "8d3dd782d4ff37792d184efa35e64970830d474789d1f1ab9439dc2b08b1234f"
+      },
+      "predicted_direct": 30,
+      "tp": 18,
+      "fp": 12,
+      "fn": 0,
+      "count_delta": 12
+    }
+  ],
+  "runtime_changed": false
+}

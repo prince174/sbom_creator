@@ -910,3 +910,15 @@
 - Next: legitimate image manifest/lock acquisition for source+image variants,
   Java paired expansion and comparable coverage before final top3 selection.
 - [Comparison](java-js-top3.md).
+
+## R65 — npm image manifest/lock comparison, 2026-10-15
+
+- Maincac1324 clean, no duplicate check running. Existing runtime exports contain
+  root locks for Fastify/Hapi; extracted bounded regular files, no reference input.
+- Same image manifests/locks: Trivy51/4/0, cdxgen51/52/0 on Koa/Fastify/Hapi.
+  Our saved H2.1 baseline50/0/1. Preliminary npm ordering only; excess scope
+  edges retained, not oracle-filtered. Trivy recall tradeoff explicitly recorded.
+- Six SBOM schemas and two adapter tests passed. Ruff import ordering fixed,
+  then passed. No runtime change. Next: excess-edge scope audit/production modes
+  and Java comparison, not Rust/Ruby expansion.
+- [Comparison](java-js-top3.md), raw results under results/npm-image-manifests-v1.
