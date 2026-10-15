@@ -64,8 +64,9 @@ def verify_root(bom, native, effective):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--project', required=True)
+    parser.add_argument('--manifest', default='benchmarks/manifest.json')
     args = parser.parse_args()
-    project = next(p for p in json.loads((ROOT / 'benchmarks/manifest.json').read_bytes())['repositories']
+    project = next(p for p in json.loads((ROOT / args.manifest).read_bytes())['repositories']
                    if p['id'] == args.project and p['language'] == 'Java')
     name = project['id'].removeprefix('java-')
     work = ROOT / 'benchmarks/.work' / ('paired-' + name + '-v1')

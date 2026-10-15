@@ -1053,3 +1053,11 @@
 -275 service tests pass3 skipped; targeted graph/count/optional tests and Ruff
   pass;20-pair status updated. User's >90% production goal not yet complete.
 - [Comparison](java-js-twenty-comparison.md).
+
+## R82 — independent positive Java control and nested evaluator, 2026-10-15
+
+- Candidate 374eb33 hashes frozen before new Commons DBCP 2.13.0 build; annotated tag peeled to exact commit 3cccba8e127cf55a4a30c5056e0bb9ec09446fd7. New real Maven/CDX/image pair, tree/config/schema checks passed.
+- Unchanged prediction yields 3/0/0 components and direct candidates. No optional declarations: this control does not independently validate the optional fingerprint correction. No production >90% claim. See java-positive-control-v1.json.
+- Runtime evaluator now indexes nested components and metadata owner; regression covers nested root and dangling analysis targets. Full service suite 276 passed, 3 platform skips; Ruff passed.
+- User clarified lockfile may be absent in production. Lock-assisted JS scores are a separate favorable stratum; they cannot establish no-lock production accuracy. Next: source manifest plus image package metadata replay without source or image lockfiles; UNKNOWN for unresolved owners/versions.
+- cdxgen13.4 Java failure diagnosed in jvmBom.js createJavaBom: attempts Maven dependency:tree -N through safeSpawnSync despite passive flags; Node child-process policy rejects it. Not a general Java capability failure.

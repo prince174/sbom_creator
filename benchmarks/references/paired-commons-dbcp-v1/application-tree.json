@@ -1,0 +1,30 @@
+[
+  {
+    "path": "commons-dbcp2-2.13.0.jar",
+    "mode": 384,
+    "type": "0",
+    "link": "",
+    "sha256": "2a013c6b1095efdcfa856829615dad7f84a3ac096a4bd998e6380d7e6ec949c0"
+  },
+  {
+    "path": "commons-logging-1.3.4.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "bc2dfe32f1ef06509e6a065144c1adf7b420eabf11a87f30bd127f8faa332016"
+  },
+  {
+    "path": "commons-pool2-2.12.0.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "6d3bd18df8410f3e31b031aca582cc109342358a62a2759ebd0c4cdf30d06f8b"
+  },
+  {
+    "path": "jakarta.transaction-api-1.3.3.jar",
+    "mode": 420,
+    "type": "0",
+    "link": "",
+    "sha256": "0b02a194dd04ee2e192dc9da9579e10955dd6e8ac707adfc91d92f119b0e67ab"
+  }
+]

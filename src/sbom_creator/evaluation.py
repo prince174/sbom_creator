@@ -28,6 +28,21 @@ def identity(component):
     return (p.type, p.namespace, p.name, p.version)
 
 
+def component_index(document):
+    """Index nested CycloneDX components, including the metadata owner."""
+    pending = list(document.get('components', []))
+    root = document.get('metadata', {}).get('component')
+    if root:
+        pending.append(root)
+    result = {}
+    while pending:
+        component = pending.pop()
+        if component.get('bom-ref'):
+            result[component['bom-ref']] = component
+        pending.extend(component.get('components', []))
+    return result
+
+
 def compare(result_directory, reference, scope='unknown'):
     validate_reference(reference)
     path = Path(result_directory)
@@ -42,13 +57,17 @@ def compare(result_directory, reference, scope='unknown'):
             'reference_used_as_analysis_input': False, 'precision': None, 'recall': None, 'f1': None}
     if scope != 'runtime' or owner is None or len(expected_nodes) != 1:
         return dict(base, reason='scope_or_reference_root_not_established')
-    components = {c['bom-ref']: c for c in reference.get('components', [])}
+    components = component_index(reference)
+    if any(ref not in components for ref in expected_nodes[0].get('dependsOn', [])):
+        return dict(base, reason='reference_dependency_target_unavailable')
     expected = {identity(components[ref]) for ref in expected_nodes[0].get('dependsOn', [])}
-    actual_components = {c['bom-ref']: c for c in actual_bom.get('components', [])}
+    actual_components = component_index(actual_bom)
     owners = {ref for ref, c in actual_components.items() if identity(c) == owner}
     if len(owners) != 1 or report.get('status') in ('UNKNOWN', 'not-applicable'):
         return dict(base, reason='analyzer_direct_owner_or_profile_unknown')
     edges = [e for e in report.get('edges', []) if e.get('status') == 'DIRECT' and e.get('owner_ref') in owners]
+    if any(e.get('component_ref') not in actual_components for e in edges):
+        return dict(base, reason='analyzer_dependency_target_unavailable')
     actual = {identity(actual_components[e['component_ref']]) for e in edges}
     if None in actual or None in expected:
         return dict(base, reason='package_identity_unavailable')

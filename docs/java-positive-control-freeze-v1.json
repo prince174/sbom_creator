@@ -1,0 +1,10 @@
+{
+  "candidate_commit": "374eb33",
+  "source_sha256": {
+    "benchmarks/maven_optional_fingerprint.py": "b0633ee7cf3481a4f692252db08be6270be298961f1d6ea2765835b46440df4c",
+    "benchmarks/compare_twenty_pairs.py": "8c567024a5217a01ee847a26423c5f229b2fea7b9865db22eb158f166980b34e",
+    "benchmarks/compare_java_js.py": "f3983779ec5c22f16a2c08df348a6ab972f583576574f4a6a46cc62c8ad7e4b9"
+  },
+  "control": "java-commons-dbcp",
+  "protocol": "Freeze candidate; build new positive project; evaluate without changing candidate; failed scope/identity stays UNKNOWN; do not count empty controls as accuracy."
+}

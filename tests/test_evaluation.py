@@ -73,3 +73,25 @@ def test_api_reference_never_reaches_runner(tmp_path, monkeypatch):
         artifact = client.get(response.json()['status_url'] + '/artifacts/evaluation.json', headers=headers)
         assert artifact.status_code == 200
         assert events == ['analysis', 'evaluation']
+
+
+def test_nested_reference_edges_and_dangling_targets(tmp_path):
+    root = {'type': 'application', 'name': 'app', 'version': '1',
+            'bom-ref': 'root', 'purl': 'pkg:npm/app@1'}
+    dep = {'type': 'library', 'name': 'dep', 'version': '2',
+           'bom-ref': 'dep', 'purl': 'pkg:npm/dep@2'}
+    reference = {'bomFormat': 'CycloneDX', 'specVersion': '1.6', 'version': 1,
+                 'metadata': {'component': dict(root, components=[dep])},
+                 'dependencies': [{'ref': 'root', 'dependsOn': ['dep']}]}
+    actual = dict(reference, metadata={'component': root}, components=[dep])
+    (tmp_path / 'final.cdx.json').write_text(json.dumps(actual))
+    report = {'status': 'available', 'edges': [
+        {'status': 'DIRECT', 'owner_ref': 'root', 'component_ref': 'dep'}]}
+    (tmp_path / 'direct-dependencies.json').write_text(json.dumps(report))
+    assert compare(tmp_path, reference, 'runtime')['tp'] == 1
+    report['edges'][0]['component_ref'] = 'missing'
+    (tmp_path / 'direct-dependencies.json').write_text(json.dumps(report))
+    assert compare(tmp_path, reference, 'runtime')['reason'] == 'analyzer_dependency_target_unavailable'
+    reference['dependencies'][0]['dependsOn'] = ['missing']
+    with pytest.raises(ValueError, match='Dangling CycloneDX dependency'):
+        compare(tmp_path, reference, 'runtime')
