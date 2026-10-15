@@ -988,3 +988,14 @@
 - Next: Java Commons Compress pair and eight remaining Java projects, explicit
   workspace/optional/profile coverage; other languages deferred.
 - [Status](java-js-pair-status.md), [evaluations](java-js-pair-status.json).
+
+## R72 — Java Commons Compress pair, 2026-10-15
+
+- Completed earlier-running build, no duplicate. Seven direct edges agree
+  CDX/native/effective POM; tree/config binding/three schemas checked.
+- Replay validates receipt hashes/root labels. Existing Java pairing tests pass;
+  generic harness Ruff passes. Three Java/ten JS pairs now complete.
+- User explicitly requires >90% components for Java/JS too: score exact package
+  identities/versions independently from direct-edge metrics, not count equality.
+- Next: seven remaining Java pairs, then three-technique comparison.
+- [Pair](paired-commons-compress-v1.md).

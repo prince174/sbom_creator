@@ -1,0 +1,46 @@
+{
+  "owner": [
+    "org.apache.commons",
+    "commons-compress",
+    "1.27.1"
+  ],
+  "direct": [
+    [
+      "com.github.luben",
+      "zstd-jni",
+      "1.5.6-4"
+    ],
+    [
+      "commons-codec",
+      "commons-codec",
+      "1.17.1"
+    ],
+    [
+      "commons-io",
+      "commons-io",
+      "2.16.1"
+    ],
+    [
+      "org.apache.commons",
+      "commons-lang3",
+      "3.16.0"
+    ],
+    [
+      "org.brotli",
+      "dec",
+      "0.1.2"
+    ],
+    [
+      "org.ow2.asm",
+      "asm",
+      "9.7"
+    ],
+    [
+      "org.tukaani",
+      "xz",
+      "1.10"
+    ]
+  ],
+  "scope": "compile/runtime; excludes test/provided/system",
+  "build_execution_of_each_dependency": "UNKNOWN"
+}

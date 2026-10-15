@@ -1,0 +1,69 @@
+{
+  "project": "java-commons-compress",
+  "commit": "8de4d85b09a5d60e03191c0d362797de253a3516",
+  "image_binding": {
+    "index_digest": "sha256:6cbe43168e9172dae4810f1c161cdcdec45f6b48d3e16600f921888081a9b4e8",
+    "platform_manifest_digest": "sha256:e4a3e1a1e6ac719c93693c9db7d8410f26c0b274fc10e9a4ceef078ae2755506",
+    "config_digest": "sha256:4a41e8111c98f264e829a48aaa4e3a41c144c347910fdc0c84b66aac580de288"
+  },
+  "artifact_tree_equal": true,
+  "reference_only_for_evaluation": true,
+  "reference_hashes": {
+    "active-profiles.txt": "4dcc5c70db846fa5727cc480574dcf710b55be6c59d0a7612fd42ca5c0e218ff",
+    "application-tree.json": "5734a2f3d8e282ef7b76ddf15ce0d3f0a8cdb4bb72053fcb7a0d6364d98afed2",
+    "dependency-tree.json": "476d2c6df6cd07f56bd119b933425afee1f07c6c17090fa0a5a58e64fc36dbcb",
+    "direct-labels.json": "5b4d9339c61897530df68a267c7e4a90198bd696b546ec45c70ff075eaad37a0",
+    "Dockerfile": "fd2e77996e88f8749f6f6d385593988017be70caa671b653291f2422bf7186a4",
+    "effective-pom.xml": "246ebf95e995ff689770a95550a3151e11ddfab5720c03d0155a2e20346292ac",
+    "jars.sha256": "2bd235e4cb5a8c147dca90cb08591b55fc44e7b94dc7b0737f947d37ee4954d0",
+    "maven-version.txt": "3fc5bf8d01fa9f028886fd2ebd3f607d3bf3fafa8d67c4cb6ffa3bb979978e1b",
+    "pom.xml": "db2f99d5a35da4f8dbf23fd1341beeb32e0d7faf1e28cee76877a8b8af3fcb9f",
+    "sbom.json": "1a8406ef64aabf9d28bc1ea6cb6af6c2f24e5631f5e26add55bb74c00e6913e3"
+  },
+  "outputs": {
+    "coverage.json": "c59ad1844241ebf332ef0adae986ca2e304b7e9677b4ca1c626374ca69c86723",
+    "decisions.json": "83d9f71b5053349548215d73b65565a892a5be7996e8dee11fcbe5a7763708a4",
+    "direct-dependencies.json": "c34127d92cc49b5c247ce9e3a0139a507b768a4f8d6ca1cb5bf171bc38a2e26c",
+    "final.cdx.json": "25e8246a63eb483afd17edcc824f6b77394c31d7ef710fd50407cbdf9fe14972",
+    "full.cdx.json": "341fc8c2c9d2d6c1ae159aa8ef8bca758e3344390955652782d131da261af677",
+    "image.syft.json": "a1c33baae65f2096187d0c8ac390d46d6811f465937e4b64ee478b54f383e522",
+    "os.cdx.json": "d131e3b9cf94fc30cc8e6ef881209555cdb595e828f3d8ebff25b2d4793a6d43",
+    "provenance.json": "790c208eb4150e6659361223349937bc74460a0d08db935cf4d1ab7061175d09",
+    "review.json": "ece6831a5b3a7f32a4c488b64f60467675bf487671bac7c50abd99d180ee9de9",
+    "selected.syft.json": "a1c33baae65f2096187d0c8ac390d46d6811f465937e4b64ee478b54f383e522",
+    "source.syft.json": "e7178c685d255adb47ee4f112626f89c7897194409fad9e6a232c76f885b235f",
+    "summary.json": "a0128c85df44d39e0d53cb7e90e987bcc8e662949b3bcf6e68dd11ba0d7dc053"
+  },
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "SOURCE_ONLY": 15,
+      "AMBIGUOUS_IDENTITY": 16,
+      "CI_CONFIGURATION": 12
+    },
+    "unknown_groups": {
+      "source_declarations": 15,
+      "source_identity": 16,
+      "ci_configuration": 12
+    },
+    "source_count": 49,
+    "image_count": 8,
+    "selected_count": 8,
+    "final_count": 8,
+    "os_count": 0,
+    "full_count": 8,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "UNKNOWN": 43,
+      "INCLUDE": 8
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.5
+  },
+  "direct_accuracy": null,
+  "limitation": "Library artifact image, no JRE/application execution; direct classifier not inferred from inventory"
+}
