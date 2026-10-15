@@ -6,23 +6,24 @@ import paired_hey
 from run import ROOT, run_command
 
 
-def main():
+def main(*, project_id='go-waybackurls', experiment='R56'):
     project = next(r for r in json.loads((ROOT / 'benchmarks/manifest.json').read_bytes())['repositories']
-                   if r['id'] == 'go-waybackurls')
-    work = ROOT / 'benchmarks/.work/paired-waybackurls-v1'
-    out = ROOT / 'benchmarks/references/paired-waybackurls-v1'
+                   if r['id'] == project_id)
+    name = project_id.removeprefix('go-')
+    work = ROOT / 'benchmarks/.work' / ('paired-' + name + '-v1')
+    out = ROOT / 'benchmarks/references' / ('paired-' + name + '-v1')
     if (out / 'receipt.json').exists():
         raise FileExistsError('Immutable pair exists')
     work.mkdir(parents=True, exist_ok=True)
     source = work / 'src'
     if not source.exists():
         run_command(['git', 'clone', '--no-hardlinks', '--no-checkout',
-                     str(ROOT / 'benchmarks/.work/go-waybackurls/src'), str(source)], work / 'clone.log')
+                     str(ROOT / 'benchmarks/.work' / project_id / 'src'), str(source)], work / 'clone.log')
         run_command(['git', '-c', 'core.autocrlf=false', 'checkout', '--detach', project['commit']],
                     work / 'checkout.log', cwd=source)
-    for name in ('cyclonedx-gomod', 'generator-provenance.json'):
-        shutil.copyfile(paired_hey.WORK / name, work / name)
-    recipe = (ROOT / 'benchmarks/paired-hey.Dockerfile').read_text().replace('/application/hey', '/application/waybackurls')
+    for tool_file in ('cyclonedx-gomod', 'generator-provenance.json'):
+        shutil.copyfile(paired_hey.WORK / tool_file, work / tool_file)
+    recipe = (ROOT / 'benchmarks/paired-hey.Dockerfile').read_text().replace('/application/hey', '/application/' + name)
     recipe = recipe.replace('RUN --mount=type=cache',
         'RUN git -c core.autocrlf=false reset --hard HEAD && test -z "$(git status --porcelain)"\nRUN --mount=type=cache', 1)
     (work / 'Dockerfile').write_text(recipe, encoding='utf-8')
@@ -31,7 +32,7 @@ def main():
         run_command(['docker', 'build', '--platform=linux/amd64', '--target', stage,
                      '--iidfile', str(work / (stage + '.id')), str(work)], work / (stage + '.log'), timeout=1200)
     paired_hey.WORK, paired_hey.OUT, paired_hey.COMMIT = work, out, project['commit']
-    paired_hey.main(project_id=project['id'], experiment='R56', recipe_path=work / 'Dockerfile')
+    paired_hey.main(project_id=project['id'], experiment=experiment, recipe_path=work / 'Dockerfile')
 
 
 if __name__ == '__main__':

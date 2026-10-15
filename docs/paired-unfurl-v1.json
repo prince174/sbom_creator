@@ -1,0 +1,31 @@
+{
+  "experiment": "R57",
+  "partition": "development",
+  "commit": "8f10d050f1b0be12e505053da174f3f39e8eed74",
+  "native_selected_main_direct": [
+    [
+      "github.com/Cgboal/DomainParser",
+      "v0.0.0-20210827145802-99068439e39f"
+    ]
+  ],
+  "cdx_module_root_direct": [
+    [
+      "github.com/Cgboal/DomainParser",
+      "v0.0.0-20210827145802-99068439e39f"
+    ]
+  ],
+  "candidate_tp": 1,
+  "candidate_fp": 0,
+  "declarations_without_cdx_root_edge": [
+    [
+      "github.com/jakewarren/tldomains",
+      "v0.0.0-20220401175117-e21ec594add9"
+    ]
+  ],
+  "candidate_fn": 0,
+  "candidate_precision": 1.0,
+  "candidate_recall": 1.0,
+  "runtime_changed": false,
+  "receipt_sha256": "c899f41b701d7d7b72bf5fb7016f0244f98e33dee7ccc64a9a8460495d5b0440",
+  "limitation": "Additional positive development fixture, not independent holdout improvement"
+}

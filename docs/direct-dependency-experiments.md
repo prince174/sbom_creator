@@ -813,3 +813,16 @@
 - Passive verifier +Ruff passed. Production/frozen classifier unchanged.
 - Next: paired unfurl development positive fixture, then Rust/Ruby expansion.
 - [Protocol](paired-waybackurls-v1.md), [data](paired-waybackurls-v1.json).
+
+## R57 — positive paired unfurl development fixture, 2026-10-15
+
+- Main6b1dbce clean, no duplicate build running. Exact-commit pinned build/CDX
+  reference and image pair created; tree/binding/three schemas checked.
+- Frozen G2/native/CDX build root agree DomainParser1 exact version. Additional
+  tldomains declaration retained separately, absent from build root graph.
+- Generic recipe loop variable accidentally named app generator-provenance.json;
+  actual binary identity/bytes verified. Immutable receipt preserved; generator
+  corrected for future builds, verifier uses sole regular application file.
+- Passive verification, waybackurls regression, Ruff and17 tests passed.
+- No runtime/control accuracy improvement claimed. Next: Rust/Ruby paired corpus.
+- [Protocol](paired-unfurl-v1.md), [data](paired-unfurl-v1.json).
