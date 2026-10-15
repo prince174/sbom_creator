@@ -826,3 +826,15 @@
 - Passive verification, waybackurls regression, Ruff and17 tests passed.
 - No runtime/control accuracy improvement claimed. Next: Rust/Ruby paired corpus.
 - [Protocol](paired-unfurl-v1.md), [data](paired-unfurl-v1.json).
+
+## R58 — Rust fd reference scope audit, 2026-10-15
+
+- Main7d3319c clean, no duplicate experiment running. Started Rust expansion by
+  auditing existing reference before fresh pairing; no new build claimed.
+- CDX22 root edges mapped by exact Cargo package IDs: normal21/build1.
+  Retained metadata unfiltered by platform, so activation remains UNKNOWN.
+- Official Cargo metadata documentation checked; scope kind is not proof of
+  execution in Linux build. Old image remains unpaired; accuracy null.
+- SBOM provenance hash and Ruff passed. Runtime unchanged. Next: fresh fd pair,
+  explicit target/features/profile and filtered metadata plus build artifacts.
+- [Protocol](rust-fd-scopes-v1.md), [data](rust-fd-scopes-v1.json).
