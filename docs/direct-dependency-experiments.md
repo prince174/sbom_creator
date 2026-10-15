@@ -897,3 +897,16 @@
 - Evidence assertions and Ruff passed. UNKNOWN retained, direct accuracy null.
 - Next: Ruby paired reference; defer Rust requirement solver/control evaluation.
 - [Protocol](fd-unknowns-v1.md), [data](fd-unknowns-v1.json).
+
+## R64 — user priority Java/JavaScript, 2026-10-15
+
+- User explicitly narrowed priority to Java/JavaScript, reference images and
+  three closest techniques; direct dependencies first. Defer Rust/Ruby expansion.
+- New source competitor runs on Koa/Fastify/Hapi/Gson/CommonsText. Koa Trivy18/0/0,
+  cdxgen18/5/0; our prior18/0/0. No global ranking from one comparable project.
+- Fastify/Hapi source graphs UNKNOWN; Java Trivy Maven429, cdxgen child denied.
+  Retain failures, no empty-graph success. Reference not supplied to scanners.
+- Adapter recognizes Trivy root package-lock wrapper; two tests/Ruff pass.
+- Next: legitimate image manifest/lock acquisition for source+image variants,
+  Java paired expansion and comparable coverage before final top3 selection.
+- [Comparison](java-js-top3.md).

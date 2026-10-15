@@ -1,0 +1,112 @@
+{
+  "rows": [
+    {
+      "project": "koa",
+      "tool": "trivy",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 18,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "MEASURED",
+      "component_count": 35,
+      "predicted_direct": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "count_delta": 0
+    },
+    {
+      "project": "koa",
+      "tool": "cdxgen",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 18,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "MEASURED",
+      "component_count": 363,
+      "predicted_direct": 23,
+      "tp": 18,
+      "fp": 5,
+      "fn": 0,
+      "count_delta": 5
+    },
+    {
+      "project": "fastify",
+      "tool": "trivy",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 15,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "GRAPH_UNKNOWN",
+      "component_count": 0
+    },
+    {
+      "project": "fastify",
+      "tool": "cdxgen",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 15,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "GRAPH_UNKNOWN",
+      "component_count": 0
+    },
+    {
+      "project": "hapi",
+      "tool": "trivy",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 18,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "GRAPH_UNKNOWN",
+      "component_count": 0
+    },
+    {
+      "project": "hapi",
+      "tool": "cdxgen",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 18,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "GRAPH_UNKNOWN",
+      "component_count": 0
+    },
+    {
+      "project": "gson",
+      "tool": "trivy",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 1,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "NO_SBOM"
+    },
+    {
+      "project": "gson",
+      "tool": "cdxgen",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 1,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "NO_SBOM"
+    },
+    {
+      "project": "commons-text",
+      "tool": "trivy",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 1,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "NO_SBOM"
+    },
+    {
+      "project": "commons-text",
+      "tool": "cdxgen",
+      "mode": "source prebuild, no project execution",
+      "expected_direct": 1,
+      "elapsed_seconds": null,
+      "reused_scan": true,
+      "status": "NO_SBOM"
+    }
+  ],
+  "ranking": null,
+  "runtime_changed": false
+}

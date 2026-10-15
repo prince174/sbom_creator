@@ -1,0 +1,23 @@
+ChildProcess permission is missing. This is required to spawn commands for some languages. Please invoke cdxgen with the argument --allow-child-process in case of issues.
++ Preparing environment  0.0s
+x Generating BOM  Access to this API has been restricted. Use --allow-child-process to manage permissions.  0.0s
+node:internal/child_process:1146
+  const result = spawn_sync.spawn(options);
+                            ^
+
+Error: Access to this API has been restricted. Use --allow-child-process to manage permissions.
+    at Object.spawnSync (node:internal/child_process:1146:29)
+    at spawnSync (node:child_process:928:24)
+    at safeSpawnSync (file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/lib/core/fs.js:993:18)
+    at createJavaBom (file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/lib/cli/jvmBom.js:816:24)
+    at createBomForPath (file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/lib/cli/index.js:2788:18)
+    at createBom (file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/lib/cli/index.js:2583:18)
+    at file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/bin/cdxgen.js:1905:24
+    at file:///G:/code/sbom_creator/benchmarks/.work/cdxgen-r33/bin/cdxgen.js:2641:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  code: 'ERR_ACCESS_DENIED',
+  permission: 'ChildProcess',
+  resource: 'C:\\Windows\\system32\\cmd.exe'
+}
+
+Node.js v24.19.0
