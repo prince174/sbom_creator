@@ -1,6 +1,7 @@
 .venv/
 .tools/
 .env
+.env.local-mvp
 __pycache__/
 .pytest_cache/
 .ruff_cache/

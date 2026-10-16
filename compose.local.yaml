@@ -1,0 +1,67 @@
+name: sbom-mvp-local
+
+services:
+  registry:
+    image: ${SBOM_LOCAL_REGISTRY_IMAGE}
+    pull_policy: never
+    environment:
+      REGISTRY_HTTP_ADDR: 0.0.0.0:5000
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/registry.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/registry.key
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /var/lib/registry
+    ports:
+      - "127.0.0.1:18500:5000"
+    volumes:
+      - ./secrets/local-mvp/registry:/certs:ro
+      - registry-data:/var/lib/registry
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=64m
+    mem_limit: 256m
+    cpus: 1
+    restart: unless-stopped
+
+  api:
+    image: ${SBOM_LOCAL_SERVICE_IMAGE}
+    pull_policy: never
+    env_file: .env.local-mvp
+    environment:
+      SBOM_API_TOKEN_FILE: /run/secrets/api-token
+      SBOM_REGISTRY_HOSTS: ${SBOM_REGISTRY_HOSTS:-registry:5000,ghcr.io,docker.io,registry-1.docker.io}
+      SBOM_WORKSPACE: /workspace
+      SBOM_TRIVY_CACHE_DIR: /workspace/trivy-cache
+      SBOM_IMAGE_TEMP_DIR: /workspace/image-cache
+      SBOM_WORKERS: "1"
+      SBOM_JAVA_BACKEND: disabled
+      SBOM_JAVA_ARCHIVE_COMPONENTS: "true"
+      SBOM_JAVA_NESTED_WINDOWS: "false"
+      SSL_CERT_FILE: /run/registry-trust/ca-bundle.pem
+    ports:
+      - "127.0.0.1:18082:8080"
+    volumes:
+      - ./secrets/local-mvp/api-token:/run/secrets/api-token:ro
+      - ./secrets/local-mvp/credentials:/run/credentials:ro
+      - ./secrets/local-mvp/trust:/run/registry-trust:ro
+      - workspace:/workspace
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:rw,nosuid,nodev,size=512m
+    mem_limit: 3g
+    cpus: 2
+    pids_limit: 128
+    depends_on: [registry]
+    restart: unless-stopped
+
+volumes:
+  registry-data:
+    name: sbom-mvp-local-registry
+    external: true
+  workspace:
+    name: sbom-mvp-local-workspace
+    external: true

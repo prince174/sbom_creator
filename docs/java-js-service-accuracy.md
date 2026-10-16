@@ -1,4 +1,46 @@
-# Java / JavaScript: image-first MVP — R113, 2026-10-16
+# Java / JavaScript: image-first MVP — local API, 2026-10-16
+
+**MVP запущен локально в Docker: http://127.0.0.1:18082, UI `/docs`.**
+[Использование и управление](local-docker-mvp.md). Runtime fix `bae619c` поддерживает
+точное корневое имя config `sha256:<digest>` в Docker TAR Crane0.22.1; полный SHA256
+обязателен, normal/inner-layer paths по-прежнему запрещают двоеточия. Бюджеты и
+Java identity rules не менялись. Первое полное registry/API задание обнаружило этот
+сбой: Java UNKNOWN/ValueError, final/os/full1/143/144; попытка сохранена отдельно.
+Это transport compatibility defect прежнего RC, не прежний успех по API.
+
+Новая installed image
+`sha256:79857b3a884112f235552efd5a4447a1d7ef00ec399132eba193e8b6cadc0b83`
+имеет49 source/schema hashes, равных pre-build freeze. Оба новых задания выполнены
+на ней через HTTPS registry по неизменным platform/config digests. API registry
+acquisition, fresh Syft/Trivy/physical reads, publisher, poll и все downloads реальны;
+сервису не передавались исходники, reference, ожидаемые имена или Docker socket.
+Только после завершения обоих downloads отдельный evaluator прочёл oracle.
+
+| Новый local API контроль | TP / FP / FN | P / R / F1 | Exact-version coverage | Клиент, весь цикл |
+|---|---:|---:|---:|---:|
+| Petclinic REST, known packaged scope106 |104/3/2|97.196/98.113/97.653%|98.113%|29.187s|
+| Nest no-lock, project scope107 |107/0/0|100/100/100%|100%|20.375s|
+
+Conditional matched-identity versions REST99.048%, Nest100%; count delta+1/0.
+Whole final/os/full109/143/252 и308/88/396 — не числа TP. REST все3coordinate
+multisets равны R112; Nest final равен R109, OS/full отличаются одной systemd
+записью (88vs89 OS), прежнее Linux/Windows различие сохранено. Оба результата
+partial с явно сохранёнными UNKNOWN; image-only21Java/6JS direct UNKNOWN/FN.
+Это два раскрытых контроля, не новый corpus/blind/global-shading acceptance.
+Исторические Java3862/20/18 и JS307/9/0 ниже не заменяются этими двумя примерами.
+
+860unique tests PASS/10skip (full-service826 +2 дополнительных config negatives
++7 дополнительных client cases +25 post-evaluator tests).25config tests включают
+GNU/PAX aliases, links/duplicate/ADS/traversal, wrong hash/imageID и отказ до чтения
+oversized config. HTTP health/OpenAPI200, unauthenticated401, invalid host/unpaired
+source/production-reference422. Токен хранится только в ignored secrets; host CA не
+менялся. Публичная DB скопирована и проверена из сохранённой volume, download0.
+API/registry оставлены работающими, другие сервисы не менялись.
+[POST evaluation](../benchmarks/results/local-mvp-api-v1/evaluation.json),
+[launch receipt](../benchmarks/results/local-mvp-api-v1/launch.json),
+[первый partial результат](../benchmarks/results/local-mvp-api-initial-v1/negative.json).
+
+## Historical R113 — publication hardening
 
 **Runtime `7726706` усиливает публикацию и диагностику; компонентные правила не менялись.**
 Историческая причина R106 Chalk остаётся UNKNOWN: сохранены только PermissionError

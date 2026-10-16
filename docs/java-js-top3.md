@@ -1,3 +1,13 @@
+## Local Docker API — 2026-10-16
+
+Runtimebae619c исправляет exact SHA-bound Crane config filename, не identity ranking.
+Actual HTTPS/image-only API controls на новой installed image79857b3a...:
+REST104/3/2 P97.196/R98.113, Nestno-lock107/0/0 P/R100. All6viewsvalid;
+whole inventories109/143/252 and308/88/396, неTP. FirstRESTpartial1/143/144 сохранён;
+новые результаты — после конкретного fix, не blindretry. POST evaluator только после
+обоих downloads. Нового corpus/global acceptance/rankpromotion нет, старые metrics
+сохраняются. [API usage](local-docker-mvp.md), [POST report](../benchmarks/results/local-mvp-api-v1/evaluation.json).
+
 ## R113 — publication reliability, no accuracy/ranking change
 
 Runtime7726706 records fixed publication checkpoints and correct commit state,

@@ -1786,3 +1786,52 @@ R113losslesspack90JSON78,845,652rawB ->8,848,467trackedJSON+gzipB,
 23large/19uniquegzip;manifestSHA25a7c79e5e438dc86db0aab393c2966ebdda3acdab7722918498ab57a8141998.
 package_mvp_r113.py restore/verify;originals/exactsnapshots retained.
 [Final validation](../benchmarks/results/mvp-r113-final-validation.json).
+
+## Local Docker API MVP — 2026-10-16
+
+Прямое поручение пользователя: запустить локально и проверить полный API путь на
+одном Java/JS образе, оставить пригодным к использованию. Новый isolated project
+sbom-mvp-local:API127.0.0.1:18082,HTTPSregistry127.0.0.1:18500; noexistingserviceschanged.
+DedicatedlocalCA+randomfiletoken,neitherhosttrustchangenorsecretinGit/argv/output.
+Localregistry публикует только прежние REST/Nestno-lock OCI blobs; platform manifests
+eab8bc01.../ffd4aad3... и configs9bfafd9d.../217d41d0... exactlypreserved. No builds
+foreignprojects/referencecache/oracleinputs. Newworkspace/publicDBcopy SHA491fe...,
+metadata40b61...,sourcevolumeRO,download0,originalpublicDBsunchanged.
+
+Первый REST API succeededpartial48.187s:JavaUNKNOWNValueError,final/os/full1/143/144.
+NoOracle diagnostic oncachedraw provedacquire+peercompleted,corroboratefailedat
+seekable_layer_index.canonical:Crane rootconfig `sha256:<digest>` rejectedcolon.
+Acquired TAR+frames retained in ownvolume; no rawexceptionsecrets. Negativeattempt
+retained, notcountedasaccuracy. Success-onlyheld evaluator requires image-original
+artifact absentinthisdegradedmode; firstpartialnotassignedinventedTP/FP/FN.
+
+Runtimebae619c separatelycommitted/pushed:exactroot lowercase SHA256configonly,
+manifestreferencedregular<=4MiB,fullhash==name+existingimageIDbinding; unuseddigest
+entry/alias/link/duplicate/traversal/ADS reject;inner-layercolonstillreject.
+25unitnegativesinclGNU/PAX/pre-readsize/catalogbinding,fullservice826PASS10skip.
+Setupfirstcopyfailedbeforetargetcreation duecapdroppedUID0writepermissions on
+UID10001workspace; correctedrootCHOWNonlynewvolumeroots,copyUID10001; nooldcachewrite.
+
+Oneownbuild producedimage79857b3a884112f235552efd5a4447a1d7ef00ec399132eba193e8b6cadc0b83,
+49installedhashesexactprebuildfreeze/defaultv7,networkTLS/noDockerSocket/source/ref.
+CurrentAPIactualRESTjobaf50545a-c898-45c8-95af-2f48c7b2aed0:29.187s,109/143/252views,
+16downloadedartifacts. CurrentNestjob2436cd96-7e33-4fb0-b75f-a4e3a389ad4d:20.375s,
+308/88/396views,13artifacts. FirstpositiveNestoldRC22.266s keptseparately, notadded
+toaccuracycorpus. Allpredictions+downloads sealedBEFORE POSToracle.
+
+POSTsamecontrolledtruth:REST104/3/2,P97.196R98.113F197.653/exactcoverage98.113,
+conditionalversions99.048,delta+1;Nest107/0/0 all100,delta0. RawbuildREST121/packaged106
+separate. Directimage-only0/0/21 and0/0/6 UNKNOWN. All3RESTsemanticviews exactR112;
+NestfinalexactR109,OS/full onelesssystemd aspreviousLinuxdifference, notbitparity.
+No newglobalaccuracy/ranking/blindclaim;oldcorpusmetricsunchanged. Bothpartial,
+firstJavafailurepreserved;userreceivesvalidSBOMs/UNKNOWNnotfalsecompleteness.
+
+Final860uniquePASS10skip:826fullservice+2newconfigtests+7newclientpartialcases+
+25POSTevaluatorcases. Client45tests testrealmockHTTP/redirection/auth/path/budget/
+partial/downloadpreservation;partialreportedbutnotsilentlyfailed. TLSCAprivatekey
+notmountedAPI;tokenfileonly;UID10001/readonly/capdrop/workers1/3GiB2CPU.
+Bothcontainersremainup/healthyAPI,ownvolumesexternalpersistent/restartunlessstopped.
+HTTP200health/docs,401noauth,422badregistry/sourcepair/productionreference.
+No automation restarted, no unrelateddeploymentschanged.
+[Usage](local-docker-mvp.md),[POSTreport](../benchmarks/results/local-mvp-api-v1/evaluation.json),
+[launch](../benchmarks/results/local-mvp-api-v1/launch.json).

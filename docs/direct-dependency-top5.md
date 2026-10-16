@@ -1,3 +1,10 @@
+## Local Docker API — image inventory, graph unchanged
+
+Новый полный HTTPS API smoke: REST104/3/2 components, Nestno-lock107/0/0,
+runtimebae619c SHA-bound Crane config compatibility. Image-only direct21Java/6JS
+UNKNOWN/FN, не выведены из archive presence. Current API доступен локально;
+[инструкция](local-docker-mvp.md). Direct ranking и исторические scopes не менялись.
+
 ## R113 — publication diagnostics; direct graph unchanged
 
 Current runtime7726706 hardens output commit/failure diagnostics. No source model,
