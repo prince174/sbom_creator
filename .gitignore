@@ -827,3 +827,29 @@ benchmarks/results/build-references-v1/
 /benchmarks/results/mvp-r112-native-path-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
 /benchmarks/results/mvp-r112-native-path-v2/executed-source/sbom_creator/schemas/bom-1.7.schema.json
 # END R112 exact packed-evidence originals
+
+# BEGIN R113 exact packed-evidence originals (package_mvp_r113.py)
+/benchmarks/results/mvp-r113-container-v1/analysis/decisions.json
+/benchmarks/results/mvp-r113-container-v1/analysis/final.cdx.json
+/benchmarks/results/mvp-r113-container-v1/analysis/full.cdx.json
+/benchmarks/results/mvp-r113-container-v1/analysis/image.syft.json
+/benchmarks/results/mvp-r113-container-v1/analysis/os.cdx.json
+/benchmarks/results/mvp-r113-container-v1/analysis/selected.syft.json
+/benchmarks/results/mvp-r113-container-v1/cached-inputs/image.syft.json
+/benchmarks/results/mvp-r113-container-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/mvp-r113-native-publication-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/mvp-r113-native-publication-v2/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/decisions.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/final.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/full.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/image.syft.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/os.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/chalk-original-r106/analysis/selected.syft.json
+/benchmarks/results/mvp-r113-publication-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/decisions.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/final.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/full.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/image.syft.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/os.cdx.json
+/benchmarks/results/mvp-r113-publication-v1/nest-types-r109/analysis/selected.syft.json
+# END R113 exact packed-evidence originals

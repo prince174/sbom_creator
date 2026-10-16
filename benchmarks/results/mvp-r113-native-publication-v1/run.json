@@ -1,0 +1,28 @@
+{
+  "exit_code": 0,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--network=none",
+    "--read-only",
+    "--user=10001:10001",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--memory=256m",
+    "--cpus=1",
+    "--pids-limit=64",
+    "--tmpfs=/tmp:rw,nosuid,nodev,size=64m,mode=1777",
+    "--env",
+    "TMPDIR=/tmp",
+    "--mount",
+    "type=bind,src=G:\\code\\sbom_creator\\benchmarks\\results\\mvp-r113-native-publication-v1\\executed-source,dst=/candidate,readonly",
+    "--mount",
+    "type=bind,src=G:\\code\\sbom_creator\\benchmarks\\results\\mvp-r113-native-publication-v1\\program.py,dst=/harness.py,readonly",
+    "--entrypoint=python",
+    "sha256:46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8",
+    "-B",
+    "/harness.py"
+  ]
+}

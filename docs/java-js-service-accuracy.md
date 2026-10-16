@@ -1,4 +1,51 @@
-# Java / JavaScript: image-first MVP — R112, 2026-10-16
+# Java / JavaScript: image-first MVP — R113, 2026-10-16
+
+**Runtime `7726706` усиливает публикацию и диагностику; компонентные правила не менялись.**
+Историческая причина R106 Chalk остаётся UNKNOWN: сохранены только PermissionError
+и общий reconcile_convert_validate, без операции/OS-кода/traceback. Никаких blind scans.
+
+Публикация теперь сохраняет fixed operation/artifact/error/OS-reason enums, не raw
+exception paths/messages. Ошибки diagnostics и secondary cleanup не подменяют первую
+ошибку. Собственный commit point отмечается явно: post-commit cleanup failure даёт
+committed=true/final_published=true, но job failed и API downloads409. Windows/Linux
+atomic no-replace не заменяет даже появившийся пустой чужой output. Verification
+failure сохраняет stage verification. [Контракт](publication-failures-r113.md).
+
+757 full-service tests passed/10skips;208 benchmark regressions,26 новых fault cases
+и9 API/CLI cases включены в эти проверки. Linux native final49source snapshot:
+5 actual atomic/cleanup contracts PASS/0skip, no scanner/publisher/oracle/network.
+
+Два cached-only publisher regression завершены после code/input freeze:
+Chalk original R106 diagnostic inputs6.453s, Nest R1099.531s, total16.125s,
+ровно2 pinned Syft converts. Final/os/full199/89/288 и308/89/397 — **publication
+counts, не TP/accuracy**; Chalk не положительный reference control. Все3 coordinate
+multisets,selected IDs,whole original payload mapping и source/image catalogs равны
+прежним. Nest type witness сохранён.49source/schema,16inputs и converter unchanged.
+Никаких scanner/reader/source/build/DB/oracle calls, R106 failure immutable.
+[Sealed regression](../benchmarks/results/mvp-r113-publication-v1/README.md).
+
+Installed RC `sbom-creator:mvp-r113`, configID
+`sha256:d87700c34df1d43ced56235d79ce086f986016f73a3bfb7667d802cd9edfbf12`:
+собственная сборка32.828s (pip downloads разрешены), один cached Nest publisher
+9.427s/container10.797s, один Syft convert. Все49 installed source/schema hashes
+равны freeze; default archive=true/nested=false без feature overrides. Network-none,
+non-root10001/read-only/3GiB2CPU, без socket/source project/reference/secrets/DB.
+Все3 coordinate multisets, selected IDs и payload facts равны текущему host Nest;
+13 gzip exports, readonly program SHA и actual Cmd/Path/Args проверены. Это cached
+publisher smoke, не fresh scanner/physical/accuracy sample. Итог971 unique pytest
+nodes passed/10skipped:757service+208benchmark+6container; native5contracts отдельно.
+Git binding46exact/3CRLF-LF-only, все49 actual installed bytes равны executed freeze.
+[Финальная проверка](../benchmarks/results/mvp-r113-final-validation.json) и
+[lossless manifest](../benchmarks/results/mvp-r113-evidence-manifest.json):90JSON,
+78,845,652 raw bytes →8,848,467 tracked JSON+gzip bytes; originals сохранены.
+
+Последние accuracy остаются **R112 Java3862/20/18 P99.4848/R/exactcoverage99.5361**
+и **R109 JS307/9/0 P97.1519/R/exactcoverage100** в описанных ниже known scopes.
+R113 не переизмеряет корпус и не доказывает исправление неизвестного исторического сбоя.
+Direct/opaque/shaded UNKNOWN и conservative fixture FP сохраняются; новых recipes
+или deployments нет. Component MVP не задерживается расширением40пар/direct graph.
+
+## Historical R112 — six Java images on the new public DB
 
 **Новая публичная Java DB проверена на всех шести прежних Java-образах.**
 Current runtime `88de091`, release default archive-components v7. Новая DB SHA256

@@ -1,3 +1,11 @@
+## R113 — publication diagnostics; direct graph unchanged
+
+Current runtime7726706 hardens output commit/failure diagnostics. No source model,
+image directness or dependency classifier changes. Cached Chalk/Nest publisher
+regressions preserve views/IDs/payload, not new graph/accuracy measurements.
+Image-only638Java/103JS known direct UNKNOWN/FN remain optional separate axis.
+[Publication contract](publication-failures-r113.md).
+
 ## R112 — component release verification, direct graph unchanged
 
 Current runtime `88de091` проверен с новой публичной DB на шести прежних Java-образах:

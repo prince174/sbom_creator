@@ -32,3 +32,6 @@ benchmarks/results/mvp-r111-cold-harness-tests-v1.xml -whitespace
 
 # Preserve hash-bound R111 peer-regression executed source bytes.
 benchmarks/results/java-db-peer-regression-r111-v1/executed-source/** -whitespace
+
+# Preserve the exact failed R113 API test diagnostic, including traceback spacing.
+benchmarks/results/mvp-r113-api-diagnostic-tests-v1.xml -whitespace

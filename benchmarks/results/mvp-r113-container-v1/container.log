@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "reference_accessed": false,
+  "new_accuracy_measurement": false,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v4",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "AMBIGUOUS_IDENTITY": 5
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "image_identity": 5
+    },
+    "source_count": 0,
+    "image_count": 406,
+    "selected_count": 397,
+    "final_count": 308,
+    "os_count": 89,
+    "full_count": 397,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 380,
+      "UNKNOWN": 9
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 8.483
+  },
+  "conversion_calls": 1,
+  "all_cached_payload_facts_unchanged": true,
+  "declared_type_witness_count": 1,
+  "output_sha256": {
+    "coverage.json": "c46afd6123dc3d7fc11271d48191590a734f83b2f5c75366b46ab56ee5bfd9cd",
+    "decisions.json": "849643bd741458ed1ceb1198ec41fcff833c91879e5ceb455eadae9496050aa5",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "0abd1a0f9d36b74a58a518f0644f638a2967df314e519c76d7732ddba24d0110",
+    "full.cdx.json": "31a3a65bfcdf0267ca6fb3614c30e97e55c160e27057debb6f14cfe5dd90e8c6",
+    "image.syft.json": "349952a253bdb38c9c898482622948e07f53d142d4efd872daae2bf9b66c534f",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "68d7c906d1ad81c2f5e8bfa3af080550ce12a6a6f1b0a4909d3b455f4ca39c75",
+    "provenance.json": "9da46c20420212aecee5c4d8a2ade6d7e0789c5869dafcb0e8881d8c321be600",
+    "review.json": "60d299926ce7f6e524ddc8605f3d8e83b42155e5c2c0388607a9bd783dcf82dd",
+    "selected.syft.json": "ea1da6a236cb284a92153eac48794028efdc49d1612dfb61fefcf628bc7dc5ce",
+    "source.syft.json": "a21ac39f89a18993239b99980f32d53fd4dd2fb786ba48ca81a15b01e54fcb37",
+    "summary.json": "f5baa379d9f5981a8a1d98d02706e681c4a39a2c87e2c1ff9bf8b50d16a97fb8"
+  },
+  "publisher_seconds": 9.42708156601293
+}

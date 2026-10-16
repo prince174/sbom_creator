@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v4",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+      "AMBIGUOUS_IDENTITY": 5
+    },
+    "unknown_groups": {
+      "image_evidence": 4,
+      "image_identity": 5
+    },
+    "source_count": 0,
+    "image_count": 406,
+    "selected_count": 397,
+    "final_count": 308,
+    "os_count": 89,
+    "full_count": 397,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 380,
+      "UNKNOWN": 9
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 8.047
+  },
+  "views": {
+    "final": {
+      "component_count": 308,
+      "coordinate_multiset_equal": true,
+      "schema_valid": true,
+      "sha256": "c1bc9f28e9516dd740a63cb3abdaa20c471bfedacc2caff8017cfc1857c013e3"
+    },
+    "os": {
+      "component_count": 89,
+      "coordinate_multiset_equal": true,
+      "schema_valid": true,
+      "sha256": "19fbb6cbfba90669badc272a543ca500a55549ae60f24c7e16e539078419fe54"
+    },
+    "full": {
+      "component_count": 397,
+      "coordinate_multiset_equal": true,
+      "schema_valid": true,
+      "sha256": "38457ccbe5f1f6a5d020c8f27cafb49b097c73f9923f6fb5ca258c4b195177a3"
+    }
+  },
+  "selected_artifact_ids_equal": true,
+  "all_original_payload_facts_equal": true,
+  "declared_type_witness_count": 1,
+  "source_image_catalogs_unchanged": true,
+  "output_sha256": {
+    "coverage.json": "c0a7864f668cf062631f20cdf7307dd4df8ae2061238a7bd65978772c8facbf8",
+    "decisions.json": "5fc96d88300c8018dee02ffd4e4e305a0c720b5de2e5a849795cfb7c2dcabcc9",
+    "direct-dependencies.json": "0506a656c682612cd139581c89f5c2d3e1269a86881a3c34d253e9606e089fd6",
+    "final.cdx.json": "c1bc9f28e9516dd740a63cb3abdaa20c471bfedacc2caff8017cfc1857c013e3",
+    "full.cdx.json": "38457ccbe5f1f6a5d020c8f27cafb49b097c73f9923f6fb5ca258c4b195177a3",
+    "image.syft.json": "e752856073bbcefcb14cd508439e8fefba680545bb77635257cf86e7abde4f2b",
+    "java-direct-dependencies.json": "fd84ab60bb6d119b1008197fa4f2d8fc3d251f918f906b12e06052976ffe6f6c",
+    "os.cdx.json": "19fbb6cbfba90669badc272a543ca500a55549ae60f24c7e16e539078419fe54",
+    "provenance.json": "363956062e1239fd66a82e50076518bf961818cc5544b774f2a8b40ff61ec967",
+    "review.json": "d483672d82a4b27561c00113899dafa349ef6383bfa5b091e7d5e5bea634acf6",
+    "selected.syft.json": "9f8c10a517972e5f835f3418bef94932f1ca0c1407a75c4f227f970b3fb92097",
+    "source.syft.json": "89ea0b118c407412a071aa1ff25c8313af527c18901359dd6113d741005724f2",
+    "summary.json": "f413169595b6bd59c0c6965549f518fb06d0a5def84467c435c0a5bb485c80dc"
+  },
+  "name": "nest-types-r109",
+  "oracle_read": false,
+  "fresh_scanners": false,
+  "fresh_physical_reads": false,
+  "source_input": false,
+  "new_accuracy_measurement": false,
+  "historical_chalk_failure_fixed_claim": false,
+  "conversion_calls": 1,
+  "elapsed_seconds": 9.530999999988126
+}

@@ -1,3 +1,17 @@
+## R113 — publication reliability, no accuracy/ranking change
+
+Runtime7726706 records fixed publication checkpoints and correct commit state,
+preserves primary failures and uses atomic no-replace. Cached-only Chalk/Nest
+regressions retain all3views/IDs/wholepayload; no scans/oracle/newaccuracy.
+971unique pytestnodes PASS/10skips (757service+208bench+6container);
+26fault+9APIcases included,5nativeLinuxcontracts separate.
+Installed RC d87700c3... cached Nest publisher9.427s/container10.797s,
+49installedhashes/defaultconfig/13exports andall3views/IDs/payload parity PASS.
+No scanner/physical/DB/source/reference calls; not new ranking/accuracy sample.
+Java lastR1123862/20/18,JS lastR109307/9/0 andscopedlimitations remain.
+Historical Chalkcause stillUNKNOWN, successful replay doesn't prove a locking fix.
+[Publication contract](publication-failures-r113.md).
+
 ## R112 — public Java DB compatibility, 2026-10-16
 
 Default v7 и ранжирование не менялись. Новая DB `491fe2dd…efd59` проверена actual

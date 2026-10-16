@@ -1734,3 +1734,55 @@ package_mvp_r112.py restore/verify; originals/R105–R111 manifests preserved.
 Next practical saved Chalk publication failure diagnosis/genericidentity ambiguity,
 not unchanged reader/transport/DB replay or newforeignrecipes. Coverage limitations
 remain explicit; component MVP threshold is not universal/fullCI/directgraph claim.
+
+## R113 — publication failure provenance and atomic no-replace, 2026-10-16
+
+Static history audit: originalR106Chalk failure onlyPermissionError at broadstage,
+15.671s, nooperation/errno/winerror/traceback/filename. Currentprechangepipeline bytes
+exactR1064dab0492...; priorcachedsuccess6.0s is notlockingfix/causeproof. Oldinputs/failure
+immutable. No newscan/source/build/DB/oracle. History reports mvp-r113-chalk-history-v1.
+
+Runtime7726706 pushed. New publication.py internalstate/fixedenums; primaryfailure
+preserved throughsecondarydiagnostic/cleanup errors. Correctowncommittruth andAPI409
+onpostcommitcleanupfailure,CLIexit1/outputblocked. Existingtargetrefusal preserved;
+newWindows/Linuxatomicno-replace doesnotreplace racingemptytarget. UnsupportedOS/FS
+failclosed,nofsync/hostilewriterclaim. VerificationAPI/CLIstagefallbackfixed. LegacyJSON
+replace20attempts/25ms bound unchanged, noaddedscanner/converter/analysis retry.
+
+757fullservicePASS10skip,208benchPASS;26newfault cases+9API/CLI includeconverterpartial,
+artifactwrite/replace,dircommit/race,primary+secondarycleanup,diagnosticunavailable/
+partial,postcommittruth,forgederrorattrs,CLI/APIredaction/verificationstage/409.
+Linuxnative5contracts0skip onfinal49source:atomicpositive/empty+nonemptyconflicts/
+firstfailurepreservation/postcommitcleanuptruth. Nativev1predatesfinalgenericfallback
+typeguard(pipelineonly),v2all49finalbytes; originalv1retained. Initialpytestwrongmissing
+tests/test_cli.py yieldednotests; v2existing22PASS. APIfocusedv1 hadonefallbackexpectation
+mismatch(testonly),v2correctcontract9PASS, no runtime failure suppressed.
+
+Frozen49source/schema +16cachedinputs +pinnedSyft BEFORE ONLY2publisher jobs:
+originalR106Chalkdiag->priorgooddiag andR109Nesttypefacts->priorR109. Chalk6.453s,
+Nest9.531s,total16.125s,2converts. Allthreecoordinate multisets/selectedIDs/wholepayload/
+source+imagecatalogs exactbaseline; declaredtypewitness retained. Counts199/89/288,
+308/89/397 aren'tTP/accuracy. OriginalR106failure/inputs andallfrozenfilesunchanged.
+MarkerSHAd72f8041f23408745e86df26367f92fe784ecac4b602ab3d27674f2db3a366a3,
+freeze45fc4dc22296366010173537987dbc88880f6bf2f0fdf613d26794465abd21f7.
+No scanner/physical/DB/oracle, no accuracygain/historicalcausefixclaim/rankingchange.
+JavaR1123862/20/18,JSR109307/9/0 andallknownscope/UNKNOWNlimitations retained.
+
+Installed RC sbom-creator:mvp-r113 configID
+sha256:d87700c34df1d43ced56235d79ce086f986016f73a3bfb7667d802cd9edfbf12:
+onebuild32.828s (ordinarypipdownloads),onecachedNestpublisher9.427s/container10.797s.
+49installedhashes/defaultarchiveTrue+nestedFalse/nofeatureoverrides,actualreadonly
+programSHA+Cmd/Path/Args,13gzipexports PASS. All3views308/89/397+selectedIDs+payload
+exacthostNest; declaredtypewitness retained. Nonroot10001/readonly/networkNONE/
+3GiB2CPU/no socket/sourceproject/reference/secrets/DB/scanner/physical reads.
+Container removed,ownworkspacevolume retained. Notnewaccuracy/scanner/DBacceptance.
+Final971unique pytestnodes PASS10skips (757service+208bench+6container),native5/0
+separate. HistoricalChalkcauseUNKNOWN;successful replay doesn't provefix.
+
+Final source binding:46exact Git blobs/3CRLF-LF-only;all49actualinstalledbytes
+equalexecutedfreeze. Existingcodechangesonlypipeline/service/cli,newpublication.py;
+classifier/reader/cache filesunchanged. OldR105–R112manifestsunchanged.
+R113losslesspack90JSON78,845,652rawB ->8,848,467trackedJSON+gzipB,
+23large/19uniquegzip;manifestSHA25a7c79e5e438dc86db0aab393c2966ebdda3acdab7722918498ab57a8141998.
+package_mvp_r113.py restore/verify;originals/exactsnapshots retained.
+[Final validation](../benchmarks/results/mvp-r113-final-validation.json).
