@@ -10,6 +10,21 @@ from sbom_creator.evaluation import compare
 from sbom_creator.validation import validate_cyclonedx
 
 
+def runtime_image_summary(row, project):
+    case = {'java-spring-petclinic': 'boot', 'java-javalin': 'javalin',
+            'java-dropwizard': 'dropwizard',
+            'java-petclinic-microservices': 'microservices'}.get(project)
+    path = ROOT/'benchmarks/results/mvp-image-r105-v2/evaluation.json'
+    if case and path.exists():
+        runtime = json.loads(path.read_bytes())['reports'].get(case)
+        if runtime is not None:
+            row.update(runtime_image_only_status=runtime['status'],
+                       runtime_image_only_components=runtime.get('components', runtime.get('components_micro')),
+                       runtime_image_only_scored_owners=runtime['scored_owners'],
+                       runtime_image_only_scope_unknown_owners=runtime['scope_unknown_owners'],
+                       runtime_image_only_evidence=path.relative_to(ROOT).as_posix())
+
+
 def main():
     manifest=json.loads((ROOT/'benchmarks/java-js-expanded-v1.json').read_bytes())
     unchanged=all(hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==digest for f,digest in manifest['candidate_freeze'].items())
@@ -55,6 +70,16 @@ def main():
                                external_candidate_scored_owners=measured['scored_owners'],
                                external_candidate_scope_unknown_owners=measured['scope_unknown_owners'],
                                external_candidate_evidence=evaluated.relative_to(ROOT).as_posix())
+                source_control = ROOT/'benchmarks/results/java-runtime-direct-r104-control-v1/evaluation.json'
+                if project['id'] == 'java-petclinic-microservices' and source_control.exists():
+                    source_measured = json.loads(source_control.read_bytes())
+                    row.update(source_control_status='MEASURED_SEPARATE_BUILD_MODEL',
+                               source_passive_direct=source_measured['passive_all_module_direct'],
+                               source_cdxgen_raw_direct=source_measured['cdxgen_raw_all_module_direct'],
+                               source_cdxgen_shipped_direct=source_measured['cdxgen_shipped_module_direct'],
+                               source_control_evidence=source_control.relative_to(ROOT).as_posix(),
+                               source_control_note='Source/model graph only. Raw root module-containment FP retained; no image accuracy or original-CI reproduction claim.')
+                runtime_image_summary(row, project['id'])
                 rows.append(row)
                 continue
             if receipt.get('analysis_status', {}).get('status') == 'FAILED_OUTPUT_BUDGET':
@@ -77,6 +102,7 @@ def main():
                            component_metrics_status='FAILED_OUTPUT_BUDGET',
                            receipt_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                            scope_note='Aggregate includes reactor artifacts; per-owner labels separate. Failed service output is not an empty successful prediction. All known shipped edges remain unmatched, not excluded from coverage.')
+                runtime_image_summary(row, project['id'])
                 rows.append(row)
                 continue
             final=json.loads((analysis/'final.cdx.json').read_bytes())
@@ -131,6 +157,7 @@ def main():
                     row['packaged_unknown_artifacts'] = len(labels['unknown_packaged'])
                     row['packaging_labels_sha256'] = hashlib.sha256(label_path.read_bytes()).hexdigest()
                     row['scope_note'] = 'Known packaged dependency labels evaluated separately from full build graph; packaging-added UNKNOWN retained. Failed payload corroboration counts as missing known components, not hidden coverage.'
+        runtime_image_summary(row, project['id'])
         rows.append(row)
     report={'candidate_unchanged':unchanged,'rows':rows,'target_per_language':20,
             'limitation':'Expansion strata reported separately, fixed fixture paths for inventory scoring; no generic ownership or aggregate production success claim.'}

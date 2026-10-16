@@ -34,7 +34,7 @@ def literal_modules(source):
 
 
 def recipe(modules, *, profile='!all-modules'):
-    if profile != '!all-modules':
+    if profile not in ('!all-modules', None):
         raise ValueError('Only explicitly reviewed Dropwizard profile supported')
     for row in modules:
         name = row['path']
@@ -42,7 +42,7 @@ def recipe(modules, *, profile='!all-modules'):
                 (name != '.' and (not re.fullmatch(r'[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*', name) or
                                   any(part in ('.', '..') for part in name.split('/'))))):
             raise ValueError('Unsafe recipe module')
-    mvn = ('mvn -B -ntp -s /opt/settings.xml -P!all-modules -DskipTests '
+    mvn = ('mvn -B -ntp -s /opt/settings.xml ' + ('-P!all-modules ' if profile else '') + '-DskipTests '
            '-Djacoco.skip=true -Dmaven.javadoc.skip=true -Dgpg.skip=true ')
     cdx = (' -DoutputFormat=json -DoutputName=sbom -DschemaVersion=1.6 '
            '-Dcyclonedx.skipNotDeployed=false -DincludeCompileScope=true -DincludeRuntimeScope=true '

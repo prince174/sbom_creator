@@ -1,0 +1,726 @@
+[
+  {
+    "path": ".",
+    "owner": [
+      "org.springframework.samples",
+      "spring-petclinic-microservices",
+      "4.0.1"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "spring-petclinic-microservices",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "org.springframework.samples",
+      "artifact": "spring-petclinic-microservices",
+      "version": "4.0.1",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-admin-server",
+    "owner": [
+      "org.springframework.samples.petclinic.admin",
+      "spring-petclinic-admin-server",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.3"
+      ],
+      [
+        "de.codecentric",
+        "spring-boot-admin-server-ui",
+        "4.0.2"
+      ],
+      [
+        "de.codecentric",
+        "spring-boot-admin-starter-server",
+        "4.0.2"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-cache",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-admin-server",
+    "image_prefix": "/application/spring-petclinic-admin-server/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.admin",
+      "artifact": "spring-petclinic-admin-server",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-admin-server-4.0.1.jar",
+      "sha256": "e403d2164dee2921c2977749586a7648c112f6ce357ffc02604e4e4b438003b9"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-customers-service",
+    "owner": [
+      "org.springframework.samples.petclinic.client",
+      "spring-petclinic-customers-service",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.mysql",
+        "mysql-connector-j",
+        "9.5.0"
+      ],
+      [
+        "de.codecentric",
+        "chaos-monkey-spring-boot",
+        "4.0.0"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.16.1"
+      ],
+      [
+        "net.ttddyy.observation",
+        "datasource-micrometer-spring-boot",
+        "2.0.1"
+      ],
+      [
+        "org.hsqldb",
+        "hsqldb",
+        "2.7.3"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-actuator",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-data-jpa",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-restclient",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-webmvc",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-zipkin",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-customers-service",
+    "image_prefix": "/application/spring-petclinic-customers-service/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.client",
+      "artifact": "spring-petclinic-customers-service",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-customers-service-4.0.1.jar",
+      "sha256": "8d39d6a0fedc5cb24ec68452dd7eab157c087226a18483fa8c26e25e99263f58"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-vets-service",
+    "owner": [
+      "org.springframework.samples.petclinic.vets",
+      "spring-petclinic-vets-service",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.3"
+      ],
+      [
+        "com.mysql",
+        "mysql-connector-j",
+        "9.5.0"
+      ],
+      [
+        "de.codecentric",
+        "chaos-monkey-spring-boot",
+        "4.0.0"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.16.1"
+      ],
+      [
+        "jakarta.xml.bind",
+        "jakarta.xml.bind-api",
+        "4.0.4"
+      ],
+      [
+        "javax.cache",
+        "cache-api",
+        "1.1.1"
+      ],
+      [
+        "net.ttddyy.observation",
+        "datasource-micrometer-spring-boot",
+        "2.0.1"
+      ],
+      [
+        "org.hsqldb",
+        "hsqldb",
+        "2.7.3"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-configuration-processor",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-actuator",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-cache",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-data-jpa",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-restclient",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-webmvc",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-zipkin",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-vets-service",
+    "image_prefix": "/application/spring-petclinic-vets-service/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.vets",
+      "artifact": "spring-petclinic-vets-service",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-vets-service-4.0.1.jar",
+      "sha256": "03725b5dc713019d7f9147bfc3cdd587439eeccdbf0ce7f86ca347ae6e065f4a"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-visits-service",
+    "owner": [
+      "org.springframework.samples.petclinic.visits",
+      "spring-petclinic-visits-service",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.mysql",
+        "mysql-connector-j",
+        "9.5.0"
+      ],
+      [
+        "de.codecentric",
+        "chaos-monkey-spring-boot",
+        "4.0.0"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.16.1"
+      ],
+      [
+        "net.ttddyy.observation",
+        "datasource-micrometer-spring-boot",
+        "2.0.1"
+      ],
+      [
+        "org.hsqldb",
+        "hsqldb",
+        "2.7.3"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-actuator",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-data-jpa",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-restclient",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-webmvc",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-zipkin",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-visits-service",
+    "image_prefix": "/application/spring-petclinic-visits-service/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.visits",
+      "artifact": "spring-petclinic-visits-service",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-visits-service-4.0.1.jar",
+      "sha256": "8e3f09c227ca14df36f33baef09fe7d1c6b2d32f64927406c0a69d0c4b0238eb"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-genai-service",
+    "owner": [
+      "org.springframework.samples.petclinic.genai",
+      "spring-petclinic-genai-service",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.3"
+      ],
+      [
+        "com.mysql",
+        "mysql-connector-j",
+        "9.5.0"
+      ],
+      [
+        "de.codecentric",
+        "chaos-monkey-spring-boot",
+        "4.0.0"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.16.1"
+      ],
+      [
+        "jakarta.xml.bind",
+        "jakarta.xml.bind-api",
+        "4.0.4"
+      ],
+      [
+        "javax.cache",
+        "cache-api",
+        "1.1.1"
+      ],
+      [
+        "net.ttddyy.observation",
+        "datasource-micrometer-spring-boot",
+        "2.0.1"
+      ],
+      [
+        "org.hsqldb",
+        "hsqldb",
+        "2.7.3"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.ai",
+        "spring-ai-starter-model-openai",
+        "2.0.0-M1"
+      ],
+      [
+        "org.springframework.ai",
+        "spring-ai-vector-store",
+        "2.0.0-M1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-configuration-processor",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-actuator",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-cache",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-data-jpa",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-restclient",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-webmvc",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-zipkin",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-circuitbreaker-reactor-resilience4j",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-gateway-server-webflux",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-genai-service",
+    "image_prefix": "/application/spring-petclinic-genai-service/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.genai",
+      "artifact": "spring-petclinic-genai-service",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-genai-service-4.0.1.jar",
+      "sha256": "4e556866931884f476c6de6d6c42169684e0f950996e38b81507af4da79fb371"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-config-server",
+    "owner": [
+      "org.springframework.samples.petclinic.config",
+      "spring-petclinic-config-server",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-config-server",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-config-server",
+    "image_prefix": "/application/spring-petclinic-config-server/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.config",
+      "artifact": "spring-petclinic-config-server",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-config-server-4.0.1.jar",
+      "sha256": "0df757a86869b6c835dfdce7233b83515299000340cfc005fee731dd9196cb33"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-discovery-server",
+    "owner": [
+      "org.springframework.samples.petclinic.discovery",
+      "spring-petclinic-discovery-server",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "org.glassfish.jaxb",
+        "jaxb-runtime",
+        "4.0.6"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-server",
+        "5.0.0"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-discovery-server",
+    "image_prefix": "/application/spring-petclinic-discovery-server/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.discovery",
+      "artifact": "spring-petclinic-discovery-server",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-discovery-server-4.0.1.jar",
+      "sha256": "2c492601b10fa21c15d15050a86139e1dd63aeb5f53d3ce961b35739964debb5"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "spring-petclinic-api-gateway",
+    "owner": [
+      "org.springframework.samples.petclinic.api",
+      "spring-petclinic-api-gateway",
+      "4.0.1"
+    ],
+    "direct": [
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.3"
+      ],
+      [
+        "io.github.resilience4j",
+        "resilience4j-micrometer",
+        "2.3.0"
+      ],
+      [
+        "io.micrometer",
+        "context-propagation",
+        "1.2.0"
+      ],
+      [
+        "io.micrometer",
+        "micrometer-registry-prometheus",
+        "1.16.1"
+      ],
+      [
+        "org.jolokia",
+        "jolokia-core",
+        "1.7.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-configuration-processor",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-devtools",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-actuator",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-cache",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.boot",
+        "spring-boot-starter-zipkin",
+        "4.0.1"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-circuitbreaker-reactor-resilience4j",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-config",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-gateway-server-webflux",
+        "5.0.0"
+      ],
+      [
+        "org.springframework.cloud",
+        "spring-cloud-starter-netflix-eureka-client",
+        "5.0.0"
+      ],
+      [
+        "org.webjars",
+        "bootstrap",
+        "5.3.3"
+      ],
+      [
+        "org.webjars",
+        "webjars-locator-lite",
+        "1.1.2"
+      ],
+      [
+        "org.webjars.npm",
+        "dompurify",
+        "3.3.1"
+      ],
+      [
+        "org.webjars.npm",
+        "font-awesome",
+        "4.7.0"
+      ],
+      [
+        "org.webjars.npm",
+        "marked",
+        "14.1.2"
+      ],
+      [
+        "org.webjars.npm",
+        "vue",
+        "3.5.17"
+      ],
+      [
+        "org.webjars.npm",
+        "vue-router",
+        "4.5.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "spring-petclinic-api-gateway",
+    "image_prefix": "/application/spring-petclinic-api-gateway/",
+    "effective_output": {
+      "group": "org.springframework.samples.petclinic.api",
+      "artifact": "spring-petclinic-api-gateway",
+      "version": "4.0.1",
+      "packaging": "jar",
+      "file": "spring-petclinic-api-gateway-4.0.1.jar",
+      "sha256": "01a4abb43775168fe47f79a8f03a94c53ce7fa099e54e9e00d1beefd86a91ea3"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  }
+]

@@ -1,0 +1,340 @@
+{
+  "project": "java-petclinic-microservices",
+  "commit": "1d76b00d683e86b62867a6bf59530f8ab301244f",
+  "runtime_integration": false,
+  "partition": "development source control; not independent global acceptance",
+  "rows": [
+    {
+      "module": ".",
+      "owner": "pkg:maven/org.springframework.samples/spring-petclinic-microservices@4.0.1",
+      "shipped": false,
+      "passive_trivy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "cdxgen_raw": {
+        "tp": 0,
+        "fp": 8,
+        "fn": 0,
+        "predicted": 8,
+        "reference": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [
+        "pkg:maven/org.springframework.samples.petclinic.admin/spring-petclinic-admin-server@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.api/spring-petclinic-api-gateway@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.client/spring-petclinic-customers-service@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.config/spring-petclinic-config-server@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.discovery/spring-petclinic-discovery-server@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.genai/spring-petclinic-genai-service@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.vets/spring-petclinic-vets-service@4.0.1",
+        "pkg:maven/org.springframework.samples.petclinic.visits/spring-petclinic-visits-service@4.0.1"
+      ],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-admin-server",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.admin/spring-petclinic-admin-server@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 8,
+        "reference": 8,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-customers-service",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.client/spring-petclinic-customers-service@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-vets-service",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.vets/spring-petclinic-vets-service@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 18,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 18,
+        "reference": 18,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-visits-service",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.visits/spring-petclinic-visits-service@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 13,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-genai-service",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.genai/spring-petclinic-genai-service@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 22,
+        "reference": 22,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 22,
+        "reference": 22,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-config-server",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.config/spring-petclinic-config-server@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_raw": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 2,
+        "reference": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-discovery-server",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.discovery/spring-petclinic-discovery-server@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "predicted": 0,
+        "reference": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "cdxgen_raw": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 3,
+        "reference": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [
+        "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.6",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server@5.0.0"
+      ],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    },
+    {
+      "module": "spring-petclinic-api-gateway",
+      "owner": "pkg:maven/org.springframework.samples.petclinic.api/spring-petclinic-api-gateway@4.0.1",
+      "shipped": true,
+      "passive_trivy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 21,
+        "predicted": 0,
+        "reference": 21,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "cdxgen_raw": {
+        "tp": 21,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 21,
+        "reference": 21,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "cdxgen_graph_status": "MEASURED",
+      "passive_missing": [
+        "pkg:maven/com.github.ben-manes.caffeine/caffeine@3.2.3",
+        "pkg:maven/io.github.resilience4j/resilience4j-micrometer@2.3.0",
+        "pkg:maven/io.micrometer/context-propagation@1.2.0",
+        "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.16.1",
+        "pkg:maven/org.jolokia/jolokia-core@1.7.1",
+        "pkg:maven/org.springframework.boot/spring-boot-configuration-processor@4.0.1",
+        "pkg:maven/org.springframework.boot/spring-boot-devtools@4.0.1",
+        "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+        "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+        "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-circuitbreaker-reactor-resilience4j@5.0.0",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-gateway-server-webflux@5.0.0",
+        "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+        "pkg:maven/org.webjars.npm/dompurify@3.3.1",
+        "pkg:maven/org.webjars.npm/font-awesome@4.7.0",
+        "pkg:maven/org.webjars.npm/marked@14.1.2",
+        "pkg:maven/org.webjars.npm/vue-router@4.5.1",
+        "pkg:maven/org.webjars.npm/vue@3.5.17",
+        "pkg:maven/org.webjars/bootstrap@5.3.3",
+        "pkg:maven/org.webjars/webjars-locator-lite@1.1.2"
+      ],
+      "cdxgen_extra": [],
+      "cdxgen_missing": []
+    }
+  ],
+  "passive_all_module_direct": {
+    "tp": 76,
+    "fp": 0,
+    "fn": 24,
+    "precision": 1.0,
+    "recall": 0.76,
+    "f1": 0.8636363636363636
+  },
+  "cdxgen_raw_all_module_direct": {
+    "tp": 100,
+    "fp": 8,
+    "fn": 0,
+    "precision": 0.9259259259259259,
+    "recall": 1.0,
+    "f1": 0.9615384615384616
+  },
+  "cdxgen_shipped_module_direct": {
+    "tp": 100,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "passive_owner_coverage": {
+    "evaluated": 7,
+    "unknown": 2
+  },
+  "native_seconds": 322.7039999999979,
+  "limitations": [
+    "Module-containment root edges remain raw cdxgen FP; not silently relabelled",
+    "Native Maven model scope is analysis configuration, not arbitrary original CI reproduction",
+    "GAV/version direct identity labels; classifier/type-qualified accuracy not established",
+    "Repository graph and source-only declarations are not image component evidence",
+    "Subsequent production source changes are not validated by this historical prediction"
+  ]
+}

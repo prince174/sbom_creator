@@ -13,16 +13,20 @@ from run import ROOT, atomic_json, run_command
 from sbom_creator.validation import validate_cyclonedx
 
 
-def main():
-    work = ROOT / 'benchmarks/.work/paired-dropwizard-reactor-v1'
-    output = ROOT / 'benchmarks/references/paired-dropwizard-reactor-v1'
+def main(project=None, namespace='paired-dropwizard-reactor-v1'):
+    project = project or {'id': 'java-dropwizard', 'commit': '14b738b8ca8a52cb245f855cee0dcc68327f1d72',
+                          'partition': 'holdout', 'expected_package': 'io.dropwizard:dropwizard-project'}
+    if namespace not in ('paired-dropwizard-reactor-v1', 'paired-petclinic-microservices-r104', 'paired-vertx-web-r104'):
+        raise ValueError('Unreviewed namespace')
+    work = ROOT / 'benchmarks/.work' / namespace
+    output = ROOT / 'benchmarks/references' / namespace
     if (output / 'receipt.json').exists():
         raise FileExistsError('Immutable pair already complete')
     if not (work / 'build.id').exists():
         raise FileNotFoundError('Existing build not finished; do not duplicate it')
     source = work / 'src'
     if (command(['git', '-C', str(source), 'rev-parse', 'HEAD']) !=
-            '14b738b8ca8a52cb245f855cee0dcc68327f1d72' or
+            project['commit'] or
             command(['git', '-C', str(source), 'status', '--porcelain'])):
         raise ValueError('Source commit or cleanliness differs')
     plan = json.loads((work / 'plan.json').read_bytes())
@@ -81,7 +85,7 @@ def main():
                        'qualifier_evaluation': 'UNKNOWN_REQUIRES_EXACT_PURL_LABELS' if qualifiers else 'PLAIN_JAR_GAV'})
     aggregate = json.loads((output / 'aggregate/sbom.json').read_bytes())
     validate_cyclonedx(aggregate)
-    if aggregate['metadata']['component']['name'] != 'dropwizard-project':
+    if aggregate['metadata']['component']['name'] != project['expected_package'].split(':')[1]:
         raise ValueError('Aggregate was overwritten by a module BOM')
     shutil.copyfile(output / 'aggregate/sbom.json', output / 'sbom.json')
     atomic_json(output / 'module-labels.json', labels)
@@ -94,15 +98,15 @@ def main():
     for name in ('Dockerfile', 'ReactorCollect.java', 'plan.json'):
         shutil.copyfile(work / name, output / name)
     atomic_json(output / 'receipt.json', {
-        'project': 'java-dropwizard', 'commit': '14b738b8ca8a52cb245f855cee0dcc68327f1d72',
-        'partition': 'holdout', 'runtime_kind': 'maven-reactor-artifacts', 'image_binding': binding,
+        'project': project['id'], 'commit': project['commit'],
+        'partition': project['partition'], 'runtime_kind': 'maven-reactor-artifacts', 'image_binding': binding,
         'artifact_tree_equal': True, 'reference_only_for_evaluation': True,
         'module_count': len(labels), 'shipped_jar_owners': sum(row['image_prefix'] is not None for row in labels),
         'module_direct_edges': sum(len(row['direct']) for row in labels),
         'analysis_status': {'status': 'PENDING_FROZEN_PREDICTION'},
         'reference_hashes': {p.relative_to(output).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                              for p in output.rglob('*') if p.is_file() and p.name != 'receipt.json'},
-        'limitation': 'Explicit !all-modules profile, tests compiled/not executed. Per-module effective/native/CDX GAV agreement; classifier/type-qualified direct edges marked UNKNOWN until exact PURL labelling. Aggregate components are not direct ground truth.'})
+        'limitation': 'Profiles recorded in plan and active-profiles; tests compiled/not executed. Library artifact fixture, not application smoke. Per-module effective/native/CDX GAV agreement; classifier/type-qualified direct edges marked UNKNOWN until exact PURL labelling. Aggregate components are not direct ground truth.'})
     print(json.dumps({'paired': True, 'modules': len(labels), 'shipped': sum(row['image_prefix'] is not None for row in labels)}))
 
 

@@ -1,5 +1,5 @@
 {
-  "candidate_unchanged": true,
+  "candidate_unchanged": false,
   "rows": [
     {
       "project": "java-commons-configuration",
@@ -480,7 +480,48 @@
       "language": "Java",
       "partition": "development",
       "commit": "1d76b00d683e86b62867a6bf59530f8ab301244f",
-      "status": "PINNED_NOT_BUILT"
+      "status": "PAIRED",
+      "pair": "paired-petclinic-microservices-r104",
+      "analysis_status": {
+        "status": "PENDING_FROZEN_PREDICTION"
+      },
+      "reference_module_count": 9,
+      "shipped_module_count": 8,
+      "reference_module_direct_edges": 100,
+      "components": null,
+      "direct": {
+        "status": "NOT_YET_MEASURED"
+      },
+      "component_metrics_status": "NOT_YET_MEASURED",
+      "receipt_sha256": "6e7cdaa3daeff31c8e64d0e5bc7ccefdcaf68f9029311abbfebe8a6573346d2f",
+      "scope_note": "Real reactor build/reference/image pair verified. No accuracy score yet; qualified edges remain separately UNKNOWN. Aggregate components are not direct labels.",
+      "source_control_status": "MEASURED_SEPARATE_BUILD_MODEL",
+      "source_passive_direct": {
+        "tp": 76,
+        "fp": 0,
+        "fn": 24,
+        "precision": 1.0,
+        "recall": 0.76,
+        "f1": 0.8636363636363636
+      },
+      "source_cdxgen_raw_direct": {
+        "tp": 100,
+        "fp": 8,
+        "fn": 0,
+        "precision": 0.9259259259259259,
+        "recall": 1.0,
+        "f1": 0.9615384615384616
+      },
+      "source_cdxgen_shipped_direct": {
+        "tp": 100,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "source_control_evidence": "benchmarks/results/java-runtime-direct-r104-control-v1/evaluation.json",
+      "source_control_note": "Source/model graph only. Raw root module-containment FP retained; no image accuracy or original-CI reproduction claim."
     },
     {
       "project": "javascript-pino",

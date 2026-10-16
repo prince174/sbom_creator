@@ -1,0 +1,4430 @@
+{
+  "profile": "java-maven-source-modules-v1",
+  "status": "evaluated",
+  "edges": [
+    {
+      "owner": "pkg:maven/io.javalin/javalin-parent@7.2.4-SNAPSHOT",
+      "owner_module": "pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-parent@7.2.4-SNAPSHOT",
+        "target_ref": "4894fd02-5fff-485f-abc1-0c8f654f3d9a",
+        "source_sha256": "16bae80b35554adfc0e41c4b88dc2b7e728eb1a1b14a64f576904603680a397e"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "0484a29c-cfd4-494c-8327-b60151812072",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "1fea46f0-45f6-4bbb-b3b9-a6160f2b5d32",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "218140a7-5923-4547-9407-257ad0a41b70",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "2b94d712-99ae-4390-a061-39794a0a2bdd",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "37632d55-2782-480a-905f-5de3d91e2c0c",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "41255183-4ace-4106-bc5e-65a91915e541",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "423568d0-78e5-4343-a76d-212f6c0f8aca",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "47e58b52-3b10-445e-8571-0bef400b3ddd",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "4e9c0486-8b8d-43a5-95e5-b4f482ebb6dd",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "4faa9b33-99fe-41fe-8726-52ff93ceb186",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "6cfbba01-352e-4d57-82e0-a24ce3ae1f07",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "9f464f7a-5564-47aa-9770-0ceb1a822ac3",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "ed1f9ad2-0c92-4a7e-ae66-2a5bfa9dc88e",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+        "target_ref": "f8b5c5cc-a46f-45d7-ba4b-57d017ad3bc1",
+        "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "3ba943e2-d1f9-4800-91a2-a91faf9039cd",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.22.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "4b298a29-49e6-4f54-b1e1-a0439b9f2dae",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.23.0",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "504a5534-b217-4ee7-bcdd-959955e88fae",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "cc834efb-680a-46c3-a98a-dab1fac53414",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.0.18",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "f3965ba7-3c60-437e-9145-0d5b41c44c2e",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.22.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "fce483ae-ab00-4327-bf75-d35005f1779d",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.5.7-15",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/com.google.code.gson/gson@2.14.0",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.14.0",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/com.google.code.gson/gson@2.14.0",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.0.18",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "3.2.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "owner_module": "javalin/pom.xml",
+      "component": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "3.2.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+        "target_ref": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2",
+        "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bom/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+        "target_ref": "a3ef66fe-bfd0-4d3d-a41f-699dc3c6ab88",
+        "source_sha256": "27d4cb9136ee420dc708c275769bca886c33a7a4fa2ebc7fd3dde4f805f78d66"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "15f28587-48cd-44cf-8c77-88650c89702b",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.22.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "240af078-1c37-43d9-823f-9e21bd8bbba1",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "25d62431-cf1d-4503-8087-20fef263651a",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.22.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "4467c988-a021-4bf3-b38e-539590888663",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "7b4727f8-2aae-4f8c-b7f9-9e6c89bdb3fb",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "7e480b74-494c-4dee-823c-c48b7f00a656",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.23.0",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "b60c7bf0-1bbf-42ae-ae77-df971c0a1c38",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "ff335d0d-6a49-4fca-9aa4-5fc32be8d0ee",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.6.3",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-bundle/pom.xml",
+      "component": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.22.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+        "target_ref": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+        "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-micrometer/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+        "target_ref": "396b241d-a4fb-4213-aa5d-64a28cef13a2",
+        "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-micrometer/pom.xml",
+      "component": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.17.1",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+        "target_ref": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+        "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-micrometer/pom.xml",
+      "component": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.17.1",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+        "target_ref": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+        "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-micrometer/pom.xml",
+      "component": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "1.17.1",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+        "target_ref": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+        "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "418bcc87-a738-4ae5-99ba-ed4618d7e7f3",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "b91d3c5b-f7a1-4b0d-a2a6-93acae41fd89",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "10.0.7",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "10.0.7",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/io.github.hakky54/ayza@10.0.7",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "10.0.7",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "pkg:maven/io.github.hakky54/ayza@10.0.7",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-ssl/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "12.1.12",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+        "target_ref": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+        "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-testtools/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "57e47543-626b-4e55-ad1f-53f6e69523e6",
+        "target_ref": "39021358-b1f6-4149-8dc9-325d6e4b2455",
+        "source_sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-testtools/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "57e47543-626b-4e55-ad1f-53f6e69523e6",
+        "target_ref": "e310107f-d3f2-4756-b5e3-bf6e8128703e",
+        "source_sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+        "target_ref": "242e67fd-3549-4110-bd33-4362bc1f54c5",
+        "source_sha256": "f5907a6488aad83778b01adf24fe99ccef9da3be0ff0ce388077fffc137ecd7b"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+        "target_ref": "212761f7-23ff-48e8-8b3b-ae6186bf5127",
+        "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+      "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "7.2.4-SNAPSHOT",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+        "target_ref": "fbb7b643-1495-4e5d-8540-4b42cf69d1e3",
+        "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+      "component": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "5.0.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+        "target_ref": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+        "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+        "target_ref": "a9ebfa4b-64dc-45d9-bbce-145832facb83",
+        "source_sha256": "5689c8ecd2ea8f233789a75f3158c88d1daeba95797bef6837805e8cba87e948"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "e649f802-febf-4cc0-92b2-29cc96b919a9",
+        "target_ref": "2b053a9b-711c-4ade-bdcb-857657a3de4e",
+        "source_sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+      "component": "pkg:maven/org.commonmark/commonmark@0.30.0",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "0.30.0",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "e649f802-febf-4cc0-92b2-29cc96b919a9",
+        "target_ref": "pkg:maven/org.commonmark/commonmark@0.30.0",
+        "source_sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "448f412c-7732-4224-a260-8cc58b8c2955",
+        "target_ref": "22d55c30-96ac-4d92-9357-4c83b1518d11",
+        "source_sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+      "component": "pkg:maven/org.freemarker/freemarker@2.3.35",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.3.35",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "448f412c-7732-4224-a260-8cc58b8c2955",
+        "target_ref": "pkg:maven/org.freemarker/freemarker@2.3.35",
+        "source_sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "fcf0bbfd-8e59-49b1-ae0a-f6068a9e484d",
+        "target_ref": "3e67ed54-8862-443f-b052-7a8a6144d67b",
+        "source_sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+      "component": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "4.5.4",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "fcf0bbfd-8e59-49b1-ae0a-f6068a9e484d",
+        "target_ref": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+        "source_sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "f65e3a7f-8cae-4787-b4ef-9c87657ed30c",
+        "target_ref": "40c4caa1-a450-4fc0-b5c7-18cf02d7df7c",
+        "source_sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+      "component": "pkg:maven/gg.jte/jte@3.2.3",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "3.2.3",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "f65e3a7f-8cae-4787-b4ef-9c87657ed30c",
+        "target_ref": "pkg:maven/gg.jte/jte@3.2.3",
+        "source_sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "ce1946f7-f2f1-443a-8c09-ce10e1063a7d",
+        "target_ref": "4f697446-8c07-42a7-b365-42f1e5f43f2c",
+        "source_sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+      "component": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "0.9.14",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "ce1946f7-f2f1-443a-8c09-ce10e1063a7d",
+        "target_ref": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+        "source_sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "56331837-3141-459f-85ce-2fe8ea6fe55f",
+        "target_ref": "d394b0c2-e5e8-4b13-a798-b53eb0ca7c0d",
+        "source_sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+      "component": "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "4.1.2",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "56331837-3141-459f-85ce-2fe8ea6fe55f",
+        "target_ref": "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+        "source_sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "10cd2cb5-cdab-44af-b780-09c5ce51bed0",
+        "target_ref": "882022eb-45a1-4255-b6f0-922d9cc015fa",
+        "source_sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+      "component": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "3.1.5.RELEASE",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "10cd2cb5-cdab-44af-b780-09c5ce51bed0",
+        "target_ref": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+        "source_sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+      "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.2.20",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "f78a3c5e-7974-456f-beaa-99dad527068d",
+        "target_ref": "ac28c98e-1e3f-49fb-b540-b0a5eb563032",
+        "source_sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c"
+      }
+    },
+    {
+      "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+      "component": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+      "status": "DIRECT",
+      "reason": "trivy_resolved_source_declaration",
+      "scope": "unprofiled-declaration",
+      "build_usage_proven": false,
+      "activation": "UNKNOWN",
+      "version": "2.4.1",
+      "evidence": {
+        "resolver": "Trivy/0.75.0",
+        "owner_ref": "f78a3c5e-7974-456f-beaa-99dad527068d",
+        "target_ref": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+        "source_sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "owner_module": "pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-parent@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-parent@7.2.4-SNAPSHOT",
+          "owner_module": "pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-parent@7.2.4-SNAPSHOT",
+            "target_ref": "4894fd02-5fff-485f-abc1-0c8f654f3d9a",
+            "source_sha256": "16bae80b35554adfc0e41c4b88dc2b7e728eb1a1b14a64f576904603680a397e"
+          }
+        }
+      ],
+      "profiles": [
+        {
+          "id": "sonatype-oss-release",
+          "status": "UNKNOWN",
+          "reason": "build_profile_activation_not_observed",
+          "dependency_count": 0
+        }
+      ],
+      "source_sha256": "16bae80b35554adfc0e41c4b88dc2b7e728eb1a1b14a64f576904603680a397e",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "jacoco-coverage-report/pom.xml",
+      "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "0484a29c-cfd4-494c-8327-b60151812072",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "1fea46f0-45f6-4bbb-b3b9-a6160f2b5d32",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "218140a7-5923-4547-9407-257ad0a41b70",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "2b94d712-99ae-4390-a061-39794a0a2bdd",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "37632d55-2782-480a-905f-5de3d91e2c0c",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "41255183-4ace-4106-bc5e-65a91915e541",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "423568d0-78e5-4343-a76d-212f6c0f8aca",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "47e58b52-3b10-445e-8571-0bef400b3ddd",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "4e9c0486-8b8d-43a5-95e5-b4f482ebb6dd",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "4faa9b33-99fe-41fe-8726-52ff93ceb186",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "6cfbba01-352e-4d57-82e0-a24ce3ae1f07",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "9f464f7a-5564-47aa-9770-0ceb1a822ac3",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "ed1f9ad2-0c92-4a7e-ae66-2a5bfa9dc88e",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+          "owner_module": "jacoco-coverage-report/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/jacoco-coverage-report@7.2.4-SNAPSHOT",
+            "target_ref": "f8b5c5cc-a46f-45d7-ba4b-57d017ad3bc1",
+            "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "3ba943e2-d1f9-4800-91a2-a91faf9039cd",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.22.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "4b298a29-49e6-4f54-b1e1-a0439b9f2dae",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.23.0",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "504a5534-b217-4ee7-bcdd-959955e88fae",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "cc834efb-680a-46c3-a98a-dab1fac53414",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.0.18",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "f3965ba7-3c60-437e-9145-0d5b41c44c2e",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.22.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "fce483ae-ab00-4327-bf75-d35005f1779d",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.5.7-15",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/com.google.code.gson/gson@2.14.0",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.14.0",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/com.google.code.gson/gson@2.14.0",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.0.18",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "3.2.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "owner_module": "javalin/pom.xml",
+          "component": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "3.2.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9dae53e5-5085-4957-892c-17737eb97d5e",
+            "target_ref": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2",
+            "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-bom/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bom/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bom@7.2.4-SNAPSHOT",
+            "target_ref": "a3ef66fe-bfd0-4d3d-a41f-699dc3c6ab88",
+            "source_sha256": "27d4cb9136ee420dc708c275769bca886c33a7a4fa2ebc7fd3dde4f805f78d66"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "27d4cb9136ee420dc708c275769bca886c33a7a4fa2ebc7fd3dde4f805f78d66",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-bundle/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "15f28587-48cd-44cf-8c77-88650c89702b",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.22.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "240af078-1c37-43d9-823f-9e21bd8bbba1",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "25d62431-cf1d-4503-8087-20fef263651a",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.22.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "4467c988-a021-4bf3-b38e-539590888663",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "7b4727f8-2aae-4f8c-b7f9-9e6c89bdb3fb",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "7e480b74-494c-4dee-823c-c48b7f00a656",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.23.0",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "b60c7bf0-1bbf-42ae-ae77-df971c0a1c38",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "ff335d0d-6a49-4fca-9aa4-5fc32be8d0ee",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.6.3",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-bundle/pom.xml",
+          "component": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.22.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "target_ref": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+            "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-micrometer/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-micrometer/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+            "target_ref": "396b241d-a4fb-4213-aa5d-64a28cef13a2",
+            "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-micrometer/pom.xml",
+          "component": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.17.1",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+            "target_ref": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+            "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-micrometer/pom.xml",
+          "component": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.17.1",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+            "target_ref": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+            "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-micrometer/pom.xml",
+          "component": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "1.17.1",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "9fef02c4-6200-4909-9d02-b7607dbfbced",
+            "target_ref": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+            "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-ssl/pom.xml",
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "418bcc87-a738-4ae5-99ba-ed4618d7e7f3",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "b91d3c5b-f7a1-4b0d-a2a6-93acae41fd89",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "10.0.7",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "10.0.7",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/io.github.hakky54/ayza@10.0.7",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "10.0.7",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "pkg:maven/io.github.hakky54/ayza@10.0.7",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-ssl/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "12.1.12",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "d525c3ec-1f4e-49c6-9b7d-65f1af334062",
+            "target_ref": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+            "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-testtools/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-testtools/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "57e47543-626b-4e55-ad1f-53f6e69523e6",
+            "target_ref": "39021358-b1f6-4149-8dc9-325d6e4b2455",
+            "source_sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-testtools/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "57e47543-626b-4e55-ad1f-53f6e69523e6",
+            "target_ref": "e310107f-d3f2-4756-b5e3-bf6e8128703e",
+            "source_sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-utils@7.2.4-SNAPSHOT",
+            "target_ref": "242e67fd-3549-4110-bd33-4362bc1f54c5",
+            "source_sha256": "f5907a6488aad83778b01adf24fe99ccef9da3be0ff0ce388077fffc137ecd7b"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "f5907a6488aad83778b01adf24fe99ccef9da3be0ff0ce388077fffc137ecd7b",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+            "target_ref": "212761f7-23ff-48e8-8b3b-ae6186bf5127",
+            "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+          "component": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "7.2.4-SNAPSHOT",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+            "target_ref": "fbb7b643-1495-4e5d-8540-4b42cf69d1e3",
+            "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-context-mock/pom.xml",
+          "component": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "5.0.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "33c235ef-2675-4c2e-8578-9d360ac753e8",
+            "target_ref": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+            "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "pkg:maven/io.javalin/javalin-rendering@7.2.4-SNAPSHOT",
+            "target_ref": "a9ebfa4b-64dc-45d9-bbce-145832facb83",
+            "source_sha256": "5689c8ecd2ea8f233789a75f3158c88d1daeba95797bef6837805e8cba87e948"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "5689c8ecd2ea8f233789a75f3158c88d1daeba95797bef6837805e8cba87e948",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "e649f802-febf-4cc0-92b2-29cc96b919a9",
+            "target_ref": "2b053a9b-711c-4ade-bdcb-857657a3de4e",
+            "source_sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+          "component": "pkg:maven/org.commonmark/commonmark@0.30.0",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "0.30.0",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "e649f802-febf-4cc0-92b2-29cc96b919a9",
+            "target_ref": "pkg:maven/org.commonmark/commonmark@0.30.0",
+            "source_sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "448f412c-7732-4224-a260-8cc58b8c2955",
+            "target_ref": "22d55c30-96ac-4d92-9357-4c83b1518d11",
+            "source_sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+          "component": "pkg:maven/org.freemarker/freemarker@2.3.35",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.3.35",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "448f412c-7732-4224-a260-8cc58b8c2955",
+            "target_ref": "pkg:maven/org.freemarker/freemarker@2.3.35",
+            "source_sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "fcf0bbfd-8e59-49b1-ae0a-f6068a9e484d",
+            "target_ref": "3e67ed54-8862-443f-b052-7a8a6144d67b",
+            "source_sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+          "component": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "4.5.4",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "fcf0bbfd-8e59-49b1-ae0a-f6068a9e484d",
+            "target_ref": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+            "source_sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "f65e3a7f-8cae-4787-b4ef-9c87657ed30c",
+            "target_ref": "40c4caa1-a450-4fc0-b5c7-18cf02d7df7c",
+            "source_sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+          "component": "pkg:maven/gg.jte/jte@3.2.3",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "3.2.3",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "f65e3a7f-8cae-4787-b4ef-9c87657ed30c",
+            "target_ref": "pkg:maven/gg.jte/jte@3.2.3",
+            "source_sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "ce1946f7-f2f1-443a-8c09-ce10e1063a7d",
+            "target_ref": "4f697446-8c07-42a7-b365-42f1e5f43f2c",
+            "source_sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+          "component": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "0.9.14",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "ce1946f7-f2f1-443a-8c09-ce10e1063a7d",
+            "target_ref": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+            "source_sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "56331837-3141-459f-85ce-2fe8ea6fe55f",
+            "target_ref": "d394b0c2-e5e8-4b13-a798-b53eb0ca7c0d",
+            "source_sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+          "component": "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "4.1.2",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "56331837-3141-459f-85ce-2fe8ea6fe55f",
+            "target_ref": "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+            "source_sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "10cd2cb5-cdab-44af-b780-09c5ce51bed0",
+            "target_ref": "882022eb-45a1-4255-b6f0-922d9cc015fa",
+            "source_sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+          "component": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "3.1.5.RELEASE",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "10cd2cb5-cdab-44af-b780-09c5ce51bed0",
+            "target_ref": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+            "source_sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe",
+      "reason": "passive_unprofiled_source_graph"
+    },
+    {
+      "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+      "status": "evaluated",
+      "edges": [
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+          "component": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.2.20",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "f78a3c5e-7974-456f-beaa-99dad527068d",
+            "target_ref": "ac28c98e-1e3f-49fb-b540-b0a5eb563032",
+            "source_sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c"
+          }
+        },
+        {
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "owner_module": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+          "component": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+          "status": "DIRECT",
+          "reason": "trivy_resolved_source_declaration",
+          "scope": "unprofiled-declaration",
+          "build_usage_proven": false,
+          "activation": "UNKNOWN",
+          "version": "2.4.1",
+          "evidence": {
+            "resolver": "Trivy/0.75.0",
+            "owner_ref": "f78a3c5e-7974-456f-beaa-99dad527068d",
+            "target_ref": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+            "source_sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c"
+          }
+        }
+      ],
+      "profiles": [],
+      "source_sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c",
+      "reason": "passive_unprofiled_source_graph"
+    }
+  ],
+  "graph_complete": false,
+  "build_usage_proven": false,
+  "reference_used_as_input": false,
+  "source_build_executed": false,
+  "inputs": [
+    {
+      "path": "pom.xml",
+      "sha256": "16bae80b35554adfc0e41c4b88dc2b7e728eb1a1b14a64f576904603680a397e",
+      "projection_sha256": "a4acc2b9362b7e4dbfc007c3e461ccd2983d3458ee53efede634ab3784931c73",
+      "declarations": [
+        {
+          "groupId": "org.jetbrains.kotlin",
+          "artifactId": "kotlin-stdlib",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": [
+        {
+          "id": "sonatype-oss-release",
+          "status": "UNKNOWN",
+          "reason": "build_profile_activation_not_observed",
+          "dependency_count": 0
+        }
+      ]
+    },
+    {
+      "path": "jacoco-coverage-report/pom.xml",
+      "sha256": "c61cc395f161c8d7b1ff3d7abd0d925d3d9c0e99ceaed7b366e1a695c0b319f4",
+      "projection_sha256": "303fd19d3d21b9e6096bc72b0ac3f81df89485cf1b4f11ac9c2eea36aabc321e",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-context-mock",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-velocity",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-freemarker",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-thymeleaf",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-mustache",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-pebble",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-commonmark",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-handlebars",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-rendering-jte",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin.community.ssl",
+          "artifactId": "javalin-ssl",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-micrometer",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin/pom.xml",
+      "sha256": "8b302ccc7ff252f0363f28441efda62aa6fcc618ec7883447d9b57358fc520c8",
+      "projection_sha256": "e866864bc76ed38a172a3c7520a796dc21737af65edaa738ca90f35105e923c7",
+      "declarations": [
+        {
+          "groupId": "org.jetbrains",
+          "artifactId": "annotations",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-api",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-server",
+          "version": "${jetty.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10",
+          "artifactId": "jetty-ee10-servlet",
+          "version": "${jetty.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10.websocket",
+          "artifactId": "jetty-ee10-websocket-jetty-server",
+          "version": "${jetty.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.aayushatharva.brotli4j",
+          "artifactId": "brotli4j",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.github.luben",
+          "artifactId": "zstd-jni",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "tools.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "tools.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.google.code.gson",
+          "artifactId": "gson",
+          "version": null,
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-params",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.openjdk.jmh",
+          "artifactId": "jmh-core",
+          "version": "${jmh.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.openjdk.jmh",
+          "artifactId": "jmh-generator-annprocess",
+          "version": "${jmh.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.mockito",
+          "artifactId": "mockito-core",
+          "version": "${mockito.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.mockk",
+          "artifactId": "mockk-jvm",
+          "version": "${mockk.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.konghq",
+          "artifactId": "unirest-java",
+          "version": "${unirest.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.java-websocket",
+          "artifactId": "Java-WebSocket",
+          "version": "${java.websocket.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.squareup.okhttp3",
+          "artifactId": "okhttp-jvm",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.squareup.moshi",
+          "artifactId": "moshi",
+          "version": "${moshi.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.squareup.moshi",
+          "artifactId": "moshi-kotlin",
+          "version": "${moshi.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-unixdomain-server",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-server",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.websocket",
+          "artifactId": "jetty-websocket-jetty-client",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-client-transport",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-alpn-java-server",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.seleniumhq.selenium",
+          "artifactId": "selenium-chrome-driver",
+          "version": "${selenium.chrome.driver.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.github.bonigarcia",
+          "artifactId": "webdrivermanager",
+          "version": "${webdrivermanager.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.webjars",
+          "artifactId": "swagger-ui",
+          "version": "${swagger.ui.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.datatype",
+          "artifactId": "jackson-datatype-jsr310",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-bom/pom.xml",
+      "sha256": "27d4cb9136ee420dc708c275769bca886c33a7a4fa2ebc7fd3dde4f805f78d66",
+      "projection_sha256": "aee202ff87d999ce01c2cfdd7ce2b49bb16b019ea71f4e8a0f8ce9922d965940",
+      "declarations": [],
+      "profiles": []
+    },
+    {
+      "path": "javalin-bundle/pom.xml",
+      "sha256": "92ad6d562d9091eb5d575e2b689c1c5ca981355649e2ea0ad8e0f0f458a5c031",
+      "projection_sha256": "6d2726ec6afc3d226a688b11035a8a03e235c2a9c2b383821dc5e6cf89f2284c",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-context-mock",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.datatype",
+          "artifactId": "jackson-datatype-jsr310",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.aayushatharva.brotli4j",
+          "artifactId": "brotli4j",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-server",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "ch.qos.logback",
+          "artifactId": "logback-classic",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-micrometer/pom.xml",
+      "sha256": "bcb23abc9c6fd4864ed210522b509e939d4baaa793867aecf44fcd253ec04466",
+      "projection_sha256": "805c9442ecb67c4d573cf44ffd80b5524ba5026c6162e7744c2546ec3cd21b11",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.micrometer",
+          "artifactId": "micrometer-core",
+          "version": "${micrometer.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.micrometer",
+          "artifactId": "micrometer-jetty12",
+          "version": "${micrometer.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.micrometer",
+          "artifactId": "micrometer-registry-prometheus",
+          "version": "${micrometer.version}",
+          "scope": null,
+          "optional": "true",
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": "${jackson.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-ssl/pom.xml",
+      "sha256": "d0c0dc4399b5446f09b9dfa814b963bd5d00ace9c1e31ae5143c0d2f9f6e1bf0",
+      "projection_sha256": "bbc14b011a6bfb818b5a03c0ef20d3e48fa7a0a7ea5726cf5a4cd55f6c4e49d0",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-client-transport",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.http2",
+          "artifactId": "jetty-http2-server",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-alpn-java-server",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "ayza",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "ayza-for-pem",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.github.hakky54",
+          "artifactId": "ayza-for-jetty",
+          "version": null,
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.squareup.okhttp3",
+          "artifactId": "okhttp-jvm",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.squareup.okhttp3",
+          "artifactId": "okhttp-tls",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-testtools/pom.xml",
+      "sha256": "33afcdfc01a3f0d4ae4ed1539fee1246de4f0794f9a7c1a51c854a28dfa05812",
+      "projection_sha256": "93ab31699a21c3a27e966ceb107bdddf0877c98ac01ee8793d22a3360bcb4861",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-server",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10",
+          "artifactId": "jetty-ee10-servlet",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10.websocket",
+          "artifactId": "jetty-ee10-websocket-jetty-server",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.websocket",
+          "artifactId": "jetty-websocket-core-server",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/pom.xml",
+      "sha256": "f5907a6488aad83778b01adf24fe99ccef9da3be0ff0ce388077fffc137ecd7b",
+      "projection_sha256": "420ff68a7ddebcb56b70b643507e8cbc6f699c96371b61e67078a413d1d62b62",
+      "declarations": [],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-context-mock/pom.xml",
+      "sha256": "32863dce367dbed61a3f36533c4fb71afe7fb195092db5f2e682e369e6bcd3f5",
+      "projection_sha256": "418a3a1a1797564ff59ba6e98be0d49b8173a19a897b4c17cc142e1cbfca71ec",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.toolchain",
+          "artifactId": "jetty-jakarta-servlet-api",
+          "version": "${jetty.jakarta-api}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-server",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10",
+          "artifactId": "jetty-ee10-servlet",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.eclipse.jetty.ee10.websocket",
+          "artifactId": "jetty-ee10-websocket-jetty-server",
+          "version": "${jetty.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.konghq",
+          "artifactId": "unirest-java",
+          "version": "${unirest.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/pom.xml",
+      "sha256": "5689c8ecd2ea8f233789a75f3158c88d1daeba95797bef6837805e8cba87e948",
+      "projection_sha256": "807948d9e6b3fff6debad125fc1624da3b0cd82dfc64b6c92f09c6161cd0a846",
+      "declarations": [],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/pom.xml",
+      "sha256": "40ab97c5cdbd2ce5e1939bfe9198af6f46101e1db8f3368737d7fbe3f4f3fe90",
+      "projection_sha256": "9b3c2305062bd5720fd04726d29925a9ebc7edd0703f2a279a09993116ed300c",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.commonmark",
+          "artifactId": "commonmark",
+          "version": "${commonmark.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/pom.xml",
+      "sha256": "07bf390ade7f83667b523e4f6cb69e27f64a85883a0b5a897743ca712536185e",
+      "projection_sha256": "57aa5f50cab3da0852fddf2eb14f3b24a0d9fdb2e3b2b31a7a622d2cbbd81b9e",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.freemarker",
+          "artifactId": "freemarker",
+          "version": "${freemarker.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/pom.xml",
+      "sha256": "6b6244b5ff6bf040f9462f404fbb972dcd9212573c032ae42bfdceeb20d20b44",
+      "projection_sha256": "0537303eea0a8d763437d4a5436e84d90fab6cb890ea12a1a3d94cec0a2ba604",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.github.jknack",
+          "artifactId": "handlebars",
+          "version": "${handlebars.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-jte/pom.xml",
+      "sha256": "1a0124b01195aef175c35c9c464c5da1ece0f7924c1df49685a666ab14d7d537",
+      "projection_sha256": "c3fd1697117bf63d9c759d74ec62cfbc9a05aec224bbcfd0382b8f3e9f9b23cd",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "gg.jte",
+          "artifactId": "jte",
+          "version": "${jte.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache/pom.xml",
+      "sha256": "3713020fb507791ddef16e971e6ad5e84bf4886f0151707bc1eb00e6f74ad664",
+      "projection_sha256": "0a78c34652506811050e929ee6f1d1b773f4e4c6caddc99d0baeae48ebfb6c29",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.github.spullara.mustache.java",
+          "artifactId": "compiler",
+          "version": "${mustache.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble/pom.xml",
+      "sha256": "b7692279e30d83ade3ad8407ba3e692dbdc2d723a2687601be7fd43c465a471d",
+      "projection_sha256": "6355f3bfdc3628de33a1b91ee18a22f3dfd98af3dc477ede1925e7f48526b3b4",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.pebbletemplates",
+          "artifactId": "pebble",
+          "version": "${pebble.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/pom.xml",
+      "sha256": "1497262bdda80fc0697f7f3c366fd0613f805b2b2d4985c00494b34f9474d1fe",
+      "projection_sha256": "c45219510c145ce96d438d076b5010f7bf0f7e0a8c3cd50810204b223b3571e7",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.thymeleaf",
+          "artifactId": "thymeleaf",
+          "version": "${thymeleaf.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity/pom.xml",
+      "sha256": "f35a26cb6a4ff3a1b817d4a5c4339698fb72647569178c0c7365796c13c5837c",
+      "projection_sha256": "72851d7af59f0c3048e994a936ad83ef032694334a98b5d0608b40bc8797352d",
+      "declarations": [
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin",
+          "version": "${project.version}",
+          "scope": "provided",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.apache.velocity",
+          "artifactId": "velocity-engine-core",
+          "version": "${velocity.version}",
+          "scope": null,
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "io.javalin",
+          "artifactId": "javalin-testtools",
+          "version": "${project.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-api",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.junit.jupiter",
+          "artifactId": "junit-jupiter-engine",
+          "version": "${junit.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.assertj",
+          "artifactId": "assertj-core",
+          "version": "${assertj.version}",
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-simple",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        },
+        {
+          "groupId": "com.fasterxml.jackson.module",
+          "artifactId": "jackson-module-kotlin",
+          "version": null,
+          "scope": "test",
+          "optional": null,
+          "type": null,
+          "classifier": null
+        }
+      ],
+      "profiles": []
+    }
+  ],
+  "resolver_output_sha256": "434249af56d886ac732246a24c238592497bda313b806dc2a13028c9861a32e4",
+  "resolver": "Trivy/0.75.0",
+  "mode": "public-service-mirror",
+  "seconds": 23.891,
+  "direct_count": 73,
+  "unknown_count": 0
+}
