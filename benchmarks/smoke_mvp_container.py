@@ -47,8 +47,11 @@ facts = {'uid': os.geteuid(), 'root_read_only': root_read_only,
          'python_packages': {d.metadata['Name']: d.version for d in importlib.metadata.distributions()},
          'tool_sha256': {name: hashlib.sha256(pathlib.Path(shutil.which(name)).read_bytes()).hexdigest()
                          for name in ('syft', 'trivy', 'crane')}}
-(root/'environment.json').write_text(json.dumps(facts, indent=2)+'\n')
 defaults = Settings.from_env()
+if os.getenv('SBOM_JAVA_NESTED_WINDOWS', '').lower() == 'true' and not hasattr(defaults, 'java_nested_windows'):
+    raise RuntimeError('Selected image does not expose the experimental reader setting')
+facts['java_nested_windows'] = getattr(defaults, 'java_nested_windows', False)
+(root/'environment.json').write_text(json.dumps(facts, indent=2)+'\n')
 assert defaults.trivy_cache_dir == '/workspace/trivy-cache'
 assert defaults.image_temp_dir == '/workspace/image-cache'
 assert defaults.java_backend == 'disabled'
@@ -72,6 +75,7 @@ assert (root/'analysis/image-peer.cdx.json').is_file()
 assert (root/'analysis/image-original.syft.json').is_file()
 assert summary['final_count'] > 0
 result = {'status': 'passed', 'elapsed_seconds': round(time.monotonic()-started, 3),
+          'java_nested_windows': facts['java_nested_windows'],
           'summary': summary, 'source_kind': provenance['source_kind'],
           'java_image_status': provenance['image']['java_image_status'],
           'image_config_digest': provenance['image']['image_config_digest'],
@@ -112,6 +116,8 @@ def export_artifacts(workspace, output):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', default='sbom-creator:mvp-r105')
+    parser.add_argument('--nested-windows', action='store_true',
+                        help='Explicitly enable the experimental nested JAR reader; default is stable.')
     parser.add_argument('--archive', type=pathlib.Path, required=True)
     parser.add_argument('--java-db', type=pathlib.Path, required=True)
     parser.add_argument('--image-reference', required=True)
@@ -128,6 +134,7 @@ def main():
     inspected = json.loads(subprocess.check_output(['docker', 'image', 'inspect', args.image]))[0]
     image_id = inspected['Id']
     name = 'sbom-mvp-smoke-'+str(time.time_ns())
+    reader_environment = ['--env', 'SBOM_JAVA_NESTED_WINDOWS=true'] if args.nested_windows else []
     command = ['docker', 'run', '--rm', '--name', name, '--pull=never', '--no-healthcheck',
         '--network=none', '--read-only', '--user=10001:10001', '--cap-drop=ALL',
         '--security-opt=no-new-privileges', '--memory=3g', '--cpus=2', '--pids-limit=128',
@@ -136,7 +143,7 @@ def main():
         '--mount', f'type=bind,src={workspace},dst=/workspace',
         '--mount', f'type=bind,src={database},dst=/workspace/trivy-cache/java-db,readonly',
         '--env', 'SMOKE_REGISTRY='+args.image_reference.split('/')[0],
-        '--env', 'SMOKE_IMAGE='+args.image_reference, image_id,
+        '--env', 'SMOKE_IMAGE='+args.image_reference, *reader_environment, image_id,
         'python', '-c', CONTAINER_PROGRAM]
     started_at = datetime.now(UTC).isoformat()
     started = time.monotonic()
@@ -157,6 +164,7 @@ def main():
         'container_program_sha256': hashlib.sha256(CONTAINER_PROGRAM.encode()).hexdigest(),
         'repository_mounted': False, 'reference_sbom_mounted': False,
         'docker_socket_mounted': False, 'host_credentials_mounted': False,
+        'java_nested_windows_requested': args.nested_windows,
         'network': 'none', 'host_ports': [],
         'test_boundary': 'installed image-only pipeline; HTTP and registry transport are separate checks'}
     report['artifact_export_count'] = len(export_artifacts(workspace, output))

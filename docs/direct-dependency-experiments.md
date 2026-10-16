@@ -1266,3 +1266,117 @@ Image-only graphs remain intentionally unestablished: JS103 known direct edges a
 The first R105 attempt retained an integration negative: Trivy0.75 emits CycloneDX1.7, while the initial peer boundary accepted only1.6. It therefore preserved partial/UNKNOWN Java results. The revised boundary accepts official1.7 only for the Trivy peer; published service SBOM remains1.6. A later failure-boundary-only catch for malformed optional-peer schema preserves image/non-Java analysis; positive gates are unchanged. v2/serial freezes precede that small guard; their exact executed source/Dockerfile snapshots are retained. Read-only Linux cache path is explicitly writable under /workspace. [Current metrics and limitations](java-js-service-accuracy.md).
 
 Final validation:457 service/selected benchmark tests passed,3 skipped, known Starlette deprecation warning; Ruff and schema checks passed. Final installed Linux image `sbom-creator:mvp-r105-final` config SHA256 `318289b205c2bd0597dfbb1cf6a20169f39cefe598758f5ca91d261cd7850a8d` passed the default-config non-root/read-only/network-none Boot pipeline in73.262s (75.062s container), without source/oracle/socket/secrets. All42 installed code/data hashes match the build snapshot; all three coordinate multisets and selected IDs equal the previously evaluated Linux RC. Safety catch regression proves optional peer schema rejection preserves original inventory and non-Java evidence with UNKNOWN instead of aborting the image analysis. No deployed service changed. Microservices resource failure still prevents declaring the full Java threshold reached. Large raw evidence is retained locally and exported losslessly with [restore/hash manifest](../benchmarks/results/mvp-r105-evidence-manifest.json).
+
+## R106 — opt-in bounded STORED nested-window experiment, 2026-10-16
+
+Decision after measurement: retain the R105 reader as stable default. R106 policy
+v5 requires `SBOM_JAVA_NESTED_WINDOWS=true`/`Settings(java_nested_windows=True)`;
+it is not default production adoption. Micro precision100→99% and recall70.71%
+are an explicit unresolved trade-off. Original executed snapshots/freezes remain
+unchanged; the subsequent reproduction runner explicitly selects the experimental
+option and records its mode. Historical snapshots used the same experimental
+reader directly before this opt-in separation; their metrics are not relabelled
+as the current default service's output.
+
+Hypothesis: repeated full nested-JAR copying exhausts128MiB payload windows even
+when the physical layer is already normalized. Read STORED nested ZIP members
+through exact bounded parent-image windows, validate local/central headers,
+filename/overlap and complete body SHA256+CRC, and use the existing separate8GiB
+verification-read ledger. Retain all header/path/layer/config/identity guards,
+32MiB/read128MiB payload windows,16MiB raw-range cache and other resource caps.
+Exact physical-range cache persists only within one image reader; parsed ZipFile
+objects close after every witness. No reference cache, identity aliases, raw
+inventory substitution or source-derived component additions.
+
+Freeze: `run_mvp_r106.py` snapshots executing src+schemas+runner and hashes all16
+existing image inputs, pinned tools and Java DB BEFORE any invocation. Four Java
+cases run serially(Microservices first), then12 no-lock JS attempts. Analyzer gets
+only image/local controlled archive, no repository/commit/reference. A common
+completion marker gates the separate post-only evaluator; all45 main published
+views plus one failed attempt exist before first oracle access.
+[Freeze and full protocol](../benchmarks/results/mvp-r106-v1/evaluation.json).
+
+Actual final Microservices on the SAME single native/CDX-agreeing owner:99/1/41,
+P99.00/R70.71/F182.50, compared with R1058/0/132(P100/R5.71).91 additional TP,
+one conservative jarmode-tools FP; this explicit precision/recall trade-off is
+not hidden or described as dominance. Seven other owner scopes remain UNKNOWN
+with full raw deltas. Whole final1878 records versus188 is not a TP count.
+Micro consumes91,016,461 payload-window bytes(under128MiB),1,303,884,800 normalized
+bytes once,1,952,538,302 SHA/CRC verification bytes, zero copied bytes,
+1267 nested windows; fullpipeline158.953s. Remaining misses persist:27 with
+BudgetExceeded enum but unrecorded failing guard,1 confirmed physical but unbound
+netty-common identity,1 no confirmed physical witness,12 without matching existing
+Syft bridge observation. Guard origin remains UNKNOWN, not asserted to be a
+specific limit; no rule was tuned from this post-analysis diagnosis.
+[Retained diagnosis](../benchmarks/results/mvp-r106-v1/microservices-diagnosis.json).
+
+Actual final regressions on unchanged scopes: Boot90/3/2(P96.77/R97.83),
+Javalin128/0/0 on8 agreeing owners/6UNKNOWN, Dropwizard893/0/14 on16 agreeing
+owners/18UNKNOWN. Metadata-only Dropwizard misses stay FN. Java known-scope
+micro1210/4/57,P99.67/R95.50/F197.54; repository macroP98.94/R91.75/F194.75.
+26 owner instances in4 disclosed repositories are not26 independent projects;
+31 scope-UNKNOWN owners are not successes. Conditional versions are100% on
+Micro/Javalin/Drop and98.90% on Boot, with exact-version coverage equal to recall.
+Java source/direct graph remains0/0/614 UNKNOWN, separate from image components.
+Four actual Java pipelines total403.187s excluding registry acquisition of the
+existing local archive. Peak RSS/hard disk quota/concurrent safety remain unknown.
+
+JavaScript12 fresh attempts:11 publish all3views; exact project components
+306/9/1,P97.14/R99.67/F198.39; macro8 positive rootsP93.48/R99.88, conditional
+versions100%, exact-version coverage99.67. All three coordinate multisets of11
+published outputs match R105. Axios/Fastify/Pino extras and Nest missing
+@tokenizer/token remain. Total201.500s. Chalk fails publication with PermissionError,
+no final; empty reference is never a perfect positive example. The failure stays
+in the main protocol. A separately authorized ONE publisher-only diagnostic replay
+of its retained source/image/provenance, frozen code and real Syft conversion
+passes in6.000s; all3 coordinate multisets match R105. No new scans/oracle, no
+silent substitution, no proven locking fix or exact failing operation.
+[JS protocol](../benchmarks/results/mvp-r106-v1/javascript/evaluation.json),
+[separate diagnostic](../benchmarks/results/chalk-publish-diagnostic-v1/run.json).
+Image-only JS direct remains0/0/103 UNKNOWN.
+
+Preselector481 service/selected benchmark tests pass,3 skips; Ruff passed. Tests include
+STORED local-header/CRC/overlap/traversal/duplicate/wrong-layer/path negatives,
+cross-witness exact-range-cache bounds and preservation of existing identity
+UNKNOWN. First Linux RC Micro attempt independently fails BEFORE Java evidence:
+Syft scratch fills the512MiB `/tmp`; this is an operational failure, not an
+accuracy score. A separate Linux run of the same experimental code with
+TMPDIR/TMP/TEMP=/workspace/process-temp passes517.271s pipeline/524.484s container;
+final/os/full1878/0/1878 and all3 coordinate multisets equal Windows. Installed
+source hashes and Java DB are unchanged. Workspace scratch is a separate shipping
+configuration fix; it neither replaces the failed attempt nor enables the
+experimental classifier by default. No new third-party build recipe, rebuilt
+reference, runtime deployment or rank promotion; corpus29 immutable pairs unchanged.
+
+Final selector RC `sbom-creator:mvp-r106-final`, config ID
+`sha256:ce5737b1915804d33f6c335a3b13f01e6a61da319ff64beba0b70b57dbc55613`:
+43 installed source/schema hashes equal freeze;1.282s read-only/nonroot/network-none
+configuration smoke verifies defaultfalse, explicittrue, invalidflag rejection,
+writable TMPDIR/TMP/TEMP=/workspace and unchanged512MiB `/tmp`. No source/reference/
+socket input. Stored-reader SHA256
+`26aca377bc5905da73b258bbacebc9a5b7c4de0726860bd82a16a2278078c00f` equals the
+measured preselector algorithm exactly. No repeated nine-minute full Micro scan
+was run merely for this configuration boundary; this smoke alone is not pipeline
+equivalence or a new accuracy score.
+[RC configuration proof](../benchmarks/results/mvp-r106-container-selector-v1/config-smoke.json).
+
+Post-selector parity v2 passes using cached scanner catalogs, fresh physical reads
+and actual Syft conversion/publication: experimental Micro50.766s exactly matches
+R106 adapted catalog, physical evidence and canonical serialized audit; all3view
+coordinate multisets and selected artifact IDs equal. Default=false Boot7.890s,
+policy v4, preserves R105 stable all3views/IDs. No scanner/acquisition/reference
+rerun or new independent accuracy claim. The retained v1 post-publication harness
+assertion compared in-memory tuples against JSON lists and failed despite identical
+published views/IDs and serialized facts; not a service bug or user obstacle.
+[Parity v2](../benchmarks/results/mvp-r106-selector-parity-v2/report.json),
+[retained harness negative](../benchmarks/results/mvp-r106-selector-parity-v1/harness-failure.json).
+Final post-selector suite489 passed,3 skipped(492total),20.31s;
+[XML](../benchmarks/results/mvp-r106-selector-unit.xml). Stable default remains R105;
+experimental trade-off is still not accepted as default production behavior.
+
+Next: establish exact bounded-read rejection categories and missing scanner
+identity observations without loosening identity/ZIP checks; keep Micro recall70.71
+visible, investigate correct packaged-vs-build labels separately, and verify
+operational reliability beyond the verified Linux shipping scratch/selector boundary. Java aggregate >90 and JS
+positive metrics do NOT establish independent universal >90 or complete direct
+graphs. [Current actual service report](java-js-service-accuracy.md).

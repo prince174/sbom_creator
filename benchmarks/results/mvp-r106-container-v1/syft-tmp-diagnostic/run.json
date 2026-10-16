@@ -1,0 +1,29 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--no-healthcheck",
+    "--network=none",
+    "--read-only",
+    "--user=10001:10001",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--memory=3g",
+    "--cpus=2",
+    "--pids-limit=128",
+    "--tmpfs=/tmp:rw,nosuid,nodev,size=512m,mode=1777",
+    "--mount",
+    "type=bind,src=G:\\code\\sbom_creator\\benchmarks\\.work\\paired-petclinic-microservices-r104\\image.tar,dst=/inputs/image.tar,readonly",
+    "--mount",
+    "type=bind,src=G:\\code\\sbom_creator\\benchmarks\\results\\mvp-r106-container-v1\\syft-tmp-diagnostic,dst=/workspace",
+    "sha256:7af618aa7c9ad5dfbcee8da5db07facd3819f3f159b0d223a2a9f6064678638b",
+    "python",
+    "-c",
+    "\nimport json,os,pathlib,shutil,signal,subprocess,tempfile,time\nfrom sbom_creator import scanner\nfrom sbom_creator.acquire import clean_environment\nout=pathlib.Path('/workspace')\nwith tempfile.TemporaryDirectory(prefix='sbom-syft-') as directory:\n    root=pathlib.Path(directory)\n    cfg=scanner.IMAGE_CONFIG\n    for suffix in ('jar','war','ear','zip','hpi','jpi','nar','jmod'):\n        cfg=cfg.replace('      - \"**/*.'+suffix+'\"\\n','')\n    config=root/'syft.yaml';config.write_text(scanner.TRUSTED_CONFIG+cfg)\n    (out/'syft-config.yaml').write_text(config.read_text())\n    environment=clean_environment();environment.update(HOME=directory,USERPROFILE=directory,XDG_CONFIG_HOME=directory,XDG_CACHE_HOME=directory,SYFT_CHECK_FOR_APP_UPDATE='false',TMPDIR=directory,TMP=directory,TEMP=directory,DOCKER_CONFIG=directory)\n    command=['syft','scan','docker-archive:/inputs/image.tar','--platform','linux/amd64','--override-default-catalogers','image','--scope','squashed','-o','syft-json','--config',str(config)]\n    started=time.monotonic();samples=[];guard=None\n    with (out/'stdout.json').open('wb') as stdout,(out/'stderr.log').open('wb') as stderr:\n        process=subprocess.Popen(command,env=environment,cwd=root,stdout=stdout,stderr=stderr,start_new_session=True)\n        while process.poll() is None:\n            usage=shutil.disk_usage('/tmp');samples.append({'elapsed_seconds':round(time.monotonic()-started,3),'tmp_used_bytes':usage.used,'tmp_free_bytes':usage.free})\n            if (out/'stdout.json').stat().st_size>64*1024**2 or (out/'stderr.log').stat().st_size>4*1024**2:guard='output-budget'\n            if time.monotonic()-started>240:guard='timeout'\n            if guard:os.killpg(process.pid,signal.SIGKILL);break\n            time.sleep(.2)\n        exit_code=process.wait()\n    stderr=(out/'stderr.log').read_text(errors='replace')[-4096:]\n    report={'exit_code':exit_code,'guard':guard,'elapsed_seconds':round(time.monotonic()-started,3),'command':command,'tmpfs_bytes':shutil.disk_usage('/tmp').total,'min_observed_free_bytes':min(x['tmp_free_bytes'] for x in samples),'controlled_fixture_stderr_tail':stderr,'samples':samples,'reference_accessed':False,'test_boundary':'Pinned Syft only; no classifier, Java peer or reference input'}\n    (out/'result.json').write_text(json.dumps(report,indent=2)+'\\n')\n    print(json.dumps({k:v for k,v in report.items() if k!='samples'},indent=2))\n"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 75.625,
+  "image_id": "sha256:7af618aa7c9ad5dfbcee8da5db07facd3819f3f159b0d223a2a9f6064678638b"
+}

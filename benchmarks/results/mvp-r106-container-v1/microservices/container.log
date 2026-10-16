@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<string>", line 41, in <module>
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/pipeline.py", line 293, in analyze
+    with analysis_workspace(output) as state:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/pipeline.py", line 90, in analysis_workspace
+    raise AnalysisError(state["stage"], type(error).__name__) from None
+sbom_creator.pipeline.AnalysisError: image_scan failed (RuntimeError)

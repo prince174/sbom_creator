@@ -1,0 +1,1003 @@
+{
+  "runtime_changed": true,
+  "fresh_scans": true,
+  "source_input": false,
+  "mode": "actual image-only service; no project source/image lockfiles",
+  "projects": 12,
+  "positive_component_projects": 8,
+  "components_micro": {
+    "tp": 306,
+    "fp": 9,
+    "fn": 1,
+    "precision": 0.9714285714285714,
+    "recall": 0.996742671009772,
+    "f1": 0.9839228295819936
+  },
+  "components_macro_positive_projects": {
+    "precision": 0.9348076923076923,
+    "recall": 0.9988317757009346,
+    "f1": 0.9607852613965581
+  },
+  "direct_micro": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 103,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+  "components_exact_identity_regression": {
+    "projects_with_added_components": 0,
+    "projects_with_removed_components": 0
+  },
+  "rows": [
+    {
+      "project": "javascript-axios",
+      "pair": "paired-axios-v2",
+      "status": "completed",
+      "seconds": 15.344000000011874,
+      "components": {
+        "tp": 8,
+        "fp": 5,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 8,
+        "precision": 0.6153846153846154,
+        "recall": 1.0,
+        "f1": 0.7619047619047619
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 5,
+      "missing": [],
+      "extra": [
+        "pkg:npm/cjs-entrypoint-test@1.0.0",
+        "pkg:npm/commonjs-typings-test@1.0.0",
+        "pkg:npm/esm-entrypoint-test@1.0.0",
+        "pkg:npm/esm-typings-test@1.0.0",
+        "pkg:npm/ts-entrypoint-test@1.0.0"
+      ],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "predicted": 0,
+        "reference": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 8,
+          "fp": 5,
+          "fn": 0,
+          "predicted": 13,
+          "reference": 8,
+          "precision": 0.6153846153846154,
+          "recall": 1.0,
+          "f1": 0.7619047619047619
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "29eefab25c26e0f291620669a968e0ef652af3216fb28dc22db313e852416576",
+      "output_sha256": {
+        "final": "5cc35556421f59c969086291c6e68f0a6dc7a7aaa6299137a30b27827550ed90",
+        "os": "e313afcc88ff065ffa9d324626cab7fc70ee72b0f1cd00946b942fd866fc7f58",
+        "full": "fd85e9a28c17f7725d3c5a32a09da4568f56234319a1c65707fea89ff10d3c07"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 307,
+        "selected_count": 303,
+        "final_count": 214,
+        "os_count": 89,
+        "full_count": 303,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 290,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.437
+      }
+    },
+    {
+      "project": "javascript-chalk",
+      "pair": "paired-chalk-v1",
+      "status": "FAILED",
+      "seconds": 15.671000000002095,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "versions": {
+        "version_accuracy_matched_identity": null,
+        "exact_version_coverage": null
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 0,
+          "reference": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "a677bfa638e015576dbf1b49aade00fb9ce4aa5047c7b64396217b89ec7465e7"
+    },
+    {
+      "project": "javascript-commander-js",
+      "pair": "paired-commander-js-v1",
+      "status": "completed",
+      "seconds": 15.796000000002095,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "versions": {
+        "version_accuracy_matched_identity": null,
+        "exact_version_coverage": null
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 0,
+          "reference": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "7ae7b1972b40be8df08521677827987c61e9ff2cc7287ad2bbd3e032487ccd6e",
+      "output_sha256": {
+        "final": "257325290cd55ebffea451251ba2c5d6cad5ed4d779779e28efbe36f84fa129c",
+        "os": "76476120ff207d8a42ebc13ab19979c3946a3961521cb6721976d8df5625c790",
+        "full": "a5710abb0736f2a974b61bb44563d6fc77819a54c86ca232890668ca47064603"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 292,
+        "selected_count": 288,
+        "final_count": 199,
+        "os_count": 89,
+        "full_count": 288,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 277,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.344
+      }
+    },
+    {
+      "project": "javascript-debug",
+      "pair": "paired-debug-v1",
+      "status": "completed",
+      "seconds": 15.65700000000652,
+      "components": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 1,
+        "reference": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "predicted": 0,
+        "reference": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 1,
+          "reference": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "20ce578589aad105879e12651a8e8238979153941f5b194761e411629879b5f5",
+      "output_sha256": {
+        "final": "736b24ea681fa358a9a107a9a8aa5eb8c8b3f6a9b198216faf029e231d04f12c",
+        "os": "30224a69ad6342f2e686b826c479b01445a0f462c3a498c4a4aee7d9a6ba48a5",
+        "full": "6985a80446e2d2e5cf7e5547af8d27aa9b801e1c2a1872e08d8c86e537f699ce"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 293,
+        "selected_count": 289,
+        "final_count": 200,
+        "os_count": 89,
+        "full_count": 289,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 277,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.203
+      }
+    },
+    {
+      "project": "javascript-express",
+      "pair": "paired-express-v1",
+      "status": "completed",
+      "seconds": 16.76600000000326,
+      "components": {
+        "tp": 68,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 68,
+        "reference": 68,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 31,
+        "predicted": 0,
+        "reference": 31,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 68,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 68,
+          "reference": 68,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "6932472be3f6504a14ffe73ab90b209171aba56a6049c293646310bea4f2da1f",
+      "output_sha256": {
+        "final": "e092e017a5fdb48793325f3f0413d19b4e5dfdbedab87c341c514d93d678636a",
+        "os": "01956d5eebf9e227a1309ba14b91803d5d3256ec8ee3736dbf040cf28313f021",
+        "full": "616d424b4e63bdb1bd33b881ca0e4b920974998e7dc8433624b72e930408ad53"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 360,
+        "selected_count": 356,
+        "final_count": 267,
+        "os_count": 89,
+        "full_count": 356,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 343,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 6.157
+      }
+    },
+    {
+      "project": "javascript-fastify",
+      "pair": "paired-fastify-v1",
+      "status": "completed",
+      "seconds": 17.71899999998277,
+      "components": {
+        "tp": 47,
+        "fp": 3,
+        "fn": 0,
+        "predicted": 50,
+        "reference": 47,
+        "precision": 0.94,
+        "recall": 1.0,
+        "f1": 0.9690721649484536
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 3,
+      "missing": [],
+      "extra": [
+        "pkg:npm/benchmark@1.0.0",
+        "pkg:npm/benchmarks@1.0.0",
+        "pkg:npm/transport@0.0.1"
+      ],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 15,
+        "predicted": 0,
+        "reference": 15,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 47,
+          "fp": 3,
+          "fn": 0,
+          "predicted": 50,
+          "reference": 47,
+          "precision": 0.94,
+          "recall": 1.0,
+          "f1": 0.9690721649484536
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "4c2c56316b6ead74bd30b7f10bb61b8a91e043383dbc693ef3b2874fb51e177b",
+      "output_sha256": {
+        "final": "dbd53b3db028c0a914a79bd5ee471ace01496e0ffbd0d6d0a44f256d10e3d55c",
+        "os": "4c0ce4ba3a500c98d0749382c8da3569b0fafa856956eb98aa4ffc7c6f7fa9dd",
+        "full": "122c0a7c32731da7d17a0f92c86b103754a59899120db1a4a1cb250837fefe80"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 343,
+        "selected_count": 339,
+        "final_count": 250,
+        "os_count": 89,
+        "full_count": 339,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 327,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 6.516
+      }
+    },
+    {
+      "project": "javascript-hapi",
+      "pair": "paired-hapi-v3",
+      "status": "completed",
+      "seconds": 15.953000000008615,
+      "components": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 29,
+        "reference": 29,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 18,
+        "predicted": 0,
+        "reference": 18,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 29,
+          "reference": 29,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "db490b2780385ea52c746258baa5199d6c2063cf04494569a78c50154cea64d1",
+      "output_sha256": {
+        "final": "f3ff6e89676abfb77c5988c38ddca4ad2867cf24dc58cdd9a2261df34f615522",
+        "os": "9c1be659b21074bdaccef222d8cecce456f3f43642beeb3ba61124bcce1490d6",
+        "full": "68c284938edd79bc3f1548195ed177baec623c293a3a707d78b6bc971194dd0e"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 324,
+        "selected_count": 320,
+        "final_count": 231,
+        "os_count": 89,
+        "full_count": 320,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 306,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.625
+      }
+    },
+    {
+      "project": "javascript-isarray",
+      "pair": "paired-isarray-v1",
+      "status": "completed",
+      "seconds": 16.078999999997905,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "versions": {
+        "version_accuracy_matched_identity": null,
+        "exact_version_coverage": null
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 0,
+          "reference": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "12f4923a2108c6340096688a6a210104b5593e575537df5009708ff4bda18868",
+      "output_sha256": {
+        "final": "d1d1551e0f7768b0165e63d92d687b2d8d4344f790a1d6eb65467e6f2d6f842e",
+        "os": "8867b8a6624dd85c76e3e3108175612585ccb4875a9ab882ad288ba793a7f1cc",
+        "full": "72c2d9383c1b0b78689574a85c852eec46316efc65040e0ab52d9741b1f79810"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 292,
+        "selected_count": 288,
+        "final_count": 199,
+        "os_count": 89,
+        "full_count": 288,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 277,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.344
+      }
+    },
+    {
+      "project": "javascript-koa",
+      "pair": "paired-koa-v1",
+      "status": "completed",
+      "seconds": 16.203000000008615,
+      "components": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 35,
+        "reference": 35,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 18,
+        "predicted": 0,
+        "reference": 18,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 35,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 35,
+          "reference": 35,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "27b1d9a222c07e10870f695686e4dc9d60f724f9b9d935c2641e941bd0fa69f0",
+      "output_sha256": {
+        "final": "cf94d1c6f26794e6e1b1f9e94f88f44fd17e964fcc36e752601be7c71c18fb3e",
+        "os": "2b78d6b9465f76756821ae639fd8dcb81cb1841e9423bceb5fcbb4b3f7035b7d",
+        "full": "55d8df860961f7eb93c0cbb8ce75f5e1be0c95d5e89fd2dbe34c047621e88f69"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 327,
+        "selected_count": 323,
+        "final_count": 234,
+        "os_count": 89,
+        "full_count": 323,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 312,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.703
+      }
+    },
+    {
+      "project": "javascript-ms",
+      "pair": "paired-ms-v1",
+      "status": "completed",
+      "seconds": 17.10899999999674,
+      "components": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "versions": {
+        "version_accuracy_matched_identity": null,
+        "exact_version_coverage": null
+      },
+      "count_delta": 0,
+      "missing": [],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "predicted": 0,
+        "reference": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 0,
+          "reference": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "ce0445cb944659d2f9be3a0d01a45a808dd9196585db4f05b699cfb261e3286a",
+      "output_sha256": {
+        "final": "d334bbfa345b203a8e12a78a4bcbcbfa54e038ad5d76d15eea6538d01293bd7b",
+        "os": "54dc33922f40772231de6f1f28266ae5e28f3ee94626b6f0070cdd8c3847d99a",
+        "full": "ba678727cf2837e94901d64a758853da269e8a0b6c24565fd48486bb400b7197"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 292,
+        "selected_count": 288,
+        "final_count": 199,
+        "os_count": 89,
+        "full_count": 288,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 276,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 5.609
+      }
+    },
+    {
+      "project": "javascript-nest-starter",
+      "pair": "paired-nest-starter-v1",
+      "status": "completed",
+      "seconds": 21.73399999999674,
+      "components": {
+        "tp": 106,
+        "fp": 0,
+        "fn": 1,
+        "predicted": 106,
+        "reference": 107,
+        "precision": 1.0,
+        "recall": 0.9906542056074766,
+        "f1": 0.9953051643192489
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 0.9906542056074766
+      },
+      "count_delta": -1,
+      "missing": [
+        "pkg:npm/@tokenizer/token@0.3.0"
+      ],
+      "extra": [],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "predicted": 0,
+        "reference": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 106,
+          "fp": 0,
+          "fn": 1,
+          "predicted": 106,
+          "reference": 107,
+          "precision": 1.0,
+          "recall": 0.9906542056074766,
+          "f1": 0.9953051643192489
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "cb1352a1cf91d73ecad396e9f5ff90b24fbd205e7493b95d3ff9b4c7a7538ee8",
+      "output_sha256": {
+        "final": "2d557f1efe3a36128ec9199736eb3e049092ab8071a4393b5655b2b3633040aa",
+        "os": "0402f1287a92f7db733ecd36fd6ce784b7a708f08f47fa3df9738941dfa3f520",
+        "full": "2a7cfac1ada2628c185698c1607eec6960cc92dadf70f3a5a419146a5ade85d2"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+          "AMBIGUOUS_IDENTITY": 5,
+          "PAYLOAD_NOT_CONFIRMED": 1
+        },
+        "unknown_groups": {
+          "image_evidence": 4,
+          "image_identity": 5,
+          "image_payload": 1
+        },
+        "source_count": 0,
+        "image_count": 406,
+        "selected_count": 396,
+        "final_count": 307,
+        "os_count": 89,
+        "full_count": 396,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 379,
+          "UNKNOWN": 10
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 8.688
+      }
+    },
+    {
+      "project": "javascript-pino",
+      "pair": "paired-pino-v1",
+      "status": "completed",
+      "seconds": 17.46899999998277,
+      "components": {
+        "tp": 12,
+        "fp": 1,
+        "fn": 0,
+        "predicted": 13,
+        "reference": 12,
+        "precision": 0.9230769230769231,
+        "recall": 1.0,
+        "f1": 0.96
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 1.0,
+        "exact_version_coverage": 1.0
+      },
+      "count_delta": 1,
+      "missing": [],
+      "extra": [
+        "pkg:npm/transport@0.0.1"
+      ],
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 11,
+        "predicted": 0,
+        "reference": 11,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "component_regression": {
+        "added": [],
+        "removed": [],
+        "baseline": {
+          "tp": 12,
+          "fp": 1,
+          "fn": 0,
+          "predicted": 13,
+          "reference": 12,
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "f1": 0.96
+        }
+      },
+      "scoring_scope": "/app/; root application excluded; Node/npm platform retained separately",
+      "reference_sha256": "b66610eb4ce346b8283dc90f4b6d13d1599cbee6ca0b760e728737d0d436279a",
+      "output_sha256": {
+        "final": "486932d193c60709693c741d94311a70a2dbe054524f50da670802665ec393b0",
+        "os": "70af5d143a55bba5cf674521f5db6c62969cf883c04513b9d1f2893d1aee2c29",
+        "full": "4284d59318be7489cb78651db5b80734ab527f6efb85557e3c2183fe4ec78f3d"
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-evidence-and-payload-v3",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 4
+        },
+        "unknown_groups": {
+          "image_evidence": 4
+        },
+        "source_count": 0,
+        "image_count": 305,
+        "selected_count": 301,
+        "final_count": 212,
+        "os_count": 89,
+        "full_count": 301,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 290,
+          "UNKNOWN": 4
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 6.359
+      }
+    }
+  ],
+  "acceptance": false,
+  "limitations": [
+    "Disclosed no-lock derivative fixtures, not fresh independent general ownership acceptance",
+    "Fixed /app scoring scope is an evaluation fixture convention, not a reference-based filter",
+    "Empty roots excluded from positive macro, never counted as precision/recall success",
+    "Full non-OS image inventory is retained; test fixtures remain extra project components",
+    "Image-only mode does not prove directness; all known reference direct edges counted FN"
+  ]
+}

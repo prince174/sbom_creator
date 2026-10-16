@@ -1,0 +1,33 @@
+{
+  "oracle_read": false,
+  "cases": [
+    "paired-axios-v2",
+    "paired-chalk-v1",
+    "paired-commander-js-v1",
+    "paired-debug-v1",
+    "paired-express-v1",
+    "paired-fastify-v1",
+    "paired-hapi-v3",
+    "paired-isarray-v1",
+    "paired-koa-v1",
+    "paired-ms-v1",
+    "paired-nest-starter-v1",
+    "paired-pino-v1"
+  ],
+  "completed": [
+    "paired-axios-v2",
+    "paired-commander-js-v1",
+    "paired-debug-v1",
+    "paired-express-v1",
+    "paired-fastify-v1",
+    "paired-hapi-v3",
+    "paired-isarray-v1",
+    "paired-koa-v1",
+    "paired-ms-v1",
+    "paired-nest-starter-v1",
+    "paired-pino-v1"
+  ],
+  "failed": [
+    "paired-chalk-v1"
+  ]
+}

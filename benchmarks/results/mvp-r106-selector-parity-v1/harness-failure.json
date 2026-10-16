@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_HARNESS_ASSERTION",
+  "stage": "post-publication in-memory audit equality",
+  "service_failed": false,
+  "physical_predictions_and_all_three_views_published": true,
+  "coordinate_multisets_equal_all_three": true,
+  "selected_ids_equal": true,
+  "serialized_catalog_physical_audit_equal": true,
+  "cause": "Adapter audit contains tuples; JSON persistence represents them as lists. Exact in-memory vs loaded JSON equality is too strict. New replay compares canonical serialized facts.",
+  "attempt_preserved": true
+}

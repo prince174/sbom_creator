@@ -1,0 +1,12 @@
+{
+  "language": "javascript",
+  "name": "paired-pino-v1",
+  "namespace": "no-lock-expanded-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:8626951e8d3fd333777c2067af5cce6d0142f68c8e4c97f08375038addf350d0",
+  "archive": "benchmarks/.work/no-lock-expanded-v1/paired-pino-v1/image.tar",
+  "archive_sha256": "97747bd522e7e8088180b6db5dfa6628fec52ecb634c97969f8b0e97e46c7baa",
+  "repository_url": null,
+  "commit": null,
+  "project_execution": false,
+  "oracle_read": false
+}

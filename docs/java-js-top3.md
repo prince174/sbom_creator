@@ -1,4 +1,48 @@
-## R105 — actual image-first service and separate source graph, 2026-10-16
+## R106 — opt-in bounded nested reads experiment, 2026-10-16
+
+Same image inputs and unchanged R105 evaluation scopes, no source/reference in
+the classifier. Full16-case snapshot protocol completes before the post-only
+evaluator opens any oracle. No new cross-mode or independent ranking is assigned.
+Stable default remains the R105 reader. R106 requires explicit
+`SBOM_JAVA_NESTED_WINDOWS=true`/`Settings(java_nested_windows=True)`; policy v5 is
+experimental only. Measured frozen snapshots are retained unchanged; they do not
+establish default production adoption of the precision/recall trade-off.
+
+| Technique / mode | Current measured result | Scope and status |
+|---|---|---|
+| Actual service OPT-IN policy image-identity-payload-v5: Syft1.51.1 + Trivy0.75.0 + bounded nested windows/CRC + explicit identity gate |Microservices99/1/41 vs R1058/0/132; Boot90/3/2, Javalin128/0/0, Dropwizard893/0/14 unchanged. Java micro1210/4/57,P99.67/R95.50; repository macroP98.94/R91.75 |Experimental final improvement with precision trade-off100→99%; Micro recall70.71 below90 and31 owner scopes UNKNOWN. Not default adoption or global acceptance |
+| cdxgen13.4.0 + native Maven |Unchanged R104 Micro source direct100/0/0 on8 shipped owners; raw9 owners100/8/0 |Optional build-model graph, not image inventory or proof of original CI reproduction |
+| Trivy0.75.0 passive source projection |Unchanged same Micro source76/0/24 direct |Partial optional source fallback, not ranked as an image component engine |
+
+R106 JavaScript:12 fresh no-lock image-only attempts,11 published. Positive
+component metrics unchanged306/9/1,P97.14/R99.67; all three coordinate multisets
+of11 published outputs equal R105. Chalk has a retained publication PermissionError;
+one separate publisher-only diagnostic succeeds with the same three coordinate
+multisets, but does not replace the failed protocol attempt. Empty Chalk is never
+precision/recall success. Source/direct UNKNOWN is measured separately.
+
+The opt-in runtime change avoids copying STORED nested JARs into payload-window reads,
+validates headers/path/layer plus complete nested-body SHA/CRC, and retains a
+bounded16MiB exact-physical-range cache across witnesses. Same128MiB window budget;
+Micro consumes91.0MB instead of134.2MB. Remaining41 FN include unresolved bounded
+read/identity cases; no reference-derived exclusions or aliases. Final post-selector
+suite489 tests passed,3 skips; Ruff. [Full actual service results and failures](java-js-service-accuracy.md),
+[R106 protocol](../benchmarks/results/mvp-r106-v1/evaluation.json).
+Linux experimental snapshot with workspace scratch passes517.271s pipeline:
+final/os/full1878/0/1878, all3 coordinate multisets equal Windows. Original512MiB
+`/tmp` ENOSPC failure is retained; shipping scratch configuration is a separate
+operational fix and does not enable the nested-window experiment by default.
+Final RC selector/configuration smoke verifies43 installed hashes, default=false,
+explicit=true/invalid rejection and writable `/workspace` scratch with unchanged
+512MiB `/tmp`. Separate selector parity v2 with cached scanner catalogs and fresh
+physical reads/publishing passes: opt-in Micro50.766s matches R106 adapted catalog,
+physical facts/serialized audit/all3views/selected IDs; default Boot7.890s matches
+R105 stable all3views/IDs with policy v4. No new scanner or oracle accuracy run.
+The retained v1 negative was a post-publication tuple-vs-JSON-list harness assertion,
+not a service/output failure. [Configuration proof](../benchmarks/results/mvp-r106-container-selector-v1/config-smoke.json),
+[selector parity](../benchmarks/results/mvp-r106-selector-parity-v2/report.json).
+
+## R105 — historical actual image-first service and separate source graph, 2026-10-16
 
 The current MVP analysis accepts image-only input. Rebuilding an unknown TeamCity
 recipe is not required to publish an image SBOM. Optional source-model graphs are

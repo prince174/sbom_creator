@@ -1,0 +1,12 @@
+{
+  "language": "javascript",
+  "name": "paired-express-v1",
+  "namespace": "no-lock-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:9d808d93f9ebd7b4780a0b8ee8808bd53fd4a6f1b41a32d6eaa0d848eb91a1b5",
+  "archive": "benchmarks/.work/no-lock-v1/paired-express-v1/image.tar",
+  "archive_sha256": "e2fbdcd82965a1d8e0d1d6a0b8b32d29784d7f5eaf94bb134d4a63c09e72b5af",
+  "repository_url": null,
+  "commit": null,
+  "project_execution": false,
+  "oracle_read": false
+}

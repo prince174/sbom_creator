@@ -1,0 +1,141 @@
+{
+  "oracle_read": false,
+  "source_input": false,
+  "runtime_changed": true,
+  "partition": "disclosed-development-regression",
+  "runner_sha256": "3aa70dadd31b34a7e4e84c99ebcac08b73632cef726feed7cd4bfa4c3ee38e63",
+  "tool_sha256": {
+    "syft": "5a95b689def43f26de1505ed43dc76306cded7923140b349619e21ddc2ac5ce4",
+    "trivy": "3b4fcf6fec53c4c73c325cfd518c7264100695b19e6c59c6a777e4a67dc9f0e6",
+    "crane": "e22e47202cece45d09fe92919bdb683f56f548d360cb96f6a852defd965c935d"
+  },
+  "database_sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+  "java_freeze_sha256": "e84ed62baa0ed79600ef82d2b8167d3c75e25f3a3306dfaa9405e0981c6b3170",
+  "javascript_freeze_sha256": "4ed3fc03df24c8832a471be5311ad08e23524489e7401ba36d376db3ef3cb1ba",
+  "inputs": [
+    {
+      "language": "java",
+      "name": "microservices",
+      "image": "docker.io/library/sbom-mvp@sha256:0baa31188e29b4df33890b7664c46c6e8fd4c9a4ca53731db83ad05e6cb6ad95",
+      "archive": "benchmarks/.work/paired-petclinic-microservices-r104/image.tar",
+      "archive_sha256": "bf6bc3eb5fb919a75d29c4cd3b79123958e0ff72b4fbaea403910f1802135ee2"
+    },
+    {
+      "language": "java",
+      "name": "boot",
+      "image": "docker.io/library/sbom-mvp@sha256:5c08c4117449d304e3ba941b5ad93ed571fd950423b002bf8e24785b61ca30a3",
+      "archive": "benchmarks/.work/paired-spring-petclinic-v1/image.tar",
+      "archive_sha256": "a40a77bfda227d1d3ff1fe23c3835c9cdebfb367cfa8d34042c298115cbb0e25"
+    },
+    {
+      "language": "java",
+      "name": "javalin",
+      "image": "docker.io/library/sbom-mvp@sha256:82a7551e440f8e468cb14cbb3d7e128b27c7eb19b39159a62c919ec14399a5f9",
+      "archive": "benchmarks/.work/paired-javalin-reactor-v1/image.tar",
+      "archive_sha256": "b2635feb3f894502688814fddce2bf2759334683811519f73f281da3dea6ec90"
+    },
+    {
+      "language": "java",
+      "name": "dropwizard",
+      "image": "docker.io/library/sbom-mvp@sha256:33df256562503299e6225f706339146bddc160e67067dfe2ade2c4737557c0d4",
+      "archive": "benchmarks/.work/paired-dropwizard-reactor-v1/image.tar",
+      "archive_sha256": "82b9e6a2c54d500ee9529fb07e528028cb022ab331730cdfb3a4cb42dfac7e71"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-axios-v2",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:9eea89703ef60913a43bcf9d881832a30159c538c0caf2befba8935c9c827e0b",
+      "archive": "benchmarks/.work/no-lock-v1/paired-axios-v2/image.tar",
+      "archive_sha256": "7d5262004e1ae23e9fb6629f66a8fe9289b1b02b019cfec51575e9bc668fa9da"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-chalk-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:85a83e39d77bd182d07becac98c27b3a8c3b2a12076f6aad82a44cd3d2dd5888",
+      "archive": "benchmarks/.work/no-lock-v1/paired-chalk-v1/image.tar",
+      "archive_sha256": "9aac49096ae873df7987599d865c804face20a9db7536b30dd66fa3c9d5381fe"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-commander-js-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:c9e3194005f4d36de165dc57df815605700fdbb318ee86987d3cc11136670fb0",
+      "archive": "benchmarks/.work/no-lock-v1/paired-commander-js-v1/image.tar",
+      "archive_sha256": "8cad2401128bd5187ac5005d53ef99bc6c12fac67cdd7239cbb21f73014a6c5e"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-debug-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:90881ea43999449160e5a746d8b1b53c1718d4afd9874432cb2c01f706a7cba8",
+      "archive": "benchmarks/.work/no-lock-v1/paired-debug-v1/image.tar",
+      "archive_sha256": "9eac6e59651341d7ca5452935ddca8a4ab6b8908066cf749c65a820cffde496b"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-express-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:9d808d93f9ebd7b4780a0b8ee8808bd53fd4a6f1b41a32d6eaa0d848eb91a1b5",
+      "archive": "benchmarks/.work/no-lock-v1/paired-express-v1/image.tar",
+      "archive_sha256": "e2fbdcd82965a1d8e0d1d6a0b8b32d29784d7f5eaf94bb134d4a63c09e72b5af"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-fastify-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:d78e8110e2cba2504ee5f677bf192df918bc1e101642631a4d544c5b4e19f29c",
+      "archive": "benchmarks/.work/no-lock-v1/paired-fastify-v1/image.tar",
+      "archive_sha256": "2157563b2ab640e10c88ea9c31e65f1014aa1a04baec149795b3b556ab23a07f"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-hapi-v3",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:1d4f099ab6c203316d4489c5c7877a6367506c93a47aed970f9742e3f5beb094",
+      "archive": "benchmarks/.work/no-lock-v1/paired-hapi-v3/image.tar",
+      "archive_sha256": "39ef81850d0c2f4fd0cbc3cb0d106acc6abb0e6bcff3e7fac5cc56d8e1045128"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-isarray-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:6109df773cd2bb86b9ba77cdd3795eb4ec48c84434f173dfc34e17490aaf253a",
+      "archive": "benchmarks/.work/no-lock-v1/paired-isarray-v1/image.tar",
+      "archive_sha256": "30079fda8a16d170dfa3d34d566255fdda89b8ae4c0b9edf4fa126f6b5ca9c6a"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-koa-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:3a94e981478bf6fc442813a22108bea9b782ec8b60fa9758d759c59131289d46",
+      "archive": "benchmarks/.work/no-lock-v1/paired-koa-v1/image.tar",
+      "archive_sha256": "5fee6087c3775407c25cde40658ef3d81b0e0b774ebd30b1de9194194b96f276"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-ms-v1",
+      "namespace": "no-lock-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:315673a9751b8afd985fe99b572d791114b3cc5b2a41ef29dddd805fc27b7551",
+      "archive": "benchmarks/.work/no-lock-v1/paired-ms-v1/image.tar",
+      "archive_sha256": "f3c597e750d16d68ec72cfeaee01c5e09c2efcf114d98353b48a8650c76aef82"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-nest-starter-v1",
+      "namespace": "no-lock-expanded-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:0a967cb01a0fc1a79c306ae2cdefe55803fa124dae2967c555a16b4a248519fa",
+      "archive": "benchmarks/.work/no-lock-expanded-v1/paired-nest-starter-v1/image.tar",
+      "archive_sha256": "32d2a190cbce31823071df29d387ef9f0f6013f44a6e0511e7fdee202b642433"
+    },
+    {
+      "language": "javascript",
+      "name": "paired-pino-v1",
+      "namespace": "no-lock-expanded-v1",
+      "image": "docker.io/library/sbom-js-mvp@sha256:8626951e8d3fd333777c2067af5cce6d0142f68c8e4c97f08375038addf350d0",
+      "archive": "benchmarks/.work/no-lock-expanded-v1/paired-pino-v1/image.tar",
+      "archive_sha256": "97747bd522e7e8088180b6db5dfa6628fec52ecb634c97969f8b0e97e46c7baa"
+    }
+  ]
+}

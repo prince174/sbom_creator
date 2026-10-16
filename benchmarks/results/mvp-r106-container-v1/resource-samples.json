@@ -1,0 +1,132 @@
+{
+  "method": "Docker cgroup stats sampled approximately every 6 seconds; not a measured peak RSS",
+  "container": "sbom-mvp-smoke-1792124934684797600",
+  "samples": [
+    {
+      "at": "2026-10-16T04:29:24.791490+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "32.04%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.19%",
+        "MemUsage": "36.62MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "9"
+      }
+    },
+    {
+      "at": "2026-10-16T04:29:30.966520+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "33.64%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.18%",
+        "MemUsage": "36.37MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "9"
+      }
+    },
+    {
+      "at": "2026-10-16T04:29:37.308872+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "29.83%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.18%",
+        "MemUsage": "36.38MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "9"
+      }
+    },
+    {
+      "at": "2026-10-16T04:29:43.471511+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "32.17%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.18%",
+        "MemUsage": "36.19MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "9"
+      }
+    },
+    {
+      "at": "2026-10-16T04:29:49.640144+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "31.37%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.19%",
+        "MemUsage": "36.45MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "9"
+      }
+    },
+    {
+      "at": "2026-10-16T04:29:55.835624+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "29.51%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "1.62%",
+        "MemUsage": "49.64MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "10"
+      }
+    },
+    {
+      "at": "2026-10-16T04:30:01.991835+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "31.89%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "6.95%",
+        "MemUsage": "213.6MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "10"
+      }
+    },
+    {
+      "at": "2026-10-16T04:30:08.301797+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "33.07%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "12.12%",
+        "MemUsage": "372.3MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "10"
+      }
+    },
+    {
+      "at": "2026-10-16T04:30:14.468629+00:00",
+      "docker_stats": {
+        "BlockIO": "229kB / 0B",
+        "CPUPerc": "32.37%",
+        "Container": "sbom-mvp-smoke-1792124934684797600",
+        "ID": "1cabb6d9e27b",
+        "MemPerc": "16.98%",
+        "MemUsage": "521.7MiB / 3GiB",
+        "Name": "sbom-mvp-smoke-1792124934684797600",
+        "NetIO": "0B / 0B",
+        "PIDs": "10"
+      }
+    }
+  ]
+}

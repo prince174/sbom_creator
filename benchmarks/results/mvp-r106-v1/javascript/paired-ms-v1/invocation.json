@@ -1,0 +1,12 @@
+{
+  "language": "javascript",
+  "name": "paired-ms-v1",
+  "namespace": "no-lock-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:315673a9751b8afd985fe99b572d791114b3cc5b2a41ef29dddd805fc27b7551",
+  "archive": "benchmarks/.work/no-lock-v1/paired-ms-v1/image.tar",
+  "archive_sha256": "f3c597e750d16d68ec72cfeaee01c5e09c2efcf114d98353b48a8650c76aef82",
+  "repository_url": null,
+  "commit": null,
+  "project_execution": false,
+  "oracle_read": false
+}

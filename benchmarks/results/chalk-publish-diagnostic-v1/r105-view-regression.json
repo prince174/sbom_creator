@@ -1,0 +1,17 @@
+{
+  "baseline": "benchmarks/results/mvp-js-r105-v1/paired-chalk-v1/analysis",
+  "coordinate_multisets": {
+    "final": {
+      "added": {},
+      "removed": {}
+    },
+    "os": {
+      "added": {},
+      "removed": {}
+    },
+    "full": {
+      "added": {},
+      "removed": {}
+    }
+  }
+}

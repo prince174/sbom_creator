@@ -1,0 +1,18 @@
+{
+  "hypothesis": "Validated STORED nested archives can use bounded physical subwindows, avoiding repeated whole-JAR payload copies. Persisting at most16MiB/4096 exact physical ranges avoids repeated metadata reads.",
+  "baseline": "R105 disclosed Microservices:8TP/0FP/132FN on1agreedowner,128MiBpayloadcap; no expected package identities enter predictor.",
+  "integrity": "LFH/CD strict consistency,stdlib local-name/overlap checks,fullnestedSHA256+CRC32 under existing8GiBverificationbudget; exactimage/path/layer/identity gates unchanged; compressed/descriptor cases keep priorboundedcopy.",
+  "unchanged_limits": {
+    "payload_read_bytes": 134217728,
+    "single_read_bytes": 33554432,
+    "verification_read_bytes": 8589934592,
+    "cache_bytes": 16777216,
+    "cache_entries": 4096,
+    "views": 4096,
+    "witness_seconds": 180
+  },
+  "prediction": "Actual frozen runtime,4Java+12JavaScript serial,no source/no oracle; allfinal/os/full before post-only evaluation.",
+  "acceptance": "Per-case precision must not decrease; retain component versions,rawUNKNOWNowner deltas,coverage,and anylosses; noemptyorunlabelledsuccess.",
+  "fresh_independent_acceptance": false,
+  "deployed_service_changed": false
+}

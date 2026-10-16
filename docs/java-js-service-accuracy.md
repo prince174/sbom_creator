@@ -1,4 +1,4 @@
-# Java / JavaScript: actual service accuracy — R105, 2026-10-16
+# Java / JavaScript: actual service accuracy — R106 opt-in experiment, 2026-10-16
 
 Измеряется **final.cdx.json самого сервиса** после фактического запуска сканеров,
 reader, identity gate и publisher. Референс открывает только evaluator после
@@ -6,12 +6,123 @@ reader, identity gate и publisher. Референс открывает толь
 передаются image-only анализу; граф исходников — отдельное обогащение.
 Все три SBOM и полный scanner inventory сохраняются.
 
-**Java пока не проходит >90% на всех сложных проектах.** Новый сервис воспроизводит
-сильные Java-эксперименты, но новый Microservices образ упирается в payload budget.
-JS проходит компонентный порог на измеренной раскрытой выборке; универсальной
-гарантии точности для любых образов это не даёт.
+**Стабильный default остаётся на reader R105.** Nested-window вариант R106
+сохраняется отдельным opt-in экспериментом: `SBOM_JAVA_NESTED_WINDOWS=true`
+(Python `Settings(java_nested_windows=True)`), policy v5 только в этом режиме.
+Числа R106 ниже относятся к зафиксированному experimental snapshot, не к принятию
+этого reader по умолчанию. Precision trade-off Microservices100%→99% и recall70.71%
+не позволяют объявить production adoption или достижение цели.
 
-## Java: реальные итоговые SBOM
+**Java пока не проходит >90% на всех сложных проектах.** R106 повышает Microservices
+с8/0/132 до99/1/41, но recall70.71% всё ещё ниже цели. Java aggregate уже выше90%,
+однако он не заменяет слабый проект и31 владельца с UNKNOWN scope. JS проходит
+компонентный порог на измеренной раскрытой положительной выборке; отдельный Windows
+publication failure сохранён. Универсальной гарантии для любых образов нет.
+
+## R106 opt-in: actual image-only service, прежние области оценки
+
+| Java / согласованный scope | TP / FP / FN | Precision | Recall / exact-version coverage | Версии среди совпавших имён | Время |
+|---|---:|---:|---:|---:|---:|
+| Microservices,1 owner; ещё7 scope UNKNOWN |99 /1 /41|99.00%|70.71%|100%|158.953s|
+| Petclinic,92 SHA256-labelled packaged dependencies |90 /3 /2|96.77%|97.83%|98.90%|95.859s|
+| Javalin,8 owners; ещё6 scope UNKNOWN |128 /0 /0|100%|100%|100%|22.765s|
+| Dropwizard,16 owners; ещё18 scope UNKNOWN |893 /0 /14|100%|98.46%|100%|125.610s|
+
+Java micro1210/4/57: P99.67%, R/exact-version coverage95.50%, F197.54%.
+Repository macro P98.94%, R91.75%, F194.75%. Это26 размеченных owner instances
+в4 раскрытых репозиториях, не26 независимых проектов;31 других owner scopes
+UNKNOWN с полными raw build-reference deltas. Количество отдельно:1214 predictions
+против1267 reference occurrences, delta−53. Все3 SBOM каждого Java case сохранены.
+Image-only direct остаётся0/0/614, UNKNOWN; source-model результаты не смешиваются
+с этими компонентными метриками. [Полный post-only отчёт](../benchmarks/results/mvp-r106-v1/java/evaluation.json).
+
+Экспериментальный reader связывает STORED nested JAR с точным физическим диапазоном родительского
+образа. Local header/central directory/filename/overlap проверяются стандартным
+ZIP parser; SHA256 и CRC всего nested body заново проверяются в уже существующем
+8GiB verification budget. Полный body не копируется в128MiB payload-window budget.
+Exact-range cache остаётся16MiB/4096 entries, теперь сохраняется между witnesses
+только в рамках одного reader/job; parsed ZipFile объекты между witnesses не делятся.
+Identity/path/layer/config guards и метаданные UNKNOWN не ослаблены.
+
+Microservices: payload windows91,016,461bytes вместо134,217,721, normalization
+1,303,884,800bytes ровно один раз, verification1,952,538,302bytes, copied0;
+1267 stored nested windows с CRC verification. Whole final1878 artifact records
+вместо188 — это **не** число TP. На размеченном owner91 дополнительный TP и1 новый
+conservative FP(jarmode-tools);41 FN остаются. Post-only audit разделяет27 FN с
+BudgetExceeded(какой именно guard — UNKNOWN),1 confirmed physical/netty identity
+UNKNOWN,1 без physical witness и12 без совпавшей записи existing Syft bridge.
+Это диагностика, не новые исключения из score. [Детали](../benchmarks/results/mvp-r106-v1/microservices-diagnosis.json).
+
+Состав Petclinic/Javalin/Dropwizard в согласованных project scopes не ухудшился.
+Метрики не объявляются независимой приёмкой: эти проекты раскрыты для настройки,
+Microservices остаётся ниже90%, metadata-only Dropwizard FN не удалены.
+Время403.187s — сумма4 actual Java pipelines, включая свежие Syft/Trivy scans,
+DB hashing, physical reads и публикацию; registry acquisition готового local archive
+не входит. Peak RSS/hard filesystem quota/безопасная параллельность не доказаны.
+
+JS R106:12 fresh image-only no-lock **попыток**,11 опубликованных результатов.
+На8 положительных roots компоненты306/9/1, P97.14%, R/exact-version coverage99.67%,
+F198.39%; macro P93.48%, R99.88%, matched-identity versions100%.
+Все3 coordinate multisets11 опубликованных результатов равны R105; прежние
+Axios/Fastify/Pino FP и Nest FN остаются. Сумма pipeline timings201.500s.
+Image-only direct0/0/103, UNKNOWN. [JS отчёт](../benchmarks/results/mvp-r106-v1/javascript/evaluation.json).
+
+Chalk завершился publication PermissionError(reconcile_convert_validate), final
+не опубликован. Его project reference пуст; он не становится успешным precision/
+recall примером и исключён из positive macro вместе с другими пустыми roots.
+Отдельный **однократный publisher-only diagnostic replay** тех же сохранённых
+каталогов и frozen code, без нового scanner/oracle, завершился за6.000s; все3
+coordinate multisets равны R105. Первая ошибка сохранена, точная операция/cause
+не установлены; это не доказанное исправление Windows locking.
+[Отрицательная попытка](../benchmarks/results/mvp-r106-v1/javascript/paired-chalk-v1/run.json),
+[отдельная диагностика](../benchmarks/results/chalk-publish-diagnostic-v1/run.json).
+
+Код и все16 image inputs frozen до анализа; evaluator открыл эталоны только после
+завершения всех16 попыток. [Общий протокол и operational status](../benchmarks/results/mvp-r106-v1/evaluation.json).
+После opt-in selector489 service/selected benchmark tests прошли,3 skips
+(492 total,20.31s); Ruff прошёл. Corpus остаётся29
+immutable пар, сторонние рецепты не расширялись, развёрнутые сервисы не менялись.
+Первая Linux RC попытка отдельно провалилась до Java evidence из-за заполненного
+512MiB `/tmp` в Syft scratch; она не является компонентной метрикой и не заменяет
+Windows protocol выше. Отдельный запуск ТОГО ЖЕ experimental snapshot с
+`TMPDIR/TMP/TEMP=/workspace/process-temp` проходит:517.271s pipeline/524.484s
+container, final/os/full1878/0/1878. Coordinate multisets всех3 views равны Windows;
+это parity, не новая независимая точность. [Linux scratch protocol](../benchmarks/results/mvp-r106-container-scratch-v1/run.json).
+Workspace scratch configuration исправлена отдельно для shipping default,
+а nested-window classifier по умолчанию не включается.
+
+Финальный RC `sbom-creator:mvp-r106-final`, config ID
+`sha256:ce5737b1915804d33f6c335a3b13f01e6a61da319ff64beba0b70b57dbc55613`:
+установленные43 source/schema файла совпадают с freeze; read-only/nonroot/no-socket/
+network-none configuration smoke прошёл за1.282s. Default selector=false,
+explicit=true и отказ на invalid flag проверены. TMPDIR/TMP/TEMP=/workspace
+доступны для записи, `/tmp` остаётся512MiB tmpfs. Experimental reader SHA256
+`26aca377bc5905da73b258bbacebc9a5b7c4de0726860bd82a16a2278078c00f`
+совпадает с ранее измеренным алгоритмом. Это selector/config proof, **не** повтор
+полного scanner/acquisition Micro pipeline после разделения default/opt-in.
+[RC configuration proof](../benchmarks/results/mvp-r106-container-selector-v1/config-smoke.json).
+
+Отдельный post-selector parity v2 прошёл на cached scanner catalogs со свежими
+physical reads и настоящим Syft publisher: experimental Micro50.766s, default
+Boot7.890s. У opt-in Micro adapted catalog, physical facts и serialized audit
+точно равны R106; все3 coordinate multisets и selected artifact IDs совпадают.
+У default=false Boot policy v4 и все3 views/IDs точно равны R105 stable.
+Это проверка сохранения режима/результатов, не новая independent accuracy.
+В первой попытке v1 post-publication harness ошибочно сравнил tuples в памяти
+с JSON lists: сами predictions/3views/IDs и сериализованные факты уже совпадали.
+Отрицательный harness report сохранён; это не ошибка сервиса.
+[Selector parity v2](../benchmarks/results/mvp-r106-selector-parity-v2/report.json),
+[сохранённый harness false assertion v1](../benchmarks/results/mvp-r106-selector-parity-v1/harness-failure.json),
+[финальный unit report](../benchmarks/results/mvp-r106-selector-unit.xml).
+
+Полные исходные артефакты сохранены локально:379 JSON,1,237,293,325bytes.
+В Git крупные JSON представлены lossless gzip с SHA256; вместе с небольшими
+JSON это58,700,664bytes. После checkout восстановление:
+`python benchmarks/package_mvp_r106.py restore`; проверка:
+`python benchmarks/package_mvp_r106.py verify`.
+[Manifest исходных и сжатых файлов](../benchmarks/results/mvp-r106-evidence-manifest.json).
+
+## R105 baseline: реальные итоговые SBOM
 
 | Запуск / область оценки | TP / FP / FN | Precision | Recall / exact-version coverage | Время |
 |---|---:|---:|---:|---:|
@@ -69,7 +180,7 @@ Microservices:1,303,884,800 normalized bytes,1,302,810,004 SHA256 verification b
 ещё7 owner scopes UNKNOWN с raw recall5–10%. Это реальный предел покрытия текущей
 ресурсной политики. Сложный проект не удаляется из проверки ради метрик.
 
-## JavaScript:12 свежих image-only запусков без project lockfiles
+## R105 baseline JavaScript:12 свежих image-only запусков без project lockfiles
 
 | Метрика компонентов | Результат |
 |---|---:|
@@ -90,7 +201,7 @@ Microservices:1,303,884,800 normalized bytes,1,302,810,004 SHA256 verification b
 Fastify47/3/0; Pino12/1/0 (transport fixture); Nest106/0/1
 (пропущен @tokenizer/token0.3.0). Высокая micro-метрика не скрывает Axios.
 
-## Граф и оставшиеся шаги до выпуска
+## R105 baseline: граф и оставшиеся шаги до выпуска
 
 Image presence подтверждает компонент поставки, но не прямоту. В image-only
 запусках все известные direct edges UNKNOWN/FN: JS103, Java16/55/443/100

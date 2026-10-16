@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "oracle_read": false,
+  "elapsed_seconds": 125.60999999998603,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-identity-payload-v5",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 6
+    },
+    "unknown_groups": {
+      "image_evidence": 6
+    },
+    "source_count": 0,
+    "image_count": 2406,
+    "selected_count": 2143,
+    "final_count": 2143,
+    "os_count": 0,
+    "full_count": 2143,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 178,
+      "UNKNOWN": 6
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 28.813
+  },
+  "timing": "fresh actual pipeline; local archive registry acquisition excluded",
+  "peak_rss": null
+}

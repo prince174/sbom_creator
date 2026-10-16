@@ -1,0 +1,11 @@
+{
+  "language": "java",
+  "name": "dropwizard",
+  "image": "docker.io/library/sbom-mvp@sha256:33df256562503299e6225f706339146bddc160e67067dfe2ade2c4737557c0d4",
+  "archive": "benchmarks/.work/paired-dropwizard-reactor-v1/image.tar",
+  "archive_sha256": "82b9e6a2c54d500ee9529fb07e528028cb022ab331730cdfb3a4cb42dfac7e71",
+  "repository_url": null,
+  "commit": null,
+  "project_execution": false,
+  "oracle_read": false
+}
