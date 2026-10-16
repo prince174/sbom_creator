@@ -76,6 +76,11 @@ host; credentials внутри URL запрещены. API всегда испо
 отдельный image job и сравнение составов. Образ можно назначить позднее через
 `POST /v1/source-analyses/{id}/image`. [Настройка и запросы source-first](docs/source-first.md).
 
+Готовый source SBOM проверяется по reference отдельно, даже если образа нет:
+`POST /v1/source-analyses/{id}/evaluations`. Evaluator запускается после публикации
+source и показывает компоненты, прямые связи, precision/recall и версии;
+генератор reference не получает. [Source verification](docs/verification-mode.md#проверить-source-sbom-без-образа).
+
 ## Результаты
 
 | Артефакт | Содержание |

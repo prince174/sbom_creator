@@ -11,6 +11,7 @@ import json
 import logging
 import re
 import stat
+import tempfile
 import threading
 import time
 import uuid
@@ -23,7 +24,7 @@ from packageurl import PackageURL
 
 from .acquire import image_reference, validate_commit, validate_repository_url
 from .pipeline import write_json
-from .publication import ERROR_TYPES, error_type_name
+from .publication import ERROR_TYPES, commit_directory, error_type_name
 from .validation import validate_cyclonedx
 
 SOURCE_ARTIFACTS = ('source.cdx.json', 'source-provenance.json', 'source-summary.json')
@@ -44,6 +45,11 @@ def _source_runner(*args, **kwargs):
 def _probe(*args, **kwargs):
     from .image_probe import probe
     return probe(*args, **kwargs)
+
+
+def _evaluate_source(*args, **kwargs):
+    from .source_evaluation import evaluate_source
+    return evaluate_source(*args, **kwargs)
 
 
 def _utc(timestamp):
@@ -74,6 +80,17 @@ def _regular(path, root):
             raise ValueError('Unsupported linked result')
     if not stat.S_ISREG(info.st_mode):
         raise ValueError('Result is not a regular file')
+    return path
+
+
+def _owned_directory(path, root):
+    current = root
+    for part in path.relative_to(root).parts:
+        current = current / part
+        info = current.lstat()
+        if (not stat.S_ISDIR(info.st_mode)
+                or getattr(info, 'st_file_attributes', 0) & 0x400):
+            raise ValueError('Unsupported result directory')
     return path
 
 
@@ -168,6 +185,7 @@ class SourceWorkflows:
         self.probe = probe or _probe
         self._lock = threading.RLock()
         self._capacity = threading.BoundedSemaphore(16)
+        self._evaluation_capacity = threading.BoundedSemaphore(1)
         self._executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix='source-sbom')
         self._stop = threading.Event()
         self._wake = threading.Event()
@@ -337,6 +355,70 @@ class SourceWorkflows:
                 return _regular(path, self.root)
             except (OSError, ValueError):
                 raise HTTPException(404, 'Comparison not found') from None
+
+    def evaluate(self, job_id, reference, scope='unknown', *, reference_commit=None):
+        """Evaluate only a completed, bound source prediction; never rerun it."""
+        with self._lock:
+            directory = self._directory(job_id)
+            state = self._read(directory)
+            if state['source_status'] != 'succeeded':
+                raise HTTPException(409, 'Source results are not published')
+        if not self._evaluation_capacity.acquire(blocking=False):
+            raise HTTPException(429, 'Source evaluation is busy')
+        try:
+            try:
+                _, source_sha, source_provenance_sha = self._source_binding(directory, state)
+            except Exception:  # noqa: BLE001 -- do not evaluate a missing or invalid prediction
+                raise HTTPException(503, 'Source results are unavailable') from None
+            try:
+                report = _evaluate_source(directory / 'source', reference, scope,
+                                          reference_commit=reference_commit)
+            except ValueError:
+                raise HTTPException(422, 'Invalid source evaluation reference or binding') from None
+            except Exception:  # noqa: BLE001 -- external error text is never an API response
+                raise HTTPException(503, 'Source evaluation failed') from None
+            try:
+                _, current_sha, current_provenance_sha = self._source_binding(directory, state)
+                if (source_sha, source_provenance_sha) != (current_sha, current_provenance_sha):
+                    raise ValueError('Source changed during evaluation')
+                evaluation_id = str(uuid.uuid4())
+                parent = directory / 'evaluations'
+                parent.mkdir(exist_ok=True)
+                _owned_directory(parent, self.root)
+                temporary = tempfile.TemporaryDirectory(prefix='.evaluation-', dir=parent)
+                try:
+                    staged = Path(temporary.name) / 'result'
+                    staged.mkdir()
+                    write_json(staged / 'reference.cdx.json', reference)
+                    reference_sha = hashlib.sha256((staged / 'reference.cdx.json').read_bytes()).hexdigest()
+                    report = dict(report, id=evaluation_id, source_analysis_id=job_id,
+                                  publication_binding={
+                                      'source_sbom_sha256': source_sha,
+                                      'source_provenance_sha256': source_provenance_sha,
+                                      'reference_artifact_sha256': reference_sha,
+                                      'reference_used_as_analysis_input': False})
+                    write_json(staged / 'evaluation.json', report)
+                    commit_directory(staged, parent / evaluation_id)
+                finally:
+                    try:
+                        temporary.cleanup()
+                    except Exception:  # noqa: BLE001 -- cleanup never masks commit or initial failure
+                        logging.getLogger('uvicorn.error').warning('source_evaluation.cleanup_failed')
+            except Exception:  # noqa: BLE001 -- publication errors preserve all source/image output
+                raise HTTPException(503, 'Source evaluation publication failed') from None
+            return {'id': evaluation_id, 'source_analysis_id': job_id,
+                    'evaluation_url': f'/v1/source-analyses/{job_id}/evaluations/{evaluation_id}'}
+        finally:
+            self._evaluation_capacity.release()
+
+    def evaluation_path(self, job_id, evaluation_id):
+        with self._lock:
+            directory = self._directory(job_id)
+        try:
+            _uuid(evaluation_id)
+            return _regular(directory / 'evaluations' / evaluation_id / 'evaluation.json', self.root)
+        except (HTTPException, OSError, ValueError):
+            raise HTTPException(404, 'Source evaluation not found') from None
 
     def _execute_source(self, directory, repository_url, commit, configured):
         try:

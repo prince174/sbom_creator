@@ -202,3 +202,8 @@ namespace, name и точной version. Это отдельная проекц�
 
 R&D, локальные результаты прогонов и test reports хранятся вне Git; product-код,
 проверки и инструкции остаются в репозитории.
+
+Готовый source SBOM можно также проверить по внешнему reference без образа:
+`POST /v1/source-analyses/{id}/evaluations`. Это отдельная post-analysis операция,
+которая не перезапускает cdxgen и не меняет source SBOM.
+[Контракт и метрики source verification](verification-mode.md#проверить-source-sbom-без-образа).

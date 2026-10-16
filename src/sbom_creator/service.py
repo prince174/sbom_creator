@@ -68,6 +68,15 @@ class AttachImageRequest(BaseModel):
     image: str = Field(max_length=2048)
 
 
+class SourceEvaluationRequest(BaseModel):
+    """Schema/oracle validation happens only after the source prediction exists."""
+    model_config = ConfigDict(extra="forbid")
+    reference_sbom: dict
+    reference_scope: Literal['build', 'runtime', 'unknown'] = 'unknown'
+    reference_commit: str | None = Field(
+        default=None, pattern=r"^(?:[0-9a-fA-F]{40}|[0-9a-fA-F]{64})$")
+
+
 def api_token():
     path = os.getenv("SBOM_API_TOKEN_FILE")
     try:
@@ -269,6 +278,18 @@ def create_app(workspace=None, runner=analyze, settings=None, *, source_runner=N
     def source_comparison(job_id: str):
         return FileResponse(source_workflows.comparison_path(job_id),
                             media_type="application/json", filename="comparison.json")
+
+    @app.post("/v1/source-analyses/{job_id}/evaluations", status_code=201,
+              dependencies=[Depends(auth)])
+    def evaluate_source(job_id: str, request: SourceEvaluationRequest):
+        return source_workflows.evaluate(job_id, request.reference_sbom, request.reference_scope,
+                                         reference_commit=request.reference_commit)
+
+    @app.get("/v1/source-analyses/{job_id}/evaluations/{evaluation_id}",
+             dependencies=[Depends(auth)])
+    def source_evaluation(job_id: str, evaluation_id: str):
+        return FileResponse(source_workflows.evaluation_path(job_id, evaluation_id),
+                            media_type="application/json", filename="evaluation.json")
 
     return app
 
