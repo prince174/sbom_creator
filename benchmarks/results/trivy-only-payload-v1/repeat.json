@@ -1,0 +1,30 @@
+{
+  "status": "PASSED",
+  "oracle_read": false,
+  "rows": [
+    {
+      "case": "boot",
+      "adapted_catalog_exact": true,
+      "audit_and_payload_exact": true,
+      "exported_producer_verified": [
+        {
+          "view": "final",
+          "purl": "pkg:maven/org.webjars.npm/font-awesome@4.7.0",
+          "producer": "trivy-java-archive-cataloger"
+        },
+        {
+          "view": "full",
+          "purl": "pkg:maven/org.webjars.npm/font-awesome@4.7.0",
+          "producer": "trivy-java-archive-cataloger"
+        }
+      ]
+    },
+    {
+      "case": "javalin",
+      "adapted_catalog_exact": true,
+      "audit_and_payload_exact": true,
+      "exported_producer_verified": []
+    }
+  ],
+  "mode": "Fresh bounded physical reads, cached passive engine catalogs; no end-to-end scan timing claim"
+}

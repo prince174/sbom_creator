@@ -1,0 +1,560 @@
+{
+  "runtime_changed": false,
+  "partition": "disclosed_development_only",
+  "boot": {
+    "components": {
+      "tp": 90,
+      "fp": 3,
+      "fn": 2,
+      "predicted": 93,
+      "reference": 92,
+      "precision": 0.967741935483871,
+      "recall": 0.9782608695652174,
+      "f1": 0.972972972972973
+    },
+    "version_accuracy_matched_identity": 0.989010989010989,
+    "exact_version_coverage": 0.9782608695652174,
+    "component_count_delta": 1,
+    "missing": [
+      "pkg:maven/org.hibernate.models/hibernate-models@1.1.1",
+      "pkg:maven/org.hibernate.orm/hibernate-core@7.4.1.Final"
+    ],
+    "extra": [
+      "pkg:maven/org.hibernate.models/hibernate-models@1.1.0",
+      "pkg:maven/org.hibernate/hibernate-core@7.4.1.Final",
+      "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.0"
+    ],
+    "packaging_unknown_charged_fp": 1,
+    "direct_unknown_charged_fn": 16,
+    "direct": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 16,
+      "predicted": 0,
+      "reference": 16,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "baseline_bounded_syft": {
+      "tp": 66,
+      "fp": 26,
+      "fn": 26,
+      "predicted": 92,
+      "reference": 92,
+      "precision": 0.717391304347826,
+      "recall": 0.717391304347826,
+      "f1": 0.717391304347826
+    }
+  },
+  "javalin": {
+    "rows": [
+      {
+        "path": "javalin",
+        "owner": [
+          "io.javalin",
+          "javalin",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 49,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 49,
+          "reference": 49,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 49,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 49,
+          "reference": 49,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 13
+      },
+      {
+        "path": "javalin-bundle",
+        "owner": [
+          "io.javalin",
+          "javalin-bundle",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 52,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 52,
+          "reference": 52,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 52,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 52,
+          "reference": 52,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 10
+      },
+      {
+        "path": "javalin-testtools",
+        "owner": [
+          "io.javalin",
+          "javalin-testtools",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 3,
+          "reference": 3,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-ssl",
+        "owner": [
+          "io.javalin.community.ssl",
+          "javalin-ssl",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 27,
+          "reference": 27,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": null,
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 7
+      },
+      {
+        "path": "javalin-micrometer",
+        "owner": [
+          "io.javalin",
+          "javalin-micrometer",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 14,
+          "reference": 14,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 14,
+          "reference": 14,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 4
+      },
+      {
+        "path": "javalin-utils/javalin-context-mock",
+        "owner": [
+          "io.javalin",
+          "javalin-context-mock",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 32,
+          "predicted": 4,
+          "reference": 36,
+          "precision": 1.0,
+          "recall": 0.1111111111111111,
+          "f1": 0.2
+        },
+        "version_metrics": null,
+        "count_delta": -32,
+        "missing": [
+          "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+          "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+          "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+          "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+          "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+          "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+          "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+          "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+          "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+          "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+          "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+          "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+          "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+          "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+          "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+          "pkg:maven/org.ow2.asm/asm@9.10.1"
+        ],
+        "extra": [],
+        "direct_unknown_charged_fn": 3
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-velocity",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 4,
+          "reference": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": null,
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-freemarker",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-thymeleaf",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 7,
+          "reference": 7,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": null,
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-mustache",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-handlebars",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 1,
+          "predicted": 10,
+          "reference": 11,
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523
+        },
+        "version_metrics": null,
+        "count_delta": -1,
+        "missing": [
+          "pkg:maven/com.github.jknack/handlebars@4.5.4"
+        ],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-pebble",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+        "components": null,
+        "raw_build_reference_delta": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 4,
+          "reference": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": null,
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-commonmark",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 2,
+          "reference": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      },
+      {
+        "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+        "owner": [
+          "io.javalin",
+          "javalin-rendering-jte",
+          "7.2.4-SNAPSHOT"
+        ],
+        "scope": "NATIVE_CDX_AGREEMENT",
+        "components": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 4,
+          "reference": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "raw_build_reference_delta": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "predicted": 4,
+          "reference": 4,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "version_metrics": {
+          "version_accuracy_matched_identity": 1.0,
+          "exact_version_coverage": 1.0
+        },
+        "count_delta": 0,
+        "missing": [],
+        "extra": [],
+        "direct_unknown_charged_fn": 2
+      }
+    ],
+    "components_micro": {
+      "tp": 128,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "components_macro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "scored_owners": 8,
+    "scope_unknown_owners": 6,
+    "direct_unknown_charged_fn": 55
+  },
+  "acceptance": false,
+  "three_views_each_retained": true,
+  "limitations": [
+    "No independent control or production integration",
+    "Raw peer inventory is not substituted for service final; unbound artifacts remain UNKNOWN",
+    "Image graph is never used as direct graph; source-owner integration absent",
+    "Macro is across module owners of one repository, not independent projects",
+    "Cached replay timing excludes scanning/acquisition; peak RSS unknown"
+  ]
+}

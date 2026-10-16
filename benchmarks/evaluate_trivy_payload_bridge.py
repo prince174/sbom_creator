@@ -30,8 +30,8 @@ def versions(actual, expected):
             'exact_version_coverage': len(actual & expected) / len(expected) if expected else None}
 
 
-def main():
-    output = ROOT / 'benchmarks/results/trivy-payload-bridge-v1'
+def main(output=None):
+    output = output or ROOT / 'benchmarks/results/trivy-payload-bridge-v1'
     if (output / 'evaluation.json').exists():
         raise FileExistsError('Preserve completed evaluation')
     freeze = read(output / 'candidate-freeze.json')

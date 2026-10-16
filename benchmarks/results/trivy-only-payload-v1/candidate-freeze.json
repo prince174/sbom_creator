@@ -1,0 +1,25 @@
+{
+  "mode": "Disclosed development replay, supplemental Trivy producer with physical witnesses",
+  "oracle_read": false,
+  "runtime_changed": false,
+  "input_sha256": {
+    "benchmarks/.work/paired-spring-petclinic-v1/analysis-bounded-jar-v2/source.syft.json": "b552edce65f53355f0d7502d41e7967258de239f1d96c2d4fcaccd4ff9e59fd9",
+    "benchmarks/.work/paired-spring-petclinic-v1/analysis-bounded-jar-v2/image.syft.json": "0a98d755999be2d009db8b6c1363a6db3a3bf1428181ddca2e5936269d080866",
+    "benchmarks/.work/paired-spring-petclinic-v1/analysis-bounded-jar-v2/provenance.json": "baf0e321874b9e5c0e4443e28189ba9d584a0a549672c3bc787e03aa51f879f8",
+    "benchmarks/results/bounded-boot-evidence-v2/witnesses.json": "5c168a76abb6537e310b26a4729764c5b1f25fe5c52b2b06ee1ab4675b2d8eef",
+    "benchmarks/results/trivy-boot-image-v1/sbom.json": "b1d255472a135f90ae8b10fd961d3d611d0f43f57720d1fc3de99790df280cca",
+    "benchmarks/.work/paired-javalin-reactor-v1/analysis-metadata-archive-v1/source.syft.json": "3276a0715bd2fae9f0064712866bc819b8990487547f24631aa3d9973f380115",
+    "benchmarks/.work/paired-javalin-reactor-v1/analysis-metadata-archive-v1/image.syft.json": "340e255d6d659fa18494b3f7fc7e3c7a76961066cddd45764ec4e33ffa1db316",
+    "benchmarks/.work/paired-javalin-reactor-v1/analysis-metadata-archive-v1/provenance.json": "122b446cff9e55651cb2f048b9730eba39fc9ad501d7ea8d4b2a0440d34a895c",
+    "benchmarks/results/bounded-javalin-evidence-v2/witnesses.json": "52f1e140fdaa431cc30c6539b6c5474efae8da02f3e5c6eb3e31080fa8c38508",
+    "benchmarks/results/trivy-reactor-image-v3/sbom.json": "c48e74dba0e9ba2b140ddb42642e96dc564320743b1d7198bf197698817ccf67"
+  },
+  "code_sha256": {
+    "benchmarks/trivy_only_payload.py": "26b7f13aaa84d2b2114666f8e9174f8eaf24597c073793fbc9f11d2adcbe11a9",
+    "benchmarks/trivy_payload_bridge.py": "781c72835e004bba42049fa0b412cd1ad6440019c384d3b880088b00a92affe9",
+    "benchmarks/bounded_jar_evidence.py": "6c2307d17f4f7d4a0f412cf3290ea2fd55ecd7c0887a177b40149b5226e5e22b",
+    "benchmarks/replay_trivy_only_payload.py": "39f0ecab7ba89b55415c399d8990ab2e20a7332c4c1e0a1f6653cc299997779c"
+  },
+  "experimental_cataloger": "trivy-java-archive-cataloger",
+  "policy": "experimental-trivy-only-payload-v1"
+}
