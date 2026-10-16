@@ -1,3 +1,20 @@
+## R112 — public Java DB compatibility, 2026-10-16
+
+Default v7 и ранжирование не менялись. Новая DB `491fe2dd…efd59` проверена actual
+current-service pipeline на прежних шести Java-образах: cached original Syft,
+fresh Trivy/physical/publisher,18 valid views до POST evaluator. Same known-delivered
+scope59 owner instances:3862/20/18,P99.4848/R/exactcoverage99.5361/F199.5104,
+macro repositories P98.8317/R99.0954. Все raw peer path/layer/config/property instances,
+18 final/os/full coordinate multisets и6 selected-ID sets равны старой DB.
+Это compatibility regression disclosed projects, не blind ranking promotion или
+полная opaque/shaded coverage;31 historical UNKNOWN и67 packaging UNKNOWN сохранены.
+JS latest fresh R109307/9/0 не переизмерен; Axios precision<90 остаётся видимым.
+[R112 report](../benchmarks/results/mvp-r112-evaluation-v1/evaluation.json).
+
+Installed current RC mvp-r112/46911efe… также прошёл один warm DBCP job:
+48 source hashes/defaultv7/3views/16exports,9.839s,networkNONE/download0.
+959unique pytestnodes PASS/10skips; build имел pip downloads. Не новый ranking sample.
+
 ## R111 — cold bootstrap verified; no new accuracy ranking
 
 Actual installed default Java coldDBCP110.125s (download100.489s),offlinewarm9.171s;

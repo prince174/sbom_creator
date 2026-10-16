@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "oracle_read": false,
+  "source_input": false,
+  "elapsed_seconds": 13.953999999997905,
+  "fresh_trivy_and_physical_seconds": 9.60899999999674,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-delivered-archive-v7",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 2
+    },
+    "unknown_groups": {
+      "image_evidence": 2
+    },
+    "source_count": 0,
+    "image_count": 200,
+    "selected_count": 198,
+    "final_count": 198,
+    "os_count": 0,
+    "full_count": 198,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 123,
+      "UNKNOWN": 2
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 3.234
+  },
+  "fresh_syft_image_scan": false,
+  "fresh_trivy_image_scan": true,
+  "fresh_physical_reads": true,
+  "actual_service_publisher": true,
+  "java_archive_components_default": true,
+  "observed_config_matches_prior_producer": true,
+  "java_identity_engine": {
+    "version": "0.75.0",
+    "database_sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59",
+    "database_bytes": 1554915328,
+    "database_metadata_sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2",
+    "database_metadata_version": 1,
+    "database_updated_at": "2026-10-16T01:00:20.589203513Z",
+    "database_next_update": "2026-10-19T01:00:20.589203Z",
+    "database_stale": false,
+    "database_validation": "full SHA256; supported read-only SQLite schema/index; not full integrity/authenticity",
+    "java_database_cache_status": "reused",
+    "java_database_cache_publication": "existing validated directory; no refresh",
+    "java_database_download_seconds": 0.0,
+    "java_database_validation_seconds": 2.4059999999881256
+  },
+  "commands": [
+    {
+      "command_kind": "version",
+      "label": "Trivy image version",
+      "offline_image_scan": false
+    },
+    {
+      "command_kind": "image",
+      "label": "Trivy image inventory",
+      "offline_image_scan": true
+    }
+  ],
+  "output_sha256": {
+    "coverage.json": "deb360917f9db39238b912850ae0d00aa1190fdbf76b672f3ba240101c275c86",
+    "decisions.json": "ac525b512024e5ceabdd4aa61c95d22d11be1b621d66a278ee165e18e7b1d5c0",
+    "direct-dependencies.json": "0506a656c682612cd139581c89f5c2d3e1269a86881a3c34d253e9606e089fd6",
+    "final.cdx.json": "e7e372b6ada32ec1c7aca96d0f2480e855427360b8a6496bc6866b1e178521d8",
+    "full.cdx.json": "556a8b50de6b93c3a08df64fcf44bfe09e8c5f8a807b26b2af4b5d02d075942c",
+    "image-identity-audit.json": "c231bde5df2cddcdf6dd7ee30c01b3776fd7335424a171fe12f30d523cab3bd6",
+    "image-original.syft.json": "340e255d6d659fa18494b3f7fc7e3c7a76961066cddd45764ec4e33ffa1db316",
+    "image-peer.cdx.json": "cd04464a59fb7b5f82ec6bf6e62128ab3da6ae1ce6a66c01dbfa1da858312b15",
+    "image.syft.json": "4ac81bc73bb7f63869a85c8da859044d8b4e472cda9626686650f80be7e85b7f",
+    "java-direct-dependencies.json": "fd84ab60bb6d119b1008197fa4f2d8fc3d251f918f906b12e06052976ffe6f6c",
+    "os.cdx.json": "38b55b8cca9bc40b03fa12d4a160183ccd5e62828bc5f28b36394a47b4411851",
+    "provenance.json": "8529c1682f2df60aeba872568726bd0b8abca589be18cc724bb4e34897b47804",
+    "review.json": "fbccaf2ee04e8d192a19491bec36aaa2f630444714679244ccfceacc9c2aceef",
+    "selected.syft.json": "3606e69cdc25e721fbbb13397fa87f9b4a39f758fe8c7619f35c2df978392727",
+    "source.syft.json": "a2c19c16f0590cf86099e1f360d54fcccb31ce6588126827daa271a354cf4e33",
+    "summary.json": "61a5114d99522861888eb97a73b908ca6d2cf923231227a60a65e18ba09a0b96"
+  },
+  "timing": "fresh Trivy/physical/publisher; cached Syft and local archive, excludes acquisition/download",
+  "peak_rss": null
+}

@@ -1,0 +1,74 @@
+{
+  "post_only": true,
+  "evaluator_sha256": "47b0866c0bfae7dc1fe39842ea1240d873e8dd6c029730fd2afc98040bebf497",
+  "prediction_freeze_sha256": "f3e388b13530e65b28c72e1348a2de680e3839d99a568f983e7167716636eac7",
+  "evaluator_helper_sha256": {
+    "evaluate_mvp_r112_java.py": "47b0866c0bfae7dc1fe39842ea1240d873e8dd6c029730fd2afc98040bebf497",
+    "evaluate_mvp_r110.py": "ce51e0526724eadaf7a44d8f1031f8e7612af944b886ca7d3053037992215532",
+    "compare_java_js.py": "f3983779ec5c22f16a2c08df348a6ab972f583576574f4a6a46cc62c8ad7e4b9",
+    "evaluate_mvp_runtime.py": "fa526538c891b93f621a8ddc5b18515f557b61ef396e6e2a9cdea32c7f02283c",
+    "evaluate_reactor_packaged_r109.py": "fb3643e81495c337c08454804b8479367d0c5fd715e5ace8987373a890ecdae3",
+    "evaluate_seekable_payload.py": "42413091cc5a9677c21f6e936ad5b16f27629f87cbf2acc78784465dcbf48074",
+    "evaluate_trivy_payload_bridge.py": "8a65e855fd25a90ed02556d4a6b039577d887525a8b3b0110898178c1a07071b",
+    "score_project_components.py": "cd8e26160b5377955cbbc326c63d0f19e71980ad71507d09d3f6818ae3bb6c84",
+    "run.py": "bf8ed33b18b133336c873f6c03d64a6e7e4238af6e33bd059d6fdf19fdcf96db",
+    "run_mvp_r110.py": "87c4d481982ee8222597d0247fd9caf14925f15d85ac43b247435b8520d7ff11",
+    "replay_java_db_peer_r111.py": "7e8cf697f303b1c5a4b43221d74d61e150819502ad7388d5e63c0571db79536d"
+  },
+  "prediction_marker_sha256": "3e5956bce138b1df96462d17a3dd218e814df1fc4cded6016228be1c184adfd3",
+  "delivered_label_report_sha256": "efe1c1c041b1f3553ca9028f03fd07dc3512a2d4d1ea44ae8b6bc342cdc67391",
+  "delivered_label_manifest_sha256": "850beea8f48b448fe0de500037942a65048b5551a3975cb4cfeb62a1767c93ea",
+  "evaluation_sha256": "ee8b70b615fc4a864946181bf6c38cc160197200f2feb29bb897aa8a86b32fb3",
+  "prior_output_sha256": {
+    "microservices": {
+      "final.cdx.json": "d0bb32432e62c9900a9ad097219bb2f32a8a382af048bd2c7ccb76e1c100f0a2",
+      "os.cdx.json": "d298819307416608537eb9ce05b53bb15f1a59d5eaf599609e7718f6f881ab34",
+      "full.cdx.json": "14e06faf4cb72a6144296d59cf3e990be07e09020fc1fe3bd146accd9dbc767f",
+      "selected.syft.json": "e3c83b31111b84138b7e06f4016cbf920f57f181024fc09e2fc7b0f4476e63d3",
+      "image-peer.cdx.json": "ac16e8a437936c7c81e69b4c8dd214df1632bfdfe21bbc4fdb8669e66ef60a24"
+    },
+    "boot": {
+      "final.cdx.json": "3ebdf77be2cffdce83c078bcac24db425a41e6f7ead76b146b8adea96c84424c",
+      "os.cdx.json": "40bc3727f7942cd0ff13bbf4e25b4d3b60820ccfa51b802fe9c52ce7c671872d",
+      "full.cdx.json": "72fb11bd70d8586d00be0daeb0da0968c42af43ac59a0dbbbac9cb1269665e46",
+      "selected.syft.json": "e6b8e2db05c3424975a8ff1115c3d822d686a15fe9933398939d4a0ba0099605",
+      "image-peer.cdx.json": "736f41c2b4d56007c143b344721746354fb2ebfa1634e8bfa9f6121eec0b7395"
+    },
+    "javalin": {
+      "final.cdx.json": "60673b662108a4c9c36c67292564f1b992647df28fcfb028eeda363b92cced9d",
+      "os.cdx.json": "1c10087ec43847d40d73f63e47bae63058695f9c39231f114376041f60dbc43b",
+      "full.cdx.json": "e7a052bde292593e87509f66dcf369e2c76eb1d32c468291177a78aa3f52d1e8",
+      "selected.syft.json": "3606e69cdc25e721fbbb13397fa87f9b4a39f758fe8c7619f35c2df978392727",
+      "image-peer.cdx.json": "17999ab2e69b6f80177bb30151e8ff5aea0239fcd52eb648c0e17cafa09fd749"
+    },
+    "dropwizard": {
+      "final.cdx.json": "d59e9c75ae97775f0bb272f95b99d6f69d90e5fdeaf58b992b399a43db665501",
+      "os.cdx.json": "5c5a1f768b68a64d3f63d2ff5dfd11437320c01e1e9ac91ac7f48d909dfe8c9c",
+      "full.cdx.json": "c595fd6f19f7758c9d163a6a935f47501a7a1331ce2a4f9e7eb5ec3be848093b",
+      "selected.syft.json": "c259d2964a1622a4fdfb6d880c1e0bf3cb5e695aa6afb17960969646c1f3d996",
+      "image-peer.cdx.json": "1ab5b9de1f7035d27dd93a96b85a22ef7235f8661955d14a7dec77831d385365"
+    },
+    "rest": {
+      "final.cdx.json": "e12db4f0a42673e8a4f0e478f0be43b563b8f19e12399f72271d7818bf285ab3",
+      "os.cdx.json": "c8704137be4ac5d34e5ea628e9868cf7c1e42a80f31a517e9e0ba16863aedabd",
+      "full.cdx.json": "3817fee09223c3c1ed6bfd9c6f0550a56a976a9f67e908271021a3591853c1d6",
+      "selected.syft.json": "3baf761791b664a7f40ab2d44b0244584507ec8ece9f7f0ce2b4391e7b6a7f40",
+      "image-peer.cdx.json": "d3342929379587cf170627b6f1e8472e87dcceacc906a108b73ad69e8af58f80"
+    },
+    "dbcp": {
+      "final.cdx.json": "d2676bdc4b1b25051d2cf60f70a84f35efbe7cc004a83a715d34906faa828800",
+      "os.cdx.json": "1c9feea357960db69faf48f99880bcd462ac644ce2c586be9beea36259f8f536",
+      "full.cdx.json": "b33c6c223a8f1594a8dd5b97ac31dd31dc8f3aa807c9e10725e0fa0374b35cb8",
+      "selected.syft.json": "bec909baad67e39aae8ff99f8d713975af5e80c87f397b5d01d56ed977630abb",
+      "image-peer.cdx.json": "d23e5983346a2b298e8ef2ea04aa10cc90fb86c70ef7d125b47d3bb952d223cd"
+    }
+  },
+  "prior_final_sha256": {
+    "microservices": "d0bb32432e62c9900a9ad097219bb2f32a8a382af048bd2c7ccb76e1c100f0a2",
+    "boot": "3ebdf77be2cffdce83c078bcac24db425a41e6f7ead76b146b8adea96c84424c",
+    "javalin": "60673b662108a4c9c36c67292564f1b992647df28fcfb028eeda363b92cced9d",
+    "dropwizard": "d59e9c75ae97775f0bb272f95b99d6f69d90e5fdeaf58b992b399a43db665501",
+    "rest": "e12db4f0a42673e8a4f0e478f0be43b563b8f19e12399f72271d7818bf285ab3",
+    "dbcp": "d2676bdc4b1b25051d2cf60f70a84f35efbe7cc004a83a715d34906faa828800"
+  }
+}

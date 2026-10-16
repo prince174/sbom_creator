@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "seconds": 29.905999999988126,
+  "command": [
+    "docker",
+    "build",
+    "--progress=plain",
+    "--tag",
+    "sbom-creator:mvp-r112",
+    "."
+  ],
+  "frozen_source_unchanged": true
+}

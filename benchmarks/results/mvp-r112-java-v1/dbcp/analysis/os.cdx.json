@@ -1,0 +1,78 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:25a8fcb8-8ae3-5532-8661-9df894c42fa1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-16T12:41:47+05:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.51.1"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "ff0e98f94efc9a45",
+      "type": "container",
+      "name": "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-commons-dbcp-v1\\image.tar",
+      "version": "sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64"
+    },
+    "properties": [
+      {
+        "name": "sbom-creator:auxiliary-components-omitted",
+        "value": "4"
+      },
+      {
+        "name": "sbom-creator:build-link",
+        "value": "unverified"
+      },
+      {
+        "name": "sbom-creator:runtime-execution",
+        "value": "not-assessed"
+      },
+      {
+        "name": "sbom-creator:unknown-count",
+        "value": "0"
+      },
+      {
+        "name": "sbom-creator:provenance",
+        "value": "{\"mode\": \"rules\", \"source_kind\": \"not-provided\", \"request\": {\"repository_url\": null, \"commit\": null, \"image\": \"docker.io/library/sbom-r112-input@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\"}, \"image\": {\"image\": \"docker.io/library/sbom-r112-input@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"immutable_reference\": \"docker.io/library/sbom-r112-input@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"image_digest\": \"sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"platform_digest\": \"sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"registry_digest\": null, \"acquisition\": \"archive\", \"image_id\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"image_config_digest\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"requested_platform\": \"linux/amd64\", \"platform\": \"linux/amd64\", \"repo_digests\": [], \"syft_version\": \"1.51.1\", \"scope\": \"squashed\", \"container_started\": false, \"build_link\": \"unverified\", \"acquisition_method\": \"syft-direct-v1\", \"payload_evidence\": {\"a6561b27cc4d7e4e\": {\"status\": \"confirmed\", \"path\": \"/application/commons-dbcp2-2.13.0.jar:org/apache/commons/dbcp2/AbandonedTrace.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"9cbb826ee965ffbf\": {\"status\": \"confirmed\", \"path\": \"/application/commons-logging-1.3.4.jar:org/apache/commons/logging/Log.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"e6d2ad05ad9d64eb\": {\"status\": \"confirmed\", \"path\": \"/application/commons-pool2-2.12.0.jar:org/apache/commons/pool2/BaseKeyedPooledObjectFactory.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"97bf7488b77b8a33\": {\"status\": \"confirmed\", \"path\": \"/application/jakarta.transaction-api-1.3.3.jar:javax/transaction/Transactional$TxType.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}}, \"identity_binding_envelope\": {\"catalog_sha256\": \"0058d995863108bd12ff5481edff5e672df4983dcee52165a14230b35d366039\", \"payload_sha256\": \"e75d9ef43c79b4e8ff2177761e3c873e70e78634bb752d6b40f6cff76f9eabef\", \"image_config_digest\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"artifacts\": {\"a6561b27cc4d7e4e\": {\"status\": \"BOUND\", \"reason\": null}, \"9cbb826ee965ffbf\": {\"status\": \"BOUND\", \"reason\": null}, \"e6d2ad05ad9d64eb\": {\"status\": \"BOUND\", \"reason\": null}, \"97bf7488b77b8a33\": {\"status\": \"BOUND\", \"reason\": null}}, \"scope\": \"Identity corroboration only; no directness or execution claim\", \"reader_policy\": \"verified-java-archive-component-v1\", \"archive_presence\": {}, \"archive_presence_sha256\": \"44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a\", \"archive_database_sha256\": \"491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59\"}, \"java_reader_policy\": \"verified-java-archive-component-v1\", \"java_identity_engine\": {\"version\": \"0.75.0\", \"database_sha256\": \"491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59\", \"database_bytes\": 1554915328, \"database_metadata_sha256\": \"40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2\", \"database_metadata_version\": 1, \"database_updated_at\": \"2026-10-16T01:00:20.589203513Z\", \"database_next_update\": \"2026-10-19T01:00:20.589203Z\", \"database_stale\": false, \"database_validation\": \"full SHA256; supported read-only SQLite schema/index; not full integrity/authenticity\", \"java_database_cache_status\": \"reused\", \"java_database_cache_publication\": \"existing validated directory; no refresh\", \"java_database_download_seconds\": 0.0, \"java_database_validation_seconds\": 2.3910000000032596}, \"java_image_status\": \"corroborated\"}, \"prediction_inputs\": {\"image_syft_inventory\": \"cached original Syft 1.51.1\", \"trivy_inventory\": \"fresh offline image scan\", \"source_project\": \"not provided\"}, \"created_at\": \"2026-10-16T07:41:46.679731+00:00\", \"build_link\": \"unverified\", \"syft_version\": \"1.51.1\", \"syft_schema\": \"16.1.10\", \"sbom_creator_version\": \"0.7.0\", \"assessment\": {\"mode\": \"rules\", \"score\": null, \"verified_model\": false}, \"input_hashes\": {\"source.syft.json\": \"5b35fbed3d6a689c678eee1963b73a7a1aa18da5ed143ad9a29b53e6b09642ba\", \"image.syft.json\": \"bec909baad67e39aae8ff99f8d713975af5e80c87f397b5d01d56ed977630abb\"}}"
+      },
+      {
+        "name": "sbom-creator:assessment-mode",
+        "value": "rules"
+      },
+      {
+        "name": "sbom-creator:policy-version",
+        "value": "image-delivered-archive-v7"
+      },
+      {
+        "name": "sbom-creator:coverage",
+        "value": "no-known-gaps"
+      },
+      {
+        "name": "sbom-creator:payload-verification",
+        "value": "performed"
+      },
+      {
+        "name": "sbom-creator:inventory-scope",
+        "value": "os-packages"
+      },
+      {
+        "name": "sbom-creator:project-build-usage",
+        "value": "not-established"
+      },
+      {
+        "name": "sbom-creator:cross-scope-relationships",
+        "value": "See full.cdx.json; filtered in this view"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": []
+}

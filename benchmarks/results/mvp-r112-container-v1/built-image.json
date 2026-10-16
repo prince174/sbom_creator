@@ -1,0 +1,83 @@
+{
+  "Id": "sha256:46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8",
+  "RepoTags": [
+    "sbom-creator:mvp-r112"
+  ],
+  "RepoDigests": [
+    "sbom-creator@sha256:46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8"
+  ],
+  "Comment": "buildkit.dockerfile.v0",
+  "Created": "2026-10-16T07:46:40.295977364Z",
+  "Config": {
+    "User": "10001:10001",
+    "ExposedPorts": {
+      "8080/tcp": {}
+    },
+    "Env": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.12.14",
+      "PYTHON_SHA256=5c8462af5790baf43a321a1559dbe0db06d1be4300fb85fb53c40060668e548a",
+      "HOME=/home/sbom",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "SBOM_WORKSPACE=/workspace",
+      "TMPDIR=/workspace",
+      "TMP=/workspace",
+      "TEMP=/workspace",
+      "SBOM_IMAGE_TEMP_DIR=/workspace/image-cache",
+      "SBOM_TRIVY_CACHE_DIR=/workspace/trivy-cache"
+    ],
+    "Cmd": [
+      "sbom-creator-service"
+    ],
+    "WorkingDir": "/app",
+    "ArgsEscaped": true,
+    "Healthcheck": {
+      "Test": [
+        "CMD-SHELL",
+        "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)\""
+      ],
+      "Interval": 30000000000,
+      "Timeout": 3000000000
+    }
+  },
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Size": 789265492,
+  "RootFS": {
+    "Type": "layers",
+    "Layers": [
+      "sha256:1d69a5fd31932841d7825ef4780c06f008eea65aaa9f3110fe09d5832ed5c7d8",
+      "sha256:32488c65fb2595aaf67371142ffe3ffdc39660ab83b4cfb35ebd9fdf751997ff",
+      "sha256:4a3d4f8d9fbb21dbb593489962d9f6a77bb0086315a5d3c66e67738fdf27029b",
+      "sha256:38ed9d88ee80c1d99e220af90592650b2b4126bd5bcfa2612df3fdeb42e8844c",
+      "sha256:45deba3f59f7de5b6152bef468a22c2cfca83f88f59441f4a9ab459ca09038ae",
+      "sha256:f0652bb936d1c4595b003ec9190d9e6564f8e7febd52bfef3585b73000f547c3",
+      "sha256:c3a588369952d73090539c2b3f03b7cb07eafee866d5958013173c8d7c289f82",
+      "sha256:5f14a7b2b5c6b9daeb03a33e70b85299f828bd0ca8d9aae21841ac8cc63713c4",
+      "sha256:18511e9f7dde0a8d6dbb152ad9fc597974c3dfd78ffc3d7149db12667cf7cf9f",
+      "sha256:85936fd5542f62af3de409c7a4e3e18a2f5a73b855bf32c52729da4ead1b96c6",
+      "sha256:4af6890c2c285944e304dd9d1d5bf3f9ec5e10441a2c5cf69ed5f7bea45316d0",
+      "sha256:1c2d05e3f5a37c8a4f575c9ea2a03d6249e152cc4a2aa280187c302116c10e3c",
+      "sha256:c86b1d177e713e3e5230ed83359be5fd7946a7cf45e454dab87d36d9fdb8f0b7",
+      "sha256:96c2e86108814702baede2533da83eeddee9cf4835774a3af6cd503a3eae781c"
+    ]
+  },
+  "Metadata": {
+    "LastTagTime": "2026-10-16T07:46:41.582451091Z"
+  },
+  "Descriptor": {
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "digest": "sha256:46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8",
+    "size": 856
+  },
+  "Identity": {
+    "Build": [
+      {
+        "Ref": "cqiu8dab8zv0rbr14vh26cnuw",
+        "CreatedAt": "2026-10-16T07:46:42.311029887Z"
+      }
+    ]
+  }
+}

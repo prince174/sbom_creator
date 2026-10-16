@@ -1,0 +1,1 @@
+{"status": "passed", "network": false, "source_volume_read_only": true, "reference_or_old_database_accessed": false, "files": {"trivy-java.db": {"bytes": 1554915328, "sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59"}, "metadata.json": {"bytes": 150, "sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2"}}}

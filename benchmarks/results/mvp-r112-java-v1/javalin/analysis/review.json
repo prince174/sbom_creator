@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "unknown_count": 2,
+  "group_counts": {
+    "image_evidence": 2
+  },
+  "observation_counts": {
+    "image_only": 2
+  },
+  "reason_counts": {
+    "INSUFFICIENT_IMAGE_EVIDENCE": 2
+  },
+  "items": [
+    {
+      "candidate_id": "0fb62c35d96efd4ee92787d14f81dcd5e7b696163ef37c665cbf4202b280869a",
+      "identity": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "a8b0c0a857098c82"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.5.4"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "ea6c0f5ae4768dcc4df832d355bf78f524376b7c7bc309d7db1f065dba3e5ad6",
+      "identity": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "a8662cc9393675e5"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.13.2"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    }
+  ],
+  "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."
+}

@@ -1,3 +1,13 @@
+## R112 — component release verification, direct graph unchanged
+
+Current runtime `88de091` проверен с новой публичной DB на шести прежних Java-образах:
+same known-delivered component score3862/20/18,P99.4848/R99.5361,18 semantic views
+равны прежним. Cached Syft/fresh Trivy+physical+publisher, не source resolution.
+Image-only direct638 Java/103 JS UNKNOWN/FN остаются отдельно и не становятся
+known edges из-за archive presence. Source/cdxgen — optional graph enrichment;
+неизвестный CI recipe не блокирует image SBOM. Direct ranking не менялся.
+[R112 accuracy](java-js-service-accuracy.md).
+
 # Сравнение решений: топ-5 по прямым зависимостям
 
 ## R111 public identity DB bootstrap

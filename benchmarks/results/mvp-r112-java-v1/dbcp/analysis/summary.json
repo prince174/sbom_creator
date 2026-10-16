@@ -1,0 +1,21 @@
+{
+  "status": "succeeded",
+  "partial": false,
+  "assessment_mode": "rules",
+  "policy_version": "image-delivered-archive-v7",
+  "payload_verification": "performed",
+  "unknown_reasons": {},
+  "unknown_groups": {},
+  "source_count": 0,
+  "image_count": 4,
+  "selected_count": 4,
+  "final_count": 4,
+  "os_count": 0,
+  "full_count": 4,
+  "inventory_scope": "non-os-packages-v1",
+  "decisions": {
+    "INCLUDE": 4
+  },
+  "cyclonedx_valid": true,
+  "reconciliation_seconds": 0.422
+}

@@ -1,0 +1,89 @@
+{
+  "phase": "warm",
+  "reference_accessed": false,
+  "source_input": false,
+  "status": "passed",
+  "summary": {
+    "status": "succeeded",
+    "partial": false,
+    "assessment_mode": "rules",
+    "policy_version": "image-delivered-archive-v7",
+    "payload_verification": "performed",
+    "unknown_reasons": {},
+    "unknown_groups": {},
+    "source_count": 0,
+    "image_count": 4,
+    "selected_count": 4,
+    "final_count": 4,
+    "os_count": 0,
+    "full_count": 4,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 0.257
+  },
+  "image_config_digest": "sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be",
+  "java_identity_engine": {
+    "version": "0.75.0",
+    "database_sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59",
+    "database_bytes": 1554915328,
+    "database_metadata_sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2",
+    "database_metadata_version": 1,
+    "database_updated_at": "2026-10-16T01:00:20.589203513Z",
+    "database_next_update": "2026-10-19T01:00:20.589203Z",
+    "database_stale": false,
+    "database_validation": "full SHA256; supported read-only SQLite schema/index; not full integrity/authenticity",
+    "java_database_cache_status": "reused",
+    "java_database_cache_publication": "existing validated directory; no refresh",
+    "java_database_download_seconds": 0.0,
+    "java_database_validation_seconds": 2.420615238021128
+  },
+  "database_sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59",
+  "database_bytes": 1554915328,
+  "metadata": {
+    "Version": 1,
+    "NextUpdate": "2026-10-19T01:00:20.589203Z",
+    "UpdatedAt": "2026-10-16T01:00:20.589203513Z",
+    "DownloadedAt": "2026-10-16T07:11:22.521364172Z"
+  },
+  "metadata_sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2",
+  "vulnerability_database_absent": true,
+  "license_or_project_execution_requested": false,
+  "source_kind": "not-provided",
+  "output_hashes": {
+    "coverage.json": "794c42a5a07de6287ac1316d730f53bc691dfd40604a41f91a9f73dd20e23666",
+    "decisions.json": "bba4f35c42d2fb1c96dce0f0d3a95f698f2146036004b2c04ef5de092ee5c815",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "c59b05aa100a12e429f4c8ccddf87c1de4aac82f7558e8e077edb2bf2734f527",
+    "full.cdx.json": "00cd3162dc5272e7587aa4f68193337b784249edb25d2706895d873770d66fee",
+    "image-identity-audit.json": "70c714afa34818f7bde72332e76e2f973addc28324ed90f250f2192b2458424a",
+    "image-original.syft.json": "affa788401c78666349025c0473c297057be9987fd8b551b2c3392ae8cff404e",
+    "image-peer.cdx.json": "6f981f2d15d9bb7a86a8f6d8c064556ea873956d66a7cd3ba87a6b0381c47d3e",
+    "image.syft.json": "affa788401c78666349025c0473c297057be9987fd8b551b2c3392ae8cff404e",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "942656e688304903ed904cfe153c3b62b2b2ada05d2ac6d81bc42b97c110ee81",
+    "provenance.json": "8491a8322b145e6d94475136d675cdadd46418e1fb045ff0aba361c556fe8a56",
+    "review.json": "8cc4453b82e9a6a670d93e9d098453226683a2c014e3160b024b07db2fe79b44",
+    "selected.syft.json": "affa788401c78666349025c0473c297057be9987fd8b551b2c3392ae8cff404e",
+    "source.syft.json": "a90c68673681222f798fe38bc439673e6d02ca9185fa90ee2e532756abcf9990",
+    "summary.json": "58443b49dd7fadf50e96ac178cecad53e015e061d2a9d59210bb31bfb991d072"
+  },
+  "pipeline_seconds": 9.839,
+  "database_exists_after_pipeline": true,
+  "cache_files_after_pipeline": [
+    {
+      "path": "fanal/fanal.db",
+      "bytes": 32768
+    },
+    {
+      "path": "java-db/metadata.json",
+      "bytes": 150
+    },
+    {
+      "path": "java-db/trivy-java.db",
+      "bytes": 1554915328
+    }
+  ]
+}

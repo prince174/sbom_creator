@@ -1678,3 +1678,59 @@ R111 pack85JSON3,431,636rawB ->2,101,338B JSON+gzip(4large/2uniquegzip),manifest
 SHAdfd8685e0872267314c2f6b661f462acba0143b79352b0363f3d154dd9a398a3.
 package_mvp_r111.py restore/verify; originalsretained,newDBinnamedvolumeNOTGit,
 oldR105–R110manifestsunchanged.
+
+## R112 — new public Java DB, six actual publications and cache-path fixes, 2026-10-16
+
+Runtime `88de091` pushed. Removed peer mkdir-before-validation and normalized relative
+cache to one lexical absolute path before checked ancestors/tool execution. Unsafe
+path maps to fixed CACHE_INVALID.722 full-service tests PASS/10skips,188 selected
+benchmark regressions PASS; three new peer tests cover preflight/no side effects,
+native linked parent and cold/warm relativecache vs subprocess cwd. Native Linux
+actual peer with copied48source/networkNONE/no tool/DB/oracle: v2 PASS0skip.
+v1 retained rawValueError diagnostic, corrected with fixed wrapper before freeze.
+Interim selected testv1 and nonrepo-env fullv2 kept; final repo.venv full-service-v1.
+
+Retained R111 new publicDB exported read-only volume -> separate R112 cache:
+1,554,915,328B SHA491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59,
+metadataSHA40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2.
+Export9.579s, no network/source/oracle/oldDB mount. Old measuredDB c26ec91d… unchanged.
+
+Frozen current48source/schema+tools+siximagearchives+cached ORIGINAL Syft/empty-source
+catalogs+newDB/metadata before predictions. Fresh offline Trivy/physical/identity gates/
+actual publisher, no download/acquisition/build/reference. All six completed0fail,
+18schemas96outputs sealed before POST evaluator. Case seconds Micro118.953,Boot19.031,
+Jav13.954,Drop86.797,REST20.781,DBCP7.094; sum266.610 excludes cached Syft/acquisition/
+download/freeze. MarkerSHA3e5956bce138b1df96462d17a3dd218e814df1fc4cded6016228be1c184adfd3,
+freezeSHAf3e388b13530e65b28c72e1348a2de680e3839d99a568f983e7167716636eac7.
+
+POST same packaged labels: Micro1341/12/8, Boot90/3/2, Jav184/0/1,Drop2140/2/5,
+REST104/3/2,DBCP3/0/0; aggregate3862/20/18,P99.4848/R/exactcoverage99.5361/F199.5104,
+conditionalversions99.9482,delta+2 (3882pred/3880known). Repository macroP98.8317/
+R99.0954/F198.9626; all six repositories/59knownowner sets >90 in this partial scope.
+All six raw Trivy GAV/property/path/layer/config multisets,18 final/os/full coordinate
+multisets and6 selected-IDsets exactly same oldDB,0added/removed. Separate historical
+view1371/7/5 unchanged,31scopeUNKNOWN,59globalshadingpartial/67unknown packaging kept.
+Not fresh blind acceptance/independent metadata-only coverage/globalrecall guarantee.
+JS R109307/9/0 latestfresh notremeasured; fixtureFP/Chalknegative retained.
+No ranking change, no source/direct inference, no foreignrecipes/40pair gate/deployment.
+[Predictions](../benchmarks/results/mvp-r112-java-v1/predictions-complete.json),
+[POST comparison](../benchmarks/results/mvp-r112-evaluation-v1/evaluation.json).
+
+Installed currentRC sbom-creator:mvp-r112 config46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8,
+build29.906s (pip downloads allowed),onewarmDBCPnetworkNONEpipeline9.839s/container13.563s,
+48installedhashes/defaultv7/3schemas/16exports/actualreadonlyprogramSHA+CmdArgs PASS.
+NewDB491fe/metadata40b61 unchanged,download0. All3views4/0/4 and selectedIDs exact
+currenthost. Nonroot10001/readonly/nosocket/source/ref/secrets,3GiB2CPU;onlyjoboffline,
+notwholebuild. Container removed,ownedrunsubdir/nativevolume retained. No newaccuracy
+claim/installedall6claim/OSbitparity/RSS/hardquota/concurrencyacceptance.
+Final959unique passingpytestnodes10skips (722service+188bench+37eval+5targetedwith1repeat+8container),
+Ruff/seals/schema/hash checks PASS. Containerunitv1stringassertfailure preserved,
+v2correctstructuralcheckPASS,oneactualbuild/jobPASSfirstattempt. RuntimeGitbinding
+45exact/3CRLF-LF-only;actual48installedbytes exactfreeze, snapshots unchanged.
+
+R112 lossless pack172JSON502,626,212rawB ->38,666,627trackedJSON+gzipB,
+48large/45uniquegzip, manifestSHA16fa49694e51a85974aaeeaceb98a7438c7a8e45b830a5758277f9cc20791ad1.
+package_mvp_r112.py restore/verify; originals/R105–R111 manifests preserved.
+Next practical saved Chalk publication failure diagnosis/genericidentity ambiguity,
+not unchanged reader/transport/DB replay or newforeignrecipes. Coverage limitations
+remain explicit; component MVP threshold is not universal/fullCI/directgraph claim.

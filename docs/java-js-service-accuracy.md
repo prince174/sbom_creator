@@ -1,4 +1,92 @@
-# Java / JavaScript: image-first MVP — R111, 2026-10-16
+# Java / JavaScript: image-first MVP — R112, 2026-10-16
+
+**Новая публичная Java DB проверена на всех шести прежних Java-образах.**
+Current runtime `88de091`, release default archive-components v7. Новая DB SHA256
+`491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59`
+экспортирована из сохранённой R111 native volume в отдельный cache без сети.
+Прежняя DB `c26ec91d…` и все immutable пары сохранены. Исправлены два adapter bugs:
+относительный cache path теперь одинаков для validator/Trivy, ancestors проверяются
+до создания child или tool invocation; unsafe path даёт `CACHE_INVALID`.
+
+| Язык / область | TP / FP / FN | Precision | Recall / exact-version coverage | F1 | Count delta |
+|---|---:|---:|---:|---:|---:|
+| Java R112,6 repositories/59 known owner sets |3862/20/18|99.4848%|99.5361%|99.5104%|+2|
+| JS R109,12 fresh no-lock attempts/8 positive roots |307/9/0|97.1519%|100%|98.5554%|+9|
+
+Java:3882 predicted versus3880 known owner/GAV-version instances; repository macro
+P98.8317/R99.0954/F198.9626%; conditional matched-identity versions99.9482%.
+Все шесть repositories и59 известных owner sets >90% по P/R/exact-version coverage
+в этой разметке. Это известные поставленные зависимости, **не global recall
+для opaque/shaded code**. Исторические31 scope-UNKNOWN сохранены отдельной view;
+все59 global component scopes partial,67 packaging observations UNKNOWN.
+Archive-complete47/56 reactor owners из прежней проверки не означает полный shaded inventory.
+
+| Java, тот же delivered scope | TP / FP / FN | P / R / F1 | Fresh Trivy + physical + publisher |
+|---|---:|---:|---:|
+| Microservices,8 owners |1341/12/8|99.113/99.407/99.260%|118.953s|
+| Boot,1 owner |90/3/2|96.774/97.826/97.297%|19.031s|
+| Javalin,14 owners |184/0/1|100/99.459/99.729%|13.954s|
+| Dropwizard,34 owners |2140/2/5|99.907/99.767/99.837%|86.797s|
+| REST,1 owner |104/3/2|97.196/98.113/97.653%|20.781s|
+| DBCP,1 owner |3/0/0|100/100/100%|7.094s|
+
+R112 — cached ORIGINAL Syft1.51.1 и cached empty-source catalog, **свежие** offline
+Trivy0.75.0, physical reads, identity/archive gates и actual service publisher.
+Все18 final/os/full и96 outputs sealed до отдельного POST evaluator. Frozen48
+source/schema, tools,6archives, inventories, DB/metadata не менялись. Никаких source
+projects, reference caches, registry acquisition, builds или downloads. Сумма266.610s
+исключает Syft scans/acquisition/download/freeze; peak RSS не измерялся.
+Это regression на шести раскрытых проектах, не fresh blind acceptance.
+
+Все шесть raw Trivy component/property/path/layer/config multisets **точно равны**
+прежним результатам со старой DB; added/removed0. Все18 final/os/full coordinate
+multisets и6 selected-artifact-ID sets также равны. Результат подтверждён новым
+POST scoring тех же packaged labels, а не перенесён из одного равенства counts.
+[Полный POST report](../benchmarks/results/mvp-r112-evaluation-v1/evaluation.json),
+[prediction seal](../benchmarks/results/mvp-r112-java-v1/predictions-complete.json).
+
+JS в R112 заново не сканировался: приведены последние12 fresh R109 no-lock runs;
+macro8positive P93.4808/R100%, conditional versions100%,4empty roots не успехи.
+Axios per-project precision всё ещё <90%;9 консервативных fixture FP сохранены.
+Image-only direct638 Java/103 JS UNKNOWN/FN — отдельная optional graph axis,
+не component-MVP gate. Public DB и Trivy коррелированы, SHA1 association не доказывает
+publisher authenticity/global GAV uniqueness. Metadata-only201 proofs остаются
+disclosed R108, независимая новая metadata-only acceptance не заявляется.
+
+Runtime guard проверен722 full-service tests passed/10skips и188 benchmark
+regressions; native Linux actual peer symlink guard PASS/0skips. Windows новый
+native-link skip покрыт этой отдельной проверкой, прежние9 skips сохранены.
+Первый native harness обнаружил raw diagnostic вместо fixed code; сохранён v1,
+после wrapper `CACHE_INVALID` — v2 PASS. Guard/relative path менялись до freeze;
+reader/identity algorithms не менялись и под oracle не настраивались.
+
+Installed RC `sbom-creator:mvp-r112`, configID
+`sha256:46911efe835d118cae7f5decde254c988f6d32504482405bf8273a8c646280b8`:
+собственная сборка29.906s, один actual warm DBCP pipeline9.839s/container13.563s.
+Все48 installed hashes равны freeze; defaultv7 без feature overrides. Network-none
+job/non-root/read-only/3GiB2CPU без socket/source/reference/secrets; public cache reuse,
+download0, DB/metadata до/после равны. Все3schemas/16exports/4-0-4coordinates и
+selected IDs равны текущему host DBCP. Readonly file-program SHA и actual Cmd/Args
+проверены. Build использовал pip downloads; только runtime job был offline.
+Это installed-service smoke одного существующего образа, не новая accuracy выборка.
+[Installed report](../benchmarks/results/mvp-r112-container-v1/report.json).
+
+Итоговые проверки:959 unique passing pytest nodes/10skips:722 full-service,
+188 benchmark regressions,37 evaluator tests+5 targeted (один повтор),8 container
+contract tests. Ruff/schema/hash/seal проверки PASS. В первом container unit v1
+ошиблась строковая проверка вложенного assert; сохранена, v2 PASS, единственный
+реальный build/runtime job прошёл сразу. Git binding45exact/3CRLF-LF-only;
+frozen/installed bytes не нормализовались. Deployments не менялись.
+
+R112 lossless pack:172 JSON/502,626,212 original bytes →38,666,627 tracked
+JSON+gzip bytes,48 large JSON/45 unique gzip. Manifest SHA256
+`16fa49694e51a85974aaeeaceb98a7438c7a8e45b830a5758277f9cc20791ad1`;
+`python benchmarks/package_mvp_r112.py restore/verify`. Originals и R105–R111
+manifests сохранены. Следующий практический разбор — сохранённый Chalk publication
+PermissionError и generic identity/installed-owner ambiguities; без unchanged
+Java-reader/DB replay, новых чужих recipes или удаления доставленных fixture units.
+
+## Historical R111 — cold bootstrap and offline reuse
 
 **Проверен первый запуск с пустой Java DB cache и последующий offline reuse.**
 Новый atomic cache защищает от partial-download poisoning; component policyv7,

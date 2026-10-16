@@ -1,0 +1,15 @@
+{
+  "files": 172,
+  "large_json_files": 48,
+  "unique_gzip_files": 45,
+  "original_bytes": 502626212,
+  "tracked_json_and_gzip_bytes": 38666627,
+  "manifest": "benchmarks/results/mvp-r112-evidence-manifest.json",
+  "originals_modified_or_deleted": false,
+  "manifest_sha256": "16fa49694e51a85974aaeeaceb98a7438c7a8e45b830a5758277f9cc20791ad1",
+  "old_manifests_unchanged": true,
+  "old_gitignore_prefix_preserved": true,
+  "all_originals_present": true,
+  "verification_helper_sha256": "01eb69beb003ce63e7c171c8cf562a9dbce7722267826b533382f76ce930de0b",
+  "final_validation_sha256": "c405c4d3791d040117ccde861e15ac7c576211dbbed041e046944e82b30b3914"
+}
