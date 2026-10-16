@@ -20,7 +20,7 @@ spec:
         seccompProfile: {type: RuntimeDefault}
       containers:
         - name: service
-          image: registry.example.com/sbom-creator:0.5.0 # replace with your @sha256:digest
+          image: registry.example.com/sbom-creator:0.7.0 # replace with your @sha256:digest
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
@@ -34,9 +34,10 @@ spec:
             - {name: SBOM_BITBUCKET_TOKEN_FILE, value: /run/secrets/bitbucket-token}
             - {name: SBOM_REGISTRY_USERNAME_FILE, value: /run/secrets/registry-username}
             - {name: SBOM_REGISTRY_PASSWORD_FILE, value: /run/secrets/registry-password}
+            - {name: SBOM_WORKERS, value: "1"}
           resources:
-            requests: {cpu: "500m", memory: 512Mi, ephemeral-storage: 1Gi}
-            limits: {cpu: "2", memory: 2Gi, ephemeral-storage: 12Gi}
+            requests: {cpu: "500m", memory: 512Mi, ephemeral-storage: 4Gi}
+            limits: {cpu: "2", memory: 3Gi, ephemeral-storage: 40Gi}
           volumeMounts:
             - {name: tmp, mountPath: /tmp}
             - {name: workspace, mountPath: /workspace}
@@ -49,6 +50,6 @@ spec:
         - name: tmp
           emptyDir: {sizeLimit: 8Gi}
         - name: workspace
-          emptyDir: {sizeLimit: 2Gi} # test only; use PVC for persistent results
+          emptyDir: {sizeLimit: 32Gi} # example only; use a sized PVC and retention for results/cache
         - name: secrets
           secret: {secretName: sbom-creator, defaultMode: 0440}

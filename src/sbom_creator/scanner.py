@@ -6,6 +6,7 @@ import base64
 import hashlib
 import json
 import re
+import sqlite3
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -224,7 +225,7 @@ def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, 
         try:
             data, extra = corroborate_java_image(data, provenance, settings)
             provenance.update(extra)
-        except (OSError, ValueError, KeyError, TypeError, RuntimeError, RecursionError, ValidationError) as error:
+        except (OSError, ValueError, KeyError, TypeError, RuntimeError, RecursionError, ValidationError, sqlite3.Error) as error:
             # Preserve completed inventory/non-Java facts, never pretend a failed
             # corroboration proves absence. Output explicitly remains partial.
             provenance['java_image_status'] = 'UNKNOWN'

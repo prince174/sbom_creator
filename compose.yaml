@@ -15,5 +15,5 @@ services:
       - /tmp:rw,nosuid,nodev,size=1g
     restart: "no"
     cpus: 2
-    mem_limit: 2g
+    mem_limit: 3g
 

@@ -21,7 +21,8 @@ name/version manifest — совпадать с npm PURL. Свидетельст
 валидность TypeScript или проверку целостности `.d.ts`. Manifest SHA256 сохраняется.
 Небезопасный путь, borrowed nested package, symlink, conflicting/duplicate fields
 оставляют UNKNOWN. Обычные JS/data-package witnesses сохраняют приоритет.
-Новый базовый policy — `image-evidence-and-payload-v4`; Java v7 остаётся opt-in.
+Новый базовый policy — `image-evidence-and-payload-v4`. R110 выбирает Java v7 по умолчанию;
+`SBOM_JAVA_ARCHIVE_COMPONENTS=false` явно возвращает прежний payload-only режим.
 12 свежих image-only no-lock запусков:307/9/0, P97.15%, R100%;9 дополнительных
 поставленных fixture units не удаляются из полного inventory ради метрики.
 
@@ -170,7 +171,7 @@ docker compose up --build -d
 | `SBOM_IMAGE_TEMP_DIR` | Writable каталог внутренних архивов/слоёв, в образе `/workspace/image-cache` |
 | `SBOM_JAVA_IMAGE_EVIDENCE` | Java identity + physical evidence, default `true`; сбой отражается UNKNOWN |
 | `SBOM_JAVA_NESTED_WINDOWS` | Экспериментальное чтение STORED nested JAR без копирования; default `false` |
-| `SBOM_JAVA_ARCHIVE_COMPONENTS` | Полный поставленный Java-архив как отдельный компонент, включая metadata-only; default `false`, включает nested reader |
+| `SBOM_JAVA_ARCHIVE_COMPONENTS` | Полный поставленный Java-архив как отдельный компонент, включая metadata-only; default `true`, включает nested reader |
 | `SBOM_JAVA_BACKEND` | Дополнительный граф исходников: `disabled` (default), `trivy`, `cdxgen` |
 | `SBOM_CDXGEN_IMAGE`, `SBOM_DOCKER_BINARY` | Доверенный worker image и Docker CLI для явно включённого cdxgen backend |
 | `SBOM_BUILD_TIMEOUT` | Лимит необязательного cdxgen job, default900s |
@@ -194,8 +195,9 @@ Reader один раз нормализует слой, проверяет TAR/Z
 Применяются отдельные бюджеты:8GiB нормализации и8GiB потоковой проверки хешей,
 32MiB/read и128MiB суммарных payload-window reads; размер outer JAR до128MiB.
 Payload proof для одинаковых файлов переносится только после полного SHA256 каждого
-физического JAR, без вывода имени/версии/прямоты из hash. Метаданные без payload,
-неоднозначный путь/слой/идентичность и неподдержанный архив остаются UNKNOWN.
+физического JAR, без вывода имени/версии/прямоты из hash. Неподтверждённые метаданные, неоднозначный путь/слой/идентичность и
+неподдержанный архив остаются UNKNOWN. Metadata-only JAR включается только по
+отдельному полному archive presence/identity proof.
 Содержимое файлов и scanner-конфигурация удаляются перед публикацией JSON.
 Диск проверяется периодически; жёсткие границы задаются лимитами контейнера/тома.
 
@@ -203,7 +205,7 @@ Payload proof для одинаковых файлов переносится т
 CRC/SHA256 вложенных STORED JAR и теми же бюджетами. R107 хранит до256 directory
 credits в LRU; после вытеснения повторный индекс снова расходует общий бюджет.
 
-Новый измеренный режим R108 включается отдельно:
+Измеренный режим R108/v7 принят как default в R110:
 
 ```bash
 SBOM_JAVA_ARCHIVE_COMPONENTS=true
@@ -220,8 +222,19 @@ SHA1 association не доказывает глобальную уникальн
 сохраняются. На прежних размеченных областях final: Micro139/1/1, Boot90/3/2,
 Javalin128/0/0, Drop907/0/0. Java P99.68%, R/exact-version coverage99.76%;
 ещё31 owner scope UNKNOWN. Это раскрытые проекты, не универсальная гарантия.
-Default R105/v4 и nested-only v6 сохранены; их actual publisher/physical regression
-прошла. Подробности — в [отчёте](docs/java-js-service-accuracy.md).
+Прежние v4 и nested-only v6 доступны при явном `SBOM_JAVA_ARCHIVE_COMPONENTS=false`;
+при nested=false выбираетсяv4, при nested=true —v6; их regression сохранена.
+У существующей установки старое `.env` с false остаётся явным override: обновите
+свою конфигурацию осознанно, файл сервис самостоятельно не меняет.
+При недоступном Trivy/Java DB
+сервис сохраняет raw inventory и помечает неподтверждённые Java components UNKNOWN,
+не подставляет raw packages в final. Первый Java scan может загрузить публичную DB
+(около1.55GB); закрытой сети нужен заранее подготовленный `SBOM_TRIVY_CACHE_DIR`.
+Cold download, безопасная параллельность и жёсткие host disk quotas отдельно не
+сертифицированы. Workspace должен вмещать DB, входной архив, нормализованные слои
+и результаты; Kubernetes пример даёт32Gi, для production нужен рассчитанный PVC
+и retention. Это не разрешение менять развёрнутые сервисы.
+Подробности — в [отчёте](docs/java-js-service-accuracy.md).
 
 ## API
 

@@ -48,6 +48,14 @@ facts = {'uid': os.geteuid(), 'root_read_only': root_read_only,
          'tool_sha256': {name: hashlib.sha256(pathlib.Path(shutil.which(name)).read_bytes()).hexdigest()
                          for name in ('syft', 'trivy', 'crane')}}
 defaults = Settings.from_env()
+reader_defaults_requested = os.getenv('SMOKE_READER_DEFAULTS', '').lower() == 'true'
+facts['reader_defaults_requested'] = reader_defaults_requested
+facts['reader_environment_values'] = {name: os.environ.get(name) for name in (
+    'SBOM_JAVA_ARCHIVE_COMPONENTS', 'SBOM_JAVA_NESTED_WINDOWS')}
+if reader_defaults_requested:
+    assert all(value is None for value in facts['reader_environment_values'].values()), 'Reader defaults must not be overridden'
+    assert defaults.java_archive_components is True, 'R110 must enable archive presence by default'
+    assert defaults.java_nested_windows is False, 'The separate nested flag must remain false'
 if os.getenv('SBOM_JAVA_NESTED_WINDOWS', '').lower() == 'true' and not hasattr(defaults, 'java_nested_windows'):
     raise RuntimeError('Selected image does not expose the experimental reader setting')
 facts['java_nested_windows'] = getattr(defaults, 'java_nested_windows', False)
@@ -129,6 +137,16 @@ def export_artifacts(workspace, output):
     return manifest
 
 
+def reader_environment(*, nested_windows=False, archive_components=False, reader_defaults=False):
+    """Historical smoke selection stays explicit; R110 can test unmodified defaults."""
+    if reader_defaults:
+        if nested_windows or archive_components:
+            raise ValueError('Reader-default smoke cannot also request explicit reader overrides')
+        return ['--env', 'SMOKE_READER_DEFAULTS=true']
+    return ['--env', 'SBOM_JAVA_NESTED_WINDOWS=' + str(nested_windows).lower(),
+            '--env', 'SBOM_JAVA_ARCHIVE_COMPONENTS=' + str(archive_components).lower()]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', default='sbom-creator:mvp-r105')
@@ -136,6 +154,8 @@ def main():
                         help='Explicitly enable the experimental nested JAR reader; default is stable.')
     parser.add_argument('--archive-components', action='store_true',
                         help='Explicitly enable delivered archive components; default is stable.')
+    parser.add_argument('--reader-defaults', action='store_true',
+                        help='Omit both Java reader env overrides and verify the installed R110 defaults.')
     parser.add_argument('--language', choices=('java', 'javascript'), default='java',
                         help='Installed feature check; Java remains the existing default.')
     parser.add_argument('--archive', type=pathlib.Path, required=True)
@@ -143,6 +163,12 @@ def main():
     parser.add_argument('--image-reference', required=True)
     parser.add_argument('--output', type=pathlib.Path, required=True)
     args = parser.parse_args()
+    try:
+        reader_flags = reader_environment(nested_windows=args.nested_windows,
+                                          archive_components=args.archive_components,
+                                          reader_defaults=args.reader_defaults)
+    except ValueError as error:
+        parser.error(str(error))
     archive = args.archive.resolve(strict=True)
     database = args.java_db.resolve(strict=True)
     output = args.output.resolve()
@@ -154,9 +180,6 @@ def main():
     inspected = json.loads(subprocess.check_output(['docker', 'image', 'inspect', args.image]))[0]
     image_id = inspected['Id']
     name = 'sbom-mvp-smoke-'+str(time.time_ns())
-    reader_environment = ['--env', 'SBOM_JAVA_NESTED_WINDOWS=true'] if args.nested_windows else []
-    if args.archive_components:
-        reader_environment.extend(['--env', 'SBOM_JAVA_ARCHIVE_COMPONENTS=true'])
     command = ['docker', 'run', '--rm', '--name', name, '--pull=never', '--no-healthcheck',
         '--network=none', '--read-only', '--user=10001:10001', '--cap-drop=ALL',
         '--security-opt=no-new-privileges', '--memory=3g', '--cpus=2', '--pids-limit=128',
@@ -166,7 +189,7 @@ def main():
         '--mount', f'type=bind,src={database},dst=/workspace/trivy-cache/java-db,readonly',
         '--env', 'SMOKE_REGISTRY='+args.image_reference.split('/')[0],
         '--env', 'SMOKE_LANGUAGE='+args.language,
-        '--env', 'SMOKE_IMAGE='+args.image_reference, *reader_environment, image_id,
+        '--env', 'SMOKE_IMAGE='+args.image_reference, *reader_flags, image_id,
         'python', '-c', CONTAINER_PROGRAM]
     started_at = datetime.now(UTC).isoformat()
     started = time.monotonic()
@@ -189,6 +212,7 @@ def main():
         'docker_socket_mounted': False, 'host_credentials_mounted': False,
         'java_nested_windows_requested': args.nested_windows,
         'java_archive_components_requested': args.archive_components,
+        'reader_defaults_requested': args.reader_defaults,
         'language': args.language,
         'network': 'none', 'host_ports': [],
         'test_boundary': 'installed image-only pipeline; HTTP and registry transport are separate checks'}

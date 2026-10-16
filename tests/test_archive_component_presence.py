@@ -64,8 +64,9 @@ def test_actual_complete_metadata_only_archive_has_separate_presence_not_fake_pa
     assert fact['identity_binding']['status'] == 'UNKNOWN'
 
 
-def test_default_and_nested_only_policies_keep_metadata_only_archive_unknown(tmp_path):
-    assert not Settings().java_archive_components
+def test_explicit_legacy_and_nested_only_policies_keep_metadata_only_archive_unknown(tmp_path):
+    assert Settings().java_archive_components
+    assert not Settings(java_archive_components=False).java_archive_components
     image, peer, archive, _ = inputs(tmp_path)
     for nested in (False, True):
         adapted, physical, envelope, _ = corroborate(image, archive, peer, temporary=tmp_path, nested_windows=nested)
