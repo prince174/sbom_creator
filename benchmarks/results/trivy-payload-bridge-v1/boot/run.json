@@ -1,0 +1,52 @@
+{
+  "project": "java-spring-petclinic",
+  "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+  "runtime_changed": false,
+  "oracle_read": false,
+  "input_binding_verified": true,
+  "three_views_schema_valid": true,
+  "bridge_states": {
+    "BOUND": 93,
+    "UNKNOWN": 1
+  },
+  "elapsed_replay_and_conversion_seconds": 6.562000000005355,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "CI_CONFIGURATION": 7,
+      "AMBIGUOUS_IDENTITY": 26,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 5,
+      "PAYLOAD_NOT_CONFIRMED": 1,
+      "SOURCE_ONLY": 1
+    },
+    "unknown_groups": {
+      "ci_configuration": 7,
+      "source_identity": 26,
+      "image_evidence": 5,
+      "image_payload": 1,
+      "source_declarations": 1
+    },
+    "source_count": 37,
+    "image_count": 243,
+    "selected_count": 237,
+    "final_count": 94,
+    "os_count": 143,
+    "full_count": 237,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 237,
+      "UNKNOWN": 40
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.344
+  },
+  "limitations": [
+    "Cached catalog replay, not end-to-end scan timing or runtime integration",
+    "No direct owner graph, profile activation or execution inference",
+    "Canonical identities attributed to Trivy, original Syft catalog retained"
+  ]
+}
