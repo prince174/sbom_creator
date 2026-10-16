@@ -159,3 +159,6 @@ R99 adds a fresh complex held-out Dropwizard reference pair:39 reactor/module re
 
 
 R100 (2026-10-16): separate bounded rejection-cache candidate completes Dropwizard final/os/full in94.11s, but confirms no project payload under the unchanged512MiB layer budget. On16 agreeing owners final0/0/907, recall0;18 owner scopes UNKNOWN and443 direct edges unmatched. Boot/Javalin witness/catalog/evidence regression is exact. [Negative evaluation](../benchmarks/results/cached-dropwizard-evidence-v3/evaluation.json), [resource run](../benchmarks/results/cached-dropwizard-evidence-v3/run.json). Benchmark liveness only, no runtime adoption/rank promotion or new pairs.
+
+
+R101 (2026-10-16): separate seekable-layer prototype verifies the original config/DiffID and reads ZIP headers for2179 physical JAR paths after one703MB normalization (3.69s;2.49MB metadata,8716 target bytes). [Physical-access proof](../benchmarks/results/seekable-layer-index-v3/report.json). New explicit8GiB disk-normalization policy, not a raised frozen payload gate. No class/resource, component/direct accuracy or new SBOM claim; R100 negative metrics/ranks/runtime/corpus unchanged.

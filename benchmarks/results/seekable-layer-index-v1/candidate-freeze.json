@@ -1,0 +1,10 @@
+{
+  "oracle_read": false,
+  "runtime_changed": false,
+  "mode": "Disclosed physical-index development, not a payload/accuracy prediction",
+  "code_sha256": {
+    "benchmarks/seekable_layer_index.py": "caefd25fd9f7bd486952a477e3a9a8ddefc070624f65c1c1b71d959a39e05407",
+    "benchmarks/check_seekable_layer_index.py": "0bb38c1f8a534c5305dc14dc819462a480da451af9e5cee2b1d9fd6340159568"
+  },
+  "catalog_sha256": "60921d39ec0520332d79d710c7e481204a4cf260af5a672e6354ac3d3a65e74b"
+}
