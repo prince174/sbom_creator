@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_HARNESS_IMPORT_BEFORE_COMPARISON",
+  "error_type": "ModuleNotFoundError",
+  "module": "sbom_creator",
+  "predictor_or_publication_failed": false,
+  "reference_accessed": false,
+  "executed_verifier_sha256": "4793b32f48e751db23155b5d568d1e52ac592d88aca4345b998421629dde8d9c",
+  "retry_hypothesis": "Use explicit repository src import path in the standalone parity helper; no predictor rerun."
+}

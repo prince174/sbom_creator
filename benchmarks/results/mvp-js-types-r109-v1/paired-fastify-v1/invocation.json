@@ -1,0 +1,14 @@
+{
+  "language": "javascript",
+  "name": "paired-fastify-v1",
+  "namespace": "no-lock-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:d78e8110e2cba2504ee5f677bf192df918bc1e101642631a4d544c5b4e19f29c",
+  "archive": "benchmarks/.work/no-lock-v1/paired-fastify-v1/image.tar",
+  "archive_sha256": "2157563b2ab640e10c88ea9c31e65f1014aa1a04baec149795b3b556ab23a07f",
+  "oracle_read": false,
+  "repository_url": null,
+  "commit": null,
+  "source_input": false,
+  "fresh_scans": true,
+  "java_archive_components": true
+}

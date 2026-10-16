@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "runtime_source_modified_by_reviewer": false,
+  "test_reports": {
+    "mvp-r109-final-unit.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "3",
+      "tests": "597",
+      "time": "19.838",
+      "timestamp": "2026-10-16T11:20:16.990637+05:00",
+      "hostname": "DESKTOP-7VTP4IJ",
+      "sha256": "81ece33457f14323e0f239c22d6af2406cbf6624bc328efe635064f5ab4f2496"
+    },
+    "mvp-r109-final-benchmark-unit.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "156",
+      "time": "2.598",
+      "timestamp": "2026-10-16T11:20:16.993284+05:00",
+      "hostname": "DESKTOP-7VTP4IJ",
+      "sha256": "382d55d20f20a664afce4d5ca1e523296478cbac23f6f3e3b0fb05b7d1261710"
+    }
+  },
+  "total_passed": 750,
+  "total_skipped": 3,
+  "known_warning": "Starlette TestClient/httpx deprecation",
+  "pytest_commands": [
+    ".\\.venv\\Scripts\\python.exe -m pytest tests -q --junitxml=benchmarks/results/mvp-r109-final-unit.xml",
+    ".\\.venv\\Scripts\\python.exe -m pytest benchmarks/test_bounded_jar_evidence.py benchmarks/test_complex_reactor_recipe.py benchmarks/test_explicit_identity_gate.py benchmarks/test_seekable_jar_evidence.py benchmarks/test_seekable_layer_index.py benchmarks/test_trivy_only_payload.py benchmarks/test_trivy_payload_bridge.py benchmarks/test_reactor_nested_scope_r109.py benchmarks/test_primary_scope_attestation_r109.py -q --junitxml=benchmarks/results/mvp-r109-final-benchmark-unit.xml"
+  ],
+  "ruff": {
+    "status": "PASS",
+    "targets": [
+      "src",
+      "tests",
+      "benchmarks/smoke_mvp_container.py",
+      "benchmarks/audit_js_installed_owner_r109.py",
+      "benchmarks/check_mvp_r109_container.py",
+      "benchmarks/check_reactor_nested_scope_r109.py",
+      "benchmarks/evaluate_js_types_r109.py",
+      "benchmarks/evaluate_reactor_packaged_r109.py",
+      "benchmarks/label_reactor_nested_scope_r109.py",
+      "benchmarks/package_mvp_r109.py",
+      "benchmarks/primary_scope_attestation_r109.py",
+      "benchmarks/replay_java_publish_r109.py",
+      "benchmarks/run_js_types_r109.py",
+      "benchmarks/test_primary_scope_attestation_r109.py",
+      "benchmarks/test_reactor_nested_scope_r109.py",
+      "benchmarks/verify_mvp_r109_container.py"
+    ]
+  },
+  "runtime_source_sha256": {
+    "src/sbom_creator/core.py": "94fdcbae7da2a3ce90cebf29bae7a07993521b5c03448151c79aa609aa99c285",
+    "src/sbom_creator/payload.py": "d5be001f43fb569070c75f97dc77fdea05dc59f47790f98c4ecdccc0766eef03",
+    "src/sbom_creator/image_java/explicit_identity_gate.py": "f71a3ff1bcb5c121440149f270dc8e3edd1c63733b65087f47c21bcf5cec485d",
+    "src/sbom_creator/image_java/runtime.py": "df6ed228996b9e9f760e85126ac83db6ac47f71f22bbd39ab5a5f2204bd0ac5d",
+    "src/sbom_creator/service.py": "9bc24996e51c5922224413a07cd9334a7567d64def8a335c3e68c40163870113"
+  },
+  "new_helper_sha256": {
+    "benchmarks/smoke_mvp_container.py": "9a90980a26cce2f9bd4ad01ca084b838759a272d7aec07fe568667f5ec4e9401",
+    "benchmarks/audit_js_installed_owner_r109.py": "3d405cc786e9d93936099bf30c51d865f050f8d09ce2f85a1399ab9298e7e20a",
+    "benchmarks/check_mvp_r109_container.py": "70d918cc7b4bfc90093f92baf9dbda64f31a5c74af7a3b762e7da4a0437806ae",
+    "benchmarks/check_reactor_nested_scope_r109.py": "bd660a0a036369f23d571568e2a82df9d4f764b8b5257992df7ae2bd8aa07c46",
+    "benchmarks/evaluate_js_types_r109.py": "988cc93915e4849d1a0e51005f3445609e21da7aa94fd6fa9e71603dc594ea5d",
+    "benchmarks/evaluate_reactor_packaged_r109.py": "fb3643e81495c337c08454804b8479367d0c5fd715e5ace8987373a890ecdae3",
+    "benchmarks/label_reactor_nested_scope_r109.py": "7d6c5dbd15e232707ec5cb7f3467156f489d92caf27dd9b6e47793f72924e19b",
+    "benchmarks/package_mvp_r109.py": "5e3472e3b7415b9c103eab8632248dc1ea5fdde3f1d19476ce191003b0da64d2",
+    "benchmarks/primary_scope_attestation_r109.py": "4d2499010845cf42a17b5a3f51975b37dabf38467f232bd6bd817488512eb8b9",
+    "benchmarks/replay_java_publish_r109.py": "543e3ba5b59514fb9cc4c5fdb3484d090dc4b20d1a17a73cc5fb2e4f508ebc4b",
+    "benchmarks/run_js_types_r109.py": "a2b5f5acda6d0a22f0593767fcd55205a4029ed16e2d70df6f415baeedd9c7a8",
+    "benchmarks/test_primary_scope_attestation_r109.py": "2200b84e4e108d72036cd812003d2a1f9f66c37e3f41a4cc0561016d0af49c4d",
+    "benchmarks/test_reactor_nested_scope_r109.py": "ac7effe846451f51caac84753c8022a64d11afdc37dcd273551e0dee242f8a90",
+    "benchmarks/verify_mvp_r109_container.py": "9a395677272db37107405d1b8b75339e1b28c0b59f5c671681dd7a02415eb112"
+  },
+  "independent_review": {
+    "caller_proof_fields_rejected_by_Request_extra_forbid": [
+      "payload_evidence",
+      "identity_envelope",
+      "file_witness",
+      "files",
+      "archive_presence"
+    ],
+    "default_js_policy": "image-evidence-and-payload-v4",
+    "java_archive_components_default": false,
+    "java_nested_windows_default": false,
+    "explicit_java_archive_envelope_policy": "image-delivered-archive-v7",
+    "java_identity_gate_and_physical_runtime_unchanged": true,
+    "type_surface_evidence": "Matching package manifest identity plus declared nonempty final regular .d.ts path; no execution, type validity, file-content integrity or publisher-authentication claim",
+    "target_file_contents_read_or_hashed": false,
+    "scope_limitations": [
+      "Type target presence trusts pinned Syft final-filesystem metadata, never caller-supplied file proof",
+      "Only manifest is bounded read/hash checked for type-surface presence; target content validity is not claimed",
+      "UNKNOWN and malformed/duplicate/conflicting manifests fail closed; same-PURL siblings cannot borrow proof"
+    ],
+    "blocking_new_issue_found": false
+  },
+  "old_manifest_sha256_before_r109_pack": {
+    "benchmarks/results/mvp-r105-evidence-manifest.json": "419020c52f1a912c806ee86888c4aa0ddb73e59f32cc47b8109e1c3463a27f44",
+    "benchmarks/results/mvp-r106-evidence-manifest.json": "b79919629a0c6a9ff4e03c535b0dd1dc0ca1c66bc434e8607f7b1670165773bf",
+    "benchmarks/results/mvp-r107-evidence-manifest.json": "effdcdcdb55815b14156fb8ff0251ab53c86f2f6efcc52a3e530c7f9afef0d43",
+    "benchmarks/results/mvp-r108-evidence-manifest.json": "5a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d"
+  },
+  "pack_performed": false
+}

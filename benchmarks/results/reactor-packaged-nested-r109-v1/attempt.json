@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_INCOMPLETE",
+  "prediction_or_classifier_inputs_read": false,
+  "completed_pair": "paired-javalin-reactor-v1",
+  "failed_pair": "paired-dropwizard-reactor-v1",
+  "error_type": "BudgetExceeded",
+  "reason": "ZIP directory budget",
+  "single_directory_budget_bytes": 2097152,
+  "limits_raised": false,
+  "resolution": "v2 records unsupported primary/nested enumeration as UNKNOWN and continues, without changing guard"
+}

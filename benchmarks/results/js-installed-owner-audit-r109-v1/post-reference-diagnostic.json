@@ -1,0 +1,2002 @@
+{
+  "post_analysis_only": true,
+  "new_accuracy_measurement": false,
+  "new_classifier": false,
+  "physical_report_sha256": "78ac48492a65e4252b07f5a53708fe3caff8db9839a6cb6791e283677e13fa61",
+  "rows": [
+    {
+      "pair": "paired-axios-v2",
+      "reference_sha256": "29eefab25c26e0f291620669a968e0ef652af3216fb28dc22db313e852416576",
+      "observations": [
+        {
+          "artifact_id": "d40b3ca3b2eb9bee",
+          "purl": "pkg:npm/asynckit@0.4.0",
+          "manifest": "/app/node_modules/asynckit/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/asynckit/index.js"
+        },
+        {
+          "artifact_id": "18956f9a960d4c25",
+          "purl": "pkg:npm/axios@1.7.9",
+          "manifest": "/app/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "root_application_manifest",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/index.js"
+        },
+        {
+          "artifact_id": "8fc7f447b3e61a1a",
+          "purl": "pkg:npm/cjs-entrypoint-test@1.0.0",
+          "manifest": "/app/test/module/cjs/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/cjs/index.js"
+        },
+        {
+          "artifact_id": "c86e9a4eb69c741c",
+          "purl": "pkg:npm/combined-stream@1.0.8",
+          "manifest": "/app/node_modules/combined-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/combined-stream/lib/combined_stream.js"
+        },
+        {
+          "artifact_id": "efe04c466fdfbc79",
+          "purl": "pkg:npm/commonjs-typings-test@1.0.0",
+          "manifest": "/app/test/module/typings/cjs/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/typings/cjs/index.ts"
+        },
+        {
+          "artifact_id": "ccbad562d6ff4c1f",
+          "purl": "pkg:npm/delayed-stream@1.0.0",
+          "manifest": "/app/node_modules/delayed-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/delayed-stream/lib/delayed_stream.js"
+        },
+        {
+          "artifact_id": "2d185bfb9f9d75c8",
+          "purl": "pkg:npm/esm-entrypoint-test@1.0.0",
+          "manifest": "/app/test/module/esm/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/esm/index.js"
+        },
+        {
+          "artifact_id": "ef8349c67b8177c4",
+          "purl": "pkg:npm/esm-typings-test@1.0.0",
+          "manifest": "/app/test/module/typings/esm/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/typings/esm/index.ts"
+        },
+        {
+          "artifact_id": "33520efc18e60745",
+          "purl": "pkg:npm/follow-redirects@1.15.6",
+          "manifest": "/app/node_modules/follow-redirects/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/follow-redirects/index.js"
+        },
+        {
+          "artifact_id": "ab3bc7769cfe98d5",
+          "purl": "pkg:npm/form-data@4.0.0",
+          "manifest": "/app/node_modules/form-data/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/form-data/lib/form_data.js"
+        },
+        {
+          "artifact_id": "0aa4e2c90b27ca04",
+          "purl": "pkg:npm/mime-db@1.52.0",
+          "manifest": "/app/node_modules/mime-db/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/mime-db/index.js"
+        },
+        {
+          "artifact_id": "bf7c76edd2e0ef3b",
+          "purl": "pkg:npm/mime-types@2.1.35",
+          "manifest": "/app/node_modules/mime-types/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/mime-types/index.js"
+        },
+        {
+          "artifact_id": "6e151e650edb2ed7",
+          "purl": "pkg:npm/proxy-from-env@1.1.0",
+          "manifest": "/app/node_modules/proxy-from-env/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/proxy-from-env/index.js"
+        },
+        {
+          "artifact_id": "29d406469074ee7e",
+          "purl": "pkg:npm/ts-entrypoint-test@1.0.0",
+          "manifest": "/app/test/module/ts-require-default/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/ts-require-default/index.js"
+        },
+        {
+          "artifact_id": "7e61cce0d2751b1b",
+          "purl": "pkg:npm/ts-entrypoint-test@1.0.0",
+          "manifest": "/app/test/module/ts-require/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/ts-require/index.js"
+        },
+        {
+          "artifact_id": "417f79af2141972d",
+          "purl": "pkg:npm/ts-entrypoint-test@1.0.0",
+          "manifest": "/app/test/module/ts/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/module/ts/index.js"
+        }
+      ]
+    },
+    {
+      "pair": "paired-fastify-v1",
+      "reference_sha256": "4c2c56316b6ead74bd30b7f10bb61b8a91e043383dbc693ef3b2874fb51e177b",
+      "observations": [
+        {
+          "artifact_id": "7b29309b4cb12b9f",
+          "purl": "pkg:npm/%40fastify/ajv-compiler@4.0.7",
+          "manifest": "/app/node_modules/@fastify/ajv-compiler/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/ajv-compiler/index.js"
+        },
+        {
+          "artifact_id": "8055e5f8651325fb",
+          "purl": "pkg:npm/%40fastify/deepmerge@3.2.2",
+          "manifest": "/app/node_modules/@fastify/deepmerge/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/deepmerge/index.js"
+        },
+        {
+          "artifact_id": "18af9a34441af094",
+          "purl": "pkg:npm/%40fastify/error@4.2.1",
+          "manifest": "/app/node_modules/@fastify/error/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/error/index.js"
+        },
+        {
+          "artifact_id": "0ddc5e445baa0839",
+          "purl": "pkg:npm/%40fastify/fast-json-stringify-compiler@5.1.1",
+          "manifest": "/app/node_modules/@fastify/fast-json-stringify-compiler/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/fast-json-stringify-compiler/index.js"
+        },
+        {
+          "artifact_id": "db3275be25b491b4",
+          "purl": "pkg:npm/%40fastify/forwarded@3.1.1",
+          "manifest": "/app/node_modules/@fastify/forwarded/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/forwarded/index.js"
+        },
+        {
+          "artifact_id": "0001e8bda41c0fdd",
+          "purl": "pkg:npm/%40fastify/merge-json-schemas@0.2.2",
+          "manifest": "/app/node_modules/@fastify/merge-json-schemas/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/merge-json-schemas/index.js"
+        },
+        {
+          "artifact_id": "b77f4c490a01b9ff",
+          "purl": "pkg:npm/%40fastify/proxy-addr@5.1.2",
+          "manifest": "/app/node_modules/@fastify/proxy-addr/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@fastify/proxy-addr/index.js"
+        },
+        {
+          "artifact_id": "958b4ab35051d50c",
+          "purl": "pkg:npm/%40pinojs/redact@0.4.0",
+          "manifest": "/app/node_modules/@pinojs/redact/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@pinojs/redact/index.js"
+        },
+        {
+          "artifact_id": "505f52612dcc3b34",
+          "purl": "pkg:npm/abstract-logging@2.0.1",
+          "manifest": "/app/node_modules/abstract-logging/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/abstract-logging/index.js"
+        },
+        {
+          "artifact_id": "4478d12805fb0437",
+          "purl": "pkg:npm/ajv@8.20.0",
+          "manifest": "/app/node_modules/ajv/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ajv/dist/ajv.js"
+        },
+        {
+          "artifact_id": "cdbe4e1a56e30939",
+          "purl": "pkg:npm/ajv-formats@3.0.1",
+          "manifest": "/app/node_modules/ajv-formats/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ajv-formats/dist/index.js"
+        },
+        {
+          "artifact_id": "62b82c50926b7956",
+          "purl": "pkg:npm/atomic-sleep@1.0.0",
+          "manifest": "/app/node_modules/atomic-sleep/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/atomic-sleep/index.js"
+        },
+        {
+          "artifact_id": "f9e0a8604aa6fb14",
+          "purl": "pkg:npm/avvio@9.3.1",
+          "manifest": "/app/node_modules/avvio/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/avvio/index.js"
+        },
+        {
+          "artifact_id": "843e35f3b657f862",
+          "purl": "pkg:npm/benchmark@1.0.0",
+          "manifest": "/app/node_modules/ajv/node_modules/fast-uri/benchmark/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ajv/node_modules/fast-uri/benchmark/benchmark.mjs"
+        },
+        {
+          "artifact_id": "e1f2de21acb2d088",
+          "purl": "pkg:npm/benchmark@1.0.0",
+          "manifest": "/app/node_modules/fast-uri/benchmark/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-uri/benchmark/benchmark.mjs"
+        },
+        {
+          "artifact_id": "aaa4ba5c019ff4a8",
+          "purl": "pkg:npm/benchmarks@1.0.0",
+          "manifest": "/app/node_modules/secure-json-parse/benchmarks/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/secure-json-parse/benchmarks/ignore.js"
+        },
+        {
+          "artifact_id": "1d87ea205e1438d7",
+          "purl": "pkg:npm/cookie@2.0.1",
+          "manifest": "/app/node_modules/cookie/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/cookie/dist/index.js"
+        },
+        {
+          "artifact_id": "a8e82450b9bf3f79",
+          "purl": "pkg:npm/dequal@2.0.3",
+          "manifest": "/app/node_modules/dequal/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/dequal/dist/index.js"
+        },
+        {
+          "artifact_id": "e8f2c4dd7f5984fc",
+          "purl": "pkg:npm/fast-decode-uri-component@1.0.1",
+          "manifest": "/app/node_modules/fast-decode-uri-component/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-decode-uri-component/index.js"
+        },
+        {
+          "artifact_id": "3b21fc28880f88e3",
+          "purl": "pkg:npm/fast-deep-equal@3.1.3",
+          "manifest": "/app/node_modules/fast-deep-equal/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-deep-equal/index.js"
+        },
+        {
+          "artifact_id": "3e95e1f051c2164d",
+          "purl": "pkg:npm/fast-json-stringify@7.1.0",
+          "manifest": "/app/node_modules/fast-json-stringify/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-json-stringify/index.js"
+        },
+        {
+          "artifact_id": "4a3b9f610e30e371",
+          "purl": "pkg:npm/fast-querystring@1.1.2",
+          "manifest": "/app/node_modules/fast-querystring/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-querystring/lib/index.js"
+        },
+        {
+          "artifact_id": "21e92cba688330a9",
+          "purl": "pkg:npm/fast-uri@3.1.8",
+          "manifest": "/app/node_modules/ajv/node_modules/fast-uri/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ajv/node_modules/fast-uri/index.js"
+        },
+        {
+          "artifact_id": "c220472b90bbd1f1",
+          "purl": "pkg:npm/fast-uri@4.2.2",
+          "manifest": "/app/node_modules/fast-uri/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-uri/index.js"
+        },
+        {
+          "artifact_id": "d336a3c29a74c021",
+          "purl": "pkg:npm/fastify@6.0.0-alpha.4",
+          "manifest": "/app/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "root_application_manifest",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/fastify.js"
+        },
+        {
+          "artifact_id": "b1d4cd1d34e037fd",
+          "purl": "pkg:npm/fastq@1.20.3",
+          "manifest": "/app/node_modules/fastq/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fastq/queue.js"
+        },
+        {
+          "artifact_id": "47eb4b4b83ffa07a",
+          "purl": "pkg:npm/find-my-way@9.10.0",
+          "manifest": "/app/node_modules/find-my-way/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/find-my-way/index.js"
+        },
+        {
+          "artifact_id": "d2acb97500cfd9f1",
+          "purl": "pkg:npm/ipaddr.js@2.5.0",
+          "manifest": "/app/node_modules/ipaddr.js/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ipaddr.js/lib/ipaddr.js"
+        },
+        {
+          "artifact_id": "dce4f9c536b0e974",
+          "purl": "pkg:npm/json-schema-ref-resolver@3.0.1",
+          "manifest": "/app/node_modules/json-schema-ref-resolver/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/json-schema-ref-resolver/index.js"
+        },
+        {
+          "artifact_id": "b2f1314b0ea6e2dd",
+          "purl": "pkg:npm/json-schema-traverse@1.0.0",
+          "manifest": "/app/node_modules/json-schema-traverse/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/json-schema-traverse/index.js"
+        },
+        {
+          "artifact_id": "e44ca58f3548b9be",
+          "purl": "pkg:npm/light-my-request@6.8.0",
+          "manifest": "/app/node_modules/light-my-request/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/light-my-request/index.js"
+        },
+        {
+          "artifact_id": "28bae4c44bb43bd0",
+          "purl": "pkg:npm/on-exit-leak-free@2.1.2",
+          "manifest": "/app/node_modules/on-exit-leak-free/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/on-exit-leak-free/index.js"
+        },
+        {
+          "artifact_id": "02fa5946c52a0528",
+          "purl": "pkg:npm/pino@10.4.0",
+          "manifest": "/app/node_modules/pino/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino/pino.js"
+        },
+        {
+          "artifact_id": "da8c660b2aa79d79",
+          "purl": "pkg:npm/pino-abstract-transport@3.0.0",
+          "manifest": "/app/node_modules/pino-abstract-transport/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino-abstract-transport/index.js"
+        },
+        {
+          "artifact_id": "a7840e0410154c39",
+          "purl": "pkg:npm/pino-std-serializers@7.1.0",
+          "manifest": "/app/node_modules/pino-std-serializers/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino-std-serializers/index.js"
+        },
+        {
+          "artifact_id": "c5085ba6b6d4f717",
+          "purl": "pkg:npm/process-warning@5.1.1",
+          "manifest": "/app/node_modules/process-warning/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/process-warning/index.js"
+        },
+        {
+          "artifact_id": "673c278b65670117",
+          "purl": "pkg:npm/quick-format-unescaped@4.0.4",
+          "manifest": "/app/node_modules/quick-format-unescaped/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/quick-format-unescaped/index.js"
+        },
+        {
+          "artifact_id": "b6f8c0452868b594",
+          "purl": "pkg:npm/real-require@1.0.0",
+          "manifest": "/app/node_modules/real-require/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/real-require/src/index.js"
+        },
+        {
+          "artifact_id": "d555781697c79a62",
+          "purl": "pkg:npm/require-from-string@2.0.2",
+          "manifest": "/app/node_modules/require-from-string/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/require-from-string/index.js"
+        },
+        {
+          "artifact_id": "f0642166cfd67f97",
+          "purl": "pkg:npm/ret@0.5.0",
+          "manifest": "/app/node_modules/ret/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ret/dist/index.js"
+        },
+        {
+          "artifact_id": "24054f46d98ad586",
+          "purl": "pkg:npm/reusify@1.1.0",
+          "manifest": "/app/node_modules/reusify/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/reusify/reusify.js"
+        },
+        {
+          "artifact_id": "0befa5610fa612f4",
+          "purl": "pkg:npm/rfdc@1.4.1",
+          "manifest": "/app/node_modules/rfdc/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/rfdc/index.js"
+        },
+        {
+          "artifact_id": "1dc25c2af937cd3c",
+          "purl": "pkg:npm/safe-regex2@5.1.2",
+          "manifest": "/app/node_modules/safe-regex2/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/safe-regex2/index.js"
+        },
+        {
+          "artifact_id": "91dbbf05cdea1423",
+          "purl": "pkg:npm/safe-stable-stringify@2.5.0",
+          "manifest": "/app/node_modules/safe-stable-stringify/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/safe-stable-stringify/index.js"
+        },
+        {
+          "artifact_id": "febe97f2cadafc57",
+          "purl": "pkg:npm/secure-json-parse@4.1.1",
+          "manifest": "/app/node_modules/secure-json-parse/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/secure-json-parse/index.js"
+        },
+        {
+          "artifact_id": "8dc88391a5dad00f",
+          "purl": "pkg:npm/semver@7.8.5",
+          "manifest": "/app/node_modules/semver/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/semver/index.js"
+        },
+        {
+          "artifact_id": "0750f04bf0f318c1",
+          "purl": "pkg:npm/set-cookie-parser@3.1.3",
+          "manifest": "/app/node_modules/set-cookie-parser/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/set-cookie-parser/dist/set-cookie.cjs"
+        },
+        {
+          "artifact_id": "bac991c22a79ade9",
+          "purl": "pkg:npm/sonic-boom@4.2.1",
+          "manifest": "/app/node_modules/sonic-boom/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/sonic-boom/index.js"
+        },
+        {
+          "artifact_id": "5578c104e4f28568",
+          "purl": "pkg:npm/split2@4.2.0",
+          "manifest": "/app/node_modules/split2/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/split2/index.js"
+        },
+        {
+          "artifact_id": "373e69d4d6ed6f97",
+          "purl": "pkg:npm/thread-stream@4.2.0",
+          "manifest": "/app/node_modules/thread-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/thread-stream/index.js"
+        },
+        {
+          "artifact_id": "eff0136aed3cea16",
+          "purl": "pkg:npm/toad-cache@3.7.4",
+          "manifest": "/app/node_modules/toad-cache/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/toad-cache/dist/toad-cache.cjs"
+        },
+        {
+          "artifact_id": "884b6832472c2a79",
+          "purl": "pkg:npm/transport@0.0.1",
+          "manifest": "/app/node_modules/pino/test/fixtures/transport/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino/test/fixtures/transport/index.js"
+        }
+      ]
+    },
+    {
+      "pair": "paired-pino-v1",
+      "reference_sha256": "b66610eb4ce346b8283dc90f4b6d13d1599cbee6ca0b760e728737d0d436279a",
+      "observations": [
+        {
+          "artifact_id": "62b82c50926b7956",
+          "purl": "pkg:npm/atomic-sleep@1.0.0",
+          "manifest": "/app/node_modules/atomic-sleep/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/atomic-sleep/index.js"
+        },
+        {
+          "artifact_id": "7b4e4e9066c376d0",
+          "purl": "pkg:npm/fast-redact@3.5.0",
+          "manifest": "/app/node_modules/fast-redact/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-redact/index.js"
+        },
+        {
+          "artifact_id": "28bae4c44bb43bd0",
+          "purl": "pkg:npm/on-exit-leak-free@2.1.2",
+          "manifest": "/app/node_modules/on-exit-leak-free/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/on-exit-leak-free/index.js"
+        },
+        {
+          "artifact_id": "426547d96646676a",
+          "purl": "pkg:npm/pino@9.6.0",
+          "manifest": "/app/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "root_application_manifest",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/pino.js"
+        },
+        {
+          "artifact_id": "b2a8213bada991eb",
+          "purl": "pkg:npm/pino-abstract-transport@2.0.0",
+          "manifest": "/app/node_modules/pino-abstract-transport/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino-abstract-transport/index.js"
+        },
+        {
+          "artifact_id": "a7840e0410154c39",
+          "purl": "pkg:npm/pino-std-serializers@7.1.0",
+          "manifest": "/app/node_modules/pino-std-serializers/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/pino-std-serializers/index.js"
+        },
+        {
+          "artifact_id": "0f935d8f9475cf03",
+          "purl": "pkg:npm/process-warning@4.0.1",
+          "manifest": "/app/node_modules/process-warning/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/process-warning/index.js"
+        },
+        {
+          "artifact_id": "673c278b65670117",
+          "purl": "pkg:npm/quick-format-unescaped@4.0.4",
+          "manifest": "/app/node_modules/quick-format-unescaped/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/quick-format-unescaped/index.js"
+        },
+        {
+          "artifact_id": "d79a06dad0753006",
+          "purl": "pkg:npm/real-require@0.2.0",
+          "manifest": "/app/node_modules/real-require/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/real-require/src/index.js"
+        },
+        {
+          "artifact_id": "91dbbf05cdea1423",
+          "purl": "pkg:npm/safe-stable-stringify@2.5.0",
+          "manifest": "/app/node_modules/safe-stable-stringify/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/safe-stable-stringify/index.js"
+        },
+        {
+          "artifact_id": "bac991c22a79ade9",
+          "purl": "pkg:npm/sonic-boom@4.2.1",
+          "manifest": "/app/node_modules/sonic-boom/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/sonic-boom/index.js"
+        },
+        {
+          "artifact_id": "5578c104e4f28568",
+          "purl": "pkg:npm/split2@4.2.0",
+          "manifest": "/app/node_modules/split2/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/split2/index.js"
+        },
+        {
+          "artifact_id": "c46485ccdecb198b",
+          "purl": "pkg:npm/thread-stream@3.2.0",
+          "manifest": "/app/node_modules/thread-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/thread-stream/index.js"
+        },
+        {
+          "artifact_id": "19a928e28ef42ac2",
+          "purl": "pkg:npm/transport@0.0.1",
+          "manifest": "/app/test/fixtures/transport/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "embedded_package_manifest_in_parent",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/test/fixtures/transport/index.js"
+        }
+      ]
+    },
+    {
+      "pair": "paired-nest-starter-v1",
+      "reference_sha256": "cb1352a1cf91d73ecad396e9f5ff90b24fbd205e7493b95d3ff9b4c7a7538ee8",
+      "observations": [
+        {
+          "artifact_id": "a8167517f1f8df71",
+          "purl": "pkg:npm/%40borewit/text-codec@0.2.2",
+          "manifest": "/app/node_modules/@borewit/text-codec/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@borewit/text-codec/lib/index.js"
+        },
+        {
+          "artifact_id": "ba65540fee0881fe",
+          "purl": "pkg:npm/%40jridgewell/resolve-uri@3.1.2",
+          "manifest": "/app/node_modules/@jridgewell/resolve-uri/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js"
+        },
+        {
+          "artifact_id": "c214f0bc722ce97e",
+          "purl": "pkg:npm/%40jridgewell/sourcemap-codec@1.5.5",
+          "manifest": "/app/node_modules/@jridgewell/sourcemap-codec/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@jridgewell/sourcemap-codec/dist/sourcemap-codec.umd.js"
+        },
+        {
+          "artifact_id": "c30b442e23f81ad5",
+          "purl": "pkg:npm/%40jridgewell/trace-mapping@0.3.31",
+          "manifest": "/app/node_modules/@jridgewell/trace-mapping/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js"
+        },
+        {
+          "artifact_id": "1b1ae9b0c3c4a667",
+          "purl": "pkg:npm/%40lukeed/csprng@1.1.0",
+          "manifest": "/app/node_modules/@lukeed/csprng/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@lukeed/csprng/node/index.js"
+        },
+        {
+          "artifact_id": "eb1364d6c3796122",
+          "purl": "pkg:npm/%40nestjs/common@12.0.1",
+          "manifest": "/app/node_modules/@nestjs/common/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@nestjs/common/index.js"
+        },
+        {
+          "artifact_id": "572de17a635ff24a",
+          "purl": "pkg:npm/%40nestjs/core@12.0.1",
+          "manifest": "/app/node_modules/@nestjs/core/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@nestjs/core/index.js"
+        },
+        {
+          "artifact_id": "5fc47b62cffe9e15",
+          "purl": "pkg:npm/%40nestjs/observe@0.3.0",
+          "manifest": "/app/node_modules/@nestjs/observe/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@nestjs/observe/dist/index.js"
+        },
+        {
+          "artifact_id": "3ef94160a4cce3b4",
+          "purl": "pkg:npm/%40nestjs/platform-express@12.0.1",
+          "manifest": "/app/node_modules/@nestjs/platform-express/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@nestjs/platform-express/index.js"
+        },
+        {
+          "artifact_id": "85c6171f546b693a",
+          "purl": "pkg:npm/%40standard-schema/spec@1.1.0",
+          "manifest": "/app/node_modules/@standard-schema/spec/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@standard-schema/spec/dist/index.cjs"
+        },
+        {
+          "artifact_id": "d24bf2f51aa82bc8",
+          "purl": "pkg:npm/%40tokenizer/inflate@0.4.1",
+          "manifest": "/app/node_modules/@tokenizer/inflate/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/@tokenizer/inflate/lib/GzipHandler.js"
+        },
+        {
+          "artifact_id": "c71b322301787b85",
+          "purl": "pkg:npm/%40tokenizer/token@0.3.0",
+          "manifest": "/app/node_modules/@tokenizer/token/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "e61272f2e137ac56",
+          "purl": "pkg:npm/accepts@2.0.0",
+          "manifest": "/app/node_modules/accepts/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/accepts/index.js"
+        },
+        {
+          "artifact_id": "8631696018962e04",
+          "purl": "pkg:npm/append-field@1.0.0",
+          "manifest": "/app/node_modules/append-field/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/append-field/index.js"
+        },
+        {
+          "artifact_id": "b2e766eb344cc321",
+          "purl": "pkg:npm/body-parser@2.3.0",
+          "manifest": "/app/node_modules/body-parser/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/body-parser/index.js"
+        },
+        {
+          "artifact_id": "066d360cf81074fa",
+          "purl": "pkg:npm/buffer-from@1.1.2",
+          "manifest": "/app/node_modules/buffer-from/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/buffer-from/index.js"
+        },
+        {
+          "artifact_id": "5aaba96d78339dd9",
+          "purl": "pkg:npm/busboy@1.6.0",
+          "manifest": "/app/node_modules/busboy/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/busboy/lib/index.js"
+        },
+        {
+          "artifact_id": "0330b5a2c35dba0b",
+          "purl": "pkg:npm/bytes@3.1.2",
+          "manifest": "/app/node_modules/bytes/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/bytes/index.js"
+        },
+        {
+          "artifact_id": "bcbbe18a66e43cac",
+          "purl": "pkg:npm/call-bind-apply-helpers@1.0.2",
+          "manifest": "/app/node_modules/call-bind-apply-helpers/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/call-bind-apply-helpers/index.js"
+        },
+        {
+          "artifact_id": "cfc5ed9cc3d9cb40",
+          "purl": "pkg:npm/call-bound@1.0.4",
+          "manifest": "/app/node_modules/call-bound/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/call-bound/index.js"
+        },
+        {
+          "artifact_id": "88264a8aa65221d9",
+          "purl": "pkg:npm/concat-stream@2.0.0",
+          "manifest": "/app/node_modules/concat-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/concat-stream/index.js"
+        },
+        {
+          "artifact_id": "3bd1614fa812660a",
+          "purl": "pkg:npm/content-disposition@1.1.0",
+          "manifest": "/app/node_modules/content-disposition/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/content-disposition/index.js"
+        },
+        {
+          "artifact_id": "92f15b5cb1b8788d",
+          "purl": "pkg:npm/content-type@1.0.5",
+          "manifest": "/app/node_modules/content-type/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/content-type/index.js"
+        },
+        {
+          "artifact_id": "96f9ae0435f43f00",
+          "purl": "pkg:npm/content-type@2.1.0",
+          "manifest": "/app/node_modules/body-parser/node_modules/content-type/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/body-parser/node_modules/content-type/dist/index.js"
+        },
+        {
+          "artifact_id": "6d1a03c272d8c3c4",
+          "purl": "pkg:npm/content-type@2.1.0",
+          "manifest": "/app/node_modules/negotiator/node_modules/content-type/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/negotiator/node_modules/content-type/dist/index.js"
+        },
+        {
+          "artifact_id": "e2b285b814180be4",
+          "purl": "pkg:npm/content-type@2.1.0",
+          "manifest": "/app/node_modules/type-is/node_modules/content-type/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/type-is/node_modules/content-type/dist/index.js"
+        },
+        {
+          "artifact_id": "a11256c115ff54c3",
+          "purl": "pkg:npm/cookie@0.7.2",
+          "manifest": "/app/node_modules/cookie/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/cookie/index.js"
+        },
+        {
+          "artifact_id": "e0785eff4ea1de6f",
+          "purl": "pkg:npm/cookie-signature@1.2.2",
+          "manifest": "/app/node_modules/cookie-signature/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/cookie-signature/index.js"
+        },
+        {
+          "artifact_id": "e4840b68dc95e12b",
+          "purl": "pkg:npm/cors@2.8.6",
+          "manifest": "/app/node_modules/cors/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/cors/lib/index.js"
+        },
+        {
+          "artifact_id": "fd3d2a29fc3713d0",
+          "purl": "pkg:npm/debug@4.4.3",
+          "manifest": "/app/node_modules/debug/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/debug/src/index.js"
+        },
+        {
+          "artifact_id": "fc3496aa25dfd602",
+          "purl": "pkg:npm/depd@2.0.0",
+          "manifest": "/app/node_modules/depd/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/depd/index.js"
+        },
+        {
+          "artifact_id": "95ac2362258a9d31",
+          "purl": "pkg:npm/dunder-proto@1.0.1",
+          "manifest": "/app/node_modules/dunder-proto/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/dunder-proto/get.js"
+        },
+        {
+          "artifact_id": "4688800ee05af7fa",
+          "purl": "pkg:npm/ee-first@1.1.1",
+          "manifest": "/app/node_modules/ee-first/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ee-first/index.js"
+        },
+        {
+          "artifact_id": "753d5797fc1aaa86",
+          "purl": "pkg:npm/encodeurl@2.0.0",
+          "manifest": "/app/node_modules/encodeurl/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/encodeurl/index.js"
+        },
+        {
+          "artifact_id": "faa33272401289be",
+          "purl": "pkg:npm/es-define-property@1.0.1",
+          "manifest": "/app/node_modules/es-define-property/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/es-define-property/index.js"
+        },
+        {
+          "artifact_id": "96f26e8518b9fa96",
+          "purl": "pkg:npm/es-errors@1.3.0",
+          "manifest": "/app/node_modules/es-errors/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/es-errors/index.js"
+        },
+        {
+          "artifact_id": "9f0b70d6f2f3f0e8",
+          "purl": "pkg:npm/es-object-atoms@1.1.2",
+          "manifest": "/app/node_modules/es-object-atoms/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/es-object-atoms/index.js"
+        },
+        {
+          "artifact_id": "8d5dad0d7719d5f0",
+          "purl": "pkg:npm/escape-html@1.0.3",
+          "manifest": "/app/node_modules/escape-html/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/escape-html/index.js"
+        },
+        {
+          "artifact_id": "de82d24a8586af2c",
+          "purl": "pkg:npm/etag@1.8.1",
+          "manifest": "/app/node_modules/etag/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/etag/index.js"
+        },
+        {
+          "artifact_id": "335e74332a128474",
+          "purl": "pkg:npm/express@5.2.1",
+          "manifest": "/app/node_modules/express/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/express/index.js"
+        },
+        {
+          "artifact_id": "cf437302e85f2640",
+          "purl": "pkg:npm/fast-safe-stringify@2.1.1",
+          "manifest": "/app/node_modules/fast-safe-stringify/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fast-safe-stringify/index.js"
+        },
+        {
+          "artifact_id": "66676c7abc9ab2c7",
+          "purl": "pkg:npm/file-type@22.0.2",
+          "manifest": "/app/node_modules/file-type/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/file-type/source/detectors/asf.js"
+        },
+        {
+          "artifact_id": "a6dc5ac90aca38c7",
+          "purl": "pkg:npm/finalhandler@2.1.1",
+          "manifest": "/app/node_modules/finalhandler/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/finalhandler/index.js"
+        },
+        {
+          "artifact_id": "009644f782e222cb",
+          "purl": "pkg:npm/forwarded@0.2.0",
+          "manifest": "/app/node_modules/forwarded/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/forwarded/index.js"
+        },
+        {
+          "artifact_id": "e0b4bd63a36cb7ee",
+          "purl": "pkg:npm/fresh@2.0.0",
+          "manifest": "/app/node_modules/fresh/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/fresh/index.js"
+        },
+        {
+          "artifact_id": "f881b51593c70ae8",
+          "purl": "pkg:npm/function-bind@1.1.2",
+          "manifest": "/app/node_modules/function-bind/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/function-bind/index.js"
+        },
+        {
+          "artifact_id": "73a5ffb36cf07b75",
+          "purl": "pkg:npm/get-intrinsic@1.3.0",
+          "manifest": "/app/node_modules/get-intrinsic/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/get-intrinsic/index.js"
+        },
+        {
+          "artifact_id": "48896f9b18dca410",
+          "purl": "pkg:npm/get-proto@1.0.1",
+          "manifest": "/app/node_modules/get-proto/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/get-proto/index.js"
+        },
+        {
+          "artifact_id": "f82e1242b638be28",
+          "purl": "pkg:npm/gopd@1.2.0",
+          "manifest": "/app/node_modules/gopd/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/gopd/index.js"
+        },
+        {
+          "artifact_id": "ecf882d762a459a0",
+          "purl": "pkg:npm/has-symbols@1.1.0",
+          "manifest": "/app/node_modules/has-symbols/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/has-symbols/index.js"
+        },
+        {
+          "artifact_id": "0b84f69d25e2c04f",
+          "purl": "pkg:npm/hasown@2.0.4",
+          "manifest": "/app/node_modules/hasown/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/hasown/index.js"
+        },
+        {
+          "artifact_id": "888f552fd914ec1f",
+          "purl": "pkg:npm/http-errors@2.0.1",
+          "manifest": "/app/node_modules/http-errors/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/http-errors/index.js"
+        },
+        {
+          "artifact_id": "20b3e489ec15b2f2",
+          "purl": "pkg:npm/iconv-lite@0.7.3",
+          "manifest": "/app/node_modules/iconv-lite/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/iconv-lite/lib/index.js"
+        },
+        {
+          "artifact_id": "aeb130c3d1fa96f5",
+          "purl": "pkg:npm/ieee754@1.2.1",
+          "manifest": "/app/node_modules/ieee754/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ieee754/index.js"
+        },
+        {
+          "artifact_id": "2cae2fd56dff55b5",
+          "purl": "pkg:npm/inherits@2.0.4",
+          "manifest": "/app/node_modules/inherits/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/inherits/inherits.js"
+        },
+        {
+          "artifact_id": "bbf03e047ca288d3",
+          "purl": "pkg:npm/ipaddr.js@1.9.1",
+          "manifest": "/app/node_modules/ipaddr.js/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ipaddr.js/lib/ipaddr.js"
+        },
+        {
+          "artifact_id": "4dde2efe399e8c49",
+          "purl": "pkg:npm/is-promise@4.0.0",
+          "manifest": "/app/node_modules/is-promise/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/is-promise/index.js"
+        },
+        {
+          "artifact_id": "65de1f928baf403a",
+          "purl": "pkg:npm/iterare@1.2.1",
+          "manifest": "/app/node_modules/iterare/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/iterare/lib/index.js"
+        },
+        {
+          "artifact_id": "eaf39d98773cedf4",
+          "purl": "pkg:npm/load-esm@1.0.3",
+          "manifest": "/app/node_modules/load-esm/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/load-esm/index.js"
+        },
+        {
+          "artifact_id": "1fb71a8a4c56ef11",
+          "purl": "pkg:npm/math-intrinsics@1.1.0",
+          "manifest": "/app/node_modules/math-intrinsics/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/math-intrinsics/abs.js"
+        },
+        {
+          "artifact_id": "5d58fdbaf036f981",
+          "purl": "pkg:npm/media-typer@0.3.0",
+          "manifest": "/app/node_modules/multer/node_modules/media-typer/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/multer/node_modules/media-typer/index.js"
+        },
+        {
+          "artifact_id": "aab9686d2806fa22",
+          "purl": "pkg:npm/media-typer@1.1.1",
+          "manifest": "/app/node_modules/media-typer/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/media-typer/index.js"
+        },
+        {
+          "artifact_id": "4e90a6e02e21dbce",
+          "purl": "pkg:npm/merge-descriptors@2.0.0",
+          "manifest": "/app/node_modules/merge-descriptors/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/merge-descriptors/index.js"
+        },
+        {
+          "artifact_id": "b683eaaf501bec3b",
+          "purl": "pkg:npm/mime-db@1.52.0",
+          "manifest": "/app/node_modules/multer/node_modules/mime-db/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/multer/node_modules/mime-db/index.js"
+        },
+        {
+          "artifact_id": "98e49e9ca9ed0c38",
+          "purl": "pkg:npm/mime-db@1.54.0",
+          "manifest": "/app/node_modules/mime-db/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/mime-db/index.js"
+        },
+        {
+          "artifact_id": "b77e798d671e9aa3",
+          "purl": "pkg:npm/mime-types@2.1.35",
+          "manifest": "/app/node_modules/multer/node_modules/mime-types/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/multer/node_modules/mime-types/index.js"
+        },
+        {
+          "artifact_id": "3cac087676b3b71c",
+          "purl": "pkg:npm/mime-types@3.0.2",
+          "manifest": "/app/node_modules/mime-types/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/mime-types/index.js"
+        },
+        {
+          "artifact_id": "00e26cb05905c11b",
+          "purl": "pkg:npm/ms@2.1.3",
+          "manifest": "/app/node_modules/ms/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/ms/index.js"
+        },
+        {
+          "artifact_id": "8fd5a54a6b5c3f82",
+          "purl": "pkg:npm/multer@2.2.0",
+          "manifest": "/app/node_modules/multer/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/multer/index.js"
+        },
+        {
+          "artifact_id": "fed240f3f51dd8e9",
+          "purl": "pkg:npm/negotiator@1.1.0",
+          "manifest": "/app/node_modules/negotiator/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/negotiator/index.js"
+        },
+        {
+          "artifact_id": "660f2e12a276512d",
+          "purl": "pkg:npm/nest-typescript-starter@1.0.0",
+          "manifest": "/app/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "root_application_manifest",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/dist/app.controller.js"
+        },
+        {
+          "artifact_id": "79595982f2628ac2",
+          "purl": "pkg:npm/object-assign@4.1.1",
+          "manifest": "/app/node_modules/object-assign/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/object-assign/index.js"
+        },
+        {
+          "artifact_id": "1e8258bf59d180a9",
+          "purl": "pkg:npm/object-inspect@1.13.4",
+          "manifest": "/app/node_modules/object-inspect/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/object-inspect/index.js"
+        },
+        {
+          "artifact_id": "e38ee2ccda56111b",
+          "purl": "pkg:npm/on-finished@2.4.1",
+          "manifest": "/app/node_modules/on-finished/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/on-finished/index.js"
+        },
+        {
+          "artifact_id": "1cfad0ff6dfab65e",
+          "purl": "pkg:npm/once@1.4.0",
+          "manifest": "/app/node_modules/once/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/once/once.js"
+        },
+        {
+          "artifact_id": "c320faa5d3a66acf",
+          "purl": "pkg:npm/parseurl@1.3.3",
+          "manifest": "/app/node_modules/parseurl/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/parseurl/index.js"
+        },
+        {
+          "artifact_id": "70a1236ba5bac3d7",
+          "purl": "pkg:npm/path-to-regexp@8.4.2",
+          "manifest": "/app/node_modules/path-to-regexp/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/path-to-regexp/dist/index.js"
+        },
+        {
+          "artifact_id": "8afff0c05acc6c7b",
+          "purl": "pkg:npm/proxy-addr@2.0.7",
+          "manifest": "/app/node_modules/proxy-addr/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/proxy-addr/index.js"
+        },
+        {
+          "artifact_id": "c6863a55e8b274fd",
+          "purl": "pkg:npm/qs@6.16.0",
+          "manifest": "/app/node_modules/qs/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/qs/lib/index.js"
+        },
+        {
+          "artifact_id": "ef4fb91f0236ff59",
+          "purl": "pkg:npm/range-parser@1.3.0",
+          "manifest": "/app/node_modules/range-parser/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/range-parser/index.js"
+        },
+        {
+          "artifact_id": "88040776ebc2d75c",
+          "purl": "pkg:npm/raw-body@3.0.2",
+          "manifest": "/app/node_modules/raw-body/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/raw-body/index.js"
+        },
+        {
+          "artifact_id": "47e0c2f1e9912659",
+          "purl": "pkg:npm/readable-stream@3.6.2",
+          "manifest": "/app/node_modules/readable-stream/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/readable-stream/readable.js"
+        },
+        {
+          "artifact_id": "b22cb31872aa53e4",
+          "purl": "pkg:npm/reflect-metadata@0.2.2",
+          "manifest": "/app/node_modules/reflect-metadata/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/reflect-metadata/Reflect.js"
+        },
+        {
+          "artifact_id": "bcfeaecd90dceaad",
+          "purl": "pkg:npm/router@2.2.0",
+          "manifest": "/app/node_modules/router/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/router/index.js"
+        },
+        {
+          "artifact_id": "63745d9aea20f318",
+          "purl": "pkg:npm/rxjs@7.8.2",
+          "manifest": "/app/node_modules/rxjs/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/rxjs/dist/cjs/index.js"
+        },
+        {
+          "artifact_id": "1ef54004fd879e0d",
+          "purl": "pkg:npm/rxjs/ajax",
+          "manifest": "/app/node_modules/rxjs/ajax/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": false,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "717e04461748e0f8",
+          "purl": "pkg:npm/rxjs/fetch",
+          "manifest": "/app/node_modules/rxjs/fetch/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": false,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "9e37269718e4fba6",
+          "purl": "pkg:npm/rxjs/operators",
+          "manifest": "/app/node_modules/rxjs/operators/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": false,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "7b7d7711c6eaa625",
+          "purl": "pkg:npm/rxjs/testing",
+          "manifest": "/app/node_modules/rxjs/testing/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": false,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "2c7a56d1266be398",
+          "purl": "pkg:npm/rxjs/websocket",
+          "manifest": "/app/node_modules/rxjs/webSocket/package.json",
+          "in_build_reference_components": false,
+          "selected_in_runtime_final": false,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": false,
+          "legacy_payload_witness": null
+        },
+        {
+          "artifact_id": "fe3d8f9a906700e5",
+          "purl": "pkg:npm/safe-buffer@5.2.1",
+          "manifest": "/app/node_modules/safe-buffer/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/safe-buffer/index.js"
+        },
+        {
+          "artifact_id": "1845160adfd0312a",
+          "purl": "pkg:npm/safer-buffer@2.1.2",
+          "manifest": "/app/node_modules/safer-buffer/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/safer-buffer/safer.js"
+        },
+        {
+          "artifact_id": "c3f4b1dc9067b712",
+          "purl": "pkg:npm/send@1.2.1",
+          "manifest": "/app/node_modules/send/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/send/index.js"
+        },
+        {
+          "artifact_id": "4f6595babbd5fca6",
+          "purl": "pkg:npm/serve-static@2.2.1",
+          "manifest": "/app/node_modules/serve-static/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/serve-static/index.js"
+        },
+        {
+          "artifact_id": "c159c911c082b31d",
+          "purl": "pkg:npm/setprototypeof@1.2.0",
+          "manifest": "/app/node_modules/setprototypeof/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/setprototypeof/index.js"
+        },
+        {
+          "artifact_id": "b775c697879a05ee",
+          "purl": "pkg:npm/side-channel@1.1.1",
+          "manifest": "/app/node_modules/side-channel/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/side-channel/index.js"
+        },
+        {
+          "artifact_id": "fb4c848b56222e04",
+          "purl": "pkg:npm/side-channel-list@1.0.1",
+          "manifest": "/app/node_modules/side-channel-list/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/side-channel-list/index.js"
+        },
+        {
+          "artifact_id": "180aa627395e1af2",
+          "purl": "pkg:npm/side-channel-map@1.0.1",
+          "manifest": "/app/node_modules/side-channel-map/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/side-channel-map/index.js"
+        },
+        {
+          "artifact_id": "295ed673f537d4f3",
+          "purl": "pkg:npm/side-channel-weakmap@1.0.2",
+          "manifest": "/app/node_modules/side-channel-weakmap/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/side-channel-weakmap/index.js"
+        },
+        {
+          "artifact_id": "de78010dbbeb1c27",
+          "purl": "pkg:npm/statuses@2.0.2",
+          "manifest": "/app/node_modules/statuses/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/statuses/index.js"
+        },
+        {
+          "artifact_id": "242d9b01a03f27f5",
+          "purl": "pkg:npm/streamsearch@1.1.0",
+          "manifest": "/app/node_modules/streamsearch/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/streamsearch/lib/sbmh.js"
+        },
+        {
+          "artifact_id": "3748de80870794fc",
+          "purl": "pkg:npm/string_decoder@1.3.0",
+          "manifest": "/app/node_modules/string_decoder/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/string_decoder/lib/string_decoder.js"
+        },
+        {
+          "artifact_id": "dcd5de8b13367873",
+          "purl": "pkg:npm/strtok3@10.3.5",
+          "manifest": "/app/node_modules/strtok3/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/strtok3/lib/AbstractTokenizer.js"
+        },
+        {
+          "artifact_id": "40b77d4a2e6d6f92",
+          "purl": "pkg:npm/toidentifier@1.0.1",
+          "manifest": "/app/node_modules/toidentifier/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/toidentifier/index.js"
+        },
+        {
+          "artifact_id": "fc33850c44b6a182",
+          "purl": "pkg:npm/token-types@6.1.2",
+          "manifest": "/app/node_modules/token-types/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/token-types/lib/index.js"
+        },
+        {
+          "artifact_id": "e918896a50f538ad",
+          "purl": "pkg:npm/tslib@2.8.1",
+          "manifest": "/app/node_modules/tslib/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/tslib/tslib.js"
+        },
+        {
+          "artifact_id": "6c66b40195c67d77",
+          "purl": "pkg:npm/type-is@1.6.18",
+          "manifest": "/app/node_modules/multer/node_modules/type-is/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/multer/node_modules/type-is/index.js"
+        },
+        {
+          "artifact_id": "0be99370f4a1ce99",
+          "purl": "pkg:npm/type-is@2.1.0",
+          "manifest": "/app/node_modules/type-is/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/type-is/index.js"
+        },
+        {
+          "artifact_id": "1f4622134a5e9870",
+          "purl": "pkg:npm/typedarray@0.0.6",
+          "manifest": "/app/node_modules/typedarray/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/typedarray/index.js"
+        },
+        {
+          "artifact_id": "950b8b5486557080",
+          "purl": "pkg:npm/uid@2.0.2",
+          "manifest": "/app/node_modules/uid/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/uid/dist/index.js"
+        },
+        {
+          "artifact_id": "28f59ff5ca27c721",
+          "purl": "pkg:npm/uint8array-extras@1.5.0",
+          "manifest": "/app/node_modules/uint8array-extras/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/uint8array-extras/index.js"
+        },
+        {
+          "artifact_id": "409753b7e25bc9f4",
+          "purl": "pkg:npm/unpipe@1.0.0",
+          "manifest": "/app/node_modules/unpipe/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/unpipe/index.js"
+        },
+        {
+          "artifact_id": "81fae7c7df49aa5d",
+          "purl": "pkg:npm/util-deprecate@1.0.2",
+          "manifest": "/app/node_modules/util-deprecate/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/util-deprecate/node.js"
+        },
+        {
+          "artifact_id": "cf157fa1ae677562",
+          "purl": "pkg:npm/vary@1.1.2",
+          "manifest": "/app/node_modules/vary/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/vary/index.js"
+        },
+        {
+          "artifact_id": "9042867cbac87f9f",
+          "purl": "pkg:npm/wrappy@1.0.2",
+          "manifest": "/app/node_modules/wrappy/package.json",
+          "in_build_reference_components": true,
+          "selected_in_runtime_final": true,
+          "role_by_layout_only": "canonical_installed_package_slot",
+          "has_actual_file_bytes": true,
+          "legacy_payload_witness": "/app/node_modules/wrappy/wrappy.js"
+        }
+      ]
+    }
+  ]
+}

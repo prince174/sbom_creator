@@ -1,0 +1,10 @@
+{
+  "oracle_opened": false,
+  "sha256": "78ac48492a65e4252b07f5a53708fe3caff8db9839a6cb6791e283677e13fa61",
+  "cases": [
+    "paired-axios-v2",
+    "paired-fastify-v1",
+    "paired-pino-v1",
+    "paired-nest-starter-v1"
+  ]
+}

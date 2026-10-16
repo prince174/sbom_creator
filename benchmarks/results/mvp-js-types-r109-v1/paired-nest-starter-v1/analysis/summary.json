@@ -1,0 +1,28 @@
+{
+  "status": "succeeded",
+  "partial": true,
+  "assessment_mode": "rules",
+  "policy_version": "image-evidence-and-payload-v4",
+  "payload_verification": "performed",
+  "unknown_reasons": {
+    "INSUFFICIENT_IMAGE_EVIDENCE": 4,
+    "AMBIGUOUS_IDENTITY": 5
+  },
+  "unknown_groups": {
+    "image_evidence": 4,
+    "image_identity": 5
+  },
+  "source_count": 0,
+  "image_count": 406,
+  "selected_count": 397,
+  "final_count": 308,
+  "os_count": 89,
+  "full_count": 397,
+  "inventory_scope": "non-os-packages-v1",
+  "decisions": {
+    "INCLUDE": 380,
+    "UNKNOWN": 9
+  },
+  "cyclonedx_valid": true,
+  "reconciliation_seconds": 8.172
+}

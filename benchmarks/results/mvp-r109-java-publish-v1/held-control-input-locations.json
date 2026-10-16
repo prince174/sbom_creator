@@ -1,0 +1,66 @@
+{
+  "locate_only": true,
+  "held_controls_not_run": true,
+  "controls": [
+    {
+      "pair": "paired-petclinic-rest-v1",
+      "scope": "input location and pre-existing producer metadata only; no reference read or new prediction",
+      "archive": {
+        "path": "benchmarks/.work/paired-petclinic-rest-v1/image.tar",
+        "bytes": 158542336
+      },
+      "syft_image_catalog": {
+        "path": "benchmarks/.work/paired-petclinic-rest-v1/analysis/image.syft.json",
+        "bytes": 7198740
+      },
+      "observed_provenance": {
+        "path": "benchmarks/.work/paired-petclinic-rest-v1/analysis/provenance.json",
+        "bytes": 32937
+      },
+      "syft_producer": {
+        "name": "syft",
+        "version": "1.51.1"
+      },
+      "producer_observed_image_config_digest": "sha256:9bfafd9d53c375adee38bb2641013f1be503c1157de26bba79934921cf870988",
+      "producer_observed_manifest_digest": "sha256:f87b88c18bbb209f300ac665b97ec10be26f6353316b8a915be7cb35e9074193",
+      "observed_image_input": "docker.io/sbom-creator-benchmark/paired-petclinic-rest@sha256:f87b88c18bbb209f300ac665b97ec10be26f6353316b8a915be7cb35e9074193",
+      "requested_platform": "linux/amd64",
+      "observations_not_reverified_image_binding": true,
+      "new_scans_or_predictions": false,
+      "reference_component_reads": false,
+      "trivy_image_peer": {
+        "path": "benchmarks/results/petclinic-rest-frozen-control-v1/image/sbom.json",
+        "bytes": 445333
+      }
+    },
+    {
+      "pair": "paired-commons-dbcp-v1",
+      "scope": "input location and pre-existing producer metadata only; no reference read or new prediction",
+      "archive": {
+        "path": "benchmarks/.work/paired-commons-dbcp-v1/image.tar",
+        "bytes": 440320
+      },
+      "syft_image_catalog": {
+        "path": "benchmarks/.work/paired-commons-dbcp-v1/analysis/image.syft.json",
+        "bytes": 40036
+      },
+      "observed_provenance": {
+        "path": "benchmarks/.work/paired-commons-dbcp-v1/analysis/provenance.json",
+        "bytes": 3580
+      },
+      "syft_producer": {
+        "name": "syft",
+        "version": "1.51.1"
+      },
+      "producer_observed_image_config_digest": "sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be",
+      "producer_observed_manifest_digest": "sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64",
+      "observed_image_input": "docker.io/sbom-creator-benchmark/paired-commons-dbcp@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64",
+      "requested_platform": "linux/amd64",
+      "observations_not_reverified_image_binding": true,
+      "new_scans_or_predictions": false,
+      "reference_component_reads": false,
+      "trivy_image_peer": null,
+      "warning": "benchmarks/.work/paired-commons-dbcp-v1/trivy.json is directory/source analysis, not image evidence; do not reuse as image peer"
+    }
+  ]
+}

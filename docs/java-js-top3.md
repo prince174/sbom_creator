@@ -1,3 +1,17 @@
+## R109 — JS type presence and wider POST-only Java evaluation, 2026-10-16
+
+| Technique / mode | Actual result | Meaning |
+|---|---|---|
+| Runtime Syft1.51.1 + declared type-file presence |12fresh JS image-only no-lock runs307/9/0,P97.15/R100; Nest107/0/0 |Real runtime gain1TP, no lost components. Nonempty owned explicit .d.ts is delivered evidence, not JS execution |
+| R108 service Syft+Trivy+physical gates, new independent packaged labels |All56reactor owner sets3665/14/14,P/R99.62; plus unchangedBoot gives3755/17/16,P99.55/R99.58 |POST-only new reference scope, not new Java prediction/accuracy gain;47/56 archive-complete, opaque shading UNKNOWN |
+| cdxgen/native Maven and passiveTrivy source |R104Micro100/0/0 vs76/0/24 direct unchanged |Optional model graph, not image/component comparison; no new ranking |
+
+Java v7 remains explicit opt-in; JS base policy is nowv4. Old scopes/scores preserved.
+Nine delivered embedded JS fixture coordinates remain conservative build-reference FP,
+not filtered from full. Installed Linux Nest final308 matches Windows coordinates/
+nonOS IDs/types evidence; OS/full have one systemd difference and partial parity.
+750tests/3skips. [Measured scopes/metrics](java-js-service-accuracy.md).
+
 ## R108 — delivered-archive evidence in the service, 2026-10-16
 
 No overall rank promotion: same disclosed scopes,31UNKNOWN owners, no fresh blind

@@ -1,0 +1,93 @@
+{
+  "coverage.json": {
+    "file": "artifacts\\coverage.json",
+    "original_sha256": "94acbcd0b0b7db26c142647578b79b72ba17f69802644cf07daf084a2d3e5d53",
+    "stored_sha256": "94acbcd0b0b7db26c142647578b79b72ba17f69802644cf07daf084a2d3e5d53",
+    "original_bytes": 4630,
+    "stored_bytes": 4630
+  },
+  "decisions.json": {
+    "file": "artifacts\\decisions.json.gz",
+    "original_sha256": "c3e90cce278dba28d8ca3b4b8338b669fa1541bc148cab897c434746406e1d10",
+    "stored_sha256": "250993a2e98ea92db16b67e30a3365da1cbce17df0285672e31f2f51bd0b9ca9",
+    "original_bytes": 4118146,
+    "stored_bytes": 362524
+  },
+  "direct-dependencies.json": {
+    "file": "artifacts\\direct-dependencies.json",
+    "original_sha256": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "stored_sha256": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "original_bytes": 182,
+    "stored_bytes": 182
+  },
+  "final.cdx.json": {
+    "file": "artifacts\\final.cdx.json",
+    "original_sha256": "b72c2b7ebf3624416e2cc9ec6209318c7750ec8a96563f2bed53ed5101cf7b2e",
+    "stored_sha256": "b72c2b7ebf3624416e2cc9ec6209318c7750ec8a96563f2bed53ed5101cf7b2e",
+    "original_bytes": 705753,
+    "stored_bytes": 705753
+  },
+  "full.cdx.json": {
+    "file": "artifacts\\full.cdx.json",
+    "original_sha256": "2f627d2fa2e5891d163709de8bef27d9a66e164bb1638db0df87c125ac5c77fd",
+    "stored_sha256": "2f627d2fa2e5891d163709de8bef27d9a66e164bb1638db0df87c125ac5c77fd",
+    "original_bytes": 1019844,
+    "stored_bytes": 1019844
+  },
+  "image.syft.json": {
+    "file": "artifacts\\image.syft.json.gz",
+    "original_sha256": "e97f47b2c15cb170a35f740b2adb5e670ea4a40e751d256f2547fcd92f22bf32",
+    "stored_sha256": "6ab96f771fe2f1486093b8b597921c40d83adb16efaebe20611cf57a330bff94",
+    "original_bytes": 11150565,
+    "stored_bytes": 1234011
+  },
+  "java-direct-dependencies.json": {
+    "file": "artifacts\\java-direct-dependencies.json",
+    "original_sha256": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "stored_sha256": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "original_bytes": 159,
+    "stored_bytes": 159
+  },
+  "os.cdx.json": {
+    "file": "artifacts\\os.cdx.json",
+    "original_sha256": "144e60fcc56b70f6a0a601cecf6f9f8e614291fc4b85649ac178046f3059d0e8",
+    "stored_sha256": "144e60fcc56b70f6a0a601cecf6f9f8e614291fc4b85649ac178046f3059d0e8",
+    "original_bytes": 411409,
+    "stored_bytes": 411409
+  },
+  "provenance.json": {
+    "file": "artifacts\\provenance.json",
+    "original_sha256": "f1453db0f8e9af3400db26e1bc5918530319b738ea02b7c62f6d798a2da40b12",
+    "stored_sha256": "f1453db0f8e9af3400db26e1bc5918530319b738ea02b7c62f6d798a2da40b12",
+    "original_bytes": 105771,
+    "stored_bytes": 105771
+  },
+  "review.json": {
+    "file": "artifacts\\review.json",
+    "original_sha256": "12fb68a206cd79aeaf4c52d5e977f98c3984dd001bfcd890886c545be05d87ad",
+    "stored_sha256": "12fb68a206cd79aeaf4c52d5e977f98c3984dd001bfcd890886c545be05d87ad",
+    "original_bytes": 5047,
+    "stored_bytes": 5047
+  },
+  "selected.syft.json": {
+    "file": "artifacts\\selected.syft.json.gz",
+    "original_sha256": "72f58f7e467c68e7dee8241a351860ce1e47e127419c987b20e1bc870845c2ec",
+    "stored_sha256": "e59e3ba87ef21e76efda84f34526fa758e9863691a781698e352596e57f5f7ba",
+    "original_bytes": 11142302,
+    "stored_bytes": 1233384
+  },
+  "source.syft.json": {
+    "file": "artifacts\\source.syft.json",
+    "original_sha256": "a580385ed805cba10c2b855ec46b600016a0083573b9387734d693ed809beb3f",
+    "stored_sha256": "a580385ed805cba10c2b855ec46b600016a0083573b9387734d693ed809beb3f",
+    "original_bytes": 7960,
+    "stored_bytes": 7960
+  },
+  "summary.json": {
+    "file": "artifacts\\summary.json",
+    "original_sha256": "e42fe850a993ae2460a6a28f3a06d1b20062074e8c763c5daf378612465b1034",
+    "stored_sha256": "e42fe850a993ae2460a6a28f3a06d1b20062074e8c763c5daf378612465b1034",
+    "original_bytes": 631,
+    "stored_bytes": 631
+  }
+}

@@ -1,0 +1,2844 @@
+{
+  "pair": "paired-javalin-reactor-v1",
+  "commit": "20ba71b211b5efa91f5c10ccb467326b86a1e5dc",
+  "evaluation_only": true,
+  "actual_oci_binding": {
+    "index_digest": "sha256:7bc1288e720543dac6f08617a6449181c26766a2512039445c0bb618abc43672",
+    "platform_manifest_digest": "sha256:21dd5ecd9b0d81edc0bce0ca2c59374895f936f8ccc0cb6d8a4cb74245e8de13",
+    "config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab"
+  },
+  "actual_image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc",
+  "actual_build_runtime_image_trees_reverified": true,
+  "prediction_or_classifier_inputs_read": false,
+  "historical_scopes_scores_unchanged": true,
+  "archive_inventory_file": "paired-javalin-reactor-v1-archive-inventory.json",
+  "archive_inventory_sha256": "ca1fb4067aaf6264bf51bfd24e022f772e69800de7b0d3f971cdd897f7e644a0",
+  "resources": {
+    "member_read_bytes": 2922240,
+    "directory_bytes": 112058,
+    "parsed_entries": 1300,
+    "unique_archives": 14,
+    "content_reuses": 0,
+    "nested_archive_instances": 0,
+    "primary_metadata_zip_parses": 14
+  },
+  "seconds": 0.891,
+  "modules": [
+    {
+      "path": "javalin",
+      "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin/asm-9.10.1.jar",
+          "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb",
+          "coordinate": "pkg:maven/org.ow2.asm/asm@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/asm-commons-9.10.1.jar",
+          "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-commons@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/asm-tree-9.10.1.jar",
+          "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-tree@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/brotli4j-1.23.0.jar",
+          "sha256": "5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/error_prone_annotations-2.48.0.jar",
+          "sha256": "b49c5c958316ed67a09c699dda9aa749caf434d51d863dea599ef36a49b9c855",
+          "coordinate": "pkg:maven/com.google.errorprone/error_prone_annotations@2.48.0",
+          "qualified_purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.48.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/gson-2.14.0.jar",
+          "sha256": "2cbd119bf1961c28788310963dc80ba65f58cdeec1dd139c8bdb1240faa2c36f",
+          "coordinate": "pkg:maven/com.google.code.gson/gson@2.14.0",
+          "qualified_purl": "pkg:maven/com.google.code.gson/gson@2.14.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-annotations-2.22.jar",
+          "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-core-2.22.2.jar",
+          "sha256": "ff167a6317be15895706c26668f45b898efe40ab8780970658210fe1393d52a6",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-core-3.2.2.jar",
+          "sha256": "93d9090b8c505b2f942ad85dd5821e8c401bfbafafff11708a3fbe2ef9da18ca",
+          "coordinate": "pkg:maven/tools.jackson.core/jackson-core@3.2.2",
+          "qualified_purl": "pkg:maven/tools.jackson.core/jackson-core@3.2.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-databind-2.22.2.jar",
+          "sha256": "d0da14c12b16b5d54719aa172d83b542ff4abeb8b0fb7db476fde8ceece760ca",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-databind-3.2.2.jar",
+          "sha256": "d27509f990d990fc779a01f3f612005ff6c67dc3bb0a720f5f4d9b2f5c713401",
+          "coordinate": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+          "qualified_purl": "pkg:maven/tools.jackson.core/jackson-databind@3.2.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-module-kotlin-2.22.2.jar",
+          "sha256": "174e917ea64c0559df824e92317782a92eba7278de488d4a11df0b8597791874",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jackson-module-kotlin-3.2.2.jar",
+          "sha256": "d497603e016ca0a07fba3a44af5cfa192064b6c851886300e73cb6cd3d7c39cb",
+          "coordinate": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2",
+          "qualified_purl": "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.annotation-api-2.1.1.jar",
+          "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+          "coordinate": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+          "qualified_purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.enterprise.cdi-api-4.0.1.jar",
+          "sha256": "beaf74c4f2618189309e3f4a09c43effab633dd96aa1f6dc58a6ba7ee0042717",
+          "coordinate": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+          "qualified_purl": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.enterprise.lang-model-4.0.1.jar",
+          "sha256": "53acafe65b6ef0195fa1b8a0ef2650e5aa024c32cb4059c4df372d6b32089cd3",
+          "coordinate": "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+          "qualified_purl": "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.inject-api-2.0.1.jar",
+          "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+          "coordinate": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "qualified_purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.interceptor-api-2.1.0.jar",
+          "sha256": "ef787d3f713fc6ff4f02cd4b0dbed08f93d8af3400c90cbb43fb4b5c0583710b",
+          "coordinate": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+          "qualified_purl": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.servlet-api-6.0.0.jar",
+          "sha256": "c034eb1afb158987dbb53a5fea0cadf611c8dae8daadd59c44d9d5ab70129cef",
+          "coordinate": "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+          "qualified_purl": "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jakarta.transaction-api-2.0.1.jar",
+          "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875",
+          "coordinate": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "qualified_purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-annotations-12.1.12.jar",
+          "sha256": "ce51d231435cdd774336abcb44a7817195fd12487ed213327e8d43db172af467",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee-webapp-12.1.12.jar",
+          "sha256": "f70d9b30fdfd970e8bbc462b9d6b4cb85f850428d8640529fcc1f1912b2941b4",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-annotations-12.1.12.jar",
+          "sha256": "c45ba9ff724845ef5848f86cf164c87824d4be18095216b9cba66a94a72b83b6",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-plus-12.1.12.jar",
+          "sha256": "80d050384ef31c921e0fbeeded3c70fc8d35a29b7951511a9ccfaeb06b5e29c7",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-servlet-12.1.12.jar",
+          "sha256": "021375ea80d84b5f9d46260916fc0450dc4fae5a95ce80f8289e87a0db07de47",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-webapp-12.1.12.jar",
+          "sha256": "84de1014bb79f957f0fc66d3db9b2bc7eec19f01c8ace4e250b4707af0eed0f3",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-websocket-jetty-server-12.1.12.jar",
+          "sha256": "bce3641addd34a0d9a3ce8080f31f3b7f45b2bbdf3e7d5655ccd5f4d529c7816",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-ee10-websocket-servlet-12.1.12.jar",
+          "sha256": "83a58b4ee3bf6d0284c50304725cf93b694a67b1b1cc139af72500296dbf7359",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-http-12.1.12.jar",
+          "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-io-12.1.12.jar",
+          "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-jndi-12.1.12.jar",
+          "sha256": "a701368f9810433103836f0f2c0c0f6a2ca49f951d25d155e4e507821cb54b43",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-plus-12.1.12.jar",
+          "sha256": "0e29a87abf5b651f77e5c3e7c726f0ecef30a9bc57a5e0aa5aa3f784cfc0a7bd",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-security-12.1.12.jar",
+          "sha256": "fcc0206c1ac66b632ef29a59ccf76c3f3737a62ef54694b1d111eeb2e6efe804",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-server-12.1.12.jar",
+          "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-session-12.1.12.jar",
+          "sha256": "73aea4cdd91f2027da1a09cd5953b661625017971d53d8e1ff342f8547752b06",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-util-12.1.12.jar",
+          "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-websocket-core-common-12.1.12.jar",
+          "sha256": "a1ef0c79a4b8b9e4ce969e70d8de9fbed4776625863bdbd5eb5f69fb70208399",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-websocket-core-server-12.1.12.jar",
+          "sha256": "d91becae70e7b15e6200f40d02239d8315f8b26c90d4ab38348fcdad41c0ebf5",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-websocket-jetty-api-12.1.12.jar",
+          "sha256": "887090638bf758dce9268478a3ccf168929de52dcdecdddb4eaff62263cbd961",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-websocket-jetty-common-12.1.12.jar",
+          "sha256": "933d05b566effad97f84b5d986be810a2928685c875d7fb90f301163f24d2718",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-websocket-jetty-server-12.1.12.jar",
+          "sha256": "0b189ffab87b02a4da1187dc4022410c5f235b5a1a7ccfeea3cc4846a8e80664",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/jetty-xml-12.1.12.jar",
+          "sha256": "1c7b6320e3ad4ccca861ecfd1347f10ac6130ca2c2eb788a6b5dff3ab0c0f532",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/kotlin-reflect-2.1.21.jar",
+          "sha256": "bcd75a36ca4ad8e06117214ed807f8dea2fe61a71e07f91ca14f4335024b8463",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/native-linux-x86_64-1.23.0.jar",
+          "sha256": "c504e243961c4229d8e486ca8f87b757ad9a033dda471061c0134c050ddcaa7c",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/service-1.23.0.jar",
+          "sha256": "7f298d44dbb7688419f0179ee1dfa0e4436633272b05d38a5faf3a2b8d08697b",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/slf4j-simple-2.0.18.jar",
+          "sha256": "8268bd018a5709b07209e0d8ca6221a37584ba1bc12ba985b8335a82c648bdd0",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-simple@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin/zstd-jni-1.5.7-15.jar",
+          "sha256": "88af05c50951c2c8d0fe10c7b3451736204fcc389eaad01e767e7acc64e75fe2",
+          "coordinate": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+          "qualified_purl": "pkg:maven/com.github.luben/zstd-jni@1.5.7-15?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+        "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+        "pkg:maven/com.google.code.gson/gson@2.14.0",
+        "pkg:maven/com.google.errorprone/error_prone_annotations@2.48.0",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+        "pkg:maven/tools.jackson.core/jackson-core@3.2.2",
+        "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+        "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "bytes": 697865,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+            "literal_copy_source": "javalin/target/javalin-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin/",
+            "effective_final_name": "javalin-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "2fae12d83df4bb8243c1632c58e301fab5c801e6b8051de6421d3808c85c8494",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin/pom.properties",
+            "embedded_properties_sha256": "3c507458f230de3becb96f03577954dfd0243b39b28902830a196c58fa3cfc8e",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin/javalin-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "2f72e2518cf5e79aba2a4ce1823d4e14e5c79458e8ac5651bc33c9439a8ec778",
+          "entry_count": 409,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 373
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 373,
+          "non_nested_regular_entries": 378,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+        "pkg:maven/com.github.luben/zstd-jni@1.5.7-15",
+        "pkg:maven/com.google.code.gson/gson@2.14.0",
+        "pkg:maven/com.google.errorprone/error_prone_annotations@2.48.0",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.slf4j/slf4j-simple@2.0.18",
+        "pkg:maven/tools.jackson.core/jackson-core@3.2.2",
+        "pkg:maven/tools.jackson.core/jackson-databind@3.2.2",
+        "pkg:maven/tools.jackson.module/jackson-module-kotlin@3.2.2"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-bundle",
+      "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-bundle/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-bundle/asm-9.10.1.jar",
+          "sha256": "ed825d10ab1399c8c0cb669e688cf0c8c82629b4c8399b58352b68e92ca10fcb",
+          "coordinate": "pkg:maven/org.ow2.asm/asm@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/asm-commons-9.10.1.jar",
+          "sha256": "6d0abefb7cbf972ea16edb37ec14835372505063a45f976ab7ea889ed9497895",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-commons@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/asm-tree-9.10.1.jar",
+          "sha256": "3dfb0d5b6a106cd40b5b250e39935fbf2f927f4477546a5369a3ac609cf0506b",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-tree@9.10.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/brotli4j-1.23.0.jar",
+          "sha256": "5fcf13ad78d07319cc507465dcf61cbc3efee9f45c9ae1c42a9902414696bc0b",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jackson-annotations-2.22.jar",
+          "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jackson-core-2.22.2.jar",
+          "sha256": "ff167a6317be15895706c26668f45b898efe40ab8780970658210fe1393d52a6",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jackson-databind-2.22.2.jar",
+          "sha256": "d0da14c12b16b5d54719aa172d83b542ff4abeb8b0fb7db476fde8ceece760ca",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jackson-datatype-jsr310-2.22.2.jar",
+          "sha256": "9df71cc7fb3781fd0bed6c05eebbfa8b39292a49f5619e76fdd0d889f64c8f33",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jackson-module-kotlin-2.22.2.jar",
+          "sha256": "174e917ea64c0559df824e92317782a92eba7278de488d4a11df0b8597791874",
+          "coordinate": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+          "qualified_purl": "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.annotation-api-2.1.1.jar",
+          "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+          "coordinate": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+          "qualified_purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.enterprise.cdi-api-4.0.1.jar",
+          "sha256": "beaf74c4f2618189309e3f4a09c43effab633dd96aa1f6dc58a6ba7ee0042717",
+          "coordinate": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+          "qualified_purl": "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.enterprise.lang-model-4.0.1.jar",
+          "sha256": "53acafe65b6ef0195fa1b8a0ef2650e5aa024c32cb4059c4df372d6b32089cd3",
+          "coordinate": "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+          "qualified_purl": "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.inject-api-2.0.1.jar",
+          "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+          "coordinate": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "qualified_purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.interceptor-api-2.1.0.jar",
+          "sha256": "ef787d3f713fc6ff4f02cd4b0dbed08f93d8af3400c90cbb43fb4b5c0583710b",
+          "coordinate": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+          "qualified_purl": "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.servlet-api-6.0.0.jar",
+          "sha256": "c034eb1afb158987dbb53a5fea0cadf611c8dae8daadd59c44d9d5ab70129cef",
+          "coordinate": "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+          "qualified_purl": "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jakarta.transaction-api-2.0.1.jar",
+          "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875",
+          "coordinate": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "qualified_purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "coordinate": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "qualified_purl": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+          "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb",
+          "coordinate": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "qualified_purl": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/javalin-testtools-7.2.4-SNAPSHOT.jar",
+          "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015",
+          "coordinate": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "qualified_purl": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-annotations-12.1.12.jar",
+          "sha256": "ce51d231435cdd774336abcb44a7817195fd12487ed213327e8d43db172af467",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee-webapp-12.1.12.jar",
+          "sha256": "f70d9b30fdfd970e8bbc462b9d6b4cb85f850428d8640529fcc1f1912b2941b4",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-annotations-12.1.12.jar",
+          "sha256": "c45ba9ff724845ef5848f86cf164c87824d4be18095216b9cba66a94a72b83b6",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-plus-12.1.12.jar",
+          "sha256": "80d050384ef31c921e0fbeeded3c70fc8d35a29b7951511a9ccfaeb06b5e29c7",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-servlet-12.1.12.jar",
+          "sha256": "021375ea80d84b5f9d46260916fc0450dc4fae5a95ce80f8289e87a0db07de47",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-webapp-12.1.12.jar",
+          "sha256": "84de1014bb79f957f0fc66d3db9b2bc7eec19f01c8ace4e250b4707af0eed0f3",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-websocket-jetty-server-12.1.12.jar",
+          "sha256": "bce3641addd34a0d9a3ce8080f31f3b7f45b2bbdf3e7d5655ccd5f4d529c7816",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-ee10-websocket-servlet-12.1.12.jar",
+          "sha256": "83a58b4ee3bf6d0284c50304725cf93b694a67b1b1cc139af72500296dbf7359",
+          "coordinate": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-http-12.1.12.jar",
+          "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-http2-common-12.1.12.jar",
+          "sha256": "31c4e73da6a83e6b77531aa9a2aa8e8b64265512672b7db18476872b01b22acd",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-http2-hpack-12.1.12.jar",
+          "sha256": "b59a90111b03359a18a499a5b21b83555a1990ed26df01dc15d477e6800c8674",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-http2-server-12.1.12.jar",
+          "sha256": "e84feb7c6bd11c3a49b0a60a9a37ade908677ae8fceb056e3ae2f3b907ebed3f",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-io-12.1.12.jar",
+          "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-jakarta-servlet-api-5.0.2.jar",
+          "sha256": "efb20997729f32bfa6c8a8319037c353f7ad460d5d49f336bf232998ea2358db",
+          "coordinate": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-jndi-12.1.12.jar",
+          "sha256": "a701368f9810433103836f0f2c0c0f6a2ca49f951d25d155e4e507821cb54b43",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-plus-12.1.12.jar",
+          "sha256": "0e29a87abf5b651f77e5c3e7c726f0ecef30a9bc57a5e0aa5aa3f784cfc0a7bd",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-security-12.1.12.jar",
+          "sha256": "fcc0206c1ac66b632ef29a59ccf76c3f3737a62ef54694b1d111eeb2e6efe804",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-server-12.1.12.jar",
+          "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-session-12.1.12.jar",
+          "sha256": "73aea4cdd91f2027da1a09cd5953b661625017971d53d8e1ff342f8547752b06",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-util-12.1.12.jar",
+          "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-websocket-core-common-12.1.12.jar",
+          "sha256": "a1ef0c79a4b8b9e4ce969e70d8de9fbed4776625863bdbd5eb5f69fb70208399",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-websocket-core-server-12.1.12.jar",
+          "sha256": "d91becae70e7b15e6200f40d02239d8315f8b26c90d4ab38348fcdad41c0ebf5",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-websocket-jetty-api-12.1.12.jar",
+          "sha256": "887090638bf758dce9268478a3ccf168929de52dcdecdddb4eaff62263cbd961",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-websocket-jetty-common-12.1.12.jar",
+          "sha256": "933d05b566effad97f84b5d986be810a2928685c875d7fb90f301163f24d2718",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-websocket-jetty-server-12.1.12.jar",
+          "sha256": "0b189ffab87b02a4da1187dc4022410c5f235b5a1a7ccfeea3cc4846a8e80664",
+          "coordinate": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/jetty-xml-12.1.12.jar",
+          "sha256": "1c7b6320e3ad4ccca861ecfd1347f10ac6130ca2c2eb788a6b5dff3ab0c0f532",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/kotlin-reflect-2.1.21.jar",
+          "sha256": "bcd75a36ca4ad8e06117214ed807f8dea2fe61a71e07f91ca14f4335024b8463",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/logback-classic-1.6.3.jar",
+          "sha256": "beebede8db065fe1b72909ecc66bb49acda618901635d86c25fce14a5915e37e",
+          "coordinate": "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+          "qualified_purl": "pkg:maven/ch.qos.logback/logback-classic@1.6.3?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/logback-core-1.6.3.jar",
+          "sha256": "a6967a28c8b086dee75a694d2f6fb8830c71153539866d7d8af065c9b6df91e0",
+          "coordinate": "pkg:maven/ch.qos.logback/logback-core@1.6.3",
+          "qualified_purl": "pkg:maven/ch.qos.logback/logback-core@1.6.3?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/native-linux-x86_64-1.23.0.jar",
+          "sha256": "c504e243961c4229d8e486ca8f87b757ad9a033dda471061c0134c050ddcaa7c",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/service-1.23.0.jar",
+          "sha256": "7f298d44dbb7688419f0179ee1dfa0e4436633272b05d38a5faf3a2b8d08697b",
+          "coordinate": "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+          "qualified_purl": "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-bundle/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-bundle/javalin-bundle-7.2.4-SNAPSHOT.jar",
+          "sha256": "91a45a0448d96a6ea9c8eb91357907336c097f46b210d86671b4b42b1796fe84",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+        "pkg:maven/ch.qos.logback/logback-core@1.6.3",
+        "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+        "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+        "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-bundle/javalin-bundle-7.2.4-SNAPSHOT.jar",
+          "sha256": "91a45a0448d96a6ea9c8eb91357907336c097f46b210d86671b4b42b1796fe84",
+          "bytes": 6442,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "91a45a0448d96a6ea9c8eb91357907336c097f46b210d86671b4b42b1796fe84",
+            "literal_copy_source": "javalin-bundle/target/javalin-bundle-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-bundle/",
+            "effective_final_name": "javalin-bundle-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-bundle/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "410b28e0f2e6b64320cf9b9781720214986812e3118af4a61f702e3f157b7377",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-bundle/pom.properties",
+            "embedded_properties_sha256": "4badb7c2a262bed7ffc629a03ef63d86078573b526db9b9a1845ef5282fd723b",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-bundle/javalin-bundle-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "526cdec45152c097105aa1cec61960e38ca331778cc755d883178dda576bf400",
+          "entry_count": 9,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 0
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-bundle/javalin-bundle-7.2.4-SNAPSHOT.jar",
+          "sha256": "91a45a0448d96a6ea9c8eb91357907336c097f46b210d86671b4b42b1796fe84",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 0,
+          "non_nested_regular_entries": 5,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/ch.qos.logback/logback-classic@1.6.3",
+        "pkg:maven/ch.qos.logback/logback-core@1.6.3",
+        "pkg:maven/com.aayushatharva.brotli4j/brotli4j@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/native-linux-x86_64@1.23.0",
+        "pkg:maven/com.aayushatharva.brotli4j/service@1.23.0",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.2",
+        "pkg:maven/com.fasterxml.jackson.module/jackson-module-kotlin@2.22.2",
+        "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+        "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-reflect@2.1.21",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-testtools",
+      "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-testtools/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-testtools/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "coordinate": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "qualified_purl": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-testtools/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-testtools/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-testtools/javalin-testtools-7.2.4-SNAPSHOT.jar",
+          "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-testtools/javalin-testtools-7.2.4-SNAPSHOT.jar",
+          "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015",
+          "bytes": 32084,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015",
+            "literal_copy_source": "javalin-testtools/target/javalin-testtools-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-testtools/",
+            "effective_final_name": "javalin-testtools-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-testtools/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "2ae583d1cf080d849d0cf7c345771200b47e3ba1c00e599ca8808f1c83db77ff",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-testtools/pom.properties",
+            "embedded_properties_sha256": "ec0dda90ea468381f894ea074f60386eb7b51b2f251cf7956e09a92fb7cbfce4",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-testtools/javalin-testtools-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "0d88d8f75a114455b08bdc26370a2314b56a5d3857d8db60793e530029240f44",
+          "entry_count": 27,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 15
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-testtools/javalin-testtools-7.2.4-SNAPSHOT.jar",
+          "sha256": "0a0bdb363756ae5332f0ea574cb0840a0396232f4215e032104761b401f52015",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 15,
+          "non_nested_regular_entries": 20,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-ssl",
+      "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-ssl/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-ssl/ayza-10.0.7.jar",
+          "sha256": "42f3de9e3266968689dad505b97044375366cddd3ef585bf664afbc3fc473ca7",
+          "coordinate": "pkg:maven/io.github.hakky54/ayza@10.0.7",
+          "qualified_purl": "pkg:maven/io.github.hakky54/ayza@10.0.7?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/ayza-for-jetty-10.0.7.jar",
+          "sha256": "4fa3198af07b59ee06c66b437942573e16aecbe6385f7ec166c14b4b317bbf8a",
+          "coordinate": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+          "qualified_purl": "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/ayza-for-pem-10.0.7.jar",
+          "sha256": "ddba9bca16b5086e52082c4549395d6d36bdbf88d0c4eebc80952eebff17dc95",
+          "coordinate": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+          "qualified_purl": "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/bcpkix-jdk18on-1.85.jar",
+          "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+          "coordinate": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.85",
+          "qualified_purl": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.85?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/bcprov-jdk18on-1.85.jar",
+          "sha256": "20af26bf6060bb8005cc2389916812c1e0e998dc48d2ced7131b89461b54cff7",
+          "coordinate": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.85",
+          "qualified_purl": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.85?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/bcutil-jdk18on-1.85.jar",
+          "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+          "coordinate": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.85",
+          "qualified_purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.85?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/desidero-1.0.1.jar",
+          "sha256": "b68dfd47ddb1bf669e5592c2f85b43d744fbc6495293499143e46add678d7dcc",
+          "coordinate": "pkg:maven/io.github.hakky54/desidero@1.0.1",
+          "qualified_purl": "pkg:maven/io.github.hakky54/desidero@1.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-alpn-client-12.1.12.jar",
+          "sha256": "24a38f8a33903ffc9379a22982bb66f0d0b27d1a932ebe7eed323f91353a4513",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-alpn-java-client-12.1.12.jar",
+          "sha256": "c79299e82784d611cd16a40465e56d3cc1d32b601427c84cbdd2a27d14075abd",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-client@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-client@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-alpn-java-server-12.1.12.jar",
+          "sha256": "47ada2ed59a9ec10f56837f08e2ed086c148dd4b7cd3ba9ceab1b9ee0f985518",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-alpn-server-12.1.12.jar",
+          "sha256": "48c84d4e7723218c61c5c9849b558319401e3cd6333cd5c85c0ec2391402c51f",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-alpn-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-alpn-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-client-12.1.12.jar",
+          "sha256": "d3888e13a893faafda80863c4ef8ea6f9fc3d4a59435997a600407c2d8b2b3d6",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-client@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-client@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-compression-common-12.1.12.jar",
+          "sha256": "a563077b2d760022fc0de241fec29ebd5b31ed629060235c395b0389f304a148",
+          "coordinate": "pkg:maven/org.eclipse.jetty.compression/jetty-compression-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.compression/jetty-compression-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-compression-gzip-12.1.12.jar",
+          "sha256": "71315ebfed13187554daaa7fdc41b143f7d3eebdebc8b230b41a96bcb1bc7d04",
+          "coordinate": "pkg:maven/org.eclipse.jetty.compression/jetty-compression-gzip@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.compression/jetty-compression-gzip@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http-12.1.12.jar",
+          "sha256": "5476e16ef7e28883dba3669ee06491021e4a9aeba9a76f901a3f5c2bb5252a3e",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http2-client-12.1.12.jar",
+          "sha256": "138bf1229dd31b4e76e7ff3777b2d846c1a28ee51536499b2a4af7561ce439fd",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http2-client-transport-12.1.12.jar",
+          "sha256": "97b5755ab9c803f8f4d13f7e4f7cfcd2a3ce135e077042086829d399914119ea",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http2-common-12.1.12.jar",
+          "sha256": "31c4e73da6a83e6b77531aa9a2aa8e8b64265512672b7db18476872b01b22acd",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http2-hpack-12.1.12.jar",
+          "sha256": "b59a90111b03359a18a499a5b21b83555a1990ed26df01dc15d477e6800c8674",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-http2-server-12.1.12.jar",
+          "sha256": "e84feb7c6bd11c3a49b0a60a9a37ade908677ae8fceb056e3ae2f3b907ebed3f",
+          "coordinate": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-io-12.1.12.jar",
+          "sha256": "a809a6a534adccfaa08bca94aa54328e3ac858973ccddbda770f7e9e0f5099fc",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-server-12.1.12.jar",
+          "sha256": "9ba04bb8d011444a10873a51b1cb8297c04f70db55c8a8d9efcc3a9b97896787",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/jetty-util-12.1.12.jar",
+          "sha256": "f6fbfa61cfcca032ff82ad8ff3b66a14374047f15486521dbc89a6c0df19ccf2",
+          "coordinate": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/laleler-1.0.0.jar",
+          "sha256": "65fa541b120d967a9ef90850322327398e245a3975aec0c8dc730fa5ec450a6b",
+          "coordinate": "pkg:maven/io.github.hakky54/laleler@1.0.0",
+          "qualified_purl": "pkg:maven/io.github.hakky54/laleler@1.0.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-ssl/sude-2.0.2.jar",
+          "sha256": "f88e3d031dbbd2fea1b98481df0646a25b8d63d92796d6f30f907d5187595b39",
+          "coordinate": "pkg:maven/io.github.hakky54/sude@2.0.2",
+          "qualified_purl": "pkg:maven/io.github.hakky54/sude@2.0.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-ssl/javalin-ssl-7.2.4-SNAPSHOT.jar",
+          "sha256": "cf47da28ecc00382272fd4ef40bf247ab176e3e7bbb0818aa52a2aa98b81196d",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+        "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+        "pkg:maven/io.github.hakky54/ayza@10.0.7",
+        "pkg:maven/io.github.hakky54/desidero@1.0.1",
+        "pkg:maven/io.github.hakky54/laleler@1.0.0",
+        "pkg:maven/io.github.hakky54/sude@2.0.2",
+        "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.85",
+        "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.85",
+        "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.85",
+        "pkg:maven/org.eclipse.jetty.compression/jetty-compression-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.compression/jetty-compression-gzip@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-java-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-ssl/javalin-ssl-7.2.4-SNAPSHOT.jar",
+          "sha256": "cf47da28ecc00382272fd4ef40bf247ab176e3e7bbb0818aa52a2aa98b81196d",
+          "bytes": 31252,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "cf47da28ecc00382272fd4ef40bf247ab176e3e7bbb0818aa52a2aa98b81196d",
+            "literal_copy_source": "javalin-ssl/target/javalin-ssl-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-ssl/",
+            "effective_final_name": "javalin-ssl-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-ssl/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "54979337280b05d1b5dc09b3a8f8793f445bdc46c63732edffd25cb4ab2ce928",
+            "embedded_properties_path": "META-INF/maven/io.javalin.community.ssl/javalin-ssl/pom.properties",
+            "embedded_properties_sha256": "068401cb12e643064c1a7a35ffc2bc5ee0f0b2e58585860ce3958b56b188e2d7",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-ssl/javalin-ssl-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "dc56d525d0dbfc259e1902db42d6441e11ca8604359e6f4fba148a12945af393",
+          "entry_count": 27,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 13
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-ssl/javalin-ssl-7.2.4-SNAPSHOT.jar",
+          "sha256": "cf47da28ecc00382272fd4ef40bf247ab176e3e7bbb0818aa52a2aa98b81196d",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 13,
+          "non_nested_regular_entries": 18,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/io.github.hakky54/ayza-for-jetty@10.0.7",
+        "pkg:maven/io.github.hakky54/ayza-for-pem@10.0.7",
+        "pkg:maven/io.github.hakky54/ayza@10.0.7",
+        "pkg:maven/io.github.hakky54/desidero@1.0.1",
+        "pkg:maven/io.github.hakky54/laleler@1.0.0",
+        "pkg:maven/io.github.hakky54/sude@2.0.2",
+        "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.85",
+        "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.85",
+        "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.85",
+        "pkg:maven/org.eclipse.jetty.compression/jetty-compression-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.compression/jetty-compression-gzip@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client-transport@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-hpack@12.1.12",
+        "pkg:maven/org.eclipse.jetty.http2/jetty-http2-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-java-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-java-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-alpn-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-client@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-micrometer",
+      "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-micrometer/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-micrometer/HdrHistogram-2.2.2.jar",
+          "sha256": "22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8",
+          "coordinate": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+          "qualified_purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/jspecify-1.0.1.jar",
+          "sha256": "070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66",
+          "coordinate": "pkg:maven/org.jspecify/jspecify@1.0.1",
+          "qualified_purl": "pkg:maven/org.jspecify/jspecify@1.0.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/micrometer-commons-1.17.1.jar",
+          "sha256": "f2cee6ef046e72eec8128474c7f58c6217173b45ae373c30de0289f2a56ab0fd",
+          "coordinate": "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+          "qualified_purl": "pkg:maven/io.micrometer/micrometer-commons@1.17.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/micrometer-core-1.17.1.jar",
+          "sha256": "9ca47dfa831409b40253c8dc98c17b9d3e050ebbde4d1543c5521dca2b95ad56",
+          "coordinate": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+          "qualified_purl": "pkg:maven/io.micrometer/micrometer-core@1.17.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/micrometer-jetty12-1.17.1.jar",
+          "sha256": "0248a047728765358cbcf49329feac23abf95229fa8d94bda6a68e6e3f32ecd6",
+          "coordinate": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+          "qualified_purl": "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/micrometer-observation-1.17.1.jar",
+          "sha256": "eb34f0cd84a879393ae5c21160fc06385ccdc74f36a4d1e31b199f59acfdaf71",
+          "coordinate": "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+          "qualified_purl": "pkg:maven/io.micrometer/micrometer-observation@1.17.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/micrometer-registry-prometheus-1.17.1.jar",
+          "sha256": "ac24d43f123e103828a23a86f092a8709d87d309ad3212e798305654e951a8ce",
+          "coordinate": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+          "qualified_purl": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-config-1.7.0.jar",
+          "sha256": "bc9455f938df76ec4add13fe31903a5bb583c605679a16a779d6a6c2b21218f2",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-core-1.7.0.jar",
+          "sha256": "f9e5f1c8a20073347c88941d43e8c64ae6810afe0a61cbfe9c2f4efffe72808b",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-exposition-formats-1.7.0.jar",
+          "sha256": "7352ca8b50e861eca3567ceb332e9590a06742a9d177cff54e52c8cff4c4fb90",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-exposition-textformats-1.7.0.jar",
+          "sha256": "7e49065895a35181c57f2c3c6d07b7b3f9b5754cd6422e0a7bd793f20a29c28a",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-model-1.7.0.jar",
+          "sha256": "e6d94538f8735c4161c36a660298f3a0fa8e4b281ceaf209723aaf9e212d292d",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-micrometer/prometheus-metrics-tracer-common-1.7.0.jar",
+          "sha256": "b7e8699032f0f1501556eeafd20fcfdd89b355f5d22b6d8361d723d467d88ed4",
+          "coordinate": "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0",
+          "qualified_purl": "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-micrometer/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+          "sha256": "576a99688f9327f2bf3f0abeb7f5868e6817c3759a6e67b89092fb4365c084ab",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+        "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0",
+        "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.jspecify/jspecify@1.0.1"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-micrometer/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+          "sha256": "576a99688f9327f2bf3f0abeb7f5868e6817c3759a6e67b89092fb4365c084ab",
+          "bytes": 15225,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "576a99688f9327f2bf3f0abeb7f5868e6817c3759a6e67b89092fb4365c084ab",
+            "literal_copy_source": "javalin-micrometer/target/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-micrometer/",
+            "effective_final_name": "javalin-micrometer-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-micrometer/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "62506a15716f219c661ea797f6315e03da80109286ff7f303605d807cee7329c",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-micrometer/pom.properties",
+            "embedded_properties_sha256": "ba00c4254a29ce080ab82620e26c8be5f2fbd0ffc7fe8a118c6ef1ca7ec2c3ba",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-micrometer/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "7f8725e1d51726754546acebeac059076cf9c70df6084f3af5f93e7e5d4e58e9",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 4
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-micrometer/javalin-micrometer-7.2.4-SNAPSHOT.jar",
+          "sha256": "576a99688f9327f2bf3f0abeb7f5868e6817c3759a6e67b89092fb4365c084ab",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 4,
+          "non_nested_regular_entries": 9,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-jetty12@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+        "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+        "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0",
+        "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0",
+        "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.jspecify/jspecify@1.0.1"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-context-mock",
+      "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-context-mock/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/javalin-7.2.4-SNAPSHOT.jar",
+          "sha256": "b9f5628133491cf20e17a3541f291fc96428c6b336e5f542dc5a55a002fe3076",
+          "coordinate": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "qualified_purl": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/jetty-jakarta-servlet-api-5.0.2.jar",
+          "sha256": "efb20997729f32bfa6c8a8319037c353f7ad460d5d49f336bf232998ea2358db",
+          "coordinate": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+          "qualified_purl": "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+          "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1"
+      ],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+          "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb",
+          "bytes": 67345,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb",
+            "literal_copy_source": "javalin-utils/javalin-context-mock/target/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-context-mock/",
+            "effective_final_name": "javalin-context-mock-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-context-mock/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "a5c063047453c4b7a4e47453d22ee17ebe964f25ae1afe940b2b9cb32ce51dfa",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-context-mock/pom.properties",
+            "embedded_properties_sha256": "6ae9e2c3fc85d2f06548f8dc4c7294d810f5d7f9ed8d18fecb27207d61535d45",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-context-mock/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "ef4be86f391a25dba86da1ad3327051c94b53cfed16d0baddfc8c2badd0855cb",
+          "entry_count": 36,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 23
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-context-mock/javalin-context-mock-7.2.4-SNAPSHOT.jar",
+          "sha256": "94b80d917287e3c3acb0c95f8044d4c8bebd576df73a470fa6cb95f7d3416fcb",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 23,
+          "non_nested_regular_entries": 28,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+        "pkg:maven/org.eclipse.jetty.toolchain/jetty-jakarta-servlet-api@5.0.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": [
+        "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+        "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+        "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+        "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+        "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+        "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+        "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+        "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+        "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+        "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+        "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+        "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+        "pkg:maven/org.ow2.asm/asm@9.10.1"
+      ]
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/commons-lang3-3.17.0.jar",
+          "sha256": "6ee731df5c8e5a2976a1ca023b6bb320ea8d3539fbe64c8a1d5cb765127c33b4",
+          "coordinate": "pkg:maven/org.apache.commons/commons-lang3@3.17.0",
+          "qualified_purl": "pkg:maven/org.apache.commons/commons-lang3@3.17.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/velocity-engine-core-2.4.1.jar",
+          "sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231",
+          "coordinate": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+          "qualified_purl": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+          "sha256": "84d5e1bf7d919c337e8369f0accfeb1cd8ef28918e7cbda436a213049b6b8496",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/org.apache.commons/commons-lang3@3.17.0",
+        "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+          "sha256": "84d5e1bf7d919c337e8369f0accfeb1cd8ef28918e7cbda436a213049b6b8496",
+          "bytes": 11244,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "84d5e1bf7d919c337e8369f0accfeb1cd8ef28918e7cbda436a213049b6b8496",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-velocity/target/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/",
+            "effective_final_name": "javalin-rendering-velocity-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-velocity/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "919f4574343e05d45948aee39981dfc9d1dce6f6a913cdfb8a4195d4b64ffc81",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-velocity/pom.properties",
+            "embedded_properties_sha256": "86c49f132b054add4229956cc0dad9c08fc8c97bfc5e1a39bc449e26be94a186",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "07511185813a937b4eba94f6d7dbfba74c66fb259db6743925c4da89ea7823e8",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/javalin-rendering-velocity-7.2.4-SNAPSHOT.jar",
+          "sha256": "84d5e1bf7d919c337e8369f0accfeb1cd8ef28918e7cbda436a213049b6b8496",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/org.apache.commons/commons-lang3@3.17.0",
+        "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/freemarker-2.3.35.jar",
+          "sha256": "0fac87dddd78f1223139e8ef88e819c7f483c0a3835cdf5982ad5e4576d1d896",
+          "coordinate": "pkg:maven/org.freemarker/freemarker@2.3.35",
+          "qualified_purl": "pkg:maven/org.freemarker/freemarker@2.3.35?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+          "sha256": "dd66640832e8b792c78a0b2aca42ebb3eca1b267731f3b10f5d849016d19c9b8",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/org.freemarker/freemarker@2.3.35",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+          "sha256": "dd66640832e8b792c78a0b2aca42ebb3eca1b267731f3b10f5d849016d19c9b8",
+          "bytes": 11059,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "dd66640832e8b792c78a0b2aca42ebb3eca1b267731f3b10f5d849016d19c9b8",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-freemarker/target/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/",
+            "effective_final_name": "javalin-rendering-freemarker-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-freemarker/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "2fb0066ce6e98149707c9fa02302eade5252237d0c361f157e1035385a998cab",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-freemarker/pom.properties",
+            "embedded_properties_sha256": "1f14122bb83ada90127e956ed17b9599744569375f2eb6fba77f69f9b73b7dc4",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "da76339efdc940a00e7e9f238a629db0904e6ee4a7a8273c46d32f987cde7ebe",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/javalin-rendering-freemarker-7.2.4-SNAPSHOT.jar",
+          "sha256": "dd66640832e8b792c78a0b2aca42ebb3eca1b267731f3b10f5d849016d19c9b8",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/org.freemarker/freemarker@2.3.35",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/attoparser-2.0.7.RELEASE.jar",
+          "sha256": "75dd1c045492bff8e1963aabb28bfe903c2064e11e27fe2f0f0aff1ad3d84476",
+          "coordinate": "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE",
+          "qualified_purl": "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javassist-3.29.0-GA.jar",
+          "sha256": "62d4065362e8969ce654f2b5541de1efb5b5bca6c146dbd38a595ea4df64cd31",
+          "coordinate": "pkg:maven/org.javassist/javassist@3.29.0-GA",
+          "qualified_purl": "pkg:maven/org.javassist/javassist@3.29.0-GA?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/ognl-3.3.4.jar",
+          "sha256": "47fdd450407ff09b57df02f466f9b4c7d32818962d65f9d98e445c8b4d047603",
+          "coordinate": "pkg:maven/ognl/ognl@3.3.4",
+          "qualified_purl": "pkg:maven/ognl/ognl@3.3.4?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/thymeleaf-3.1.5.RELEASE.jar",
+          "sha256": "4011795f8494dd69e764b7709443dd13d3068ba8ac37624f61d7084f4429cbe2",
+          "coordinate": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+          "qualified_purl": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/unbescape-1.1.6.RELEASE.jar",
+          "sha256": "597cf87d5b1a4f385b9d1cec974b7b483abb3ee85fc5b3f8b62af8e4bec95c2c",
+          "coordinate": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE",
+          "qualified_purl": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+          "sha256": "67c122d121b741b0c3e00b77b9b4037a875c24c6f0e0ad377f0b3772f779eea9",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/ognl/ognl@3.3.4",
+        "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE",
+        "pkg:maven/org.javassist/javassist@3.29.0-GA",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+        "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+          "sha256": "67c122d121b741b0c3e00b77b9b4037a875c24c6f0e0ad377f0b3772f779eea9",
+          "bytes": 11438,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "67c122d121b741b0c3e00b77b9b4037a875c24c6f0e0ad377f0b3772f779eea9",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/target/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/",
+            "effective_final_name": "javalin-rendering-thymeleaf-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "5d94fd257a6f8fb51ec57dee5d6debb00960ca159f4a63b0e973c46c46e66a65",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-thymeleaf/pom.properties",
+            "embedded_properties_sha256": "98e47a48a7da82544a86d8d3b569c595a5b0531880d43e8d695b7c0501fc0939",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "2c6d57b75445f0f65e4de8408be975e51cbb4109c9245018dbfd0b66213811e4",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/javalin-rendering-thymeleaf-7.2.4-SNAPSHOT.jar",
+          "sha256": "67c122d121b741b0c3e00b77b9b4037a875c24c6f0e0ad377f0b3772f779eea9",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/ognl/ognl@3.3.4",
+        "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE",
+        "pkg:maven/org.javassist/javassist@3.29.0-GA",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+        "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/compiler-0.9.14.jar",
+          "sha256": "99a7e7855609135006f078e6de7ee69daad9c42f98e679d56f80653cb17526b9",
+          "coordinate": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+          "qualified_purl": "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+          "sha256": "7afb1efb457483fa64765073befdc709570a0fa50f8c49cad3e35cf5fb23753e",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+          "sha256": "7afb1efb457483fa64765073befdc709570a0fa50f8c49cad3e35cf5fb23753e",
+          "bytes": 10928,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "7afb1efb457483fa64765073befdc709570a0fa50f8c49cad3e35cf5fb23753e",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-mustache/target/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/",
+            "effective_final_name": "javalin-rendering-mustache-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-mustache/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "ffe89ddcbc6f33afa3d6d963926ca211dac487dd1bb5757b6c5c4d0ce3985856",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-mustache/pom.properties",
+            "embedded_properties_sha256": "329c4f65fea34f30ebcd2bab3d2901813bb8eb692aca65b6f2382c0453f9c01e",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "7fe70a7f47858d22cbfdc91bd30cf5f6383e1b6bb36bb3b996818467d6f9eb81",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/javalin-rendering-mustache-7.2.4-SNAPSHOT.jar",
+          "sha256": "7afb1efb457483fa64765073befdc709570a0fa50f8c49cad3e35cf5fb23753e",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/com.github.spullara.mustache.java/compiler@0.9.14",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-7.3.1.jar",
+          "sha256": "2f67e11ceec819ebd88ddee5300aba699b1cbab2e20c22e97cf027d3be93959b",
+          "coordinate": "pkg:maven/org.ow2.asm/asm@7.3.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm@7.3.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-analysis-7.3.1.jar",
+          "sha256": "46b8a8efd4b94facb5ab4b35afe30ee0546ae7a43d2c64e6def56c2f168fefa5",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-analysis@7.3.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-analysis@7.3.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-commons-7.3.1.jar",
+          "sha256": "87cd8bb3c6bf6bcbb33fca48060c5065f66ebf6a3d7de9bf18bff51bcf156ebc",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-commons@7.3.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-commons@7.3.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-tree-7.3.1.jar",
+          "sha256": "f91a4a8aa868c5c4665bb4fd134019a91f9f8b9216527fba295e3c8b5422b78b",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-tree@7.3.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-tree@7.3.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/asm-util-7.3.1.jar",
+          "sha256": "182128592742ed4883ac82bf205f137b6bfbe1234c68e6feb13759e75a85b729",
+          "coordinate": "pkg:maven/org.ow2.asm/asm-util@7.3.1",
+          "qualified_purl": "pkg:maven/org.ow2.asm/asm-util@7.3.1?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/commons-lang3-3.20.0.jar",
+          "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4",
+          "coordinate": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+          "qualified_purl": "pkg:maven/org.apache.commons/commons-lang3@3.20.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/commons-text-1.15.0.jar",
+          "sha256": "58d2da30f058512a1e7f914e39241deca4dff5c27a085b4ed2faa9e7208067f6",
+          "coordinate": "pkg:maven/org.apache.commons/commons-text@1.15.0",
+          "qualified_purl": "pkg:maven/org.apache.commons/commons-text@1.15.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/handlebars-4.5.4.jar",
+          "sha256": "3b486535d0606306c9abca7b5a48066a2ec8186ecdd03e2ff02c70b15c13840c",
+          "coordinate": "pkg:maven/com.github.jknack/handlebars@4.5.4",
+          "qualified_purl": "pkg:maven/com.github.jknack/handlebars@4.5.4?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/nashorn-core-15.4.jar",
+          "sha256": "6f816e84dfd63a81d4eaa7829c08337bbaff3ec683ff3bf6bbd90d017a00dc6f",
+          "coordinate": "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4",
+          "qualified_purl": "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+          "sha256": "552876b9f2f296542ad51e410c611034382255999fdac2f6ac6be048c7b5814f",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/com.github.jknack/handlebars@4.5.4",
+        "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+        "pkg:maven/org.apache.commons/commons-text@1.15.0",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4",
+        "pkg:maven/org.ow2.asm/asm-analysis@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-commons@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-util@7.3.1",
+        "pkg:maven/org.ow2.asm/asm@7.3.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+          "sha256": "552876b9f2f296542ad51e410c611034382255999fdac2f6ac6be048c7b5814f",
+          "bytes": 10286,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "552876b9f2f296542ad51e410c611034382255999fdac2f6ac6be048c7b5814f",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-handlebars/target/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/",
+            "effective_final_name": "javalin-rendering-handlebars-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-handlebars/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "3c4c3a5d807af3a0c7ae3e78145f2c513eb46d2a53ed2b3e1678c1c0a1519949",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-handlebars/pom.properties",
+            "embedded_properties_sha256": "67979e013c83402996c4a372436b5af5e208ee098bd124017a91b754c9839619",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "6c6d1483b6bc3c66b69562f6fd5c1a20719bc8a2582b89eacb60f43a55f90d33",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/javalin-rendering-handlebars-7.2.4-SNAPSHOT.jar",
+          "sha256": "552876b9f2f296542ad51e410c611034382255999fdac2f6ac6be048c7b5814f",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/com.github.jknack/handlebars@4.5.4",
+        "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+        "pkg:maven/org.apache.commons/commons-text@1.15.0",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.openjdk.nashorn/nashorn-core@15.4",
+        "pkg:maven/org.ow2.asm/asm-analysis@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-commons@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-tree@7.3.1",
+        "pkg:maven/org.ow2.asm/asm-util@7.3.1",
+        "pkg:maven/org.ow2.asm/asm@7.3.1",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/pebble-4.1.2.jar",
+          "sha256": "bd4021cebeb3d34ca80dc1e406b6ec23baa3ead4b9b82d5282fdacc64f655cd7",
+          "coordinate": "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+          "qualified_purl": "pkg:maven/io.pebbletemplates/pebble@4.1.2?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/slf4j-api-2.0.18.jar",
+          "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55",
+          "coordinate": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "qualified_purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/unbescape-1.1.6.RELEASE.jar",
+          "sha256": "597cf87d5b1a4f385b9d1cec974b7b483abb3ee85fc5b3f8b62af8e4bec95c2c",
+          "coordinate": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE",
+          "qualified_purl": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+          "sha256": "3c866a12627e7c59aeaf6f682e7875a22c383af5c776ccea67c6081a10f1b238",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+          "sha256": "3c866a12627e7c59aeaf6f682e7875a22c383af5c776ccea67c6081a10f1b238",
+          "bytes": 11049,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "3c866a12627e7c59aeaf6f682e7875a22c383af5c776ccea67c6081a10f1b238",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-pebble/target/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/",
+            "effective_final_name": "javalin-rendering-pebble-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-pebble/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "428d0a1f73ab81dee76a946684daae386c08ad293beef311b5b68e9bf28a323c",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-pebble/pom.properties",
+            "embedded_properties_sha256": "4d29204c9201e24758356e99645c4150b493e1f671688b3159305112d772d81f",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "455bd3448bf686ae38e6cbf97d50e0df2354421e32bf1b7c23ae175ba6cd1457",
+          "entry_count": 16,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 3
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/javalin-rendering-pebble-7.2.4-SNAPSHOT.jar",
+          "sha256": "3c866a12627e7c59aeaf6f682e7875a22c383af5c776ccea67c6081a10f1b238",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 3,
+          "non_nested_regular_entries": 8,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/io.pebbletemplates/pebble@4.1.2",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+        "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/commonmark-0.30.0.jar",
+          "sha256": "090f0a758ac2f4f51aa86dff9dff0fdf7403666d0efd29f59886dc8e8b1eac53",
+          "coordinate": "pkg:maven/org.commonmark/commonmark@0.30.0",
+          "qualified_purl": "pkg:maven/org.commonmark/commonmark@0.30.0?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+          "sha256": "854349639f397a4af5ab39f2dc5a9673c218610daffd6984a7ca48d1488ec47b",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/org.commonmark/commonmark@0.30.0",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+          "sha256": "854349639f397a4af5ab39f2dc5a9673c218610daffd6984a7ca48d1488ec47b",
+          "bytes": 9538,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "854349639f397a4af5ab39f2dc5a9673c218610daffd6984a7ca48d1488ec47b",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-commonmark/target/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/",
+            "effective_final_name": "javalin-rendering-commonmark-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-commonmark/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "41e9b233c64a9bfc6dd73b1a9a73bdd418b39dd8bcea215742bc3e6d494cd743",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-commonmark/pom.properties",
+            "embedded_properties_sha256": "efa2b140baace0c737f3f157218df5f522d6c516dc04fa1df7ab0364d3807714",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "34c2538624195061b8983f4e2cac99ac4814135dc72a285929ffe603305cb50e",
+          "entry_count": 15,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 2
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/javalin-rendering-commonmark-7.2.4-SNAPSHOT.jar",
+          "sha256": "854349639f397a4af5ab39f2dc5a9673c218610daffd6984a7ca48d1488ec47b",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 2,
+          "non_nested_regular_entries": 7,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/org.commonmark/commonmark@0.30.0",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    },
+    {
+      "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+      "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+      "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/",
+      "scope": "Complete physical delivered standalone/nested JAR SHA256 identity labels; shaded identities remain separately UNKNOWN",
+      "known_file_labels": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/jte-3.2.3.jar",
+          "sha256": "a33feb90d91cfdf876e99bba5647179e203f98a98088a9046da5a894554dc0a9",
+          "coordinate": "pkg:maven/gg.jte/jte@3.2.3",
+          "qualified_purl": "pkg:maven/gg.jte/jte@3.2.3?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/jte-extension-api-3.2.3.jar",
+          "sha256": "567ec69230d72231ee57710aab7c41d3c52970f0cf8be0cec22404a5191d1e67",
+          "coordinate": "pkg:maven/gg.jte/jte-extension-api@3.2.3",
+          "qualified_purl": "pkg:maven/gg.jte/jte-extension-api@3.2.3?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/jte-runtime-3.2.3.jar",
+          "sha256": "f9e8e4470d83d93e4ec146e795783f08b433f3753db6b0662fccb2d5c41ee020",
+          "coordinate": "pkg:maven/gg.jte/jte-runtime@3.2.3",
+          "qualified_purl": "pkg:maven/gg.jte/jte-runtime@3.2.3?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        },
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "coordinate": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20",
+          "qualified_purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20?type=jar",
+          "status": "UNIQUE_OWN_MODULE_CDX_SHA256"
+        }
+      ],
+      "unknown_standalone_files": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+          "sha256": "332956679f917b22ec9acf88ca05115ce431b4e88c118a28d2911dd24045dd95",
+          "status": "UNKNOWN",
+          "module_coordinate_choices": [],
+          "module_qualified_purl_choices": [],
+          "reason": "No unique own-module controlled-build SHA256 identity; no global/filename fallback"
+        }
+      ],
+      "known_standalone_coordinate_set": [
+        "pkg:maven/gg.jte/jte-extension-api@3.2.3",
+        "pkg:maven/gg.jte/jte-runtime@3.2.3",
+        "pkg:maven/gg.jte/jte@3.2.3",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "build_coordinates_without_confirmed_standalone_file": [],
+      "complete_image_component_scope_attested": false,
+      "historical_scope_and_metrics_unchanged": true,
+      "primary_outputs": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+          "sha256": "332956679f917b22ec9acf88ca05115ce431b4e88c118a28d2911dd24045dd95",
+          "bytes": 9668,
+          "status": "VERIFIED_RECIPE_EFFECTIVE_PRIMARY_SHA256",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "proof": {
+            "method": "immutable_literal_recipe_effective_native_cdx_canonical_properties_full_sha256",
+            "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+            "actual_physical_sha256": "332956679f917b22ec9acf88ca05115ce431b4e88c118a28d2911dd24045dd95",
+            "literal_copy_source": "javalin-utils/javalin-rendering/javalin-rendering-jte/target/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+            "literal_copy_destination": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/",
+            "effective_final_name": "javalin-rendering-jte-7.2.4-SNAPSHOT",
+            "effective_build_directory": "/src/javalin-utils/javalin-rendering/javalin-rendering-jte/target",
+            "dockerfile_sha256": "624a93e7e82ba9eee9f43b6efbb2d0ece6a8fbe148745c2b400d2afb977a474e",
+            "effective_pom_sha256": "1dd58f47cf3cc58dce0a20f96a248241d9e32dd870cb0e8f5f6172e47b21cf59",
+            "embedded_properties_path": "META-INF/maven/io.javalin/javalin-rendering-jte/pom.properties",
+            "embedded_properties_sha256": "904202d311f71f65123ac34508a250899a09a8c3694db6d692a825e18e9ca976",
+            "native_and_cdx_owner_agree": true,
+            "dependency_copy_collision_absent": true,
+            "claim": "Controlled-build primary owner only; no shaded-identity, directness or publisher-authentication claim",
+            "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+            "image_config_digest": "sha256:cf61dae9640f6abb5cbee0eacc07c9f4aadb85aa763a532ce200b2d1681b43ab",
+            "image_diff_id": "sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc"
+          },
+          "proof_failure": null,
+          "inventory_sha256": "38f696012f701ee47b58dcb05fff269ddbea8affcf68da7d590f292b3c1390b5",
+          "entry_count": 15,
+          "nested_archive_count": 0,
+          "all_regular_entry_crc_verified": true,
+          "inventory_reason": null,
+          "opaque_non_nested_classes": 2
+        }
+      ],
+      "nested_file_labels": [],
+      "unknown_nested_files": [],
+      "unknown_shaded_content": [
+        {
+          "image_path": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/javalin-rendering-jte-7.2.4-SNAPSHOT.jar",
+          "sha256": "332956679f917b22ec9acf88ca05115ce431b4e88c118a28d2911dd24045dd95",
+          "status": "UNKNOWN_SHADED_IDENTITY",
+          "class_entries": 2,
+          "non_nested_regular_entries": 7,
+          "reason": "Complete entry hashes retained; entry names and primary owner do not prove absence/identity of shaded dependencies"
+        }
+      ],
+      "known_delivered_coordinate_set": [
+        "pkg:maven/gg.jte/jte-extension-api@3.2.3",
+        "pkg:maven/gg.jte/jte-runtime@3.2.3",
+        "pkg:maven/gg.jte/jte@3.2.3",
+        "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.20"
+      ],
+      "complete_delivered_archive_scope_attested": true,
+      "incomplete_scope_reasons": [
+        "SHADED_NON_ARCHIVE_COMPONENT_SCOPE_NOT_ATTESTED"
+      ],
+      "build_coordinates_without_confirmed_delivered_archive": []
+    }
+  ],
+  "known_standalone_files": 185,
+  "known_nested_files": 0,
+  "unknown_nested_files": 0,
+  "attested_primary_outputs": 14,
+  "unattested_primary_candidates": 0,
+  "delivered_archive_complete_owners": 14,
+  "full_component_complete_owners": 0
+}

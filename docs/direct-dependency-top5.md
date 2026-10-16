@@ -1,5 +1,16 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
+## R109 current component MVP status
+
+JS fresh image-only no-lock runtime307/9/0,P97.15/R100; direct0/0/103 UNKNOWN
+unchanged. New type-only delivery proof is not execution or a direct edge. Java
+R108 finals now have separate known-delivered packaged evaluation across56reactor
+owners3665/14/14; Boot90/3/2 unchanged.47/56archive scopes complete, global shading
+UNKNOWN; sourcegraph/direct614Java UNKNOWN/FN unchanged. This is new POST-only
+truth coverage, not image-derived graph improvement or a new ranking. Optional
+cdxgen/native Micro100/0/0 belongs to source environment, not unknown originalCI.
+750tests/3skips; current[report](java-js-service-accuracy.md).
+
 ## R108 current image-first status, 2026-10-16
 
 Runtime now has a separate delivered-archive presence axis, explicit

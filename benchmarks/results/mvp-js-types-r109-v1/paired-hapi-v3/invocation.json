@@ -1,0 +1,14 @@
+{
+  "language": "javascript",
+  "name": "paired-hapi-v3",
+  "namespace": "no-lock-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:1d4f099ab6c203316d4489c5c7877a6367506c93a47aed970f9742e3f5beb094",
+  "archive": "benchmarks/.work/no-lock-v1/paired-hapi-v3/image.tar",
+  "archive_sha256": "39ef81850d0c2f4fd0cbc3cb0d106acc6abb0e6bcff3e7fac5cc56d8e1045128",
+  "oracle_read": false,
+  "repository_url": null,
+  "commit": null,
+  "source_input": false,
+  "fresh_scans": true,
+  "java_archive_components": true
+}

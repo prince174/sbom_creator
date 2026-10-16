@@ -1,0 +1,14 @@
+{
+  "language": "javascript",
+  "name": "paired-commander-js-v1",
+  "namespace": "no-lock-v1",
+  "image": "docker.io/library/sbom-js-mvp@sha256:c9e3194005f4d36de165dc57df815605700fdbb318ee86987d3cc11136670fb0",
+  "archive": "benchmarks/.work/no-lock-v1/paired-commander-js-v1/image.tar",
+  "archive_sha256": "8cad2401128bd5187ac5005d53ef99bc6c12fac67cdd7239cbb21f73014a6c5e",
+  "oracle_read": false,
+  "repository_url": null,
+  "commit": null,
+  "source_input": false,
+  "fresh_scans": true,
+  "java_archive_components": true
+}

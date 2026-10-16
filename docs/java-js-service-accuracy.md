@@ -1,4 +1,111 @@
-# Java / JavaScript: actual service accuracy — R108, 2026-10-16
+# Java / JavaScript: actual service accuracy — R109, 2026-10-16
+
+Два разных результата: **новое runtime-исправление JS**, проверенное свежими scans,
+и **новая post-only packaged-SHA оценка Java** на неизменённых frozen R108 finals.
+Они не смешиваются с новыми Java prediction или слепой независимой приёмкой.
+Java v7 по-прежнему включается явно через `SBOM_JAVA_ARCHIVE_COMPONENTS=true`;
+default false остаётся v4 reader. Базовый non-Java rules policy теперь
+`image-evidence-and-payload-v4`.
+
+## Java: actual R108 final, новая область подтверждённых поставленных JAR
+
+| Корпус / все shipped owners | TP / FP / FN | Precision | Recall по известным delivered GAV | F1 | Delta |
+|---|---:|---:|---:|---:|---:|
+| Microservices,8 |1341/12/8|99.11%|99.41%|99.26%|+4|
+| Javalin,14 |184/0/1|100%|99.46%|99.73%|-1|
+| Dropwizard,34 |2140/2/5|99.91%|99.77%|99.84%|-3|
+| Три reactors,56 |3665/14/14|99.62%|99.62%|99.62%|0|
+
+Это расширяет оценку на31 прежний UNKNOWN owner set, не меняя исторические scopes
+или final. Actual build/runtime TAR/image config/DiffID bindings перепроверены;
+truth составлен независимо от predictions по полному SHA256 физических standalone
+и nested JAR → unique controlled-build CDX GAV.1259 nested labels Micro подтверждены
+own-module SHA. Все прогнозные GAV под фиксированным owner prefix сохранены в score;
+packaging-added UNKNOWN консервативно считается FP, а не фильтруется по эталону.
+
+Archive-only scope завершён для **47/56 owners**. Остаются8 Micro packaging extras
+и один Drop primary с ZIP_DIRECTORY_SINGLE guard; глобальная полнота component
+inventory для opaque/shaded кода не доказана ни для одного owner. Поэтому recall
+в таблице — по известным delivered archives, не гарантированный global recall.
+Conditional version accuracy reactors100%, exact-version coverage99.619%.
+Module macro: Micro P99.066/R99.453/F199.258; Javalin100/99.351/99.660;
+Drop99.952/99.824/99.887. Repository macro99.673/99.544/99.609.
+[Current packaged evaluation](../benchmarks/results/reactor-packaged-evaluation-r109-v3/evaluation.json).
+
+14 Javalin roots первоначально conservatively FP: initial packaged view3665/28/14,
+Javalin module macroP82.806%. Новый независимый proof связывает literal immutable
+Docker copy recipe, effective/native/CDX GAV, canonical embedded properties,
+отсутствие dependency overwrite collision и full actual SHA/config/path. Только
+после этого root исключается как собственное приложение. Старые v1/v2 views
+сохранены; GAV truth sets и прогнозы не изменились. Enum v1 failed на directory
+budget, v2 overly strict Unix directory mode, v3/v4 исправляют только POST-only
+reference enumeration; ни один production guard не ослаблен.
+[Actual nested labels/proofs](../benchmarks/results/reactor-packaged-nested-r109-v4/README.md).
+
+Для справки, добавление прежнего Boot90/3/2 даёт four-repository known-delivered
+**3755/17/16**, P99.5493%, R/exact-version coverage99.5757%, F199.5625%, delta+1.
+Это не заменяет прежние R1081264/4/3 на меньшей области. Image-only direct Java614
+и JS103 UNKNOWN/FN остаются отдельной осью, не gate component MVP.
+
+Новый исходный JS-код дополнительно проверен4 Java cached publisher regressions:
+12schemas/три coordinate multisets/selected IDs и Java policyv7 равны R108,
+106.203s. Это publisher/converter-only, без scanner/physical/source/oracle calls.
+[Java regression](../benchmarks/results/mvp-r109-java-publish-v1/report.json).
+
+## JavaScript: свежие image-only no-lock прогнозы самого сервиса
+
+12/12 scans+publish прошли, включая Chalk. **307/9/0**, P97.1519%, R/exact-version
+coverage100%, F198.5554%; macro восьми positive roots P93.4808%, R100%, F196.1372%.
+Conditional versions100%,316predicted/307reference, delta+9;4 empty roots не успехи.
+Nest107/0/0 вместо106/0/1: @tokenizer/token0.3.0 имеет явное types:index.d.ts и
+реальный непустой declaration file, но не исполняемый JS. Новое свидетельство
+`declared_type_surface` требует совпадения manifest name/version с PURL, safe relative
+path, final regular file и собственного owner; фиксирует manifest SHA256. `.d.ts`
+contents не читаются/хешируются production-путём; наличие файла подтверждается
+pinned Syft final-filesystem metadata. Нет execution/type-validity/integrity claim.
+
+47 executing source/schema hashes и12 input archives frozen до prediction;36views
+опубликованы до oracle.190.048s исключают local image acquisition. Единственное
+добавление — Nest, ранее выбранные компоненты не потеряны. Все9 conservative FP
+сохранены: отдельный physical audit нашёл у этих embedded package-like units реальные
+поставленные JS/TS bytes; build-reference dependency scope их не содержит. Они не
+удаляются из full inventory ради процента. Axios остаётся слабым project precision.
+[Fresh JS evaluation](../benchmarks/results/mvp-js-types-r109-v1/evaluation.json),
+[physical owner audit](../benchmarks/results/js-installed-owner-audit-r109-v1/README.md).
+
+Первый evaluator import без src bootstrap FAILED до oracle; helper исправлен,
+прогнозы не повторялись. Исторический R106 Chalk PermissionError сохранён; успех
+R109 не доказывает механизм исправления Windows locking.
+
+Installed Linux RC `sbom-creator:mvp-r109`, config ID
+`sha256:ad9e174893775b55c9c64742a8d243e8bf47125c51b2e592378370e895fdb61f`:
+actual Nest pipeline55.292s/container57.610s/build30.281s,47installed hashes равны
+freeze,13exports/hash/schema checks прошли. Non-root10001/read-only/network-none,
+без socket/source/reference/secrets,3GiB2CPU. Все308 non-OS coordinates/selected IDs
+и declared-type fact равны Windows. **Полная parity PARTIAL:** Linux final/os/full
+308/88/396 против Windows308/89/397. Windows дополнительно выдаёт OS systemd
+252.39-1~deb12u2 из ELF cataloger; причина и OS accuracy не установлены. OS IDs тоже
+различаются. Все исходные OS/full views и strict parity failure сохранены, ничто
+не отфильтровано ради равенства. Java DB mounted по общему harness, но не требовалась
+этому Node analysis; cold download/peakRSS/concurrency здесь не проверялись.
+[Installed scoped parity](../benchmarks/results/mvp-r109-container-v1/README.md).
+
+750tests passed,3skips, Ruff/schema/freeze/API proof-rejection checks.76new type
+cases,40post-only enumeration/primary-proof tests,30packaged evaluator tests.
+Развёрнутые сервисы/immutable пары не менялись, чужие recipes не расширялись.
+Следующий release этап — held-from-recent-tuning существующие REST/DBCP controls и
+явное принятие лучшего Java v7 режима по умолчанию при сохранённом partial coverage,
+без ещё одного неизменённого reader replay. Универсальный blind acceptance не заявлен.
+
+R109 runtime commit `9010f31` опубликован. Exact snapshot binding:46 файлов побайтно
+равны Git, один прежний image_java/__init__.py отличается только CRLF/LF.
+317 JSON/705,873,680 raw bytes сохранены локально; lossless gzip+small JSON
+63,228,323 bytes,117 unique gzip objects. Manifest SHA256
+`5d7576fdf6be0301a2090bdc4b5742f72c014ec58d1ed1779581cfb80ce6c507`.
+Восстановление и проверка: `python benchmarks/package_mvp_r109.py restore/verify`.
+Original frozen sources, failed attempts и старые manifests не изменены.
+
+## Historical R108, 2026-10-16
 
 Измеряется **final.cdx.json самого сервиса**; совпадают точное имя и версия.
 Image-only не использует repository/reference/build cache. Все final/os/full,

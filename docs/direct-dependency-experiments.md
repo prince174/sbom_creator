@@ -1536,3 +1536,56 @@ negative retained, no executabletext change; actualinstalled47hashes matchsnapsh
 R108 lossless JSON evidence:340files/738,403,545original bytes retained locally,
 120uniquegzip+smallJSON59,310,431B plus separately hashed container export.gz files.
 package_mvp_r108.py restore/verify; manifestSHA2565a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d. OldR105/R106/R107 manifests unchanged. Ruff/schema/hash/diff checks pass.
+
+## R109 — explicit npm type surface and independent packaged SHA scope, 2026-10-16
+
+Runtime change: payload.py accepts a safe explicit types/typings .d.ts final
+regular nonempty file under the same package owner, matching manifestname/version
+with npmPURL. Duplicate/conflicting/malformed/path/ancestor-link/nested-owner inputs
+failclosed; legacy JS/data witness priority unchanged. payload_kind declared_type_surface,
+manifestSHA saved; targetfilecontents notread/hashed, no JSexecution/typevalidity/
+integrity/authenticity claim. Base rulespolicyv4; Java v7 remainsopt-in unchanged.
+
+47source/schema files and12no-lock archives frozen before freshserial Syft scans/
+actualpublisher. All12 succeed/36schemas before post-only oracle. JS307/9/0,
+P97.1519/R100/F198.5554,macro8positiveP93.4808/R100/F196.1372,versions100;
+Nest107/0/0,+1TP/no removed coords,190.048s localacquisitionexcluded.4emptyroots
+notsuccess,9conservativefixture FP retained. Physical4image/197manifest audit confirms
+these additional units have real JS/TS bytes, not absent-image defects; no blacklist.
+R106Chalk failure preserved, no provenlockingfix. Initial evaluatorimportpreflight
+failed beforeoracle, correctedhelperonly, no predictionrerun.
+
+InstalledLinuxNode RC ad9e174893775b55c9c64742a8d243e8bf47125c51b2e592378370e895fdb61f
+passes55.292s pipeline/57.610s container/30.281s build,47installed hashes and13exports
+verified. Nonroot/readonly/networknone/no source/oracle/socket/secrets,3GiB2CPU.
+NonOSfinal308coords+IDs/typesfact EXACTWindows; OS/full PARTIAL:88/396Linux vs89/397
+Windows, additionalWindowsELF systemd252.39-1~deb12u2. Rawdeltas and failed strict
+parity preserved; no OS filtering/retry or causeclaim. ColdDB/RSS nottested.
+
+POST-only reference work, unchanged R108 predictions: actualfullhash nested/standalone
+JAR labels and primary proofs, all56reactor known-owner sets.1259Micro nestedSHA
+matches own-moduleCDX. Currentv4labels +v3evaluation3665/14/14,P/R/F199.6195;
+Micro1341/12/8, Javalin184/0/1, Drop2140/2/5.47/56archive-only scopes complete;
+8packagingextras and1oversizedprimarydirectory remainUNKNOWN, globalopaque/shaded
+scope unknownall. Earlier conservativeviews3665/28/14/JavalinmacroP82.806 retained.
+14root exclusions only after independent immutableDocker copyrecipe/effective/native/
+CDX/canonicalproperties/fullactualSHA proof and no overwritecollision, neverprediction
+intersection/filenameguess. OldR10826/31historicalmetrics immutable. IncludingoldBoot
+90/3/2 yields3755/17/16,P99.5493/R99.5757/F199.5625 on knownscope, notglobalrecall.
+
+Reference enumeration v1stoppedatdirectorybudget; v2unsupportedUnixdirectorymodes;
+v3permits safezero-byte directorymetadata, v4strict primaryattestation. Allretained;
+no productionguard/bytebudget changed.40enumeration/primarytests+30evaluatortests.
+750totalservice/selectedtests pass3skips/Ruff;76newtypes tests/APIproofrejection.
+4Java cachedpublisher regressions106.203s preserve12views/selectedIDs/policyv7;
+no scanner/physical/source/oracle calls. Source frozen47==newJSsnapshot.
+
+Nextreleasepriority: existing REST/DBCP held-from-recent-tuning imagecontrols, then
+explicitdefaultJava v7 adoption if gates pass. No new foreignrecipe/40pair wait,
+no deployment, sourcegraph remainsoptional. Fullinventory and uncertainty retained.
+
+R109 runtime `9010f31` pushed. Lossless evidence:317 JSON,705,873,680 raw bytes,
+63,228,323 stored bytes including small JSON;117 unique gzip objects. Manifest
+SHA256 `5d7576fdf6be0301a2090bdc4b5742f72c014ec58d1ed1779581cfb80ce6c507`;
+`python benchmarks/package_mvp_r109.py restore/verify`. Source binding46 exact/1 CRLF-LF only;
+не менять frozen snapshots. Старые R105–R108 manifests сохранены.

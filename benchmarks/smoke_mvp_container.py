@@ -72,16 +72,28 @@ for filename in ('final.cdx.json', 'os.cdx.json', 'full.cdx.json'):
 provenance = json.loads((root/'analysis/provenance.json').read_text())
 assert provenance['source_kind'] == 'not-provided'
 assert provenance['image']['acquisition'] == 'archive'
-assert provenance['image']['java_image_status'] == 'corroborated'
-assert (root/'analysis/image-identity-audit.json').is_file()
-assert (root/'analysis/image-peer.cdx.json').is_file()
-assert (root/'analysis/image-original.syft.json').is_file()
+language = os.getenv('SMOKE_LANGUAGE', 'java')
+if language == 'java':
+    assert provenance['image']['java_image_status'] == 'corroborated'
+    assert (root/'analysis/image-identity-audit.json').is_file()
+    assert (root/'analysis/image-peer.cdx.json').is_file()
+    assert (root/'analysis/image-original.syft.json').is_file()
+else:
+    assert language == 'javascript'
+    image = json.loads((root/'analysis/image.syft.json').read_text())
+    assert not any(a.get('type') == 'java-archive' for a in image['artifacts'])
+    assert provenance['image'].get('java_image_status') != 'corroborated'
+type_witnesses = {aid: fact for aid, fact in provenance['image'].get('payload_evidence', {}).items()
+                  if fact.get('payload_kind') == 'declared_type_surface'}
+if language == 'javascript':
+    assert type_witnesses, 'This installed feature check needs an actual declared-type observation'
 assert summary['final_count'] > 0
 result = {'status': 'passed', 'elapsed_seconds': round(time.monotonic()-started, 3),
           'java_nested_windows': facts['java_nested_windows'],
           'java_archive_components': facts['java_archive_components'],
           'summary': summary, 'source_kind': provenance['source_kind'],
-          'java_image_status': provenance['image']['java_image_status'],
+          'java_image_status': provenance['image'].get('java_image_status'),
+          'language': language, 'declared_type_witnesses': type_witnesses,
           'image_config_digest': provenance['image']['image_config_digest'],
           'output_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                             for p in sorted((root/'analysis').iterdir()) if p.is_file()}}
@@ -124,6 +136,8 @@ def main():
                         help='Explicitly enable the experimental nested JAR reader; default is stable.')
     parser.add_argument('--archive-components', action='store_true',
                         help='Explicitly enable delivered archive components; default is stable.')
+    parser.add_argument('--language', choices=('java', 'javascript'), default='java',
+                        help='Installed feature check; Java remains the existing default.')
     parser.add_argument('--archive', type=pathlib.Path, required=True)
     parser.add_argument('--java-db', type=pathlib.Path, required=True)
     parser.add_argument('--image-reference', required=True)
@@ -151,6 +165,7 @@ def main():
         '--mount', f'type=bind,src={workspace},dst=/workspace',
         '--mount', f'type=bind,src={database},dst=/workspace/trivy-cache/java-db,readonly',
         '--env', 'SMOKE_REGISTRY='+args.image_reference.split('/')[0],
+        '--env', 'SMOKE_LANGUAGE='+args.language,
         '--env', 'SMOKE_IMAGE='+args.image_reference, *reader_environment, image_id,
         'python', '-c', CONTAINER_PROGRAM]
     started_at = datetime.now(UTC).isoformat()
@@ -174,6 +189,7 @@ def main():
         'docker_socket_mounted': False, 'host_credentials_mounted': False,
         'java_nested_windows_requested': args.nested_windows,
         'java_archive_components_requested': args.archive_components,
+        'language': args.language,
         'network': 'none', 'host_ports': [],
         'test_boundary': 'installed image-only pipeline; HTTP and registry transport are separate checks'}
     report['artifact_export_count'] = len(export_artifacts(workspace, output))
