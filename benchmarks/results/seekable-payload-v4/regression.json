@@ -1,0 +1,14 @@
+{
+  "known_cases": [
+    {
+      "case": "boot",
+      "confirmed_witness_path_losses": []
+    },
+    {
+      "case": "javalin",
+      "confirmed_witness_path_losses": []
+    }
+  ],
+  "v3_v4_witnesses_identical": true,
+  "current_code_hashes_verified": true
+}

@@ -1,0 +1,9 @@
+{
+  "status": "FAILED",
+  "stage": "image_scan",
+  "error_type": "RuntimeError",
+  "three_views": false,
+  "core_sha256": "a4ce9efbf9381dc2099109ca472588ee51a69cb54384661ff602b8b175bdd8a5",
+  "runtime_modified": false,
+  "reference_read": false
+}

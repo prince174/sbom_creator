@@ -1,0 +1,67 @@
+{
+  "oracle_read": false,
+  "runtime_changed": false,
+  "three_views_valid": true,
+  "seconds_excluding_cached_scans": 9.14100000000326,
+  "witness_confirmed": 94,
+  "witness_total": 94,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "experimental-trivy-only-payload-v1",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "CI_CONFIGURATION": 7,
+      "AMBIGUOUS_IDENTITY": 26,
+      "INSUFFICIENT_IMAGE_EVIDENCE": 5,
+      "PAYLOAD_NOT_CONFIRMED": 1
+    },
+    "unknown_groups": {
+      "ci_configuration": 7,
+      "source_identity": 26,
+      "image_evidence": 5,
+      "image_payload": 1
+    },
+    "source_count": 37,
+    "image_count": 244,
+    "selected_count": 238,
+    "final_count": 95,
+    "os_count": 143,
+    "full_count": 238,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 238,
+      "UNKNOWN": 39
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.703
+  },
+  "readers": [
+    {
+      "jar": {
+        "copied_bytes": 64455672,
+        "ordinary_read_bytes": 0,
+        "index_bytes": 4236340,
+        "zip_entries": 39047,
+        "source_files": 0,
+        "nested_files": 92,
+        "class_witnesses": 93,
+        "resource_witnesses": 1,
+        "rejections": 0,
+        "zip_parse_entries": 69407,
+        "views": 2,
+        "read_cache_hits": 188,
+        "verification_read_bytes": 65941433,
+        "content_witness_hits": 0
+      },
+      "layer": {
+        "normalized_bytes": 207648768,
+        "metadata_cost": 380506,
+        "headers": 356,
+        "payload_read_bytes": 67831294,
+        "normalizations": 2
+      }
+    }
+  ]
+}

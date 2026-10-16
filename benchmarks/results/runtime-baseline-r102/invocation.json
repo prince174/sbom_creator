@@ -1,0 +1,8 @@
+{
+  "function": "sbom_creator.pipeline.analyze_local",
+  "source": "benchmarks/.work/paired-dropwizard-reactor-v1/src",
+  "image": "docker.io/sbom-creator-benchmark/paired-dropwizard:v1",
+  "image_archive": "benchmarks/.work/paired-dropwizard-reactor-v1/image.tar",
+  "settings": "Unmodified defaults; pinned .tools/syft/syft.exe; registry_hosts docker.io; no monkeypatch, classifier or reference input",
+  "runtime_src_matches": "4f29791"
+}

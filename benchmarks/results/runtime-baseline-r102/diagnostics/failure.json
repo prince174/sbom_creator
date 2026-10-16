@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "stage": "image_scan",
+  "error_type": "RuntimeError",
+  "final_published": false
+}

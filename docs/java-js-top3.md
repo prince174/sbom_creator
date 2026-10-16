@@ -162,3 +162,6 @@ R100 (2026-10-16): separate bounded rejection-cache candidate completes Dropwiza
 
 
 R101 (2026-10-16): separate seekable-layer prototype verifies the original config/DiffID and reads ZIP headers for2179 physical JAR paths after one703MB normalization (3.69s;2.49MB metadata,8716 target bytes). [Physical-access proof](../benchmarks/results/seekable-layer-index-v3/report.json). New explicit8GiB disk-normalization policy, not a raised frozen payload gate. No class/resource, component/direct accuracy or new SBOM claim; R100 negative metrics/ranks/runtime/corpus unchanged.
+
+
+R102 actual class/resource corroboration improves disclosed Dropwizard FINAL from0/0/907 to893/0/14 (P100/R98.46) on the same16 agreeing owners;18 scopes UNKNOWN and443 direct FN remain. Boot90/3/2 and Javalin128/0/0 unchanged. JS current no-lock service aggregate306/9/1 components and102/0/1 direct revalidated, with Axios weak case retained. No independent rank promotion/runtime integration: [service/candidate comparison and remaining gates](java-js-service-accuracy.md).
