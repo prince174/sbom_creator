@@ -26,7 +26,11 @@ MAX_RATIO = 200
 MAX_SECONDS = 120
 
 
-def canonical(name):
+def canonical(name, *, docker_config=False):
+    # Crane's Docker tarball uses a root content-addressed config filename.
+    # This exception is never used for paths inside image layers or ZIPs.
+    if docker_config and re.fullmatch(r'sha256:[a-f0-9]{64}', name):
+        return '/' + name
     while name.startswith('./'):
         name = name[2:]
     if name in ('', '.'):
@@ -96,7 +100,7 @@ def preflight(stream, size):
     raise ValueError('Missing TAR terminator')
 
 
-def index(stream, size, remaining=None):
+def index(stream, size, remaining=None, *, docker_config=False):
     stats = preflight(stream, size)
     if remaining is not None and stats['metadata_cost'] > remaining:
         raise ValueError('Aggregate metadata budget')
@@ -104,7 +108,7 @@ def index(stream, size, remaining=None):
     result = {}
     try:
         for member in archive:
-            name = canonical(member.name)
+            name = canonical(member.name, docker_config=docker_config)
             if name in result:
                 raise ValueError('Duplicate canonical TAR path')
             if member.issparse():
@@ -168,12 +172,12 @@ class Layers:
             size = stream.tell()
             if size > MAX_DISK:
                 raise ValueError('Input archive budget')
-            archive, entries, outer_stats = index(stream, size)
+            archive, entries, outer_stats = index(stream, size, docker_config=True)
             self.stack.enter_context(archive)
             self.stats.update(metadata_cost=outer_stats['metadata_cost'], headers=outer_stats['headers'])
 
-            def document(name):
-                member = entries.get(canonical(name))
+            def document(name, *, docker_config=False):
+                member = entries.get(canonical(name, docker_config=docker_config))
                 if member is None or not member.isfile() or member.size > 4*CHUNK:
                     raise ValueError('Invalid image metadata')
                 return json.loads(archive.extractfile(member).read())
@@ -181,10 +185,16 @@ class Layers:
             if len(manifests) != 1:
                 raise ValueError('Ambiguous image manifest')
             manifest = manifests[0]
-            config_member = entries[canonical(manifest['Config'])]
-            config = document(manifest['Config'])
+            config_name = manifest['Config']
+            config_key = canonical(config_name, docker_config=True)
+            if any(':' in name and name != config_key for name in entries):
+                raise ValueError('Unreferenced digest-named Docker config')
+            config_member = entries[config_key]
+            config = document(config_name, docker_config=True)
             raw = archive.extractfile(config_member).read()
             self.config_digest = 'sha256:' + hashlib.sha256(raw).hexdigest()
+            if ':' in config_name and config_name != self.config_digest:
+                raise ValueError('Content-addressed Docker config mismatch')
             self.mapping = dict(zip(config['rootfs']['diff_ids'], manifest['Layers'], strict=True))
             if len(self.mapping) != len(manifest['Layers']):
                 raise ValueError('Duplicate layer binding')
