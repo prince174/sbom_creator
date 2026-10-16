@@ -327,9 +327,9 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None,
     rules = assessor is rules_assessor
     rules_policy = RULES_POLICY_VERSION
     if identity_envelope is not None:
-        rules_policy = ('image-identity-payload-v5'
-                        if identity_envelope.get('reader_policy') == 'stored-nested-windows-v1'
-                        else 'image-identity-payload-v4')
+        rules_policy = {'stored-nested-windows-v1': 'image-identity-payload-v5',
+                        'stored-nested-directory-lru-v1': 'image-identity-payload-v6'}.get(
+                            identity_envelope.get('reader_policy'), 'image-identity-payload-v4')
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
     included: set[str] = set()
     decisions = []

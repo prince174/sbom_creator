@@ -10,9 +10,9 @@ from pathlib import Path
 from .. import payload
 from ..acquire import clean_environment, run_command, secret
 from ..validation import validate_cyclonedx
+from .directory_jar_evidence import JarFiles as StoredJarFiles
 from .explicit_identity_gate import prepare
 from .seekable_jar_evidence import JarFiles
-from .stored_jar_evidence import JarFiles as StoredJarFiles
 from .trivy_only_payload import supplement
 
 DB_LOCK = threading.Lock()
@@ -106,7 +106,7 @@ def corroborate(image, archive, peer_document, *, temporary=None, nested_windows
         from ..core import checksum
         envelope['payload_sha256'] = checksum(physical)
         if nested_windows:
-            envelope['reader_policy'] = 'stored-nested-windows-v1'
+            envelope['reader_policy'] = 'stored-nested-directory-lru-v1'
         return adapted, physical, envelope, {'binding': audit, 'jar_resources': files.stats,
                                              'layer_resources': files.layers_reader.stats}
     finally:
@@ -126,7 +126,7 @@ def analyze(image, provenance, settings):
         adapted, physical, envelope, audit = corroborate(image, archive, peer_document, temporary=root,
                                                        nested_windows=settings.java_nested_windows)
         return adapted, {'payload_evidence': physical, 'identity_binding_envelope': envelope,
-            'java_reader_policy': ('stored-nested-windows-full-crc-bounded-range-cache-v1'
+            'java_reader_policy': ('stored-nested-directory-lru-conservative-ledger-v1'
                                   if settings.java_nested_windows else 'seekable-content-verification-v4'),
             'java_identity_engine': tool, 'java_image_status': 'corroborated',
             '_artifacts': {'image-original.syft.json': image, 'image-peer.cdx.json': peer_document,

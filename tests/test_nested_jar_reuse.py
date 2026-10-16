@@ -120,11 +120,11 @@ def test_stored_reader_requires_explicit_opt_in_and_legacy_remains_default(tmp_p
     result = core.reconcile({'artifacts': []}, legacy, payload_evidence=physical, identity_envelope=envelope)
     assert result['coverage']['policy_version'] == 'image-identity-payload-v4'
     adapted, physical, envelope, audit = corroborate(image, archive, peer, temporary=tmp_path, nested_windows=True)
-    assert envelope['reader_policy'] == 'stored-nested-windows-v1'
+    assert envelope['reader_policy'] == 'stored-nested-directory-lru-v1'
     assert audit['jar_resources']['nested_window_files'] == 2
     assert audit['jar_resources']['copied_bytes'] == 0
     result = core.reconcile({'artifacts': []}, adapted, payload_evidence=physical, identity_envelope=envelope)
-    assert result['coverage']['policy_version'] == 'image-identity-payload-v5'
+    assert result['coverage']['policy_version'] == 'image-identity-payload-v6'
 
 
 @pytest.mark.parametrize('raw,expected', [('true', True), ('false', False), ('TRUE', True)])
