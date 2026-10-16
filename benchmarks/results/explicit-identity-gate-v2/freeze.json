@@ -1,0 +1,26 @@
+{
+  "oracle_read": false,
+  "runtime_changed": false,
+  "partition": "disclosed_development",
+  "input_sha256": {
+    "benchmarks\\.work\\paired-spring-petclinic-v1\\analysis-seekable-payload-v4\\source.syft.json": "b552edce65f53355f0d7502d41e7967258de239f1d96c2d4fcaccd4ff9e59fd9",
+    "benchmarks\\.work\\paired-spring-petclinic-v1\\analysis-seekable-payload-v4\\image.syft.json": "078af526c8ea6372545a4c2e246db1a97b4caf8cace8a7ad03fece4ba07ce23b",
+    "benchmarks\\.work\\paired-spring-petclinic-v1\\analysis-seekable-payload-v4\\provenance.json": "9666c13cd957d7fa27cf2371432c7c7cb5e880e47c63d716540da8b483cfeb3b",
+    "benchmarks\\results\\seekable-payload-v4\\boot\\audit.json": "7b5860ee9ad9b218c91c160ea7478974ab72ca2f9b71ecfb65dcad56b272d7f2",
+    "benchmarks\\.work\\paired-javalin-reactor-v1\\analysis-seekable-payload-v4\\source.syft.json": "3276a0715bd2fae9f0064712866bc819b8990487547f24631aa3d9973f380115",
+    "benchmarks\\.work\\paired-javalin-reactor-v1\\analysis-seekable-payload-v4\\image.syft.json": "4ac81bc73bb7f63869a85c8da859044d8b4e472cda9626686650f80be7e85b7f",
+    "benchmarks\\.work\\paired-javalin-reactor-v1\\analysis-seekable-payload-v4\\provenance.json": "d365f0d319d9ad210535ce3b3ffc61413d73bd5cba57a520060996ce7e30924a",
+    "benchmarks\\results\\seekable-payload-v4\\javalin\\audit.json": "d6da292f38d0d4188665413184d7438f73c516a74e758652b2680fdfa9a729e7",
+    "benchmarks\\.work\\paired-dropwizard-reactor-v1\\analysis-seekable-payload-v4\\source.syft.json": "d4233cd9d7377e19d01d3c7979dbde2b3069986d8f2e2950f9ed6932d0c70a48",
+    "benchmarks\\.work\\paired-dropwizard-reactor-v1\\analysis-seekable-payload-v4\\image.syft.json": "79ab2b51e6937d14af15926a5dd125065ea8010f2e96b87aeb459a7c67852625",
+    "benchmarks\\.work\\paired-dropwizard-reactor-v1\\analysis-seekable-payload-v4\\provenance.json": "9d2755ebcfaaf37f2d081247f2a653e0e58b94e6b5f6bd91cdfb8d21cddf2bae",
+    "benchmarks\\results\\seekable-payload-v4\\dropwizard\\audit.json": "11ebe346f8d17e46c548d0abaf3460017167555a3cce877134c6469d8de7b71f"
+  },
+  "code_sha256": {
+    "benchmarks/explicit_identity_gate.py": "6d985595f225041c35a3b8ba5e6318c25823fe0be92ae09cd7e349a49ac48b27",
+    "benchmarks/replay_explicit_identity_gate.py": "f16498b0fb6d5708f5f55e03d807bccce0808e683ff878f3b8db36f24aaf55c2",
+    "src/sbom_creator/core.py": "a4ce9efbf9381dc2099109ca472588ee51a69cb54384661ff602b8b175bdd8a5",
+    "benchmarks/trivy_payload_bridge.py": "781c72835e004bba42049fa0b412cd1ad6440019c384d3b880088b00a92affe9"
+  },
+  "scope": "Separate in-process trusted identity envelope; cached physical facts, no fresh scans/reads"
+}

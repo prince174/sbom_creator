@@ -1,0 +1,103 @@
+"""Replay a separate identity gate on frozen physical facts, without oracle input."""
+import hashlib
+import json
+import shutil
+import time
+from collections import Counter
+from unittest.mock import patch
+
+from compare_java_js import all_components, coord
+from explicit_identity_gate import candidates, prepare
+from replay_trivy_payload_bridge import CASES
+from run import ROOT, atomic_json
+from trivy_only_payload import CATALOGER
+
+from sbom_creator import core
+from sbom_creator.acquire import Settings
+from sbom_creator.pipeline import publish_catalogs, rules_assessor
+from sbom_creator.validation import validate_cyclonedx
+
+
+def read(path):
+    return json.loads(path.read_bytes())
+
+
+def main():
+    output = ROOT / 'benchmarks/results/explicit-identity-gate-v2'
+    if output.exists():
+        raise FileExistsError('Preserve previous attempt')
+    cases = {case: pair for case, (_, pair, _, _, _) in CASES.items()}
+    cases['dropwizard'] = 'paired-dropwizard-reactor-v1'
+    inputs = {}
+    for case, pair in cases.items():
+        prior = ROOT / 'benchmarks/.work' / pair / 'analysis-seekable-payload-v4'
+        for name in ('source.syft.json', 'image.syft.json', 'provenance.json'):
+            inputs[str((prior / name).relative_to(ROOT))] = hashlib.sha256((prior / name).read_bytes()).hexdigest()
+        audit = ROOT / 'benchmarks/results/seekable-payload-v4' / case / 'audit.json'
+        inputs[str(audit.relative_to(ROOT))] = hashlib.sha256(audit.read_bytes()).hexdigest()
+    code = ['benchmarks/explicit_identity_gate.py', 'benchmarks/replay_explicit_identity_gate.py',
+            'src/sbom_creator/core.py', 'benchmarks/trivy_payload_bridge.py']
+    atomic_json(output / 'freeze.json', {'oracle_read': False, 'runtime_changed': False,
+                'partition': 'disclosed_development', 'input_sha256': inputs,
+                'code_sha256': {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in code},
+                'scope': 'Separate in-process trusted identity envelope; cached physical facts, no fresh scans/reads'})
+    reports = {}
+    for case, pair in cases.items():
+        started = time.monotonic()
+        work = ROOT / 'benchmarks/.work' / pair
+        prior = work / 'analysis-seekable-payload-v4'
+        source, image = (read(prior / name) for name in ('source.syft.json', 'image.syft.json'))
+        audit = read(ROOT / 'benchmarks/results/seekable-payload-v4' / case / 'audit.json')
+        physical, envelope = prepare(image, audit)
+        provenance = read(prior / 'provenance.json')
+        provenance['image']['payload_evidence'] = physical
+        provenance['image']['identity_binding_envelope'] = envelope
+        analysis = work / 'analysis-explicit-identity-gate-v2'
+
+        def build(source, image, payload, envelope=envelope):
+            return candidates(source, image, payload, envelope)
+
+        with patch.dict(core._DIRECT_CATALOGERS, {CATALOGER: 'archive_metadata'}), patch.object(
+                core, 'PAYLOAD_CATALOGERS', core.PAYLOAD_CATALOGERS | {CATALOGER}), patch.object(
+                core, 'build_candidates', build), patch.object(
+                core, 'RULES_POLICY_VERSION', 'experimental-explicit-identity-payload-v1'):
+            publish_catalogs(source, image, analysis,
+                Settings(syft_binary=str(ROOT / '.tools/syft/syft.exe')), rules_assessor, provenance)
+        directory = output / case
+        atomic_json(directory / 'identity-envelope.json', envelope)
+        atomic_json(directory / 'physical-payload.json', physical)
+        rows = read(analysis / 'decisions.json')
+        # Reconciliation retains real payload even when the identity was rejected.
+        facts = [f for row in rows for f in row['evidence'] if f.get('identity_binding')]
+        reports[case] = {'separate_binding_facts': len(facts),
+            'confirmed_payload_unknown_identity': sum(f.get('payload', {}).get('status') == 'confirmed'
+                and f['identity_binding']['status'] != 'BOUND' for f in facts),
+            'seconds_conversion_only': time.monotonic()-started}
+        for view in ('final', 'os', 'full'):
+            path = analysis / (view + '.cdx.json')
+            validate_cyclonedx(read(path))
+            shutil.copyfile(path, directory / path.name)
+    # All nine views exist BEFORE comparison to prior final results/reference scores.
+    for case, pair in cases.items():
+        prior = ROOT / 'benchmarks/.work' / pair / 'analysis-seekable-payload-v4'
+        current = ROOT / 'benchmarks/.work' / pair / 'analysis-explicit-identity-gate-v1'
+        for view in ('final', 'os', 'full'):
+            filename = view + '.cdx.json'
+            before = Counter(coord(c) for c in all_components(read(prior / filename)))
+            after = Counter(coord(c) for c in all_components(read(current / filename)))
+            if before != after:
+                raise ValueError('Identity gate changed component coverage: ' + case + '/' + view)
+        before = {a['id'] for a in read(prior / 'selected.syft.json')['artifacts']}
+        after = {a['id'] for a in read(current / 'selected.syft.json')['artifacts']}
+        if before != after:
+            raise ValueError('Selected physical instances changed: ' + case)
+        reports[case]['three_views_same_coordinates_and_selected_instances'] = True
+    baseline = ROOT / 'benchmarks/results/seekable-payload-v4/evaluation.json'
+    atomic_json(output / 'regression.json', {'runtime_changed': False, 'acceptance': False,
+                'accuracy_improvement': False, 'cases': reports,
+                'prior_evaluation_sha256': hashlib.sha256(baseline.read_bytes()).hexdigest(),
+                'note': 'Unchanged disclosed reference scores; not a new independent accuracy test'})
+
+
+if __name__ == '__main__':
+    main()

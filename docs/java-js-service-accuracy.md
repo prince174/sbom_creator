@@ -43,3 +43,12 @@ Component macro на8 положительных проектах:P93.48%,R99.88
 4. Достроить5 Java и8 JS референсных пар до20+20 основных; заморозить классификатор до новых независимых контролей. Текущий корпус15Java+12JS, плюс отдельный DBCP;28 пар всего. Порог нужен отдельно для языка и для components/direct, с версиями, coverage и регрессией.
 
 377 selected service/prototype tests passed,3 skipped; Ruff/schema checks passed. Все исходные неудачные варианты R102v1/v2/v3 сохранены; v4 — текущий кандидат. Runtime и развёрнутые сервисы не изменены.
+
+
+## R103: отдельный identity gate, без изменения точности
+
+Новый benchmark-кандидат `explicit_identity_gate.py` разделяет два факта: наличие физических class/resource bytes и подтверждение координат пакета по image/path/layer. Раньше отказ identity bridge технически записывался как неподтверждённый payload. Теперь исходный физический факт сохраняется, а отдельный binding UNKNOWN запрещает включение конкретной записи. Envelope привязан SHA256 к полному adapted catalog и payload observations; это только доверенный внутрипроцессный результат адаптера, не новый пользовательский вход и не механизм аутентификации внешнего SBOM.
+
+Повторно опубликованы девять final/os/full из замороженных R102 catalogs и физических observations, без новых scanner/reader запусков. Все координатные мультимножества и выбранные artifact IDs совпали с R102. У Boot/Javalin/Dropwizard соответственно 1/1/4 записи имеют подтверждённые bytes, но UNKNOWN identity; они остаются вне final. Проверены stale catalog/payload, подмена координат/path/layer, отсутствующий/дублированный audit, sibling с тем же PURL и сохранение npm observations. [Регрессия](../benchmarks/results/explicit-identity-gate-v2/regression.json), [заморозка](../benchmarks/results/explicit-identity-gate-v2/freeze.json).
+
+Это исправление семантики evidence в отдельном прототипе, НЕ рост precision/recall и НЕ интеграция в runtime. Java/JS цифры выше не изменились. Следующий существенный этап — пассивный source-owner graph и профили/модули, затем свежие независимые optional/reactor/Gradle/workspace controls; текущие 16/55/443 direct UNKNOWN/FN не устранены. Нужны ещё5 Java и8 JS реальных пар.

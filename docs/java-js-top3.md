@@ -165,3 +165,6 @@ R101 (2026-10-16): separate seekable-layer prototype verifies the original confi
 
 
 R102 actual class/resource corroboration improves disclosed Dropwizard FINAL from0/0/907 to893/0/14 (P100/R98.46) on the same16 agreeing owners;18 scopes UNKNOWN and443 direct FN remain. Boot90/3/2 and Javalin128/0/0 unchanged. JS current no-lock service aggregate306/9/1 components and102/0/1 direct revalidated, with Axios weak case retained. No independent rank promotion/runtime integration: [service/candidate comparison and remaining gates](java-js-service-accuracy.md).
+
+
+R103 (2026-10-16): benchmark-only explicit identity gate retains confirmed physical facts for rejected identities (Boot/Javalin/Dropwizard1/1/4), while all nine final/os/full coordinate multisets and selected instances remain equal R102. No new accuracy result, ranking change, runtime adoption or pair. [Gate regression](../benchmarks/results/explicit-identity-gate-v2/regression.json). Direct source-owner integration and independent complex controls remain pending.
