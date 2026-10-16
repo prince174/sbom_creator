@@ -14,6 +14,8 @@ from .archive_component_identity import POLICY as ARCHIVE_POLICY
 from .archive_component_identity import bind as bind_archives
 from .directory_jar_evidence import JarFiles as StoredJarFiles
 from .explicit_identity_gate import prepare
+from .java_database_cache import DatabaseCacheError
+from .java_database_cache import _prepare_cache as prepare_cache
 from .java_database_cache import ensure as ensure_database
 from .public_hash_identity import PublicJavaHashLookup, file_sha256
 from .seekable_jar_evidence import JarFiles
@@ -31,8 +33,14 @@ def file_sha(path):
 
 def peer(archive, settings, temporary):
     root = Path(temporary)
-    cache = Path(settings.trivy_cache_dir) if settings.trivy_cache_dir else Path.home()/'.cache/sbom-trivy'
-    cache.mkdir(parents=True, exist_ok=True)
+    configured = Path(settings.trivy_cache_dir) if settings.trivy_cache_dir else Path.home()/'.cache/sbom-trivy'
+    # Use one lexical absolute path for validation and subprocesses with a
+    # different cwd. Check ancestors before creating any cache child or tool run.
+    cache = Path(os.path.abspath(configured))
+    try:
+        prepare_cache(cache)
+    except (OSError, ValueError):
+        raise DatabaseCacheError('CACHE_INVALID') from None
     env = clean_environment()
     env.update(HOME=str(root), USERPROFILE=str(root), DOCKER_CONFIG=str(root),
                XDG_CONFIG_HOME=str(root), XDG_CACHE_HOME=str(root), TMP=str(root), TEMP=str(root), TMPDIR=str(root))

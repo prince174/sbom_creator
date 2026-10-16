@@ -6,6 +6,10 @@ poisoning при первой загрузке публичной Trivy Java DB.
 
 `SBOM_TRIVY_CACHE_DIR/java-db` содержит ровно `trivy-java.db` и `metadata.json`.
 Cache/workspace принадлежит одному сервису; нельзя делить его с недоверенным writer.
+R112 peer adapter приводит относительный cache path к одному абсолютному пути
+без разрешения симлинков и проверяет ancestors до создания дочерних каталогов
+или запуска Trivy. Нарушение даёт фиксированный `CACHE_INVALID`; subprocess cwd
+не меняет расположение проверенной DB.
 Нормальный warm path не создаёт stage/lock и не обновляет DB: Version1 metadata,
 timezone-aware dates, supported SQLite header/page count, exact schema/PK/nonpartial hash
 index/query plan и полный физический SHA256 проверяются read-only. Stale NextUpdate
