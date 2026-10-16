@@ -1,3 +1,15 @@
+## R110 — default component release configuration, 2026-10-16
+
+Java v7 is now default; explicitfalse restores v4/v6. Fresh held-from-recent-tuning
+REST104/3/2 and DBCP3/0/0 both exceed90P/R/exactcoverage. No new foreign build, no
+reader/identity tuning. Combined known-delivered Java3862/20/18,P99.485/R99.536,
+macro98.832/99.095; old4repo measurements explicitly carried, not new scans.
+JS R109307/9/0,P97.152/R100, macro93.481/100; R11012cached publisher regressions
+preserve36views/IDs. Installed default Linux REST all3coordinate multisets equal
+Windows; OSIDs/rawUNKNOWN differ, partial parity retained. Metadata-only axis not
+independently exercised by REST/DBCP; opaque/shaded coverage UNKNOWN. No universal
+ranking guarantee or original-CI graph claim. [Details](java-js-service-accuracy.md).
+
 ## R109 — JS type presence and wider POST-only Java evaluation, 2026-10-16
 
 | Technique / mode | Actual result | Meaning |

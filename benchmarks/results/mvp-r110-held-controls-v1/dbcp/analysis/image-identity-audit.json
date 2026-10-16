@@ -1,0 +1,170 @@
+{
+  "binding": {
+    "existing_bridge": {
+      "image_config_digest": "sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be",
+      "packages": [
+        {
+          "original": {
+            "id": "a6561b27cc4d7e4e",
+            "purl": "pkg:maven/org.apache.commons/commons-dbcp2@2.13.0",
+            "name": "commons-dbcp2",
+            "version": "2.13.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.commons/commons-dbcp2@2.13.0",
+          "path_layer": [
+            "/application/commons-dbcp2-2.13.0.jar",
+            "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/commons-dbcp2-2.13.0.jar:org/apache/commons/dbcp2/AbandonedTrace.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9cbb826ee965ffbf",
+            "purl": "pkg:maven/commons-logging/commons-logging@1.3.4",
+            "name": "commons-logging",
+            "version": "1.3.4"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/commons-logging/commons-logging@1.3.4",
+          "path_layer": [
+            "/application/commons-logging-1.3.4.jar",
+            "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/commons-logging-1.3.4.jar:org/apache/commons/logging/Log.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "e6d2ad05ad9d64eb",
+            "purl": "pkg:maven/org.apache.commons/commons-pool2@2.12.0",
+            "name": "commons-pool2",
+            "version": "2.12.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.commons/commons-pool2@2.12.0",
+          "path_layer": [
+            "/application/commons-pool2-2.12.0.jar",
+            "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/commons-pool2-2.12.0.jar:org/apache/commons/pool2/BaseKeyedPooledObjectFactory.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "97bf7488b77b8a33",
+            "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.3",
+            "name": "jakarta.transaction-api",
+            "version": "1.3.3"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.3",
+          "path_layer": [
+            "/application/jakarta.transaction-api-1.3.3.jar",
+            "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/jakarta.transaction-api-1.3.3.jar:javax/transaction/Transactional$TxType.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        }
+      ],
+      "ignored_peer": [],
+      "scope": "Image inventory; no directness or runtime-use claim"
+    },
+    "supplemental": [],
+    "resource_counters": {
+      "copied_bytes": 0,
+      "ordinary_read_bytes": 0,
+      "index_bytes": 26338,
+      "zip_entries": 267,
+      "source_files": 0,
+      "nested_files": 0,
+      "class_witnesses": 4,
+      "resource_witnesses": 0,
+      "rejections": 0,
+      "zip_parse_entries": 267,
+      "views": 4,
+      "read_cache_hits": 8,
+      "verification_read_bytes": 460600,
+      "content_witness_hits": 0,
+      "nested_window_files": 0,
+      "nested_window_bytes": 0,
+      "range_cache_bytes": 30948,
+      "range_cache_entries": 24,
+      "stored_crc_verifications": 0,
+      "directory_cache_entries": 4,
+      "directory_cache_evictions": 0,
+      "directory_cache_hits": 0,
+      "directory_charges": 4,
+      "budget_guard_counts": {},
+      "archive_hash_verifications": 0,
+      "archive_components_confirmed": 0,
+      "archive_crc_read_bytes": 0
+    },
+    "runtime_changed": false,
+    "producer": "trivy-java-archive-cataloger",
+    "archive_components": [],
+    "archive_identity_database": {
+      "sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+      "lookup": "exact full SHA1 association; not an independent Trivy identity source",
+      "publisher_authenticated": false,
+      "globally_unique_gav_proven": false
+    }
+  },
+  "jar_resources": {
+    "copied_bytes": 0,
+    "ordinary_read_bytes": 0,
+    "index_bytes": 26338,
+    "zip_entries": 267,
+    "source_files": 0,
+    "nested_files": 0,
+    "class_witnesses": 4,
+    "resource_witnesses": 0,
+    "rejections": 0,
+    "zip_parse_entries": 267,
+    "views": 4,
+    "read_cache_hits": 8,
+    "verification_read_bytes": 460600,
+    "content_witness_hits": 0,
+    "nested_window_files": 0,
+    "nested_window_bytes": 0,
+    "range_cache_bytes": 30948,
+    "range_cache_entries": 24,
+    "stored_crc_verifications": 0,
+    "directory_cache_entries": 4,
+    "directory_cache_evictions": 0,
+    "directory_cache_hits": 0,
+    "directory_charges": 4,
+    "budget_guard_counts": {},
+    "archive_hash_verifications": 0,
+    "archive_components_confirmed": 0,
+    "archive_crc_read_bytes": 0
+  },
+  "layer_resources": {
+    "normalized_bytes": 465408,
+    "metadata_cost": 18162,
+    "headers": 17,
+    "payload_read_bytes": 30948,
+    "normalizations": 1
+  }
+}

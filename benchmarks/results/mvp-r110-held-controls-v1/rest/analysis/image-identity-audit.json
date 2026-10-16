@@ -1,0 +1,2375 @@
+{
+  "binding": {
+    "existing_bridge": {
+      "image_config_digest": "sha256:9bfafd9d53c375adee38bb2641013f1be503c1157de26bba79934921cf870988",
+      "packages": [
+        {
+          "original": {
+            "id": "260aac4436b055c6",
+            "purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+            "name": "HdrHistogram",
+            "version": "2.2.2"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/HdrHistogram-2.2.2.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/HdrHistogram-2.2.2.jar:org/HdrHistogram/AbstractHistogram$1.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "c358f1849a95eb81",
+            "purl": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+            "name": "HikariCP",
+            "version": "7.0.2"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/HikariCP-7.0.2.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/HikariCP-7.0.2.jar:com/zaxxer/hikari/HikariConfig.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "b84ffb5d0d45bcf3",
+            "purl": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3",
+            "name": "angus-activation",
+            "version": "2.0.3"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/angus-activation-2.0.3.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/angus-activation-2.0.3.jar:org/eclipse/angus/activation/LineTokenizer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "7e26478b1922da00",
+            "purl": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+            "name": "antlr4-runtime",
+            "version": "4.13.2"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/antlr4-runtime-4.13.2.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/antlr4-runtime-4.13.2.jar:org/antlr/v4/runtime/ANTLRErrorListener.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f20a6c0275555309",
+            "purl": "pkg:maven/org.aspectj.weaver/aspectjweaver@1.9.25.1",
+            "name": "aspectjweaver",
+            "version": "1.9.25.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/aspectjweaver-1.9.25.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/aspectjweaver-1.9.25.1.jar:aj/org/objectweb/asm/AnnotationVisitor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "1d9e7c483635180c",
+            "purl": "pkg:maven/net.bytebuddy/byte-buddy@1.18.11",
+            "name": "byte-buddy",
+            "version": "1.18.11"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/net.bytebuddy/byte-buddy@1.18.11",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/byte-buddy-1.18.11.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/byte-buddy-1.18.11.jar:net/bytebuddy/jar/asm/AnnotationVisitor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "c226c9b6235df9f4",
+            "purl": "pkg:maven/checker-qual/checker-qual@3.55.1",
+            "name": "checker-qual",
+            "version": "3.55.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/checker-qual-3.55.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/checker-qual-3.55.1.jar:module-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "d6473f937962e9c7",
+            "purl": "pkg:maven/com.fasterxml/classmate@1.7.3",
+            "name": "classmate",
+            "version": "1.7.3"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml/classmate@1.7.3",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/classmate-1.7.3.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/classmate-1.7.3.jar:com/fasterxml/classmate/AnnotationConfiguration$StdConfiguration.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "13293c37cd55900e",
+            "purl": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+            "name": "commons-lang3",
+            "version": "3.20.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/commons-lang3-3.20.0.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/commons-lang3-3.20.0.jar:org/apache/commons/lang3/AnnotationUtils$1.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "13e5a63e54dc2b14",
+            "purl": "pkg:maven/commons-logging/commons-logging@1.3.6",
+            "name": "commons-logging",
+            "version": "1.3.6"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/commons-logging/commons-logging@1.3.6",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/commons-logging-1.3.6.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/commons-logging-1.3.6.jar:org/apache/commons/logging/Log.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "888b98a7ae63ae55",
+            "purl": "pkg:maven/com.h2database/h2@2.4.240",
+            "name": "h2",
+            "version": "2.4.240"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.h2database/h2@2.4.240",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/h2-2.4.240.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/h2-2.4.240.jar:META-INF/versions/21/org/h2/util/Utils21.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "ea1d5c379533be54",
+            "purl": "pkg:maven/org.hibernate/hibernate-core@7.4.5.Final",
+            "name": "hibernate-core",
+            "version": "7.4.5.Final"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.hibernate/hibernate-core@7.4.5.Final",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/hibernate-core-7.4.5.Final.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/hibernate-core-7.4.5.Final.jar:org/hibernate/AnnotationException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f3a53604f4ac44df",
+            "purl": "pkg:maven/org.hibernate.models/hibernate-models@1.1.1",
+            "name": "hibernate-models",
+            "version": "1.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.hibernate.models/hibernate-models@1.1.0",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/hibernate-models-1.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/hibernate-models-1.1.1.jar:org/hibernate/models/AnnotationAccessException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f4161e7c29800783",
+            "purl": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.3.Final",
+            "name": "hibernate-validator",
+            "version": "9.1.3.Final"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.3.Final",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/hibernate-validator-9.1.3.Final.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/hibernate-validator-9.1.3.Final.jar:org/hibernate/validator/BaseHibernateValidatorConfiguration.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "a3efe4a26a1a4f78",
+            "purl": "pkg:maven/org.hsqldb.hsqldb/hsqldb@2.7.3",
+            "name": "hsqldb",
+            "version": "2.7.3"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.hsqldb/hsqldb@2.7.3",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/hsqldb-2.7.3.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/hsqldb-2.7.3.jar:module-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "408a8b822afb9d94",
+            "purl": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2",
+            "name": "istack-commons-runtime",
+            "version": "4.1.2"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/istack-commons-runtime-4.1.2.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/istack-commons-runtime-4.1.2.jar:com/sun/istack/SAXParseException2.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "8037cc76d0878eb9",
+            "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+            "name": "jackson-annotations",
+            "version": "2.21"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-annotations-2.21.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-annotations-2.21.jar:com/fasterxml/jackson/annotation/JacksonAnnotation.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "95c956ee2c09ee88",
+            "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.21.5",
+            "name": "jackson-core",
+            "version": "2.21.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.21.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-core-2.21.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-core-2.21.5.jar:com/fasterxml/jackson/core/Base64Variant$PaddingReadBehaviour.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9b7e273f7e4be5b1",
+            "purl": "pkg:maven/tools.jackson.core/jackson-core@3.1.5",
+            "name": "jackson-core",
+            "version": "3.1.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/tools.jackson.core/jackson-core@3.1.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-core-3.1.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-core-3.1.5.jar:tools/jackson/core/Base64Variant$PaddingReadBehaviour.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "6d7c9262ca0b30c6",
+            "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.5",
+            "name": "jackson-databind",
+            "version": "2.21.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-databind-2.21.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-databind-2.21.5.jar:com/fasterxml/jackson/databind/AbstractTypeResolver.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "21b1e13a7377855f",
+            "purl": "pkg:maven/tools.jackson.core/jackson-databind@3.1.5",
+            "name": "jackson-databind",
+            "version": "3.1.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/tools.jackson.core/jackson-databind@3.1.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-databind-3.1.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-databind-3.1.5.jar:tools/jackson/databind/AbstractTypeResolver.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "bcf4f96f863bf125",
+            "purl": "pkg:maven/org.openapitools/jackson-databind-nullable@0.2.11",
+            "name": "jackson-databind-nullable",
+            "version": "0.2.11"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.openapitools/jackson-databind-nullable@0.2.11",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-databind-nullable-0.2.11.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-databind-nullable-0.2.11.jar:org/openapitools/jackson/nullable/JsonNullable.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "6db4a20e6de67ae5",
+            "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.21.5",
+            "name": "jackson-dataformat-yaml",
+            "version": "2.21.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.21.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-dataformat-yaml-2.21.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-dataformat-yaml-2.21.5.jar:com/fasterxml/jackson/dataformat/yaml/JacksonYAMLParseException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "a2bc9fcb65b6a9da",
+            "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.21.5",
+            "name": "jackson-datatype-jsr310",
+            "version": "2.21.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.21.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jackson-datatype-jsr310-2.21.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jackson-datatype-jsr310-2.21.5.jar:com/fasterxml/jackson/datatype/jsr310/DecimalUtils.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "5517b48e5f172c42",
+            "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+            "name": "jakarta.activation-api",
+            "version": "2.1.4"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.activation-api-2.1.4.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.activation-api-2.1.4.jar:jakarta/activation/ActivationDataFlavor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "b646bcb0ac2c4bd6",
+            "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+            "name": "jakarta.annotation-api",
+            "version": "3.0.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar:jakarta/annotation/Generated.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "bd8cb1fc6579dd6c",
+            "purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+            "name": "jakarta.inject-api",
+            "version": "2.0.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.inject-api-2.0.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.inject-api-2.0.1.jar:jakarta/inject/Named.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "483ac67a4496c8ae",
+            "purl": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0",
+            "name": "jakarta.persistence-api",
+            "version": "3.2.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar:jakarta/persistence/Access.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "6a4c0184bfd34e17",
+            "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+            "name": "jakarta.transaction-api",
+            "version": "2.0.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar:jakarta/transaction/HeuristicCommitException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "2a055ca033daaa04",
+            "purl": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+            "name": "jakarta.validation-api",
+            "version": "3.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.validation-api-3.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.validation-api-3.1.1.jar:jakarta/validation/BootstrapConfiguration.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "99b1eac74ed2061c",
+            "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+            "name": "jakarta.xml.bind-api",
+            "version": "4.0.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar:jakarta/xml/bind/Binder.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "6770d37069bb1591",
+            "purl": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9",
+            "name": "jaxb-core",
+            "version": "4.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jaxb-core-4.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jaxb-core-4.0.9.jar:org/glassfish/jaxb/core/Locatable.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "70af5638e8efc524",
+            "purl": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9",
+            "name": "jaxb-runtime",
+            "version": "4.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jaxb-runtime-4.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jaxb-runtime-4.0.9.jar:org/glassfish/jaxb/runtime/AccessorFactory.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "8ea5a2cc0594b56a",
+            "purl": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+            "name": "jboss-logging",
+            "version": "3.6.3.Final"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jboss-logging-3.6.3.Final.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jboss-logging-3.6.3.Final.jar:org/jboss/logging/AbstractLoggerProvider$Entry.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "621d3fecca52130b",
+            "purl": "pkg:maven/jrt-fs/jrt-fs@17.0.20.1",
+            "name": "jrt-fs",
+            "version": "17.0.20.1"
+          },
+          "status": "UNKNOWN",
+          "reason": "Archive path/layer does not identify one package in each engine",
+          "path_layer": [
+            "/opt/java/openjdk/lib/jrt-fs.jar",
+            "sha256:2dc9e195c9e218786a3c42edaddc103b23a049c29bd07b268ada354c0ee11bd7"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/opt/java/openjdk/lib/jrt-fs.jar:jdk/internal/jimage/BasicImageReader$1.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f0f4325deb395da1",
+            "purl": "pkg:maven/org.jspecify.jspecify/jspecify@1.0.1",
+            "name": "jspecify",
+            "version": "1.0.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.jspecify/jspecify@1.0.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jspecify-1.0.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jspecify-1.0.1.jar:module-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9a1f1e03a2bcb56e",
+            "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.18",
+            "name": "jul-to-slf4j",
+            "version": "2.0.18"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.18",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/jul-to-slf4j-2.0.18.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/jul-to-slf4j-2.0.18.jar:org/slf4j/bridge/SLF4JBridgeHandler.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "575d3e745b7356e7",
+            "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "name": "log4j-api",
+            "version": "2.25.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/log4j-api-2.25.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/log4j-api-2.25.5.jar:META-INF/versions/9/org/apache/logging/log4j/util/Base64Util.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "96fecea662c875d4",
+            "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "name": "log4j-to-slf4j",
+            "version": "2.25.5"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar:org/apache/logging/slf4j/Activator.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "4abdad25900e84e4",
+            "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+            "name": "logback-classic",
+            "version": "1.5.38"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/logback-classic-1.5.38.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/logback-classic-1.5.38.jar:ch/qos/logback/classic/AsyncAppender.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9bbf9c56f5eff94e",
+            "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+            "name": "logback-core",
+            "version": "1.5.38"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/logback-core-1.5.38.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/logback-core-1.5.38.jar:ch/qos/logback/core/Appender.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "35d3625dfa23b2c4",
+            "purl": "pkg:maven/org.mapstruct/mapstruct@1.6.3",
+            "name": "mapstruct",
+            "version": "1.6.3"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.mapstruct/mapstruct@1.6.3",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/mapstruct-1.6.3.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/mapstruct-1.6.3.jar:org/mapstruct/AnnotateWiths.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "c4f03051f85f4399",
+            "purl": "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+            "name": "micrometer-commons",
+            "version": "1.17.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/micrometer-commons-1.17.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/micrometer-commons-1.17.1.jar:io/micrometer/common/ImmutableKeyValue.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "958dbb24782f3e07",
+            "purl": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+            "name": "micrometer-core",
+            "version": "1.17.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/micrometer-core-1.17.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/micrometer-core-1.17.1.jar:io/micrometer/core/annotation/Counted.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "c1360bc1f0fbd740",
+            "purl": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.1",
+            "name": "micrometer-jakarta9",
+            "version": "1.17.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/micrometer-jakarta9-1.17.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/micrometer-jakarta9-1.17.1.jar:io/micrometer/jakarta9/instrument/jms/DefaultJmsProcessObservationConvention.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "64fbeb98db5ae1e7",
+            "purl": "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+            "name": "micrometer-observation",
+            "version": "1.17.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/micrometer-observation-1.17.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/micrometer-observation-1.17.1.jar:io/micrometer/observation/GlobalObservationConvention.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "41042428ba01b91c",
+            "purl": "pkg:maven/com.mysql/mysql-connector-j@9.7.0",
+            "name": "mysql-connector-j",
+            "version": "9.7.0"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/com.mysql/mysql-connector-j@9.7.0",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/mysql-connector-j-9.7.0.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/mysql-connector-j-9.7.0.jar:com/mysql/cj/AbstractQuery.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "3bfb7381dc87076d",
+            "purl": "pkg:maven/org.postgresql/postgresql@42.7.13",
+            "name": "postgresql",
+            "version": "42.7.13"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.postgresql/postgresql@42.7.13",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/postgresql-42.7.13.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/postgresql-42.7.13.jar:META-INF/versions/11/org/postgresql/util/LazyCleanerImpl$CleanableWrapper.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "fc6f8f90104a9854",
+            "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+            "name": "slf4j-api",
+            "version": "2.0.18"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/slf4j-api-2.0.18.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/slf4j-api-2.0.18.jar:org/slf4j/ILoggerFactory.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "90d09459dd4bb7fe",
+            "purl": "pkg:maven/org.yaml/snakeyaml@2.6",
+            "name": "snakeyaml",
+            "version": "2.6"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.yaml/snakeyaml@2.6",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/snakeyaml-2.6.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/snakeyaml-2.6.jar:META-INF/versions/9/module-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "d1540c8362e759e1",
+            "purl": "pkg:maven/org.springframework/spring-aop@7.0.9",
+            "name": "spring-aop",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-aop@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-aop-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-aop-7.0.9.jar:org/aopalliance/package-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "4947ed25c218c7c4",
+            "purl": "pkg:maven/org.springframework/spring-aspects@7.0.9",
+            "name": "spring-aspects",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-aspects@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-aspects-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-aspects-7.0.9.jar:org/springframework/beans/factory/aspectj/AbstractDependencyInjectionAspect.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "8c9431861286c486",
+            "purl": "pkg:maven/org.springframework/spring-beans@7.0.9",
+            "name": "spring-beans",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-beans@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-beans-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-beans-7.0.9.jar:org/springframework/beans/AbstractNestablePropertyAccessor$PropertyHandler.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "cd61e95a11661655",
+            "purl": "pkg:maven/org.springframework.boot/spring-boot@4.1.1",
+            "name": "spring-boot",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-4.1.1.jar:org/springframework/boot/AotInitializerNotFoundException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "35821a6d23e9851a",
+            "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.1",
+            "name": "spring-boot-actuator",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-actuator-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-actuator-4.1.1.jar:org/springframework/boot/actuate/audit/AuditEvent.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "8bfc5c9c4a9e1ad2",
+            "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.1",
+            "name": "spring-boot-actuator-autoconfigure",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.1.jar:org/springframework/boot/actuate/autoconfigure/OnEndpointElementCondition.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "7671c0547f33b866",
+            "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.1",
+            "name": "spring-boot-autoconfigure",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-autoconfigure-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-autoconfigure-4.1.1.jar:org/springframework/boot/autoconfigure/AbstractDependsOnBeanFactoryPostProcessor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "4afa1330fd992c4c",
+            "purl": "pkg:maven/spring-boot-cache/spring-boot-cache@4.1.1",
+            "name": "spring-boot-cache",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-cache@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-cache-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-cache-4.1.1.jar:org/springframework/boot/cache/actuate/endpoint/CachesEndpoint$CacheDescriptor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "7313e5e82cdc93f9",
+            "purl": "pkg:maven/spring-boot-data-commons/spring-boot-data-commons@4.1.1",
+            "name": "spring-boot-data-commons",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-data-commons@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-data-commons-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-data-commons-4.1.1.jar:org/springframework/boot/data/autoconfigure/metrics/DataMetricsProperties$Repository$Autotime.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "22cc16e803ef91fd",
+            "purl": "pkg:maven/spring-boot-data-jpa/spring-boot-data-jpa@4.1.1",
+            "name": "spring-boot-data-jpa",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-data-jpa@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-data-jpa-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-data-jpa-4.1.1.jar:org/springframework/boot/data/jpa/autoconfigure/DataJpaRepositoriesAutoConfiguration$JpaRepositoriesImportSelector.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "02e3b742f502719e",
+            "purl": "pkg:maven/spring-boot-h2console/spring-boot-h2console@4.1.1",
+            "name": "spring-boot-h2console",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-h2console@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-h2console-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-h2console-4.1.1.jar:org/springframework/boot/h2console/autoconfigure/H2ConsoleAutoConfiguration$H2ConsoleLogger.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "ce01beb074a8596c",
+            "purl": "pkg:maven/spring-boot-health/spring-boot-health@4.1.1",
+            "name": "spring-boot-health",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-health-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-health-4.1.1.jar:org/springframework/boot/health/actuate/endpoint/AdditionalHealthEndpointPath.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "688d392575921d7e",
+            "purl": "pkg:maven/spring-boot-hibernate/spring-boot-hibernate@4.1.1",
+            "name": "spring-boot-hibernate",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-hibernate@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-hibernate-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-hibernate-4.1.1.jar:org/springframework/boot/hibernate/SpringImplicitNamingStrategy.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "d21ea71e0c168029",
+            "purl": "pkg:maven/spring-boot-http-converter/spring-boot-http-converter@4.1.1",
+            "name": "spring-boot-http-converter",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-http-converter-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-http-converter-4.1.1.jar:org/springframework/boot/http/converter/autoconfigure/ClientHttpMessageConvertersCustomizer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f19453c02293857a",
+            "purl": "pkg:maven/spring-boot-jackson/spring-boot-jackson@4.1.1",
+            "name": "spring-boot-jackson",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-jackson-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-jackson-4.1.1.jar:org/springframework/boot/jackson/JacksonComponent$Scope.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "1479bf45c0370dbd",
+            "purl": "pkg:maven/spring-boot-jarmode-tools/spring-boot-jarmode-tools@4.1.1",
+            "name": "spring-boot-jarmode-tools",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-jarmode-tools-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-jarmode-tools-4.1.1.jar:org/springframework/boot/jarmode/tools/Command$Option.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "3cf27b29d9c55827",
+            "purl": "pkg:maven/spring-boot-jdbc/spring-boot-jdbc@4.1.1",
+            "name": "spring-boot-jdbc",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-jdbc-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-jdbc-4.1.1.jar:org/springframework/boot/jdbc/DataSourceBuilder$ComboPooledDataSourceProperties.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "1bb9070891187d0f",
+            "purl": "pkg:maven/spring-boot-jpa/spring-boot-jpa@4.1.1",
+            "name": "spring-boot-jpa",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-jpa@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-jpa-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-jpa-4.1.1.jar:org/springframework/boot/jpa/EntityManagerFactoryBuilder$Builder.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "417ad6ec4ce1ffd4",
+            "purl": "pkg:maven/spring-boot-micrometer-metrics/spring-boot-micrometer-metrics@4.1.1",
+            "name": "spring-boot-micrometer-metrics",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.1.jar:org/springframework/boot/micrometer/metrics/MaximumAllowableTagsMeterFilter.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "a4561c8b9e677691",
+            "purl": "pkg:maven/spring-boot-micrometer-observation/spring-boot-micrometer-observation@4.1.1",
+            "name": "spring-boot-micrometer-observation",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-micrometer-observation-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-micrometer-observation-4.1.1.jar:org/springframework/boot/micrometer/observation/autoconfigure/ObservationAutoConfiguration$ObservedAspectConfiguration.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f3ce2e69a36939b4",
+            "purl": "pkg:maven/spring-boot-persistence/spring-boot-persistence@4.1.1",
+            "name": "spring-boot-persistence",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-persistence-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-persistence-4.1.1.jar:org/springframework/boot/persistence/autoconfigure/EntityScan.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "ebb26d3ca50913e9",
+            "purl": "pkg:maven/spring-boot-security/spring-boot-security@4.1.1",
+            "name": "spring-boot-security",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-security@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-security-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-security-4.1.1.jar:org/springframework/boot/security/autoconfigure/MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured$MissingAlternative.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "14f4df4aeef511b4",
+            "purl": "pkg:maven/spring-boot-servlet/spring-boot-servlet@4.1.1",
+            "name": "spring-boot-servlet",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-servlet-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-servlet-4.1.1.jar:org/springframework/boot/servlet/MultipartConfigFactory.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "40a47bfe4cce6f0a",
+            "purl": "pkg:maven/spring-boot-sql/spring-boot-sql@4.1.1",
+            "name": "spring-boot-sql",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-sql-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-sql-4.1.1.jar:org/springframework/boot/sql/autoconfigure/init/ApplicationScriptDatabaseInitializer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "595eb6c42a92e95b",
+            "purl": "pkg:maven/spring-boot-tomcat/spring-boot-tomcat@4.1.1",
+            "name": "spring-boot-tomcat",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-tomcat-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-tomcat-4.1.1.jar:org/springframework/boot/tomcat/CompressionConnectorCustomizer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "da736c8a2906771d",
+            "purl": "pkg:maven/spring-boot-transaction/spring-boot-transaction@4.1.1",
+            "name": "spring-boot-transaction",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-transaction-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-transaction-4.1.1.jar:org/springframework/boot/transaction/autoconfigure/ExecutionListenersTransactionManagerCustomizer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "2b180dabd70d1b64",
+            "purl": "pkg:maven/spring-boot-validation/spring-boot-validation@4.1.1",
+            "name": "spring-boot-validation",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-validation-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-validation-4.1.1.jar:org/springframework/boot/validation/autoconfigure/JakartaValidationBackgroundPreinitializer.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "cef1310af8d5bcfb",
+            "purl": "pkg:maven/spring-boot-web-server/spring-boot-web-server@4.1.1",
+            "name": "spring-boot-web-server",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-web-server-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-web-server-4.1.1.jar:org/springframework/boot/web/server/AbstractConfigurableWebServerFactory$TempDirs.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "e5808f8431e52426",
+            "purl": "pkg:maven/spring-boot-webmvc/spring-boot-webmvc@4.1.1",
+            "name": "spring-boot-webmvc",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-boot-webmvc-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-boot-webmvc-4.1.1.jar:org/springframework/boot/webmvc/WebMvcWebApplicationTypeDeducer$WebMvcWebApplicationTypeDeducerRuntimeHints.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f5a115ad12f5cbe5",
+            "purl": "pkg:maven/org.springframework/spring-context@7.0.9",
+            "name": "spring-context",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-context@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-context-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-context-7.0.9.jar:org/springframework/cache/Cache$ValueRetrievalException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "996860ef4377f454",
+            "purl": "pkg:maven/org.springframework/spring-context-support@7.0.9",
+            "name": "spring-context-support",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-context-support@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-context-support-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-context-support-7.0.9.jar:org/springframework/cache/caffeine/CaffeineCache$LoadFunction.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "ad6c1b855063267c",
+            "purl": "pkg:maven/org.springframework/spring-core@7.0.9",
+            "name": "spring-core",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-core@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-core-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-core-7.0.9.jar:org/springframework/aot/AotDetector.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "0cd59b7a062521dc",
+            "purl": "pkg:maven/org.springframework.data/spring-data-commons@4.1.1",
+            "name": "spring-data-commons",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.data/spring-data-commons@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-data-commons-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-data-commons-4.1.1.jar:org/springframework/data/annotation/Id.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "58925e2c3fa880b2",
+            "purl": "pkg:maven/org.springframework.data/spring-data-jdbc-core@1.2.1.RELEASE",
+            "name": "spring-data-jdbc-core",
+            "version": "1.2.1.RELEASE"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.data/spring-data-jdbc-core@1.2.1.RELEASE",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-data-jdbc-core-1.2.1.RELEASE.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-data-jdbc-core-1.2.1.RELEASE.jar:org/springframework/data/jdbc/query/QueryDslJdbcTemplate.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "01164c9871912198",
+            "purl": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.1",
+            "name": "spring-data-jpa",
+            "version": "4.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-data-jpa-4.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-data-jpa-4.1.1.jar:org/springframework/data/jpa/support/package-info.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "801a94461d99a336",
+            "purl": "pkg:maven/org.springframework/spring-expression@7.0.9",
+            "name": "spring-expression",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-expression@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-expression-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-expression-7.0.9.jar:org/springframework/expression/AccessException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9424bebfb0e7b77d",
+            "purl": "pkg:maven/org.springframework/spring-jdbc@7.0.9",
+            "name": "spring-jdbc",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-jdbc@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-jdbc-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-jdbc-7.0.9.jar:org/springframework/jdbc/BadSqlGrammarException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "73859dc49cc9b116",
+            "purl": "pkg:maven/org.springframework/spring-orm@7.0.9",
+            "name": "spring-orm",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-orm@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-orm-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-orm-7.0.9.jar:org/springframework/orm/ObjectOptimisticLockingFailureException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "8ca7b2679b31ecb1",
+            "purl": "pkg:maven/org.springframework.samples/spring-petclinic-rest@4.0.2",
+            "name": "spring-petclinic-rest",
+            "version": "4.0.2"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.samples/spring-petclinic-rest@4.0.2",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:org/springframework/boot/loader/jar/JarEntriesStream$InputStreamSupplier.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "77236deb3e6f2e6b",
+            "purl": "pkg:maven/org.springframework.retry/spring-retry@1.0.3.RELEASE",
+            "name": "spring-retry",
+            "version": "1.0.3.RELEASE"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.retry/spring-retry@1.0.3.RELEASE",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-retry-1.0.3.RELEASE.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-retry-1.0.3.RELEASE.jar:org/springframework/retry/RetryStatistics.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "15711470aa23b8cb",
+            "purl": "pkg:maven/org.springframework.security/spring-security-config@7.1.1",
+            "name": "spring-security-config",
+            "version": "7.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.security/spring-security-config@7.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-security-config-7.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-security-config-7.1.1.jar:org/springframework/security/config/BeanIds.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "cc1298dbaa74349c",
+            "purl": "pkg:maven/org.springframework.security/spring-security-core@7.1.1",
+            "name": "spring-security-core",
+            "version": "7.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.security/spring-security-core@7.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-security-core-7.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-security-core-7.1.1.jar:org/springframework/security/access/AccessDeniedException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "f0408f1253238135",
+            "purl": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.1",
+            "name": "spring-security-crypto",
+            "version": "7.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-security-crypto-7.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-security-crypto-7.1.1.jar:org/springframework/security/crypto/argon2/Argon2EncodingUtils$Argon2Hash.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "63e88ed6b0931864",
+            "purl": "pkg:maven/org.springframework.security/spring-security-web@7.1.1",
+            "name": "spring-security-web",
+            "version": "7.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework.security/spring-security-web@7.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-security-web-7.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-security-web-7.1.1.jar:org/springframework/security/web/AuthenticationEntryPoint.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "6ff34a5e404d16f1",
+            "purl": "pkg:maven/org.springframework/spring-tx@7.0.9",
+            "name": "spring-tx",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-tx@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-tx-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-tx-7.0.9.jar:org/springframework/dao/CannotAcquireLockException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "26340272f82a9c8b",
+            "purl": "pkg:maven/org.springframework/spring-web@7.0.9",
+            "name": "spring-web",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-web@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-web-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-web-7.0.9.jar:org/springframework/http/CacheControl.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "5c84b17969bf96fe",
+            "purl": "pkg:maven/org.springframework/spring-webmvc@7.0.9",
+            "name": "spring-webmvc",
+            "version": "7.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springframework/spring-webmvc@7.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/spring-webmvc-7.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/spring-webmvc-7.0.9.jar:org/springframework/web/servlet/AsyncHandlerInterceptor.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "d41683ac7783680b",
+            "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-common@3.1.1",
+            "name": "springdoc-openapi-starter-common",
+            "version": "3.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springdoc/springdoc-openapi-starter-common@3.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/springdoc-openapi-starter-common-3.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/springdoc-openapi-starter-common-3.1.1.jar:org/springdoc/scalar/ScalarConstants.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "263f93c94f5a3e3e",
+            "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-api@3.1.1",
+            "name": "springdoc-openapi-starter-webmvc-api",
+            "version": "3.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-api@3.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/springdoc-openapi-starter-webmvc-api-3.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/springdoc-openapi-starter-webmvc-api-3.1.1.jar:org/springdoc/webmvc/core/providers/RouterFunctionWebMvcProvider.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "e030680c4eae0228",
+            "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-ui@3.1.1",
+            "name": "springdoc-openapi-starter-webmvc-ui",
+            "version": "3.1.1"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-ui@3.1.1",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/springdoc-openapi-starter-webmvc-ui-3.1.1.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/springdoc-openapi-starter-webmvc-ui-3.1.1.jar:org/springdoc/webmvc/ui/SwaggerWelcomeWebMvc.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "225d7fa36bc1bc5c",
+            "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.55",
+            "name": "swagger-annotations-jakarta",
+            "version": "2.2.55"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.55",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/swagger-annotations-jakarta-2.2.55.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/swagger-annotations-jakarta-2.2.55.jar:io/swagger/v3/oas/annotations/ExternalDocumentation.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "c3d70d095c11e501",
+            "purl": "pkg:maven/io.swagger.core.v3/swagger-core-jakarta@2.2.55",
+            "name": "swagger-core-jakarta",
+            "version": "2.2.55"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.swagger.core.v3/swagger-core-jakarta@2.2.55",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/swagger-core-jakarta-2.2.55.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/swagger-core-jakarta-2.2.55.jar:io/swagger/v3/core/converter/AnnotatedType.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "2193df82a202f555",
+            "purl": "pkg:maven/io.swagger.core.v3/swagger-models-jakarta@2.2.55",
+            "name": "swagger-models-jakarta",
+            "version": "2.2.55"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/io.swagger.core.v3/swagger-models-jakarta@2.2.55",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/swagger-models-jakarta-2.2.55.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/swagger-models-jakarta-2.2.55.jar:io/swagger/v3/oas/models/Components.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "9c84e27c5f9b13e9",
+            "purl": "pkg:maven/org.webjars/swagger-ui@5.32.14",
+            "name": "swagger-ui",
+            "version": "5.32.14"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.webjars/swagger-ui@5.32.14",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/swagger-ui-5.32.14.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/swagger-ui-5.32.14.jar:META-INF/resources/webjars/swagger-ui/5.32.14/favicon-16x16.png",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "b66eb6868b78c192",
+            "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.24",
+            "name": "tomcat-embed-core",
+            "version": "11.0.24"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.24",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/tomcat-embed-core-11.0.24.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/tomcat-embed-core-11.0.24.jar:jakarta/security/auth/message/AuthException.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "46da31be6356b0f3",
+            "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.24",
+            "name": "tomcat-embed-el",
+            "version": "11.0.24"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.24",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/tomcat-embed-el-11.0.24.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/tomcat-embed-el-11.0.24.jar:jakarta/el/ArrayELResolver.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "0972caf97f93d50b",
+            "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.24",
+            "name": "tomcat-embed-websocket",
+            "version": "11.0.24"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.24",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/tomcat-embed-websocket-11.0.24.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/tomcat-embed-websocket-11.0.24.jar:jakarta/websocket/ClientEndpoint.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "de31b926f458623e",
+            "purl": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9",
+            "name": "txw2",
+            "version": "4.0.9"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/txw2-4.0.9.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/txw2-4.0.9.jar:com/sun/xml/txw2/Attribute.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        },
+        {
+          "original": {
+            "id": "b6287fbeccea585c",
+            "purl": "pkg:maven/org.webjars/webjars-locator-lite@1.1.4",
+            "name": "webjars-locator-lite",
+            "version": "1.1.4"
+          },
+          "status": "BOUND",
+          "identity": "pkg:maven/org.webjars/webjars-locator-lite@1.1.4",
+          "path_layer": [
+            "/application/spring-petclinic-rest-4.0.2.jar/BOOT-INF/lib/webjars-locator-lite-1.1.4.jar",
+            "sha256:1d2342a44a2ab25cb5f329f9ef3deb240931dc49a11c3ab4c84dc3e8f2b4b58b"
+          ],
+          "observed_payload": {
+            "status": "confirmed",
+            "path": "/application/spring-petclinic-rest-4.0.2.jar:BOOT-INF/lib/webjars-locator-lite-1.1.4.jar:org/webjars/WebJarCache.class",
+            "error_type": null,
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          }
+        }
+      ],
+      "ignored_peer": [],
+      "scope": "Image inventory; no directness or runtime-use claim"
+    },
+    "supplemental": [],
+    "resource_counters": {
+      "copied_bytes": 0,
+      "ordinary_read_bytes": 0,
+      "index_bytes": 4713213,
+      "zip_entries": 43105,
+      "source_files": 0,
+      "nested_files": 107,
+      "class_witnesses": 108,
+      "resource_witnesses": 1,
+      "rejections": 0,
+      "zip_parse_entries": 87189,
+      "views": 109,
+      "read_cache_hits": 860,
+      "verification_read_bytes": 143843937,
+      "content_witness_hits": 0,
+      "nested_window_files": 107,
+      "nested_window_bytes": 71627801,
+      "range_cache_bytes": 4841223,
+      "range_cache_entries": 871,
+      "stored_crc_verifications": 107,
+      "directory_cache_entries": 109,
+      "directory_cache_evictions": 0,
+      "directory_cache_hits": 107,
+      "directory_charges": 109,
+      "budget_guard_counts": {},
+      "archive_hash_verifications": 0,
+      "archive_components_confirmed": 0,
+      "archive_crc_read_bytes": 0
+    },
+    "runtime_changed": false,
+    "producer": "trivy-java-archive-cataloger",
+    "archive_components": [],
+    "archive_identity_database": {
+      "sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+      "lookup": "exact full SHA1 association; not an independent Trivy identity source",
+      "publisher_authenticated": false,
+      "globally_unique_gav_proven": false
+    }
+  },
+  "jar_resources": {
+    "copied_bytes": 0,
+    "ordinary_read_bytes": 0,
+    "index_bytes": 4713213,
+    "zip_entries": 43105,
+    "source_files": 0,
+    "nested_files": 107,
+    "class_witnesses": 108,
+    "resource_witnesses": 1,
+    "rejections": 0,
+    "zip_parse_entries": 87189,
+    "views": 109,
+    "read_cache_hits": 860,
+    "verification_read_bytes": 143843937,
+    "content_witness_hits": 0,
+    "nested_window_files": 107,
+    "nested_window_bytes": 71627801,
+    "range_cache_bytes": 4841223,
+    "range_cache_entries": 871,
+    "stored_crc_verifications": 107,
+    "directory_cache_entries": 109,
+    "directory_cache_evictions": 0,
+    "directory_cache_hits": 107,
+    "directory_charges": 109,
+    "budget_guard_counts": {},
+    "archive_hash_verifications": 0,
+    "archive_components_confirmed": 0,
+    "archive_crc_read_bytes": 0
+  },
+  "layer_resources": {
+    "normalized_bytes": 213923328,
+    "metadata_cost": 380502,
+    "headers": 356,
+    "payload_read_bytes": 4841223,
+    "normalizations": 2
+  }
+}

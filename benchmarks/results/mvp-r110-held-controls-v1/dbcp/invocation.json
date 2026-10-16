@@ -1,0 +1,19 @@
+{
+  "name": "dbcp",
+  "pair": "paired-commons-dbcp-v1",
+  "archive": "benchmarks/.work/paired-commons-dbcp-v1/image.tar",
+  "observed_producer_catalog": "benchmarks/.work/paired-commons-dbcp-v1/analysis/image.syft.json",
+  "image": "docker.io/library/sbom-held-control@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64",
+  "previously_observed_manifest_digest": "sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64",
+  "previously_observed_config_digest": "sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be",
+  "archive_sha256": "375868a394590deb7c425cf7c2cbff66d60b04567f82d9369b7ce377c267de32",
+  "repository_url": null,
+  "commit": null,
+  "source_input": false,
+  "project_execution": false,
+  "oracle_read": false,
+  "fresh_scanners": true,
+  "fresh_physical_reads": true,
+  "java_archive_components_default": true,
+  "java_archive_components_override_supplied": false
+}

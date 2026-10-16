@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 120.445,
+  "java_nested_windows": false,
+  "java_archive_components": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-delivered-archive-v7",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 1
+    },
+    "unknown_groups": {
+      "image_evidence": 1
+    },
+    "source_count": 0,
+    "image_count": 253,
+    "selected_count": 252,
+    "final_count": 109,
+    "os_count": 143,
+    "full_count": 252,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 252,
+      "UNKNOWN": 1
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 8.281
+  },
+  "source_kind": "not-provided",
+  "java_image_status": "corroborated",
+  "language": "java",
+  "declared_type_witnesses": {},
+  "image_config_digest": "sha256:9bfafd9d53c375adee38bb2641013f1be503c1157de26bba79934921cf870988",
+  "output_hashes": {
+    "coverage.json": "2be2ca665a3288a4ac9f3bf2c4bc28238c82b1af40ed03828792cd1f79a182f0",
+    "decisions.json": "e76b21742f78d3877377f3e6f60302f3d989a7266a104527bec80c85df0b7206",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "78adfab928a485874dcd11324e87fcc561f360941d64736e320771d0bd74b29e",
+    "full.cdx.json": "8c1cbba9760ad7a923ead147ad84d27046edd5b5f66afe11522c52e4b914cc40",
+    "image-identity-audit.json": "b96cd97445ff635ecd2ab147ffd952bcb51819cc133e8c948d2b3dc0dd73140e",
+    "image-original.syft.json": "05100163c83aa14a560bfdf2b39cb37c86546f5dc58b4a4859569fd61806790b",
+    "image-peer.cdx.json": "99854994a2949083a540c0b78d46b30f9ae77ac4977c9ff71f4ed03ff46dc915",
+    "image.syft.json": "8cf42df14923958cd308c000de184d8bcf9d6a8a8575034b2cb7a09e4636118f",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "5af1f6fe97c041ccd3b8c7c06d1047ca9d8f474c7361eafba4c18c1b72f17caf",
+    "provenance.json": "4e4d25ff887424fab1d82c3b521f979042794337fd16e68991edc2cea1cfcbc4",
+    "review.json": "15e131f27085168ca9ec684a15ce33139457344e06521af5ec58dba3d9438245",
+    "selected.syft.json": "f717675f10951b80c9618d4d115f28ec50a4a59d14478d9548de889aba1940a7",
+    "source.syft.json": "c5e70d27da1e96e702ca7cd3e4444cdfedb06b4da5b33d289d4fb9293ca3dce4",
+    "summary.json": "786238453d2ed258ac7ebd0db79196a428138140ef71a6c62d57242289fb40fd"
+  }
+}

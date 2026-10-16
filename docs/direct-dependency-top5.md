@@ -1,5 +1,14 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
+## R110 default image-first component MVP
+
+Java verified-archive v7 is now default, REST104/3/2+DBCP3/0/0 fresh actual pipelines
+pass component thresholds; JS307/9/0 R109 accuracy preserved by12R110cached actual
+publications. Full inventory/payload/identity/provenance retained. Java638/JS103
+image-only direct edges UNKNOWN/FN; no edge is inferred from delivered presence.
+Optional cdxgen source environment remains separate, no direct ranking change.
+Known-delivered and opaque/shaded scope limits stay explicit in the [report](java-js-service-accuracy.md).
+
 ## R109 current component MVP status
 
 JS fresh image-only no-lock runtime307/9/0,P97.15/R100; direct0/0/103 UNKNOWN

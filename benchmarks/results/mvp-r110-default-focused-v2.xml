@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="16" time="4.145" timestamp="2026-10-16T11:33:58.892245+05:00" hostname="DESKTOP-7VTP4IJ"><testcase classname="tests.test_java_archive_default" name="test_archive_components_are_release_default_in_dataclass_and_environment" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_can_select_explicit_legacy_rollback[true-True]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_can_select_explicit_legacy_rollback[TRUE-True]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_can_select_explicit_legacy_rollback[false-False]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_can_select_explicit_legacy_rollback[FALSE-False]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[1]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[yes]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[auto]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[enabled]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_archive_component_environment_rejects_ambiguous_values[ true ]" time="0.001" /><testcase classname="tests.test_java_archive_default" name="test_default_setting_reaches_actual_reader_and_identity_gate_without_fake_payload[None-True]" time="0.048" /><testcase classname="tests.test_java_archive_default" name="test_default_setting_reaches_actual_reader_and_identity_gate_without_fake_payload[true-True]" time="0.035" /><testcase classname="tests.test_java_archive_default" name="test_default_setting_reaches_actual_reader_and_identity_gate_without_fake_payload[false-False]" time="0.033" /><testcase classname="tests.test_java_archive_default" name="test_malformed_sqlite_preserves_raw_inventory_and_publishes_partial_safe_final" time="2.495"><failure message="sbom_creator.pipeline.AnalysisError: reconcile_convert_validate failed (ValueError)">real_catalogs = ({'artifacts': [{'id': 'f5c38f60c6f88a1a', 'name': 'kept-package', 'version': '1.2.3', 'type': 'python', ...}, {'id': ...4304, max_sbom_bytes=67108864, max_checkout_bytes=2147483648, max_archive_bytes=8589934592, max_checkout_files=250000))
+tmp_path = WindowsPath('C:/Users/prince74/AppData/Local/Temp/pytest-of-prince74/pytest-1033/test_malformed_sqlite_preserve0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001F9A1E9F650&gt;
+
+    def test_malformed_sqlite_preserves_raw_inventory_and_publishes_partial_safe_final(
+            real_catalogs, tmp_path, monkeypatch):
+        source, valid_image, baseline_settings = real_catalogs
+        image = copy.deepcopy(valid_image)
+        image['artifacts'].append(_java_artifact())
+        java = image['artifacts'][-1]
+        expected_python = next(a for a in image['artifacts'] if a['name'] == 'kept-package')
+        physical = {a['id']: {'status': 'unconfirmed', 'path': None} for a in image['artifacts']}
+        physical[expected_python['id']] = {'status': 'confirmed', 'path': '/delivered/kept-package.py'}
+        bad_db = tmp_path / 'public-java.db'
+        bad_db.write_bytes(b'SQLite format 3\0' + b'\0' * 256)
+        pin = digest(bad_db)
+    
+        def malformed_public_cache(*args):
+            # Real failure in the new default's DB constructor, after peer success.
+            # It must be caught by the scanner's optional Java boundary, not leaked.
+            PublicJavaHashLookup(bad_db, pin)
+            raise AssertionError('The malformed SQLite file must not be accepted')
+    
+        monkeypatch.setattr(scanner, '_syft', lambda *args, **kwargs: copy.deepcopy(image))
+        monkeypatch.setattr(scanner, '_image_identity', lambda *args: {
+            'immutable_reference': 'example.com/app@sha256:' + 'a' * 64,
+            'image_config_digest': 'sha256:' + 'b' * 64})
+        monkeypatch.setattr(scanner, 'collect_payload', lambda *args: copy.deepcopy(physical))
+        monkeypatch.setattr(runtime, 'analyze', malformed_public_cache)
+        settings = replace(baseline_settings, registry_hosts=('example.com',), java_archive_components=True)
+        acquired, provenance = scanner.scan_image('example.com/app@sha256:' + 'a' * 64,
+                                                  tmp_path / 'raw-image.json', settings)
+        assert {a['id'] for a in acquired['artifacts']} == {a['id'] for a in image['artifacts']}
+        assert provenance['java_image_status'] == 'UNKNOWN'
+        assert provenance['java_image_error_type'] == 'DatabaseError'
+        assert provenance['payload_evidence'] == physical
+        assert not provenance.get('identity_binding_envelope')
+        assert 'database disk image' not in json.dumps(provenance)
+        empty_source = copy.deepcopy(source)
+        empty_source['artifacts'] = []
+        empty_source['artifactRelationships'] = []
+        output = tmp_path / 'partial-final'
+        # Use the real pinned converter and service publisher; only unconfirmed Java
+        # stays out of the final, while its original observation remains in raw.
+&gt;       summary = publish_catalogs(empty_source, acquired, output, settings, core.rules_assessor,
+                                   {'source_kind': 'not-provided', 'image': provenance})
+
+tests\test_java_archive_default.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = {'artifacts': [], 'artifactRelationships': [], 'files': [{'id': 'e431c8b290e3f69e', 'location': {'path': '\\requiremen...al\\Temp\\pytest-of-prince74\\pytest-1033\\real-syft-fixtures0\\source', 'version': '', 'type': 'directory', ...}, ...}
+image = {'artifacts': [{'id': 'f54eabe9a110dd52', 'name': 'excluded-package', 'version': '7.8.9', 'type': 'python', ...}, {'id...test-of-prince74\\pytest-1033\\real-syft-fixtures0\\image-root-fixture', 'version': '', 'type': 'directory', ...}, ...}
+output = WindowsPath('C:/Users/prince74/AppData/Local/Temp/pytest-of-prince74/pytest-1033/test_malformed_sqlite_preserve0/partial-final')
+settings = Settings(bitbucket_hosts=(), registry_hosts=('example.com',), git_binary='git', syft_binary='G:\\code\\sbom_creator\\....94304, max_sbom_bytes=67108864, max_checkout_bytes=2147483648, max_archive_bytes=8589934592, max_checkout_files=250000)
+assessor = &lt;function rules_assessor at 0x000001F9A1564720&gt;
+provenance = {'source_kind': 'not-provided', 'image': {'immutable_reference': 'example.com/app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaa.../kept-package.py'}, 'unconfirmed-java': {'status': 'unconfirmed', 'path': None}}, 'java_image_status': 'UNKNOWN', ...}}
+npm_manifest = None, python_manifest = None, java_report = None
+
+    def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None, java_report=None):
+        try:
+            return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest, python_manifest, java_report)
+        except FileExistsError:
+            raise
+        except Exception as error:  # noqa: BLE001 -- safe diagnostic boundary
+            target = diagnostic(output, "reconcile_convert_validate", error)
+            write_json(target / "source.syft.json", source)
+            write_json(target / "image.syft.json", image)
+            write_json(target / "provenance.json", provenance or {})
+&gt;           raise AnalysisError("reconcile_convert_validate", type(error).__name__) from None
+E           sbom_creator.pipeline.AnalysisError: reconcile_convert_validate failed (ValueError)
+
+src\sbom_creator\pipeline.py:260: AnalysisError</failure></testcase><testcase classname="tests.test_java_archive_default" name="test_plain_npm_does_not_require_java_tools_or_database_with_default_enabled" time="0.012" /></testsuite></testsuites>

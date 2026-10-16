@@ -1589,3 +1589,43 @@ R109 runtime `9010f31` pushed. Lossless evidence:317 JSON,705,873,680 raw bytes,
 SHA256 `5d7576fdf6be0301a2090bdc4b5742f72c014ec58d1ed1779581cfb80ce6c507`;
 `python benchmarks/package_mvp_r109.py restore/verify`. Source binding46 exact/1 CRLF-LF only;
 не менять frozen snapshots. Старые R105–R108 manifests сохранены.
+
+
+## R110 — adopt verified Java archive components as release default, 2026-10-16
+
+Settings/archive true and .env true, nested selector false; old explicitfalse
+rollback retainsv4/v6. No reader/identity algorithm tuning or foreign build recipes.
+Fresh serial image-only REST104/3/2 P97.196/R98.113,DBCP3/0/0 all100;6publishedviews
+before post-only oracle. Held-from-recent-tuning, historically disclosed, not blind.
+Bothcontrols metadata-only proofs0; disclosedR108201proof axis remainsseparate.
+REST26.938s,DBCP7.516s. Combinedknown-delivered6repos59owners3862/20/18,
+P99.4848/R99.5361/F199.5104, conditionalversions99.9482, delta+2;4previousR108/R109
+measurements carried explicitly. Opaque/shaded completeness UNKNOWN,47/56reactor
+archive scopescomplete; no universal acceptance claim. Direct638Java/103JSUNKNOWN.
+
+Actual installed default RC mvp-r110 configsha256:e7ad622093c917aecc4d8c7e3094286e54c485c91566a5462b6d7c95d9be423f,
+REST120.445s/container122.469s/build32.078s,47installed hashes exact,noJavaENVoverrides,
+nonroot/readonly/networknone/nosocket/source/reference/secrets3GiB2CPU.16exports
+verified; all3coords109/143/252 equalWindows,109nonOSIDs/payload equal;143OSIDsdiffer.
+Raw258Windows/253Linux,unknown6/1 preservedseparate;causeUNKNOWN, norescan/filter.
+
+sqlite3.Error added to scanner gracefulboundary: malformedpublicDBUNKNOWN preserves
+raw/nonJava+3validviews without raw inclusion. Selector/error/pureNode tests added.
+Compose3g/K8s3Gi32Giworkspace40Giephemeral examples parsed only, no deployment.
+ColdDBdownload/recovery/hardquota/concurrency not accepted. R11012cachedJS real
+publications80.797s preserve36views/12IDsets/alltypefacts vsfreshR109307/9/0;
+notnewscanneraccuracy/Chalklockingfix.
+
+Original controlfreeze69entries includes22generatedPYC aftersnapshotimport;preflight
+negative preserved.47source plus22inertbase64bytecode archived/validated independently;
+future runner sourcefreeze BEFOREimports. No attempts/snapshots overwritten.
+
+R110 runtime `30902eb` pushed;803tests passed/3skips/Ruff/schema/freezechecks.
+Commit binding44exact/3CRLF-LF-only,47actualinstalled bytes exactexecutedfreeze.
+First focused/fullsuite failures were fixture missingaccessPath/mockSyftconversion,
+retained separately; finalfullsuite620pass3skip +183benchmarkpass.
+
+R110 losslesspack250JSON248,951,489rawB ->25,955,415BJSON+gzip86uniqueobjects;
+manifestSHA2b2221eefc2dedfce13185c55c2f9fba8e2a36e962e0952e0586d1e7ea56a03a.
+`python benchmarks/package_mvp_r110.py restore/verify`, originals retainedlocal,
+R105–R109manifests unchanged.

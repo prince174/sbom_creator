@@ -1,0 +1,11 @@
+{
+  "compose_config": "PASS using .env.example in stdin-only copy; actual compose remains .env",
+  "kubernetes_yaml": "parsed; not cluster applied",
+  "first_compose_check": "FAILED missing local .env; no service launched",
+  "deployments_changed": false,
+  "sha256": {
+    "compose.yaml": "94794e959535014cd30b4e911a1c80ca1607639fa21d2eac51c174c9a17f50eb",
+    "deploy/kubernetes.yaml": "db1e0e50edafb3d9486f83bc64d3cda0e0e7bf3207fc898946b704430303a2dc",
+    ".env.example": "c05e2cc1334424d2def5300cb5cd46846116aa32893d944034a5228f1d384e6a"
+  }
+}

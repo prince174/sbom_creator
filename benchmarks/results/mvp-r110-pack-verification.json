@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "pack_command": ".\\.venv\\Scripts\\python.exe benchmarks/package_mvp_r110.py pack",
+  "verify_command": ".\\.venv\\Scripts\\python.exe benchmarks/package_mvp_r110.py verify",
+  "statistics": {
+    "files": 250,
+    "large_json_files": 87,
+    "unique_gzip_files": 86,
+    "original_bytes": 248951489,
+    "tracked_json_and_gzip_bytes": 25955415,
+    "manifest": "benchmarks/results/mvp-r110-evidence-manifest.json",
+    "originals_modified_or_deleted": false
+  },
+  "manifest_sha256": "2b2221eefc2dedfce13185c55c2f9fba8e2a36e962e0952e0586d1e7ea56a03a",
+  "package_helper_sha256": "a9cbedc352142017db58724336d260e76ea3e25ed450fc5f95256b4ebac91944",
+  "source_binding_sidecar_included": true,
+  "namespace_count": 4,
+  "old_manifest_sha256_verified_against_committed_HEAD": {
+    "benchmarks/results/mvp-r105-evidence-manifest.json": "419020c52f1a912c806ee86888c4aa0ddb73e59f32cc47b8109e1c3463a27f44",
+    "benchmarks/results/mvp-r106-evidence-manifest.json": "b79919629a0c6a9ff4e03c535b0dd1dc0ca1c66bc434e8607f7b1670165773bf",
+    "benchmarks/results/mvp-r107-evidence-manifest.json": "effdcdcdb55815b14156fb8ff0251ab53c86f2f6efcc52a3e530c7f9afef0d43",
+    "benchmarks/results/mvp-r108-evidence-manifest.json": "5a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d",
+    "benchmarks/results/mvp-r109-evidence-manifest.json": "5d7576fdf6be0301a2090bdc4b5742f72c014ec58d1ed1779581cfb80ce6c507"
+  },
+  "old_gitignore_rules_preserved_exactly": true,
+  "originals_modified_or_deleted": false,
+  "container_non_json_exports": "Separately hashed .gz container exports are additional to JSON-pack totals; preserved",
+  "docs_review": {
+    "source_sha256": {
+      "docs\\java-js-service-accuracy.md": "894ac0c050c228f537585818095a9a1fafa23b6c339f9b8208e81a2d32e652d7",
+      "docs\\java-js-top3.md": "e852295da2ba422235dfa0bbb010b90217115e6ecb30755962ca63e2e811d1d0",
+      "docs\\direct-dependency-top5.md": "6f5be4886e379d42609e6114e8cd02c6c3747a07ff9227defee1cd5df8d64878",
+      "docs\\direct-dependency-experiments.md": "385f11f74a62567e5898f9e02ee4891afec03f26c612fb3f1cb32d3f56d270ab"
+    },
+    "java_prior_four_plus_current_two_measurements_explicit": true,
+    "metadata_only_archive_proofs_zero_in_new_controls_explicit": true,
+    "known_delivered_and_opaque_shaded_scope_limits_explicit": true,
+    "rc_default_true_without_env_override_explicit": true,
+    "partial_os_ids_and_raw_observation_parity_explicit": true,
+    "js_current_accuracy_r109_and_r110_cached_regression_distinguished": true,
+    "deploy_examples_not_applied_or_certified_explicit": true,
+    "blocking_factual_issue_found": false
+  },
+  "source_or_runtime_modified_by_this_pack_review": false
+}

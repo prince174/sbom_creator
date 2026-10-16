@@ -1,0 +1,172 @@
+{
+  "status": "RECORDED_RAW_DIFFERENCES",
+  "reference_accessed": false,
+  "fresh_scans_performed_by_this_audit": false,
+  "predictions_or_parity_modified": false,
+  "rows": {
+    "linux": {
+      "raw_scanner_artifacts": 253,
+      "selected_artifacts": 252,
+      "final_os_full": [
+        109,
+        143,
+        252
+      ],
+      "unknown_decision_groups": 1,
+      "unknown_reasons": {
+        "INSUFFICIENT_IMAGE_EVIDENCE": 1
+      },
+      "cataloger_counts": {
+        "java-archive-cataloger": 109,
+        "dpkg-db-cataloger": 143,
+        "java-jvm-cataloger": 1
+      }
+    },
+    "windows": {
+      "raw_scanner_artifacts": 258,
+      "selected_artifacts": 252,
+      "final_os_full": [
+        109,
+        143,
+        252
+      ],
+      "unknown_decision_groups": 6,
+      "unknown_reasons": {
+        "INSUFFICIENT_IMAGE_EVIDENCE": 6
+      },
+      "cataloger_counts": {
+        "java-archive-cataloger": 109,
+        "dpkg-db-cataloger": 143,
+        "binary-classifier-cataloger": 5,
+        "java-jvm-cataloger": 1
+      }
+    }
+  },
+  "raw_identity_fingerprint_multiset_equal": false,
+  "linux_only_raw_fingerprints": [],
+  "windows_only_raw_fingerprints": [
+    "{\"foundBy\":\"binary-classifier-cataloger\",\"name\":\"bash\",\"purl\":\"pkg:generic/bash@5.1.16\",\"type\":\"binary\",\"version\":\"5.1.16\"}",
+    "{\"foundBy\":\"binary-classifier-cataloger\",\"name\":\"curl\",\"purl\":\"pkg:generic/curl@7.81.0\",\"type\":\"binary\",\"version\":\"7.81.0\"}",
+    "{\"foundBy\":\"binary-classifier-cataloger\",\"name\":\"gzip\",\"purl\":\"pkg:generic/gzip@1.10\",\"type\":\"binary\",\"version\":\"1.10\"}",
+    "{\"foundBy\":\"binary-classifier-cataloger\",\"name\":\"openssl\",\"purl\":\"pkg:generic/openssl@3.0.2\",\"type\":\"binary\",\"version\":\"3.0.2\"}",
+    "{\"foundBy\":\"binary-classifier-cataloger\",\"name\":\"util-linux\",\"purl\":\"pkg:generic/util-linux@2.37.2\",\"type\":\"binary\",\"version\":\"2.37.2\"}"
+  ],
+  "linux_only_raw_observations": [],
+  "windows_only_raw_observations": [
+    {
+      "id": "e24b843c3ae58791",
+      "type": "binary",
+      "foundBy": "binary-classifier-cataloger",
+      "purl": "pkg:generic/bash@5.1.16",
+      "name": "bash",
+      "version": "5.1.16",
+      "locations": [
+        {
+          "path": "/usr/bin/bash",
+          "layerID": "sha256:cbaf391e670933f026c05c7dedec3faf8f194b6c2d83b0d5694ad68323c8077c",
+          "accessPath": "/usr/bin/bash",
+          "annotations": {
+            "evidence": "primary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a08b6f3217eac6c2",
+      "type": "binary",
+      "foundBy": "binary-classifier-cataloger",
+      "purl": "pkg:generic/curl@7.81.0",
+      "name": "curl",
+      "version": "7.81.0",
+      "locations": [
+        {
+          "path": "/usr/bin/curl",
+          "layerID": "sha256:df69676f653a5e818bc4e66e27840525ad9b7954d117bed99fcdcf82fefd4bb6",
+          "accessPath": "/usr/bin/curl",
+          "annotations": {
+            "evidence": "primary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "42883ede1982f875",
+      "type": "binary",
+      "foundBy": "binary-classifier-cataloger",
+      "purl": "pkg:generic/gzip@1.10",
+      "name": "gzip",
+      "version": "1.10",
+      "locations": [
+        {
+          "path": "/usr/bin/gzip",
+          "layerID": "sha256:cbaf391e670933f026c05c7dedec3faf8f194b6c2d83b0d5694ad68323c8077c",
+          "accessPath": "/usr/bin/gzip",
+          "annotations": {
+            "evidence": "primary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "776d29b9182d4f83",
+      "type": "binary",
+      "foundBy": "binary-classifier-cataloger",
+      "purl": "pkg:generic/openssl@3.0.2",
+      "name": "openssl",
+      "version": "3.0.2",
+      "locations": [
+        {
+          "path": "/usr/bin/openssl",
+          "layerID": "sha256:df69676f653a5e818bc4e66e27840525ad9b7954d117bed99fcdcf82fefd4bb6",
+          "accessPath": "/usr/bin/openssl",
+          "annotations": {
+            "evidence": "primary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6e40aa9a5ab03f91",
+      "type": "binary",
+      "foundBy": "binary-classifier-cataloger",
+      "purl": "pkg:generic/util-linux@2.37.2",
+      "name": "util-linux",
+      "version": "2.37.2",
+      "locations": [
+        {
+          "path": "/usr/bin/getopt",
+          "layerID": "sha256:cbaf391e670933f026c05c7dedec3faf8f194b6c2d83b0d5694ad68323c8077c",
+          "accessPath": "/usr/bin/getopt",
+          "annotations": {
+            "evidence": "primary"
+          }
+        }
+      ]
+    }
+  ],
+  "selected_component_coordinate_parity": {
+    "final": true,
+    "os": true,
+    "full": true
+  },
+  "selected_os_artifact_ids_equal": false,
+  "non_os_selected_artifact_ids_equal": true,
+  "cause": "UNKNOWN; no attribution from counts or repeated scans",
+  "inputs": {
+    "linux": {
+      "image-original.syft.json": "05100163c83aa14a560bfdf2b39cb37c86546f5dc58b4a4859569fd61806790b",
+      "summary.json": "786238453d2ed258ac7ebd0db79196a428138140ef71a6c62d57242289fb40fd",
+      "review.json": "15e131f27085168ca9ec684a15ce33139457344e06521af5ec58dba3d9438245",
+      "selected.syft.json": "f717675f10951b80c9618d4d115f28ec50a4a59d14478d9548de889aba1940a7"
+    },
+    "windows": {
+      "image-original.syft.json": "f9536a55a8c1f937d9b61e39385a8dd23c4cad2dd21e4950a79d99ae0249c14a",
+      "summary.json": "6dd5287d004e885f0bf822c33d5e7bd8e4a48046b5d22f3f05244223d6ef2a06",
+      "review.json": "68de1a5df90304e7477a2e91670626f24800ef42dfec75d6ae3278796dc26563",
+      "selected.syft.json": "3baf761791b664a7f40ab2d44b0244584507ec8ece9f7f0ce2b4391e7b6a7f40"
+    }
+  },
+  "parity_sha256": "cfe56a9c431bc94c98e2695c786e66e28b536b6446bd73ca7792b9fb0b744fd5",
+  "audit_script_sha256": "7d27e9953545df8a90260199c818367539f881f262ad7ed151c9ae121d4c6612",
+  "scope": "Raw package observation parity is separate from delivered-component coordinate parity and accuracy"
+}

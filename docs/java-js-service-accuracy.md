@@ -1,4 +1,101 @@
-# Java / JavaScript: actual service accuracy — R109, 2026-10-16
+# Java / JavaScript: image-first service release candidate — R110, 2026-10-16
+
+**Java v7 принят как default самого сервиса.** `Settings.java_archive_components=True`,
+`.env.example` true; Docker image не подставляет скрытый включающий flag. Обратный
+переход явный: archive=false/nested=false →v4, archive=false/nested=true →v6.
+Существующий пользовательский `.env=false` остаётся override; deployments не менялись.
+Image-only — полноценный API/CLI вход; исходники/cdxgen остаются необязательными.
+
+| Язык / измеренная область | TP / FP / FN | Precision | Recall / exact-version coverage | F1 | Delta |
+|---|---:|---:|---:|---:|---:|
+| Java,6 repositories/59 known owner sets |3862/20/18|99.4848%|99.5361%|99.5104%|+2|
+| JS,12 image-only no-lock cases/8 positive roots |307/9/0|97.1519%|100%|98.5554%|+9|
+
+Java aggregate объединяет **новые R110 controls** и прежние четыре R108 predictions
+с R109 independently packaged scoring; это не6 новых scans. Java repository macro
+P98.8317/R99.0954/F198.9626, conditional versions99.9482%. JS macro восьми positive
+roots P93.4808/R100/F196.1372, conditional versions100%;4 пустых корня не успехи.
+JS accuracy —12 fresh R109 scans, R110 даёт только cached publisher regression.
+[Sealed combined report](../benchmarks/results/mvp-r110-summary-v1/report.json).
+
+## Новые Java controls на release defaults
+
+| Existing immutable image | TP / FP / FN | P / R / F1 | Exact versions / conditional | Fresh pipeline |
+|---|---:|---:|---:|---:|
+| Petclinic REST |104/3/2|97.196/98.113/97.653%|98.113/99.048%|26.938s|
+| Commons DBCP |3/0/0|100/100/100%|100/100%|7.516s|
+
+Это serial fresh Syft1.51.1+Trivy0.75.0+physical reader+actual publisher, без source,
+reference/build cache или пересборки. Code/inputs/tools/DB frozen до prediction;
+все6 final/os/full sealed до post-only evaluator. Контроли ранее раскрыты, но не
+использовались для последних reader/identity настроек; это **не fresh blind samples**.
+Новые controls не содержат metadata-only archive proofs. Этот axis по-прежнему
+подкреплён disclosed R108 Micro/Drop201proofs и security tests, не независимой
+новой metadata-only выборкой. Reader/identity алгоритмы R108 не менялись при adoption.
+[Controls and reference bindings](../benchmarks/results/mvp-r110-held-controls-v1/README.md).
+
+REST: known packaged106, raw build reference121. Raw build recall85.95% сохранён
+рядом;15 отсутствующих build artifacts не объявляются ошибками image inventory.
+Hibernate wrong namespace/models-version и packaging-added jarmode UNKNOWN не
+исключены ради процента. DBCP own-primary exclusion подтверждён отдельно реальными
+SHA/effective/native/CDX/canonical properties/immutable copy recipe.
+
+## Проверка сборки, отказов и регрессий
+
+Installed `sbom-creator:mvp-r110`, config ID
+`sha256:e7ad622093c917aecc4d8c7e3094286e54c485c91566a5462b6d7c95d9be423f`:
+actual default REST pipeline120.445s/container122.469s/build32.078s.47 installed
+hashes совпали с executed freeze, оба reader ENV overrides отсутствовали;
+archive=true/nested=false/policyv7 получены из самого приложения. UID10001,
+read-only/network-none/no socket/source/reference/secrets,3GiB/2CPU,16 exports verified.
+Все3 coordinate multisets равны Windows109/143/252,109non-OS IDs/payload равны.
+Parity остаётся PARTIAL:143OS IDs различаются, raw inventory258Windows/253Linux и
+UNKNOWN6/1. Причина дополнительных5 binary-classifier observations не установлена;
+ничего не фильтровалось/пересканировалось ради равенства. R109 systemd OS delta
+также сохранён. [Installed report](../benchmarks/results/mvp-r110-container-v1/README.md).
+
+Повреждённая SQLite Java DB раньше могла выбросить DatabaseError мимо graceful
+boundary. Теперь original inventory/nonJava факты сохраняются, Java UNKNOWN,
+три валидных SBOM публикуются без подстановки неподтверждённых raw packages.
+Новые selector/fault tests проверяют настоящий reader/gate/converter, explicit
+rollback и pure Node без Java tool/DB вызовов. Compose example3g, Kubernetes example
+3Gi/32Giworkspace/40Gi ephemeral storage; это configuration examples, не cluster
+capacity certification или применение к deployment. Cold download/recovery,
+hard quota и parallel-job acceptance остаются отдельными ограничениями.
+
+R110 JS cached12 publisher/converter regressions80.797s: все36views/12IDsets/
+payload/type facts равны R109. Никаких scanner/source/acquisition/oracle calls;
+исторический Chalk FAILED не переименован в исправленный locking bug.
+[JS regression](../benchmarks/results/mvp-r110-js-publish-v1/README.md).
+
+Original R110 control freeze включил22 generated PYC рядом с47source/schema files;
+preflight отказ сохранён. Все69 hashes проверены, инертные PYC bytes сохранены
+losslessly отдельно; portable verification не исполняет их,47source обязательны.
+Future runner замораживает source до imports. Frozen attempts не перезаписывались.
+
+803 tests passed,3 skipped; Ruff/schema/freeze/negative checks прошли. Runtime
+commit `30902eb` pushed. Git binding44byte-exact/3CRLF-LF-only к executed snapshot;
+все47installed bytes совпадают с frozen source. Frozen originals не нормализованы.
+Первый fullsuite/focused tests отказал из-за тестового location/mock conversion;
+негативные XML сохранены, финальный полный suite прошёл.
+
+R110 evidence:250JSON/248,951,489raw bytes, losslessJSON+gzip25,955,415bytes/86uniquegzip.
+Manifest SHA256`2b2221eefc2dedfce13185c55c2f9fba8e2a36e962e0952e0586d1e7ea56a03a`.
+`python benchmarks/package_mvp_r110.py restore/verify`; originals локально сохранены,
+старые R105–R109 manifests не изменены.
+
+## Практическая граница MVP
+
+Режим с высокой измеренной точностью теперь включён в release configuration,
+а не спрятан за opt-in. Метрики относятся к **известным поставленным компонентам**:
+archive scope завершён47/56 reactor owners, opaque/shaded completeness остаётся
+UNKNOWN. Не заявляется универсальный recall или подлинность издателя. Axios/Pino/
+Fastify реальные fixture units остаются conservative FP по dependency reference;
+Axios project precision по-прежнему ниже90. Image-only direct638Java/103JS UNKNOWN/FN
+не смешивается с component accuracy и не блокирует этот component MVP. Неизвестный
+TeamCity recipe не мешает выдаче image SBOM.
+
+## Historical R109, 2026-10-16
 
 Два разных результата: **новое runtime-исправление JS**, проверенное свежими scans,
 и **новая post-only packaged-SHA оценка Java** на неизменённых frozen R108 finals.

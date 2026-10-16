@@ -1,0 +1,190 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.52kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for gcr.io/go-containerregistry/crane:v0.22.1@sha256:1f968817b95790bed063f71175aa6b8ff879fa17064020415f3e18bb6e6a36e1
+#2 DONE 0.9s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm@sha256:782412e85d0f0984994c290652577d4018aff08145c85b262bb63dc0c7522254
+#3 DONE 1.8s
+
+#4 [internal] load metadata for docker.io/aquasec/trivy:0.75.0@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa
+#4 ...
+
+#5 [internal] load metadata for docker.io/library/docker:28-cli@sha256:625d9431a9f54c5a2bc90f24f0e1c3d55b1349fd857dd85035f98c2c9acbdd4d
+#5 DONE 1.8s
+
+#6 [internal] load metadata for docker.io/anchore/syft:v1.51.1@sha256:95fe0835e5bebc6f8b1f8acef68d47d63d594ef4c0f25c097ff853b23cbac74c
+#6 ...
+
+#4 [internal] load metadata for docker.io/aquasec/trivy:0.75.0@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa
+#4 DONE 3.0s
+
+#6 [internal] load metadata for docker.io/anchore/syft:v1.51.1@sha256:95fe0835e5bebc6f8b1f8acef68d47d63d594ef4c0f25c097ff853b23cbac74c
+#6 DONE 3.0s
+
+#7 [internal] load .dockerignore
+#7 transferring context: 84B done
+#7 DONE 0.0s
+
+#8 [crane 1/1] FROM gcr.io/go-containerregistry/crane:v0.22.1@sha256:1f968817b95790bed063f71175aa6b8ff879fa17064020415f3e18bb6e6a36e1
+#8 resolve gcr.io/go-containerregistry/crane:v0.22.1@sha256:1f968817b95790bed063f71175aa6b8ff879fa17064020415f3e18bb6e6a36e1 0.1s done
+#8 DONE 0.1s
+
+#9 [stage-4  1/11] FROM docker.io/library/python:3.12-slim-bookworm@sha256:782412e85d0f0984994c290652577d4018aff08145c85b262bb63dc0c7522254
+#9 resolve docker.io/library/python:3.12-slim-bookworm@sha256:782412e85d0f0984994c290652577d4018aff08145c85b262bb63dc0c7522254 0.1s done
+#9 DONE 0.1s
+
+#10 [dockercli 1/1] FROM docker.io/library/docker:28-cli@sha256:625d9431a9f54c5a2bc90f24f0e1c3d55b1349fd857dd85035f98c2c9acbdd4d
+#10 resolve docker.io/library/docker:28-cli@sha256:625d9431a9f54c5a2bc90f24f0e1c3d55b1349fd857dd85035f98c2c9acbdd4d 0.1s done
+#10 DONE 0.1s
+
+#11 [trivy 1/1] FROM docker.io/aquasec/trivy:0.75.0@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa
+#11 resolve docker.io/aquasec/trivy:0.75.0@sha256:af6acf9a6b85dfe389a1941505c0ce9efef52a4719635e1a962f022a3d855daa 0.1s done
+#11 DONE 0.1s
+
+#12 [syft 1/1] FROM docker.io/anchore/syft:v1.51.1@sha256:95fe0835e5bebc6f8b1f8acef68d47d63d594ef4c0f25c097ff853b23cbac74c
+#12 resolve docker.io/anchore/syft:v1.51.1@sha256:95fe0835e5bebc6f8b1f8acef68d47d63d594ef4c0f25c097ff853b23cbac74c 0.1s done
+#12 DONE 0.1s
+
+#13 [internal] load build context
+#13 transferring context: 80.62kB 0.0s done
+#13 DONE 0.0s
+
+#14 [stage-4  2/11] RUN apt-get update && apt-get install --yes --no-install-recommends git ca-certificates     && rm -rf /var/lib/apt/lists/*
+#14 CACHED
+
+#15 [stage-4  4/11] COPY --from=trivy /usr/local/bin/trivy /usr/local/bin/trivy
+#15 CACHED
+
+#16 [stage-4  5/11] COPY --from=dockercli /usr/local/bin/docker /usr/local/bin/docker
+#16 CACHED
+
+#17 [stage-4  7/11] WORKDIR /app
+#17 CACHED
+
+#18 [stage-4  3/11] COPY --from=syft /syft /usr/local/bin/syft
+#18 CACHED
+
+#19 [stage-4  6/11] COPY --from=crane /ko-app/crane /usr/local/bin/crane
+#19 CACHED
+
+#20 [stage-4  8/11] COPY pyproject.toml .
+#20 CACHED
+
+#21 [stage-4  9/11] COPY src ./src
+#21 DONE 0.1s
+
+#22 [stage-4 10/11] RUN pip install --no-cache-dir .
+#22 1.749 Processing /app
+#22 1.752   Installing build dependencies: started
+#22 8.578   Installing build dependencies: finished with status 'done'
+#22 8.579   Getting requirements to build wheel: started
+#22 8.656   Getting requirements to build wheel: finished with status 'done'
+#22 8.664   Preparing metadata (pyproject.toml): started
+#22 8.819   Preparing metadata (pyproject.toml): finished with status 'done'
+#22 9.518 Collecting fastapi<1,>=0.115 (from sbom-creator==0.7.0)
+#22 9.971   Downloading fastapi-0.143.2-py3-none-any.whl.metadata (26 kB)
+#22 10.18 Collecting httpx<1,>=0.28 (from sbom-creator==0.7.0)
+#22 10.32   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#22 10.50 Collecting jsonschema<5,>=4.23 (from sbom-creator==0.7.0)
+#22 10.64   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+#22 10.82 Collecting packageurl-python<1,>=0.17 (from sbom-creator==0.7.0)
+#22 10.96   Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+#22 11.12 Collecting packaging<27,>=26.3 (from sbom-creator==0.7.0)
+#22 11.26   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#22 11.46 Collecting uvicorn<1,>=0.34 (from sbom-creator==0.7.0)
+#22 11.60   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#22 11.79 Collecting starlette>=0.46.0 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 11.93   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+#22 12.35 Collecting pydantic>=2.9.0 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 12.50   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#22 12.87 Collecting typing-extensions>=4.8.0 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 13.02   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#22 13.17 Collecting typing-inspection>=0.4.2 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 13.31   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#22 13.45 Collecting annotated-doc>=0.0.2 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 13.60   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#22 13.75 Collecting opentelemetry-api>=1.44.0 (from fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 13.90   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#22 14.06 Collecting anyio (from httpx<1,>=0.28->sbom-creator==0.7.0)
+#22 14.20   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#22 14.36 Collecting certifi (from httpx<1,>=0.28->sbom-creator==0.7.0)
+#22 14.50   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+#22 14.66 Collecting httpcore==1.* (from httpx<1,>=0.28->sbom-creator==0.7.0)
+#22 14.80   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#22 14.96 Collecting idna (from httpx<1,>=0.28->sbom-creator==0.7.0)
+#22 15.10   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#22 15.25 Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.28->sbom-creator==0.7.0)
+#22 15.40   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#22 15.55 Collecting attrs>=22.2.0 (from jsonschema<5,>=4.23->sbom-creator==0.7.0)
+#22 15.69   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+#22 15.85 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5,>=4.23->sbom-creator==0.7.0)
+#22 15.99   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#22 16.15 Collecting referencing>=0.28.4 (from jsonschema<5,>=4.23->sbom-creator==0.7.0)
+#22 16.29   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#22 16.79 Collecting rpds-py>=0.25.0 (from jsonschema<5,>=4.23->sbom-creator==0.7.0)
+#22 16.94   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#22 17.09 Collecting click>=7.0 (from uvicorn<1,>=0.34->sbom-creator==0.7.0)
+#22 17.24   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#22 17.40 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 17.57   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#22 18.46 Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi<1,>=0.115->sbom-creator==0.7.0)
+#22 18.60   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+#22 18.78 Downloading fastapi-0.143.2-py3-none-any.whl (144 kB)
+#22 19.07 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#22 19.23 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#22 19.40 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+#22 19.56 Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+#22 19.71 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#22 19.89 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#22 20.05 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#22 20.19 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#22 20.35 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#22 20.52 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#22 20.68 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#22 20.82 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#22 20.98 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#22 21.32 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+#22 21.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 5.8 MB/s eta 0:00:00
+#22 21.83 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#22 21.97 Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+#22 22.14 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+#22 22.28 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#22 22.43 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#22 22.59 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#22 22.73 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#22 22.87 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#22 23.03 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#22 23.05 Building wheels for collected packages: sbom-creator
+#22 23.05   Building wheel for sbom-creator (pyproject.toml): started
+#22 23.08   Building wheel for sbom-creator (pyproject.toml): finished with status 'done'
+#22 23.08   Created wheel for sbom-creator: filename=sbom_creator-0.7.0-py3-none-any.whl size=238585 sha256=d7013563353c11048c3187d022e6af46b17d554395b7892a61991c6662482578
+#22 23.08   Stored in directory: /tmp/pip-ephem-wheel-cache-clfhub2l/wheels/54/1b/b7/aa63e25c8f14f4f2ae7b04e6097bdecb770e455c5c1ee0a600
+#22 23.09 Successfully built sbom-creator
+#22 23.12 Installing collected packages: typing-extensions, rpds-py, packaging, packageurl-python, idna, h11, click, certifi, attrs, annotated-types, annotated-doc, uvicorn, typing-inspection, referencing, pydantic-core, opentelemetry-api, httpcore, anyio, starlette, pydantic, jsonschema-specifications, httpx, jsonschema, fastapi, sbom-creator
+#22 24.65 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 attrs-26.1.0 certifi-2026.7.22 click-8.5.0 fastapi-0.143.2 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 opentelemetry-api-1.45.1 packageurl-python-0.17.6 packaging-26.3 pydantic-2.14.1 pydantic-core-2.50.1 referencing-0.37.0 rpds-py-2026.9.1 sbom-creator-0.7.0 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+#22 24.65 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#22 25.30 
+#22 25.30 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#22 25.30 [notice] To update, run: pip install --upgrade pip
+#22 DONE 25.5s
+
+#23 [stage-4 11/11] RUN mkdir -p /workspace /home/sbom && chown -R 10001:10001 /workspace /home/sbom
+#23 DONE 0.4s
+
+#24 exporting to image
+#24 exporting layers
+#24 exporting layers 1.2s done
+#24 exporting manifest sha256:1538df32f7e55a63452d52f6cbea9ce2934ed8966aca42d5aa98945b0eb3b51c 0.0s done
+#24 exporting config sha256:3bc4b554b914fe954d30692bf28c8abf6fdd1818365f1282655728f40250f3b0 0.0s done
+#24 exporting attestation manifest sha256:be2723ec080ac3f9aa274421c8268a92f73fd1c9e0b895be00fa019800ae69a3 0.0s done
+#24 exporting manifest list sha256:e7ad622093c917aecc4d8c7e3094286e54c485c91566a5462b6d7c95d9be423f 0.0s done
+#24 naming to docker.io/library/sbom-creator:mvp-r110 done
+#24 unpacking to docker.io/library/sbom-creator:mvp-r110
+#24 unpacking to docker.io/library/sbom-creator:mvp-r110 0.9s done
+#24 DONE 2.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/bij4fbhppbae1ry8jt5u4k0j5
