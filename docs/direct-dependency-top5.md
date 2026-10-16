@@ -272,3 +272,6 @@ R98 (2026-10-16): an explicitly attributed Trivy-only resource archive with boun
 
 
 R99 (2026-10-16): new independent complex Dropwizard pair validates39 module references/34 shipped owners/443 direct edges. Frozen source candidate times out180s; bounded image candidate is stopped for repeated over-budget layer processing. No final score/rank promotion; runtime unchanged. [Control failure and corpus update](java-js-top3.md).
+
+
+R100 (2026-10-16): separate bounded rejection-cache candidate completes Dropwizard final/os/full in94.11s, but confirms no project payload under the unchanged512MiB layer budget. On16 agreeing owners final0/0/907, recall0;18 owner scopes UNKNOWN and443 direct edges unmatched. Boot/Javalin witness/catalog/evidence regression is exact. [Negative evaluation](../benchmarks/results/cached-dropwizard-evidence-v3/evaluation.json), [resource run](../benchmarks/results/cached-dropwizard-evidence-v3/run.json). Benchmark liveness only, no runtime adoption/rank promotion or new pairs.

@@ -47,6 +47,14 @@ def main():
                                external_candidate_accuracy=None,
                                external_candidate_evidence=(control/'image-resource-stop.json').relative_to(ROOT).as_posix(),
                                known_candidate_module_direct_unmatched=receipt['module_direct_edges'])
+                evaluated = ROOT/'benchmarks/results'/('cached-'+project['id'].removeprefix('java-')+'-evidence-v3')/'evaluation.json'
+                if evaluated.exists():
+                    measured = json.loads(evaluated.read_bytes())
+                    row.update(external_candidate_status='COMPLETED_RESOURCE_CANDIDATE_FAILED_ACCURACY',
+                               external_candidate_accuracy=measured['components_micro'],
+                               external_candidate_scored_owners=measured['scored_owners'],
+                               external_candidate_scope_unknown_owners=measured['scope_unknown_owners'],
+                               external_candidate_evidence=evaluated.relative_to(ROOT).as_posix())
                 rows.append(row)
                 continue
             if receipt.get('analysis_status', {}).get('status') == 'FAILED_OUTPUT_BUDGET':

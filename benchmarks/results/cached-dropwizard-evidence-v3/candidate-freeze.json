@@ -1,0 +1,21 @@
+{
+  "partition": "disclosed_resource_development",
+  "runtime_changed": false,
+  "oracle_read": false,
+  "code_sha256": {
+    "benchmarks/cached_jar_evidence.py": "200ee21a91c2ae7c1a0592309aceb64ae90e840e0db80465446c0d383c472857",
+    "benchmarks/replay_cached_dropwizard.py": "3a3beb83e426aaf44a65ca926321dbc5fcfa133c3cabfa875743d9ce84738c5d"
+  },
+  "frozen_predictors": {
+    "benchmarks/trivy_only_payload.py": "26b7f13aaa84d2b2114666f8e9174f8eaf24597c073793fbc9f11d2adcbe11a9",
+    "benchmarks/trivy_payload_bridge.py": "781c72835e004bba42049fa0b412cd1ad6440019c384d3b880088b00a92affe9",
+    "benchmarks/bounded_jar_evidence.py": "6c2307d17f4f7d4a0f412cf3290ea2fd55ecd7c0887a177b40149b5226e5e22b",
+    "benchmarks/replay_trivy_only_payload.py": "39f0ecab7ba89b55415c399d8990ab2e20a7332c4c1e0a1f6653cc299997779c",
+    "benchmarks/trivy_optional_projection.py": "2ec7df9dca46153d7fc7fb773eed6c72c2bf3a62d5c8f07e33202272ce98a95a",
+    "benchmarks/trivy_pom_graph.py": "67436a680de0dbc983d7f96c5cb204f76d602484ae2419497f24a5b7fe1a9dfc",
+    "benchmarks/replay_trivy_pom_mirror.py": "03eb737aa33989b7554136ff33ceac9b3bb34774e3b0d5fbd526af73ecf43b07",
+    "benchmarks/results/trivy-reactor-source-optional-mirror-v1/trivy.yaml": "2f54152538fbcb33c3977ec06f02dd98b40f52f5f33fef57ffd11486962438b8"
+  },
+  "limits_increased": false,
+  "input_image_sha256": "82b9e6a2c54d500ee9529fb07e528028cb022ab331730cdfb3a4cb42dfac7e71"
+}

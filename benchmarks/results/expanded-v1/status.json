@@ -405,10 +405,19 @@
       "component_metrics_status": "NOT_YET_MEASURED",
       "receipt_sha256": "7d66862839a645fe6645b4b5569061257ad059a0ebdf275c0d8373551ce1d925",
       "scope_note": "Real reactor build/reference/image pair verified. No accuracy score yet; qualified edges remain separately UNKNOWN. Aggregate components are not direct labels.",
-      "external_candidate_status": "FAILED_SOURCE_TIMEOUT_IMAGE_RESOURCE_STOP",
-      "external_candidate_accuracy": null,
-      "external_candidate_evidence": "benchmarks/results/dropwizard-frozen-control-v1/prediction-v1/image-resource-stop.json",
-      "known_candidate_module_direct_unmatched": 443
+      "external_candidate_status": "COMPLETED_RESOURCE_CANDIDATE_FAILED_ACCURACY",
+      "external_candidate_accuracy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 907,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "external_candidate_evidence": "benchmarks/results/cached-dropwizard-evidence-v3/evaluation.json",
+      "known_candidate_module_direct_unmatched": 443,
+      "external_candidate_scored_owners": 16,
+      "external_candidate_scope_unknown_owners": 18
     },
     {
       "project": "java-vertx-web",
