@@ -10,8 +10,12 @@ from pathlib import Path
 from .. import payload
 from ..acquire import clean_environment, run_command, secret
 from ..validation import validate_cyclonedx
+from .archive_component_evidence import JarFiles as ArchiveJarFiles
+from .archive_component_identity import POLICY as ARCHIVE_POLICY
+from .archive_component_identity import bind as bind_archives
 from .directory_jar_evidence import JarFiles as StoredJarFiles
 from .explicit_identity_gate import prepare
+from .public_hash_identity import PublicJavaHashLookup
 from .seekable_jar_evidence import JarFiles
 from .trivy_only_payload import supplement
 
@@ -90,14 +94,28 @@ def acquire(immutable_reference, destination, settings, temporary):
         max_files=settings.max_checkout_files, label='Immutable image acquisition')
 
 
-def corroborate(image, archive, peer_document, *, temporary=None, nested_windows=False):
+def corroborate(image, archive, peer_document, *, temporary=None, nested_windows=False,
+                archive_components=False, java_database=None, database_sha256=None):
     """One resource budget shared by Syft and Trivy-only physical witnesses."""
-    reader = StoredJarFiles if nested_windows else JarFiles
+    reader = ArchiveJarFiles if archive_components else StoredJarFiles if nested_windows else JarFiles
     files = reader(archive, image, temporary=temporary)
+    lookup = None
     try:
         observed = payload.collect(image, archive, files_factory=lambda *args: files,
                                    java_witness=lambda artifact, reader: reader.witness(artifact), close_files=False)
         adapted, _, audit = supplement(image, peer_document, observed, archive, files=files)
+        archive_facts = {}
+        if archive_components:
+            if java_database is not None:
+                lookup = PublicJavaHashLookup(java_database, database_sha256)
+            adapted, archive_facts, archive_audit = bind_archives(image, adapted, peer_document,
+                observed, files, lookup=lookup)
+            audit['archive_components'] = archive_audit
+            if lookup is not None:
+                lookup.verify_unchanged()
+                audit['archive_identity_database'] = {'sha256': lookup.sha256,
+                    'lookup': 'exact full SHA1 association; not an independent Trivy identity source',
+                    'publisher_authenticated': False, 'globally_unique_gav_proven': False}
         physical, envelope = prepare(adapted, audit)
         # Non-Java evidence must not change when enabling Java corroboration.
         for artifact in image['artifacts']:
@@ -105,11 +123,18 @@ def corroborate(image, archive, peer_document, *, temporary=None, nested_windows
                 physical[artifact['id']] = observed[artifact['id']]
         from ..core import checksum
         envelope['payload_sha256'] = checksum(physical)
-        if nested_windows:
+        if archive_components:
+            envelope['reader_policy'] = ARCHIVE_POLICY
+            envelope['archive_presence'] = archive_facts
+            envelope['archive_presence_sha256'] = checksum(archive_facts)
+            envelope['archive_database_sha256'] = lookup.sha256 if lookup is not None else None
+        elif nested_windows:
             envelope['reader_policy'] = 'stored-nested-directory-lru-v1'
         return adapted, physical, envelope, {'binding': audit, 'jar_resources': files.stats,
                                              'layer_resources': files.layers_reader.stats}
     finally:
+        if lookup is not None:
+            lookup.close()
         files.close()
 
 
@@ -124,10 +149,15 @@ def analyze(image, provenance, settings):
             acquire(provenance['immutable_reference'], archive, settings, root)
         peer_document, tool = peer(archive, settings, root)
         adapted, physical, envelope, audit = corroborate(image, archive, peer_document, temporary=root,
-                                                       nested_windows=settings.java_nested_windows)
+            nested_windows=settings.java_nested_windows, archive_components=settings.java_archive_components,
+            java_database=((Path(settings.trivy_cache_dir) if settings.trivy_cache_dir
+                            else Path.home()/'.cache/sbom-trivy')/'java-db/trivy-java.db'
+                           if settings.java_archive_components else None),
+            database_sha256=tool['database_sha256'])
         return adapted, {'payload_evidence': physical, 'identity_binding_envelope': envelope,
-            'java_reader_policy': ('stored-nested-directory-lru-conservative-ledger-v1'
-                                  if settings.java_nested_windows else 'seekable-content-verification-v4'),
+            'java_reader_policy': (ARCHIVE_POLICY if settings.java_archive_components else
+                'stored-nested-directory-lru-conservative-ledger-v1' if settings.java_nested_windows
+                else 'seekable-content-verification-v4'),
             'java_identity_engine': tool, 'java_image_status': 'corroborated',
             '_artifacts': {'image-original.syft.json': image, 'image-peer.cdx.json': peer_document,
                            'image-identity-audit.json': audit}}

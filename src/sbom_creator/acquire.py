@@ -33,6 +33,7 @@ class Settings:
     build_timeout: int = 900
     java_image_evidence: bool = True
     java_nested_windows: bool = False
+    java_archive_components: bool = False
     trivy_cache_dir: str = ""
     java_db_timeout: int = 600
     crane_binary: str = 'crane'

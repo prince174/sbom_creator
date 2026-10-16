@@ -159,6 +159,7 @@ docker compose up --build -d
 | `SBOM_IMAGE_TEMP_DIR` | Writable каталог внутренних архивов/слоёв, в образе `/workspace/image-cache` |
 | `SBOM_JAVA_IMAGE_EVIDENCE` | Java identity + physical evidence, default `true`; сбой отражается UNKNOWN |
 | `SBOM_JAVA_NESTED_WINDOWS` | Экспериментальное чтение STORED nested JAR без копирования; default `false` |
+| `SBOM_JAVA_ARCHIVE_COMPONENTS` | Полный поставленный Java-архив как отдельный компонент, включая metadata-only; default `false`, включает nested reader |
 | `SBOM_JAVA_BACKEND` | Дополнительный граф исходников: `disabled` (default), `trivy`, `cdxgen` |
 | `SBOM_CDXGEN_IMAGE`, `SBOM_DOCKER_BINARY` | Доверенный worker image и Docker CLI для явно включённого cdxgen backend |
 | `SBOM_BUILD_TIMEOUT` | Лимит необязательного cdxgen job, default900s |
@@ -190,12 +191,26 @@ Payload proof для одинаковых файлов переносится т
 Опция `SBOM_JAVA_NESTED_WINDOWS=true` включает экспериментальный reader с полным
 CRC/SHA256 вложенных STORED JAR и теми же бюджетами. R107 хранит до256 directory
 credits в LRU; после вытеснения повторный индекс снова расходует общий бюджет.
-На Microservices получено124 TP / 1 FP / 16 FN, precision99.20%, recall88.57%
-(R106:99/1/41; stable default:8/0/132).15 оставшихся пропусков — metadata-only
-starter JAR, один — неоднозначная identity. Reader выключен по умолчанию;
-результаты этого режима нельзя смешивать с точностью обычного сервиса.
-Проверенные Boot/Javalin/Dropwizard не ухудшились. Полные scope/метрики и границы
-измерений — в [отчёте](docs/java-js-service-accuracy.md).
+
+Новый измеренный режим R108 включается отдельно:
+
+```bash
+SBOM_JAVA_ARCHIVE_COMPONENTS=true
+```
+
+Он также выбирает nested reader и policy `image-delivered-archive-v7`. Помимо
+class/resource payload сервис может подтвердить **поставленный архив как компонент**:
+полные физические SHA256/SHA1, CRC всех ZIP members, точный image config/path/layer
+и GAV через канонический `pom.properties` либо exact full-SHA1 association в
+закреплённой публичной Java DB. Имя файла или один scanner inventory недостаточны.
+Metadata-only JAR сохраняет `observed_payload=unconfirmed`; наличие кода, исполнение,
+прямота и подлинность издателя не заявляются. Public DB и Trivy коррелированы;
+SHA1 association не доказывает глобальную уникальность GAV. Original identity/audit
+сохраняются. На прежних размеченных областях final: Micro139/1/1, Boot90/3/2,
+Javalin128/0/0, Drop907/0/0. Java P99.68%, R/exact-version coverage99.76%;
+ещё31 owner scope UNKNOWN. Это раскрытые проекты, не универсальная гарантия.
+Default R105/v4 и nested-only v6 сохранены; их actual publisher/physical regression
+прошла. Подробности — в [отчёте](docs/java-js-service-accuracy.md).
 
 ## API
 

@@ -207,7 +207,8 @@ def build_candidates(source: dict, image: dict, payload_evidence: dict | None = 
 
 def _image_evidence(candidate: dict) -> list[dict]:
     return [e for e in candidate["evidence"] if e["origin"] == "image"
-            and e["presence_kind"] in {"package_metadata", "archive_metadata", "binary_metadata"}]
+            and e["presence_kind"] in {"package_metadata", "archive_metadata", "binary_metadata",
+                                       "verified_archive_component"}]
 
 
 def rules_assessor(candidates: list[dict]) -> list[dict]:
@@ -328,7 +329,8 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None,
     rules_policy = RULES_POLICY_VERSION
     if identity_envelope is not None:
         rules_policy = {'stored-nested-windows-v1': 'image-identity-payload-v5',
-                        'stored-nested-directory-lru-v1': 'image-identity-payload-v6'}.get(
+                        'stored-nested-directory-lru-v1': 'image-identity-payload-v6',
+                        'verified-java-archive-component-v1': 'image-delivered-archive-v7'}.get(
                             identity_envelope.get('reader_policy'), 'image-identity-payload-v4')
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
     included: set[str] = set()

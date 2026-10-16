@@ -9,6 +9,8 @@ from collections import Counter, defaultdict
 
 from ..core import build_candidates as base_candidates
 from ..core import checksum
+from .archive_component_identity import POLICY as ARCHIVE_POLICY
+from .archive_component_identity import valid_fact as valid_archive_fact
 from .trivy_payload_bridge import DIGEST, artifact_key
 
 PRODUCERS = {'java-archive-cataloger', 'trivy-java-archive-cataloger'}
@@ -63,6 +65,13 @@ def candidates(source, image, payload, envelope):
             or envelope.get('image_config_digest') != image.get('source', {}).get('metadata', {}).get('imageID')):
         raise ValueError('Identity envelope catalog/image/payload mismatch')
     result = base_candidates(source, image, payload)
+    archives = envelope.get('archive_presence', {})
+    archive_policy = envelope.get('reader_policy') == ARCHIVE_POLICY
+    if archive_policy and envelope.get('archive_presence_sha256') != checksum(archives):
+        raise ValueError('Archive-presence envelope mismatch')
+    files = defaultdict(list)
+    for entry in image.get('files', []):
+        files[entry.get('location', {}).get('path')].append(entry)
     counts = Counter(a['id'] for a in image['artifacts'])
     for candidate in result:
         for fact in candidate['evidence']:
@@ -76,5 +85,13 @@ def candidates(source, image, payload, envelope):
                                          and fact['payload'].get('path') else 'metadata_without_confirmed_payload')
             if binding.get('status') != 'BOUND' or counts[fact['artifact_id']] != 1:
                 fact['presence_kind'] = 'metadata_without_confirmed_identity'
+            proof = archives.get(fact['artifact_id']) if archive_policy else None
+            if (proof is not None and counts[fact['artifact_id']] == 1
+                    and fact['artifact'].get('foundBy') == 'java-archive-cataloger'
+                    and valid_archive_fact(fact['artifact'], proof, files, envelope['image_config_digest'],
+                                           database_sha256=envelope.get('archive_database_sha256'))):
+                fact['archive_presence'] = copy.deepcopy(proof)
+                fact['archive_identity_binding'] = {'status': 'BOUND', 'method': proof['identity_method']}
+                fact['presence_kind'] = 'verified_archive_component'
             fact['id'] = checksum({key: value for key, value in fact.items() if key != 'id'})
     return result
