@@ -221,6 +221,7 @@ def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, 
         and str(f.get('location', {}).get('path', '')).lower().endswith(('.jar', '.war', '.ear', '.hpi', '.jpi', '.nar', '.jmod'))
         for f in data.get('files', []))
     if settings.java_image_evidence and java_hint:
+        from .image_java.java_database_cache import ERROR_CODES, DatabaseCacheError
         from .image_java.runtime import analyze as corroborate_java_image
         try:
             data, extra = corroborate_java_image(data, provenance, settings)
@@ -230,6 +231,8 @@ def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, 
             # corroboration proves absence. Output explicitly remains partial.
             provenance['java_image_status'] = 'UNKNOWN'
             provenance['java_image_error_type'] = type(error).__name__
+            if isinstance(error, DatabaseCacheError) and error.code in ERROR_CODES:
+                provenance['java_database_cache_error_code'] = error.code
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=output.parent, delete=False) as stream:

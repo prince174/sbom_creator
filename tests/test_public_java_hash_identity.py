@@ -1,6 +1,7 @@
 """Public index lookup uses real SQLite files, binary keys and read-only access."""
 import hashlib
 import sqlite3
+from contextlib import closing
 from types import SimpleNamespace
 
 import pytest
@@ -17,7 +18,7 @@ def digest(path):
 
 def database(path, *, index='unique', sha1=None, archive='jar', group='org.example',
              artifact='sample-artifact', version='1.2.3', malformed_schema=False):
-    with sqlite3.connect(path) as connection:
+    with closing(sqlite3.connect(path)) as connection, connection:
         connection.execute('CREATE TABLE artifacts(id INTEGER PRIMARY KEY, group_id TEXT, artifact_id TEXT)')
         connection.execute('CREATE TABLE indices(artifact_id INTEGER, version TEXT, sha1 BLOB, archive_type TEXT, '
                            'foreign key (artifact_id) references artifacts(id))')
@@ -110,6 +111,25 @@ def test_schema_change_is_not_silently_accepted(tmp_path):
         public.PublicJavaHashLookup(path, digest(path))
 
 
+def test_missing_artifact_primary_key_cannot_pass_an_indexed_lookup_schema(tmp_path):
+    path = tmp_path / 'no-primary-key.db'
+    with closing(sqlite3.connect(path)) as connection, connection:
+        connection.execute('CREATE TABLE artifacts(id INTEGER, group_id TEXT, artifact_id TEXT)')
+        connection.execute('CREATE TABLE indices(artifact_id INTEGER, version TEXT, sha1 BLOB, archive_type TEXT)')
+        connection.execute('CREATE UNIQUE INDEX indices_sha1_idx ON indices(sha1)')
+    with pytest.raises(ValueError, match='primary-key schema'):
+        public.PublicJavaHashLookup(path, digest(path))
+
+
+def test_partial_sha1_index_is_not_a_complete_public_hash_index(tmp_path):
+    path = database(tmp_path / 'partial-index.db')
+    with closing(sqlite3.connect(path)) as connection, connection:
+        connection.execute('DROP INDEX indices_sha1_idx')
+        connection.execute("CREATE UNIQUE INDEX indices_sha1_idx ON indices(sha1) WHERE archive_type='jar'")
+    with pytest.raises(ValueError, match='unique index'):
+        public.PublicJavaHashLookup(path, digest(path))
+
+
 @pytest.mark.parametrize('kwargs', [{'archive': 'aar'}, {'group': ''}, {'artifact': 'bad\nname'},
                                     {'version': ' padded '}, {'version': 'x' * 513}])
 def test_wrong_archive_or_invalid_gav_is_not_promoted(tmp_path, kwargs):
@@ -169,3 +189,69 @@ def test_real_sqlite_query_is_interrupted_and_handler_is_removed(pinned_database
             lookup.lookup(SHA1)
         monkeypatch.setattr(public, 'QUERY', fixed_query)
         assert lookup.lookup(SHA1)['artifact'] == 'sample-artifact'
+
+
+def test_constructor_sqlite_progress_guard_precedes_schema_queries_and_resets(pinned_database, monkeypatch):
+    """Real SQLite schema access must not occur outside constructor VM bounds."""
+    path, pin = pinned_database
+    events = []
+    connect = sqlite3.connect
+
+    class ObservedConnection(sqlite3.Connection):
+        def set_progress_handler(self, callback, count):
+            events.append(('handler', callback is not None, count))
+            return super().set_progress_handler(callback, count)
+
+        def execute(self, query, *args):
+            events.append(('sql', query))
+            return super().execute(query, *args)
+
+    monkeypatch.setattr(public.sqlite3, 'connect',
+                        lambda *args, **kwargs: connect(*args, factory=ObservedConnection, **kwargs))
+    with public.PublicJavaHashLookup(path, pin) as lookup:
+        enabled = next(i for i, event in enumerate(events) if event[0] == 'handler' and event[1])
+        first_sql = next(i for i, event in enumerate(events) if event[0] == 'sql')
+        assert enabled < first_sql
+        assert events[-1] == ('handler', False, 0)
+        assert lookup.lookup(SHA1)['artifact'] == 'sample-artifact'
+
+
+@pytest.mark.parametrize('wall_deadline', [False, True])
+def test_constructor_guard_interrupts_real_sqlite_work_and_closes_connection(
+        pinned_database, monkeypatch, wall_deadline):
+    """Exercise SQLite VM interruption, not a mocked exception or fake result."""
+    path, pin = pinned_database
+    closed, handles = [], []
+    connect = sqlite3.connect
+
+    class HeavySchemaConnection(sqlite3.Connection):
+        injected = False
+
+        def execute(self, query, *args):
+            if query.startswith('PRAGMA table_info(') and not self.injected:
+                self.injected = True
+                # This additional genuine SQLite VM workload occurs at the
+                # metadata boundary while the constructor's handler is active.
+                super().execute('''WITH RECURSIVE n(x) AS
+                    (SELECT 0 UNION ALL SELECT x+1 FROM n WHERE x<10000000)
+                    SELECT SUM(x) FROM n''').fetchone()
+            return super().execute(query, *args)
+
+        def close(self):
+            closed.append(True)
+            return super().close()
+
+    def observed_connect(*args, **kwargs):
+        connection = connect(*args, factory=HeavySchemaConnection, **kwargs)
+        handles.append(connection)
+        return connection
+
+    monkeypatch.setattr(public.sqlite3, 'connect', observed_connect)
+    ticks = iter([0.0, 3.0])
+    monkeypatch.setattr(public, 'time', SimpleNamespace(monotonic=(
+        (lambda: next(ticks, 3.0)) if wall_deadline else lambda: 0.0)))
+    with pytest.raises(sqlite3.OperationalError, match='interrupted'):
+        public.PublicJavaHashLookup(path, pin)
+    assert closed == [True] and len(handles) == 1
+    with pytest.raises(sqlite3.ProgrammingError, match='closed'):
+        handles[0].execute('SELECT 1')

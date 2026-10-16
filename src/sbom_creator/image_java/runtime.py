@@ -1,6 +1,5 @@
 """Image-only Java identity + physical evidence, without source/build inputs."""
 import base64
-import hashlib
 import json
 import os
 import tempfile
@@ -15,7 +14,8 @@ from .archive_component_identity import POLICY as ARCHIVE_POLICY
 from .archive_component_identity import bind as bind_archives
 from .directory_jar_evidence import JarFiles as StoredJarFiles
 from .explicit_identity_gate import prepare
-from .public_hash_identity import PublicJavaHashLookup
+from .java_database_cache import ensure as ensure_database
+from .public_hash_identity import PublicJavaHashLookup, file_sha256
 from .seekable_jar_evidence import JarFiles
 from .trivy_only_payload import supplement
 
@@ -26,8 +26,7 @@ VERSION = '0.75.0'
 def file_sha(path):
     if not path.is_file() or path.stat().st_size > 2*1024**3:
         raise ValueError('Java database byte budget')
-    with path.open('rb') as stream:
-        return hashlib.file_digest(stream, 'sha256').hexdigest()
+    return file_sha256(path)
 
 
 def peer(archive, settings, temporary):
@@ -44,15 +43,17 @@ def peer(archive, settings, temporary):
     if version.get('Version') != VERSION:
         raise ValueError('Pinned Trivy image version required')
     database = cache/'java-db/trivy-java.db'
-    # A shared service cache is populated only from the scanner's public Java
-    # DB distribution, never a repository build cache. Freeze its bytes per scan.
+    # Only the scanner's public distribution populates this cache. An incomplete
+    # download cannot become visible as a usable shared database directory.
     with DB_LOCK:
-        if not database.is_file():
-            run_command([settings.trivy_binary, 'image', '--config', str(config), '--cache-dir', str(cache),
-                '--download-java-db-only', '--skip-version-check'], cwd=root, env=env,
+        def download(staging):
+            run_command([settings.trivy_binary, 'image', '--config', str(config), '--cache-dir', str(staging),
+                '--download-java-db-only', '--skip-version-check', '--no-progress',
+                '--timeout', str(settings.java_db_timeout) + 's'], cwd=root, env=env,
                 timeout=settings.java_db_timeout, max_output_bytes=settings.max_output_bytes,
-                monitored_paths=((cache, 2*1024**3),), max_files=10_000, label='Java identity database')
-        db_hash = file_sha(database)
+                monitored_paths=((staging, 2*1024**3),), max_files=10_000, label='Java identity database')
+        cache_facts = ensure_database(cache, download)
+        db_hash = cache_facts['database_sha256']
     raw = run_command([settings.trivy_binary, 'image', '--config', str(config), '--input', str(archive),
         '--cache-dir', str(cache), '--format', 'cyclonedx', '--offline-scan', '--skip-db-update',
         '--skip-java-db-update', '--skip-version-check'], cwd=root, env=env, timeout=settings.image_timeout,
@@ -62,8 +63,7 @@ def peer(archive, settings, temporary):
         raise ValueError('Java database changed during image prediction')
     document = json.loads(raw)
     validate_cyclonedx(document, versions=('1.6', '1.7'))
-    return document, {'version': VERSION, 'database_sha256': db_hash,
-                      'database_bytes': database.stat().st_size}
+    return document, {'version': VERSION, **cache_facts}
 
 
 def acquire(immutable_reference, destination, settings, temporary):

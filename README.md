@@ -140,8 +140,15 @@ docker compose up --build -d
 Контейнер направляет также scratch-файлы сканеров в `/workspace` через
 `TMPDIR`/`TMP`/`TEMP`: небольшого tmpfs `/tmp` недостаточно для крупных образов.
 Для offline-работы базу нужно заранее подготовить; недоступная DB даёт UNKNOWN для
-неподтверждённых Java-компонентов. Начинайте с одного worker: жёсткая дисковая квота
-и пиковая память нескольких параллельных больших Java-образов отдельно не измерены.
+неподтверждённых Java-компонентов. R111 загружает отсутствующую DB в отдельный private
+stage, проверяет metadata/полный SHA256/SQLite layout/schema/index и публикует пару
+DB+metadata одной атомарной операцией без замены существующего target. Ошибка не
+оставляет частичный файл на месте рабочего cache. Валидная, даже stale, DB используется
+без hidden refresh; stale и metadata SHA отражаются в provenance. Повреждённый
+существующий cache сохраняется и даёт fixed error code/UNKNOWN, а не перезаписывается.
+[Коды и безопасное восстановление cache](docs/java-db-cache-r111.md).
+Начинайте с одного worker: жёсткая дисковая квота и пиковая память нескольких
+параллельных больших Java-образов отдельно не измерены.
 
 Для Kubernetes см. [пример Deployment](deploy/kubernetes.yaml): без hostPath,
 без service-account token, `runAsNonRoot`, `allowPrivilegeEscalation: false`,
@@ -230,8 +237,9 @@ Javalin128/0/0, Drop907/0/0. Java P99.68%, R/exact-version coverage99.76%;
 сервис сохраняет raw inventory и помечает неподтверждённые Java components UNKNOWN,
 не подставляет raw packages в final. Первый Java scan может загрузить публичную DB
 (около1.55GB); закрытой сети нужен заранее подготовленный `SBOM_TRIVY_CACHE_DIR`.
-Cold download, безопасная параллельность и жёсткие host disk quotas отдельно не
-сертифицированы. Workspace должен вмещать DB, входной архив, нормализованные слои
+Безопасная параллельность и жёсткие host disk quotas отдельно не сертифицированы.
+Начальная загрузка и повторное offline-использование проверяются отдельно от accuracy
+и описаны в [отчёте cache](docs/java-db-cache-r111.md). Workspace должен вмещать DB, входной архив, нормализованные слои
 и результаты; Kubernetes пример даёт32Gi, для production нужен рассчитанный PVC
 и retention. Это не разрешение менять развёрнутые сервисы.
 Подробности — в [отчёте](docs/java-js-service-accuracy.md).

@@ -26,8 +26,14 @@ HEX64 = re.compile(r'[a-f0-9]{64}')
 
 
 def file_sha256(path):
+    digest, size = hashlib.sha256(), 0
     with Path(path).open('rb') as stream:
-        return hashlib.file_digest(stream, 'sha256').hexdigest()
+        while block := stream.read(1024 * 1024):
+            size += len(block)
+            if size > MAX_DATABASE_BYTES:
+                raise ValueError('Public database byte budget')
+            digest.update(block)
+    return digest.hexdigest()
 
 
 class PublicJavaHashLookup:
@@ -46,28 +52,40 @@ class PublicJavaHashLookup:
         self.connection = sqlite3.connect(database.as_uri() + '?mode=ro&immutable=1',
                                           uri=True, timeout=1.0)
         try:
+            started, callbacks = time.monotonic(), 0
+
+            def bounded_schema():
+                nonlocal callbacks
+                callbacks += 1
+                return int(callbacks > 100 or time.monotonic() - started > 2.0)
+
+            self.connection.set_progress_handler(bounded_schema, 1000)
             self.connection.execute('PRAGMA query_only=ON')
             self.connection.execute('PRAGMA trusted_schema=OFF')
             self.connection.execute('PRAGMA mmap_size=0')
             self.connection.execute('PRAGMA cache_size=-8192')
-            columns = {table: [(row[1], row[2]) for row in
-                              self.connection.execute('PRAGMA table_info(' + table + ')')]
+            details = {table: self.connection.execute('PRAGMA table_info(' + table + ')').fetchall()
                        for table in ('artifacts', 'indices')}
+            columns = {table: [(row[1], row[2]) for row in rows] for table, rows in details.items()}
             expected = {'artifacts': [('id', 'INTEGER'), ('group_id', 'TEXT'), ('artifact_id', 'TEXT')],
                         'indices': [('artifact_id', 'INTEGER'), ('version', 'TEXT'),
                                     ('sha1', 'BLOB'), ('archive_type', 'TEXT')]}
             if columns != expected:
                 raise ValueError('Unsupported public Java DB schema')
+            if [row[1] for row in details['artifacts'] if row[5]] != ['id']:
+                raise ValueError('Unsupported public Java DB primary-key schema')
             indexes = self.connection.execute('PRAGMA index_list(indices)').fetchall()
             index_columns = self.connection.execute('PRAGMA index_info(indices_sha1_idx)').fetchall()
-            if (not any(row[1] == 'indices_sha1_idx' and row[2] == 1 for row in indexes)
+            if (not any(row[1] == 'indices_sha1_idx' and row[2] == 1 and row[4] == 0 for row in indexes)
                     or [row[2] for row in index_columns] != ['sha1']):
                 raise ValueError('Expected exact SHA1 unique index is absent')
             self.query_plan = self.connection.execute('EXPLAIN QUERY PLAN ' + QUERY, (b'\0' * 20,)).fetchall()
-            if not any('indices_sha1_idx' in row[3] for row in self.query_plan):
+            if (not any('indices_sha1_idx' in row[3] for row in self.query_plan)
+                    or not any('SEARCH a USING INTEGER PRIMARY KEY' in row[3] for row in self.query_plan)):
                 raise ValueError('Exact hash lookup would not use the expected bounded index')
             self.schema = columns
             self.lookups = 0
+            self.connection.set_progress_handler(None, 0)
         except BaseException:
             self.close()
             raise
