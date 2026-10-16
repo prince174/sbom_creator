@@ -1,0 +1,126 @@
+{
+  "read_only": true,
+  "reference_or_project_inputs": false,
+  "database_bytes": 1553915904,
+  "database_sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+  "assessed_constructor": "immutable R110 pre-bootstrap implementation",
+  "assessed_source_sha256": "667ea3ac7d93986bad4dfaf3b9bed8247f90947934eee7c078025bdfc1bc6bc4",
+  "public_metadata": {
+    "Version": 1,
+    "NextUpdate": "2026-10-18T00:58:48.74513702Z",
+    "UpdatedAt": "2026-10-15T00:58:48.745137381Z",
+    "DownloadedAt": "2026-10-15T20:27:32.4115773Z"
+  },
+  "metadata_sha256": "fae3050b82dda96887e4a0495f56b4dae1c90c287f330e18564cc0f1fcc85327",
+  "hash_seconds": 1.0310000000172295,
+  "constructor_including_rehash_seconds": 1.0469999999913853,
+  "query_plan": [
+    [
+      5,
+      0,
+      0,
+      "SEARCH i USING INDEX indices_sha1_idx (sha1=?)"
+    ],
+    [
+      11,
+      0,
+      0,
+      "SEARCH a USING INTEGER PRIMARY KEY (rowid=?)"
+    ]
+  ],
+  "pragmas": {
+    "page_size": 4096,
+    "page_count": 379374,
+    "freelist_count": 0,
+    "user_version": 0,
+    "application_id": 0,
+    "encoding": "UTF-8",
+    "journal_mode": "delete"
+  },
+  "schema_objects": [
+    [
+      "index",
+      "artifacts_idx",
+      "artifacts"
+    ],
+    [
+      "index",
+      "indices_artifact_idx",
+      "indices"
+    ],
+    [
+      "index",
+      "indices_sha1_idx",
+      "indices"
+    ],
+    [
+      "table",
+      "artifacts",
+      "artifacts"
+    ],
+    [
+      "table",
+      "indices",
+      "indices"
+    ]
+  ],
+  "artifacts_table_info": [
+    [
+      0,
+      "id",
+      "INTEGER",
+      0,
+      null,
+      1
+    ],
+    [
+      1,
+      "group_id",
+      "TEXT",
+      0,
+      null,
+      0
+    ],
+    [
+      2,
+      "artifact_id",
+      "TEXT",
+      0,
+      null,
+      0
+    ]
+  ],
+  "indices_index_list": [
+    [
+      0,
+      "indices_sha1_idx",
+      1,
+      "c",
+      0
+    ],
+    [
+      1,
+      "indices_artifact_idx",
+      0,
+      "c",
+      0
+    ]
+  ],
+  "indexed_missing_hash_seconds": 0.0,
+  "verify_full_hash_seconds": 1.2339999999967404,
+  "bounded_quick_check_completed": false,
+  "bounded_quick_check_error_type": "OperationalError",
+  "bounded_quick_check_seconds": 2.0160000000032596,
+  "bounded_quick_check_progress_callbacks": 334,
+  "bounded_quick_check_opcode_limit": 2000000,
+  "bounded_quick_check_wall_limit_seconds": 2,
+  "quick_check_timeout_does_not_mean_database_corruption": true,
+  "full_integrity_claimed": false,
+  "notes": [
+    "Warm local-file/cache timing, not cold download/network/storage acceptance",
+    "SQLite progress handler is cooperative and cannot impose a hard blocking-I/O deadline",
+    "Public metadata Version1 is separate from SQLite user_version0",
+    "Full integrity_check/quick_check on each scan is not needed to validate bounded supported schema/index operations",
+    "Exact public SHA1 association is correlated with Trivy and is not publisher authentication"
+  ]
+}

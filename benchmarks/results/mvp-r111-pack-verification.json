@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "pack_invocations": 1,
+  "verify_invocations": 1,
+  "namespaces": 5,
+  "json_files": 85,
+  "large_json_files": 4,
+  "unique_gzip_files": 2,
+  "original_bytes": 3431636,
+  "tracked_json_and_gzip_bytes": 2101338,
+  "manifest": "benchmarks/results/mvp-r111-evidence-manifest.json",
+  "manifest_sha256": "dfd8685e0872267314c2f6b661f462acba0143b79352b0363f3d154dd9a398a3",
+  "previous_manifests": {
+    "mvp-r105-evidence-manifest.json": "419020c52f1a912c806ee86888c4aa0ddb73e59f32cc47b8109e1c3463a27f44",
+    "mvp-r106-evidence-manifest.json": "b79919629a0c6a9ff4e03c535b0dd1dc0ca1c66bc434e8607f7b1670165773bf",
+    "mvp-r107-evidence-manifest.json": "effdcdcdb55815b14156fb8ff0251ab53c86f2f6efcc52a3e530c7f9afef0d43",
+    "mvp-r108-evidence-manifest.json": "5a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d",
+    "mvp-r109-evidence-manifest.json": "5d7576fdf6be0301a2090bdc4b5742f72c014ec58d1ed1779581cfb80ce6c507",
+    "mvp-r110-evidence-manifest.json": "2b2221eefc2dedfce13185c55c2f9fba8e2a36e962e0952e0586d1e7ea56a03a"
+  },
+  "pack_helper_sha256": "4dc972c3cb6c8c6426dd927959a82810751c1634bd2c9d0ccb2987981448808c",
+  "shared_pack_helper_sha256": "124e049aa417316e4aa75d961c9964c156183afd77cfa901c08cced836c52a91",
+  "previous_manifests_unchanged": true,
+  "gitignore_previous_bytes_preserved_as_prefix": true,
+  "original_json_modified_or_deleted": false,
+  "source_or_network_operations_performed": false
+}

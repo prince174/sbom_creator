@@ -1,3 +1,13 @@
+## R111 — cold bootstrap verified; no new accuracy ranking
+
+Actual installed default Java coldDBCP110.125s (download100.489s),offlinewarm9.171s;
+all3views4/0/4 equalR110. Atomic private-stage validation/no-replace publication,
+invalid-existing-cache preservation and fixedsafe diagnostics.889tests/9skips,
+6Windowslinkskips coveredseparatelybyLinuxnativepreflight. NewpublicDBSHA491fe2dd…
+is NOTold measuredc26ec91d…; DBCPonly testedonnewDB, no automatic fullcorpusaccuracy
+transfer. Oldsnapshot peerREST252/DBCP4 unchanged. No ranking promotion.
+[Scope/metrics](java-js-service-accuracy.md),[bootstrap/recovery](java-db-cache-r111.md).
+
 ## R110 — default component release configuration, 2026-10-16
 
 Java v7 is now default; explicitfalse restores v4/v6. Fresh held-from-recent-tuning

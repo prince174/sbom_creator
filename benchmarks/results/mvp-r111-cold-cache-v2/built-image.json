@@ -1,0 +1,39 @@
+{
+  "image_id": "sha256:4b31c639de2cb444b115dd5ced5bf1fbc9ce98cf3657b6fd2f0923a867f13698",
+  "created": "2026-10-16T07:09:32.374234346Z",
+  "config": {
+    "User": "10001:10001",
+    "ExposedPorts": {
+      "8080/tcp": {}
+    },
+    "Env": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.12.14",
+      "PYTHON_SHA256=5c8462af5790baf43a321a1559dbe0db06d1be4300fb85fb53c40060668e548a",
+      "HOME=/home/sbom",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "SBOM_WORKSPACE=/workspace",
+      "TMPDIR=/workspace",
+      "TMP=/workspace",
+      "TEMP=/workspace",
+      "SBOM_IMAGE_TEMP_DIR=/workspace/image-cache",
+      "SBOM_TRIVY_CACHE_DIR=/workspace/trivy-cache"
+    ],
+    "Cmd": [
+      "sbom-creator-service"
+    ],
+    "WorkingDir": "/app",
+    "ArgsEscaped": true,
+    "Healthcheck": {
+      "Test": [
+        "CMD-SHELL",
+        "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)\""
+      ],
+      "Interval": 30000000000,
+      "Timeout": 3000000000
+    }
+  },
+  "source_file_count": 48
+}

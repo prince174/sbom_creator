@@ -1,4 +1,58 @@
-# Java / JavaScript: image-first service release candidate — R110, 2026-10-16
+# Java / JavaScript: image-first MVP — R111, 2026-10-16
+
+**Проверен первый запуск с пустой Java DB cache и последующий offline reuse.**
+Новый atomic cache защищает от partial-download poisoning; component policyv7,
+Java defaulttrue и JS type-surface policyv4 сохраняются. Это reliability improvement,
+не новый precision/recall gain.
+
+| Installed actual DBCP pipeline | Time | Public download | Cache status | Final / OS / Full |
+|---|---:|---:|---|---:|
+| Cold,новаяvolume/networkbridge |110.125s|100.489s|published atomic no-replace|4/0/4|
+| Warm,та жеDB/network-none |9.171s|0s|reused readonly|4/0/4|
+
+Все3coordinate multisets равны R110 DBCP; известный3/0/0 dependency control сохранился.
+Это не новый blind control или проверка metadata-only axis. Source/oracle/secret/socket
+не монтировались.48installed source/schema bytes равны freeze; image configID
+`sha256:4b31c639de2cb444b115dd5ced5bf1fbc9ce98cf3657b6fd2f0923a867f13698`.
+Native Linux6symlink guards,empty/nonempty no-replace иtoy cold/warm прошли без skips.
+889tests passed/9skips:701service+188selectedbench;6Windows symlink skips покрыты
+отдельным Linux preflight,3прежних skips сохранены. Ruff/schema/freeze checks PASS.
+
+**Новая publicDB отличается от измеренного R110 snapshot.** ColdSHA256
+`491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59`,1,554,915,328B,
+UpdatedAt2026-10-16. Она проверена пока только на DBCP. Полный Java aggregate ниже
+относится к старой DB`c26ec91d...` и не переносится автоматически на новый snapshot.
+JS R109307/9/0 не менялся/не переизмерялся. Warm peer regression на старой DB:
+REST252/DBCP4 raw identities/properties/paths/layers/config равны R110; no oracle/
+Syft/physical/publisher. v1 был frozen до финального parent-before-mkdir guard;
+итоговый cold/warm проверяет уже current48files. Old cache и29pairs сохранены.
+
+Staging2GiB/10kentries, metadata16KiB, supported SQLite layout/schema/index/fullSHA,
+read-only stale reuse, fixed error codes. Existing invalid cache/foreignlocks
+сохраняются, partial cold stages очищаются, hidden retry/overwrite отсутствуют.
+Schema VM100ksteps/2s; full quick_check не используется и full integrity/authenticity/
+hostile-writer/power-loss durability не заявляются. Docker host discovery v1failure
+не дошёл до build/network, v2 сделал одну реальную public download попытку.
+[Cache/recovery guide](java-db-cache-r111.md),
+[actual stage report](../benchmarks/results/mvp-r111-summary-v1/report.json).
+
+Runtime commit `782cae1` pushed. Git binding45byte-exact/3CRLF-LF-only;48actual
+installed bytes совпадают с executed source. Исходные CRLF program snapshots сохранены;
+точные LF program bytes восстановлены из frozen harness AST и совпали с freeze SHA.
+Это не независимый capture container argv: reduced inspect не сохранял Cmd/Args.
+
+R111 lossless evidence:85JSON/3,431,636raw bytes →2,101,338JSON+gzip bytes,
+4largeJSON/2uniquegzip. Manifest SHA256
+`dfd8685e0872267314c2f6b661f462acba0143b79352b0363f3d154dd9a398a3`;
+`python benchmarks/package_mvp_r111.py restore/verify`. Original bytes сохранены;
+R105–R110 manifests не менялись. Новая1.55GBDB остаётся в отдельной named volume,
+не публикуется в Git.
+
+Следующая необходимая проверка перед заявлением метрик на новой DB — совместимость
+её classifier inputs с прежним корпусом, затем только изменившиеся final predictions.
+Новых foreign build recipes/40пар/direct graph как MVP gate не добавляется.
+
+## Historical measured release R110, 2026-10-16
 
 **Java v7 принят как default самого сервиса.** `Settings.java_archive_components=True`,
 `.env.example` true; Docker image не подставляет скрытый включающий flag. Обратный

@@ -1,0 +1,7 @@
+{
+  "status": "not-applicable",
+  "reason": "source_poms_not_provided",
+  "edges": [],
+  "profile": "java-maven-source-modules-v1",
+  "graph_complete": false
+}

@@ -769,3 +769,10 @@ benchmarks/results/build-references-v1/
 /benchmarks/results/mvp-r110-js-publish-v1/paired-pino-v1/analysis/os.cdx.json
 /benchmarks/results/mvp-r110-js-publish-v1/paired-pino-v1/analysis/selected.syft.json
 # END R110 exact packed-evidence originals
+
+# BEGIN R111 exact packed-evidence originals (package_mvp_r111.py)
+/benchmarks/results/java-db-peer-regression-r111-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/java-db-peer-regression-r111-v1/rest/image-peer.cdx.json
+/benchmarks/results/mvp-r111-cold-cache-v1/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+/benchmarks/results/mvp-r111-cold-cache-v2/executed-source/sbom_creator/schemas/bom-1.7.schema.json
+# END R111 exact packed-evidence originals

@@ -1,0 +1,507 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:a372fd77-522a-5b57-ab4d-5247d4111989",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-16T07:11:40Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.51.1"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "ff0e98f94efc9a45",
+      "type": "container",
+      "name": "/inputs/image.tar",
+      "version": "sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64"
+    },
+    "properties": [
+      {
+        "name": "sbom-creator:auxiliary-components-omitted",
+        "value": "4"
+      },
+      {
+        "name": "sbom-creator:build-link",
+        "value": "unverified"
+      },
+      {
+        "name": "sbom-creator:runtime-execution",
+        "value": "not-assessed"
+      },
+      {
+        "name": "sbom-creator:unknown-count",
+        "value": "0"
+      },
+      {
+        "name": "sbom-creator:provenance",
+        "value": "{\"mode\": \"rules\", \"request\": {\"repository_url\": null, \"commit\": null, \"image\": \"docker.io/library/sbom-held-control@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\"}, \"image\": {\"image\": \"docker.io/library/sbom-held-control@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"immutable_reference\": \"docker.io/library/sbom-held-control@sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"image_digest\": \"sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"platform_digest\": \"sha256:0515fc48f9e0b0070dce9b7c0a66f0597f173ee78387582eb9baa56d62c09f64\", \"registry_digest\": null, \"acquisition\": \"archive\", \"image_id\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"image_config_digest\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"requested_platform\": \"linux/amd64\", \"platform\": \"linux/amd64\", \"repo_digests\": [], \"syft_version\": \"1.51.1\", \"scope\": \"squashed\", \"container_started\": false, \"build_link\": \"unverified\", \"acquisition_method\": \"syft-direct-v1\", \"payload_evidence\": {\"a6561b27cc4d7e4e\": {\"status\": \"confirmed\", \"path\": \"/application/commons-dbcp2-2.13.0.jar:org/apache/commons/dbcp2/AbandonedTrace.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"9cbb826ee965ffbf\": {\"status\": \"confirmed\", \"path\": \"/application/commons-logging-1.3.4.jar:org/apache/commons/logging/Log.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"e6d2ad05ad9d64eb\": {\"status\": \"confirmed\", \"path\": \"/application/commons-pool2-2.12.0.jar:org/apache/commons/pool2/BaseKeyedPooledObjectFactory.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}, \"97bf7488b77b8a33\": {\"status\": \"confirmed\", \"path\": \"/application/jakarta.transaction-api-1.3.3.jar:javax/transaction/Transactional$TxType.class\", \"error_type\": null, \"method\": \"pinned-syft-final-files-plus-bounded-archive-read-v1\", \"scope\": \"Some payload present; completeness and runtime use not established\"}}, \"identity_binding_envelope\": {\"catalog_sha256\": \"8b4777516c681deacc08850f50ac10a3d8d9a6297f0fb63ca6b415f2cf60190a\", \"payload_sha256\": \"e75d9ef43c79b4e8ff2177761e3c873e70e78634bb752d6b40f6cff76f9eabef\", \"image_config_digest\": \"sha256:358e71dbfca74af67cb0eee4d0989800c54ddd181d1c39c20300b052942cb1be\", \"artifacts\": {\"a6561b27cc4d7e4e\": {\"status\": \"BOUND\", \"reason\": null}, \"9cbb826ee965ffbf\": {\"status\": \"BOUND\", \"reason\": null}, \"e6d2ad05ad9d64eb\": {\"status\": \"BOUND\", \"reason\": null}, \"97bf7488b77b8a33\": {\"status\": \"BOUND\", \"reason\": null}}, \"scope\": \"Identity corroboration only; no directness or execution claim\", \"reader_policy\": \"verified-java-archive-component-v1\", \"archive_presence\": {}, \"archive_presence_sha256\": \"44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a\", \"archive_database_sha256\": \"491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59\"}, \"java_reader_policy\": \"verified-java-archive-component-v1\", \"java_identity_engine\": {\"version\": \"0.75.0\", \"database_sha256\": \"491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59\", \"database_bytes\": 1554915328, \"database_metadata_sha256\": \"40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2\", \"database_metadata_version\": 1, \"database_updated_at\": \"2026-10-16T01:00:20.589203513Z\", \"database_next_update\": \"2026-10-19T01:00:20.589203Z\", \"database_stale\": false, \"database_validation\": \"full SHA256; supported read-only SQLite schema/index; not full integrity/authenticity\", \"java_database_cache_status\": \"reused\", \"java_database_cache_publication\": \"existing validated directory; no refresh\", \"java_database_download_seconds\": 0.0, \"java_database_validation_seconds\": 2.017149367980892}, \"java_image_status\": \"corroborated\"}, \"source_kind\": \"not-provided\", \"created_at\": \"2026-10-16T07:11:40.142452+00:00\", \"build_link\": \"unverified\", \"syft_version\": \"1.51.1\", \"syft_schema\": \"16.1.10\", \"sbom_creator_version\": \"0.7.0\", \"assessment\": {\"mode\": \"rules\", \"score\": null, \"verified_model\": false}, \"input_hashes\": {\"source.syft.json\": \"f1f7543e4092ed2f9001af0472fd36377fa7a980b01860d11c17172d5a2f59a7\", \"image.syft.json\": \"affa788401c78666349025c0473c297057be9987fd8b551b2c3392ae8cff404e\"}}"
+      },
+      {
+        "name": "sbom-creator:assessment-mode",
+        "value": "rules"
+      },
+      {
+        "name": "sbom-creator:policy-version",
+        "value": "image-delivered-archive-v7"
+      },
+      {
+        "name": "sbom-creator:coverage",
+        "value": "no-known-gaps"
+      },
+      {
+        "name": "sbom-creator:payload-verification",
+        "value": "performed"
+      },
+      {
+        "name": "sbom-creator:inventory-scope",
+        "value": "non-os-packages"
+      },
+      {
+        "name": "sbom-creator:project-build-usage",
+        "value": "not-established"
+      },
+      {
+        "name": "sbom-creator:cross-scope-relationships",
+        "value": "See full.cdx.json; filtered in this view"
+      }
+    ]
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:maven/org.apache.commons/commons-dbcp2@2.13.0?package-id=a6561b27cc4d7e4e",
+      "type": "library",
+      "group": "org.apache.commons",
+      "name": "commons-dbcp2",
+      "version": "2.13.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apache:commons-dbcp2:2.13.0:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.apache.commons/commons-dbcp2@2.13.0",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "0c583470cb3e743a7691cbc3114184d9e68059a2"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-archive-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons_dbcp2:2.13.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons:2.13.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/application/commons-dbcp2-2.13.0.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "commons-dbcp2"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.apache.commons"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/application/commons-dbcp2-2.13.0.jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/commons-logging/commons-logging@1.3.4?package-id=9cbb826ee965ffbf",
+      "type": "library",
+      "group": "commons-logging",
+      "name": "commons-logging",
+      "version": "1.3.4",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apache:commons-logging:1.3.4:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/commons-logging/commons-logging@1.3.4",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "b9fc14968d63a8b8a8a2c1885fe3e90564239708"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-archive-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons_logging:1.3.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons:1.3.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/application/commons-logging-1.3.4.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "commons-logging"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "commons-logging"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/application/commons-logging-1.3.4.jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.commons/commons-pool2@2.12.0?package-id=e6d2ad05ad9d64eb",
+      "type": "library",
+      "group": "org.apache.commons",
+      "name": "commons-pool2",
+      "version": "2.12.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:apache:commons-pool2:2.12.0:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/org.apache.commons/commons-pool2@2.12.0",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "458563f69fbdaebf7daadfe10dc3a22e42a7de50"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-archive-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons_pool2:2.12.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:apache:commons:2.12.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/application/commons-pool2-2.12.0.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "commons-pool2"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "org.apache.commons"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/application/commons-pool2-2.12.0.jar"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.3?package-id=97bf7488b77b8a33",
+      "type": "library",
+      "group": "jakarta.transaction",
+      "name": "jakarta.transaction-api",
+      "version": "1.3.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "http://www.eclipse.org/legal/epl-2.0, https://www.gnu.org/software/classpath/license.html"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:jakarta.transaction-api:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*",
+      "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@1.3.3",
+      "externalReferences": [
+        {
+          "url": "",
+          "hashes": [
+            {
+              "alg": "SHA-1",
+              "content": "c4179d48720a1e87202115fbed6089bdc4195405"
+            }
+          ],
+          "type": "build-meta"
+        }
+      ],
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "java-archive-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "java"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "java-archive"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction-api:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction_api:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction_api:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle-corporation:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle-corporation:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle_corporation:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle_corporation:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.eclipse.ee4j:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.eclipse.ee4j:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j-community:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j-community:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j_community:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j_community:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.glassfish:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.glassfish:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:glassfish:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:glassfish:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:eclipse:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:eclipse:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j:jakarta.transaction-api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j:jakarta.transaction_api:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction-api:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction_api:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:jakarta.transaction:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle-corporation:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:oracle_corporation:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.eclipse.ee4j:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j-community:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j_community:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:org.glassfish:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:glassfish:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:eclipse:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ee4j:ee4j:1.3.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:f7e490a705cf96e6f40293e093c62a9a46c0f28687b87464fb12e4f8b0ed48a9"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/application/jakarta.transaction-api-1.3.3.jar"
+        },
+        {
+          "name": "syft:metadata:-:artifactID",
+          "value": "jakarta.transaction-api"
+        },
+        {
+          "name": "syft:metadata:-:groupID",
+          "value": "jakarta.transaction"
+        },
+        {
+          "name": "syft:metadata:virtualPath",
+          "value": "/application/jakarta.transaction-api-1.3.3.jar"
+        }
+      ]
+    }
+  ],
+  "dependencies": []
+}

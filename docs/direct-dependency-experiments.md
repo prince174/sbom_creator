@@ -1629,3 +1629,52 @@ R110 losslesspack250JSON248,951,489rawB ->25,955,415BJSON+gzip86uniqueobjects;
 manifestSHA2b2221eefc2dedfce13185c55c2f9fba8e2a36e962e0952e0586d1e7ea56a03a.
 `python benchmarks/package_mvp_r110.py restore/verify`, originals retainedlocal,
 R105–R109manifests unchanged.
+
+
+## R111 — atomic public Java DB cache and actual cold/offline reuse, 2026-10-16
+
+Cachepopulatedonlyifabsent. Private siblingstage, fullDBSHA/header/pagecount/metadata/
+exactSQLitePK+nonpartialSHA1index+boundedqueryplan checks beforewholepair directory
+atomic no-replace. Windowsrename/Linuxrenameat2; externalemptytarget neverreplaced.
+Existinginvalidcache/foreignlock preserved; stalevalidcache read-only reused andflagged.
+Stagepostexit2GiB/10kentries;metadata16KiB,DBhash1MiBchunks<=2GiB. ConstructorSQLVM
+100ksteps/2s;fullquick_checkvalid1.55GBDB timedout2s, notcalledcorrupt/notusedproduction.
+FixedCACHE_INVALID/BOOTSTRAP_BUSY/DOWNLOAD_FAILED/DOWNLOAD_INVALID/PUBLICATION_FAILED
+exportedwithoutunsafe exceptiontext/paths. No fullintegrity/authenticity/fsyncdurability/
+hostile-writerisolation claims.
+
+NewactualbuiltRC4b31c639de2cb444b115dd5ced5bf1fbc9ce98cf3657b6fd2f0923a867f13698,
+build35.797s,48installedhashesexactfreeze. Freshnativevolume coldpublicDBoneattempt:
+download100.4886s,validate/publish2.2127s,pipeline110.125s/container111.781s.
+OfflinewarmnetworkNONEpipeline9.171s/container10.609s,download0,validation2.0171s.
+Nonroot10001/readonly/capdrop/nosocket/source/ref/secrets,3GiB2CPU,publicbridgecold,
+no oldDBmount;native6symlinkcases+atomicempty/nonempty/toy9casesPASS0skips.
+All3coordsets4/0/4 equalcold/warm/R110DBCP,known3/0/0 unchanged;notnewblindaccuracy.
+
+NewpublicDB1,554,915,328B SHA491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59,
+metadataSHA40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2,
+UpdatedAt2026-10-16,NextUpdateOct19. DIFFERENToldc26ec91d… measured1,553,915,904B;
+fulloldJavaaggregate3862/20/18 NOTremeasuredfornewDB. Tagsmutable,publishernotattested.
+Newvolume sbom-r111-public-java-1792134539387152100 retained;oldcache/29pairs unchanged.
+
+Peer-onlyoldDB REST252/DBCP4 allGAV/type/properties/path/layer/config exactR110,
+freshTrivy4.703/4.125s,noSyft/physical/publisher/oracle/download. v1snapshotbeforefinal
+cacheparentguard (noidentitychange);currentinstalledcold/warm coversfinalguard.
+889testsPASS9skip (701service+188bench);6Windowslinkprivilege skips verifiedseparately
+onLinux,3oldskips. Initialcachefocusedfailure fixtureSQLitecontextcommittedbutdidnot
+close DB, fixedsharedtestfixture withclosing;negativeXMLpreserved. Nativecoldharnessv1
+sanitizedhostenvcouldnotfindbuildx,failedbeforebuild/network;v2onlynonsecretpluginpaths
+restored,ONEactualnetworkdownload. No runtime classifier precision claim/rankpromotion.
+
+Next: compare newpublicDB classifierinputs vsmeasuredcorpus beforeclaimingnewDBscores;
+onlychangedfinals neednewpost-eval. No newforeignrecipe/reader-onlyunchangedloops.
+
+R111 runtime `782cae1` pushed. Gitbinding45exact/3CRLF-LF-only,48installedbytes
+exactexecutedsource. CRLFprogramsnapshotsretained; exactLF reconstructedfromfrozen
+harnessASTmatchespre-execSHA,NOTindependentcontainerargvcapture(reducedinspectomitsArgs).
+No rerun/normalization.
+
+R111 pack85JSON3,431,636rawB ->2,101,338B JSON+gzip(4large/2uniquegzip),manifest
+SHAdfd8685e0872267314c2f6b661f462acba0143b79352b0363f3d154dd9a398a3.
+package_mvp_r111.py restore/verify; originalsretained,newDBinnamedvolumeNOTGit,
+oldR105–R110manifestsunchanged.

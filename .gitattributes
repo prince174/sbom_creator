@@ -25,3 +25,10 @@ benchmarks/results/archive-metadata-inspection-r108-v1/executed-source/** -white
 benchmarks/results/mvp-r110-default-focused.xml -whitespace
 benchmarks/results/mvp-r110-default-focused-v2.xml -whitespace
 benchmarks/results/mvp-r110-unit.xml -whitespace
+
+# Preserve exact failed R111 pytest traceback spacing.
+benchmarks/results/mvp-r111-cache-focused-v1.xml -whitespace
+benchmarks/results/mvp-r111-cold-harness-tests-v1.xml -whitespace
+
+# Preserve hash-bound R111 peer-regression executed source bytes.
+benchmarks/results/java-db-peer-regression-r111-v1/executed-source/** -whitespace

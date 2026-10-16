@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "installed_source_files_verified": 48,
+  "native_preflight_cases_passed": 9,
+  "native_preflight_skips": 0,
+  "cyclonedx_schemas_verified": 6,
+  "lossless_exports_verified": 32,
+  "cold_warm_three_coordinate_multisets_equal": true,
+  "program_snapshot_bindings": {
+    "pipeline": {
+      "stored_sha256": "dcaa0c5fee172669ad15b26690272af0ab33dba041d02bd9b62992c5c4945ef5",
+      "executed_lf_sha256": "9c71087f8b0c07f07684ef101fc8ab4a25bb5fd4388589773c78650c8e93a62a",
+      "binding": "CRLF/LF-only snapshot serialization"
+    },
+    "native_preflight": {
+      "stored_sha256": "e793e307e19b9c648f67b65c9ce9d65bd4374186c3cb52b75b19acf6a28acb66",
+      "executed_lf_sha256": "4b3dcbadaa7c3ad07c3c349e4b0d433d94ad7fef89ca8ac0c14333a9d393d145",
+      "binding": "CRLF/LF-only snapshot serialization"
+    }
+  },
+  "source_build_and_snapshot_hashes_unchanged": true,
+  "image_id": "sha256:4b31c639de2cb444b115dd5ced5bf1fbc9ce98cf3657b6fd2f0923a867f13698",
+  "phases": {
+    "cold": {
+      "pipeline_seconds": 110.125,
+      "download_seconds": 100.48857351701008,
+      "validation_seconds": 2.212659179000184,
+      "database_sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59",
+      "database_bytes": 1554915328,
+      "metadata_sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2",
+      "component_counts": {
+        "final.cdx.json": 4,
+        "full.cdx.json": 4,
+        "os.cdx.json": 0
+      }
+    },
+    "warm": {
+      "pipeline_seconds": 9.171,
+      "download_seconds": 0.0,
+      "validation_seconds": 2.017149367980892,
+      "database_sha256": "491fe2ddb9cfd09bfb1e216d49541e9b64628621ce3538c23ecee5864bfefd59",
+      "database_bytes": 1554915328,
+      "metadata_sha256": "40b61a18939abfcdbedb76959f5c548100ad245f0a04ca4949b67d90a9078bb2",
+      "component_counts": {
+        "final.cdx.json": 4,
+        "full.cdx.json": 4,
+        "os.cdx.json": 0
+      }
+    }
+  },
+  "reference_accessed": false,
+  "accuracy_evaluated": false,
+  "public_tags_mutable": true,
+  "publisher_authenticity_proven": false
+}

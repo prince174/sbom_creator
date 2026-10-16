@@ -1,5 +1,13 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
+## R111 public identity DB bootstrap
+
+Atomic coldcache and offlinewarm actualimage-only DBCP pass, no direct-graph change.
+Cold/latest publicDB differsfromR110snapshot; oldJava3862/20/18 not remeasured under
+newdata, DBCP3/0/0 componentregressiononly. Image-onlydirect638Java/103JSUNKNOWN
+remain separate. No direct-rank promotion or graph inference from imagepresence.
+[Current boundaries](java-js-service-accuracy.md).
+
 ## R110 default image-first component MVP
 
 Java verified-archive v7 is now default, REST104/3/2+DBCP3/0/0 fresh actual pipelines

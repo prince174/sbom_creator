@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "oracle_read": false,
+  "seconds": 4.125,
+  "raw_component_instances_equal": true,
+  "image_config_equal": true,
+  "raw_component_count": 4,
+  "compared_fields": "type/group/name/version/PURL and all producer properties including exact FilePath/LayerDiffID/LayerDigest",
+  "tool": {
+    "version": "0.75.0",
+    "database_sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25",
+    "database_bytes": 1553915904,
+    "database_metadata_sha256": "fae3050b82dda96887e4a0495f56b4dae1c90c287f330e18564cc0f1fcc85327",
+    "database_metadata_version": 1,
+    "database_updated_at": "2026-10-15T00:58:48.745137381Z",
+    "database_next_update": "2026-10-18T00:58:48.74513702Z",
+    "database_stale": false,
+    "database_validation": "full SHA256; supported read-only SQLite schema/index; not full integrity/authenticity",
+    "java_database_cache_status": "reused",
+    "java_database_cache_publication": "existing validated directory; no refresh",
+    "java_database_download_seconds": 0.0,
+    "java_database_validation_seconds": 2.5
+  },
+  "cache_helper_calls": 1,
+  "allowed_commands": [
+    {
+      "command_kind": "version",
+      "label": "Trivy image version"
+    },
+    {
+      "command_kind": "image",
+      "label": "Trivy image inventory"
+    }
+  ],
+  "fresh_trivy_image_scan": true,
+  "syft_or_physical_reader_or_publisher": false,
+  "baseline_sha256": "d23e5983346a2b298e8ef2ea04aa10cc90fb86c70ef7d125b47d3bb952d223cd",
+  "raw_output_sha256": "fe0ccfe6036085f4245711fd85c5ce9bba5d6502a2dc9ecb7163994cce54e200"
+}
