@@ -1,4 +1,124 @@
-# Java / JavaScript: actual service accuracy — R107 opt-in experiment, 2026-10-16
+# Java / JavaScript: actual service accuracy — R108, 2026-10-16
+
+Измеряется **final.cdx.json самого сервиса**; совпадают точное имя и версия.
+Image-only не использует repository/reference/build cache. Все final/os/full,
+original inventories, observed payload и identity/presence audits сохранены.
+Референсы открыты отдельным evaluator после завершения всех4 прогнозов.
+
+**R108 поднимает Microservices выше90% на прежнем согласованном scope:**139/1/1
+вместо124/1/16; Dropwizard907/0/0 вместо893/0/14.29новых TP, без новых FP и потерь
+прежних подтверждённых координат/physical witnesses. Новый режим реализован в
+runtime, но остаётся **явным opt-in** `SBOM_JAVA_ARCHIVE_COMPONENTS=true`, policy
+`image-delivered-archive-v7`. Default false сохраняет R105/v4; один nested-флаг —
+R107/v6. Метрики v7 нельзя выдавать за поведение default-конфигурации.
+
+| Java / прежний scope | TP / FP / FN | Precision | Recall / exact-version coverage | F1 | Count delta | Время |
+|---|---:|---:|---:|---:|---:|---:|
+| Microservices,1 owner +7 UNKNOWN |139/1/1|99.29%|99.29%|99.29%|0|63.468s|
+| Petclinic,92 SHA-labelled packaged components |90/3/2|96.77%|97.83%|97.30%|+1|9.875s|
+| Javalin,8 owners +6 UNKNOWN |128/0/0|100%|100%|100%|0|6.641s|
+| Dropwizard,16 owners +18 UNKNOWN |907/0/0|100%|100%|100%|0|49.797s|
+
+Java micro **1264/4/3**, P99.6845%, R/exact-version coverage99.7632%, F199.7239%;
+1268predicted/1267reference owner/component instances, delta+1. Repository macro
+P99.0150%, R99.2780%, F199.1458%. Conditional versions1264/1265=99.9209%
+(Boot98.90%, остальные100%).26scored owner instances — не26 независимых проектов.
+**31 UNKNOWN scope сохранён** с raw deltas, не считается прошедшим >90.
+Это4 раскрытых tuning repositories, не fresh independent acceptance.
+[Post-only evaluation](../benchmarks/results/mvp-r108-v1/evaluation.json).
+
+Syft1.51.1/Trivy0.75.0 inventories кешированы; physical reads и реальная conversion/
+publication12SBOM выполнены заново.129.781s суммарно исключают scanner/acquisition.
+47source/schema files, input/DB hashes frozen до прогнозов; evaluator проверяет
+4-case marker/freeze/12schemas до oracle. Whole final Micro2628 не является TP count.
+
+Новая ось **verified archive component presence** не подменяет payload.201archive
+proofs(170Micro+31Drop) имеют complete SHA256/SHA1 и CRC файлов ZIP;37nested
+instances также повторно проверяют STORED-member CRC/range. Все201 сохраняют
+`observed_payload=unconfirmed`, весь payload mapping равен R107.105proofs используют
+канонический `pom.properties`,96 — exact full-SHA1 public Java DB association и тот
+же unique Trivy GAV/path/layer. Gradle-published Boot starters содержат только
+manifest/LICENSE/NOTICE, без `pom.properties`; filename/manifest не являются GAV proof.
+[Fresh physical inspection](../benchmarks/results/archive-metadata-inspection-r108-v1/verification.json),
+[public hash research](../benchmarks/results/public-java-hash-research-r108-v1/report.json).
+
+Public DB и Trivy коррелированы. SHA1→GAV index с first-writer семантикой не является
+publisher authentication или доказательством глобальной уникальности GAV. Полный
+SHA256 запечатывается отдельно; conflicting metadata/DB/peer или несколько GAV для
+одинакового SHA256 внутри образа остаются UNKNOWN. Proof — внутренний output, API
+его не принимает. Нет утверждения о class/resource bytes, execution или directness.
+
+Оставшиеся FN: Micro netty-common4.2.9.Final с ambiguous identity; Boot Hibernate
+group/models-version mismatch. Packaging-added jarmode/jarmode-tools остаются
+conservative FP/UNKNOWN. Ничего не исключено по эталону ради процента.
+614Java/103JS image-only direct edges UNKNOWN/FN, optional source model отдельно;
+полнота direct graph и40пар не условие первого component MVP.
+
+Micro ресурсы: normalization1,303,884,800B once, verification1,953,449,473B,
+payload windows96,514,144B; complete member-CRC3,950,660B оплачены прежним128MiB
+ordinary-read cap; index9,814,345B/91,330chargedentries,256resident107evictions363charges.
+Бюджеты не повышены:8GiBnormalization/отдельно8GiBverification,32MiB/read128MiBpayload,
+outer128MiB/nested32MiB, ZIP2MiBsingle/16MiBcumulative/100kchargedentries,
+4096views/180s cooperative witness. Drop сохраняет137 ZIP_DIRECTORY_SINGLE guard
+observations вне согласованных score instances. Hardquota/peakRSS/concurrency/coldDB
+acceptance не доказаны.
+
+JS accuracy не пересчитана по новым scans: последние fresh image-only no-lock R106
+дали306/9/1, P97.14%, R/exact-version coverage99.67%, F198.39%; macro8positive roots
+P93.48%, R99.88%, conditionalversions100%.4emptyroots не успехи. Axios/Fastify/Pino
+fixture FP и Nest @tokenizer/token FN остаются. R10812cachedpublisher regressions
+сохраняют36views и selectedIDs R107,89.578s, JSv3; не новые scans/accuracy. Оригинальный
+Chalk PermissionError сохранён, locking fix не заявляется.
+[JS regression](../benchmarks/results/mvp-r108-js-publish-v1/report.json).
+
+604service/selectedbenchmark tests passed,3skips;103new archive/hash tests,
+Ruff/schema/freeze checks прошли. Freshphysical/actualpublisher defaultBootv4 и
+nestedJavalinv6 сохраняют3coordinate multisets/selectedIDs; v6 exactcatalog/payload/
+audit. [Default preservation](../benchmarks/results/mvp-r108-default-parity-v1/report.json).
+
+Actual installed Linux RC `sbom-creator:mvp-r108`, image/config ID
+`sha256:aeae62a80a41d2ac2c8dae93a38f96233b7ee822ef74ead045a38211486047da`,
+прошёл полный Micro pipeline со **свежими Syft/Trivy scans**:547.699s, build31.109s;
+local archive acquisition исключён. final/os/full2628/0/2628,5UNKNOWN groups;
+все3 coordinate multisets,2628selectedIDs и170complete archiveproofs точно равны
+Windows, payload facts тоже равны.47installed source/schema hashes равны freeze,
+16export/hash/schema checks прошли; source/publicDB не изменились. Nonroot10001,
+read-only/network-none/no socket/source/reference/secrets,3GiB/2CPU. Linux actual
+payload_read_bytes95,338,413, Windows96,514,144; counters не выдаются за одинаковые.
+Cgroup memory.peak856.0MiB включает cache/probes, не process RSS и не2GiB acceptance.
+Это installed pipeline parity, не fresh independent accuracy.
+[Installed verification](../benchmarks/results/mvp-r108-container-v1/verification.json),
+[Windows/three-view/proof parity](../benchmarks/results/mvp-r108-container-v1/windows-coordinate-comparison.json),
+[resources/timing](../benchmarks/results/mvp-r108-container-v1/resource-summary.json).
+Runtime commit `379469a`:46Git blobs побайтно равны executed snapshot, один прежний
+`image_java/__init__.py` отличается только CRLF/LF. Эта неудачная проверка exactGit
+bytes сохранена отдельно; все47 installed hashes совпадают с реальными executed
+bytes, исходный CRLF snapshot и исторический HEAD build receipt не переписаны.
+[Commit/content binding](../benchmarks/results/mvp-r108-v1/committed-source-binding.json).
+
+Отдельный POST-only scope этап заново проверил actual build/runtime TAR trees и
+точный image layer по OCI platform/config/DiffID для всех3 reactors. Уникальные
+own-module CDX SHA256 дали standalone labels:185/199Javalin,2145/2179Drop,
+1361/1369Micro.34Drop/8Micro primary outputs вынесены отдельно с effective-output
+SHA proof;14Javalin unmatched сохраняют UNKNOWN. Предсказания не использовались
+для выбора truth. **Это ещё не закрывает31UNKNOWN**: nested/shaded содержимое
+primary JAR и packaging extras требуют независимой разметки. Новая scoring view
+не выдумана, исторические scopes/scores не изменены.
+[Packaged tree binding/labels](../benchmarks/results/reactor-packaged-scope-r108-v1/report.json).
+
+Перед default adoption: независимая nested packaged-SHA разметка, held-from-tuning
+controls и слабые JS roots. Раскрытые результаты не дают универсального acceptance.
+Развёрнутые сервисы не менялись, чужие пары не пересобирались. Долгосрочный corpus/
+direct research остаётся отдельным.
+
+R108 evidence:340JSON,738,403,545 исходных байт сохранены локально. JSON lossless
+pack (120unique gzip +smallJSON) занимает59,310,431B; контейнерные export.gz тоже
+сохраняются отдельно с SHA. `python benchmarks/package_mvp_r108.py restore` восстанавливает
+крупные JSON для ссылок/повтора, `verify` проверяет точные original/stored hashes.
+[Manifest R108](../benchmarks/results/mvp-r108-evidence-manifest.json), SHA256
+`5a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d`. Старые R105/R106/R107 manifests не изменились.
+
+## Historical R107 opt-in experiment, 2026-10-16
 
 Измеряется **final.cdx.json самого сервиса** после фактического запуска сканеров,
 reader, identity gate и publisher. Референс открывает только evaluator после

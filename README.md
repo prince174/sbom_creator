@@ -200,7 +200,7 @@ SBOM_JAVA_ARCHIVE_COMPONENTS=true
 
 Он также выбирает nested reader и policy `image-delivered-archive-v7`. Помимо
 class/resource payload сервис может подтвердить **поставленный архив как компонент**:
-полные физические SHA256/SHA1, CRC всех ZIP members, точный image config/path/layer
+полные физические SHA256/SHA1, CRC файлов ZIP, точный image config/path/layer
 и GAV через канонический `pom.properties` либо exact full-SHA1 association в
 закреплённой публичной Java DB. Имя файла или один scanner inventory недостаточны.
 Metadata-only JAR сохраняет `observed_payload=unconfirmed`; наличие кода, исполнение,

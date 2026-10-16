@@ -1,3 +1,28 @@
+## R108 — delivered-archive evidence in the service, 2026-10-16
+
+No overall rank promotion: same disclosed scopes,31UNKNOWN owners, no fresh blind
+acceptance. New opt-in `SBOM_JAVA_ARCHIVE_COMPONENTS=true` selects runtime v7;
+default remains R105/v4, nested-only remains R107/v6.
+
+| Technique / mode | Measured components or graph | Scope |
+|---|---|---|
+| Service v7: Syft1.51.1+Trivy0.75.0, separate physical archive/payload gates |Micro139/1/1, Boot90/3/2, Javalin128/0/0, Drop907/0/0; micro1264/4/3,P99.68/R99.76; macroP99.02/R99.28 |Fresh physical reads and actual12SBOM with cached inventories;26scored owner instances across4repos,31UNKNOWN retained |
+| cdxgen13.4.0 + native Maven |Unchanged source Micro100/0/0 shipped direct, raw100/8/0 |Optional resolved model, not image component inventory/original-CI proof |
+| Trivy0.75.0 passive source projection |Unchanged source Micro76/0/24 direct |Optional partial fallback; not a comparable image score |
+
+29newTP/0newFP/0lost coordinates.201archive proofs retain observed_payload unconfirmed;
+all completeSHA256/SHA1+memberCRC, canonical properties or public full-SHA1 association,
+exact image/path/layer/GAV. DB and Trivy correlated, no publisher/global-uniqueness
+claim.604tests/3skips/Ruff; olddefaultv4/nestedv6 and12JS cachedpublisher regressions
+preserve3views/IDs. No new JS scans/Chalk locking fix; historical306/9/1 and weak
+fixture roots remain. [All metrics/limitations](java-js-service-accuracy.md),
+[R108 evaluation](../benchmarks/results/mvp-r108-v1/evaluation.json).
+
+R108 installed Linux Micro with fresh scanners passes547.699s; all3SBOM coordinate
+multisets/2628IDs/170archiveproofs equalWindows,47installed hashes,16exports verified.
+Same nonroot/read-only/network-none/no source/oracle/socket/secrets. This is not a
+new independent accuracy score or default adoption. [Installed proof](../benchmarks/results/mvp-r108-container-v1/verification.json).
+
 ## R107 — opt-in directory-credit LRU experiment, 2026-10-16
 
 Stable default remains R105 policy v4. Explicit `SBOM_JAVA_NESTED_WINDOWS=true`

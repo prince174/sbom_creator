@@ -1471,3 +1471,68 @@ metadata-only JARs with explicit identity/physical proof and negative controls;
 keep current16FN while testing. Installed Linux boundary now passes; independent
 packaged-scope proof remains separate. MicroR88.57 still fails >90 despite favourable aggregate;
 the opt-in/default split and precision trade-off remain explicit.
+
+## R108 — runtime delivered-archive presence, 2026-10-16
+
+Physical inspection precedes the new classifier: missing Boot starters are actual
+metadata-only JARs, manifest/LICENSE/NOTICE and NO pom.properties. No fabricated
+class/resource witness, filename GAV or reference-cache input. New runtime v7 has
+an explicit archive-presence axis, complete physicalSHA256/SHA1/allmemberCRC,
+canonical Maven properties or exact indexed readonly publicDB SHA1 association,
+same config/finalregularpath/layer/virtualchain/uniquepeer GAV. DBsha pinned before/
+after lookup; DB and Trivy correlated, no publisher/globalGAVuniqueness guarantee.
+Internal sealed facts only; API cannot inject proof. Flag defaults false, v4/v6
+unchanged. Metadata-only observed_payload remains unconfirmed.
+
+47source/schema files and cached Syft1.51.1/Trivy0.75.0/archives/publicDB frozen
+BEFORE four freshphysical/actualpublisher predictions; separate post-only evaluator:
+Micro139/1/1 vs124/1/16, Boot90/3/2, Javalin128/0/0, Drop907/0/0 vs893/0/14.
+29newTP/zero newFP/zero lost coordinates across3views. Java1264/4/3,
+P99.6845/R99.7632/F199.7239; repositorymacroP99.0150/R99.2780/F199.1458;
+conditionalversions99.9209/exactcoverage99.7632.1268predicted/1267reference delta+1.
+26scored owners/31UNKNOWN remain, no fresh blind acceptance. Micro netty identity,
+Boot group/version mistakes and packagingUNKNOWNFP retained.614directUNKNOWN/FN.
+[Evaluation](../benchmarks/results/mvp-r108-v1/evaluation.json).
+
+201archiveproofs(170Micro/31Drop),105canonicalproperties/96publichash, all complete
+SHA256/SHA1+CRC and payload mappings EXACTR107, including201unconfirmedpayload.
+Micro normalization1,303,884,800B once, verification1,953,449,473B,
+payload96,514,144B; memberCRC3,950,660B charged toold128MiBordinaryread cap,
+index9,814,345B/91,330entries,256resident107evictions. No cap increase.
+Drop137ZIP_DIRECTORY_SINGLE retained. Timings63.468/9.875/6.641/49.797s exclude
+cached scanner/acquisition cost.103new archive/hash negatives verify duplicates,
+shading, escapes, badGAV/path/layer/producer, CRC/truncation/encryption/symlink,
+staleproof/DBsnapshot/sibling, warmcache budgets and no rootPOM/packagejson promotion.
+604tests pass3skips/Ruff. Freshphysical actualpublisher defaultBootv4/nestedJavalinv6
+preserves3views/IDs and nested exactcatalog/payload/audit. JS12cachedpublisher/36schemas/
+IDs equalR107 in89.578s, no scanner/physical/oracle calls or new accuracy; original
+Chalk PermissionError unresolved. LastfreshJS306/9/1 retains weak fixture roots.
+
+Next: post-only packagedSHA labels for31UNKNOWN via existing immutable build/runtime
+TAR/config, held-from-tuning controls and JS weak roots beforedefaultadoption.
+No new foreign recipe/reference/deployment; image-first release need not wait40pairs
+or complete direct graph. All raw inventories and final/os/full preserved.
+
+R108 separate POST-only packaged-scope groundwork: actual build-app/runtime-app TAR
+SHA256 trees and exact OCI/config/DiffID-bound image application tree verified for
+all3reactors; predictions not inputs. Unique own-moduleCDX standaloneSHA labels:
+Javalin185/199(14UNKNOWN), Drop2145/2179(34attestedprimary separate),
+Micro1361/1369(8attestedprimaryfatJAR separate). No forced31UNKNOWN closure or
+newscore; nested/shaded primary content/packagingextras remainunlabelled.
+[Independent tree binding](../benchmarks/results/reactor-packaged-scope-r108-v1/report.json).
+
+R108 installed Linux full Micro pipeline with FRESH Syft/Trivy passes547.699s,
+build31.109s; image/configsha256:aeae62a80a41d2ac2c8dae93a38f96233b7ee822ef74ead045a38211486047da.
+47installed hashes,16exports/schema/hash checks, unchangedDB/source. Nonroot/read-only/
+network-none/no socket/source/oracle/secrets,3GiB2CPU.2628/0/2628final-os-full,
+5UNKNOWNgroups; exact3coordinate multisets/2628IDs/170completearchiveproofs/payloadfacts
+matchWindows. Linux actualpayload95,338,413B vsWindows96,514,144; no falsecounterparity.
+Cgroupmemory.peak856.0MiB(cache/probes included), notRSS/2GiBacceptance. No fresh
+independent accuracy claim. Runtime379469a committed/pushed;46Gitblobs exactfreeze,
+pre-existing image_java/__init__.py onlyCRLF/LF differs. Initial exactGitbyte check
+negative retained, no executabletext change; actualinstalled47hashes matchsnapshot.
+[Installed proof](../benchmarks/results/mvp-r108-container-v1/verification.json).
+
+R108 lossless JSON evidence:340files/738,403,545original bytes retained locally,
+120uniquegzip+smallJSON59,310,431B plus separately hashed container export.gz files.
+package_mvp_r108.py restore/verify; manifestSHA2565a7b17a87e9541221b995bcb29e94aed01ff16f0727b1a1a390d82242d73762d. OldR105/R106/R107 manifests unchanged. Ruff/schema/hash/diff checks pass.

@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 547.699,
+  "java_nested_windows": true,
+  "java_archive_components": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-delivered-archive-v7",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 5
+    },
+    "unknown_groups": {
+      "image_evidence": 5
+    },
+    "source_count": 0,
+    "image_count": 2646,
+    "selected_count": 2628,
+    "final_count": 2628,
+    "os_count": 0,
+    "full_count": 2628,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 355,
+      "UNKNOWN": 5
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 50.868
+  },
+  "source_kind": "not-provided",
+  "java_image_status": "corroborated",
+  "image_config_digest": "sha256:9363d3f231875f937c5a8904a1bb4d86e9d8ac0730eaf9d9f8d064e9cb848a8a",
+  "output_hashes": {
+    "coverage.json": "d558469aac56c6fe9ff04e05936fc4d7152c45daf96240885ede6ecbb13fb42e",
+    "decisions.json": "7ffde17ca915881a58e4e7651e13150ea8bfb83e1adb538f3f3ce3f6ae2b5206",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "9a554b9ea34484383a3b728425c4423d104d7b40ea9e5b079b7806d42f48c018",
+    "full.cdx.json": "ade4d26d8499c5c2b0c36fcee40cc112c393b08df3ef7aa19254eacd888d099e",
+    "image-identity-audit.json": "86e044378ab6d778150e4aed5ccbb097171dbc20a982c4b572b71327f3516643",
+    "image-original.syft.json": "a14aed3b57e15d2d309e9db94139f9daa0c211f8cf6183a201f319de444a9d16",
+    "image-peer.cdx.json": "6f4423ed9e00293dfbe5eda7eabcc90785d309880261364de5dc62d5d0316f72",
+    "image.syft.json": "62c24bd617ee641528b35776d7306837dc9f726dd3e5b83a1f50f92f81f2d4e8",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "c00c353b56c46bb2438315067af2ab114f3fc0b226030f4a758e6e206c1cb749",
+    "provenance.json": "77ab3469f5cc70d16c8915f4a7c7439af33f4dd9e95be25d3fd67e4f98c2fe42",
+    "review.json": "4d635be6fd8e1633c064af7b83704a6efe3479a0f579785907c19690486eb48b",
+    "selected.syft.json": "389f18c43dcb2ba7ac42192a56abeb1c7e9f18ac83be9522e49d0a4176b62be6",
+    "source.syft.json": "1a900282c0f6275684d79e60e47ae9fa041e3b0700bdee937399122366ffc585",
+    "summary.json": "c0a4be1788feb96f50b28358fe45138a692df5b14f1ec1cc273819ff082b5ca1"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "reference_accessed": false,
+  "classifier_changed": false,
+  "inputs": {
+    "benchmarks/results/archive-metadata-inspection-r108-v1/microservices.json": {
+      "bytes": 639991,
+      "sha256": "6d1f2aa8c9b64109381c0b5ff18dc4b015690c9c00a0f8b979b31a5b17069b58"
+    },
+    "benchmarks/results/archive-metadata-inspection-r108-v1/dropwizard.json": {
+      "bytes": 278351,
+      "sha256": "d6946a3cdf2682f90c1364283ec439b62b7df3cf042249043e0ff444b9cb3622"
+    },
+    "benchmarks/results/archive-metadata-inspection-r108-v1/digest-index.json": {
+      "bytes": 169401,
+      "sha256": "f8808e862e725bd3e21d574f4f05002047d1bc1d680894fca10082e3b3f52a72"
+    },
+    "benchmarks/.work/trivy-reactor-image-v1/cache/java-db/trivy-java.db": {
+      "bytes": 1553915904,
+      "sha256": "c26ec91db03a11014dfa45909d2b5275c0e34c2dee276363bc0c9693375acc25"
+    },
+    "benchmarks/.work/trivy-reactor-image-v1/cache/java-db/metadata.json": {
+      "bytes": 150,
+      "sha256": "fae3050b82dda96887e4a0495f56b4dae1c90c287f330e18564cc0f1fcc85327"
+    },
+    "benchmarks/research_public_java_hash_r108.py": {
+      "bytes": 12381,
+      "sha256": "7da6a5de14e62d9eb43f3d982db46b9f61f929affb61c557f0ad587d77b50bc6"
+    },
+    "benchmarks/public_java_hash_lookup_r108.py": {
+      "bytes": 6883,
+      "sha256": "c31a14610223ccc8969a640ea0d15ce3bb01c4975cf86f607575297f0c9f0425"
+    },
+    "src/sbom_creator/image_java/public_hash_identity.py": {
+      "bytes": 5941,
+      "sha256": "667ea3ac7d93986bad4dfaf3b9bed8247f90947934eee7c078025bdfc1bc6bc4"
+    }
+  }
+}

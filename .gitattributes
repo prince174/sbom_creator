@@ -17,3 +17,6 @@ benchmarks/results/mvp-r106-container-v1/smoke-host.log -whitespace
 benchmarks/references/** -text -whitespace
 benchmarks/corpus-inputs/** -text -whitespace
 benchmarks/manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Retain the exact pre-change source bytes used by the R108 physical inspection.
+benchmarks/results/archive-metadata-inspection-r108-v1/executed-source/** -whitespace

@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "unknown_count": 6,
+  "group_counts": {
+    "image_evidence": 6
+  },
+  "observation_counts": {
+    "image_only": 6
+  },
+  "reason_counts": {
+    "INSUFFICIENT_IMAGE_EVIDENCE": 6
+  },
+  "items": [
+    {
+      "candidate_id": "2d91266c3b4a1633d80f6bd333d9f9b7b184f623d82cbdc1e16030ebd84356ad",
+      "identity": "pkg:generic/curl@7.81.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "a08b6f3217eac6c2"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "7.81.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "other"
+      ],
+      "package_types": [
+        "binary"
+      ],
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "415f2ca4fd0b54aad1e06b9ecc9d27fbce3e90ccef23d7edd51e4beeadee669c",
+      "identity": "pkg:maven/jrt-fs/jrt-fs@17.0.20.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "621d3fecca52130b"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "17.0.20.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "843c7df34fb1fec484fa5522d535470bed2a084bff9afc1239c79843ddd368a1",
+      "identity": "pkg:generic/openssl@3.0.2",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "776d29b9182d4f83"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "3.0.2"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "other"
+      ],
+      "package_types": [
+        "binary"
+      ],
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "944a05ca1b57491dd0c164f2c4f4b702c1b4ea61643ada1f6f11f65a4a1bbfc1",
+      "identity": "pkg:generic/util-linux@2.37.2",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "6e40aa9a5ab03f91"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "2.37.2"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "other"
+      ],
+      "package_types": [
+        "binary"
+      ],
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "ae9a33987feed9fc9647867b12b064fca9b5c66199321c4f0848a0522f2ceb00",
+      "identity": "pkg:generic/gzip@1.10",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "42883ede1982f875"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "1.10"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "other"
+      ],
+      "package_types": [
+        "binary"
+      ],
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "b5d64e0a747422fbab55f95114040cab9678a62fd111dbf83a8e21b205db6248",
+      "identity": "pkg:generic/bash@5.1.16",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "e24b843c3ae58791"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.1.16"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "other"
+      ],
+      "package_types": [
+        "binary"
+      ],
+      "catalogers": [
+        "binary-classifier-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    }
+  ],
+  "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."
+}

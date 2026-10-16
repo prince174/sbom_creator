@@ -1,5 +1,25 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
+## R108 current image-first status, 2026-10-16
+
+Runtime now has a separate delivered-archive presence axis, explicit
+`SBOM_JAVA_ARCHIVE_COMPONENTS=true`/v7, default unchanged. Final components:
+Micro139/1/1, Boot90/3/2, Javalin128/0/0, Drop907/0/0; Java1264/4/3,P99.68/R99.76,
+29newTP/0newFP/no lost coordinates;31UNKNOWN scopes retained. This is a component
+result on disclosed repositories, not a new direct-graph benchmark.614Java/103JS
+image-only direct edges UNKNOWN/FN; cdxgen/Maven Micro100/0/0 remains a separate
+model-resolution environment, not original-CI proof. Direct completeness/40pairs do
+not gate the image-first MVP; unverified modes get no ranking.604tests/3skips;
+12cachedJS publisher regressions preserve36views, not new scanner scores.
+[Current metrics](java-js-service-accuracy.md).
+
+Installed R108 Linux Micro pipeline with fresh scanners passes547.699s; all3views,
+2628IDs/170archiveproofs equalWindows,47installed hashes/16exports verified. This is
+operational parity, not source direct-graph accuracy or fresh blind acceptance.
+[RC proof](../benchmarks/results/mvp-r108-container-v1/verification.json).
+
+## Historical R107 status
+
 Расширенная выборка: [29 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md).
 Текущая цель первого MVP — достоверные компоненты готового образа; source/build graph
 обогащается отдельно и не блокирует image SBOM. [Opt-in runtime R107](java-js-service-accuracy.md)
