@@ -1,9 +1,0 @@
-{
-  "status": "BLOCKED_REMOTE_MAVEN429",
-  "repository": "repo.maven.apache.org",
-  "observed_utc": "2026-10-15T20:58:21Z",
-  "retry_after_seconds": 1800,
-  "not_before_utc": "2026-10-15T21:28:21Z",
-  "automatic_immediate_retry": false,
-  "instruction": "Do not replay failed scan or start fresh Maven-Central requests before this deadline; retain unavailable result, never score partial SBOM."
-}

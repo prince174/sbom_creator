@@ -1,8 +1,0 @@
-{
-  "status": "FAILED_PREDICTION",
-  "error_type": "RuntimeError",
-  "accuracy": null,
-  "oracle_read": false,
-  "runtime_changed": false,
-  "note": "Preserve engine logs and partial artifacts; not a successful empty prediction"
-}

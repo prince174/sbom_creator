@@ -1,3 +1,0 @@
-2026-10-16T02:29:18+05:00	INFO	Loaded	file_path="G:\\code\\sbom_creator\\benchmarks\\results\\trivy-reactor-source-optional-mirror-v1\\trivy.yaml"
-2026-10-16T02:29:18+05:00	INFO	"--format cyclonedx" disables security scanning. Specify "--scanners vuln" explicitly if you want to include vulnerabilities in the "cyclonedx" report.
-2026-10-16T02:30:54+05:00	INFO	Number of language-specific files	num=19

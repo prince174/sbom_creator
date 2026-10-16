@@ -1,3 +1,0 @@
-2026-10-16T01:26:11+05:00	INFO	"--format cyclonedx" disables security scanning. Specify "--scanners vuln" explicitly if you want to include vulnerabilities in the "cyclonedx" report.
-2026-10-16T01:26:13+05:00	ERROR	[javadb] The first run cannot skip downloading Java DB
-2026-10-16T01:26:13+05:00	FATAL	Fatal error	run error: image scan error: scan error: scan failed: failed analysis: analyze error: pipeline error: failed to analyze layer (sha256:d13520887c811284eda6aec61aa8bcf1b5dc1760bd82afeea4a338d23f5743bc): post analysis error: post analysis error: Unable to initialize the Java DB: Java DB update failed: '--skip-java-db-update' cannot be specified on the first run

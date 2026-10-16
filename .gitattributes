@@ -6,32 +6,3 @@
 *.toml text eol=lf
 Dockerfile text eol=lf
 *.png binary
-# Audited report snapshots must keep the exact bytes used by SHA-256 receipts.
-benchmarks/results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-benchmarks/results/mvp-*/**/build.log -whitespace
-benchmarks/results/mvp-*/executed-source/** -whitespace
-# Frozen R106 split-language snapshots and the retained failed process log.
-benchmarks/results/mvp-r106-v1/java/executed-source/** -whitespace
-benchmarks/results/mvp-r106-v1/javascript/executed-source/** -whitespace
-benchmarks/results/mvp-r106-container-v1/smoke-host.log -whitespace
-benchmarks/references/** -text -whitespace
-benchmarks/corpus-inputs/** -text -whitespace
-benchmarks/manifest.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-
-# Retain the exact pre-change source bytes used by the R108 physical inspection.
-benchmarks/results/archive-metadata-inspection-r108-v1/executed-source/** -whitespace
-
-# Preserve exact failed R110 pytest XML diagnostics, including traceback spacing.
-benchmarks/results/mvp-r110-default-focused.xml -whitespace
-benchmarks/results/mvp-r110-default-focused-v2.xml -whitespace
-benchmarks/results/mvp-r110-unit.xml -whitespace
-
-# Preserve exact failed R111 pytest traceback spacing.
-benchmarks/results/mvp-r111-cache-focused-v1.xml -whitespace
-benchmarks/results/mvp-r111-cold-harness-tests-v1.xml -whitespace
-
-# Preserve hash-bound R111 peer-regression executed source bytes.
-benchmarks/results/java-db-peer-regression-r111-v1/executed-source/** -whitespace
-
-# Preserve the exact failed R113 API test diagnostic, including traceback spacing.
-benchmarks/results/mvp-r113-api-diagnostic-tests-v1.xml -whitespace

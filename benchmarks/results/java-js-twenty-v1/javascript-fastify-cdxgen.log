@@ -1,5 +1,0 @@
-ChildProcess permission is missing. This is required to spawn commands for some languages. Please invoke cdxgen with the argument --allow-child-process in case of issues.
-+ Preparing environment  0.0s
-+ Generating BOM  639 components  1.0s
-+ Post-processing BOM  0.1s
-+ Validating BOM  valid (js)  0.1s

@@ -1,9 +1,0 @@
-{
-  "experiment": "R45-overlay",
-  "correct_final_file": true,
-  "inventory_graph_unchanged": true,
-  "layers": 2,
-  "private_syft_json_bytes": 15637974,
-  "runtime_changed": false,
-  "limitation": "Overwrite tested; deletion/whiteouts, registry backend and many binaries not tested"
-}

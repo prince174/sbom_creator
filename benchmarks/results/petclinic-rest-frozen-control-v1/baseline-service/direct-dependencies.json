@@ -1,8 +1,0 @@
-{
-  "status": "not-applicable",
-  "reason": "no_root_package_json",
-  "profile": "npm-root-production-H2.1",
-  "graph_complete": false,
-  "build_usage_proven": false,
-  "edges": []
-}

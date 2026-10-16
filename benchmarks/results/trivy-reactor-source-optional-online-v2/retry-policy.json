@@ -1,9 +1,0 @@
-{
-  "status": "BLOCKED_REMOTE_MAVEN429",
-  "repository": "repo.maven.apache.org",
-  "observed_utc": "2026-10-15T21:28:33Z",
-  "retry_after_seconds": 1800,
-  "not_before_utc": "2026-10-15T21:58:33Z",
-  "automatic_immediate_retry": false,
-  "instruction": "Do not contact this blocked origin before the renewed deadline. Mirror experiment routes central to a separately documented host without origin fallback."
-}

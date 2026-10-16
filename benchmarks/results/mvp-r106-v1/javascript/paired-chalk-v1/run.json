@@ -1,7 +1,0 @@
-{
-  "status": "FAILED",
-  "oracle_read": false,
-  "elapsed_seconds": 15.671000000002095,
-  "error_type": "AnalysisError",
-  "error_stage": "reconcile_convert_validate"
-}

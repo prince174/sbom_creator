@@ -1,3 +1,0 @@
-2026-10-16T03:01:15+05:00	INFO	"--format cyclonedx" disables security scanning. Specify "--scanners vuln" explicitly if you want to include vulnerabilities in the "cyclonedx" report.
-2026-10-16T03:01:18+05:00	INFO	Detected OS	family="ubuntu" version="22.04"
-2026-10-16T03:01:18+05:00	INFO	Number of language-specific files	num=1

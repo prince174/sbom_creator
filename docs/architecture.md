@@ -1,49 +1,30 @@
-# SBOM Creator — одобренная архитектура
+# Архитектура сервиса
 
-Статус: схема одобрена; Python-реализация и испытания находятся в этом репозитории. 6 октября 2026, версия 0.5.0.
+Image-only pipeline принимает container image на разрешённом registry host. Syft
+получает конечный inventory, сервис проверяет manifest/config/platform/DiffID binding.
+Для Java Crane получает внутренний Docker archive, Trivy уточняет identity, bounded
+reader проверяет class/resource или полный archive presence. Эти факты не заменяют
+друг друга и не доказывают execution/directness.
 
-Вход: Bitbucket HTTPS clone URL, полный commit SHA, ссылка на уже собранный образ (tag или digest). Платформа образа задаётся конфигурацией worker; для multi-arch фиксируется выбранный platform digest. Токены Bitbucket/registry передаются через секреты сервиса. Готовый SBOM не нужен. Dependency-Track заполняет пользователь.
+Policy gate принимает только подтверждённые image observations. PURL/versions не
+угадываются; raw inventories и original identities сохраняются. Неподдержанный
+архив, неоднозначность и лимит дают UNKNOWN/partial, не доказанное отсутствие.
+Системные пакеты выделяются в os.cdx.json, полный состав остаётся в full.cdx.json.
 
-## Поток
+Repository HTTPS URL + exact commit — дополнительные входы. Checkout фиксируется
+по Git object identity, hooks/config redirects/submodules/LFS не запускаются скрыто.
+Source declaration сама по себе не добавляет компонент в image SBOM. Optional
+cdxgen model-resolution выполняется в отдельном ограниченном job без host mounts,
+service secrets или Docker socket. Успех не доказывает воспроизведение исходной CI.
 
-1. Python API принимает задание, проверяет входы, разрешённые адреса, лимиты и создаёт изолированное рабочее место.
-2. Git clone → checkout --detach точного commit → сверка HEAD. Сборка и установка зависимостей не запускаются. Политика submodules/LFS явная: неподдержанный или недоступный контент отражается в coverage, без скрытых загрузок.
-3. Syft сканирует checkout как directory и сохраняет `source.syft.json`.
-4. Syft registry получает образ напрямую без Docker CLI/Engine/socket. Проверяются raw manifest/config SHA-256, платформа и diff IDs; сохраняются repoDigests. Syft сканирует конечную файловую систему (squashed), сохраняет `image.syft.json`. Контейнер не запускается.
-5. Оба документа проверяются по Syft JSON schema. Одна закреплённая версия Syft, управляемая конфигурация, подходящие directory/image catalogers; списки catalogers и ограничения записываются. Конфигурация из целевого репозитория не исполняется.
-6. Сопоставление идёт по объединению кандидатов двух Syft SBOM, а не только пересечению. Ключ: нормализованный PURL с версией и значимыми qualifiers; fallback — ecosystem/type + namespace + name + exact version. Syft artifact ID локален документу и не является ключом между сканами. Диапазон версий не считается точной версией, fuzzy name не даёт положительного решения. Разные версии сохраняются отдельно.
-7. Для каждого кандидата сохраняются исходные записи, locations, foundBy, metadata, доступные hashes и связи. Категории: exact match, image only, source only, version conflict, ambiguous identity.
-8. Основной режим без LLM: evidence → точная идентичность → детерминированный policy gate `image-evidence-and-payload-v3`. Нужна пакетная, архивная или бинарная metadata образа. Для поддерживаемых языковых catalogers дополнительно подтверждаются файлы пакета: Python RECORD, npm entry point/код, Ruby gem-файлы, Java class, Go/Rust binary. Syft формирует metadata всех файлов конечного образа; Syft получает ограниченное содержимое выбранных файлов в том же scan. Проверки выполняются без исполнения; file contents удаляются перед публикацией. Metadata без payload остаётся UNKNOWN. Source-only и декларации не получают положительного решения. Оценок вероятности нет. API использует только правила; экспериментальный CLI-режим модели требует явного выбора.
-9. INCLUDE поступает в итог; EXCLUDE и UNKNOWN остаются в отчёте. Source only сам по себе — UNKNOWN, а не доказанная ненужная зависимость. Image only может получить INCLUDE, включая системные пакеты. При расхождении версий оцениваются фактически наблюдаемые версии, без замены на версию из исходников. EXCLUDE требует объяснённого отрицательного решения по политике, а не только отсутствия обнаружения.
-10. Отобранные записи образа образуют валидный `selected.syft.json`, соответствующий полному `full.cdx.json`; ссылки на удалённые объекты очищаются, известные связи сохраняются, новые связи не выдумываются. `syft convert` формирует CycloneDX JSON; адаптер дополняет provenance и проверяет результат по закреплённой CycloneDX schema, уникальность bom-ref и целостность dependencies. Нельзя превращать отношения владения файлами в зависимости библиотек. При неизвестном графе явно фиксируется неполнота.
-11. В версии 0.4.0 после конвертации полный состав разделяется по типу пакета/PURL: `final.cdx.json` без пакетов ОС, `os.cdx.json` с пакетами ОС, `full.cdx.json` с полным составом. Межгрупповые связи остаются в полном документе; каждый отдельный документ имеет целостные ссылки и отдельный serialNumber. Это не доказательство использования при сборке или происхождения из проекта. Атомарно публикуются эти три документа, `decisions.json`, `coverage.json`, `review.json`, `provenance.json` и оба исходных Syft JSON. UNKNOWN означает частичную подтверждённую инвентаризацию и виден в статусе/отчёте. Ошибка получения входов, сканирования, конвертации или schema блокирует выдачу final SBOM. Доступные каталоги и provenance сохраняются вместе с безопасными `stage`/`error_type` в `<output>.diagnostics`; повторная ошибка с тем же output создаёт отдельную папку `<output>.diagnostics-<suffix>`, сохраняя предыдущие свидетельства.
+API использует bounded queue, persistent statuses и один процесс на workspace.
+Публикация целой validated staging directory атомарна. Source/image/verification
+scopes должны оставаться раздельными; эталон доступен только post-analysis evaluator.
 
-## Границы достоверности
+Image pipeline не требует Docker Engine/socket. При включении build-enabled backend
+доверенный coordinator управляет внешними worker containers; проект не получает
+доступа к engine или credentials сервиса. LLM не нужен обычному API.
 
-Наличие компонента в образе не доказывает выполнение его кода, reachability или применимость CVE. Syft по исходникам описывает доступные manifests/lockfiles/артефакты, но не воспроизводит разрешение зависимостей оригинальной сборки. Bundling, shading, vendoring, stripped binaries и Rust могут скрывать идентичности. Необнаружение не доказывает отсутствие.
-
-Commit и digest фиксируются независимо. Их соответствие проверяет вызывающий pipeline, в том числе через доверенную build attestation при её наличии. Текущий сервис не принимает и не проверяет attestation: это возможное будущее расширение. Поэтому его provenance содержит `build_link=unverified`; OCI label сам по себе не подтверждает связь образа с commit.
-
-## Что переносим из G:\code\SCA_accuracy_improvement
-
-| Основа | Решение в новом проекте |
-|---|---|
-| `remote.py` | Перенести подход к checkout, allowlist, секретам и заданиям; убрать загрузку входного SBOM |
-| `catalog.py`, `image.py`, `metadata.py` | Адаптировать Syft scans и evidence; Java-specific анализ — только дополнительный сигнал |
-| `scoring.py`, `llm.py` | Проверка evidence сохранена; модель необязательна и в API не используется |
-| `sbom.py`, `pipeline.py` | Переработать: два Syft JSON → кандидаты → selected Syft → CycloneDX |
-| Dependency-Track integration | Не переносить автоматическую загрузку |
-
-## Матрица испытаний
-
-60 репозиториев всего: по 10 для Java, JavaScript, Python, Rust, Go и Ruby. Распределение уточнено пользователем. Для каждого нужны точный commit и соответствующий образ с digest; тестовые образы при необходимости готовятся отдельным benchmark-процессом, не production API. Основной end-to-end путь должен включать Bitbucket clone; тест на GitHub alone не доказывает Bitbucket-интеграцию.
-
-Проверки: повторяемость состава, exact match, несколько версий, image-only/OS packages, source-only, неоднозначные имена, скрытые зависимости, ошибки доступа/checkout/scan/model, schema и ссылки CycloneDX. Ожидаемый состав проверяется независимо по сборочным артефактам/установленным пакетам и ручной разметке; результат самого Syft не используется как единственная истина.
-
-Сводная таблица: 60 строк и итоги по каждому языку. Колонки: репозиторий | язык | commit | image digest | source/image counts | INCLUDE/EXCLUDE/UNKNOWN | final count | FP/FN на размеченной части | coverage | время | CycloneDX validation | статус. Исторический полный состав 0.3.0: `benchmarks/results/rules-v3-20260930/results.md`. Разделение ОС в 0.4.0 проверено на этих сохранённых результатах: `docs/verification-inventory-views-v1.json`; это повторный экспорт, не новый scan. Модель не требуется.
-
-## Источники
-
-- Локальные README и `src/sca_accuracy/{catalog,scoring,image}.py` исходной системы просмотрены 29.09.2026.
-- [Syft: сканирование и форматы](https://github.com/anchore/syft).
-- Переданный разговор «Варианты сбора SBOM» прочитан через read_thread после тайм-аута веб-доступа; подтверждены Syft JSON с обеих сторон, сохранение foundBy и раздельная трактовка declared/image evidence.
+Оператор отвечает за HTTPS boundary, secret files, registry/repository allowlists,
+workspace capacity/retention и отдельную оценку concurrent workloads. Commit и image
+фиксируются независимо: build attestation не заменяется caller assertion или label.

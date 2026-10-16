@@ -1,9 +1,0 @@
-{
-  "groupId": "org.springframework.samples",
-  "artifactId": "spring-petclinic-microservices",
-  "version": "4.0.1",
-  "type": "pom",
-  "scope": "",
-  "classifier": "",
-  "optional": "false"
-}

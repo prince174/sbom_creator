@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "<string>", line 25, in <module>
-  File "/candidate/sbom_creator/image_java/runtime.py", line 39, in peer
-    prepare_cache(cache)
-  File "/candidate/sbom_creator/image_java/java_database_cache.py", line 66, in _prepare_cache
-    _plain(item, directory=True)
-  File "/candidate/sbom_creator/image_java/java_database_cache.py", line 48, in _plain
-    raise ValueError('JAVA_DB_UNSAFE_CACHE_PATH')
-ValueError: JAVA_DB_UNSAFE_CACHE_PATH
