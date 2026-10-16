@@ -23,7 +23,7 @@ from .payload import SUPPORTED as PAYLOAD_CATALOGERS
 
 TP_THRESHOLD = 70
 POLICY_VERSION = "image-evidence-tp-gt-70-v3"
-RULES_POLICY_VERSION = "image-evidence-and-payload-v3"
+RULES_POLICY_VERSION = "image-evidence-and-payload-v4"
 TYPE_ALIASES = {
     "java-archive": "maven", "python": "pypi", "rust-crate": "cargo",
     "go-module": "golang", "gem": "gem", "npm": "npm",

@@ -14,6 +14,17 @@ Crane0.22.1 получает внутренний архив по immutable dige
 Неоднозначность остаётся UNKNOWN, в том числе при сбое дополнительного Java-анализа.
 Все три inventory и исходные свидетельства сохраняются.
 
+R109 дополнительно подтверждает type-only npm-компоненты: явные `types`/`typings`
+должны указывать на непустой regular `.d.ts` внутри того же package owner, а
+name/version manifest — совпадать с npm PURL. Свидетельство имеет
+`payload_kind=declared_type_surface`; оно не означает исполнение JavaScript,
+валидность TypeScript или проверку целостности `.d.ts`. Manifest SHA256 сохраняется.
+Небезопасный путь, borrowed nested package, symlink, conflicting/duplicate fields
+оставляют UNKNOWN. Обычные JS/data-package witnesses сохраняют приоритет.
+Новый базовый policy — `image-evidence-and-payload-v4`; Java v7 остаётся opt-in.
+12 свежих image-only no-lock запусков:307/9/0, P97.15%, R100%;9 дополнительных
+поставленных fixture units не удаляются из полного inventory ради метрики.
+
 Репозиторий не требуется пересобирать ради выдачи image SBOM. Дополнительное
 Java-обогащение через cdxgen/Maven или пассивный Trivy включается отдельно;
 по умолчанию `SBOM_JAVA_BACKEND=disabled`. Оно не добавляет в image SBOM

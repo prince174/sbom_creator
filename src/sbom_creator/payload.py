@@ -9,6 +9,7 @@ from __future__ import annotations
 import base64
 import bisect
 import csv
+import hashlib
 import io
 import json
 import posixpath
@@ -16,6 +17,8 @@ import re
 import tarfile
 import zipfile
 from contextlib import ExitStack
+
+from packageurl import PackageURL
 
 SUPPORTED = {"python-installed-package-cataloger", "javascript-package-cataloger",
              "ruby-installed-gemspec-cataloger", "java-archive-cataloger",
@@ -148,6 +151,67 @@ def _python(artifact, files):
     return None
 
 
+def _unique_members(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("Duplicate type-surface manifest member")
+        result[key] = value
+    return result
+
+
+def _javascript_types(artifact, files, package_roots, directory, raw):
+    """Confirm a declared delivered file, not executable JavaScript or valid types."""
+    if raw is None:
+        return None
+    manifest = json.loads(raw.decode("utf-8"), object_pairs_hook=_unique_members)
+    if not isinstance(manifest, dict):
+        return None
+    fields = [field for field in ("types", "typings") if field in manifest]
+    if not fields:
+        return None
+    identity = PackageURL.from_string(artifact.get("purl", ""))
+    name = f"{identity.namespace}/{identity.name}" if identity.namespace else identity.name
+    if (identity.type != "npm" or manifest.get("name") != name
+            or not isinstance(manifest.get("version"), str)
+            or manifest["version"] != identity.version
+            or artifact.get("version") != identity.version):
+        return None
+    targets = set()
+    for field in fields:
+        value = manifest[field]
+        if (not isinstance(value, str) or not value or len(value) > 4096
+                or value.startswith("/") or any(c in value for c in ("\\", ":", "?", "#"))
+                or any(ord(c) < 32 or ord(c) == 127 for c in value)
+                or ".." in value.split("/") or not value.endswith(".d.ts")):
+            return None
+        target = path(posixpath.join(directory, value))
+        prefix = directory.rstrip("/") + "/"
+        owner_entry = files.files.get(directory)
+        if owner_entry is not None and owner_entry.get("metadata", {}).get("type") != "Directory":
+            return None
+        if (not target.startswith(prefix) or "node_modules" in target[len(prefix):].split("/")[:-1]
+                or any(target.startswith(other.rstrip("/") + "/") for other in package_roots
+                       if other != directory and other.startswith(prefix))):
+            return None
+        parent = posixpath.dirname(target)
+        while parent != directory and parent.startswith(prefix):
+            entry = files.files.get(parent)
+            if entry is not None and entry.get("metadata", {}).get("type") != "Directory":
+                return None
+            parent = posixpath.dirname(parent)
+        targets.add(target)
+    if len(targets) != 1:
+        return None
+    target = next(iter(targets))
+    if not files.regular(target):
+        return None
+    return target, {"payload_kind": "declared_type_surface", "declaration_fields": fields,
+                    "manifest_sha256": hashlib.sha256(raw).hexdigest(),
+                    "scope": "Declared nonempty type-surface file present in the final image; "
+                             "JavaScript execution, type validity and file integrity not established"}
+
+
 def _javascript(artifact, files, package_roots):
     for location in artifact.get("locations", []):
         manifest = path(location.get("path", ""))
@@ -157,7 +221,10 @@ def _javascript(artifact, files, package_roots):
         # Data-only packages can expose JSON through main or the conventional
         # index entry when main is absent. Do not require JavaScript code.
         raw = files.read(manifest, 1024 * 1024)
-        entry = json.loads(raw).get("main", "index") if raw else None
+        manifest_data = json.loads(raw) if raw else None
+        if manifest_data is not None and not isinstance(manifest_data, dict):
+            continue
+        entry = manifest_data.get("main", "index") if manifest_data is not None else None
         if isinstance(entry, str) and entry:
             target = path(posixpath.join(directory, entry))
             if target.startswith(directory + "/") and target != manifest:
@@ -174,6 +241,9 @@ def _javascript(artifact, files, package_roots):
                 continue
             if target.endswith((".js", ".mjs", ".cjs", ".ts", ".node", ".wasm")):
                 return target
+        declared_types = _javascript_types(artifact, files, package_roots, directory, raw)
+        if declared_types is not None:
+            return declared_types
     return None
 
 
@@ -247,11 +317,14 @@ def collect(document, archive=None, *, files_factory=None, java_witness=None, cl
             if cataloger not in SUPPORTED:
                 continue
             error = None
+            detail = {}
             try:
                 if cataloger == "python-installed-package-cataloger":
                     observed = _python(artifact, files)
                 elif cataloger == "javascript-package-cataloger":
                     observed = _javascript(artifact, files, package_roots)
+                    if isinstance(observed, tuple):
+                        observed, detail = observed
                 elif cataloger == "ruby-installed-gemspec-cataloger":
                     observed = _ruby(artifact, files)
                 elif cataloger == "java-archive-cataloger":
@@ -266,6 +339,7 @@ def collect(document, archive=None, *, files_factory=None, java_witness=None, cl
                 "method": ("pinned-syft-final-files-plus-bounded-archive-read-v1" if archive is not None
                            else "pinned-syft-final-files-plus-bounded-content-v2"),
                 "scope": "Some payload present; completeness and runtime use not established"}
+            evidence[artifact["id"]].update(detail)
     finally:
         if close_files:
             files.close()
