@@ -1,0 +1,274 @@
+{
+  "files": [
+    {
+      "path": "docs/pom.xml",
+      "source_sha256": "46afdfcaa957babd6c0cb7470802fba4002b5085dfade4bd628e11263fd17c0f",
+      "projection_sha256": "46afdfcaa957babd6c0cb7470802fba4002b5085dfade4bd628e11263fd17c0f",
+      "changes": []
+    },
+    {
+      "path": "docs/source/examples/conscrypt/pom.xml",
+      "source_sha256": "f556a955f711d0f79fc43b183056213f1feff9309373c5d25500703d7d4e7b6c",
+      "projection_sha256": "f556a955f711d0f79fc43b183056213f1feff9309373c5d25500703d7d4e7b6c",
+      "changes": []
+    },
+    {
+      "path": "docs/source/examples/core/pom.xml",
+      "source_sha256": "e9937b1f835a0858dff8c0775cea08669b3a4fed8ef3ff8d7054efb6ec7e3a93",
+      "projection_sha256": "e9937b1f835a0858dff8c0775cea08669b3a4fed8ef3ff8d7054efb6ec7e3a93",
+      "changes": []
+    },
+    {
+      "path": "docs/source/examples/getting-started/pom.xml",
+      "source_sha256": "5c4587357c090d4aa6c63095f9a23af9b9965e910ae7e2c81f0c65fae6d4b257",
+      "projection_sha256": "5c4587357c090d4aa6c63095f9a23af9b9965e910ae7e2c81f0c65fae6d4b257",
+      "changes": []
+    },
+    {
+      "path": "docs/source/examples/pom.xml",
+      "source_sha256": "a088b5031c21387c0223b0c45539f476bd00862307bc41b0475e6c06381ca8e0",
+      "projection_sha256": "a088b5031c21387c0223b0c45539f476bd00862307bc41b0475e6c06381ca8e0",
+      "changes": []
+    },
+    {
+      "path": "docs/source/examples/views/pom.xml",
+      "source_sha256": "b635810dca1657a4dc0ec0a639d33ed70abf278e279d43900469c8b7df77f689",
+      "projection_sha256": "b635810dca1657a4dc0ec0a639d33ed70abf278e279d43900469c8b7df77f689",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-assets/pom.xml",
+      "source_sha256": "40119dfbdc22a46eaef2f4d2dbd0d0401d80ad653e73b8499cbdd18dd12e4b54",
+      "projection_sha256": "40119dfbdc22a46eaef2f4d2dbd0d0401d80ad653e73b8499cbdd18dd12e4b54",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-auth/pom.xml",
+      "source_sha256": "fb86c0d491fcac0723c7c4761fd8d3b4f3947375ecac4d72be12904806233cb9",
+      "projection_sha256": "fb86c0d491fcac0723c7c4761fd8d3b4f3947375ecac4d72be12904806233cb9",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-benchmarks/pom.xml",
+      "source_sha256": "72e02de789e7c136ab6793cec20fa8eba0ecf083a33275d281e96b0fbe4e6d8d",
+      "projection_sha256": "72e02de789e7c136ab6793cec20fa8eba0ecf083a33275d281e96b0fbe4e6d8d",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-bom/pom.xml",
+      "source_sha256": "c0bb6f184733f45a48962ccd34faa79dc3920657d03f2ef9ef5d641c35159ec5",
+      "projection_sha256": "c0bb6f184733f45a48962ccd34faa79dc3920657d03f2ef9ef5d641c35159ec5",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-client/pom.xml",
+      "source_sha256": "75d032b1f5d6ba64d86f29b631e7fed6b4e404b4bfad338605f532be8fe11f27",
+      "projection_sha256": "75d032b1f5d6ba64d86f29b631e7fed6b4e404b4bfad338605f532be8fe11f27",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-configuration/pom.xml",
+      "source_sha256": "9fb59a5dac2d5f3b13a5ffcd475d7d8a41168a12f33a19de5518414957d1409b",
+      "projection_sha256": "9fb59a5dac2d5f3b13a5ffcd475d7d8a41168a12f33a19de5518414957d1409b",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-core/pom.xml",
+      "source_sha256": "c75fc28f390df8bdd092441801314ab3afd83542053ec015191c73f00467a26a",
+      "projection_sha256": "c75fc28f390df8bdd092441801314ab3afd83542053ec015191c73f00467a26a",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-db/pom.xml",
+      "source_sha256": "1a26b2017fe457408a52d43dd16e27da5e1575626eaabd115738d489939598a0",
+      "projection_sha256": "1a26b2017fe457408a52d43dd16e27da5e1575626eaabd115738d489939598a0",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-dependencies/pom.xml",
+      "source_sha256": "545fdf62759ed848013dbf65cf9ea00d2b0812b82dea8b5d13413b7a9cb4280e",
+      "projection_sha256": "545fdf62759ed848013dbf65cf9ea00d2b0812b82dea8b5d13413b7a9cb4280e",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-e2e/pom.xml",
+      "source_sha256": "7c2a0d58da85bf8a0c0a86d23d0eb8799acc7eacf6697ee3e35d0aeb58c4b1a1",
+      "projection_sha256": "7c2a0d58da85bf8a0c0a86d23d0eb8799acc7eacf6697ee3e35d0aeb58c4b1a1",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-example/pom.xml",
+      "source_sha256": "f05addd8cb9d22fdba3fd63fabb6aa80a187a64d8282a9b84689c7a21a3ffc89",
+      "projection_sha256": "f05addd8cb9d22fdba3fd63fabb6aa80a187a64d8282a9b84689c7a21a3ffc89",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-forms/pom.xml",
+      "source_sha256": "9a6d3f602422e5da04ee4214e948419249ddd599b03daed5bbd0ca481b152904",
+      "projection_sha256": "9a6d3f602422e5da04ee4214e948419249ddd599b03daed5bbd0ca481b152904",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-health/pom.xml",
+      "source_sha256": "ec8236bd5f1a2491161504640a3a28451e88f9e59b11093050f053be6e9e8c37",
+      "projection_sha256": "ec8236bd5f1a2491161504640a3a28451e88f9e59b11093050f053be6e9e8c37",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-hibernate/pom.xml",
+      "source_sha256": "e0af422acaafb76c23f80e9cc6274f3e192032e97d87e2d0950e9ab0526ebac1",
+      "projection_sha256": "e0af422acaafb76c23f80e9cc6274f3e192032e97d87e2d0950e9ab0526ebac1",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-http2/pom.xml",
+      "source_sha256": "1df16a19baf9ef5fcef8fbc47344d52d1d6e08fe98b7baa7adc28f72559ff953",
+      "projection_sha256": "1df16a19baf9ef5fcef8fbc47344d52d1d6e08fe98b7baa7adc28f72559ff953",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-jackson/pom.xml",
+      "source_sha256": "4b613e8f2d93c09b9794657f54b361d8e5a60d75567aa32dfc233ba5e7ca5dd5",
+      "projection_sha256": "4b613e8f2d93c09b9794657f54b361d8e5a60d75567aa32dfc233ba5e7ca5dd5",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-jdbi3/pom.xml",
+      "source_sha256": "25f8e7f6f3b954922c865956177377b0b7d61168c69e986efee3aaf3bdf3359d",
+      "projection_sha256": "25f8e7f6f3b954922c865956177377b0b7d61168c69e986efee3aaf3bdf3359d",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-jersey/pom.xml",
+      "source_sha256": "14c4b29fe301d838abed18fba162eddf881b81d7777150408d12119fc7722859",
+      "projection_sha256": "14c4b29fe301d838abed18fba162eddf881b81d7777150408d12119fc7722859",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-jetty/pom.xml",
+      "source_sha256": "872d59142517e2c00f0e7d9cb838bcb31e6d99039da2ca3e7123a8c072ad4dd7",
+      "projection_sha256": "872d59142517e2c00f0e7d9cb838bcb31e6d99039da2ca3e7123a8c072ad4dd7",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-json-logging/pom.xml",
+      "source_sha256": "2bbf64591b9f1b3b048faafd61f7cc13c9fb4a7ede3ea1a38c8e51f1ec200c9a",
+      "projection_sha256": "2bbf64591b9f1b3b048faafd61f7cc13c9fb4a7ede3ea1a38c8e51f1ec200c9a",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-lifecycle/pom.xml",
+      "source_sha256": "5b6976e229955414f78ca228d7e8543a40b46139e1e60e17af860cca538b63a4",
+      "projection_sha256": "5b6976e229955414f78ca228d7e8543a40b46139e1e60e17af860cca538b63a4",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-logging/pom.xml",
+      "source_sha256": "628e935707f92154c8f32d3bab2918fb91f28370909b2b2753743eed5e9c495a",
+      "projection_sha256": "628e935707f92154c8f32d3bab2918fb91f28370909b2b2753743eed5e9c495a",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-metrics-graphite/pom.xml",
+      "source_sha256": "f5af02397677b26de103302c99b84447df0f7e3152f43656ede33d057b823d05",
+      "projection_sha256": "f5af02397677b26de103302c99b84447df0f7e3152f43656ede33d057b823d05",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-metrics/pom.xml",
+      "source_sha256": "3bd8b782401046e1c8422872ac5b247bfe4e804bd7d23ac35929b5e5834b8c81",
+      "projection_sha256": "3bd8b782401046e1c8422872ac5b247bfe4e804bd7d23ac35929b5e5834b8c81",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-migrations/pom.xml",
+      "source_sha256": "995100a76cb45a29d4dca7f8335ca748496f92c39072f465da5cf39a5a0fe922",
+      "projection_sha256": "995100a76cb45a29d4dca7f8335ca748496f92c39072f465da5cf39a5a0fe922",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-parent/pom.xml",
+      "source_sha256": "faae8b6943c60a741e2de779d225a942d45006fdc40dbde304ff0bcab01d2575",
+      "projection_sha256": "faae8b6943c60a741e2de779d225a942d45006fdc40dbde304ff0bcab01d2575",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-request-logging/pom.xml",
+      "source_sha256": "982d112652c570a07bf1a3a651c7b03c2c9a11053dfa27f897581da732268744",
+      "projection_sha256": "982d112652c570a07bf1a3a651c7b03c2c9a11053dfa27f897581da732268744",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-servlets/pom.xml",
+      "source_sha256": "bc9182beae425879546fc1623f50e235c0107ae814c29b8715720a9c0b13dbfd",
+      "projection_sha256": "bc9182beae425879546fc1623f50e235c0107ae814c29b8715720a9c0b13dbfd",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-testing/pom.xml",
+      "source_sha256": "f51fd807bf175daf795f18b18b3f17facca5653e1d4c65d7c4616b537e6e6499",
+      "projection_sha256": "e031479e610c67576fcbe004a8d46b9e94cc508bca80e6b249412796aad08ebb",
+      "changes": [
+        [
+          "org.junit.jupiter",
+          "junit-jupiter"
+        ],
+        [
+          "org.junit.jupiter",
+          "junit-jupiter-api"
+        ],
+        [
+          "org.junit.platform",
+          "junit-platform-commons"
+        ],
+        [
+          "org.mockito",
+          "mockito-core"
+        ]
+      ]
+    },
+    {
+      "path": "dropwizard-unix-socket/pom.xml",
+      "source_sha256": "423e57fec05d99aab926119ac35a11abf2470acebfe55a23cdc40dd0941edd5e",
+      "projection_sha256": "423e57fec05d99aab926119ac35a11abf2470acebfe55a23cdc40dd0941edd5e",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-util/pom.xml",
+      "source_sha256": "1b6a4f3c19c11c74efddb475f6983a4f2a5a5847930b4377346415a9ddc328fd",
+      "projection_sha256": "1b6a4f3c19c11c74efddb475f6983a4f2a5a5847930b4377346415a9ddc328fd",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-validation/pom.xml",
+      "source_sha256": "b5c54424029f7f9b2a89c25697577a6340a640047a5485a3334dc900bcd20e2b",
+      "projection_sha256": "b5c54424029f7f9b2a89c25697577a6340a640047a5485a3334dc900bcd20e2b",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-views-freemarker/pom.xml",
+      "source_sha256": "27c661164012e44e4133a3843f50d9c5139048f735a4a1e9b6ade6d1b8eb15d0",
+      "projection_sha256": "27c661164012e44e4133a3843f50d9c5139048f735a4a1e9b6ade6d1b8eb15d0",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-views-mustache/pom.xml",
+      "source_sha256": "9b0a4026770c5e6df606b1c07d5daa28058fcae7b1e0f869420e3f1228fc17e8",
+      "projection_sha256": "9b0a4026770c5e6df606b1c07d5daa28058fcae7b1e0f869420e3f1228fc17e8",
+      "changes": []
+    },
+    {
+      "path": "dropwizard-views/pom.xml",
+      "source_sha256": "550bbde881b1330737ebcc396b3bf4bfca13d412821bbdfb99f9bc76eab100b4",
+      "projection_sha256": "550bbde881b1330737ebcc396b3bf4bfca13d412821bbdfb99f9bc76eab100b4",
+      "changes": []
+    },
+    {
+      "path": "pom.xml",
+      "source_sha256": "8e6786c6d5bccf5470749bc136d180ca059e66ef0fb551c167affb2d7f3a3273",
+      "projection_sha256": "8e6786c6d5bccf5470749bc136d180ca059e66ef0fb551c167affb2d7f3a3273",
+      "changes": []
+    }
+  ],
+  "oracle_read": false
+}

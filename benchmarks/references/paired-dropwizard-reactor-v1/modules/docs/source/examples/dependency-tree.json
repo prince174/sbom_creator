@@ -1,0 +1,9 @@
+{
+  "groupId": "io.dropwizard.documentation",
+  "artifactId": "examples-parent",
+  "version": "5.0.3-SNAPSHOT",
+  "type": "pom",
+  "scope": "",
+  "classifier": "",
+  "optional": "false"
+}

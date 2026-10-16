@@ -1,0 +1,3187 @@
+[
+  {
+    "path": ".",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-project",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "dropwizard-project",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-project",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-bom",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-bom",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "dropwizard-bom",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-bom",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-dependencies",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-dependencies",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "dropwizard-dependencies",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-dependencies",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-parent",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-parent",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "dropwizard-parent",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-parent",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-core",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-core",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-configuration",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-health",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-metrics",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-request-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-servlets",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-annotation",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jakarta-servlets",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jetty12",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jetty12-ee10",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jmx",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jvm",
+        "4.2.40"
+      ],
+      [
+        "jakarta.inject",
+        "jakarta.inject-api",
+        "2.0.1.MR"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "net.sourceforge.argparse4j",
+        "argparse4j",
+        "0.9.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-security",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.toolchain.setuid",
+        "jetty-setuid-jna",
+        "2.0.3"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-common",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.ext",
+        "jersey-bean-validation",
+        "3.1.12"
+      ],
+      [
+        "org.hibernate.validator",
+        "hibernate-validator",
+        "8.0.5.Final"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-core",
+    "image_prefix": "/application/dropwizard-core/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-core",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-core-5.0.3-SNAPSHOT.jar",
+      "sha256": "20f55c9711ab3e5e90d5dace13f6ff2ecfcd788196d2de29d5452ac175be4aac"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-client",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-client",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-configuration",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-httpclient5",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.apache.httpcomponents.client5",
+        "httpclient5",
+        "5.6.5"
+      ],
+      [
+        "org.apache.httpcomponents.core5",
+        "httpcore5",
+        "5.4.4"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-client",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-common",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-client",
+    "image_prefix": "/application/dropwizard-client/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-client",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-client-5.0.3-SNAPSHOT.jar",
+      "sha256": "a7e8b3876c91e915b9452b7b5334ff3553823297d0bdc3b7e2abea802fd814d1"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-db",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-db",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.apache.tomcat",
+        "tomcat-jdbc",
+        "11.0.27"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-db",
+    "image_prefix": "/application/dropwizard-db/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-db",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-db-5.0.3-SNAPSHOT.jar",
+      "sha256": "232d5088e78623adf43d9ae9216d982cd53f3a2826b356327187e88b742ef748"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-jdbi3",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-jdbi3",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-db",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-annotation",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jdbi3",
+        "4.2.40"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.jdbi",
+        "jdbi3-core",
+        "3.54.0"
+      ],
+      [
+        "org.jdbi",
+        "jdbi3-guava",
+        "3.54.0"
+      ],
+      [
+        "org.jdbi",
+        "jdbi3-sqlobject",
+        "3.54.0"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-jdbi3",
+    "image_prefix": "/application/dropwizard-jdbi3/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-jdbi3",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-jdbi3-5.0.3-SNAPSHOT.jar",
+      "sha256": "b96f4aca08f95a8912b75030d0c09a826fc387c7944862fdb4caf9c0ea38963a"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-migrations",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-migrations",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.mattbertolini",
+        "liquibase-slf4j",
+        "5.1.0"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-db",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.xml.bind",
+        "jakarta.xml.bind-api",
+        "4.0.5"
+      ],
+      [
+        "net.sourceforge.argparse4j",
+        "argparse4j",
+        "0.9.0"
+      ],
+      [
+        "org.apache.commons",
+        "commons-collections4",
+        "4.6.0"
+      ],
+      [
+        "org.apache.tomcat",
+        "tomcat-jdbc",
+        "11.0.27"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.liquibase",
+        "liquibase-core",
+        "4.33.0"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-migrations",
+    "image_prefix": "/application/dropwizard-migrations/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-migrations",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-migrations-5.0.3-SNAPSHOT.jar",
+      "sha256": "02051f343aaa5cd67056e019f3e6038468af50aabf7a09f5c7ed70c479bf460d"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-hibernate",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-hibernate",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-hibernate6",
+        "2.22.3"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-configuration",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-db",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "jakarta.activation",
+        "jakarta.activation-api",
+        "2.1.4"
+      ],
+      [
+        "jakarta.persistence",
+        "jakarta.persistence-api",
+        "3.1.0"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "jakarta.xml.bind",
+        "jakarta.xml.bind-api",
+        "4.0.5"
+      ],
+      [
+        "net.bytebuddy",
+        "byte-buddy",
+        "1.18.15-jdk5"
+      ],
+      [
+        "org.apache.tomcat",
+        "tomcat-jdbc",
+        "11.0.27"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-client",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.hibernate.orm",
+        "hibernate-core",
+        "6.6.58.Final"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-hibernate",
+    "image_prefix": "/application/dropwizard-hibernate/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-hibernate",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-hibernate-5.0.3-SNAPSHOT.jar",
+      "sha256": "a2a7dff743b9d9473cac59f305788293732c9a48aa1c34c61e7d0f25165b2f98"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-auth",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-auth",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-caffeine",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.annotation",
+        "jakarta.annotation-api",
+        "2.1.1"
+      ],
+      [
+        "jakarta.inject",
+        "jakarta.inject-api",
+        "2.0.1.MR"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-security",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.11"
+      ],
+      [
+        "org.glassfish.jersey.containers",
+        "jersey-container-servlet-core",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-common",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-auth",
+    "image_prefix": "/application/dropwizard-auth/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-auth",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-auth-5.0.3-SNAPSHOT.jar",
+      "sha256": "4ccc0c63fee1df673e36cb3c030ca666db069f167aa9181f03d28a99182e1605"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-forms",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-forms",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "org.glassfish.jersey.media",
+        "jersey-media-multipart",
+        "3.1.12"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-forms",
+    "image_prefix": "/application/dropwizard-forms/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-forms",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-forms-5.0.3-SNAPSHOT.jar",
+      "sha256": "072170939cd6b3e044191721e25f50234d50a1c944855125c672e6ef2f62ff14"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-views",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-views",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-common",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-views",
+    "image_prefix": "/application/dropwizard-views/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-views",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-views-5.0.3-SNAPSHOT.jar",
+      "sha256": "1dbebb978d49930e4dba1e1c6cd7b73ee1a9a0a6201f7a279ce171d3ee97f2fc"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-views-freemarker",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-views-freemarker",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.freemarker",
+        "freemarker",
+        "2.3.35"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-views-freemarker",
+    "image_prefix": "/application/dropwizard-views-freemarker/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-views-freemarker",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-views-freemarker-5.0.3-SNAPSHOT.jar",
+      "sha256": "867cd8df2dc6569fb0acd17eab7deef5e92683a150150e3aa343e83d8d790b84"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-views-mustache",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-views-mustache",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "com.github.spullara.mustache.java",
+        "compiler",
+        "0.9.14"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-views-mustache",
+    "image_prefix": "/application/dropwizard-views-mustache/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-views-mustache",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-views-mustache-5.0.3-SNAPSHOT.jar",
+      "sha256": "2441d38bd7bf772dd9b3506f3cf59655849d3b235e1e08e7c16a19e9c9f8a8d0"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-testing",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-testing",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-guava",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.jakarta.rs",
+        "jackson-jakarta-rs-json-provider",
+        "2.22.3"
+      ],
+      [
+        "com.google.guava",
+        "guava",
+        "33.7.2-jre"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-configuration",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-servlets",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-annotation",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "jakarta.activation",
+        "jakarta.activation-api",
+        "2.1.4"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "jakarta.xml.bind",
+        "jakarta.xml.bind-api",
+        "4.0.5"
+      ],
+      [
+        "net.sourceforge.argparse4j",
+        "argparse4j",
+        "0.9.0"
+      ],
+      [
+        "org.apache.httpcomponents.client5",
+        "httpclient5",
+        "5.6.5"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.glassfish.jersey.connectors",
+        "jersey-apache5-connector",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.containers",
+        "jersey-container-servlet-core",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-client",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.test-framework",
+        "jersey-test-framework-core",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.test-framework.providers",
+        "jersey-test-framework-provider-inmemory",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.junit.jupiter",
+        "junit-jupiter",
+        "5.14.4"
+      ],
+      [
+        "org.junit.jupiter",
+        "junit-jupiter-api",
+        "5.14.4"
+      ],
+      [
+        "org.junit.platform",
+        "junit-platform-commons",
+        "1.14.4"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-testing",
+    "image_prefix": "/application/dropwizard-testing/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-testing",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-testing-5.0.3-SNAPSHOT.jar",
+      "sha256": "637e1d17e47450435a9a4071b170d22917e6712c4dfa528c2e8361e1bf11ef86"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-util",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-util",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-util",
+    "image_prefix": "/application/dropwizard-util/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-util",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-util-5.0.3-SNAPSHOT.jar",
+      "sha256": "f8ac2ec57531be3931c10278e10a4f1446f8de60e8c91e635154aba0e672758f"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-jackson",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-jackson",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-core",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-guava",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-jdk8",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.datatype",
+        "jackson-datatype-jsr310",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.module",
+        "jackson-module-blackbird",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.module",
+        "jackson-module-parameter-names",
+        "2.22.3"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "com.google.guava",
+        "guava",
+        "33.7.2-jre"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-jackson",
+    "image_prefix": "/application/dropwizard-jackson/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-jackson",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-jackson-5.0.3-SNAPSHOT.jar",
+      "sha256": "19df981656a04edff2d3ed50e1721d41492686e4939c6f7ec40ff687bccd618b"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-validation",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-validation",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml",
+        "classmate",
+        "1.7.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.google.guava",
+        "guava",
+        "33.7.2-jre"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.glassfish.expressly",
+        "expressly",
+        "5.0.0"
+      ],
+      [
+        "org.hibernate.validator",
+        "hibernate-validator",
+        "8.0.5.Final"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-validation",
+    "image_prefix": "/application/dropwizard-validation/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-validation",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-validation-5.0.3-SNAPSHOT.jar",
+      "sha256": "71d8be137481b8702cc89bbf4a5c130997096a44d47208497eb918a6eeeab1c9"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-configuration",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-configuration",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-core",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.dataformat",
+        "jackson-dataformat-yaml",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.apache.commons",
+        "commons-text",
+        "1.15.0"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-configuration",
+    "image_prefix": "/application/dropwizard-configuration/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-configuration",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-configuration-5.0.3-SNAPSHOT.jar",
+      "sha256": "81573e3805d19c33703eec9c80829ec0afd5582cad1a4d8a1a5017b1eb234f3f"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-logging",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-logging",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "ch.qos.logback",
+        "logback-core",
+        "1.5.38"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-core",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.google.errorprone",
+        "error_prone_annotations",
+        "2.42.0"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.logback",
+        "logback-throttling-appender",
+        "1.5.3"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-logback",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "jcl-over-slf4j",
+        "2.0.20"
+      ],
+      [
+        "org.slf4j",
+        "jul-to-slf4j",
+        "2.0.20"
+      ],
+      [
+        "org.slf4j",
+        "log4j-over-slf4j",
+        "2.0.20"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-logging",
+    "image_prefix": "/application/dropwizard-logging/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-logging",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-logging-5.0.3-SNAPSHOT.jar",
+      "sha256": "f16943d6948cc33c0efc8c82d67bb46a8c47f4c47ff488a49ec73a6c8618ce84"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-metrics",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-metrics",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-metrics",
+    "image_prefix": "/application/dropwizard-metrics/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-metrics",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-metrics-5.0.3-SNAPSHOT.jar",
+      "sha256": "cac1eb5f890636c83d2c66ef81bff9c936b674b70929a1216206b6032639101a"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-metrics-graphite",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-metrics-graphite",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-metrics",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-graphite",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-metrics-graphite",
+    "image_prefix": "/application/dropwizard-metrics-graphite/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-metrics-graphite",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-metrics-graphite-5.0.3-SNAPSHOT.jar",
+      "sha256": "ed5119ca752c90f4efb597aae9cff2d4a0532fe92faf6d1fcac41bec64591971"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-jersey",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-jersey",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml",
+        "classmate",
+        "1.7.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-core",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.jakarta.rs",
+        "jackson-jakarta-rs-json-provider",
+        "2.22.3"
+      ],
+      [
+        "com.github.ben-manes.caffeine",
+        "caffeine",
+        "3.2.4"
+      ],
+      [
+        "com.google.guava",
+        "guava",
+        "33.7.2-jre"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jersey3",
+        "4.2.40"
+      ],
+      [
+        "jakarta.annotation",
+        "jakarta.annotation-api",
+        "2.1.1"
+      ],
+      [
+        "jakarta.inject",
+        "jakarta.inject-api",
+        "2.0.1.MR"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.glassfish.hk2",
+        "hk2-api",
+        "3.0.6"
+      ],
+      [
+        "org.glassfish.jersey.containers",
+        "jersey-container-servlet",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.containers",
+        "jersey-container-servlet-core",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-client",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-common",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-server",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.ext",
+        "jersey-metainf-services",
+        "3.1.12"
+      ],
+      [
+        "org.glassfish.jersey.inject",
+        "jersey-hk2",
+        "3.1.12"
+      ],
+      [
+        "org.hibernate.validator",
+        "hibernate-validator",
+        "8.0.5.Final"
+      ],
+      [
+        "org.javassist",
+        "javassist",
+        "3.33.0-GA"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-jersey",
+    "image_prefix": "/application/dropwizard-jersey/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-jersey",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-jersey-5.0.3-SNAPSHOT.jar",
+      "sha256": "4ada3242baa82e9f8e3f3c33091548978281a105f262257abc55c62f60e4f8ae"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-jetty",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-jetty",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-core",
+        "2.22.3"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jetty12",
+        "4.2.40"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-http",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-security",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-jetty",
+    "image_prefix": "/application/dropwizard-jetty/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-jetty",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-jetty-5.0.3-SNAPSHOT.jar",
+      "sha256": "76c9612b91c74b9fd7f69f22dc575daefff242d4b8b5dd5e75fdb96bcd6cbb4f"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-servlets",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-servlets",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-annotation",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-http",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-servlets",
+    "image_prefix": "/application/dropwizard-servlets/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-servlets",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-servlets-5.0.3-SNAPSHOT.jar",
+      "sha256": "218df4eafd3f5961eb5008a40c054743fa439f07a96fe6322edd2c98bb7fd8f4"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-lifecycle",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-lifecycle",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-lifecycle",
+    "image_prefix": "/application/dropwizard-lifecycle/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-lifecycle",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-lifecycle-5.0.3-SNAPSHOT.jar",
+      "sha256": "71ffe141f7c26b2e7b2d13a036c08a4c52c6aeb6e135f89c1ac57d7329038c61"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-assets",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-assets",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-servlets",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-assets",
+    "image_prefix": "/application/dropwizard-assets/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-assets",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-assets-5.0.3-SNAPSHOT.jar",
+      "sha256": "cc65c86f5c4d643ec7c60eb2289141472d8b5c18a5d8f6c29fbaa588cc88c253"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-http2",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-http2",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jetty12",
+        "4.2.40"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-alpn-java-client",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-alpn-java-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-alpn-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-http",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.http2",
+        "jetty-http2-server",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-http2",
+    "image_prefix": "/application/dropwizard-http2/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-http2",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-http2-5.0.3-SNAPSHOT.jar",
+      "sha256": "e90d3b4b696e363e676a90afc1b08d8a1c0b4d6b67b0c4b0db9add375e101f3f"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-request-logging",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-request-logging",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "ch.qos.logback",
+        "logback-core",
+        "1.5.38"
+      ],
+      [
+        "ch.qos.logback.access",
+        "logback-access-common",
+        "2.0.15"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-http",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-security",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-session",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-request-logging",
+    "image_prefix": "/application/dropwizard-request-logging/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-request-logging",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-request-logging-5.0.3-SNAPSHOT.jar",
+      "sha256": "7952426df468d03507355a2508d227df3c37850af0f0dfafb7c9c8662e05773d"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-json-logging",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-json-logging",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "ch.qos.logback",
+        "logback-classic",
+        "1.5.38"
+      ],
+      [
+        "ch.qos.logback",
+        "logback-core",
+        "1.5.38"
+      ],
+      [
+        "ch.qos.logback.access",
+        "logback-access-common",
+        "2.0.15"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-logging",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-validation",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-json-logging",
+    "image_prefix": "/application/dropwizard-json-logging/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-json-logging",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-json-logging-5.0.3-SNAPSHOT.jar",
+      "sha256": "f3ce849360297dc6a2c04562782b325d922069fab0ce1d962337e4fec24bbca3"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-health",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-health",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-databind",
+        "2.22.3"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jackson",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jersey",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-lifecycle",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-healthchecks",
+        "4.2.40"
+      ],
+      [
+        "jakarta.servlet",
+        "jakarta.servlet-api",
+        "6.0.0"
+      ],
+      [
+        "jakarta.validation",
+        "jakarta.validation-api",
+        "3.0.2"
+      ],
+      [
+        "jakarta.ws.rs",
+        "jakarta.ws.rs-api",
+        "3.1.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-http",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty.ee10",
+        "jetty-ee10-servlet",
+        "12.1.11"
+      ],
+      [
+        "org.glassfish.jersey.core",
+        "jersey-client",
+        "3.1.12"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-health",
+    "image_prefix": "/application/dropwizard-health/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-health",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-health-5.0.3-SNAPSHOT.jar",
+      "sha256": "8e56ce51a51ccb0e94c9765b961bd9d8688d88e9f3eac7d6c8c537b3359edb88"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-unix-socket",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-unix-socket",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.fasterxml.jackson.core",
+        "jackson-annotations",
+        "2.22"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-jetty",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-util",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-core",
+        "4.2.40"
+      ],
+      [
+        "io.dropwizard.metrics",
+        "metrics-jetty12",
+        "4.2.40"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-io",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-unixdomain-server",
+        "12.1.11"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-util",
+        "12.1.11"
+      ],
+      [
+        "org.jspecify",
+        "jspecify",
+        "1.0.1"
+      ],
+      [
+        "org.slf4j",
+        "slf4j-api",
+        "2.0.20"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-unix-socket",
+    "image_prefix": "/application/dropwizard-unix-socket/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-unix-socket",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-unix-socket-5.0.3-SNAPSHOT.jar",
+      "sha256": "2982a46c9536d4ae679368bd2aefab64e05f306531729dbfe1f866137a389faf"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "dropwizard-example",
+    "owner": [
+      "io.dropwizard",
+      "dropwizard-example",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "com.h2database",
+        "h2",
+        "2.4.240"
+      ],
+      [
+        "com.password4j",
+        "password4j",
+        "1.8.4"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-assets",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-auth",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-hibernate",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-http2",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-metrics-graphite",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-migrations",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views-freemarker",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views-mustache",
+        "5.0.3-SNAPSHOT"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "dropwizard-example",
+    "image_prefix": "/application/dropwizard-example/",
+    "effective_output": {
+      "group": "io.dropwizard",
+      "artifact": "dropwizard-example",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "dropwizard-example-5.0.3-SNAPSHOT.jar",
+      "sha256": "3099bbf4fbbb40334a5a04c2bdd5f48c910c910a148790539ad7bb43720cef6e"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "docs/source/examples",
+    "owner": [
+      "io.dropwizard.documentation",
+      "examples-parent",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "pom",
+    "artifact": "examples-parent",
+    "image_prefix": null,
+    "effective_output": {
+      "group": "io.dropwizard.documentation",
+      "artifact": "examples-parent",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "pom",
+      "file": "",
+      "sha256": ""
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "docs/source/examples/core",
+    "owner": [
+      "io.dropwizard.documentation",
+      "examples-core",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-assets",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-http2",
+        "5.0.3-SNAPSHOT"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "examples-core",
+    "image_prefix": "/application/docs/source/examples/core/",
+    "effective_output": {
+      "group": "io.dropwizard.documentation",
+      "artifact": "examples-core",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "examples-core-5.0.3-SNAPSHOT.jar",
+      "sha256": "72a62fd09779694014c3af1c2b6df6c5081e050e174f3978501f780986c584a1"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "docs/source/examples/conscrypt",
+    "owner": [
+      "io.dropwizard.documentation",
+      "example-conscrypt",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "org.conscrypt",
+        "conscrypt-openjdk-uber",
+        "2.4.0"
+      ],
+      [
+        "org.eclipse.jetty",
+        "jetty-alpn-conscrypt-server",
+        "12.1.11"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "example-conscrypt",
+    "image_prefix": "/application/docs/source/examples/conscrypt/",
+    "effective_output": {
+      "group": "io.dropwizard.documentation",
+      "artifact": "example-conscrypt",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "example-conscrypt-5.0.3-SNAPSHOT.jar",
+      "sha256": "dab7eef8f04ad386ce9d514ac06909f0c20f5545672936bd0a38a57a8c08b61d"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "docs/source/examples/getting-started",
+    "owner": [
+      "io.dropwizard.documentation",
+      "example-getting-started",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "example-getting-started",
+    "image_prefix": "/application/docs/source/examples/getting-started/",
+    "effective_output": {
+      "group": "io.dropwizard.documentation",
+      "artifact": "example-getting-started",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "example-getting-started-5.0.3-SNAPSHOT.jar",
+      "sha256": "945f26a2359cfa0b1692d40b6fa67937048ab55dba740cdfaa5e167b74b6ee42"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  },
+  {
+    "path": "docs/source/examples/views",
+    "owner": [
+      "io.dropwizard.documentation",
+      "examples-views",
+      "5.0.3-SNAPSHOT"
+    ],
+    "direct": [
+      [
+        "io.dropwizard",
+        "dropwizard-core",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views-freemarker",
+        "5.0.3-SNAPSHOT"
+      ],
+      [
+        "io.dropwizard",
+        "dropwizard-views-mustache",
+        "5.0.3-SNAPSHOT"
+      ]
+    ],
+    "scope": "compile/runtime; excludes test/provided/system",
+    "build_execution_of_each_dependency": "UNKNOWN",
+    "packaging": "jar",
+    "artifact": "examples-views",
+    "image_prefix": "/application/docs/source/examples/views/",
+    "effective_output": {
+      "group": "io.dropwizard.documentation",
+      "artifact": "examples-views",
+      "version": "5.0.3-SNAPSHOT",
+      "packaging": "jar",
+      "file": "examples-views-5.0.3-SNAPSHOT.jar",
+      "sha256": "386a43776ea4d01f97c577da0ae25b624833bb70b0491fbab43ee86dcb07d6d5"
+    },
+    "direct_classifier_or_type_details": [],
+    "qualifier_evaluation": "PLAIN_JAR_GAV"
+  }
+]

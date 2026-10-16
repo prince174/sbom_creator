@@ -1,0 +1,19 @@
+{
+  "status": "ABORTED_RESOURCE_REPETITION",
+  "runtime_changed": false,
+  "oracle_read": false,
+  "accuracy": null,
+  "final_published": false,
+  "three_views_published": false,
+  "utc": "2026-10-16T01:28:00.937301+00:00",
+  "process_id": 40168,
+  "parent_process_id": 23948,
+  "observed_read_transfer_bytes": 23091407634,
+  "sampled_working_set_bytes": 132407296,
+  "process_start_local": "2026-10-16T06:24:34+05:00",
+  "archive_layer_compressed_bytes": 627366681,
+  "archive_layer_is_gzip": true,
+  "frozen_expanded_layer_limit_bytes": 536870912,
+  "reason": "Frozen JarFiles.source does not cache rejected layer indexes; every next artifact reopens/decompresses the same over-budget layer. Stopped owned control after >23GB observed reads on 703MB artifact tree, before final publication.",
+  "limitation": "Manual diagnostic stop after observing repetition, not a pre-registered timeout benchmark or an accuracy score. Original source timeout and completed Trivy image remain separately preserved. No classifier change or budget increase."
+}

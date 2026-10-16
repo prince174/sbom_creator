@@ -25,6 +25,30 @@ def main():
             if receipt['commit']!=project['commit']:raise ValueError('Expansion revision differs')
             work=ROOT/'benchmarks/.work'/path.parent.name
             analysis=work/'analysis'
+            if receipt.get('analysis_status', {}).get('status') == 'PENDING_FROZEN_PREDICTION':
+                for relative, digest in receipt['reference_hashes'].items():
+                    if hashlib.sha256((path.parent/relative).read_bytes()).hexdigest() != digest:
+                        raise ValueError('Immutable reference hash differs')
+                labels = json.loads((path.parent/'module-labels.json').read_bytes())
+                for label in labels:
+                    folder = 'root' if label['path'] == '.' else label['path']
+                    validate_cyclonedx(json.loads((path.parent/'modules'/folder/'sbom.json').read_bytes()))
+                row.update(status='PAIRED', pair=path.parent.name,
+                           analysis_status=receipt['analysis_status'],
+                           reference_module_count=len(labels), shipped_module_count=receipt['shipped_jar_owners'],
+                           reference_module_direct_edges=receipt['module_direct_edges'],
+                           components=None, direct={'status': 'NOT_YET_MEASURED'},
+                           component_metrics_status='NOT_YET_MEASURED',
+                           receipt_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+                           scope_note='Real reactor build/reference/image pair verified. No accuracy score yet; qualified edges remain separately UNKNOWN. Aggregate components are not direct labels.')
+                control = ROOT/'benchmarks/results'/(project['id'].removeprefix('java-')+'-frozen-control-v1')/'prediction-v1'
+                if (control/'image-resource-stop.json').exists():
+                    row.update(external_candidate_status='FAILED_SOURCE_TIMEOUT_IMAGE_RESOURCE_STOP',
+                               external_candidate_accuracy=None,
+                               external_candidate_evidence=(control/'image-resource-stop.json').relative_to(ROOT).as_posix(),
+                               known_candidate_module_direct_unmatched=receipt['module_direct_edges'])
+                rows.append(row)
+                continue
             if receipt.get('analysis_status', {}).get('status') == 'FAILED_OUTPUT_BUDGET':
                 for relative, digest in receipt['reference_hashes'].items():
                     if hashlib.sha256((path.parent/relative).read_bytes()).hexdigest() != digest:

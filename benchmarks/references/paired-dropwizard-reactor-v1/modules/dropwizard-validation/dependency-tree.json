@@ -1,0 +1,152 @@
+{
+  "groupId": "io.dropwizard",
+  "artifactId": "dropwizard-validation",
+  "version": "5.0.3-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "io.dropwizard",
+      "artifactId": "dropwizard-util",
+      "version": "5.0.3-SNAPSHOT",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-annotations",
+      "version": "2.22",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "com.fasterxml",
+      "artifactId": "classmate",
+      "version": "1.7.3",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "jakarta.validation",
+      "artifactId": "jakarta.validation-api",
+      "version": "3.0.2",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.hibernate.validator",
+      "artifactId": "hibernate-validator",
+      "version": "8.0.5.Final",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "org.jboss.logging",
+          "artifactId": "jboss-logging",
+          "version": "3.6.3.Final",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "com.google.guava",
+      "artifactId": "guava",
+      "version": "33.7.2-jre",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "com.google.guava",
+          "artifactId": "failureaccess",
+          "version": "1.0.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.google.guava",
+          "artifactId": "listenablefuture",
+          "version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.google.errorprone",
+          "artifactId": "error_prone_annotations",
+          "version": "2.42.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.google.j2objc",
+          "artifactId": "j2objc-annotations",
+          "version": "3.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "org.slf4j",
+      "artifactId": "slf4j-api",
+      "version": "2.0.20",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.jspecify",
+      "artifactId": "jspecify",
+      "version": "1.0.1",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.glassfish.expressly",
+      "artifactId": "expressly",
+      "version": "5.0.0",
+      "type": "jar",
+      "scope": "runtime",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "jakarta.el",
+          "artifactId": "jakarta.el-api",
+          "version": "5.0.1",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    }
+    ]
+}

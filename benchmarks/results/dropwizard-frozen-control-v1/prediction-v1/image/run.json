@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "image",
+    "--input",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-dropwizard-reactor-v1\\image.tar",
+    "--offline-scan",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-reactor-image-v1\\cache",
+    "--format",
+    "cyclonedx",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\dropwizard-frozen-control-v1\\prediction-v1\\image\\sbom.json"
+  ],
+  "elapsed_seconds": 18.437999999994645,
+  "oracle_read": false
+}

@@ -1,0 +1,872 @@
+{
+  "groupId": "io.dropwizard",
+  "artifactId": "dropwizard-views-mustache",
+  "version": "5.0.3-SNAPSHOT",
+  "type": "jar",
+  "scope": "",
+  "classifier": "",
+  "optional": "false",
+  "children": [
+    {
+      "groupId": "io.dropwizard",
+      "artifactId": "dropwizard-jersey",
+      "version": "5.0.3-SNAPSHOT",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "io.dropwizard",
+          "artifactId": "dropwizard-util",
+          "version": "5.0.3-SNAPSHOT",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.dropwizard",
+          "artifactId": "dropwizard-validation",
+          "version": "5.0.3-SNAPSHOT",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.glassfish.expressly",
+              "artifactId": "expressly",
+              "version": "5.0.0",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "jakarta.el",
+                  "artifactId": "jakarta.el-api",
+                  "version": "5.0.1",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            }
+            ]
+        },
+        {
+          "groupId": "org.glassfish.jersey.ext",
+          "artifactId": "jersey-metainf-services",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.glassfish.jersey.inject",
+          "artifactId": "jersey-hk2",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.glassfish.hk2",
+              "artifactId": "hk2-locator",
+              "version": "3.0.6",
+              "type": "jar",
+              "scope": "runtime",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "org.javassist",
+          "artifactId": "javassist",
+          "version": "3.33.0-GA",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.dropwizard.metrics",
+          "artifactId": "metrics-jersey3",
+          "version": "4.2.40",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-annotation",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "com.google.guava",
+          "artifactId": "guava",
+          "version": "33.7.2-jre",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "com.google.guava",
+              "artifactId": "failureaccess",
+              "version": "1.0.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.google.guava",
+              "artifactId": "listenablefuture",
+              "version": "9999.0-empty-to-avoid-conflict-with-guava",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.google.j2objc",
+              "artifactId": "j2objc-annotations",
+              "version": "3.1",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "com.fasterxml",
+          "artifactId": "classmate",
+          "version": "1.7.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-annotations",
+          "version": "2.22",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-core",
+          "version": "2.22.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.fasterxml.jackson.core",
+          "artifactId": "jackson-databind",
+          "version": "2.22.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.fasterxml.jackson.jakarta.rs",
+          "artifactId": "jackson-jakarta-rs-json-provider",
+          "version": "2.22.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "com.fasterxml.jackson.jakarta.rs",
+              "artifactId": "jackson-jakarta-rs-base",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.fasterxml.jackson.module",
+              "artifactId": "jackson-module-jakarta-xmlbind-annotations",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "jakarta.annotation",
+          "artifactId": "jakarta.annotation-api",
+          "version": "2.1.1",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "jakarta.validation",
+          "artifactId": "jakarta.validation-api",
+          "version": "3.0.2",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.glassfish.hk2",
+          "artifactId": "hk2-api",
+          "version": "3.0.6",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.glassfish.hk2",
+              "artifactId": "hk2-utils",
+              "version": "3.0.6",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "org.glassfish.hk2.external",
+              "artifactId": "aopalliance-repackaged",
+              "version": "3.0.6",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "jakarta.inject",
+          "artifactId": "jakarta.inject-api",
+          "version": "2.0.1.MR",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.glassfish.jersey.containers",
+          "artifactId": "jersey-container-servlet",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.glassfish.jersey.containers",
+          "artifactId": "jersey-container-servlet-core",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.glassfish.jersey.core",
+          "artifactId": "jersey-common",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.glassfish.hk2",
+              "artifactId": "osgi-resource-locator",
+              "version": "1.0.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "org.glassfish.jersey.core",
+          "artifactId": "jersey-client",
+          "version": "3.1.12",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.hibernate.validator",
+          "artifactId": "hibernate-validator",
+          "version": "8.0.5.Final",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "org.jboss.logging",
+              "artifactId": "jboss-logging",
+              "version": "3.6.3.Final",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "slf4j-api",
+          "version": "2.0.20",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-io",
+          "version": "12.1.11",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "jakarta.servlet",
+          "artifactId": "jakarta.servlet-api",
+          "version": "6.0.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "io.dropwizard",
+      "artifactId": "dropwizard-logging",
+      "version": "5.0.3-SNAPSHOT",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "io.dropwizard",
+          "artifactId": "dropwizard-jackson",
+          "version": "5.0.3-SNAPSHOT",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "com.fasterxml.jackson.datatype",
+              "artifactId": "jackson-datatype-guava",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.fasterxml.jackson.datatype",
+              "artifactId": "jackson-datatype-jsr310",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.fasterxml.jackson.datatype",
+              "artifactId": "jackson-datatype-jdk8",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.fasterxml.jackson.module",
+              "artifactId": "jackson-module-parameter-names",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "com.fasterxml.jackson.module",
+              "artifactId": "jackson-module-blackbird",
+              "version": "2.22.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        },
+        {
+          "groupId": "io.dropwizard.metrics",
+          "artifactId": "metrics-logback",
+          "version": "4.2.40",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "jul-to-slf4j",
+          "version": "2.0.20",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "ch.qos.logback",
+          "artifactId": "logback-core",
+          "version": "1.5.38",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "ch.qos.logback",
+          "artifactId": "logback-classic",
+          "version": "1.5.38",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "com.google.errorprone",
+          "artifactId": "error_prone_annotations",
+          "version": "2.42.0",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "io.dropwizard.logback",
+          "artifactId": "logback-throttling-appender",
+          "version": "1.5.3",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "log4j-over-slf4j",
+          "version": "2.0.20",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.slf4j",
+          "artifactId": "jcl-over-slf4j",
+          "version": "2.0.20",
+          "type": "jar",
+          "scope": "runtime",
+          "classifier": "",
+          "optional": "false"
+        },
+        {
+          "groupId": "org.eclipse.jetty",
+          "artifactId": "jetty-util",
+          "version": "12.1.11",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false"
+        }
+        ]
+    },
+    {
+      "groupId": "io.dropwizard",
+      "artifactId": "dropwizard-views",
+      "version": "5.0.3-SNAPSHOT",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false",
+      "children": [
+        {
+          "groupId": "io.dropwizard",
+          "artifactId": "dropwizard-core",
+          "version": "5.0.3-SNAPSHOT",
+          "type": "jar",
+          "scope": "compile",
+          "classifier": "",
+          "optional": "false",
+          "children": [
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-configuration",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "com.fasterxml.jackson.dataformat",
+                  "artifactId": "jackson-dataformat-yaml",
+                  "version": "2.22.3",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false",
+                  "children": [
+                    {
+                      "groupId": "org.yaml",
+                      "artifactId": "snakeyaml",
+                      "version": "2.5",
+                      "type": "jar",
+                      "scope": "compile",
+                      "classifier": "",
+                      "optional": "false"
+                    }
+                    ]
+                },
+                {
+                  "groupId": "org.apache.commons",
+                  "artifactId": "commons-text",
+                  "version": "1.15.0",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false",
+                  "children": [
+                    {
+                      "groupId": "org.apache.commons",
+                      "artifactId": "commons-lang3",
+                      "version": "3.20.0",
+                      "type": "jar",
+                      "scope": "compile",
+                      "classifier": "",
+                      "optional": "false"
+                    }
+                    ]
+                }
+                ]
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-metrics",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-servlets",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "org.eclipse.jetty",
+                  "artifactId": "jetty-http",
+                  "version": "12.1.11",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-jetty",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-lifecycle",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-health",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-jetty12",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-jetty12-ee10",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-jvm",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-jmx",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-jakarta-servlets",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "io.dropwizard.metrics",
+                  "artifactId": "metrics-json",
+                  "version": "4.2.40",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                },
+                {
+                  "groupId": "com.helger",
+                  "artifactId": "profiler",
+                  "version": "1.1.1",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            },
+            {
+              "groupId": "io.dropwizard.metrics",
+              "artifactId": "metrics-healthchecks",
+              "version": "4.2.40",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "io.dropwizard",
+              "artifactId": "dropwizard-request-logging",
+              "version": "5.0.3-SNAPSHOT",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "ch.qos.logback.access",
+                  "artifactId": "logback-access-common",
+                  "version": "2.0.15",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                },
+                {
+                  "groupId": "org.eclipse.jetty",
+                  "artifactId": "jetty-session",
+                  "version": "12.1.11",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            },
+            {
+              "groupId": "net.sourceforge.argparse4j",
+              "artifactId": "argparse4j",
+              "version": "0.9.0",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "org.eclipse.jetty",
+              "artifactId": "jetty-security",
+              "version": "12.1.11",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "org.eclipse.jetty",
+              "artifactId": "jetty-server",
+              "version": "12.1.11",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "org.eclipse.jetty.ee10",
+              "artifactId": "jetty-ee10-servlet",
+              "version": "12.1.11",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            },
+            {
+              "groupId": "org.eclipse.jetty.toolchain.setuid",
+              "artifactId": "jetty-setuid-jna",
+              "version": "2.0.3",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false",
+              "children": [
+                {
+                  "groupId": "net.java.dev.jna",
+                  "artifactId": "jna-jpms",
+                  "version": "5.14.0",
+                  "type": "jar",
+                  "scope": "compile",
+                  "classifier": "",
+                  "optional": "false"
+                }
+                ]
+            },
+            {
+              "groupId": "org.glassfish.jersey.ext",
+              "artifactId": "jersey-bean-validation",
+              "version": "3.1.12",
+              "type": "jar",
+              "scope": "compile",
+              "classifier": "",
+              "optional": "false"
+            }
+            ]
+        }
+        ]
+    },
+    {
+      "groupId": "io.dropwizard.metrics",
+      "artifactId": "metrics-core",
+      "version": "4.2.40",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "jakarta.ws.rs",
+      "artifactId": "jakarta.ws.rs-api",
+      "version": "3.1.0",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.glassfish.jersey.core",
+      "artifactId": "jersey-server",
+      "version": "3.1.12",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "com.github.spullara.mustache.java",
+      "artifactId": "compiler",
+      "version": "0.9.14",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "com.github.ben-manes.caffeine",
+      "artifactId": "caffeine",
+      "version": "3.2.4",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    },
+    {
+      "groupId": "org.jspecify",
+      "artifactId": "jspecify",
+      "version": "1.0.1",
+      "type": "jar",
+      "scope": "compile",
+      "classifier": "",
+      "optional": "false"
+    }
+    ]
+}

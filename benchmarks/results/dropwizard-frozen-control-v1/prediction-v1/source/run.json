@@ -1,0 +1,21 @@
+{
+  "exit_code": null,
+  "command": [
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\trivy-r34\\trivy.exe",
+    "fs",
+    "G:\\code\\sbom_creator\\benchmarks\\.work\\paired-dropwizard-reactor-v1\\source-optional-projection-v1",
+    "--config",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\dropwizard-frozen-control-v1\\prediction-v1\\trivy.yaml",
+    "--cache-dir",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\dropwizard-frozen-control-v1\\prediction-v1\\source\\cache",
+    "--format",
+    "cyclonedx",
+    "--skip-db-update",
+    "--skip-java-db-update",
+    "--skip-version-check",
+    "--output",
+    "G:\\code\\sbom_creator\\benchmarks\\results\\dropwizard-frozen-control-v1\\prediction-v1\\source\\sbom.json"
+  ],
+  "elapsed_seconds": 180.01499999998487,
+  "oracle_read": false
+}

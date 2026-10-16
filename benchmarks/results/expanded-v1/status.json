@@ -390,7 +390,25 @@
       "language": "Java",
       "partition": "holdout",
       "commit": "14b738b8ca8a52cb245f855cee0dcc68327f1d72",
-      "status": "PINNED_NOT_BUILT"
+      "status": "PAIRED",
+      "pair": "paired-dropwizard-reactor-v1",
+      "analysis_status": {
+        "status": "PENDING_FROZEN_PREDICTION"
+      },
+      "reference_module_count": 39,
+      "shipped_module_count": 34,
+      "reference_module_direct_edges": 443,
+      "components": null,
+      "direct": {
+        "status": "NOT_YET_MEASURED"
+      },
+      "component_metrics_status": "NOT_YET_MEASURED",
+      "receipt_sha256": "7d66862839a645fe6645b4b5569061257ad059a0ebdf275c0d8373551ce1d925",
+      "scope_note": "Real reactor build/reference/image pair verified. No accuracy score yet; qualified edges remain separately UNKNOWN. Aggregate components are not direct labels.",
+      "external_candidate_status": "FAILED_SOURCE_TIMEOUT_IMAGE_RESOURCE_STOP",
+      "external_candidate_accuracy": null,
+      "external_candidate_evidence": "benchmarks/results/dropwizard-frozen-control-v1/prediction-v1/image-resource-stop.json",
+      "known_candidate_module_direct_unmatched": 443
     },
     {
       "project": "java-vertx-web",

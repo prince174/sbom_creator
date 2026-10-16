@@ -1,0 +1,5 @@
+2026-10-16T06:20:47+05:00	INFO	Loaded	file_path="G:\\code\\sbom_creator\\benchmarks\\results\\dropwizard-frozen-control-v1\\prediction-v1\\trivy.yaml"
+2026-10-16T06:20:47+05:00	INFO	"--format cyclonedx" disables security scanning. Specify "--scanners vuln" explicitly if you want to include vulnerabilities in the "cyclonedx" report.
+2026-10-16T06:20:47+05:00	WARN	[pom] Dependency version cannot be determined. Child dependencies will not be found.	details="https://trivy.dev/docs/v0.75/guide/coverage/language/java#empty-dependency-version"
+
+TIMEOUT180

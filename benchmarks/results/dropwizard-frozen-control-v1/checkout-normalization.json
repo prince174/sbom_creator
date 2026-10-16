@@ -1,0 +1,8 @@
+{
+  "status": "EXACT_RAW_BLOB_TREE_VERIFIED",
+  "root_sha256": "8e6786c6d5bccf5470749bc136d180ca059e66ef0fb551c167affb2d7f3a3273",
+  "tree": "17f569dbca3cad5f660b6b57f0dbfbe432cbf5cd",
+  "index_equals_commit_tree": true,
+  "tree_clean": true,
+  "method": "Restored regular raw blobs; isolated Git core.eol=lf, autocrlf=false; renormalized index with identical HEAD tree; no source or classifier change"
+}

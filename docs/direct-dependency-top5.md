@@ -269,3 +269,6 @@ R96 (2026-10-16): bounded large/nested/resource JAR evidence removes the disclos
 R97 (2026-10-16): passive Trivy identities joined strictly to same-image/path/layer and bounded payload produce candidate final Boot89/3/3 (P/R96.74%) and Javalin128/0/0 on8 agreed owners. No rank promotion: both are disclosed development cases,6 Javalin owner scopes and all direct edges remain UNKNOWN; one additional Boot FN versus raw Trivy is explicit. [Evidence, limits and next acceptance gates](java-js-top3.md).
 
 R98 (2026-10-16): an explicitly attributed Trivy-only resource archive with bounded physical evidence restores Boot final90/3/2 (P96.77%/R97.83%), without adding FP or pretending Syft discovered it. Javalin and direct UNKNOWN are unchanged; experimental benchmark registration only, no runtime adoption/rank promotion. [Reproducible evidence and remaining gates](java-js-top3.md).
+
+
+R99 (2026-10-16): new independent complex Dropwizard pair validates39 module references/34 shipped owners/443 direct edges. Frozen source candidate times out180s; bounded image candidate is stopped for repeated over-budget layer processing. No final score/rank promotion; runtime unchanged. [Control failure and corpus update](java-js-top3.md).
