@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 from .evaluation import LIMIT, compare, validate_reference
-from .pipeline import analyze, analyze_local
+from .pipeline import analyze, analyze_local, error_fields
 
 
 def main():
@@ -24,6 +24,7 @@ def main():
         command.add_argument("--mode", choices=("rules", "llm"), default="rules",
                              help="default: deterministic rules; llm is an optional explicit experimental mode")
     args = parser.parse_args()
+    stage = 'acquisition_or_configuration'
     try:
         reference = None
         if args.run_mode == 'production' and args.reference_sbom:
@@ -37,14 +38,14 @@ def main():
         else:
             result = analyze_local(args.source, args.image, args.output, mode=args.mode)
         if reference is not None:
+            stage = 'verification'
             evaluation = compare(args.output, reference, args.reference_scope)
             from .pipeline import write_json
             write_json(Path(args.output) / 'evaluation.json', evaluation)
             result = dict(result, evaluation=evaluation)
     except Exception as error:  # noqa: BLE001 -- sanitize failures at the CLI boundary
-        print(json.dumps({"status": "failed", "error_type": type(error).__name__,
-                          "stage": getattr(error, "stage", "acquisition_or_configuration"),
-                          "message": "Analysis failed; no final SBOM published"}), file=sys.stderr)
+        print(json.dumps({"status": "failed", **error_fields(error, stage),
+                          "message": "Analysis failed; output blocked"}), file=sys.stderr)
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0

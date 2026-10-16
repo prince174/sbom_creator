@@ -19,7 +19,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from . import __version__
 from .acquire import Settings, validate_inputs
 from .evaluation import compare, validate_reference
-from .pipeline import ARTIFACTS, OPTIONAL_ARTIFACTS, analyze, write_json
+from .pipeline import ARTIFACTS, OPTIONAL_ARTIFACTS, analyze, error_fields, write_json
 
 LOGGER = logging.getLogger('uvicorn.error')
 
@@ -141,13 +141,13 @@ def create_app(workspace=None, runner=analyze, settings=None):
             log_event('analysis.completed', job_id=job_id, elapsed_seconds=round(time.monotonic() - started, 3),
                       artifact_count=len(artifacts), partial=bool(result.get('partial')))
         except Exception as error:  # noqa: BLE001 -- job boundary must persist every failure
-            log_event('analysis.failed', job_id=job_id, stage=getattr(error, 'stage', stage),
-                      error_type=getattr(error, 'error_type', type(error).__name__),
+            details = error_fields(error, stage)
+            log_event('analysis.failed', job_id=job_id, **details,
                       elapsed_seconds=round(time.monotonic() - started, 3))
             # External command/model errors may contain credentials; never serialize raw errors.
             save_status(directory / "status.json", {"id": job_id, "status": "failed",
-                       "error": getattr(error, "error_type", type(error).__name__),
-                       "stage": getattr(error, "stage", "acquisition_or_configuration"),
+                       "error": details['error_type'],
+                       **{key: value for key, value in details.items() if key != 'error_type'},
                        "message": "Analysis failed; output blocked"})
         finally:
             capacity.release()
