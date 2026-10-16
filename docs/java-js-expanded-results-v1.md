@@ -1,6 +1,6 @@
 # Expansion results v1 — 2026-10-16
 
-Seven additional real-build pairs are complete: five Java and two JavaScript. There are now15 primary Java +12 primary JS pairs, plus the separate DBCP Java control:28 total (16Java/12JS). The frozen expansion still has13 pending repositories, five Java and eight JavaScript. Javalin is a completed build/reference/image pair with a failed service analysis, not a successful accuracy case. The target remains20 primary pairs each; pinned candidates are not counted as built. Original20 comparisons retain their fixed sampling definition.
+Eight additional real-build pairs are complete: six Java and two JavaScript. There are now16 primary Java +12 primary JS pairs, plus the separate DBCP Java control:29 total (17Java/12JS). The frozen expansion has12 pending repositories, four Java and eight JavaScript. Further foreign-project build-recipe expansion is deferred for the first image-first MVP; own-service tests/reference checks continue. Historical failed service analyses below remain preserved; current actual runtime results are in [R105](java-js-service-accuracy.md). The research target20 primary pairs each remains unfulfilled; pinned candidates are not counted as built.
 
 | New pair | Partition | Build-reference components, root excluded | Direct build-reference edges | Max shortest root hop / graph edges | Validation |
 |---|---|---:|---:|---|---|
@@ -9,6 +9,7 @@ Seven additional real-build pairs are complete: five Java and two JavaScript. Th
 | Javalin7.2.4-SNAPSHOT, exact commit |development|128 aggregate, includes reactor artifacts|72 across18 module owners;55 across14 shipped owners|Per-module labels retained|Real19-project reactor install; aggregate plus18 module CycloneDX references; native/effective/CDX agreement; image/tree binding; service fails output budget|
 | Petclinic REST4.0.2 |holdout|121 build /106 packaged|21 build /12 packaged|7 /270|Native/effective/CDX root agreement; digest/tree/three schemas; isolated app health UP |
 | Dropwizard5.0.3-SNAPSHOT, exact commit |holdout|39 per-module references; aggregate is not a direct label|443 across34 shipped JAR owners|39 reactor projects,5 POM-only owners|Actual Maven install, per-module effective/native/CDX GAV agreement, copied primary JAR SHA256 and final artifact tree/config binding; explicit !all-modules profile; frozen source times out180s; image payload run aborted for repeated over-budget layer processing, no final accuracy score |
+| Petclinic Microservices4.0.1, exact commit |development|9 per-module references; not an image-only label|100 across8 shipped JAR owners|9 reactor projects,1 POM-only owner|Native/effective/CDX GAV agreement, equal build/final tree and config binding; source comparison and limitations in [R104](java-microservices-reference-r104.md) |
 | Pino9.6.0 |holdout|12|11|2 /14|Package build/prune; native npm root versions; isolated logger smoke; no-lock derivative |
 | Nest TypeScript starter1.0.0, exact commit |holdout|107|6|8 /191|Actual nest build; native npm root versions; compiled HTTP app smoke; no-lock derivative |
 

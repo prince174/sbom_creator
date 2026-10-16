@@ -1,0 +1,28 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--network=none",
+    "--read-only",
+    "--user=10001:10001",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--tmpfs=/tmp:rw,nosuid,nodev,size=32m,mode=1777",
+    "sbom-creator:mvp-r105-stagecheck",
+    "python",
+    "-c",
+    "import json,subprocess; print(json.dumps({n:subprocess.check_output(a,text=True).strip() for n,a in {'syft':['syft','version','-o','json'],'trivy':['trivy','version','--format','json'],'crane':['crane','version']}.items()}))"
+  ],
+  "exit_code": 0,
+  "tool_versions": {
+    "syft": "{\n \"application\": \"syft\",\n \"buildDate\": \"2026-08-27T16:55:02Z\",\n \"compiler\": \"gc\",\n \"gitCommit\": \"91a0032987d91b7411b52f6f5c185c5e7f775495\",\n \"gitDescription\": \"v1.51.1\",\n \"goVersion\": \"go1.26.3\",\n \"platform\": \"linux/amd64\",\n \"schemaVersion\": \"16.1.10\",\n \"version\": \"1.51.1\"\n}",
+    "trivy": "{\"Version\":\"0.75.0\"}",
+    "crane": "8a72a424fdecb4caa14f2d525e5d2503331442b5"
+  },
+  "official_tag_url": "https://github.com/google/go-containerregistry.git",
+  "tag": "refs/tags/v0.22.1",
+  "tag_commit": "8a72a424fdecb4caa14f2d525e5d2503331442b5",
+  "r104_direct_preserved_image_id": "sha256:a719e6e07c2d4d9dcaec14799f5929395beb782ea9a3b41c0190783e603df19a"
+}

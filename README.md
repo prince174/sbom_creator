@@ -1,10 +1,25 @@
 # SBOM Creator
 
-Python-сервис получает **Bitbucket HTTPS URL + полный commit SHA + container image**,
-сам получает исходники и образ, запускает **Syft 1.51.1** для обоих входов,
-сопоставляет **Syft JSON 16.1.10** и выдаёт **CycloneDX JSON 1.6**.
+Python-сервис получает **container image по digest** и выдаёт **CycloneDX JSON 1.6**
+по фактическому содержимому образа. **Bitbucket HTTPS URL + полный commit SHA** —
+дополнительные входы для объяснения происхождения и графа зависимостей.
 Основной режим API и CLI — детерминированные правила, без LLM и модельных ключей.
 Загрузку в Dependency-Track выполняет пользователь.
+
+**Текущий MVP: образ — основной вход, репозиторий необязателен.** Syft1.51.1
+собирает inventory; для Java Trivy0.75.0 уточняет координаты, а ограниченный
+reader подтверждает class/resource bytes больших и вложенных JAR из того же образа.
+Crane0.22.1 получает внутренний архив по immutable digest без Docker Engine/socket.
+Идентичность, путь, слой и image config связываются отдельно от наличия payload.
+Неоднозначность остаётся UNKNOWN, в том числе при сбое дополнительного Java-анализа.
+Все три inventory и исходные свидетельства сохраняются.
+
+Репозиторий не требуется пересобирать ради выдачи image SBOM. Дополнительное
+Java-обогащение через cdxgen/Maven или пассивный Trivy включается отдельно;
+по умолчанию `SBOM_JAVA_BACKEND=disabled`. Оно не добавляет в image SBOM
+компоненты, обнаруженные только в исходниках. Успешная модель Maven не означает
+воспроизведение неизвестных шагов оригинальной TeamCity-сборки. Текущие метрики,
+области оценки и ограничения — в [отчёте точности](docs/java-js-service-accuracy.md).
 
 **0.7.0: прямые Python-зависимости корня проекта.** Сервис автоматически читает
 корневой `pyproject.toml` (до1МиБ) и сопоставляет статические зависимости с
@@ -27,8 +42,8 @@ node_modules. Входы прежние; Docker/Node/LLM для этого не 
 Dev/peer-only и остальные языки npm-профилем не оцениваются.
 [Проверки интеграции и ограничения](docs/runtime-npm-v1.md).
 
-**0.5.0: сервис больше не требует Docker CLI, Engine или socket.** Образы получает
-Syft напрямую из registry. Сохранены правила, проверка payload и разделение ОС.
+**0.5.0: основной image-путь не требует Docker CLI, Engine или socket.** Образы получает
+Syft напрямую из registry; новый Java-reader также использует Crane. Сохранены правила, проверка payload и разделение ОС.
 [Подробный отчёт миграции и проверок](docs/direct-syft-v0.5.md).
 
 **С версии 0.4.0 основной `final.cdx.json` не содержит пакетов ОС.** Они выдаются
@@ -68,6 +83,7 @@ Fallback без PURL требует точной идентичности; fuzzy
 | В исходниках A@1, в образе подтверждена A@2 | A@2 включается; A@1 остаётся UNKNOWN |
 | В образе есть metadata, но необходимые файлы не подтверждены | UNKNOWN / PAYLOAD_NOT_CONFIRMED |
 | Только скопированный lockfile или неоднозначная идентичность | UNKNOWN |
+| Дополнительный Java-reader/Trivy не подтвердил сведения | Основной анализ сохраняется; непроверенные Java-компоненты UNKNOWN, coverage partial |
 | Сбой получения входов, сканера, конвертации или schema | Задание failed, final недоступен |
 
 Правила v3 дополнительно проверяют содержимое конечной файловой системы: Python RECORD,
@@ -79,13 +95,15 @@ npm entry point/index/код, Ruby gem-файлы, Java class и Go/Rust binary.
 каждого файла. Поэтому «подтверждено свидетельствами» не означает гарантию полноты.
 Вероятности и оценки TP в режиме правил не назначаются.
 Исходные source/image SBOM сохраняются. UNKNOWN делает результат частичным.
-Неполученные submodules/LFS отражаются в coverage. Сборка приложения, установка
-пакетов и запуск контейнера в production-пути не выполняются.
+Неполученные submodules/LFS отражаются в coverage. В основном image-пути проект
+не выполняется. Явно включённый cdxgen backend выполняет project tooling в отдельном
+ограниченном job-контейнере; секреты сервиса и Docker socket туда не передаются.
 
 ## Linux / Docker
 
-С версии **0.5.0 Docker CLI, Engine и сокет сервису не нужны**. Образ содержит
-Python, Git и закреплённый Syft. `syft scan registry:...` получает образ напрямую
+В основном image-режиме **Docker CLI, Engine и socket сервису не нужны**. Образ содержит
+Python, Git, закреплённые Syft, Trivy и Crane; Docker CLI доступен только для
+необязательного cdxgen coordinator. `syft scan registry:...` получает образ напрямую
 по HTTPS. Контейнер работает с UID/GID 10001, read-only root filesystem и без capabilities.
 Docker Compose ниже — способ запуска контейнера, а не зависимость внутри сервиса.
 Сервис запускается одним процессом; несколько независимых экземпляров не должны делить workspace.
@@ -101,6 +119,15 @@ docker compose up --build -d
 
 Порт: `127.0.0.1:18082`. Для доступа извне используйте HTTPS reverse proxy.
 `/health` подтверждает работу API, но не готовность Git/registry.
+
+Для первого Java-анализа Trivy загружает публичную Java DB. В проверенном snapshot
+база занимает около1.5GiB; её SHA256 сохраняется с результатом и проверяется до/после
+сканирования. Задайте writable persistent `SBOM_TRIVY_CACHE_DIR=/workspace/trivy-cache`,
+особенно при read-only root filesystem. Внутренние архивы и нормализованные слои
+используют `SBOM_IMAGE_TEMP_DIR=/workspace/image-cache` и удаляются после задания.
+Для offline-работы базу нужно заранее подготовить; недоступная DB даёт UNKNOWN для
+неподтверждённых Java-компонентов. Начинайте с одного worker: жёсткая дисковая квота
+и пиковая память нескольких параллельных больших Java-образов отдельно не измерены.
 
 Для Kubernetes см. [пример Deployment](deploy/kubernetes.yaml): без hostPath,
 без service-account token, `runAsNonRoot`, `allowPrivilegeEscalation: false`,
@@ -125,6 +152,13 @@ docker compose up --build -d
 | `SBOM_IMAGE_PLATFORM` | Default `linux/amd64` |
 | `SBOM_WORKERS` | 1–4, default 1; очередь ограничена 16 заданиями |
 | `SBOM_SYFT_BINARY` | Путь к Syft, default `syft` |
+| `SBOM_TRIVY_BINARY`, `SBOM_CRANE_BINARY` | Пути к закреплённым Trivy0.75.0 и Crane0.22.1 |
+| `SBOM_TRIVY_CACHE_DIR` | Writable Java DB cache; для контейнера `/workspace/trivy-cache` |
+| `SBOM_IMAGE_TEMP_DIR` | Writable каталог внутренних архивов/слоёв, в образе `/workspace/image-cache` |
+| `SBOM_JAVA_IMAGE_EVIDENCE` | Java identity + physical evidence, default `true`; сбой отражается UNKNOWN |
+| `SBOM_JAVA_BACKEND` | Дополнительный граф исходников: `disabled` (default), `trivy`, `cdxgen` |
+| `SBOM_CDXGEN_IMAGE`, `SBOM_DOCKER_BINARY` | Доверенный worker image и Docker CLI для явно включённого cdxgen backend |
+| `SBOM_BUILD_TIMEOUT` | Лимит необязательного cdxgen job, default900s |
 
 Секреты не включаются в argv, provenance и сообщения об ошибках.
 Git redirects, hooks, inherited Git configs, автоматические submodules/LFS и
@@ -137,15 +171,30 @@ Syft получает образ через `registry:`. Сервис перес
 сохраняются repoDigests. TLS-проверка обязательна; передаются только настроенные
 registry credentials, без внешних Docker helpers и пользовательской конфигурации.
 
-Содержимое RECORD, package.json и Java-архивов получает Syft из **того же squashed scan**.
-Прежние правила проверяют payload; затем contents и конфигурация сканера удаляются
-перед публикацией JSON. Лимит одного файла — 32 MiB; отсутствие необходимого содержимого
-даёт UNKNOWN. Превышение общего лимита вывода, временных файлов или timeout блокирует
-задание. Диск проверяется периодически; жёсткие границы задаются лимитами контейнера/тома.
+Содержимое RECORD и package.json получает Syft из **того же squashed scan**.
+Java-архивы больше не включаются целиком в stdout Syft: сервис получает внутренний
+архив через Crane и связывает его config/DiffID с результатом сканирования.
+Reader один раз нормализует слой, проверяет TAR/ZIP metadata до больших выделений,
+читает ограниченные окна и подтверждает реальные class/resource bytes.
+Применяются отдельные бюджеты:8GiB нормализации и8GiB потоковой проверки хешей,
+32MiB/read и128MiB суммарных payload-window reads; размер outer JAR до128MiB.
+Payload proof для одинаковых файлов переносится только после полного SHA256 каждого
+физического JAR, без вывода имени/версии/прямоты из hash. Метаданные без payload,
+неоднозначный путь/слой/идентичность и неподдержанный архив остаются UNKNOWN.
+Содержимое файлов и scanner-конфигурация удаляются перед публикацией JSON.
+Диск проверяется периодически; жёсткие границы задаются лимитами контейнера/тома.
 
 ## API
 
 `POST /v1/analyses`, `Authorization: Bearer <token>`:
+
+```json
+{
+  "image": "registry.example.com/team/application@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+}
+```
+
+Для дополнительного анализа исходников передайте URL и commit **вместе**:
 
 ```json
 {
@@ -177,6 +226,10 @@ pip install -e '.[dev]'
 sbom-creator analyze --repository-url https://bitbucket.org/workspace/app.git \
   --commit FULL_SHA --image registry.example.com/app:build-123 --output workspace/result-1
 
+# Только фактический состав образа, без Git и пересборки проекта:
+sbom-creator analyze --image registry.example.com/app@sha256:FULL_DIGEST \
+  --output workspace/image-result-1
+
 # Локальный checkout, тот же режим правил:
 sbom-creator analyze-local --source ./checkout --image registry.example.com/app:build-123 \
   --output workspace/result-rules --mode rules
@@ -185,7 +238,8 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 `SBOM_IMAGE_ARCHIVE=/absolute/path/image.tar` включает офлайн-режим CLI
 для подготовленного архива; HTTP API такую конфигурацию отвергает.
 Формат Syft `docker-archive` не требует Docker. Старые переменные
-`SBOM_PULL_IMAGE` / `SBOM_DOCKER_BINARY` отклоняются, fallback к daemon отсутствует.
+`SBOM_PULL_IMAGE` отклоняется; основной image-анализ не переключается на daemon.
+`SBOM_DOCKER_BINARY` используется только явно выбранным cdxgen backend.
 Существующий output не перезаписывается. На Windows используется `.venv\Scripts\python`;
 для локальной проверки Syft сохранён в `.tools/syft/syft.exe` (не включается в Git).
 
@@ -199,7 +253,10 @@ sbom-creator analyze-local --source ./checkout --image registry.example.com/app:
 | `source.syft.json`, `image.syft.json` | Полные исходные каталоги |
 | `selected.syft.json` | Все подтверждённые записи образа, соответствующие `full.cdx.json` |
 | `decisions.json` | Все INCLUDE/EXCLUDE/UNKNOWN с evidence и причинами |
-| `direct-dependencies.json` | Прямые npm-зависимости корня, UNKNOWN и причины; граф не объявляется полным |
+| `direct-dependencies.json` | Подтверждённые декларации npm/Python/Java, UNKNOWN и причины; граф не объявляется полным |
+| `java-direct-dependencies.json` | Отдельные owner/module/version/scope и ограничения Java source model; без source входа not-applicable |
+| `image-original.syft.json`, `image-peer.cdx.json`, `image-identity-audit.json` | При Java-анализе: исходные координаты Syft, независимый Trivy inventory и identity/payload audit |
+| `build.cdx.json`, `image.cdx.json`, `build-image-comparison.json` | При успешном необязательном cdxgen backend: source/build model и отдельное сравнение с image inventory; не замена final |
 | `coverage.json` | Catalogers, ограничения, неполнота и счётчики причин UNKNOWN |
 | `review.json` | UNKNOWN по группам проверки, происхождению, типу пакета, причине и следующему шагу |
 | `provenance.json` | Commit, immutable image/config/digest, версии и hashes |

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/image_java/runtime.py", line 59, in peer
+    validate_cyclonedx(document)
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/validation.py", line 34, in validate_cyclonedx
+    raise ValueError("Expected CycloneDX 1.6")
+ValueError: Expected CycloneDX 1.6
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/image_java/runtime.py", line 59, in peer
+    validate_cyclonedx(document)
+  File "/usr/local/lib/python3.12/site-packages/sbom_creator/validation.py", line 34, in validate_cyclonedx
+    raise ValueError("Expected CycloneDX 1.6")
+ValueError: Expected CycloneDX 1.6

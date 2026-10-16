@@ -316,11 +316,16 @@ def review_report(decisions: list[dict], *, schema_version: int = 2) -> dict:
 
 
 def reconcile(source: dict, image: dict, assessor: Callable | None = None,
-              payload_evidence: dict | None = None) -> dict:
+              payload_evidence: dict | None = None, identity_envelope: dict | None = None) -> dict:
     if assessor is None:
         assessor = rules_assessor
-    candidates = build_candidates(source, image, payload_evidence)
+    if identity_envelope is None:
+        candidates = build_candidates(source, image, payload_evidence)
+    else:
+        from .image_java.explicit_identity_gate import candidates as bound_candidates
+        candidates = bound_candidates(source, image, payload_evidence, identity_envelope)
     rules = assessor is rules_assessor
+    rules_policy = 'image-identity-payload-v4' if identity_envelope is not None else RULES_POLICY_VERSION
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
     included: set[str] = set()
     decisions = []
@@ -363,7 +368,7 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None,
                           "selected_image_artifact_ids": [e["artifact_id"] for e in image_facts]
                           if decision == "INCLUDE" else [],
                           "score_kind": "not_scored" if rules else "uncalibrated_model_estimate",
-                          "policy_version": RULES_POLICY_VERSION if rules else POLICY_VERSION,
+                          "policy_version": rules_policy if rules else POLICY_VERSION,
                           "scope": "Inventory policy only; exclusion does not prove absence, runtime non-use, or CVE non-applicability."})
     selected = copy.deepcopy(image)
     selected["artifacts"] = [a for a in selected["artifacts"] if a["id"] in included]
@@ -375,7 +380,7 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None,
                                          if r.get("parent") in valid_ids and r.get("child") in valid_ids]
     counts = Counter(row["decision"] for row in decisions)
     coverage = {
-        "mode": "rules" if rules else "llm", "policy_version": RULES_POLICY_VERSION if rules else POLICY_VERSION,
+        "mode": "rules" if rules else "llm", "policy_version": rules_policy if rules else POLICY_VERSION,
         "source_artifacts": len(source["artifacts"]), "image_artifacts": len(image["artifacts"]),
         "candidates": len(candidates), "selected_artifacts": len(selected["artifacts"]),
         "decisions": {key: counts[key] for key in ("INCLUDE", "EXCLUDE", "UNKNOWN")},

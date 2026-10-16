@@ -1,0 +1,10 @@
+{
+  "stagecheck-smoke": {
+    "artifacts": 13,
+    "all_decompressed_hashes_match": true
+  },
+  "final-smoke": {
+    "artifacts": 16,
+    "all_decompressed_hashes_match": true
+  }
+}

@@ -23,6 +23,19 @@ class Settings:
     registry_hosts: tuple[str, ...] = ()
     git_binary: str = "git"
     syft_binary: str = "syft"
+    trivy_binary: str = "trivy"
+    java_scan_timeout: int = 180
+    java_offline: bool = False
+    java_maven_repository: str = "https://repo.maven.apache.org/maven2/"
+    java_backend: str = "disabled"
+    docker_binary: str = "docker"
+    cdxgen_image: str = "sbom-creator-cdxgen-worker:13.4.0"
+    build_timeout: int = 900
+    java_image_evidence: bool = True
+    trivy_cache_dir: str = ""
+    java_db_timeout: int = 600
+    crane_binary: str = 'crane'
+    image_temp_dir: str = ''
     image_platform: str = "linux/amd64"
     image_archive: str = ""
     bitbucket_auth_mode: str = "bearer"
@@ -38,17 +51,19 @@ class Settings:
     def __post_init__(self) -> None:
         if self.bitbucket_auth_mode not in ("bearer", "basic"):
             raise ValueError("SBOM_BITBUCKET_AUTH_MODE must be bearer or basic")
+        if self.java_backend not in ('cdxgen', 'trivy', 'disabled'):
+            raise ValueError('SBOM_JAVA_BACKEND must be cdxgen, trivy or disabled')
         if not re.fullmatch(r"[a-z0-9]+/[a-z0-9_]+(?:/[a-z0-9]+)?", self.image_platform):
             raise ValueError("SBOM_IMAGE_PLATFORM must be os/architecture[/variant]")
-        for key in ("checkout_timeout", "scan_timeout", "image_timeout", "max_output_bytes",
+        for key in ("checkout_timeout", "scan_timeout", "image_timeout", "java_scan_timeout", "build_timeout", "java_db_timeout", "max_output_bytes",
                     "max_sbom_bytes", "max_checkout_bytes", "max_archive_bytes", "max_checkout_files"):
             if getattr(self, key) <= 0:
                 raise ValueError(f"{key} must be positive")
 
     @classmethod
     def from_env(cls) -> Settings:
-        if os.getenv("SBOM_PULL_IMAGE") or os.getenv("SBOM_DOCKER_BINARY"):
-            raise ValueError("Legacy Docker settings are unsupported; use registry or explicit image archive")
+        if os.getenv("SBOM_PULL_IMAGE"):
+            raise ValueError("Legacy image-pull setting is unsupported; use registry or explicit image archive")
         defaults = cls()
         values: dict[str, Any] = {}
         for key in cls.__dataclass_fields__:
@@ -119,7 +134,12 @@ def image_reference(value: str, settings: Settings) -> str:
     return reference
 
 
-def validate_inputs(repository_url: str, commit: str, image: str, settings: Settings) -> None:
+def validate_inputs(repository_url: str | None, commit: str | None, image: str, settings: Settings) -> None:
+    if repository_url is None and commit is None:
+        image_reference(image, settings)
+        return
+    if repository_url is None or commit is None:
+        raise ValueError('Repository URL and commit must be supplied together')
     validate_repository_url(repository_url, settings)
     validate_commit(commit)
     image_reference(image, settings)

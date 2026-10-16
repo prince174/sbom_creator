@@ -1,0 +1,53 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 2.078,
+  "image_id": "sha256:251276787a11ffd6fdbbd7c4e89e6ef6e5bba34b1e387dc545a93e3d05d327ab",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--no-healthcheck",
+    "--network=none",
+    "--read-only",
+    "--user=10001:10001",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--memory=512m",
+    "--cpus=1",
+    "--pids-limit=128",
+    "--tmpfs=/tmp:rw,nosuid,nodev,size=64m,mode=1777",
+    "sha256:251276787a11ffd6fdbbd7c4e89e6ef6e5bba34b1e387dc545a93e3d05d327ab",
+    "python",
+    "-c",
+    "\nimport json,os,pathlib,subprocess,time,urllib.error,urllib.request\nroot=pathlib.Path('/tmp/http-smoke');root.mkdir()\nenv=dict(os.environ,SBOM_WORKSPACE=str(root/'workspace'),SBOM_API_TOKEN='synthetic-container-smoke-only',SBOM_REGISTRY_HOSTS='docker.io',SBOM_PORT='8080')\nwith (root/'server.log').open('wb') as log:\n    server=subprocess.Popen(['sbom-creator-service'],env=env,stdout=log,stderr=subprocess.STDOUT)\n    try:\n        for _ in range(100):\n            try:\n                health=json.load(urllib.request.urlopen('http://127.0.0.1:8080/health',timeout=1));break\n            except (urllib.error.URLError,TimeoutError):\n                if server.poll() is not None:raise RuntimeError('Service exited during startup')\n                time.sleep(.1)\n        else:raise RuntimeError('Service did not become healthy')\n        def request(body,authorized=True):\n            headers={'Content-Type':'application/json'}\n            if authorized:headers['Authorization']='Bearer synthetic-container-smoke-only'\n            query=urllib.request.Request('http://127.0.0.1:8080/v1/analyses',data=json.dumps(body).encode(),headers=headers)\n            try:\n                with urllib.request.urlopen(query,timeout=2) as response:return response.status,json.load(response)\n            except urllib.error.HTTPError as error:return error.code,json.load(error)\n        image={'image':'blocked.example/app@sha256:'+'0'*64}\n        unauth=request(image,False);imageonly=request(image)\n        paired=request(dict(image,repository_url='https://example.com/org/repo.git'))\n        assert health['status']=='ok'\n        assert unauth[0]==401\n        assert imageonly==(422,{'detail':'Invalid or unauthorized repository/commit/image'})\n        assert paired[0]==422 and isinstance(paired[1]['detail'],list)\n        assert not list((root/'workspace/jobs').iterdir())\n        print(json.dumps({'status':'passed','uid':os.geteuid(),'health':health,'unauthenticated':unauth,'image_only_reaches_registry_authorization':imageonly,'incomplete_source_pair_status':paired[0],'jobs_created':0,'test_boundary':'HTTP/auth/request model; actual image analysis covered by separate installed pipeline smoke'}))\n    finally:\n        server.terminate();server.wait(timeout=10)\n"
+  ],
+  "program_sha256": "577f2d8dffec598f8b656218fb110f668b820f03b92a6fb4ace9ba48b48841ba",
+  "host_ports": [],
+  "network": "none",
+  "mounted_paths": [],
+  "deployed_service_changed": false,
+  "result": {
+    "status": "passed",
+    "uid": 10001,
+    "health": {
+      "status": "ok",
+      "dependency_readiness": "not_checked"
+    },
+    "unauthenticated": [
+      401,
+      {
+        "detail": "Invalid credentials"
+      }
+    ],
+    "image_only_reaches_registry_authorization": [
+      422,
+      {
+        "detail": "Invalid or unauthorized repository/commit/image"
+      }
+    ],
+    "incomplete_source_pair_status": 422,
+    "jobs_created": 0,
+    "test_boundary": "HTTP/auth/request model; actual image analysis covered by separate installed pipeline smoke"
+  }
+}

@@ -47,7 +47,7 @@ def combine(npm, python):
     if npm.get("status") == "not-applicable":
         return python
     edges = npm.get("edges", []) + python.get("edges", [])
-    return {"profile": "npm-and-python-root", "status": "partial", "graph_complete": False,
+    return {"profile": "combined-source-dependencies", "status": "partial", "graph_complete": False,
             "build_usage_proven": False, "edges": edges,
             "direct_count": sum(e["status"] == "DIRECT" for e in edges),
             "unknown_count": (None if any(r.get("status") == "UNKNOWN" for r in (npm, python)) else

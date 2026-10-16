@@ -233,11 +233,12 @@ def _java(artifact, files):
     return None
 
 
-def collect(document, archive=None):
+def collect(document, archive=None, *, files_factory=None, java_witness=None, close_files=True):
     evidence = {}
     if not any(a.get("foundBy") in SUPPORTED for a in document["artifacts"]):
         return evidence
-    files = ImageFiles(archive, document) if archive is not None else SyftFiles(document)
+    files = (files_factory(archive, document) if files_factory is not None else
+             ImageFiles(archive, document) if archive is not None else SyftFiles(document))
     package_roots = {posixpath.dirname(path(loc.get("path", ""))) for a in document["artifacts"]
                      if a.get("foundBy") == "javascript-package-cataloger" for loc in a.get("locations", [])}
     try:
@@ -254,7 +255,7 @@ def collect(document, archive=None):
                 elif cataloger == "ruby-installed-gemspec-cataloger":
                     observed = _ruby(artifact, files)
                 elif cataloger == "java-archive-cataloger":
-                    observed = _java(artifact, files)
+                    observed = java_witness(artifact, files) if java_witness is not None else _java(artifact, files)
                 else:
                     observed = next((path(loc["path"]) for loc in artifact.get("locations", [])
                                      if files.regular(loc.get("path", ""))), None)
@@ -266,5 +267,6 @@ def collect(document, archive=None):
                            else "pinned-syft-final-files-plus-bounded-content-v2"),
                 "scope": "Some payload present; completeness and runtime use not established"}
     finally:
-        files.close()
+        if close_files:
+            files.close()
     return evidence

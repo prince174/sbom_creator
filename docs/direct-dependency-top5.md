@@ -1,6 +1,10 @@
 # Сравнение решений: топ-5 по прямым зависимостям
 
-Расширенная выборка: [27 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md). Новые Spring Boot/TypeScript приложения показаны отдельно; рейтинг старой выборки не переносится автоматически.
+Расширенная выборка: [29 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md).
+Текущая цель первого MVP — достоверные компоненты готового образа; source/build graph
+обогащается отдельно и не блокирует image SBOM. [Actual runtime R105](java-js-service-accuracy.md)
+показывает Java resource gap на Microservices и JS component P97.14/R99.67 на12 no-lock
+проектах. Общий рейтинг старой выборки не переносится автоматически.
 
 2026-10-15: актуальные режимы и результаты — [сравнение Java/JavaScript](java-js-top3.md), [cdxgen с Maven](cdxgen-build-enabled-v1.md), [сервис без JS lockfile](java-js-no-lock-v1.md). Старые staged-метрики ниже относятся к историческим выборкам.
 Java ещё не проходит порог в production; новый optional/fingerprint supplement
@@ -24,19 +28,23 @@ Java не ранжирована. [Таблица и ограничения](jav
 при сборке того же commit. Полный список `components` эталона не равен списку
 прямых зависимостей: нужны связи корня/модулей, согласованные scope и версии.
 
-## Таблица решений
+## Таблица пяти проверенных подходов — 2026-10-16
 
-Обновление 2026-10-13: пять подходов в сравнении, но рейтинг не установлен.
-Измеренного победителя по прямым зависимостям пока нет; полный сравнительный прогон по6языкам
-не завершён. Обзор документации не является проверкой точности.
+Текущие проверенные версии и режимы Syft1.51.1/Trivy0.75.0/cdxgen13.4.0,
+метрики и ограничения обновлены в [едином Java/JS сравнении R105](java-js-top3.md).
+R104 source control: cdxgen native shipped100/0/0 direct, raw all-owner100/8/0;
+Trivy passive76/0/24. Это не accuracy final image inventory и не новый глобальный ранг.
+Исторические пассивные ChildProcess-отказы не означают неспособность cdxgen работать
+в разрешённом Maven режиме. Места не назначены: image inventory и source direct
+graphs решают разные задачи и не образуют сопоставимый единый рейтинг.
 
-| Место | Решение | Precision / Recall / F1 прямых зависимостей | Плюсы | Минусы | Статус |
+| Место | Подход / версия | Принцип, языки | Измерение / выборка | Плюсы | Минусы / статус, дата и отчёт |
 |---|---|---|---|---|---|
-| — | B0: SBOM Creator 0.5.0, commit `20f287b60d358692c843526704cd44e71ed4012f` | Не измерены | Syft source/image; точные версии и payload evidence; ОС отдельно; runtime без Docker socket | Определяет наличие в образе, не принадлежность к прямым зависимостям проекта; базовые библиотеки могут попадать в основной SBOM; граф неполон | Стартовая версия, 6 языков, 60 тестовых проектов |
-| — | SBOM Creator 0.7.0: npm H2.1 + Python P1, [R19](runtime-python-r19.md) | npm control: TP50 FP0 FN1, P100% / R98.04% / F199.01%; Python control: TP9 FP0 FN0, P/R/F1=100% на2положительных проектах | Владелец/декларация + установленный пакет; три inventory сохранены, без исполнения проекта | Python markers/extras/dynamic dependencies UNKNOWN; малая nonblind выборка; Java/Rust/Go/Ruby direct не измерены | JavaScript/Python интегрированы; [npm](runtime-npm-r19.json), [Python](runtime-python-r19.json); 2026-10-13 |
-| — | [Syft 1.51.1](https://github.com/anchore/syft), самостоятельный source/image baseline | Не измерены | Уже используемый каталогизатор; единый формат и scanner relationships | Сам по себе не гарантирует полноту графа direct/transitive; file ownership не равно dependency edge | 6 языков инвентаризируются в B0; [R31](syft-java-source-baseline-v1.md): source graph2Java development, filtered GAV2/2; effective scope UNKNOWN, direct accuracy не измерена |
-| — | [cdxgen](https://github.com/cdxgen/cdxgen/tree/b84786dec587a20deb605192087388fc0604b12d), HEAD обзора `b84786d` | Не измерены | CycloneDX из исходников и образов, несколько экосистем | Перед прогоном необходимо закрепить режим и проверить, какие внешние команды и установки он выполняет; нельзя молча дать ему больше входных данных | Кандидат; [R33](cdxgen-prebuild-v1.md):2Java pre-build запуска остановлены ChildProcess denied; accuracy не измерена, build-enabled режим не проверен |
-| — | [Trivy0.75.0](https://github.com/aquasecurity/trivy/releases/tag/v0.75.0), [R34](trivy-java-source-v1.md) | Java development: TP2 FP0 FN0, P/R/F1=100%, версии2/2; только2рёбра | POM graph, разрешение local/remote Maven metadata; inherited provided исключён | Сеть к Maven repositories; [R35](trivy-profile-v1.md):1лишний runtime edge при active profile test; малая development выборка | 2Java пары +3synthetic cases,5SBOM schema1.7 valid; другие языки и holdout ещё не сравнивались |
+| — | SBOM Creator runtime R105, frozen src + Syft1.51.1/Trivy0.75.0 | Image identity/path/layer + physical proof; Java/JS, остальные языки вне этого сравнения | Linux Boot components90/3/2, P96.77/R97.83; JS12 no-lock306/9/1, P97.14/R99.67 | Actual final/os/full; отдельные identity/payload evidence, без обязательной сборки проекта | Microservices8/0/132 на1 scope-agreed owner,7UNKNOWN; image-only direct UNKNOWN. Runtime candidate, 2026-10-16, [R105](java-js-service-accuracy.md) |
+| — | cdxgen13.4.0 + native Maven | Build-model graph; Java измерена, JS прежний lock-assisted режим отдельно | R104 Microservices9 owners direct100/8/0,P92.59/R100/F196.15;8 shipped100/0/0 | Готовый resolver; owner/version graph, новый сложный reactor | Выполняет tooling; raw module-containment extras; неизвестная CI configuration не воспроизведена. Optional backend, 2026-10-16, [R104](java-microservices-reference-r104.md) |
+| — | Trivy0.75.0 passive image + frozen Java DB | JAR coordinates из image и Java DB; Java, JS в иных режимах | Javalin8 agreed owners components128/0/0,P/R/F1100;Boot90/3/2 | Точнее Syft raw identities на том же Javalin scope | Raw inventory не доказывает payload/directness;6 owner scopes UNKNOWN. Измерен, 2026-10-16, [R90](../benchmarks/results/trivy-reactor-image-v3/evaluation.json) |
+| — | Trivy0.75.0 passive POM owner adapter | POM projection + remote metadata + exact source owner path; Java | R104 Microservices direct76/0/24,P100/R76/F186.36;7/9 owners | Не исполняет проект; version/owner provenance | Timeout/remote metadata/profile activation limits;24FN. Fallback candidate, 2026-10-16, [post-only report](../benchmarks/results/java-runtime-direct-r104-control-v1/evaluation.json) |
+| — | Syft1.51.1 standalone metadata | Unified source/image catalog; Java/JS, другие языки в историческом корпусе | То же Javalin8 owners raw components109/19/19,P/R85.16/F185.16 | Единый audit format; исходный inventory и scanner relationships | Namespace/version ошибки; metadata presence не payload proof; direct graph не установлен. Baseline, 2026-10-16, [same-image report](../benchmarks/results/trivy-reactor-image-v3/syft-raw-comparison.json) |
 
 Источники ограничений: [Syft cataloger capabilities](https://oss.anchore.com/docs/contributing/syft/),
 [Trivy Node.js](https://www.trivy.dev/docs/latest/guide/coverage/language/nodejs/),

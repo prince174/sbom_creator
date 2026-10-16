@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 73.262,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-identity-payload-v4",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 1
+    },
+    "unknown_groups": {
+      "image_evidence": 1
+    },
+    "source_count": 0,
+    "image_count": 239,
+    "selected_count": 238,
+    "final_count": 95,
+    "os_count": 143,
+    "full_count": 238,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 238,
+      "UNKNOWN": 1
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 8.239
+  },
+  "source_kind": "not-provided",
+  "java_image_status": "corroborated",
+  "image_config_digest": "sha256:68dffd48bd0f5988819b5644b89cee8cf23fbe8252a38b23a6f37037a46fe98e",
+  "output_hashes": {
+    "coverage.json": "b80a43cddf15276889b8d6f18adca522dd8a261a077c9c4d73e00e3afdabd58d",
+    "decisions.json": "9ace817b6908f7b14a5e0f93f8ca439b29344eb1966e80b4622ec7330305cc41",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "a1999b4535cffd69ed998b59f987c7a4e72f484ea1133e7aa2e1f4979279893c",
+    "full.cdx.json": "b21e6e4e226aeafde85462e8fbd9c9b006e62dd1e1fd57eb913f4b9a7791b3f8",
+    "image-identity-audit.json": "a17c2fff07bb8329649d23f0884f5607b944ea1afaaf987cb7a1ee2a445f02af",
+    "image-original.syft.json": "f8a44caed5aa7ac32fc1abd4a9c9474f3213877e4b1f75bc42168f55defa05b7",
+    "image-peer.cdx.json": "f11a75679621d1e2ae91d05a33dc497c9c437d61abe2d0998cd675fd39e8880b",
+    "image.syft.json": "40d3810d5c0689f7212e5a931bf36a187bff88fd8a61c2537f7eba24387779e0",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "c0a4aaa94d321340504ec796179e2128eb40ff47020a080661de2d3fdd24610c",
+    "provenance.json": "566d4b4eb863bf753a29378b3f729452b5bf8b7c3331592ab876471a4dad25ce",
+    "review.json": "15e131f27085168ca9ec684a15ce33139457344e06521af5ec58dba3d9438245",
+    "selected.syft.json": "aebf54837b20e6a0efeb430283658276e85ae2154f41ae92f23b1be0e19eaba2",
+    "source.syft.json": "b5e670d8813e4d9c329fba7b214c51d794e304658080f22256c690967074b1f2",
+    "summary.json": "898358cc2d6435a7f7f3d1de9692020d91d19441c71f6d8f89e398c3d3813320"
+  }
+}

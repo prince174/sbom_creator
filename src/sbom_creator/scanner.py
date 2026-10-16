@@ -10,6 +10,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from jsonschema.exceptions import ValidationError
+
 from .acquire import (
     SYFT_VERSION,
     Settings,
@@ -80,7 +82,11 @@ def _syft(args: list[str], settings: Settings, *, output: Path) -> dict[str, Any
         root = Path(directory)
         config = root / "syft.yaml"
         image_scan = args[0] == "scan" and args[1].startswith(("registry:", "docker-archive:", "oci-archive:"))
-        config.write_text(TRUSTED_CONFIG + (IMAGE_CONFIG if image_scan else ""), encoding="utf-8")
+        image_config = IMAGE_CONFIG
+        if settings.java_image_evidence:
+            for suffix in ('jar', 'war', 'ear', 'zip', 'hpi', 'jpi', 'nar', 'jmod'):
+                image_config = image_config.replace('      - "**/*.'+suffix+'"\n', '')
+        config.write_text(TRUSTED_CONFIG + (image_config if image_scan else ""), encoding="utf-8")
         environment = clean_environment()
         environment.update({"HOME": directory, "USERPROFILE": directory, "XDG_CONFIG_HOME": directory,
                             "XDG_CACHE_HOME": directory, "SYFT_CHECK_FOR_APP_UPDATE": "false"})
@@ -209,6 +215,20 @@ def scan_image(image: str, output: Path, settings: Settings) -> tuple[dict[str, 
     used = catalogers.get("used", []) if isinstance(catalogers, dict) else []
     if isinstance(used, list) and used and all(isinstance(name, str) and re.fullmatch(r"[a-z0-9-]+", name) for name in used):
         descriptor["configuration"] = {"catalogers": {"used": used}}
+    java_hint = any(a.get('foundBy') == 'java-archive-cataloger' for a in data['artifacts']) or any(
+        f.get('metadata', {}).get('type') == 'RegularFile'
+        and str(f.get('location', {}).get('path', '')).lower().endswith(('.jar', '.war', '.ear', '.hpi', '.jpi', '.nar', '.jmod'))
+        for f in data.get('files', []))
+    if settings.java_image_evidence and java_hint:
+        from .image_java.runtime import analyze as corroborate_java_image
+        try:
+            data, extra = corroborate_java_image(data, provenance, settings)
+            provenance.update(extra)
+        except (OSError, ValueError, KeyError, TypeError, RuntimeError, RecursionError, ValidationError) as error:
+            # Preserve completed inventory/non-Java facts, never pretend a failed
+            # corroboration proves absence. Output explicitly remains partial.
+            provenance['java_image_status'] = 'UNKNOWN'
+            provenance['java_image_error_type'] = type(error).__name__
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=output.parent, delete=False) as stream:

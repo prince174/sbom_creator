@@ -16,9 +16,10 @@ from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from . import __version__
 from .acquire import Settings, validate_inputs
 from .evaluation import compare, validate_reference
-from .pipeline import ARTIFACTS, analyze, write_json
+from .pipeline import ARTIFACTS, OPTIONAL_ARTIFACTS, analyze, write_json
 
 LOGGER = logging.getLogger('uvicorn.error')
 
@@ -29,15 +30,17 @@ def log_event(event, **fields):
 
 class Request(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    repository_url: str = Field(max_length=2048)
-    commit: str = Field(pattern=r"^(?:[0-9a-fA-F]{40}|[0-9a-fA-F]{64})$")
+    repository_url: str | None = Field(default=None, max_length=2048)
+    commit: str | None = Field(default=None, pattern=r"^(?:[0-9a-fA-F]{40}|[0-9a-fA-F]{64})$")
     image: str = Field(max_length=2048)
     run_mode: Literal['production', 'verification'] = 'production'
     reference_sbom: dict | None = None
-    reference_scope: Literal['runtime', 'unknown'] = 'unknown'
+    reference_scope: Literal['runtime', 'build', 'unknown'] = 'unknown'
 
     @model_validator(mode='after')
     def reference_contract(self):
+        if (self.repository_url is None) != (self.commit is None):
+            raise ValueError('Repository URL and commit must be supplied together')
         if self.run_mode == 'production' and self.reference_sbom is not None:
             raise ValueError('Production mode does not accept a reference')
         if self.run_mode == 'verification':
@@ -89,7 +92,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         yield
         executor.shutdown(wait=True, cancel_futures=False)
 
-    app = FastAPI(title="SBOM Creator", version="0.5.0", lifespan=lifespan)
+    app = FastAPI(title="SBOM Creator", version=__version__, lifespan=lifespan)
 
     def auth(authorization: str | None = Header(default=None)):
         token = api_token()
@@ -123,6 +126,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
             result = runner(request.repository_url, request.commit, request.image,
                             directory / "result", settings=configured, mode="rules")
             artifacts = list(ARTIFACTS)
+            artifacts.extend(name for name in OPTIONAL_ARTIFACTS if (directory/'result'/name).is_file())
             if request.run_mode == 'verification':
                 stage = 'verification'
                 log_event('verification.started', job_id=job_id)
@@ -167,7 +171,7 @@ def create_app(workspace=None, runner=analyze, settings=None):
         if os.getenv('SBOM_DEBUG_LOGGING', '').lower() in ('1', 'true', 'yes'):
             reference = request.reference_sbom
             log_event('analysis.inputs', job_id=job_id, commit=request.commit,
-                      repository_host=urlsplit(request.repository_url).hostname,
+                      repository_host=urlsplit(request.repository_url).hostname if request.repository_url else None,
                       image=request.image, reference_scope=request.reference_scope,
                       reference_bytes=len(json.dumps(reference).encode()) if reference is not None else 0,
                       reference_components=len(reference.get('components', [])) if reference is not None else 0,

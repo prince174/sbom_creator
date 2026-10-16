@@ -10,9 +10,9 @@ from .pipeline import analyze, analyze_local
 def main():
     parser = argparse.ArgumentParser(description="Create CycloneDX from source and container Syft SBOMs")
     sub = parser.add_subparsers(dest="command", required=True)
-    remote = sub.add_parser("analyze", help="Clone a repository at an exact commit")
-    remote.add_argument("--repository-url", required=True)
-    remote.add_argument("--commit", required=True)
+    remote = sub.add_parser("analyze", help="Analyze an image, optionally with repository + exact commit")
+    remote.add_argument("--repository-url")
+    remote.add_argument("--commit")
     local = sub.add_parser("analyze-local", help="Explicit local checkout / benchmark path")
     local.add_argument("--source", required=True)
     for command in (remote, local):
@@ -20,7 +20,7 @@ def main():
         command.add_argument("--output", required=True)
         command.add_argument('--run-mode', choices=('production', 'verification'), default='production')
         command.add_argument('--reference-sbom')
-        command.add_argument('--reference-scope', choices=('runtime', 'unknown'), default='unknown')
+        command.add_argument('--reference-scope', choices=('runtime', 'build', 'unknown'), default='unknown')
         command.add_argument("--mode", choices=("rules", "llm"), default="rules",
                              help="default: deterministic rules; llm is an optional explicit experimental mode")
     args = parser.parse_args()

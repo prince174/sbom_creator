@@ -29,17 +29,19 @@ def validate_syft(document):
             raise ValueError("Dangling Syft relationship")
 
 
-def validate_cyclonedx(document):
-    if document.get("specVersion") != "1.6":
-        raise ValueError("Expected CycloneDX 1.6")
+def validate_cyclonedx(document, *, versions=('1.6',)):
+    version = document.get('specVersion')
+    if version not in versions or version not in ('1.6', '1.7'):
+        raise ValueError('Unsupported CycloneDX version')
     registry = Registry()
-    for name in ("bom-1.6.schema.json", "spdx.schema.json", "jsf-0.82.schema.json"):
-        data = schema(name)
+    for name in (f"bom-{version}.schema.json", "spdx.schema.json", "jsf-0.82.schema.json"):
+        resource_name = name.replace('.schema.json', '-1.7.schema.json') if version == '1.7' and not name.startswith('bom-') else name
+        data = schema(resource_name)
         resource = Resource.from_contents(data)
         registry = registry.with_resource(f"http://cyclonedx.org/schema/{name}", resource)
         registry = registry.with_resource(f"https://cyclonedx.org/schema/{name}", resource)
         registry = registry.with_resource(name, resource)
-    Draft7Validator(schema("bom-1.6.schema.json"), registry=registry).validate(document)
+    Draft7Validator(schema(f"bom-{version}.schema.json"), registry=registry).validate(document)
     refs = []
 
     def collect(items):

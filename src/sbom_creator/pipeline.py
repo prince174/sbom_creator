@@ -1,4 +1,5 @@
 """Validated, atomic publication of a single source/image analysis."""
+import copy
 import hashlib
 import json
 import shutil
@@ -19,9 +20,12 @@ from .acquire import (
     validate_commit,
     validate_inputs,
 )
+from .build_backend import resolve as resolve_java
+from .build_comparison import compare as compare_build_image
 from .core import reconcile, review_report, rules_assessor
 from .direct_evidence import annotate, load_manifest
 from .exporter import packages_only, split_inventory
+from .java_evidence import annotate as annotate_java
 from .llm import LlmConfig, OpenAICompatibleAssessor
 from .payload import SUPPORTED as PAYLOAD_CATALOGERS
 from .python_evidence import annotate as annotate_python
@@ -35,7 +39,10 @@ ARTIFACTS = (
     "decisions.json", "coverage.json", "provenance.json", "summary.json", "review.json",
     "os.cdx.json", "full.cdx.json",
     "direct-dependencies.json",
+    "java-direct-dependencies.json",
 )
+OPTIONAL_ARTIFACTS = ('build.cdx.json', 'image.cdx.json', 'build-image-comparison.json',
+                      'image-original.syft.json', 'image-peer.cdx.json', 'image-identity-audit.json')
 
 
 class AnalysisError(RuntimeError):
@@ -120,7 +127,7 @@ def catalogers(document):
     return sorted({a["foundBy"] for a in document["artifacts"]} | set(used or []))
 
 
-def _publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None):
+def _publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None, java_report=None):
     """Also serves benchmark/replay; schemas and actual conversion always checked."""
     output = Path(output).resolve()
     if output.exists():
@@ -130,7 +137,8 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
     validate_syft(source)
     validate_syft(image)
     payload_evidence = (provenance or {}).get("image", {}).get("payload_evidence")
-    result = reconcile(source, image, assessor, payload_evidence)
+    identity_envelope = (provenance or {}).get('image', {}).get('identity_binding_envelope')
+    result = reconcile(source, image, assessor, payload_evidence, identity_envelope)
     validate_syft(result["selected_syft"])
     with tempfile.TemporaryDirectory(prefix=".publish-", dir=output.parent) as temporary:
         staging = Path(temporary) / "result"
@@ -139,6 +147,12 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         write_json(staging / "image.syft.json", image)
         write_json(staging / "selected.syft.json", result["selected_syft"])
         provenance = dict(provenance or {})
+        provenance['image'] = dict(provenance.get('image', {}))
+        auxiliary = provenance['image'].pop('_artifacts', {})
+        for name, document in auxiliary.items():
+            if name not in OPTIONAL_ARTIFACTS:
+                raise ValueError('Unrecognized image evidence artifact')
+            write_json(staging/name, document)
         provenance.update({
             "created_at": datetime.now(UTC).isoformat(),
             "build_link": provenance.get("build_link", "unverified"),
@@ -156,6 +170,21 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         direct = annotate(cdx, image, npm_manifest)
         if python_manifest is not None:
             direct = combine(direct, annotate_python(cdx, image, python_manifest))
+        java_report = copy.deepcopy(java_report) if java_report is not None else None
+        build_bom = java_report.pop('build_sbom', None) if java_report else None
+        if build_bom is not None:
+            validate_cyclonedx(build_bom)
+            write_json(staging / 'build.cdx.json', build_bom)
+            image_bom = packages_only(convert(staging / 'image.syft.json', staging / 'image.cdx.json', settings), image)
+            validate_cyclonedx(image_bom)
+            write_json(staging / 'image.cdx.json', image_bom)
+            write_json(staging / 'build-image-comparison.json', compare_build_image(build_bom, image_bom))
+            java_report['build_artifact'] = 'build.cdx.json'
+        java_report = annotate_java(cdx, java_report or {
+            "status": "not-applicable", "reason": "source_poms_not_provided", "edges": [],
+            "profile": "java-maven-source-modules-v1", "graph_complete": False})
+        write_json(staging / "java-direct-dependencies.json", java_report)
+        direct = combine(direct, java_report)
         write_json(staging / "direct-dependencies.json", direct)
         counts = Counter(d["decision"] for d in result["decisions"])
         cdx.setdefault("metadata", {}).setdefault("properties", []).extend([
@@ -166,6 +195,8 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
         ])
         coverage = result["coverage"]
         coverage["direct_dependencies"] = {k: v for k, v in direct.items() if k != "edges"}
+        coverage['java_dependencies'] = {k: java_report.get(k) for k in
+            ('status', 'profile', 'direct_count', 'unknown_count', 'original_build_reproduced', 'reason')}
         checkout_coverage = provenance.get("git", {}).get("coverage", provenance.get("source_coverage", {}))
         incomplete_source = bool(checkout_coverage.get("gitmodules_present")
                                  or checkout_coverage.get("lfs_pointer_paths"))
@@ -177,7 +208,9 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
                          "image_catalogers": catalogers(image)})
         payload_unavailable = payload_evidence is None and any(
             a.get("foundBy") in PAYLOAD_CATALOGERS for a in image["artifacts"])
-        coverage["partial_inventory"] = counts.get("UNKNOWN", 0) > 0 or incomplete_source or payload_unavailable
+        coverage["partial_inventory"] = (counts.get("UNKNOWN", 0) > 0 or incomplete_source or payload_unavailable
+                                         or java_report['status'] == 'UNKNOWN'
+                                         or provenance.get('image', {}).get('java_image_status') == 'UNKNOWN')
         cdx["metadata"]["properties"].extend([
             {"name": "sbom-creator:assessment-mode", "value": coverage["mode"]},
             {"name": "sbom-creator:policy-version", "value": coverage["policy_version"]},
@@ -214,9 +247,9 @@ def _publish_catalogs(source, image, output, settings, assessor, provenance=None
     return summary
 
 
-def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None):
+def publish_catalogs(source, image, output, settings, assessor, provenance=None, npm_manifest=None, python_manifest=None, java_report=None):
     try:
-        return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest, python_manifest)
+        return _publish_catalogs(source, image, output, settings, assessor, provenance, npm_manifest, python_manifest, java_report)
     except FileExistsError:
         raise
     except Exception as error:  # noqa: BLE001 -- safe diagnostic boundary
@@ -247,11 +280,13 @@ def analyze_local(source_path, image_reference, output, settings=None, mode="rul
         state["provenance"].update(source_coverage=source_coverage, git=git_provenance)
         state["stage"] = "source_scan"
         source = scan_source(checkout_path, work / "source.syft.json", settings)
+        state["stage"] = "java_source_dependencies"
+        java_report = resolve_java(checkout_path, settings)
         state["stage"] = "image_scan"
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(checkout_path), load_python_manifest(checkout_path))
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(checkout_path), load_python_manifest(checkout_path), java_report)
 
 
 def analyze(repository_url, commit, image_reference, output, settings=None, mode="rules"):
@@ -265,13 +300,25 @@ def analyze(repository_url, commit, image_reference, output, settings=None, mode
                                  "commit": commit, "image": image_reference}}
         state["stage"] = "assessment_configuration"
         assessor = assessor_for(mode)
+        if repository_url is None:
+            empty = work/'no-source'
+            empty.mkdir()
+            state['stage'] = 'source_scan'
+            source = scan_source(empty, work/'source.syft.json', settings)
+            state['stage'] = 'image_scan'
+            image, image_provenance = scan_image(image_reference, work/'image.syft.json', settings)
+            state['provenance'].update(image=image_provenance, source_kind='not-provided')
+            state['stage'] = 'publication'
+            return publish_catalogs(source, image, output, settings, assessor, state['provenance'])
         state["stage"] = "checkout"
         git_provenance = checkout(repository_url, commit, work / "checkout", settings)
         state["provenance"]["git"] = git_provenance
         state["stage"] = "source_scan"
         source = scan_source(work / "checkout", work / "source.syft.json", settings)
+        state["stage"] = "java_source_dependencies"
+        java_report = resolve_java(work / "checkout", settings)
         state["stage"] = "image_scan"
         image, image_provenance = scan_image(image_reference, work / "image.syft.json", settings)
         state["provenance"]["image"] = image_provenance
         state["stage"] = "publication"
-        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(work / "checkout"), load_python_manifest(work / "checkout"))
+        return publish_catalogs(source, image, output, settings, assessor, state["provenance"], load_manifest(work / "checkout"), load_python_manifest(work / "checkout"), java_report)

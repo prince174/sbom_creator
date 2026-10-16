@@ -95,3 +95,113 @@ def test_nested_reference_edges_and_dangling_targets(tmp_path):
     reference['dependencies'][0]['dependsOn'] = ['missing']
     with pytest.raises(ValueError, match='Dangling CycloneDX dependency'):
         compare(tmp_path, reference, 'runtime')
+
+
+def inventory_bom(*purls, subject='pkg:maven/org/app@1'):
+    from packageurl import PackageURL
+    def component(purl, ref):
+        identity = PackageURL.from_string(purl)
+        item = {'type': 'library', 'name': identity.name, 'version': identity.version,
+                'purl': purl, 'bom-ref': ref}
+        if identity.namespace:
+            item['group'] = identity.namespace
+        return item
+    return {'bomFormat': 'CycloneDX', 'specVersion': '1.6', 'version': 1,
+            'metadata': {'component': component(subject, 'subject')},
+            'components': [component(p, 'dep-'+str(i)) for i, p in enumerate(purls)]}
+
+
+def test_image_only_components_are_measured_when_direct_owner_unknown(tmp_path):
+    reference = inventory_bom('pkg:maven/org/a@1', 'pkg:maven/org/b@2')
+    actual = inventory_bom('pkg:maven/org/a@1', 'pkg:maven/org/extra@3', subject='pkg:oci/image@1')
+    (tmp_path/'final.cdx.json').write_text(json.dumps(actual))
+    result = compare(tmp_path, reference, 'runtime')
+    assert result['status'] == 'UNKNOWN' and result['precision'] is None
+    metrics = result['components']
+    assert metrics['status'] == 'MEASURED'
+    assert (metrics['tp'], metrics['fp'], metrics['fn']) == (1, 1, 1)
+    assert metrics['precision'] == metrics['recall'] == metrics['f1'] == 0.5
+    assert metrics['count_delta'] == 0 and metrics['missing'] and metrics['extra']
+    assert metrics['comparison_model'] == 'delivered_inventory'
+    assert metrics['reference_scope_binding'] == 'caller_asserted_not_attested'
+
+
+@pytest.mark.parametrize('actual_purl', [
+    'pkg:maven/org/a@1?classifier=tests', 'pkg:maven/org/a@1#classes', 'pkg:maven/org/a@2'])
+def test_component_comparison_retains_qualifiers_subpaths_and_exact_versions(tmp_path, actual_purl):
+    reference = inventory_bom('pkg:maven/org/a@1')
+    (tmp_path/'final.cdx.json').write_text(json.dumps(inventory_bom(actual_purl)))
+    metrics = compare(tmp_path, reference, 'runtime')['components']
+    assert (metrics['tp'], metrics['fp'], metrics['fn']) == (0, 1, 1)
+    assert metrics['exact_version_coverage'] == 0
+    assert metrics['count_delta'] == 0
+
+
+def test_component_version_accuracy_is_conditional_and_recall_counts_missing_versions(tmp_path):
+    reference = inventory_bom('pkg:maven/org/a@1', 'pkg:maven/org/b@1')
+    (tmp_path/'final.cdx.json').write_text(json.dumps(inventory_bom('pkg:maven/org/a@1')))
+    metrics = compare(tmp_path, reference, 'runtime')['components']
+    assert metrics['version_accuracy'] == 1 and metrics['exact_version_coverage'] == 0.5
+
+
+def test_component_subject_excluded_in_components_and_nested_dependencies_retained(tmp_path):
+    reference = inventory_bom('pkg:maven/org/a@1')
+    reference['metadata']['component']['components'] = reference.pop('components')
+    actual = inventory_bom('pkg:maven/org/a@1')
+    actual['components'].append(dict(actual['metadata']['component'], **{'bom-ref': 'copied-subject'}))
+    (tmp_path/'final.cdx.json').write_text(json.dumps(actual))
+    metrics = compare(tmp_path, reference, 'runtime')['components']
+    assert (metrics['tp'], metrics['fp'], metrics['fn']) == (1, 0, 0)
+    assert metrics['predicted_components'] == 1
+
+
+def test_unscoped_reference_cannot_label_runtime_inventory(tmp_path):
+    reference = inventory_bom('pkg:maven/org/a@1')
+    (tmp_path/'final.cdx.json').write_text(json.dumps(reference))
+    result = compare(tmp_path, reference)
+    assert result['components']['status'] == 'UNKNOWN'
+    assert result['components']['precision'] is None
+
+
+def test_build_comparison_never_uses_image_final_as_build_inventory(tmp_path):
+    reference = inventory_bom('pkg:maven/org/build-only@1')
+    (tmp_path/'final.cdx.json').write_text(json.dumps(inventory_bom('pkg:maven/org/image-only@1')))
+    assert compare(tmp_path, reference, 'build')['components']['status'] == 'UNKNOWN'
+    (tmp_path/'build.cdx.json').write_text(json.dumps(reference))
+    result = compare(tmp_path, reference, 'build')['components']
+    assert result['tp'] == 1 and result['fp'] == 0
+    assert result['comparison_model'] == 'analysis_environment_build_model'
+    assert result['original_build_reproduced'] is False
+
+
+def test_empty_and_unidentifiable_reference_inventory_is_not_success(tmp_path):
+    empty = inventory_bom()
+    (tmp_path/'final.cdx.json').write_text(json.dumps(empty))
+    metrics = compare(tmp_path, empty, 'runtime')['components']
+    assert metrics['status'] == 'UNKNOWN' and metrics['recall'] is None
+    unknown = inventory_bom('pkg:maven/org/a@1')
+    unknown['components'][0].pop('purl')
+    metrics = compare(tmp_path, unknown, 'runtime')['components']
+    assert metrics['status'] == 'UNKNOWN' and metrics['reference_unknown_components'] == 1
+    assert metrics['precision'] is None
+
+
+def test_contradictory_component_version_is_unknown_not_a_successful_match(tmp_path):
+    reference = inventory_bom('pkg:maven/org/a@1')
+    actual = inventory_bom('pkg:maven/org/a@1')
+    actual['components'][0]['version'] = 'different'
+    (tmp_path/'final.cdx.json').write_text(json.dumps(actual))
+    metrics = compare(tmp_path, reference, 'runtime')['components']
+    assert metrics['status'] == 'UNKNOWN' and metrics['predicted_unknown_components'] == 1
+
+
+def test_cyclonedx_17_requires_explicit_peer_opt_in_and_checks_graph_integrity():
+    from sbom_creator.validation import validate_cyclonedx
+    peer = inventory_bom('pkg:maven/org/a@1')
+    peer['specVersion'] = '1.7'
+    with pytest.raises(ValueError, match='Unsupported CycloneDX version'):
+        validate_cyclonedx(peer)
+    validate_cyclonedx(peer, versions=('1.6', '1.7'))
+    peer['dependencies'] = [{'ref': 'subject', 'dependsOn': ['missing']}]
+    with pytest.raises(ValueError, match='Dangling CycloneDX dependency'):
+        validate_cyclonedx(peer, versions=('1.6', '1.7'))

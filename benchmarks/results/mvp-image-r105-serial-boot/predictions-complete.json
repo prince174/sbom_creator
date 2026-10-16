@@ -1,0 +1,10 @@
+{
+  "oracle_read": false,
+  "cases": [
+    "boot"
+  ],
+  "completed": [
+    "boot"
+  ],
+  "failed": []
+}

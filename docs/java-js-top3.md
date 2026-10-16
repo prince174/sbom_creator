@@ -1,3 +1,27 @@
+## R105 — actual image-first service and separate source graph, 2026-10-16
+
+The current MVP analysis accepts image-only input. Rebuilding an unknown TeamCity
+recipe is not required to publish an image SBOM. Optional source-model graphs are
+reported separately and never add source-only libraries to final image inventory.
+The historical execution bans below are superseded by the user's explicit permission
+for isolated cdxgen project-tooling jobs; default source backend remains disabled.
+
+| Technique / fixed mode | New measured result | Scope and status |
+|---|---|---|
+| Actual service: Syft1.51.1 + Trivy0.75.0 + bounded payload/identity gate |Linux Petclinic final90/3/2 components, P96.77/R97.83; Javalin128/0/0; Dropwizard893/0/14; Microservices8/0/132 on1 agreeing owner |Runtime integration candidate; Microservices payload-budget weakness prevents Java-wide >90 claim. Unknown owner scopes and Windows helper failure retained |
+| cdxgen13.4.0 + native Maven |Microservices source direct100/0/0 on8 shipped owners; raw all9 owners100/8/0 |R104 source-model evaluation only, not image accuracy or original-CI reproduction; root module-containment extras remain FP |
+| Trivy0.75.0 passive source POM projection |Same Microservices source commit76/0/24 direct;7/9 owner coverage |Partial source fallback; not promoted to native-equivalent recall |
+
+JavaScript12 fresh image-only service scans without project lockfiles: final
+components306/9/1, P97.14/R99.67, exact-version coverage99.67%; all12 component sets
+equal the previous source-assisted baseline. Axios precision61.54 remains visible.
+Image-only direct graphs remain UNKNOWN, not inferred from component presence.
+[Actual per-case metrics and failures](java-js-service-accuracy.md),
+[R104 source comparison](java-microservices-reference-r104.md).
+No universal top-three ranking or global goal completion: these modes have different
+tasks/scopes, and the new resource control is weak. Further external build-recipe
+expansion is deferred for MVP; existing immutable references remain in regression.
+
 ## R90 — passive Java image identity comparison, 2026-10-16
 
 Same immutable Javalin image, eight module owners whose CycloneDX/native runtime component sets agree. One development project, not eight independent projects. Six additional shipped owners retain UNKNOWN component scope. No source execution, lockfile or oracle input to either scanner.

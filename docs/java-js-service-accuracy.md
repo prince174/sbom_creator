@@ -1,54 +1,127 @@
-# Java / JavaScript: точность сервиса и нового reader — 2026-10-16
+# Java / JavaScript: actual service accuracy — R105, 2026-10-16
 
-Сравниваются точные имена **и версии** компонентов итогового `final.cdx.json`. Совпадение количества не считается совпадением компонентов. Все три SBOM (`final/os/full`) сохранены и проверены по schema. Референсы открывает только evaluator после предсказания.
+Измеряется **final.cdx.json самого сервиса** после фактического запуска сканеров,
+reader, identity gate и publisher. Референс открывает только evaluator после
+завершения прогнозов. Точное имя **и версия** должны совпасть. Repo/commit не
+передаются image-only анализу; граф исходников — отдельное обогащение.
+Все три SBOM и полный scanner inventory сохраняются.
 
-## Java: реальные class/resource bytes, эксперимент R102
+**Java пока не проходит >90% на всех сложных проектах.** Новый сервис воспроизводит
+сильные Java-эксперименты, но новый Microservices образ упирается в payload budget.
+JS проходит компонентный порог на измеренной раскрытой выборке; универсальной
+гарантии точности для любых образов это не даёт.
 
-| Проект / область оценки | TP / FP / FN компонентов | Precision | Recall = exact-version coverage | Прямые связи |
-|---|---:|---:|---:|---|
-| Spring Petclinic,92 известных packaged dependencies |90 /3 /2|96.77%|97.83%|16 UNKNOWN/FN |
-| Javalin,8 согласованных native/CDX владельцев |128 /0 /0|100%|100%|55 shipped UNKNOWN/FN |
-| Dropwizard,16 согласованных native/CDX владельцев |893 /0 /14|100%|98.46%|443 UNKNOWN/FN |
+## Java: реальные итоговые SBOM
 
-Версии среди совпавших идентичностей: Petclinic98.90%, Javalin/Dropwizard100%. Javalin имеет ещё6 владельцев со scope UNKNOWN; Dropwizard ещё18. Их raw deltas сохранены отдельно, в acceptance они не превращены в успех. Это три раскрытых development-репозитория, а не24 независимых проекта. Нового независимого acceptance нет.
-
-[Воспроизводимая оценка](../benchmarks/results/seekable-payload-v4/evaluation.json), [freeze](../benchmarks/results/seekable-payload-v4/candidate-freeze.json), [регрессия](../benchmarks/results/seekable-payload-v4/regression.json).
-
-Dropwizard улучшился относительно R100:0/0/907 →893/0/14 на тех же16 владельцах. Подтверждены реальные `.class`/resource bytes для2147 из2406 логических записей; это coverage evidence, не отдельная метрика точности. Все14 FN — один `listenablefuture@9999.0-empty-to-avoid-conflict-with-guava`, повторённый у14 владельцев. Физически JAR2199bytes содержит только manifest/Maven metadata, без классов. Его НЕ исключали из референса ради порога: он остаётся FN. [Диагностика](../benchmarks/results/seekable-payload-v4/dropwizard/empty-artifact-diagnosis.json).
-
-Reader один раз нормализует слой и проверяет DiffID/config. ZIP проверяет стандартный parser, `.class` проверяется по magic bytes, ресурсы — по фактическому содержимому. Повторные payload proofs переносятся между файлами только после полного SHA256 каждого физического JAR; имя/версия/ребро из этого не выводятся. Identity/path/layer связываются прежним строгим Syft/Trivy bridge. Изменённый body при одинаковом ZIP directory не переиспользует proof.
-
-Ресурсная политика R102 новая и явно экспериментальная:8GiB disk normalization; отдельно8GiB потоковых SHA256 verification reads (1MiB chunks),32MiB/read128MiB actual payload-window reads,16MiB unique ZIP directory ledger/100k entries/256 indexes,4096 views и180s cooperative witness deadline. Индексы парсятся независимо и закрываются после witness; статистика parsed entries отдельно от unique ledger. На Dropwizard:701,432,545 verification bytes,134,014,511 actual window bytes,703,148,544 normalized bytes. Это НЕ прежняя512MiB политика R100 и не production resource acceptance. Peak RSS/hard filesystem quota не доказаны.
-
-## Что выдаёт сам сервис сейчас
-
-Runtime `src` не менялся относительно baseline4f29791; R102 включён только в benchmark. Сервисный Petclinic по-прежнему имеет0 известных packaged компонентов из92; Petclinic REST —0/106. Javalin известен FAILED_OUTPUT_BUDGET. Новый отдельный запуск **неизменённого** сервиса на Dropwizard завершился ошибкой `image_scan / RuntimeError`, итоговые SBOM не опубликованы; это не нулевой успешный результат. [Свежий baseline](../benchmarks/results/runtime-baseline-r102/dropwizard.json). Экспериментальный final не подменяет production result.
-
-## JavaScript: текущий сервис, без lockfile
-
-Повторно проверены сохранённые результаты неизменённого runtime: hashes reference/final и schemas36 final/os/full. Новый engine scan сейчас не выполнялся.12 реальных пар,8 с непустым component reference;4 пустых не повышают macro. Source/image project lockfiles отсутствуют в производных входах, платформа Node/npm и ОС отдельно, вся inventory сохранена.
-
-| Метрика | TP / FP / FN | Precision | Recall | F1 |
+| Запуск / область оценки | TP / FP / FN | Precision | Recall / exact-version coverage | Время |
 |---|---:|---:|---:|---:|
-| Компоненты, точные имена+версии |306 /9 /1|97.14%|99.67%|98.39%|
-| Прямые связи |102 /0 /1|100%|99.03%|99.51%|
+| Linux installed RC, Petclinic:92 известных packaged dependencies |90 /3 /2|96.77%|97.83%|84.563s|
+| Финальный Linux RC после safety catch, тот же Petclinic |90 /3 /2|96.77%|97.83%|75.062s|
+| Windows serial, тот же Petclinic |90 /3 /2|96.77%|97.83%|24.234s|
+| Windows v2, Javalin:8 native/CDX-agreeing owners |128 /0 /0|100%|100%|22.485s|
+| Windows v2, Dropwizard:16 agreeing owners |893 /0 /14|100%|98.46%|171.031s|
+| Windows v2, Microservices:1 agreeing owner |8 /0 /132|100%|5.71%|139.234s|
 
-Component macro на8 положительных проектах:P93.48%,R99.88%,F196.08%; owner-status coverage11/12. Conditional version accuracy100%, exact component-version coverage99.67%. Результат раскрытых fixtures с фиксированным `/app/` не доказывает общий production ownership. Слабый проект Axios:P61.54% из-за5 app-local test-fixture extras; Pino имеет1 extra transport fixture; Nest пропускает `@tokenizer/token@0.3.0`. [Все проекты, версии и hashes](../benchmarks/results/runtime-accuracy-r102/javascript.json).
+Это actual pipeline timings: fresh scans, DB hashing, physical reads и publication;
+готовый local archive исключает время registry acquisition. Linux также включает
+container startup. Windows v2 Petclinic сначала завершился partial с
+java_image_status=UNKNOWN, RuntimeError:0/0/92, recall0. Тот же код при отдельном
+serial-запуске и в установленном Linux image получает90/3/2. Отрицательный запуск
+сохранён; точная причина Windows helper failure не установлена.
 
-## Что осталось до >90% в сервисе
+Финальный локальный image `sbom-creator:mvp-r105-final`, config ID
+`sha256:318289b205c2bd0597dfbb1cf6a20169f39cefe598758f5ca91d261cd7850a8d`:
+73.262s pipeline /75.062s с контейнером. Все42 установленных файла совпадают со
+снимком; единственная разница с предыдущим успешным RC — catch schema failure
+дополнительного peer-сканера. Все три coordinate multisets и выбранные artifact IDs
+совпали. [Финальная проверка](../benchmarks/results/mvp-container-r105-v1/final-fallback-verification.json).
+457 service/selected benchmark tests прошли,3 skips; Ruff и schema checks прошли.
+Это проверенный runtime candidate с сохранённым Microservices failure, не приёмка
+универсального Java >90% и не развёртывание сервиса.
 
-1. Интегрировать проверенный image reader + engine identity evidence через явные production gates: registry acquisition, ресурсы/конкурентность/диск, сохранение inventory и трёх SBOM. Экспериментальные monkeypatch/trust registration не являются интеграцией.
-2. Довести Java source-owner/direct graph: Maven BOM/parent/optional/reactor/profile scope; source Dropwizard timed out180s. Не угадывать прямые связи по наличию JAR. Пока16/55/443 известных direct edges в этих final остаются UNKNOWN/FN.
-3. Разобрать scope18+6 владельцев и известные component ошибки (Hibernate, пустой служебный JAR) без фильтрации по эталону; исправить слабые JS fixtures и проверить свежие workspace/optional/peer/no-lock controls.
-4. Достроить5 Java и8 JS референсных пар до20+20 основных; заморозить классификатор до новых независимых контролей. Текущий корпус15Java+12JS, плюс отдельный DBCP;28 пар всего. Порог нужен отдельно для языка и для components/direct, с версиями, coverage и регрессией.
+[Linux RC evaluation](../benchmarks/results/mvp-container-r105-v1/final-smoke/evaluation.json),
+[Windows serial Boot](../benchmarks/results/mvp-image-r105-serial-boot/evaluation.json),
+[полный фиксированный v2 протокол](../benchmarks/results/mvp-image-r105-v2/evaluation.json).
+В полном v2 протоколе, включая failed-helper Boot и слабый Microservices,
+Java micro1029/0/238: P100%, R81.22%, F189.63%; repository macro recall51.04%.
+Удачный serial Boot показан отдельно, а не незаметно подставлен в агрегат.
 
-377 selected service/prototype tests passed,3 skipped; Ruff/schema checks passed. Все исходные неудачные варианты R102v1/v2/v3 сохранены; v4 — текущий кандидат. Runtime и развёрнутые сервисы не изменены.
+Javalin имеет ещё6 владельцев со scope UNKNOWN, Dropwizard18, Microservices7:
+для каждого сохранены raw build-reference delta, missing/extra и owner path.
+Они не объявлены успешными. Это модули четырёх раскрытых репозиториев, а не десятки
+независимых проектов. Фиксированные /application/<module> пути относятся к fixture
+recipes; полный image inventory не фильтруется по эталону. GAV comparison не
+доказывает classifier/type accuracy.
 
+Linux final содержит95 non-OS записей:93 project coordinates под /application/
+совпадают с прежним benchmark,2 записи вне этой области остаются в результате.
+Petclinic conditional version accuracy98.90%; известны неправильные namespace
+org.hibernate/hibernate-core и версия hibernate-models1.1.0 вместо1.1.1.
+Packaging-added jarmode UNKNOWN консервативно считается FP. Aliases не угадывались.
 
-## R103: отдельный identity gate, без изменения точности
+Все14 Dropwizard FN — metadata-only listenablefuture9999.0-empty-to-avoid-conflict-with-guava
+у14 владельцев. JAR присутствует,2199bytes, только manifest/POM/properties, без
+class/resource proof. Он **остаётся FN**, не исключён из score ради100%.
 
-Новый benchmark-кандидат `explicit_identity_gate.py` разделяет два факта: наличие физических class/resource bytes и подтверждение координат пакета по image/path/layer. Раньше отказ identity bridge технически записывался как неподтверждённый payload. Теперь исходный физический факт сохраняется, а отдельный binding UNKNOWN запрещает включение конкретной записи. Envelope привязан SHA256 к полному adapted catalog и payload observations; это только доверенный внутрипроцессный результат адаптера, не новый пользовательский вход и не механизм аутентификации внешнего SBOM.
+Microservices:1,303,884,800 normalized bytes,1,302,810,004 SHA256 verification bytes
+и134,217,721 из134,217,728 payload-window bytes;188 подтверждённых artifact instances.
+На единственном owner с native/CDX agreement найдено8/140 точных компонентов;
+ещё7 owner scopes UNKNOWN с raw recall5–10%. Это реальный предел покрытия текущей
+ресурсной политики. Сложный проект не удаляется из проверки ради метрик.
 
-Повторно опубликованы девять final/os/full из замороженных R102 catalogs и физических observations, без новых scanner/reader запусков. Все координатные мультимножества и выбранные artifact IDs совпали с R102. У Boot/Javalin/Dropwizard соответственно 1/1/4 записи имеют подтверждённые bytes, но UNKNOWN identity; они остаются вне final. Проверены stale catalog/payload, подмена координат/path/layer, отсутствующий/дублированный audit, sibling с тем же PURL и сохранение npm observations. [Регрессия](../benchmarks/results/explicit-identity-gate-v2/regression.json), [заморозка](../benchmarks/results/explicit-identity-gate-v2/freeze.json).
+## JavaScript:12 свежих image-only запусков без project lockfiles
 
-Это исправление семантики evidence в отдельном прототипе, НЕ рост precision/recall и НЕ интеграция в runtime. Java/JS цифры выше не изменились. Следующий существенный этап — пассивный source-owner graph и профили/модули, затем свежие независимые optional/reactor/Gradle/workspace controls; текущие 16/55/443 direct UNKNOWN/FN не устранены. Нужны ещё5 Java и8 JS реальных пар.
+| Метрика компонентов | Результат |
+|---|---:|
+| TP / FP / FN, exact name + version |306 /9 /1|
+| Precision / Recall / F1 micro |97.14% /99.67% /98.39%|
+| Macro по8 положительным проектам, P / R |93.48% /99.88%|
+| Версии среди совпавших имён / exact-version coverage |100% /99.67%|
+| Изменённые component sets против сохранённого baseline |0 из12|
+| Суммарное время12 actual pipeline scans |272.091s|
+
+Все36 final/os/full валидны. Четыре пустых project roots не засчитаны как идеальные
+примеры. Node/npm platform и ОС не смешиваются с fixture /app/ scope, но остаются
+в inventory. Ни исходников, ни source/image project lockfiles analyzer не получает.
+Это fresh scans, а не только повторная проверка старых JSON.
+[Прогнозы, snapshot исполнявшегося src, каждый проект и регрессия](../benchmarks/results/mvp-js-r105-v1/evaluation.json).
+
+Слабые места сохранены: Axios8/5/0, P61.54% (вложенные test fixtures);
+Fastify47/3/0; Pino12/1/0 (transport fixture); Nest106/0/1
+(пропущен @tokenizer/token0.3.0). Высокая micro-метрика не скрывает Axios.
+
+## Граф и оставшиеся шаги до выпуска
+
+Image presence подтверждает компонент поставки, но не прямоту. В image-only
+запусках все известные direct edges UNKNOWN/FN: JS103, Java16/55/443/100
+для Boot/Javalin/Dropwizard/Microservices. Полный original-CI граф не заявляется.
+По текущему запросу пользователя это отдельное обогащение, не условие выдачи
+SBOM готового образа.
+
+R104 source comparison на Microservices: passive Trivy76/0/24; native cdxgen
+на8 shipped owners100/0/0, raw all-owner100/8/0 из-за module containment.
+[Отчёт и границы](java-microservices-reference-r104.md).
+Default SBOM_JAVA_BACKEND=disabled; cdxgen разрешается явно в изолированном job.
+Модель доступной Maven environment не выдаётся за неизвестный TeamCity recipe.
+
+До заявления высокой точности всего Java MVP нужны: устранить недостаток физического
+покрытия Microservices с измеренными ресурсами, сохранить identity/path/layer guards,
+все три SBOM и регрессию; проверить стабильность Windows helper/DB cache, получить
+независимые сложные image controls. Для JS — разобраться с bundled fixtures и
+пропуском Nest без reference-based filtering. Расширение сторонних build recipes
+отложено ради первого выпуска; сборка самого сервиса, тесты и reference checks
+продолжаются. Развёрнутые сервисы не изменялись.
+
+Ресурсная политика Java:8GiB disk normalization, отдельно8GiB SHA256 verification
+reads;32MiB/read и128MiB суммарных payload windows; outer JAR128MiB/nested32MiB;
+16MiB unique ZIP directory ledger,100k entries,256 fingerprints,4096 views/180s
+cooperative witness deadline. Hard filesystem quota, peak RSS и безопасная
+параллельность больших образов отдельно не доказаны. Начальная Java DB около1.5GiB;
+версия/SHA256 сохраняются. Reference labels не используются как cache анализатора.
+
+Исторические R102/R103 benchmark-only результаты и failures сохранены:
+[журнал](direct-dependency-experiments.md),
+[R102](../benchmarks/results/seekable-payload-v4/evaluation.json),
+[R103](../benchmarks/results/explicit-identity-gate-v2/regression.json).
+Они отделены от actual runtime выше. Прежняя research-цель20+20 и independent
+direct/component >90% не объявлена завершённой.

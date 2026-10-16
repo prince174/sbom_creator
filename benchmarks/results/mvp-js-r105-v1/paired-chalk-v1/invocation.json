@@ -1,0 +1,10 @@
+{
+  "image": "docker.io/library/sbom-js-mvp@sha256:85a83e39d77bd182d07becac98c27b3a8c3b2a12076f6aad82a44cd3d2dd5888",
+  "archive": "benchmarks/.work/no-lock-v1/paired-chalk-v1/image.tar",
+  "archive_sha256": "9aac49096ae873df7987599d865c804face20a9db7536b30dd66fa3c9d5381fe",
+  "repository_url": null,
+  "commit": null,
+  "namespace": "no-lock-v1",
+  "oracle_read": false,
+  "project_execution": false
+}

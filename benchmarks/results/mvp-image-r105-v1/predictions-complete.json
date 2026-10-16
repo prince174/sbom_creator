@@ -1,0 +1,16 @@
+{
+  "oracle_read": false,
+  "cases": [
+    "boot",
+    "javalin",
+    "dropwizard",
+    "microservices"
+  ],
+  "completed": [
+    "boot",
+    "javalin",
+    "dropwizard",
+    "microservices"
+  ],
+  "failed": []
+}

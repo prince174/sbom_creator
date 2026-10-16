@@ -1,0 +1,8 @@
+{
+  "image": "docker.io/library/sbom-mvp@sha256:5c08c4117449d304e3ba941b5ad93ed571fd950423b002bf8e24785b61ca30a3",
+  "archive_sha256": "a40a77bfda227d1d3ff1fe23c3835c9cdebfb367cfa8d34042c298115cbb0e25",
+  "repository_url": null,
+  "commit": null,
+  "project_execution": false,
+  "oracle_read": false
+}
