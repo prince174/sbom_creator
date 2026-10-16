@@ -1,4 +1,38 @@
-## R106 — opt-in bounded nested reads experiment, 2026-10-16
+## R107 — opt-in directory-credit LRU experiment, 2026-10-16
+
+Stable default remains R105 policy v4. Explicit `SBOM_JAVA_NESTED_WINDOWS=true`
+selects experimental v6. Cached producer catalogs + fresh physical reads + actual
+publisher finish all four Java cases before reference access, on unchanged scopes.
+
+| Technique / mode | Current measured result | Scope and status |
+|---|---|---|
+| Actual service OPT-IN v6, Syft1.51.1/Trivy0.75.0 + bounded directory-credit LRU |Micro124/1/16 vs R10699/1/41; Boot90/3/2, Javalin128/0/0, Drop893/0/14 unchanged. Java micro1235/4/32,P99.677/R97.474; repository macroP98.994/R96.213 |25 new TP, zero removed coordinates/new FP; MicroR88.57 still below90,31 owner scopes UNKNOWN. Disclosed experiment, not default adoption |
+| cdxgen13.4.0 + native Maven |Unchanged R104 Micro source100/0/0 shipped direct, raw100/8/0 |Optional source model; not image component inventory or original-CI proof |
+| Trivy0.75.0 passive source projection |Unchanged R104 Micro source76/0/24 direct |Optional partial fallback, not a new comparable image score |
+
+R106's actual failure was256 fingerprint credits(742 rejections), below byte/entry
+limits. R107 keeps256 live credits, evicts LRU entries and conservatively recharges
+evicted directories on reuse. SAME16MiB/100k cumulative budgets; Micro uses9,813,237B,
+91,317charged entries,106evictions/362charges, no budget-guard rejection. Earlier
+12 unmatched original PURLs were a diagnostic join issue; exact path/layer peers
+already had correct GAVs, no alias rule was added. Remaining16 MicroFN are15
+metadata-only starters plus netty-common identity UNKNOWN; jarmode stays FP.
+
+501 tests passed,3 skips,20.03s;12 new security cases cover resource/identity
+negatives. JS12 cached publisher regressions preserve36views and selected IDs,
+84.657s; no fresh JS scans or new accuracy score, original Chalk locking failure
+retained. Installed Linux RC with fresh Syft/Trivy scans passes523.962s pipeline/
+527.344s harness:44 installed hashes match freeze, final/os/full2458/0/2458 and
+2458 selected IDs/all3 coordinate multisets equal Windows. This differs from the
+four-case cached-inventory Windows timings; no new independent accuracy/default
+adoption claim. Scope-hash availability
+audit offers future post-only labels without rebuild; current31 UNKNOWN unchanged.
+[Actual results](java-js-service-accuracy.md),
+[R107 evaluation](../benchmarks/results/mvp-r107-v1/evaluation.json),
+[installed Linux verification](../benchmarks/results/mvp-r107-container-v1/verification.json),
+[scope-data audit](../benchmarks/results/reactor-scope-audit-r107-v1/report.json).
+
+## R106 — historical opt-in bounded nested reads experiment, 2026-10-16
 
 Same image inputs and unchanged R105 evaluation scopes, no source/reference in
 the classifier. Full16-case snapshot protocol completes before the post-only

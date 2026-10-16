@@ -2,15 +2,24 @@
 
 Расширенная выборка: [29 собранных пар и выявленные ограничения](java-js-expanded-results-v1.md).
 Текущая цель первого MVP — достоверные компоненты готового образа; source/build graph
-обогащается отдельно и не блокирует image SBOM. [Opt-in runtime R106](java-js-service-accuracy.md)
-улучшает Microservices с8/0/132 до99/1/41, но recall70.71% сохраняет слабый Java
+обогащается отдельно и не блокирует image SBOM. [Opt-in runtime R107](java-js-service-accuracy.md)
+улучшает Microservices с99/1/41 до124/1/16, но recall88.57% сохраняет слабый Java
 проект ниже90%. JS component P97.14/R99.67 на8 положительных no-lock roots;
 из12 свежих попыток11 опубликованы, Chalk publication failure отдельно сохранён.
 Общий рейтинг старой выборки не переносится автоматически.
-Стабильный default остаётся reader R105. R106 включается только через
-`SBOM_JAVA_NESTED_WINDOWS=true`; precision trade-off100→99% и recall70.71% на
+Стабильный default остаётся reader R105/policy v4. R107/policy v6 включается только через
+`SBOM_JAVA_NESTED_WINDOWS=true`; historical precision trade-off100→99.2% и recall88.57% на
 Microservices не объявляются принятой production-интеграцией.
-Финальный RC проверяет selector/default scratch и43 installed hashes. Fresh
+R107 сохраняет256 live LRU credits и прежние16MiB/100k cumulative budgets;
+25 дополнительных TP, без новых FP/потерь против R106.501 tests passed,3 skips;
+JS12 cached publisher/36views regression не является новым scanner benchmark.
+Installed Linux RC проходит со свежими сканерами:523.962s pipeline/527.344s harness,
+44 installed hashes,2458 selected IDs и все3 coordinate multisets равны Windows.
+Это full-pipeline parity, не новая независимая accuracy/default adoption.
+[Linux proof](../benchmarks/results/mvp-r107-container-v1/verification.json).
+SHA scope-data audit сохраняет все31
+UNKNOWN и лишь предлагает будущую независимую post-only разметку.
+Исторический R106 RC проверяет selector/default scratch и43 installed hashes. Fresh
 physical parity после разделения default/opt-in прошла: experimental Micro точно
 сохраняет R106, default Boot сохраняет R105 во всех3views/selected IDs; cached
 scanner catalogs, без нового component benchmark.489 tests passed,3 skips.
@@ -42,7 +51,7 @@ Java не ранжирована. [Таблица и ограничения](jav
 ## Таблица пяти проверенных подходов — 2026-10-16
 
 Текущие проверенные версии и режимы Syft1.51.1/Trivy0.75.0/cdxgen13.4.0,
-метрики и ограничения обновлены в [едином Java/JS сравнении R106](java-js-top3.md).
+метрики и ограничения обновлены в [едином Java/JS сравнении R107](java-js-top3.md).
 R104 source control: cdxgen native shipped100/0/0 direct, raw all-owner100/8/0;
 Trivy passive76/0/24. Это не accuracy final image inventory и не новый глобальный ранг.
 Исторические пассивные ChildProcess-отказы не означают неспособность cdxgen работать
@@ -51,7 +60,7 @@ graphs решают разные задачи и не образуют сопо�
 
 | Место | Подход / версия | Принцип, языки | Измерение / выборка | Плюсы | Минусы / статус, дата и отчёт |
 |---|---|---|---|---|---|
-| — | SBOM Creator OPT-IN runtime R106, policy v5 frozen src + Syft1.51.1/Trivy0.75.0 | Image identity/path/layer + bounded physical nested proof; Java/JS, остальные языки вне этого сравнения | Java4 disclosed repos1210/4/57,P99.67/R95.50; JS positive roots306/9/1,P97.14/R99.67 | Actual final/os/full; Micro TP8→99 при том же128MiB payload budget; отдельные identity/payload evidence | Micro99/1/41,R70.71,P100→99;31 owner scopes UNKNOWN; Chalk failure retained(11/12 JS completed). Experimental only, stable default R105, 2026-10-16, [R106](java-js-service-accuracy.md) |
+| — | SBOM Creator OPT-IN runtime R107, policy v6 frozen src + Syft1.51.1/Trivy0.75.0 | Exact image identity/path/layer + bounded nested proof/LRU directory credits; Java/JS, другие языки вне сравнения | Java4 disclosed repos1235/4/32,P99.677/R97.474; JS previous positive306/9/1 unchanged by cached publisher regression | Actual final/os/full; Micro99→124TP без новых FP/потерь, прежние resource caps | Micro124/1/16,R88.57;31 scope UNKNOWN; metadata-only FN и Chalk failure retained. Opt-in only, stable default R105/v4; 2026-10-16, [R107](java-js-service-accuracy.md) |
 | — | cdxgen13.4.0 + native Maven | Build-model graph; Java измерена, JS прежний lock-assisted режим отдельно | R104 Microservices9 owners direct100/8/0,P92.59/R100/F196.15;8 shipped100/0/0 | Готовый resolver; owner/version graph, новый сложный reactor | Выполняет tooling; raw module-containment extras; неизвестная CI configuration не воспроизведена. Optional backend, 2026-10-16, [R104](java-microservices-reference-r104.md) |
 | — | Trivy0.75.0 passive image + frozen Java DB | JAR coordinates из image и Java DB; Java, JS в иных режимах | Javalin8 agreed owners components128/0/0,P/R/F1100;Boot90/3/2 | Точнее Syft raw identities на том же Javalin scope | Raw inventory не доказывает payload/directness;6 owner scopes UNKNOWN. Измерен, 2026-10-16, [R90](../benchmarks/results/trivy-reactor-image-v3/evaluation.json) |
 | — | Trivy0.75.0 passive POM owner adapter | POM projection + remote metadata + exact source owner path; Java | R104 Microservices direct76/0/24,P100/R76/F186.36;7/9 owners | Не исполняет проект; version/owner provenance | Timeout/remote metadata/profile activation limits;24FN. Fallback candidate, 2026-10-16, [post-only report](../benchmarks/results/java-runtime-direct-r104-control-v1/evaluation.json) |

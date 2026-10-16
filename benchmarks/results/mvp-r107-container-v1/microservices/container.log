@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 523.962,
+  "java_nested_windows": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-identity-payload-v6",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 36
+    },
+    "unknown_groups": {
+      "image_evidence": 36
+    },
+    "source_count": 0,
+    "image_count": 2646,
+    "selected_count": 2458,
+    "final_count": 2458,
+    "os_count": 0,
+    "full_count": 2458,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 324,
+      "UNKNOWN": 36
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 45.49
+  },
+  "source_kind": "not-provided",
+  "java_image_status": "corroborated",
+  "image_config_digest": "sha256:9363d3f231875f937c5a8904a1bb4d86e9d8ac0730eaf9d9f8d064e9cb848a8a",
+  "output_hashes": {
+    "coverage.json": "8d0ecf586391c768f0f44a0f45e25a9fb629df86f87e41756ec4f5274427af95",
+    "decisions.json": "6e2db550546b32dcded626d145ac08bb21921860f6d1299a0cf40028a54c64aa",
+    "direct-dependencies.json": "8a7cb6f59011d96c185b6c1be3f294d34d478a56831092fc5103b454f62d4e51",
+    "final.cdx.json": "1d0012a01fc14cc6bbfb59cf48b0cb630b2d1595535c0a32c6c3ff0459144bf9",
+    "full.cdx.json": "ea8f2329e68e1f0ad919fd9b67f4e76b19e4083438b6eae073188b8ca0b9d172",
+    "image-identity-audit.json": "9cec1002d0391848e85cd7f44070c8298824c20e062c803f43d7b48881978215",
+    "image-original.syft.json": "a14aed3b57e15d2d309e9db94139f9daa0c211f8cf6183a201f319de444a9d16",
+    "image-peer.cdx.json": "d2bf0a3aade61a88032397d4da6eafcd48e81627e6cd47c8b5732d1b11cb5309",
+    "image.syft.json": "b1653a558c02aa4578840f0787a8ab09b86ba56cc2a3a960388758542595aec6",
+    "java-direct-dependencies.json": "b83afc8ebf4f267a21adfdbb1b5f1c3c708ff4b6da21421a5ebdccacb346af1f",
+    "os.cdx.json": "5f8ccbfd8e1180dccf2213db8e25e32345428e21b7f99dcaf84cee00bddec74b",
+    "provenance.json": "ab13ab9c12533bcd65df25b5ed059d4c0066228d219cde1107f47cc4ff976335",
+    "review.json": "569dc7d00ea86a2f5a848a84ccdad29a1a4923c34fa36587c2d84752198a1668",
+    "selected.syft.json": "6bd6eda7ec1fa6869e561831ea34614fd9f35664ead5beb2ac6eafac29111985",
+    "source.syft.json": "e27eca27d91d66e774040754de8db715a158ebd764e624f06868165f9df8b94f",
+    "summary.json": "64bf69f7e19f05535c9a507fa88a8a4c26e734aa693a7d08da641bf9cf47e32f"
+  }
+}

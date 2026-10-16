@@ -1,0 +1,61 @@
+{
+  "name": "paired-koa-v1",
+  "status": "passed",
+  "oracle_read": false,
+  "fresh_scans": false,
+  "fresh_physical_reads": false,
+  "source_input": false,
+  "elapsed_seconds": 6.76500000001397,
+  "views": {
+    "final": {
+      "coordinates_equal": true,
+      "component_count": 234,
+      "sha256": "b834bd5e0045d3242b222179064de34be1f1b2a0b92d50ceba19fec1e7bb44c5",
+      "cyclonedx_schema_valid": true
+    },
+    "os": {
+      "coordinates_equal": true,
+      "component_count": 89,
+      "sha256": "936993c639f69683e1bb513588464f1a4ffd892b2af2cb4339fd8cd1f1d360e3",
+      "cyclonedx_schema_valid": true
+    },
+    "full": {
+      "coordinates_equal": true,
+      "component_count": 323,
+      "sha256": "c75aaf849ae8b1c9040d5d6af62608a049b7367412ba51c637a187058a73ac39",
+      "cyclonedx_schema_valid": true
+    }
+  },
+  "selected_artifact_ids_equal": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4
+    },
+    "unknown_groups": {
+      "image_evidence": 4
+    },
+    "source_count": 0,
+    "image_count": 327,
+    "selected_count": 323,
+    "final_count": 234,
+    "os_count": 89,
+    "full_count": 323,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 312,
+      "UNKNOWN": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.782
+  },
+  "baseline": "benchmarks/results/mvp-r106-v1/javascript/paired-koa-v1/analysis",
+  "original_r106_run_status": "completed",
+  "separate_chalk_diagnostic": false,
+  "locking_failure_fixed": false,
+  "new_accuracy_measurement": false
+}

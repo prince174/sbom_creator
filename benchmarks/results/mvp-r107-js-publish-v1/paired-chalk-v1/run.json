@@ -1,0 +1,61 @@
+{
+  "name": "paired-chalk-v1",
+  "status": "passed",
+  "oracle_read": false,
+  "fresh_scans": false,
+  "fresh_physical_reads": false,
+  "source_input": false,
+  "elapsed_seconds": 7.25,
+  "views": {
+    "final": {
+      "coordinates_equal": true,
+      "component_count": 199,
+      "sha256": "8bff7bde6e9a6b607d94dd61353f6d2c67634801177667d32d1ca8139d45e23c",
+      "cyclonedx_schema_valid": true
+    },
+    "os": {
+      "coordinates_equal": true,
+      "component_count": 89,
+      "sha256": "2d8213675cf0402a1e64ae6ea8ab9df84d0a709458e8810be839814e14422d0c",
+      "cyclonedx_schema_valid": true
+    },
+    "full": {
+      "coordinates_equal": true,
+      "component_count": 288,
+      "sha256": "b9288e78d1ed1fdd227487cf5dd7f926ca6aa15c1cd61906bc465d17f0f6f691",
+      "cyclonedx_schema_valid": true
+    }
+  },
+  "selected_artifact_ids_equal": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4
+    },
+    "unknown_groups": {
+      "image_evidence": 4
+    },
+    "source_count": 0,
+    "image_count": 292,
+    "selected_count": 288,
+    "final_count": 199,
+    "os_count": 89,
+    "full_count": 288,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 277,
+      "UNKNOWN": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 6.297
+  },
+  "baseline": "benchmarks/results/chalk-publish-diagnostic-v1/analysis",
+  "original_r106_run_status": "FAILED",
+  "separate_chalk_diagnostic": true,
+  "locking_failure_fixed": false,
+  "new_accuracy_measurement": false
+}

@@ -1,0 +1,61 @@
+{
+  "name": "paired-hapi-v3",
+  "status": "passed",
+  "oracle_read": false,
+  "fresh_scans": false,
+  "fresh_physical_reads": false,
+  "source_input": false,
+  "elapsed_seconds": 6.672000000020489,
+  "views": {
+    "final": {
+      "coordinates_equal": true,
+      "component_count": 231,
+      "sha256": "e3693e3ba924f33cffea30688722e0da2a685003a5249e43ae96b8604a95b718",
+      "cyclonedx_schema_valid": true
+    },
+    "os": {
+      "coordinates_equal": true,
+      "component_count": 89,
+      "sha256": "e32efb9d96527fd12736dba0f343938dd2e922236d8d822be042748e5b2b28ed",
+      "cyclonedx_schema_valid": true
+    },
+    "full": {
+      "coordinates_equal": true,
+      "component_count": 320,
+      "sha256": "1fa35c85fa74f07a6d8e2579c32cd18a8ab3347654ec57c7aab91e3cba06c181",
+      "cyclonedx_schema_valid": true
+    }
+  },
+  "selected_artifact_ids_equal": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4
+    },
+    "unknown_groups": {
+      "image_evidence": 4
+    },
+    "source_count": 0,
+    "image_count": 324,
+    "selected_count": 320,
+    "final_count": 231,
+    "os_count": 89,
+    "full_count": 320,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 306,
+      "UNKNOWN": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.719
+  },
+  "baseline": "benchmarks/results/mvp-r106-v1/javascript/paired-hapi-v3/analysis",
+  "original_r106_run_status": "completed",
+  "separate_chalk_diagnostic": false,
+  "locking_failure_fixed": false,
+  "new_accuracy_measurement": false
+}

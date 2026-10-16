@@ -1,0 +1,1212 @@
+{
+  "schema_version": 2,
+  "unknown_count": 36,
+  "group_counts": {
+    "image_evidence": 36
+  },
+  "observation_counts": {
+    "image_only": 36
+  },
+  "reason_counts": {
+    "INSUFFICIENT_IMAGE_EVIDENCE": 36
+  },
+  "items": [
+    {
+      "candidate_id": "005e2cf3599bc236e14a1750635a7d8ef333ea2a37433d252e2a4082aaf117ac",
+      "identity": "pkg:maven/spring-boot-starter-jackson/spring-boot-starter-jackson@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "6fbceb8f40567e30",
+        "3fddb9f3a4bac9a3",
+        "b91821e5b90b535e",
+        "73dfaf8aba469868",
+        "af8b6dcb9be5447c",
+        "36b6cba0a7a36938",
+        "00f09f0484845daf",
+        "5313222b8745c900"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "04bfa9350146efc6d65e0d3427b065c3260a80322086a8dbcbf3384fdda199f2",
+      "identity": "pkg:maven/spring-boot-starter-webclient/spring-boot-starter-webclient@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "5987b37dfffeddd9",
+        "9bf71d9558488998"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "11e728d5a080ffa8c65b66ebdbe5a1e86583b6bff62e5086c8898e086701c541",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "4fac602abacecd1c",
+        "bafac346f9d913d9",
+        "c1927ed643b25770",
+        "879abac64b7e6d56",
+        "6417da918f64cbae",
+        "098914547b1368b9",
+        "3a25e9ad71f57351",
+        "581e584abe0b9cf5",
+        "6731c5d90562b61f",
+        "2ea79723ab0924bd",
+        "2e2dcb3ca9d3e98e",
+        "e8b0f02dc610c35f",
+        "9dc6777fc113702d",
+        "8a26e10294748c18"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "12716fb997a0ad3afa20b5fa97135b3f010aeab35d0e4b0597b7758bfa8dfbfa",
+      "identity": "pkg:maven/spring-boot-starter-webmvc/spring-boot-starter-webmvc@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "2961c34177f40782",
+        "d97f86506cb2cff7",
+        "c46c7b5260d1bd5e",
+        "05da5cc2f2b9b2eb"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "16f37fcd3825ae39da5aa9790818ceb59c4a3f988a46d4d70ecbdd4b39963c57",
+      "identity": "pkg:maven/spring-boot-starter-tomcat-runtime/spring-boot-starter-tomcat-runtime@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "7a37e81198e48d6f",
+        "0cc19a2e2562ede2",
+        "f2dde5620df8e690",
+        "e9d767f3e56c6a73",
+        "c28a6f0a18af75ca",
+        "1d74bb830cce07b1"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "16f394360645684196599fad6f24fe0619609a0b689468f8a4446f06ebbfdaec",
+      "identity": "pkg:maven/org.webjars.npm/csstype@3.2.3",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "0dba09739a6e63ab",
+        "d64eca87c82dbd84"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "3.2.3"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "251584e906a3cdc3c2794231757476f892102b4d064c4b14423c49a81d3d56e2",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-thymeleaf@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "4940e797c8350474"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "276354277cc3091e174b18b2772ed17cb378bf23ad0019d21cbea8a760ba811c",
+      "identity": "pkg:maven/spring-boot-starter-zipkin/spring-boot-starter-zipkin@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "4161f917de81f05f",
+        "0823e40d4c971835",
+        "00ebfabf06f7aaf4",
+        "976a64877a33bf5f",
+        "b5dfe913268a99d3"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "284a36c2702fa1d778708a567e37e567aa8ccff4292e9432d23fad57f8864bcf",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-circuitbreaker-reactor-resilience4j@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "c1df4026713c35fe",
+        "5be7878124077433",
+        "f906fa36f6d2eae7",
+        "d704143f5e9f0fd1"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "2c274f2be09a7c0c9407ad97ce73953e69d38d20767db44e6d20d9ddc8a95df9",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "f6065dd8ec8e4b4c",
+        "65a24abc2ae4a8b9",
+        "1c474eff3a46f72b",
+        "f3ac4a118f945334",
+        "4808250be7100964",
+        "4da33ecdba9eccf9",
+        "94391c69afcbbb93",
+        "91593f852852a374"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "2cbfc563e530e2159d5797680d051a50ee5f00c519cf6063b324297ac312745e",
+      "identity": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "eea7afbdc9fbbeba",
+        "98b31ebb37222c03"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "9999.0-empty-to-avoid-conflict-with-guava"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "3ca85a079a9b46990c124544b5aaa5a8f1dd8a5116c57989bd262c07d42dde1f",
+      "identity": "pkg:maven/org.springframework.ai/spring-ai-starter-model-openai@2.0.0-M1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "17aae372b06196eb",
+        "cc7e2fdec9b01ff2"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "2.0.0-M1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "4b8a4833d9806361e605b50fc879173a31945cd449d77fe237bd12ce77374ae4",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-gateway-server-webflux@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "5dba82f385eee2a6",
+        "a801b3e769e3cb83",
+        "9d4b5c125e269eb5",
+        "c8908de636a3093a"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "58f6ab6f11712a369655a6edaf0ba852e8f6fafb3ff327c8f47161fb33264579",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "e5ce2fb6cfbbd36b",
+        "25575c9a0a2039ef",
+        "5b37a65bc88d57fd",
+        "208074e2bd0f6a02",
+        "cda89e1e49413a05",
+        "61682ef74dc6dd26"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "5a6dbba45123fb0d416e099639ec70688cc913a7a8bfdc56d31f9e3a898f2c7f",
+      "identity": "pkg:maven/com.sun.xml.bind.jaxb/isorelax@20090621",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "a5fcc7321b23e7bc",
+        "9aac24e62429e893"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "20090621"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "705f117d657931e2aaff8920cbfd5ccc9fcd69b75e3f931be5cd80b734020ad5",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "c9c3cfff38dc8ae2",
+        "880bf7eb9c07c811",
+        "daf77557f4c09ca5",
+        "8ac818609f1f1cec",
+        "3fb9cd1c799a3085",
+        "e57bea60a3d9300c",
+        "b27b8d068e1795ac",
+        "ce25fbb3beb2664e",
+        "01d0e981783771da",
+        "cc8ffbbe805118df",
+        "4443fc5f82a007af",
+        "73882be8f8d1d3a1",
+        "eadddb07cf64a770",
+        "7164c61e13a74d64",
+        "4013d4aa13ab46e5",
+        "80ab971ac706fb80"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "7261956a1c290b72ef7292caab0635f82bf7b1e1d89d1da1232eeb7c5d088b8c",
+      "identity": "pkg:maven/de.codecentric/spring-boot-admin-starter-server@4.0.2",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "03a932b8abaed9ed",
+        "9c1166fefbb03777"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.2"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "726badc2f2b665bd88d26c6b220587c05c656112eca1cae79300e092c071826e",
+      "identity": "pkg:maven/org.jctools/jctools-core@4.0.5",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "3266d3f83e4607bc",
+        "257f233f6f82b6ce",
+        "9f8438b322ded1cb",
+        "8cda9c31d6aa8640",
+        "c307571f27fc92b8",
+        "6cd541e0ddd83b1e"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.5"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "7a68df2ae4003276a9bc0e6f002f99dcc2847c764827188c1647d39e59d73663",
+      "identity": "pkg:maven/spring-boot-starter-restclient/spring-boot-starter-restclient@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "4adf606d4207579a",
+        "3d51a063d378c547",
+        "2dac04f62e01d450",
+        "19f53f467f9eb805"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "8319cf4e5c96ed508701a397a9a5f208741afde54a195d5b79388f4d0df210af",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-freemarker@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "eb7e128712e7b3fe"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "8a97a842b466ee89e2420290fe2d81f32c5130761d3f3fecbfb9af3b3ca09341",
+      "identity": "pkg:maven/io.netty/netty-common@4.2.9.Final",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "2d1b0fd633a98136",
+        "4f19eb2f3171a5aa",
+        "755544e93ef80796",
+        "93d3bfe58ce2a541",
+        "18c3995d9805e885",
+        "62a7b2dc8851a7df"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.2.9.Final"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "9724d121b6c7f54ae56b39a7f3c81369a7a477de9f4fe4727d1d0a60040c981c",
+      "identity": "pkg:maven/spring-boot-starter-micrometer-metrics/spring-boot-starter-micrometer-metrics@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "46c5536a2ab446e2",
+        "f3d04d08a1f6267a",
+        "d02e2352abfbc06a",
+        "14058f1ffcfaecfb",
+        "6ab9cb7710c80120",
+        "a44fe8a98e15ac2e",
+        "c64fba5e9af9d320"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "9a925cdc935b5835d5b5eabb3eb8a136c7b3fb718e46897739e363f4073aa53c",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "50928cf417fecaac",
+        "3d8be7ca5e5f7c7a",
+        "aad1e434f2661e68"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "a74882be661edf4d9b15d40b9d3d5eac1e89c31da180007012e2be391989e451",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "db55e5747e53f8bd",
+        "e02e49b19d3b6f5a",
+        "c33a4b169f183232"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "be61be4d02402bd4cd588f6638a3b2a0ecb56a9290874b429838d7b68a445d87",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "09a4548ea452138c",
+        "9428e7a2d0b85458",
+        "749a0ffe8b4c0cd5",
+        "a4888d3ca6c74621",
+        "4ced1add5b907e93",
+        "26b86090a197c628",
+        "48e055fe375b15c7"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "bfc72bf5bebb5a951d1a69248430517280d44a40f92b788ae4eba45ee142d9ff",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "8a08604dcea37b81",
+        "60ef3f687934e29e",
+        "ba1d69c418affdcc",
+        "e9400874975b4980",
+        "d0223e8025d144b8",
+        "713bbebcac050279",
+        "2bc72d1786d8cc44",
+        "f60b4cd499cdb0c5",
+        "0f20f3c183c64207",
+        "bc9d26d4baccc889",
+        "e7d7ed6f54191507",
+        "248b537fc1c4b1fb"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "c1a15801c20a133573a217a5c495f95389c5c1eb2d54a2030aa139d73f4a9e46",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "1c13c46ea976b7c8",
+        "ab2ee494f124b6c1",
+        "28a855feb616b63a",
+        "7a71bf5ce85029b0",
+        "48be867028cfbdca",
+        "4515d6106b512ebe",
+        "8934704b48188629",
+        "3fa4dc323baf4cf4",
+        "2b9fbfdd432e720b",
+        "987fbbe0adc2d2a5",
+        "bb7e6f2a98715940",
+        "a59892f97a24b475",
+        "48b6225d9a9b3833",
+        "d637479611453b6f"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "c1bef36b81393f37e146ede7b124ac818d5be682d1509ab809f850175ce66729",
+      "identity": "pkg:maven/com.fasterxml.woodstox/woodstox-core@7.1.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "91f516544c1593de",
+        "46bf9b7dda9f53a6"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "7.1.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "c3130f2fc2dc178a93f3b71f69f22695566df73f268d99704723d4d43be24552",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "c39b5c176ff15cdf",
+        "707db13542ba38e9",
+        "2a2ca948a2cced4a",
+        "3a1521ee025fc75c",
+        "782a60576f910814",
+        "48305902e4818523"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "c4b6228595994bd233c23bb6d23bb699686d71f075f11f38a7c010a8059da0e2",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "392e502b50fdb451",
+        "3a95c571c1bbf86a",
+        "3d2c368de8338408",
+        "fb7aff1b164c3883",
+        "af8f07f01f1bff23",
+        "786bce14e0b71f5d",
+        "fb70ce9061553cfc",
+        "78d76cbc330ebec2"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "cc554b5f89000d0b79ba2c253bc9519ddcc27b81e008b4499169c866f4aa75ff",
+      "identity": "pkg:maven/net.java.dev.msv/xsdlib@2022.7",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "36246c6a81aaf658",
+        "ff5a1bfb7607b31f"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "2022.7"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "eac1c062e880a0153955c072e722ba47da7b32bea6d55d97cfcd67f20948eb95",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-web@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "423af4d4aceda019",
+        "76661db6ebfcfd73"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "ee9132b3d7e03f6c673657e5277ec79fa800142f715e42a587f449dc14c12346",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "efee7c650f928718",
+        "9d2eb226495f17c3",
+        "b213e3effeeb7ddc",
+        "c95a704f343edc71"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "f4e2dc36ab59060db27bd2c1f05855da1eef60affbe2db4ff296a716689b7727",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "a235d48b9e7d77e8",
+        "211cd8163a6fbf8b",
+        "714f5bd3a901465a",
+        "63d8e424eb4d0bf8"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "f795ae6794f1b960de0c073538342686ac16af2dc386748f7442722a46f5ad34",
+      "identity": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "143687971d433805",
+        "1779768f015d07cb",
+        "c28ec82e9304176e",
+        "41ff6ce4765e6e77",
+        "04d994f08a9ffb2c",
+        "fcb96334594a398b",
+        "d802d5284923bb8a"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "4.0.1"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    },
+    {
+      "candidate_id": "fc53059a3bccb4ef3ce5b83c7024cefca23f6c7c98364b8e49304db7787d9583",
+      "identity": "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server@5.0.0",
+      "reason": "INSUFFICIENT_IMAGE_EVIDENCE",
+      "identity_problem": null,
+      "source_artifact_ids": [],
+      "image_artifact_ids": [
+        "c45146063ee41b76",
+        "a58a22761935b826"
+      ],
+      "observed_versions": {
+        "source": [],
+        "image": [
+          "5.0.0"
+        ]
+      },
+      "review_group": "image_evidence",
+      "observation": "image_only",
+      "package_kinds": [
+        "language_package"
+      ],
+      "package_types": [
+        "java-archive"
+      ],
+      "catalogers": [
+        "java-archive-cataloger"
+      ],
+      "dependency_scope": "not_established",
+      "next_step": "Inspect original image evidence and scanner coverage."
+    }
+  ],
+  "scope": "Uncertainty review, not proof of absence or non-use; no automatic overrides."
+}

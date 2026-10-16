@@ -1,4 +1,4 @@
-# Java / JavaScript: actual service accuracy — R106 opt-in experiment, 2026-10-16
+# Java / JavaScript: actual service accuracy — R107 opt-in experiment, 2026-10-16
 
 Измеряется **final.cdx.json самого сервиса** после фактического запуска сканеров,
 reader, identity gate и publisher. Референс открывает только evaluator после
@@ -6,20 +6,98 @@ reader, identity gate и publisher. Референс открывает толь
 передаются image-only анализу; граф исходников — отдельное обогащение.
 Все три SBOM и полный scanner inventory сохраняются.
 
-**Стабильный default остаётся на reader R105.** Nested-window вариант R106
+**Стабильный default остаётся на reader R105, policy v4.** Nested-window вариант
 сохраняется отдельным opt-in экспериментом: `SBOM_JAVA_NESTED_WINDOWS=true`
-(Python `Settings(java_nested_windows=True)`), policy v5 только в этом режиме.
-Числа R106 ниже относятся к зафиксированному experimental snapshot, не к принятию
-этого reader по умолчанию. Precision trade-off Microservices100%→99% и recall70.71%
-не позволяют объявить production adoption или достижение цели.
+(Python `Settings(java_nested_windows=True)`); текущий R107 использует policy v6,
+исторический R106 — v5. Числа относятся к зафиксированным experimental snapshots,
+не к принятию reader по умолчанию. Microservices пока не достиг90% recall.
 
-**Java пока не проходит >90% на всех сложных проектах.** R106 повышает Microservices
-с8/0/132 до99/1/41, но recall70.71% всё ещё ниже цели. Java aggregate уже выше90%,
+**Java пока не проходит >90% на всех сложных проектах.** R107 повышает Microservices
+с99/1/41 до124/1/16, но recall88.57% всё ещё ниже цели. Java aggregate уже выше90%,
 однако он не заменяет слабый проект и31 владельца с UNKNOWN scope. JS проходит
 компонентный порог на измеренной раскрытой положительной выборке; отдельный Windows
 publication failure сохранён. Универсальной гарантии для любых образов нет.
 
-## R106 opt-in: actual image-only service, прежние области оценки
+## R107 opt-in v6: прежние scope, свежие physical reads и публикация
+
+| Java / согласованный scope | TP / FP / FN | Precision | Recall / exact-version coverage | Версии среди совпавших имён | Время |
+|---|---:|---:|---:|---:|---:|
+| Microservices,1 owner; ещё7 scope UNKNOWN |124 /1 /16|99.20%|88.57%|100%|58.453s|
+| Petclinic,92 packaged dependencies |90 /3 /2|96.77%|97.83%|98.90%|8.171s|
+| Javalin,8 owners; ещё6 scope UNKNOWN |128 /0 /0|100%|100%|100%|4.406s|
+| Dropwizard,16 owners; ещё18 scope UNKNOWN |893 /0 /14|100%|98.46%|100%|40.969s|
+
+Сканерные inventories кешированы; физическое чтение образов, подтверждение и
+Syft publication всех12 final/os/full выполнены заново.112.0s суммарно — **не**
+полный scanner/acquisition timing. Код/inputs frozen до4 прогнозов; reference
+evaluator стартует только после их завершения. Java micro1235/4/32:
+P99.677%, R/exact-version coverage97.474%, F198.563%; repository macro
+P98.994%, R96.213%, F197.526%.26 scored owner instances/31 UNKNOWN остаются
+отдельно. [Полный R107 post-only отчёт](../benchmarks/results/mvp-r107-v1/evaluation.json).
+
+Причина R106 BudgetExceeded доказана отдельной no-oracle диагностикой:
+742 отказа fingerprint-cap256 при7,689,813bytes/72,282entries; payload128MiB,
+ZIP16MiB/100k cumulative limits в тот момент ещё не достигнуты. R107 использует
+LRU на те же256 fingerprint credits; вытесненный directory при повторном чтении
+снова полностью оплачивает существующие cumulative bytes/entries. Лимиты не
+увеличены. Micro:9,813,237 charged directory bytes/91,317entries,256 live credits,
+106 evictions/362 charges, budget guards empty,95,536,087 payload-window bytes.
+Бюджеты проверяются до выделения ZIP index. [Guard proof](../benchmarks/results/mvp-r107-directory-diagnostic-v1/report.json).
+
+25 дополнительных TP,0 удалённых ранее включённых координат,0 новых FP против
+R106; остальные3 проекта сохраняют состав. Прежние12 "unmatched" FN оказались
+ошибкой диагностического join: оригинальный Syft PURL имел namespace=artifactname,
+а Trivy уже содержал правильный GAV в том же exact path/layer. Все21 observation
+тех12 библиотек тоже имели BudgetExceeded; новый alias/Boot-path rule не добавлялся.
+[Диагностика исходных PURL](../benchmarks/results/micro-missing-diagnosis-r107-v1/report.json).
+Оставшиеся16 FN Micro —15 metadata-only starter artifacts без class/resource
+witness и netty-common с physical bytes, но UNKNOWN identity. Packaging-added
+jarmode-tools остаётся conservative FP. Они не исключаются ради порога.
+
+JS R107 — только cached publisher regression:12 публикаций/36 валидных views
+и selected IDs совпадают с R106(Chalk сравнивается с отдельным сохранённым
+diagnostic replay),84.657s. Новых scanner/physical проходов JS и новой accuracy
+оценки нет; ранее измеренные306/9/1,P97.14/R99.67 сохраняют свою область.
+R106 Chalk failure остаётся FAILED, исправление Windows locking не заявляется.
+[JS regression](../benchmarks/results/mvp-r107-js-publish-v1/report.json).
+
+501 тест прошёл,3 skips,20.03s;12 дополнительных security cases проверяют
+LRU eviction/recharge, cumulative budgets, отказ до parser allocation и identity
+UNKNOWN. Default policy v4 не включил эксперимент.
+
+Actual installed Linux RC `sbom-creator:mvp-r107`, config ID
+`sha256:9030298f955b585040e1059c659e2767471555199fc4f66cb03aaa78780c0fd0`,
+прошёл полный image-only pipeline со **свежими Syft/Trivy scans** и explicit v6:
+523.962s pipeline/527.344s harness. Готовый local image archive исключает registry
+acquisition; исходников/reference/socket/секретов нет, nonroot/read-only/network-none.
+Установленные44 source/schema файла равны freeze, source/Java DB не изменились;
+16 экспортированных артефактов/hash/schema checks прошли. final/os/full2458/0/2458,
+36 UNKNOWN groups; все3 coordinate multisets и2458 selected IDs точно равны
+Windows R107. Это установленный full-pipeline parity, **не** новая независимая
+accuracy и не основание включить эксперимент по умолчанию: Micro88.57% ниже цели.
+Linux ledger9,813,237bytes/91,317entries,256 live credits/106evictions/362charges,
+2649hits; budget guards/rejections0. Raw inventories сохранены; их байтовое равенство
+между платформами не заявляется.
+[Installed verification](../benchmarks/results/mvp-r107-container-v1/verification.json),
+[Windows output parity](../benchmarks/results/mvp-r107-container-v1/windows-coordinate-comparison.json),
+[actual harness timing](../benchmarks/results/mvp-r107-container-v1/microservices/run.json).
+
+Доступен путь отдельно закрыть scope, не пересобирая проекты: immutable
+application-tree.json уже содержит SHA256 standalone dependency files, а все
+module CycloneDX components — SHA256/GAV; коллизий hash→multiple GAV не найдено.
+Audit: Javalin185 из199 standalone files имеют own-module hash match, Drop2145
+из2179, Micro1361 из1369; остаток включает primary outputs. Это availability
+proof для будущих packaged labels, **не** изменение ground truth/score сейчас.
+Нужны отдельная проверка build/final TAR trees+config и nested packaging extras;
+все31 UNKNOWN scopes здесь сохраняются. [Scope-data audit](../benchmarks/results/reactor-scope-audit-r107-v1/report.json).
+
+R107 evidence:286 JSON,679,029,559 исходных байт сохранены локально;
+lossless gzip и небольшие JSON занимают56,524,528bytes в Git.
+Восстановление: `python benchmarks/package_mvp_r107.py restore`, проверка:
+`python benchmarks/package_mvp_r107.py verify`.
+[SHA256 manifest R107](../benchmarks/results/mvp-r107-evidence-manifest.json).
+
+## R106 historical opt-in: actual image-only service, прежние области оценки
 
 | Java / согласованный scope | TP / FP / FN | Precision | Recall / exact-version coverage | Версии среди совпавших имён | Время |
 |---|---:|---:|---:|---:|---:|

@@ -1,0 +1,17 @@
+{
+  "oracle_read": false,
+  "cases": [
+    "microservices",
+    "boot",
+    "javalin",
+    "dropwizard"
+  ],
+  "completed": [
+    "microservices",
+    "boot",
+    "javalin",
+    "dropwizard"
+  ],
+  "failed": [],
+  "freeze_sha256": "b6cb09c531020ad12d34b8d8e1bc7ec8826a4071169188b3c56b08424f073a3d"
+}

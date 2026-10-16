@@ -1380,3 +1380,94 @@ visible, investigate correct packaged-vs-build labels separately, and verify
 operational reliability beyond the verified Linux shipping scratch/selector boundary. Java aggregate >90 and JS
 positive metrics do NOT establish independent universal >90 or complete direct
 graphs. [Current actual service report](java-js-service-accuracy.md).
+
+## R107 — opt-in LRU directory credits, unchanged hard budgets, 2026-10-16
+
+No-oracle diagnostic of the frozen R106 reader reproduces identical adapted
+catalog/physical facts and proves742 actual rejections at the256 fingerprint
+credit cap; ledger7,689,813bytes/72,282entries, below16MiB/100k and below128MiB
+payload windows. The failure is no longer attributed to an unknown guard.
+[Diagnostic](../benchmarks/results/mvp-r107-directory-diagnostic-v1/report.json).
+
+Hypothesis:256 credits bound retained fingerprints, not the total number of valid
+JARs. New separately frozen `directory_jar_evidence.py` retains256 LRU credits;
+eviction does not refund cumulative work. An evicted directory is fully charged
+again before standard ZipFile allocation. SAME16MiB cumulative directory bytes,
+100k charged entries,32MiB/read128MiB payload,8GiB verification, deadlines and
+identity/path/layer/CRC guards. No simple cap increase, guessed alias, reference
+input, raw-inventory substitution or default adoption. Explicit nested flag uses
+experimental policy v6; stable default remains R105/v4.
+
+R107 four-case runtime predictions use cached Syft/Trivy inventories plus FRESH
+physical reads and actual Syft conversion/final-os-full publication. Source/code,
+archives and cached inputs freeze BEFORE prediction; marker for all4 gates the
+post-only evaluator. Micro124/1/16,P99.20/R88.57/F193.58 on the SAME agreed owner,
+25newTP/25fewerFN versus R10699/1/41, no previous included coordinate removed,
+no additional FP. Micro final2458 artifact instances is NOT TP count. Seven
+other owner scopes remain UNKNOWN/raw deltas. Remaining16 misses:15 metadata-only
+starter artifacts without class/resource witness, one netty-common identity
+ambiguity despite physical bytes. jarmode remains conservative FP; no exclusions
+to force the threshold. [Evaluation](../benchmarks/results/mvp-r107-v1/evaluation.json).
+
+Micro ledger9,813,237bytes/91,317charged entries,256 live directory credits,
+106evictions/362charges; no budget guard rejection. Payload95,536,087bytes,
+normalization1,303,884,800 once and verification1,952,538,302bytes. Separate
+post-only canonical audit explains12 old "not matched" misses:21 raw Syft
+observations had namespace=artifactname, but each exact path/layer already had
+ONE correct expected Trivy GAV; all21 observations were BudgetExceeded. The prior
+diagnostic original-PURL join was too narrow; no new namespace/classifier rule.
+Not all39 budget-affected FN became TP, because some starter archives have no
+class/resource witness. [Canonical audit](../benchmarks/results/micro-missing-diagnosis-r107-v1/report.json).
+
+Boot90/3/2, Javalin128/0/0(8 agreed/6UNKNOWN), Drop893/0/14(16 agreed/18UNKNOWN)
+unchanged. Java micro1235/4/32,P99.677/R97.474/F198.563; repository macro
+P98.994/R96.213/F197.526. Scoring remains26 owner instances across4 disclosed
+repositories,31 additional UNKNOWN scopes; no independent acceptance. Conditional
+versions100% except Boot98.90%, exact-version coverage equals recall. Timings:
+Micro58.453s/Boot8.171s/Javalin4.406s/Drop40.969s,112.0s total; cached engines and
+image acquisition excluded. Direct0/0/614 remains UNKNOWN, not image-derived.
+
+JS is NOT rescanned:12 cached publisher regressions in84.657s reproduce all36
+coordinate multisets and selected artifact IDs. Eleven compare with R106 successful
+results; Chalk compares with its separately retained diagnostic publication.
+R106 Chalk PermissionError remains FAILED, locking is not claimed fixed. Earlier
+positive component metrics306/9/1 stay historical, not a new accuracy measurement.
+[Cached JS publication regression](../benchmarks/results/mvp-r107-js-publish-v1/report.json).
+
+501 tests pass,3 skips,20.03s;12 new security cases independently test LRU credit
+eviction/recharge, unchanged byte/entry caps, parser-allocation ordering, unchanged
+source/default reader and identity negatives.
+
+Actual installed Linux `sbom-creator:mvp-r107`, config ID
+`sha256:9030298f955b585040e1059c659e2767471555199fc4f66cb03aaa78780c0fd0`,
+passes explicit-v6 image-only pipeline with FRESH Syft/Trivy scans, DB hashing,
+physical reads and publisher:523.962s pipeline/527.344s harness, excluding local
+archive registry acquisition. Nonroot/read-only/network-none, no source/oracle/
+socket/service secrets.44 installed source/schema hashes match freeze;
+source/JavaDB unchanged,16export/hash/schema checks pass. final/os/full2458/0/2458,
+36UNKNOWN groups; all3 coordinate multisets AND2458 selected artifactIDs match
+WindowsR107 exactly. This is installed full-pipeline parity, not a new independent
+accuracy measurement or default adoption; four Windows timings remain cached
+engine/ fresh physical/publisher only. Linux LRU ledger9,813,237bytes/91,317entries,
+256resident/106evictions/362charges/2649hits, budgetguards/rejections0.
+Raw catalogs are retained, without a cross-platform byte-equality claim.
+[Installed verification](../benchmarks/results/mvp-r107-container-v1/verification.json),
+[whole-view/ID comparison](../benchmarks/results/mvp-r107-container-v1/windows-coordinate-comparison.json),
+[actual harness timing](../benchmarks/results/mvp-r107-container-v1/microservices/run.json).
+No new foreign build recipe/reference/deployment; same29 immutable pairs.
+
+Read-only future-scope audit finds existing real-build module CycloneDX SHA256
+for every dependency, zero hash→multiple-GAV collisions, and immutable application
+tree SHA256 for delivered standalone JARs. Own-module matches: Javalin185/199files,
+Drop2145/2179, Micro1361/1369; unmatched files include primary module outputs.
+This supports future separately attested packaged labels without rebuilding;
+revalidate build/final TARs/config and nested fat-JAR extras, retain qualifiers,
+unknown packaging and metadata-only delivered archives. Never use predictions
+to select truth. Current31 UNKNOWN scopes and all current metrics remain unchanged.
+[Scope-data availability, not new labels](../benchmarks/results/reactor-scope-audit-r107-v1/report.json).
+
+Next: separate archive-presence vs code/resource-payload semantics for delivered
+metadata-only JARs with explicit identity/physical proof and negative controls;
+keep current16FN while testing. Installed Linux boundary now passes; independent
+packaged-scope proof remains separate. MicroR88.57 still fails >90 despite favourable aggregate;
+the opt-in/default split and precision trade-off remain explicit.

@@ -1,0 +1,4195 @@
+{
+  "mode": "actual service opt-in Java reader; cached inventories, fresh physical reads and publisher",
+  "source_input": false,
+  "fresh_scanners": false,
+  "fresh_physical_reads": true,
+  "production_default_changed": false,
+  "experimental": true,
+  "same_reference_scopes_as_r106": true,
+  "reports": {
+    "microservices": {
+      "rows": [
+        {
+          "path": "spring-petclinic-admin-server",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.admin/spring-petclinic-admin-server@4.0.1",
+          "image_prefix": "/application/spring-petclinic-admin-server/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 124,
+            "fp": 1,
+            "fn": 16,
+            "predicted": 125,
+            "reference": 140,
+            "precision": 0.992,
+            "recall": 0.8857142857142857,
+            "f1": 0.9358490566037736
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.8857142857142857
+          },
+          "count_delta": -15,
+          "missing": [
+            "pkg:maven/de.codecentric/spring-boot-admin-starter-server@4.0.2",
+            "pkg:maven/io.netty/netty-common@4.2.9.Final",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-thymeleaf@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@4.0.1",
+            "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+            "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+            "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+            "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+            "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+          ],
+          "extra": [
+            "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+          ],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 124,
+              "fp": 1,
+              "fn": 16,
+              "predicted": 125,
+              "reference": 140,
+              "precision": 0.992,
+              "recall": 0.8857142857142857,
+              "f1": 0.9358490566037736
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8857142857142857
+            },
+            "count_delta": -15,
+            "missing": [
+              "pkg:maven/de.codecentric/spring-boot-admin-starter-server@4.0.2",
+              "pkg:maven/io.netty/netty-common@4.2.9.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-thymeleaf@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "predicted": 0,
+            "reference": 8,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webflux@7.0.2",
+              "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE",
+              "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE",
+              "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-customers-service",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.client/spring-petclinic-customers-service@4.0.1",
+          "image_prefix": "/application/spring-petclinic-customers-service/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 158,
+              "fp": 2,
+              "fn": 19,
+              "predicted": 160,
+              "reference": 177,
+              "precision": 0.9875,
+              "recall": 0.8926553672316384,
+              "f1": 0.9376854599406528
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8926553672316384
+            },
+            "count_delta": -17,
+            "missing": [
+              "pkg:maven/org.hibernate.orm/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "predicted": 0,
+            "reference": 13,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1",
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-instrument@7.0.2",
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2",
+              "pkg:maven/org.springframework/spring-orm@7.0.2",
+              "pkg:maven/org.springframework/spring-test@7.0.2",
+              "pkg:maven/org.springframework/spring-tx@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-vets-service",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.vets/spring-petclinic-vets-service@4.0.1",
+          "image_prefix": "/application/spring-petclinic-vets-service/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 160,
+              "fp": 2,
+              "fn": 19,
+              "predicted": 162,
+              "reference": 179,
+              "precision": 0.9876543209876543,
+              "recall": 0.8938547486033519,
+              "f1": 0.9384164222873901
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8938547486033519
+            },
+            "count_delta": -17,
+            "missing": [
+              "pkg:maven/org.hibernate.orm/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "predicted": 0,
+            "reference": 18,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1",
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-instrument@7.0.2",
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2",
+              "pkg:maven/org.springframework/spring-orm@7.0.2",
+              "pkg:maven/org.springframework/spring-test@7.0.2",
+              "pkg:maven/org.springframework/spring-tx@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-visits-service",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.visits/spring-petclinic-visits-service@4.0.1",
+          "image_prefix": "/application/spring-petclinic-visits-service/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 158,
+              "fp": 2,
+              "fn": 19,
+              "predicted": 160,
+              "reference": 177,
+              "precision": 0.9875,
+              "recall": 0.8926553672316384,
+              "f1": 0.9376854599406528
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8926553672316384
+            },
+            "count_delta": -17,
+            "missing": [
+              "pkg:maven/org.hibernate.orm/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "predicted": 0,
+            "reference": 13,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1",
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-instrument@7.0.2",
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2",
+              "pkg:maven/org.springframework/spring-orm@7.0.2",
+              "pkg:maven/org.springframework/spring-test@7.0.2",
+              "pkg:maven/org.springframework/spring-tx@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-genai-service",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.genai/spring-petclinic-genai-service@4.0.1",
+          "image_prefix": "/application/spring-petclinic-genai-service/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 236,
+              "fp": 2,
+              "fn": 26,
+              "predicted": 238,
+              "reference": 262,
+              "precision": 0.9915966386554622,
+              "recall": 0.9007633587786259,
+              "f1": 0.944
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9007633587786259
+            },
+            "count_delta": -24,
+            "missing": [
+              "pkg:maven/io.netty/netty-common@4.2.9.Final",
+              "pkg:maven/org.hibernate.orm/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.ai/spring-ai-starter-model-openai@2.0.0-M1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-circuitbreaker-reactor-resilience4j@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-gateway-server-webflux@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@7.2.0.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 22,
+            "predicted": 0,
+            "reference": 22,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.38",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1",
+              "pkg:maven/javax.validation/validation-api@1.1.0.Final",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-circuitbreaker-resilience4j@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-gateway-server-webflux@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1",
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-instrument@7.0.2",
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2",
+              "pkg:maven/org.springframework/spring-messaging@7.0.2",
+              "pkg:maven/org.springframework/spring-orm@7.0.2",
+              "pkg:maven/org.springframework/spring-test@7.0.2",
+              "pkg:maven/org.springframework/spring-tx@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webflux@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-config-server",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.config/spring-petclinic-config-server@4.0.1",
+          "image_prefix": "/application/spring-petclinic-config-server/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 61,
+              "fp": 1,
+              "fn": 8,
+              "predicted": 62,
+              "reference": 69,
+              "precision": 0.9838709677419355,
+              "recall": 0.8840579710144928,
+              "f1": 0.9312977099236641
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8840579710144928
+            },
+            "count_delta": -7,
+            "missing": [
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-web@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/org.apache.sshd/sshd-osgi@2.16.0",
+              "pkg:maven/org.apache.sshd/sshd-sftp@2.16.0",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-server@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-discovery-server",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.discovery/spring-petclinic-discovery-server@4.0.1",
+          "image_prefix": "/application/spring-petclinic-discovery-server/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 121,
+              "fp": 1,
+              "fn": 16,
+              "predicted": 122,
+              "reference": 137,
+              "precision": 0.9918032786885246,
+              "recall": 0.8832116788321168,
+              "f1": 0.9343629343629344
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.8832116788321168
+            },
+            "count_delta": -15,
+            "missing": [
+              "pkg:maven/com.fasterxml.woodstox/woodstox-core@7.1.1",
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-freemarker@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-web@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0"
+            ],
+            "extra": [
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15",
+              "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2",
+              "pkg:maven/org.glassfish.hk2/spring-bridge@3.1.1",
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6",
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-server@5.0.0",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        },
+        {
+          "path": "spring-petclinic-api-gateway",
+          "owner": "pkg:maven/org.springframework.samples.petclinic.api/spring-petclinic-api-gateway@4.0.1",
+          "image_prefix": "/application/spring-petclinic-api-gateway/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 190,
+              "fp": 1,
+              "fn": 18,
+              "predicted": 191,
+              "reference": 208,
+              "precision": 0.9947643979057592,
+              "recall": 0.9134615384615384,
+              "f1": 0.9523809523809523
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9134615384615384
+            },
+            "count_delta": -17,
+            "missing": [
+              "pkg:maven/io.netty/netty-common@4.2.9.Final",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-webflux@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter-zipkin@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-starter@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-circuitbreaker-reactor-resilience4j@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-config@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-gateway-server-webflux@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-starter@5.0.0",
+              "pkg:maven/org.webjars.npm/csstype@3.2.3"
+            ],
+            "extra": [
+              "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.0.1"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 21,
+            "predicted": 0,
+            "reference": 21,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1",
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1",
+              "pkg:maven/org.antlr/stringtemplate@3.2.1",
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1",
+              "pkg:maven/org.springframework.cloud/spring-cloud-circuitbreaker-resilience4j@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-gateway-server-webflux@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0",
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0",
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2",
+              "pkg:maven/org.springframework/spring-context-support@7.0.2",
+              "pkg:maven/org.springframework/spring-context@7.0.2",
+              "pkg:maven/org.springframework/spring-core@7.0.2",
+              "pkg:maven/org.springframework/spring-expression@7.0.2",
+              "pkg:maven/org.springframework/spring-web@7.0.2",
+              "pkg:maven/org.springframework/spring-webflux@7.0.2",
+              "pkg:maven/org.webjars.npm/entities@4.5.0",
+              "pkg:maven/org.webjars.npm/estree-walker@2.0.2",
+              "pkg:maven/org.webjars.npm/font-awesome@4.7.0",
+              "pkg:maven/org.webjars.npm/vue-router@4.5.1",
+              "pkg:maven/org.webjars.npm/vue@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__compiler-core@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__compiler-dom@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__compiler-sfc@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__compiler-ssr@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__devtools-api@6.6.4",
+              "pkg:maven/org.webjars.npm/vue__reactivity@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__runtime-core@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__runtime-dom@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__server-renderer@3.5.17",
+              "pkg:maven/org.webjars.npm/vue__shared@3.5.17",
+              "pkg:maven/org.webjars/webjars-locator-lite@1.1.2",
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1"
+            ],
+            "removed": []
+          }
+        }
+      ],
+      "components_micro": {
+        "tp": 124,
+        "fp": 1,
+        "fn": 16,
+        "precision": 0.992,
+        "recall": 0.8857142857142857,
+        "f1": 0.9358490566037736
+      },
+      "components_macro_across_modules": {
+        "precision": 0.992,
+        "recall": 0.8857142857142857,
+        "f1": 0.9358490566037736
+      },
+      "scored_owners": 1,
+      "scope_unknown_owners": 7,
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 100,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "scope": "per-module dependency trees agree with CycloneDX component set; fixed image paths",
+      "status": "completed",
+      "seconds": 58.453000000008615,
+      "output_sha256": {
+        "final": "c91d0bb67bbbefacdf9590696b8f5554d33e8b6fd52c0fe701b60afd334fb71f",
+        "os": "0ef2af82e9233c237a6eca414548fea9267eeee7415f80e5713a362d60771345",
+        "full": "557b0f0c270d0666e8efae8893426bd28bab26be3516ccf468d8feb8bfac5a1f"
+      },
+      "execution_mode": "opt-in experimental; cached inventories, fresh physical reads/publishing",
+      "r106_all_view_regression": {
+        "baseline": "benchmarks/results/mvp-r106-v1/java/microservices/analysis",
+        "coordinate_multisets": {
+          "final": {
+            "added": {
+              "pkg:maven/org.webjars.npm/entities@4.5.0": 2,
+              "pkg:maven/org.webjars.npm/estree-walker@2.0.2": 2,
+              "pkg:maven/org.webjars.npm/font-awesome@4.7.0": 2,
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1": 10,
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1": 10,
+              "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1": 2,
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1": 16,
+              "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1": 4,
+              "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1": 10,
+              "pkg:maven/org.glassfish.hk2/spring-bridge@3.1.1": 2,
+              "pkg:maven/org.springframework.cloud/spring-cloud-circuitbreaker-resilience4j@5.0.0": 4,
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-server@5.0.0": 2,
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-gateway-server-webflux@5.0.0": 4,
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0": 14,
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0": 14,
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-server@5.0.0": 2,
+              "pkg:maven/org.springframework/spring-context@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-context-support@7.0.2": 14,
+              "pkg:maven/org.springframework/spring-core@7.0.2": 16,
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1": 8,
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1": 8,
+              "pkg:maven/org.springframework/spring-expression@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-instrument@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-messaging@7.0.2": 2,
+              "pkg:maven/org.springframework/spring-orm@7.0.2": 8,
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-test@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-tx@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-web@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-webflux@7.0.2": 6,
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2": 12,
+              "pkg:maven/org.apache.sshd/sshd-osgi@2.16.0": 2,
+              "pkg:maven/org.apache.sshd/sshd-sftp@2.16.0": 2,
+              "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2": 2,
+              "pkg:maven/org.antlr/stringtemplate@3.2.1": 12,
+              "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.38": 2,
+              "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE": 2,
+              "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE": 2,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15": 12,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15": 14,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15": 12,
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6": 10,
+              "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE": 2,
+              "pkg:maven/javax.validation/validation-api@1.1.0.Final": 2,
+              "pkg:maven/org.webjars.npm/vue@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue-router@4.5.1": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-core@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-dom@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-sfc@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-ssr@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__devtools-api@6.6.4": 2,
+              "pkg:maven/org.webjars.npm/vue__reactivity@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__runtime-core@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__runtime-dom@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__server-renderer@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__shared@3.5.17": 2,
+              "pkg:maven/org.webjars/webjars-locator-lite@1.1.2": 2,
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1": 14,
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21": 14,
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1": 10,
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1": 10
+            },
+            "removed": {}
+          },
+          "os": {
+            "added": {},
+            "removed": {}
+          },
+          "full": {
+            "added": {
+              "pkg:maven/org.webjars.npm/entities@4.5.0": 2,
+              "pkg:maven/org.webjars.npm/estree-walker@2.0.2": 2,
+              "pkg:maven/org.webjars.npm/font-awesome@4.7.0": 2,
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing@4.0.1": 10,
+              "pkg:maven/org.springframework.boot/spring-boot-micrometer-tracing-brave@4.0.1": 10,
+              "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-persistence@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-restclient@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-servlet@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-sql@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-test@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1": 2,
+              "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-transaction@4.0.1": 8,
+              "pkg:maven/org.springframework.boot/spring-boot-validation@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1": 16,
+              "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1": 4,
+              "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1": 6,
+              "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.0.1": 12,
+              "pkg:maven/org.springframework.boot/spring-boot-zipkin@4.0.1": 10,
+              "pkg:maven/org.glassfish.hk2/spring-bridge@3.1.1": 2,
+              "pkg:maven/org.springframework.cloud/spring-cloud-circuitbreaker-resilience4j@5.0.0": 4,
+              "pkg:maven/org.springframework.cloud/spring-cloud-commons@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-client@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-config-server@5.0.0": 2,
+              "pkg:maven/org.springframework.cloud/spring-cloud-context@5.0.0": 16,
+              "pkg:maven/org.springframework.cloud/spring-cloud-gateway-server-webflux@5.0.0": 4,
+              "pkg:maven/org.springframework.cloud/spring-cloud-loadbalancer@5.0.0": 14,
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-client@5.0.0": 14,
+              "pkg:maven/org.springframework.cloud/spring-cloud-netflix-eureka-server@5.0.0": 2,
+              "pkg:maven/org.springframework/spring-context@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-context-support@7.0.2": 14,
+              "pkg:maven/org.springframework/spring-core@7.0.2": 16,
+              "pkg:maven/org.springframework.data/spring-data-commons@4.0.1": 8,
+              "pkg:maven/org.springframework.data/spring-data-jpa@4.0.1": 8,
+              "pkg:maven/org.springframework/spring-expression@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-instrument@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-jdbc@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-messaging@7.0.2": 2,
+              "pkg:maven/org.springframework/spring-orm@7.0.2": 8,
+              "pkg:maven/org.springframework.security/spring-security-crypto@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-test@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-tx@7.0.2": 8,
+              "pkg:maven/org.springframework/spring-web@7.0.2": 16,
+              "pkg:maven/org.springframework/spring-webflux@7.0.2": 6,
+              "pkg:maven/org.springframework/spring-webmvc@7.0.2": 12,
+              "pkg:maven/org.apache.sshd/sshd-osgi@2.16.0": 2,
+              "pkg:maven/org.apache.sshd/sshd-sftp@2.16.0": 2,
+              "pkg:maven/org.codehaus.woodstox/stax2-api@4.2.2": 2,
+              "pkg:maven/org.antlr/stringtemplate@3.2.1": 12,
+              "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.38": 2,
+              "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE": 2,
+              "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE": 2,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.15": 12,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.15": 14,
+              "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.15": 12,
+              "pkg:maven/org.glassfish.jaxb/txw2@4.0.6": 10,
+              "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE": 2,
+              "pkg:maven/javax.validation/validation-api@1.1.0.Final": 2,
+              "pkg:maven/org.webjars.npm/vue@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue-router@4.5.1": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-core@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-dom@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-sfc@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__compiler-ssr@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__devtools-api@6.6.4": 2,
+              "pkg:maven/org.webjars.npm/vue__reactivity@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__runtime-core@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__runtime-dom@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__server-renderer@3.5.17": 2,
+              "pkg:maven/org.webjars.npm/vue__shared@3.5.17": 2,
+              "pkg:maven/org.webjars/webjars-locator-lite@1.1.2": 2,
+              "pkg:maven/xmlpull/xmlpull@1.1.3.1": 14,
+              "pkg:maven/com.thoughtworks.xstream/xstream@1.4.21": 14,
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter@3.5.1": 10,
+              "pkg:maven/io.zipkin.reporter2/zipkin-reporter-brave@3.5.1": 10
+            },
+            "removed": {}
+          }
+        }
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-identity-payload-v6",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 36
+        },
+        "unknown_groups": {
+          "image_evidence": 36
+        },
+        "source_count": 0,
+        "image_count": 2646,
+        "selected_count": 2458,
+        "final_count": 2458,
+        "os_count": 0,
+        "full_count": 2458,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 324,
+          "UNKNOWN": 36
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 41.094
+      },
+      "java_reader_policy": "stored-nested-directory-lru-conservative-ledger-v1",
+      "resources": {
+        "jar_resources": {
+          "copied_bytes": 0,
+          "ordinary_read_bytes": 0,
+          "index_bytes": 9813237,
+          "zip_entries": 91317,
+          "source_files": 0,
+          "nested_files": 1267,
+          "class_witnesses": 1503,
+          "resource_witnesses": 56,
+          "rejections": 0,
+          "zip_parse_entries": 926914,
+          "views": 2636,
+          "read_cache_hits": 7135,
+          "verification_read_bytes": 1952538302,
+          "content_witness_hits": 907,
+          "nested_window_files": 1267,
+          "nested_window_bytes": 649728298,
+          "range_cache_bytes": 16777215,
+          "range_cache_entries": 2107,
+          "stored_crc_verifications": 1267,
+          "directory_cache_entries": 256,
+          "directory_cache_evictions": 106,
+          "directory_cache_hits": 2649,
+          "directory_charges": 362,
+          "budget_guard_counts": {}
+        },
+        "layer_resources": {
+          "normalized_bytes": 1303884800,
+          "metadata_cost": 1550361,
+          "headers": 1398,
+          "payload_read_bytes": 95536087,
+          "normalizations": 1
+        }
+      }
+    },
+    "boot": {
+      "components": {
+        "tp": 90,
+        "fp": 3,
+        "fn": 2,
+        "predicted": 93,
+        "reference": 92,
+        "precision": 0.967741935483871,
+        "recall": 0.9782608695652174,
+        "f1": 0.972972972972973
+      },
+      "versions": {
+        "version_accuracy_matched_identity": 0.989010989010989,
+        "exact_version_coverage": 0.9782608695652174
+      },
+      "count_delta": 1,
+      "missing": [
+        "pkg:maven/org.hibernate.models/hibernate-models@1.1.1",
+        "pkg:maven/org.hibernate.orm/hibernate-core@7.4.1.Final"
+      ],
+      "extra": [
+        "pkg:maven/org.hibernate.models/hibernate-models@1.1.0",
+        "pkg:maven/org.hibernate/hibernate-core@7.4.1.Final",
+        "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.0"
+      ],
+      "scored_owners": 1,
+      "scope_unknown_owners": 0,
+      "scope": "known SHA256-labelled packaged dependencies under /application/",
+      "packaging_labels_sha256": "388741f6a702161ebd430feca90a273698a516963d826b54eec16c9897d4fc90",
+      "packaging_unknown_charged_fp": 1,
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 16,
+        "predicted": 0,
+        "reference": 16,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "status": "completed",
+      "seconds": 8.171000000002095,
+      "output_sha256": {
+        "final": "725ea9f1ce3dadac02c8aa282f853b89e353de7e2d2548aa44297f44d9f9ea60",
+        "os": "4287f652cff871d44fefccb024857e0a8713f0ecd591185c41520f357b4eb7f5",
+        "full": "909f1b711d491570d395ab6391c030c5b64e1ca0e6d5d96ef65154ab29534403"
+      },
+      "execution_mode": "opt-in experimental; cached inventories, fresh physical reads/publishing",
+      "r106_all_view_regression": {
+        "baseline": "benchmarks/results/mvp-r106-v1/java/boot/analysis",
+        "coordinate_multisets": {
+          "final": {
+            "added": {},
+            "removed": {}
+          },
+          "os": {
+            "added": {},
+            "removed": {}
+          },
+          "full": {
+            "added": {},
+            "removed": {}
+          }
+        }
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-identity-payload-v6",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 6
+        },
+        "unknown_groups": {
+          "image_evidence": 6
+        },
+        "source_count": 0,
+        "image_count": 244,
+        "selected_count": 238,
+        "final_count": 95,
+        "os_count": 143,
+        "full_count": 238,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 238,
+          "UNKNOWN": 6
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 6.141
+      },
+      "java_reader_policy": "stored-nested-directory-lru-conservative-ledger-v1",
+      "resources": {
+        "jar_resources": {
+          "copied_bytes": 0,
+          "ordinary_read_bytes": 0,
+          "index_bytes": 4241730,
+          "zip_entries": 39098,
+          "source_files": 0,
+          "nested_files": 93,
+          "class_witnesses": 93,
+          "resource_witnesses": 2,
+          "rejections": 0,
+          "zip_parse_entries": 69788,
+          "views": 95,
+          "read_cache_hits": 748,
+          "verification_read_bytes": 131078454,
+          "content_witness_hits": 0,
+          "nested_window_files": 93,
+          "nested_window_bytes": 65137021,
+          "range_cache_bytes": 4356188,
+          "range_cache_entries": 759,
+          "stored_crc_verifications": 93,
+          "directory_cache_entries": 95,
+          "directory_cache_evictions": 0,
+          "directory_cache_hits": 93,
+          "directory_charges": 95,
+          "budget_guard_counts": {}
+        },
+        "layer_resources": {
+          "normalized_bytes": 207648768,
+          "metadata_cost": 380506,
+          "headers": 356,
+          "payload_read_bytes": 4356188,
+          "normalizations": 2
+        }
+      }
+    },
+    "javalin": {
+      "rows": [
+        {
+          "path": "javalin",
+          "owner": "pkg:maven/io.javalin/javalin@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 49,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 49,
+            "reference": 49,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 49,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 49,
+              "reference": 49,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "predicted": 0,
+            "reference": 13,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-bundle",
+          "owner": "pkg:maven/io.javalin/javalin-bundle@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-bundle/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 52,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 52,
+            "reference": 52,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 52,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 52,
+              "reference": 52,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 10,
+            "predicted": 0,
+            "reference": 10,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-testtools",
+          "owner": "pkg:maven/io.javalin/javalin-testtools@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-testtools/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 3,
+            "reference": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 3,
+              "reference": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-ssl",
+          "owner": "pkg:maven/io.javalin.community.ssl/javalin-ssl@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-ssl/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 27,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 27,
+              "reference": 27,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 7,
+            "predicted": 0,
+            "reference": 7,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-micrometer",
+          "owner": "pkg:maven/io.javalin/javalin-micrometer@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-micrometer/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 14,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 14,
+            "reference": 14,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 14,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 14,
+              "reference": 14,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "predicted": 0,
+            "reference": 4,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-context-mock",
+          "owner": "pkg:maven/io.javalin/javalin-context-mock@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-context-mock/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 32,
+              "predicted": 4,
+              "reference": 36,
+              "precision": 1.0,
+              "recall": 0.1111111111111111,
+              "f1": 0.2
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.1111111111111111
+            },
+            "count_delta": -32,
+            "missing": [
+              "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+              "pkg:maven/jakarta.enterprise/jakarta.enterprise.cdi-api@4.0.1",
+              "pkg:maven/jakarta.enterprise/jakarta.enterprise.lang-model@4.0.1",
+              "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+              "pkg:maven/jakarta.interceptor/jakarta.interceptor-api@2.1.0",
+              "pkg:maven/jakarta.servlet/jakarta.servlet-api@6.0.0",
+              "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+              "pkg:maven/org.eclipse.jetty.ee/jetty-ee-webapp@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-jetty-server@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10.websocket/jetty-ee10-websocket-servlet@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-annotations@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-plus@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-servlet@12.1.12",
+              "pkg:maven/org.eclipse.jetty.ee10/jetty-ee10-webapp@12.1.12",
+              "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-common@12.1.12",
+              "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-core-server@12.1.12",
+              "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-api@12.1.12",
+              "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-common@12.1.12",
+              "pkg:maven/org.eclipse.jetty.websocket/jetty-websocket-jetty-server@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-annotations@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-http@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-io@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-jndi@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-plus@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-security@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-server@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-session@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-util@12.1.12",
+              "pkg:maven/org.eclipse.jetty/jetty-xml@12.1.12",
+              "pkg:maven/org.ow2.asm/asm-commons@9.10.1",
+              "pkg:maven/org.ow2.asm/asm-tree@9.10.1",
+              "pkg:maven/org.ow2.asm/asm@9.10.1"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-velocity",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-velocity@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-velocity/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 4,
+              "reference": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-freemarker",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-freemarker@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-freemarker/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 2,
+              "reference": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-thymeleaf",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-thymeleaf@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-thymeleaf/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 7,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 7,
+              "reference": 7,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-mustache",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-mustache@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-mustache/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 2,
+              "reference": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-handlebars",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-handlebars@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-handlebars/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 10,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 10,
+              "reference": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9090909090909091
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.github.jknack/handlebars@4.5.4"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-pebble",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-pebble@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-pebble/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 4,
+              "reference": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-commonmark",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-commonmark@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-commonmark/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 2,
+              "reference": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "javalin-utils/javalin-rendering/javalin-rendering-jte",
+          "owner": "pkg:maven/io.javalin/javalin-rendering-jte@7.2.4-SNAPSHOT",
+          "image_prefix": "/application/javalin-utils/javalin-rendering/javalin-rendering-jte/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 4,
+            "reference": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 4,
+              "reference": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "GAV_ONLY",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        }
+      ],
+      "components_micro": {
+        "tp": 128,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "components_macro_across_modules": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "scored_owners": 8,
+      "scope_unknown_owners": 6,
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 55,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "scope": "per-module dependency trees agree with CycloneDX component set; fixed image paths",
+      "status": "completed",
+      "seconds": 4.405999999988126,
+      "output_sha256": {
+        "final": "d279b40723f7b8e2266de67db18ea25fe842c14a89a479d97c65215247440678",
+        "os": "03eb976f68fbc8725fea26741f769c483bc1713e19bbb5d211c9f96c34b1a197",
+        "full": "990c5d1bd583a111b6d6ef80aa1d7a1b056ef7e4a9cbe0332bf4b8e7580aef97"
+      },
+      "execution_mode": "opt-in experimental; cached inventories, fresh physical reads/publishing",
+      "r106_all_view_regression": {
+        "baseline": "benchmarks/results/mvp-r106-v1/java/javalin/analysis",
+        "coordinate_multisets": {
+          "final": {
+            "added": {},
+            "removed": {}
+          },
+          "os": {
+            "added": {},
+            "removed": {}
+          },
+          "full": {
+            "added": {},
+            "removed": {}
+          }
+        }
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-identity-payload-v6",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 2
+        },
+        "unknown_groups": {
+          "image_evidence": 2
+        },
+        "source_count": 0,
+        "image_count": 200,
+        "selected_count": 198,
+        "final_count": 198,
+        "os_count": 0,
+        "full_count": 198,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 123,
+          "UNKNOWN": 2
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 3.282
+      },
+      "java_reader_policy": "stored-nested-directory-lru-conservative-ledger-v1",
+      "resources": {
+        "jar_resources": {
+          "copied_bytes": 0,
+          "ordinary_read_bytes": 0,
+          "index_bytes": 3140443,
+          "zip_entries": 29963,
+          "source_files": 0,
+          "nested_files": 0,
+          "class_witnesses": 123,
+          "resource_witnesses": 1,
+          "rejections": 0,
+          "zip_parse_entries": 30397,
+          "views": 199,
+          "read_cache_hits": 256,
+          "verification_read_bytes": 92517293,
+          "content_witness_hits": 75,
+          "nested_window_files": 0,
+          "nested_window_bytes": 0,
+          "range_cache_bytes": 3674894,
+          "range_cache_entries": 750,
+          "stored_crc_verifications": 0,
+          "directory_cache_entries": 124,
+          "directory_cache_evictions": 0,
+          "directory_cache_hits": 1,
+          "directory_charges": 124,
+          "budget_guard_counts": {}
+        },
+        "layer_resources": {
+          "normalized_bytes": 92680192,
+          "metadata_cost": 247471,
+          "headers": 228,
+          "payload_read_bytes": 3674894,
+          "normalizations": 1
+        }
+      }
+    },
+    "dropwizard": {
+      "rows": [
+        {
+          "path": "dropwizard-core",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-core@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-core/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 89,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 89,
+              "reference": 90,
+              "precision": 1.0,
+              "recall": 0.9888888888888889,
+              "f1": 0.994413407821229
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9888888888888889
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 38,
+            "predicted": 0,
+            "reference": 38,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-client",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-client@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-client/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 93,
+              "fp": 0,
+              "fn": 2,
+              "predicted": 93,
+              "reference": 95,
+              "precision": 1.0,
+              "recall": 0.9789473684210527,
+              "f1": 0.9893617021276596
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9789473684210527
+            },
+            "count_delta": -2,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/org.eclipse.jetty/jetty-util@12.1.11"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 20,
+            "predicted": 0,
+            "reference": 20,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-db",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-db@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-db/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 25,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 25,
+              "reference": 26,
+              "precision": 1.0,
+              "recall": 0.9615384615384616,
+              "f1": 0.9803921568627451
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9615384615384616
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "predicted": 0,
+            "reference": 9,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-jdbi3",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-jdbi3@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-jdbi3/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 96,
+              "fp": 0,
+              "fn": 3,
+              "predicted": 96,
+              "reference": 99,
+              "precision": 1.0,
+              "recall": 0.9696969696969697,
+              "f1": 0.9846153846153847
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9696969696969697
+            },
+            "count_delta": -3,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/org.eclipse.jetty/jetty-util@12.1.11",
+              "pkg:maven/org.jdbi/jdbi3-core@3.54.0"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 16,
+            "predicted": 0,
+            "reference": 16,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-migrations",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-migrations@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-migrations/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 98,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 98,
+            "reference": 99,
+            "precision": 1.0,
+            "recall": 0.98989898989899,
+            "f1": 0.9949238578680203
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.98989898989899
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 98,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 98,
+              "reference": 99,
+              "precision": 1.0,
+              "recall": 0.98989898989899,
+              "f1": 0.9949238578680203
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.98989898989899
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "predicted": 0,
+            "reference": 11,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-hibernate",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-hibernate@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-hibernate/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 103,
+              "fp": 1,
+              "fn": 4,
+              "predicted": 104,
+              "reference": 107,
+              "precision": 0.9903846153846154,
+              "recall": 0.9626168224299065,
+              "f1": 0.976303317535545
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9626168224299065
+            },
+            "count_delta": -3,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/org.glassfish.hk2/osgi-resource-locator@1.0.3",
+              "pkg:maven/org.glassfish.jersey.core/jersey-common@3.1.12",
+              "pkg:maven/org.hibernate.orm/hibernate-core@6.6.58.Final"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@6.6.58.Final"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 25,
+            "predicted": 0,
+            "reference": 25,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-auth",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-auth@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-auth/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 52,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 52,
+              "reference": 53,
+              "precision": 1.0,
+              "recall": 0.9811320754716981,
+              "f1": 0.9904761904761905
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9811320754716981
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 17,
+            "predicted": 0,
+            "reference": 17,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-forms",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-forms@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-forms/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 92,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 92,
+            "reference": 93,
+            "precision": 1.0,
+            "recall": 0.989247311827957,
+            "f1": 0.9945945945945946
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.989247311827957
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 92,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 92,
+              "reference": 93,
+              "precision": 1.0,
+              "recall": 0.989247311827957,
+              "f1": 0.9945945945945946
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989247311827957
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "predicted": 0,
+            "reference": 4,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-views",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-views@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-views/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 90,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 90,
+            "reference": 91,
+            "precision": 1.0,
+            "recall": 0.989010989010989,
+            "f1": 0.994475138121547
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.989010989010989
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 90,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 90,
+              "reference": 91,
+              "precision": 1.0,
+              "recall": 0.989010989010989,
+              "f1": 0.994475138121547
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989010989010989
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "predicted": 0,
+            "reference": 11,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-views-freemarker",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-views-freemarker@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-views-freemarker/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 92,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 92,
+              "reference": 93,
+              "precision": 1.0,
+              "recall": 0.989247311827957,
+              "f1": 0.9945945945945946
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989247311827957
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "predicted": 0,
+            "reference": 12,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-views-mustache",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-views-mustache@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-views-mustache/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 92,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 92,
+              "reference": 93,
+              "precision": 1.0,
+              "recall": 0.989247311827957,
+              "f1": 0.9945945945945946
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989247311827957
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "predicted": 0,
+            "reference": 9,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-testing",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-testing@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-testing/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 104,
+              "fp": 0,
+              "fn": 3,
+              "predicted": 104,
+              "reference": 107,
+              "precision": 1.0,
+              "recall": 0.9719626168224299,
+              "f1": 0.985781990521327
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9719626168224299
+            },
+            "count_delta": -3,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/org.glassfish.jersey.core/jersey-common@3.1.12",
+              "pkg:maven/org.junit.platform/junit-platform-engine@1.14.4"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 39,
+            "predicted": 0,
+            "reference": 39,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-util",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-util@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-util/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 2,
+            "reference": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 2,
+              "reference": 2,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "predicted": 0,
+            "reference": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-jackson",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-jackson@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-jackson/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 16,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 16,
+            "reference": 17,
+            "precision": 1.0,
+            "recall": 0.9411764705882353,
+            "f1": 0.9696969696969697
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9411764705882353
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 16,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 16,
+              "reference": 17,
+              "precision": 1.0,
+              "recall": 0.9411764705882353,
+              "f1": 0.9696969696969697
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9411764705882353
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "predicted": 0,
+            "reference": 13,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-validation",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-validation@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-validation/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 14,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 14,
+            "reference": 15,
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1": 0.9655172413793104
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9333333333333333
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 14,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 14,
+              "reference": 15,
+              "precision": 1.0,
+              "recall": 0.9333333333333333,
+              "f1": 0.9655172413793104
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9333333333333333
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "predicted": 0,
+            "reference": 9,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-configuration",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-configuration@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-configuration/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 21,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 21,
+              "reference": 22,
+              "precision": 1.0,
+              "recall": 0.9545454545454546,
+              "f1": 0.9767441860465116
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9545454545454546
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 8,
+            "predicted": 0,
+            "reference": 8,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-logging",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-logging@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-logging/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 33,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 33,
+            "reference": 34,
+            "precision": 1.0,
+            "recall": 0.9705882352941176,
+            "f1": 0.9850746268656716
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9705882352941176
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 33,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 33,
+              "reference": 34,
+              "precision": 1.0,
+              "recall": 0.9705882352941176,
+              "f1": 0.9850746268656716
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9705882352941176
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 19,
+            "predicted": 0,
+            "reference": 19,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-metrics",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-metrics@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-metrics/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 31,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 31,
+            "reference": 32,
+            "precision": 1.0,
+            "recall": 0.96875,
+            "f1": 0.9841269841269841
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.96875
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 31,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 31,
+              "reference": 32,
+              "precision": 1.0,
+              "recall": 0.96875,
+              "f1": 0.9841269841269841
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.96875
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "predicted": 0,
+            "reference": 11,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-metrics-graphite",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-metrics-graphite@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-metrics-graphite/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 36,
+              "fp": 0,
+              "fn": 10,
+              "predicted": 36,
+              "reference": 46,
+              "precision": 1.0,
+              "recall": 0.782608695652174,
+              "f1": 0.8780487804878049
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.782608695652174
+            },
+            "count_delta": -10,
+            "missing": [
+              "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-guava@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.module/jackson-module-blackbird@2.22.3",
+              "pkg:maven/com.fasterxml.jackson.module/jackson-module-parameter-names@2.22.3",
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/io.dropwizard/dropwizard-jackson@5.0.3-SNAPSHOT",
+              "pkg:maven/io.netty/netty-common@4.2.17.Final"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "predicted": 0,
+            "reference": 6,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-jersey",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-jersey@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-jersey/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 45,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 45,
+              "reference": 46,
+              "precision": 1.0,
+              "recall": 0.9782608695652174,
+              "f1": 0.989010989010989
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9782608695652174
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 29,
+            "predicted": 0,
+            "reference": 29,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-jetty",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-jetty@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-jetty/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 35,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 35,
+              "reference": 36,
+              "precision": 1.0,
+              "recall": 0.9722222222222222,
+              "f1": 0.9859154929577465
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9722222222222222
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "predicted": 0,
+            "reference": 18,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-servlets",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-servlets@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-servlets/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 11,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 11,
+              "reference": 12,
+              "precision": 1.0,
+              "recall": 0.9166666666666666,
+              "f1": 0.9565217391304348
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9166666666666666
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/org.eclipse.jetty/jetty-util@12.1.11"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 10,
+            "predicted": 0,
+            "reference": 10,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-lifecycle",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-lifecycle@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-lifecycle/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predicted": 10,
+            "reference": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 1.0
+          },
+          "count_delta": 0,
+          "missing": [],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 10,
+              "fp": 0,
+              "fn": 0,
+              "predicted": 10,
+              "reference": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 1.0
+            },
+            "count_delta": 0,
+            "missing": [],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 6,
+            "predicted": 0,
+            "reference": 6,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-assets",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-assets@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-assets/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 90,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 90,
+            "reference": 91,
+            "precision": 1.0,
+            "recall": 0.989010989010989,
+            "f1": 0.994475138121547
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.989010989010989
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 90,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 90,
+              "reference": 91,
+              "precision": 1.0,
+              "recall": 0.989010989010989,
+              "f1": 0.994475138121547
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989010989010989
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 5,
+            "predicted": 0,
+            "reference": 5,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-http2",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-http2@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-http2/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 43,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 43,
+              "reference": 44,
+              "precision": 1.0,
+              "recall": 0.9772727272727273,
+              "f1": 0.9885057471264368
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9772727272727273
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 14,
+            "predicted": 0,
+            "reference": 14,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-request-logging",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-request-logging@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-request-logging/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 42,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 42,
+            "reference": 43,
+            "precision": 1.0,
+            "recall": 0.9767441860465116,
+            "f1": 0.9882352941176471
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9767441860465116
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 42,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 42,
+              "reference": 43,
+              "precision": 1.0,
+              "recall": 0.9767441860465116,
+              "f1": 0.9882352941176471
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9767441860465116
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "predicted": 0,
+            "reference": 18,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-json-logging",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-json-logging@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-json-logging/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 36,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 36,
+            "reference": 37,
+            "precision": 1.0,
+            "recall": 0.972972972972973,
+            "f1": 0.9863013698630136
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.972972972972973
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 36,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 36,
+              "reference": 37,
+              "precision": 1.0,
+              "recall": 0.972972972972973,
+              "f1": 0.9863013698630136
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.972972972972973
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 13,
+            "predicted": 0,
+            "reference": 13,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-health",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-health@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-health/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 61,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 61,
+            "reference": 62,
+            "precision": 1.0,
+            "recall": 0.9838709677419355,
+            "f1": 0.991869918699187
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9838709677419355
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 61,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 61,
+              "reference": 62,
+              "precision": 1.0,
+              "recall": 0.9838709677419355,
+              "f1": 0.991869918699187
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9838709677419355
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "predicted": 0,
+            "reference": 18,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-unix-socket",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-unix-socket@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-unix-socket/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 37,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 37,
+              "reference": 38,
+              "precision": 1.0,
+              "recall": 0.9736842105263158,
+              "f1": 0.9866666666666667
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9736842105263158
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "predicted": 0,
+            "reference": 11,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "dropwizard-example",
+          "owner": "pkg:maven/io.dropwizard/dropwizard-example@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/dropwizard-example/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 143,
+              "fp": 1,
+              "fn": 3,
+              "predicted": 144,
+              "reference": 146,
+              "precision": 0.9930555555555556,
+              "recall": 0.9794520547945206,
+              "f1": 0.9862068965517241
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9794520547945206
+            },
+            "count_delta": -2,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+              "pkg:maven/io.netty/netty-common@4.2.17.Final",
+              "pkg:maven/org.hibernate.orm/hibernate-core@6.6.58.Final"
+            ],
+            "extra": [
+              "pkg:maven/org.hibernate/hibernate-core@6.6.58.Final"
+            ]
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11,
+            "predicted": 0,
+            "reference": 11,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "docs/source/examples/core",
+          "owner": "pkg:maven/io.dropwizard.documentation/examples-core@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/docs/source/examples/core/",
+          "scope": "UNKNOWN_NATIVE_CDX_TRANSITIVE_MISMATCH",
+          "components": null,
+          "versions": null,
+          "count_delta": null,
+          "missing": null,
+          "extra": null,
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 99,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 99,
+              "reference": 100,
+              "precision": 1.0,
+              "recall": 0.99,
+              "f1": 0.9949748743718593
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.99
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "docs/source/examples/conscrypt",
+          "owner": "pkg:maven/io.dropwizard.documentation/example-conscrypt@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/docs/source/examples/conscrypt/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 93,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 93,
+            "reference": 94,
+            "precision": 1.0,
+            "recall": 0.9893617021276596,
+            "f1": 0.9946524064171123
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9893617021276596
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 93,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 93,
+              "reference": 94,
+              "precision": 1.0,
+              "recall": 0.9893617021276596,
+              "f1": 0.9946524064171123
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9893617021276596
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3,
+            "predicted": 0,
+            "reference": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "docs/source/examples/getting-started",
+          "owner": "pkg:maven/io.dropwizard.documentation/example-getting-started@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/docs/source/examples/getting-started/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 90,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 90,
+            "reference": 91,
+            "precision": 1.0,
+            "recall": 0.989010989010989,
+            "f1": 0.994475138121547
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.989010989010989
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 90,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 90,
+              "reference": 91,
+              "precision": 1.0,
+              "recall": 0.989010989010989,
+              "f1": 0.994475138121547
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.989010989010989
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 0,
+            "reference": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        },
+        {
+          "path": "docs/source/examples/views",
+          "owner": "pkg:maven/io.dropwizard.documentation/examples-views@5.0.3-SNAPSHOT",
+          "image_prefix": "/application/docs/source/examples/views/",
+          "scope": "NATIVE_CDX_AGREEMENT",
+          "components": {
+            "tp": 95,
+            "fp": 0,
+            "fn": 1,
+            "predicted": 95,
+            "reference": 96,
+            "precision": 1.0,
+            "recall": 0.9895833333333334,
+            "f1": 0.9947643979057592
+          },
+          "versions": {
+            "version_accuracy_matched_identity": 1.0,
+            "exact_version_coverage": 0.9895833333333334
+          },
+          "count_delta": -1,
+          "missing": [
+            "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+          ],
+          "extra": [],
+          "raw_build_reference_delta": {
+            "components": {
+              "tp": 95,
+              "fp": 0,
+              "fn": 1,
+              "predicted": 95,
+              "reference": 96,
+              "precision": 1.0,
+              "recall": 0.9895833333333334,
+              "f1": 0.9947643979057592
+            },
+            "versions": {
+              "version_accuracy_matched_identity": 1.0,
+              "exact_version_coverage": 0.9895833333333334
+            },
+            "count_delta": -1,
+            "missing": [
+              "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+            ],
+            "extra": []
+          },
+          "direct": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 4,
+            "predicted": 0,
+            "reference": 4,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+          "qualifier_evaluation": "PLAIN_JAR_GAV",
+          "r106_component_regression": {
+            "added": [],
+            "removed": []
+          }
+        }
+      ],
+      "components_micro": {
+        "tp": 893,
+        "fp": 0,
+        "fn": 14,
+        "precision": 1.0,
+        "recall": 0.9845644983461963,
+        "f1": 0.9922222222222222
+      },
+      "components_macro_across_modules": {
+        "precision": 1.0,
+        "recall": 0.979535029387376,
+        "f1": 0.989573942243682
+      },
+      "scored_owners": 16,
+      "scope_unknown_owners": 18,
+      "direct": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 443,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "direct_status": "UNKNOWN_NO_SOURCE_INPUT",
+      "scope": "per-module dependency trees agree with CycloneDX component set; fixed image paths",
+      "status": "completed",
+      "seconds": 40.969000000011874,
+      "output_sha256": {
+        "final": "5ae9a1f9cd1de8293a13fe3fd3606d8b19106f7cca5020d42f9ba71ae2399433",
+        "os": "b7f72692e3b9991c44502acbe81efe4676a28895f99f85666a6f7893b1a07c6a",
+        "full": "adf36233a16a03c0b089c3f32440654f7285d1006b976537c915fc9c51cba13d"
+      },
+      "execution_mode": "opt-in experimental; cached inventories, fresh physical reads/publishing",
+      "r106_all_view_regression": {
+        "baseline": "benchmarks/results/mvp-r106-v1/java/dropwizard/analysis",
+        "coordinate_multisets": {
+          "final": {
+            "added": {},
+            "removed": {}
+          },
+          "os": {
+            "added": {},
+            "removed": {}
+          },
+          "full": {
+            "added": {},
+            "removed": {}
+          }
+        }
+      },
+      "runtime_summary": {
+        "status": "succeeded",
+        "partial": true,
+        "assessment_mode": "rules",
+        "policy_version": "image-identity-payload-v6",
+        "payload_verification": "performed",
+        "unknown_reasons": {
+          "INSUFFICIENT_IMAGE_EVIDENCE": 6
+        },
+        "unknown_groups": {
+          "image_evidence": 6
+        },
+        "source_count": 0,
+        "image_count": 2406,
+        "selected_count": 2143,
+        "final_count": 2143,
+        "os_count": 0,
+        "full_count": 2143,
+        "inventory_scope": "non-os-packages-v1",
+        "decisions": {
+          "INCLUDE": 178,
+          "UNKNOWN": 6
+        },
+        "cyclonedx_valid": true,
+        "reconciliation_seconds": 28.297
+      },
+      "java_reader_policy": "stored-nested-directory-lru-conservative-ledger-v1",
+      "resources": {
+        "jar_resources": {
+          "copied_bytes": 0,
+          "ordinary_read_bytes": 0,
+          "index_bytes": 6043956,
+          "zip_entries": 57461,
+          "source_files": 0,
+          "nested_files": 0,
+          "class_witnesses": 181,
+          "resource_witnesses": 0,
+          "rejections": 0,
+          "zip_parse_entries": 1289878,
+          "views": 2179,
+          "read_cache_hits": 1012,
+          "verification_read_bytes": 701432545,
+          "content_witness_hits": 1966,
+          "nested_window_files": 0,
+          "nested_window_bytes": 0,
+          "range_cache_bytes": 6360447,
+          "range_cache_entries": 1183,
+          "stored_crc_verifications": 0,
+          "directory_cache_entries": 182,
+          "directory_cache_evictions": 0,
+          "directory_cache_hits": 121,
+          "directory_charges": 182,
+          "budget_guard_counts": {
+            "ZIP_DIRECTORY_SINGLE": 137
+          }
+        },
+        "layer_resources": {
+          "normalized_bytes": 703148544,
+          "metadata_cost": 2485354,
+          "headers": 2263,
+          "payload_read_bytes": 6360447,
+          "normalizations": 1
+        }
+      }
+    }
+  },
+  "java_components_micro": {
+    "tp": 1235,
+    "fp": 4,
+    "fn": 32,
+    "precision": 0.9967715899919289,
+    "recall": 0.9747434885556433,
+    "f1": 0.985634477254589
+  },
+  "java_components_macro_across_repositories": {
+    "precision": 0.9899354838709677,
+    "recall": 0.9621349134064248,
+    "f1": 0.9752610629497422
+  },
+  "java_direct": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 614,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "operational_status": {
+    "completed": 4,
+    "failed": []
+  },
+  "javascript": "not rescanned or scored by this Java-only stage",
+  "acceptance": false,
+  "limitations": [
+    "Four disclosed repositories, not fresh independent accuracy acceptance",
+    "Owner instances are not independent projects; unknown scopes retain all raw deltas",
+    "Image-only direct graph remains UNKNOWN/FN",
+    "Known build-reference components with unknown payload remain FN",
+    "GAV scoring does not independently validate classifier/type qualifiers",
+    "Timing excludes reused scanner acquisition/inventories; no hard-quota/RSS claim"
+  ]
+}

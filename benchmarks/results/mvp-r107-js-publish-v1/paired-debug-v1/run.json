@@ -1,0 +1,61 @@
+{
+  "name": "paired-debug-v1",
+  "status": "passed",
+  "oracle_read": false,
+  "fresh_scans": false,
+  "fresh_physical_reads": false,
+  "source_input": false,
+  "elapsed_seconds": 6.297000000020489,
+  "views": {
+    "final": {
+      "coordinates_equal": true,
+      "component_count": 200,
+      "sha256": "637cb6e456863a00dd0af0ba93cd34dc460edee05bc8b13dad1cc41baf33d72c",
+      "cyclonedx_schema_valid": true
+    },
+    "os": {
+      "coordinates_equal": true,
+      "component_count": 89,
+      "sha256": "3e25bc7ea62443c541aed47391998b22bf964d8fc4f1887f20155f4eefead881",
+      "cyclonedx_schema_valid": true
+    },
+    "full": {
+      "coordinates_equal": true,
+      "component_count": 289,
+      "sha256": "2ac4af1c5e84e56d6851dc60e90f3f4100c872850a74f0aed480d5b5a5a90f7a",
+      "cyclonedx_schema_valid": true
+    }
+  },
+  "selected_artifact_ids_equal": true,
+  "summary": {
+    "status": "succeeded",
+    "partial": true,
+    "assessment_mode": "rules",
+    "policy_version": "image-evidence-and-payload-v3",
+    "payload_verification": "performed",
+    "unknown_reasons": {
+      "INSUFFICIENT_IMAGE_EVIDENCE": 4
+    },
+    "unknown_groups": {
+      "image_evidence": 4
+    },
+    "source_count": 0,
+    "image_count": 293,
+    "selected_count": 289,
+    "final_count": 200,
+    "os_count": 89,
+    "full_count": 289,
+    "inventory_scope": "non-os-packages-v1",
+    "decisions": {
+      "INCLUDE": 277,
+      "UNKNOWN": 4
+    },
+    "cyclonedx_valid": true,
+    "reconciliation_seconds": 5.266
+  },
+  "baseline": "benchmarks/results/mvp-r106-v1/javascript/paired-debug-v1/analysis",
+  "original_r106_run_status": "completed",
+  "separate_chalk_diagnostic": false,
+  "locking_failure_fixed": false,
+  "new_accuracy_measurement": false
+}

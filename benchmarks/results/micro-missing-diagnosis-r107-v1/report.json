@@ -1,0 +1,1160 @@
+{
+  "post_analysis_only": true,
+  "predictor_input_forbidden": true,
+  "new_scans_builds_image_reads_or_classifier_edits": false,
+  "image_config_digest": "sha256:9363d3f231875f937c5a8904a1bb4d86e9d8ac0730eaf9d9f8d064e9cb848a8a",
+  "owner": "pkg:maven/org.springframework.samples.petclinic.admin/spring-petclinic-admin-server@4.0.1",
+  "image_prefix": "/application/spring-petclinic-admin-server/",
+  "original_component_metrics_unchanged": {
+    "tp": 99,
+    "fp": 1,
+    "fn": 41,
+    "predicted": 100,
+    "reference": 140,
+    "precision": 0.99,
+    "recall": 0.7071428571428572,
+    "f1": 0.825
+  },
+  "counts": {
+    "prior_unmatched_gav_misses": 12,
+    "actual_syft_observations": 21,
+    "exact_original_gav_matches": 0,
+    "same_path_layer_unique_peer_expected_gav": 21,
+    "budget_unknown_observations": 21,
+    "original_namespace_equals_artifact_name": 21
+  },
+  "payload_error_counts": {
+    "BudgetExceeded": 21
+  },
+  "rows": [
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "60e970f7409f33cb",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-netty/spring-boot-netty@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-netty/spring-boot-netty@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-netty",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "ecad3775-f89c-4cdb-9c67-a57bde448aa4",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-netty-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "4a34326b6638bcf9",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-netty/spring-boot-netty@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-netty/spring-boot-netty@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-netty",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-netty-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-netty-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-netty-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "8e21dd6a-7a42-48d5-83d8-e5bfedf6287f",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-netty-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-netty-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-netty@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "dd6f54366331de1f",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-reactor-netty/spring-boot-reactor-netty@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-reactor-netty/spring-boot-reactor-netty@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-reactor-netty",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "ec562ef3-cb22-4b7f-87ba-a58973c02dbf",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-netty-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "6cda9b896a75cd30",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-reactor-netty/spring-boot-reactor-netty@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-reactor-netty/spring-boot-reactor-netty@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-reactor-netty",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-reactor-netty-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-reactor-netty-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-netty-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "30643cae-fd84-4d2b-a5f2-032391d2b480",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-netty-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-netty-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-reactor-netty@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "03d6cf7d47b41db6",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-reactor/spring-boot-reactor@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-reactor/spring-boot-reactor@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-reactor",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "24986c19-3815-4d6f-a895-6997bfe53f3b",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-reactor-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "ab557faf5e68bb97",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-reactor/spring-boot-reactor@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-reactor/spring-boot-reactor@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-reactor",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-reactor-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-reactor-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "38067980-d2e4-41be-9b3d-57177a334b4b",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-reactor-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-reactor@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "6fbceb8f40567e30",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-starter-jackson/spring-boot-starter-jackson@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-starter-jackson/spring-boot-starter-jackson@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-starter-jackson",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "86531237-0537-4d58-9e91-f2fb4d8abf42",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-jackson-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 1,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "46c5536a2ab446e2",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-starter-micrometer-metrics/spring-boot-starter-micrometer-metrics@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-starter-micrometer-metrics/spring-boot-starter-micrometer-metrics@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-starter-micrometer-metrics",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "502043e0-012c-43d0-bc9f-9157d1aefcf5",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-micrometer-metrics-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 1,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "5987b37dfffeddd9",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-starter-webclient/spring-boot-starter-webclient@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-starter-webclient/spring-boot-starter-webclient@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-starter-webclient",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "af0b3aa0-db04-46f9-bae3-f43a5dd9e8fd",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-starter-webclient-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-starter-webclient@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 1,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "fd3d7e4fbd78c87e",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-thymeleaf/spring-boot-thymeleaf@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-thymeleaf/spring-boot-thymeleaf@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-thymeleaf",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "ba61aed5-700c-4e3b-84bf-9aa7c2f3c5e2",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-thymeleaf-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "a53ea7cc501ad6aa",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-thymeleaf/spring-boot-thymeleaf@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-thymeleaf/spring-boot-thymeleaf@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-thymeleaf",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-thymeleaf-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-thymeleaf-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-thymeleaf-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "ac88dd91-7c08-40ff-b47e-963d24e3152f",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-thymeleaf-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-thymeleaf-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "a593e05d0dc64d18",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-web-server/spring-boot-web-server@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-web-server/spring-boot-web-server@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-web-server",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "3ee28f58-7fdb-41ba-978c-4d0c1bae9bc6",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-web-server-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "1e2cdd6d60e8e7cd",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-web-server/spring-boot-web-server@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-web-server/spring-boot-web-server@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-web-server",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-web-server-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-web-server-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-web-server-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "6e8ae23b-8503-4072-99d4-fc726aabef5d",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-web-server-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-web-server-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "96d344b586ae6be1",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-webclient/spring-boot-webclient@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-webclient/spring-boot-webclient@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-webclient",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "9a0a43f3-d688-4855-95a5-26c93f088f01",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webclient-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "4aaea0974025ea67",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-webclient/spring-boot-webclient@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-webclient/spring-boot-webclient@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-webclient",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-webclient-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-webclient-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webclient-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "3d9c8d53-0f38-4d21-9ef3-8280633ca1fa",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webclient-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webclient-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-webclient@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+      "observations": [
+        {
+          "syft_artifact_id": "fff84c16e58a16f8",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-webflux/spring-boot-webflux@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-webflux/spring-boot-webflux@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-webflux",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "69825561-1480-41c9-b801-1215ebb8051f",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/spring-boot-webflux-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "f19525aa1135adb3",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/spring-boot-webflux/spring-boot-webflux@4.0.1",
+          "original_canonical_gav": "pkg:maven/spring-boot-webflux/spring-boot-webflux@4.0.1",
+          "name_version_equal_expected": true,
+          "original_namespace": "spring-boot-webflux",
+          "expected_namespace": "org.springframework.boot",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-webflux-4.0.1.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/spring-boot-webflux-4.0.1.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webflux-4.0.1.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "9168e909-144c-4907-8d3c-98dfbce9a1a9",
+              "purl": "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webflux-4.0.1.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/spring-boot-webflux-4.0.1.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.springframework.boot/spring-boot-webflux@4.0.1"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE",
+      "observations": [
+        {
+          "syft_artifact_id": "1c3ec6dc260f74b4",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/thymeleaf-spring6/thymeleaf-spring6@3.1.3.RELEASE",
+          "original_canonical_gav": "pkg:maven/thymeleaf-spring6/thymeleaf-spring6@3.1.3.RELEASE",
+          "name_version_equal_expected": true,
+          "original_namespace": "thymeleaf-spring6",
+          "expected_namespace": "org.thymeleaf",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "d4324a2a-2ab4-4d3b-be86-43fb2751a3eb",
+              "purl": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-spring6-3.1.3.RELEASE.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "aeb6bd3397691935",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/thymeleaf-spring6/thymeleaf-spring6@3.1.3.RELEASE",
+          "original_canonical_gav": "pkg:maven/thymeleaf-spring6/thymeleaf-spring6@3.1.3.RELEASE",
+          "name_version_equal_expected": true,
+          "original_namespace": "thymeleaf-spring6",
+          "expected_namespace": "org.thymeleaf",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/thymeleaf-spring6-3.1.3.RELEASE.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/thymeleaf-spring6-3.1.3.RELEASE.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-spring6-3.1.3.RELEASE.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "5c4f7ada-5234-4df0-97bf-9a6f94dd90c4",
+              "purl": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-spring6-3.1.3.RELEASE.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-spring6-3.1.3.RELEASE.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.3.RELEASE"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    },
+    {
+      "expected_gav_post_only": "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE",
+      "observations": [
+        {
+          "syft_artifact_id": "ac6a96e8247b602a",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/thymeleaf/thymeleaf@3.1.3.RELEASE",
+          "original_canonical_gav": "pkg:maven/thymeleaf/thymeleaf@3.1.3.RELEASE",
+          "name_version_equal_expected": true,
+          "original_namespace": "thymeleaf",
+          "expected_namespace": "org.thymeleaf",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "5dd70096-17b4-4891-9992-58b19ba953d4",
+              "purl": "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE",
+              "raw_file_path": "application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/dependencies/thymeleaf-3.1.3.RELEASE.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        },
+        {
+          "syft_artifact_id": "48225a663cb41a89",
+          "found_by": "java-archive-cataloger",
+          "original_purl": "pkg:maven/thymeleaf/thymeleaf@3.1.3.RELEASE",
+          "original_canonical_gav": "pkg:maven/thymeleaf/thymeleaf@3.1.3.RELEASE",
+          "name_version_equal_expected": true,
+          "original_namespace": "thymeleaf",
+          "expected_namespace": "org.thymeleaf",
+          "original_namespace_equals_artifact_name": true,
+          "exact_original_gav_matches_expected": false,
+          "outer_locations": [
+            {
+              "path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar",
+              "layer_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "access_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/thymeleaf-3.1.3.RELEASE.jar"
+            }
+          ],
+          "virtual_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar:BOOT-INF/lib/thymeleaf-3.1.3.RELEASE.jar",
+          "metadata_fields": [
+            "digest",
+            "manifest",
+            "virtualPath"
+          ],
+          "audit_path_layer": [
+            "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-3.1.3.RELEASE.jar",
+            "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de"
+          ],
+          "audit_status": "UNKNOWN",
+          "audit_reason": "No bounded class/resource witness",
+          "observed_payload": {
+            "status": "unconfirmed",
+            "path": null,
+            "error_type": "BudgetExceeded",
+            "method": "pinned-syft-final-files-plus-bounded-archive-read-v1",
+            "scope": "Some payload present; completeness and runtime use not established"
+          },
+          "peer_at_exact_path_layer": [
+            {
+              "ref": "943ba911-4d59-4e7d-bdff-a1832c2750cf",
+              "purl": "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE",
+              "raw_file_path": "application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-3.1.3.RELEASE.jar",
+              "canonical_file_path": "/application/spring-petclinic-admin-server/spring-petclinic-admin-server-4.0.1.jar/BOOT-INF/lib/thymeleaf-3.1.3.RELEASE.jar",
+              "layer_diff_id": "sha256:68ced7188595f8e0a150b9a15525d23d3cabae1c3eda4ca153e579f1b11671de",
+              "canonical_gav": "pkg:maven/org.thymeleaf/thymeleaf@3.1.3.RELEASE"
+            }
+          ],
+          "unique_peer_exact_expected_gav": true
+        }
+      ],
+      "matched_by_original_gav": 0,
+      "matched_by_name_version_and_same_path_layer_peer": 2,
+      "all_observed_payload_budget_unknown": true,
+      "category": "ORIGINAL_SYFT_NAMESPACE_DIFFERS_PEER_HAS_EXPECTED_GAV_AT_BOUND_PATH_BUT_PAYLOAD_BUDGET_UNKNOWN"
+    }
+  ],
+  "conclusion": "The earlier diagnostic joined only original GAVs. All twelve libraries exist in stored observations; original Syft namespaces differ, while the existing peer has the expected exact GAV at each unique path/layer. The existing bridge remains blocked by unconfirmed BudgetExceeded payload. No namespace alias or module-path rewrite is warranted.",
+  "recommendations": [
+    "Keep the original namespace and producer audit; let the unchanged path/layer peer bridge act only after new physical proof",
+    "Diagnose the bounded rejection guard and compare a separately frozen reader; do not assume every starter has class/resource bytes",
+    "Correct the diagnostic join, not the classifier with expected GAV lists",
+    "Preserve earlier R106 metrics and all unknown scopes; this report alone adds zero TP"
+  ],
+  "limitations": [
+    "No new physical reads; BudgetExceeded guard origin still not established here",
+    "Same name/version is used only for post-analysis evidence discovery, never as classification proof",
+    "Leading slash normalization is the existing peer path convention, not an alias or owner guess",
+    "Some metadata-only starter artifacts may remain UNKNOWN even if the budget rejection is removed"
+  ]
+}
