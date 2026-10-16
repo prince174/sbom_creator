@@ -1,0 +1,19 @@
+# Opt-in override for compose.local.yaml. Only the trusted API coordinator
+# receives daemon access; source/build jobs never receive this socket or secrets.
+services:
+  api:
+    environment:
+      DOCKER_HOST: unix:///var/run/docker.sock
+      SBOM_BITBUCKET_HOSTS: ${SBOM_BITBUCKET_HOSTS:-github.com,bitbucket.org}
+      SBOM_CDXGEN_IMAGE: ${SBOM_CDXGEN_IMAGE:-sbom-creator-cdxgen-worker:13.4.0}
+      SBOM_BUILD_TIMEOUT: ${SBOM_BUILD_TIMEOUT:-900}
+      SBOM_SOURCE_IMAGE_WAIT_TIMEOUT: ${SBOM_SOURCE_IMAGE_WAIT_TIMEOUT:-3600}
+      SBOM_SOURCE_IMAGE_POLL_INTERVAL: ${SBOM_SOURCE_IMAGE_POLL_INTERVAL:-30}
+      SBOM_SOURCE_IMAGE_PROBE_TIMEOUT: ${SBOM_SOURCE_IMAGE_PROBE_TIMEOUT:-15}
+      SBOM_WORKERS: "1"
+    group_add:
+      # Docker Desktop socket was verified as 0660 root:root. Other hosts must
+      # use the GID reported by stat -c %g /var/run/docker.sock on that host.
+      - "${SBOM_DOCKER_SOCKET_GID:-0}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro

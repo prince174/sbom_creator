@@ -69,6 +69,13 @@ host; credentials внутри URL запрещены. API всегда испо
 после генерации. Production reference не принимает. Reference никогда не является
 входом классификатора.
 
+Для результата до появления образа используйте отдельный
+`POST /v1/source-analyses` с `repository_url` и `commit`. Сервис запускает cdxgen
+в изолированном job и публикует `source.cdx.json` независимо от image pipeline.
+Необязательный `image` может указывать будущий tag; после его появления создаётся
+отдельный image job и сравнение составов. Образ можно назначить позднее через
+`POST /v1/source-analyses/{id}/image`. [Настройка и запросы source-first](docs/source-first.md).
+
 ## Результаты
 
 | Артефакт | Содержание |
@@ -114,6 +121,7 @@ inventory и делают подтверждение partial. [Ошибки пу
 | `SBOM_JAVA_IMAGE_EVIDENCE` | Default true; ошибка подтверждения отражается UNKNOWN |
 | `SBOM_JAVA_BACKEND` | Optional source graph: disabled(default), trivy, cdxgen |
 | `SBOM_CDXGEN_IMAGE`, `SBOM_DOCKER_BINARY`, `SBOM_BUILD_TIMEOUT` | Доверенный worker/coordinator и build timeout |
+| `SBOM_SOURCE_IMAGE_WAIT_TIMEOUT`, `SBOM_SOURCE_IMAGE_POLL_INTERVAL`, `SBOM_SOURCE_IMAGE_PROBE_TIMEOUT` | Ожидание будущего image: default3600/30/15 секунд |
 
 Первый Java-анализ может загрузить около1.5GiB публичной DB. Missing cache загружается
 в private stage и валидируется до atomic publication. Invalid existing cache

@@ -18,15 +18,16 @@ from .validation import validate_cyclonedx
 
 VERSION = '13.4.0'
 SOURCE_LIMIT = 128 * 1024 * 1024
+EXCLUDED_DIRECTORIES = frozenset({'.git', 'node_modules', 'target', 'build', '.gradle'})
 
 
-def source_archive(checkout):
+def source_archive(checkout, *, excluded_directories=EXCLUDED_DIRECTORIES):
     root = Path(checkout).resolve()
     buffer = io.BytesIO()
     total = count = 0
     with tarfile.open(fileobj=buffer, mode='w') as archive:
         for directory, names, files in os.walk(root, followlinks=False):
-            names[:] = sorted(n for n in names if n not in {'.git', 'node_modules', 'target', 'build', '.gradle'}
+            names[:] = sorted(n for n in names if n not in excluded_directories
                               and not (Path(directory)/n).is_symlink())
             for name in sorted(files):
                 path = Path(directory)/name

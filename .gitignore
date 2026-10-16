@@ -35,6 +35,9 @@ artifacts/
 /os.cdx.json
 /full.cdx.json
 /source.cdx.json
+/source-provenance.json
+/source-summary.json
+/image-*.cdx.json
 /selected.syft.json
 /image.syft.json
 /source.syft.json

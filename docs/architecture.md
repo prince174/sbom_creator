@@ -17,6 +17,14 @@ Source declaration сама по себе не добавляет компоне
 cdxgen model-resolution выполняется в отдельном ограниченном job без host mounts,
 service secrets или Docker socket. Успех не доказывает воспроизведение исходной CI.
 
+Независимый [source-first workflow](source-first.md) принимает repository+commit
+без образа. Его executor публикует source CDX и provenance; отдельный checker
+ожидает назначенный image tag с ограниченным deadline и закрепляет digest.
+Image job использует только этот digest, без source input. После обеих публикаций
+сравнение перечитывает SBOM и проверяет их provenance/bindings. Различия составов
+не считаются автоматически ошибками, source graph не переносится в image graph.
+Уже опубликованный source доступен при ожидании или ошибке image-фазы.
+
 API использует bounded queue, persistent statuses и один процесс на workspace.
 Публикация целой validated staging directory атомарна. Source/image/verification
 scopes должны оставаться раздельными; эталон доступен только post-analysis evaluator.

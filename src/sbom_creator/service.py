@@ -17,7 +17,13 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from . import __version__
-from .acquire import Settings, validate_inputs
+from .acquire import (
+    Settings,
+    image_reference,
+    validate_commit,
+    validate_inputs,
+    validate_repository_url,
+)
 from .evaluation import compare, validate_reference
 from .pipeline import ARTIFACTS, OPTIONAL_ARTIFACTS, analyze, error_fields, write_json
 
@@ -50,6 +56,18 @@ class Request(BaseModel):
         return self
 
 
+class SourceRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    repository_url: str = Field(max_length=2048)
+    commit: str = Field(pattern=r"^(?:[0-9a-fA-F]{40}|[0-9a-fA-F]{64})$")
+    image: str | None = Field(default=None, max_length=2048)
+
+
+class AttachImageRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    image: str = Field(max_length=2048)
+
+
 def api_token():
     path = os.getenv("SBOM_API_TOKEN_FILE")
     try:
@@ -66,7 +84,7 @@ def api_token():
     return token if len(token) <= 8192 and not any(ord(c) < 32 for c in token) else ""
 
 
-def create_app(workspace=None, runner=analyze, settings=None):
+def create_app(workspace=None, runner=analyze, settings=None, *, source_runner=None, image_probe=None):
     root = Path(workspace or os.getenv("SBOM_WORKSPACE", "workspace")).resolve()
     jobs = root / "jobs"
     executor = ThreadPoolExecutor(max_workers=max(1, min(4, int(os.getenv("SBOM_WORKERS", "1")))))
@@ -89,8 +107,12 @@ def create_app(workspace=None, runner=analyze, settings=None):
             if data["status"] in {"queued", "running"}:
                 data.update(status="failed", error="interrupted_by_restart")
                 write_json(status_file, data)
-        yield
-        executor.shutdown(wait=True, cancel_futures=False)
+        source_workflows.start()
+        try:
+            yield
+        finally:
+            source_workflows.stop()
+            executor.shutdown(wait=True, cancel_futures=False)
 
     app = FastAPI(title="SBOM Creator", version=__version__, lifespan=lifespan)
 
@@ -200,6 +222,53 @@ def create_app(workspace=None, runner=analyze, settings=None):
         if name not in state.get('artifacts', []) or not (directory / "result" / name).is_file():
             raise HTTPException(404, "Artifact not found")
         return FileResponse(directory / "result" / name, media_type="application/json", filename=name)
+
+    # These callbacks use the existing image queue without attaching source
+    # inputs. Waiting for a registry manifest never occupies an image worker.
+    from .source_workflows import SourceWorkflows
+    source_workflows = SourceWorkflows(
+        root, lambda: settings or Settings.from_env(),
+        lambda reference: submit(Request(image=reference))["id"],
+        lambda child_id: read_status(job_dir(child_id) / "status.json"),
+        source_runner=source_runner, probe=image_probe)
+
+    def source_inputs(repository_url, commit, image):
+        configured = settings or Settings.from_env()
+        if image is not None and configured.image_archive:
+            raise HTTPException(503, "Remote API requires registry image acquisition")
+        try:
+            validate_repository_url(repository_url, configured)
+            validate_commit(commit)
+            if image is not None:
+                image_reference(image, configured)
+        except (ValueError, TypeError):
+            raise HTTPException(422, "Invalid or unauthorized repository/commit/image") from None
+
+    @app.post("/v1/source-analyses", status_code=202, dependencies=[Depends(auth)])
+    def submit_source(request: SourceRequest):
+        source_inputs(request.repository_url, request.commit, request.image)
+        return source_workflows.submit(request.repository_url, request.commit, request.image)
+
+    @app.get("/v1/source-analyses/{job_id}", dependencies=[Depends(auth)])
+    def source_status(job_id: str):
+        return source_workflows.status(job_id)
+
+    @app.post("/v1/source-analyses/{job_id}/image", status_code=202, dependencies=[Depends(auth)])
+    def attach_source_image(job_id: str, request: AttachImageRequest):
+        configured = settings or Settings.from_env()
+        if configured.image_archive:
+            raise HTTPException(503, "Remote API requires registry image acquisition")
+        return source_workflows.attach_image(job_id, request.image)
+
+    @app.get("/v1/source-analyses/{job_id}/artifacts/{name}", dependencies=[Depends(auth)])
+    def source_artifact(job_id: str, name: str):
+        return FileResponse(source_workflows.artifact_path(job_id, name),
+                            media_type="application/json", filename=name)
+
+    @app.get("/v1/source-analyses/{job_id}/comparison", dependencies=[Depends(auth)])
+    def source_comparison(job_id: str):
+        return FileResponse(source_workflows.comparison_path(job_id),
+                            media_type="application/json", filename="comparison.json")
 
     return app
 

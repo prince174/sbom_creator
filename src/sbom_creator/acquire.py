@@ -31,6 +31,9 @@ class Settings:
     docker_binary: str = "docker"
     cdxgen_image: str = "sbom-creator-cdxgen-worker:13.4.0"
     build_timeout: int = 900
+    source_image_wait_timeout: int = 3600
+    source_image_poll_interval: int = 30
+    source_image_probe_timeout: int = 15
     java_image_evidence: bool = True
     java_nested_windows: bool = False
     java_archive_components: bool = True
@@ -57,7 +60,7 @@ class Settings:
             raise ValueError('SBOM_JAVA_BACKEND must be cdxgen, trivy or disabled')
         if not re.fullmatch(r"[a-z0-9]+/[a-z0-9_]+(?:/[a-z0-9]+)?", self.image_platform):
             raise ValueError("SBOM_IMAGE_PLATFORM must be os/architecture[/variant]")
-        for key in ("checkout_timeout", "scan_timeout", "image_timeout", "java_scan_timeout", "build_timeout", "java_db_timeout", "max_output_bytes",
+        for key in ("checkout_timeout", "scan_timeout", "image_timeout", "java_scan_timeout", "build_timeout", "source_image_wait_timeout", "source_image_poll_interval", "source_image_probe_timeout", "java_db_timeout", "max_output_bytes",
                     "max_sbom_bytes", "max_checkout_bytes", "max_archive_bytes", "max_checkout_files"):
             if getattr(self, key) <= 0:
                 raise ValueError(f"{key} must be positive")
