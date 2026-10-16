@@ -181,9 +181,7 @@ class JarFiles(payload.ImageFiles):
                 if key not in self.spools:
                     if member.file_size > MAX_NESTED or member.file_size > max(1, member.compress_size) * MAX_RATIO:
                         raise BudgetExceeded('Nested archive inflate budget')
-                    with archive.open(member) as raw:
-                        self.spools[key] = self.copy(raw, member.file_size, MAX_NESTED)
-                    self.stats['nested_files'] += 1
+                    self.nested(key, archive, member, stream)
                 stream = self.spools[key]
             archive = self.archive(key, stream)
             for member in archive.infolist():
@@ -208,3 +206,8 @@ class JarFiles(payload.ImageFiles):
                         self.stats['resource_witnesses'] += 1
                         return virtual + ':' + name
         return None
+
+    def nested(self, key, archive, member, stream):
+        with archive.open(member) as raw:
+            self.spools[key] = self.copy(raw, member.file_size, MAX_NESTED)
+        self.stats['nested_files'] += 1

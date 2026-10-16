@@ -125,6 +125,8 @@ docker compose up --build -d
 сканирования. Задайте writable persistent `SBOM_TRIVY_CACHE_DIR=/workspace/trivy-cache`,
 особенно при read-only root filesystem. Внутренние архивы и нормализованные слои
 используют `SBOM_IMAGE_TEMP_DIR=/workspace/image-cache` и удаляются после задания.
+Контейнер направляет также scratch-файлы сканеров в `/workspace` через
+`TMPDIR`/`TMP`/`TEMP`: небольшого tmpfs `/tmp` недостаточно для крупных образов.
 Для offline-работы базу нужно заранее подготовить; недоступная DB даёт UNKNOWN для
 неподтверждённых Java-компонентов. Начинайте с одного worker: жёсткая дисковая квота
 и пиковая память нескольких параллельных больших Java-образов отдельно не измерены.
@@ -156,6 +158,7 @@ docker compose up --build -d
 | `SBOM_TRIVY_CACHE_DIR` | Writable Java DB cache; для контейнера `/workspace/trivy-cache` |
 | `SBOM_IMAGE_TEMP_DIR` | Writable каталог внутренних архивов/слоёв, в образе `/workspace/image-cache` |
 | `SBOM_JAVA_IMAGE_EVIDENCE` | Java identity + physical evidence, default `true`; сбой отражается UNKNOWN |
+| `SBOM_JAVA_NESTED_WINDOWS` | Экспериментальное чтение STORED nested JAR без копирования; default `false` |
 | `SBOM_JAVA_BACKEND` | Дополнительный граф исходников: `disabled` (default), `trivy`, `cdxgen` |
 | `SBOM_CDXGEN_IMAGE`, `SBOM_DOCKER_BINARY` | Доверенный worker image и Docker CLI для явно включённого cdxgen backend |
 | `SBOM_BUILD_TIMEOUT` | Лимит необязательного cdxgen job, default900s |
@@ -183,6 +186,13 @@ Payload proof для одинаковых файлов переносится т
 неоднозначный путь/слой/идентичность и неподдержанный архив остаются UNKNOWN.
 Содержимое файлов и scanner-конфигурация удаляются перед публикацией JSON.
 Диск проверяется периодически; жёсткие границы задаются лимитами контейнера/тома.
+
+Опция `SBOM_JAVA_NESTED_WINDOWS=true` включает экспериментальный reader с полным
+CRC/SHA256 вложенных STORED JAR и теми же бюджетами. На Microservices он дал
+99 TP / 1 FP / 41 FN вместо 8 / 0 / 132: recall вырос до70.71%, precision
+снизился со100% до99% при консервативной оценке packaging UNKNOWN. Поэтому
+reader выключен по умолчанию; результаты этого режима нельзя смешивать с
+точностью обычного сервиса. Проверенные Boot/Javalin/Dropwizard не ухудшились.
 
 ## API
 

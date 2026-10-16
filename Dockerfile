@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir .
 RUN mkdir -p /workspace /home/sbom && chown -R 10001:10001 /workspace /home/sbom
 USER 10001:10001
 ENV HOME=/home/sbom PYTHONDONTWRITEBYTECODE=1 SBOM_WORKSPACE=/workspace
+ENV TMPDIR=/workspace TMP=/workspace TEMP=/workspace
 ENV SBOM_IMAGE_TEMP_DIR=/workspace/image-cache
 ENV SBOM_TRIVY_CACHE_DIR=/workspace/trivy-cache
 EXPOSE 8080

@@ -12,6 +12,7 @@ from ..acquire import clean_environment, run_command, secret
 from ..validation import validate_cyclonedx
 from .explicit_identity_gate import prepare
 from .seekable_jar_evidence import JarFiles
+from .stored_jar_evidence import JarFiles as StoredJarFiles
 from .trivy_only_payload import supplement
 
 DB_LOCK = threading.Lock()
@@ -89,9 +90,10 @@ def acquire(immutable_reference, destination, settings, temporary):
         max_files=settings.max_checkout_files, label='Immutable image acquisition')
 
 
-def corroborate(image, archive, peer_document, *, temporary=None):
+def corroborate(image, archive, peer_document, *, temporary=None, nested_windows=False):
     """One resource budget shared by Syft and Trivy-only physical witnesses."""
-    files = JarFiles(archive, image, temporary=temporary)
+    reader = StoredJarFiles if nested_windows else JarFiles
+    files = reader(archive, image, temporary=temporary)
     try:
         observed = payload.collect(image, archive, files_factory=lambda *args: files,
                                    java_witness=lambda artifact, reader: reader.witness(artifact), close_files=False)
@@ -103,6 +105,8 @@ def corroborate(image, archive, peer_document, *, temporary=None):
                 physical[artifact['id']] = observed[artifact['id']]
         from ..core import checksum
         envelope['payload_sha256'] = checksum(physical)
+        if nested_windows:
+            envelope['reader_policy'] = 'stored-nested-windows-v1'
         return adapted, physical, envelope, {'binding': audit, 'jar_resources': files.stats,
                                              'layer_resources': files.layers_reader.stats}
     finally:
@@ -119,8 +123,11 @@ def analyze(image, provenance, settings):
         if not settings.image_archive:
             acquire(provenance['immutable_reference'], archive, settings, root)
         peer_document, tool = peer(archive, settings, root)
-        adapted, physical, envelope, audit = corroborate(image, archive, peer_document, temporary=root)
+        adapted, physical, envelope, audit = corroborate(image, archive, peer_document, temporary=root,
+                                                       nested_windows=settings.java_nested_windows)
         return adapted, {'payload_evidence': physical, 'identity_binding_envelope': envelope,
+            'java_reader_policy': ('stored-nested-windows-full-crc-bounded-range-cache-v1'
+                                  if settings.java_nested_windows else 'seekable-content-verification-v4'),
             'java_identity_engine': tool, 'java_image_status': 'corroborated',
             '_artifacts': {'image-original.syft.json': image, 'image-peer.cdx.json': peer_document,
                            'image-identity-audit.json': audit}}

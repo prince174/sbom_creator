@@ -325,7 +325,11 @@ def reconcile(source: dict, image: dict, assessor: Callable | None = None,
         from .image_java.explicit_identity_gate import candidates as bound_candidates
         candidates = bound_candidates(source, image, payload_evidence, identity_envelope)
     rules = assessor is rules_assessor
-    rules_policy = 'image-identity-payload-v4' if identity_envelope is not None else RULES_POLICY_VERSION
+    rules_policy = RULES_POLICY_VERSION
+    if identity_envelope is not None:
+        rules_policy = ('image-identity-payload-v5'
+                        if identity_envelope.get('reader_policy') == 'stored-nested-windows-v1'
+                        else 'image-identity-payload-v4')
     assessments = validate_assessments(candidates, assessor(copy.deepcopy(candidates)), rules=rules)
     included: set[str] = set()
     decisions = []

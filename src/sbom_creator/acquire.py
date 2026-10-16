@@ -32,6 +32,7 @@ class Settings:
     cdxgen_image: str = "sbom-creator-cdxgen-worker:13.4.0"
     build_timeout: int = 900
     java_image_evidence: bool = True
+    java_nested_windows: bool = False
     trivy_cache_dir: str = ""
     java_db_timeout: int = 600
     crane_binary: str = 'crane'
